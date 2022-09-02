@@ -1,0 +1,2523 @@
+{
+  "Name": "Talk400201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1445.334)",
+      "Commands": [
+        {
+          "ItemID": 840,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "601(初次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 959,
+      "Name": "元婴及以下",
+      "Description": "元婴及以下",
+      "Position": "(-2463.371,-1051.55)",
+      "Commands": [
+        {
+          "ItemID": 1057,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1082,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1092,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1084,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1094,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1086,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1095,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1088,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1093,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1090,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1058,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1091,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 968,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "纵有守山大阵作为倚仗，{$shili}的元婴修士也终于还是倒在你手下，落得个阵毁人亡的下场。\n好在除作为阵眼的元婴修士之外，一众修士最多是身负重伤，倒也保得性命无虞。{$shili}还留有重建阵法然后迅速补充实力如初的可能。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 969,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只不过前提是——你就如此袖手离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 971,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续",
+          "TargetBlockID": "this:1301(跳转talk)"
+        },
+        {
+          "ItemID": 970,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:972(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 891,
+      "Name": "快速金丹战",
+      "Description": "快速金丹战",
+      "Position": "(-2799.957,-978.9929)",
+      "Commands": [
+        {
+          "ItemID": 1064,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1075,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 922,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 926,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 927,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 928,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 930,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 931,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 932,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 933,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 934,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 935,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 936,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 937,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 938,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 939,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 940,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 941,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 942,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 943,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 944,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 945,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 946,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 947,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 948,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 949,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 774,
+      "Name": "阵法未开版掌门战",
+      "Description": "阵法未开版掌门战",
+      "Position": "(-2810.087,-929.9705)",
+      "Commands": [
+        {
+          "ItemID": 1065,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1074,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 1050,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1054,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1055,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1112,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1113,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1114,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1115,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1116,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1117,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1118,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1119,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1120,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1121,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1122,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1123,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1124,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1125,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1126,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1132,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1133,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1136,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 635,
+      "Name": "金丹初次",
+      "Description": "金丹初次",
+      "Position": "(-2471.298,-1282.204)",
+      "Commands": [
+        {
+          "ItemID": 1061,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1079,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 850,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 851,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 697,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1301,
+      "Name": "跳转talk",
+      "Description": "跳转talk",
+      "Position": "(-2462.118,-996.3988)",
+      "Commands": [
+        {
+          "ItemID": 1302,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 636,
+      "Name": "元婴及以上初次",
+      "Description": "元婴及以上初次",
+      "Position": "(-2472.475,-1233.337)",
+      "Commands": [
+        {
+          "ItemID": 1062,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1080,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 1051,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1052,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1053,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1213,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1214,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1215,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1216,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1217,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1218,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1219,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1220,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1221,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1222,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1224,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1226,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1228,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1229,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1232,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1233,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1234,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1235,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1236,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1237,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1248,
+      "Name": "金虹时间判定",
+      "Description": "金虹时间判定",
+      "Position": "(-2301.904,-936.5318)",
+      "Commands": [
+        {
+          "ItemID": 1280,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1283,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1258,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 1259,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 730"
+        },
+        {
+          "ItemID": 1260,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1264,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1299,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 1265,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1249,
+      "Name": "离火特殊",
+      "Description": "离火特殊",
+      "Position": "(-2300.637,-878.3041)",
+      "Commands": [
+        {
+          "ItemID": 1251,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1281,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1252,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 380,
+      "Name": "筑基抢夺",
+      "Description": "筑基抢夺",
+      "Position": "(-2640.815,-1032.092)",
+      "Commands": [
+        {
+          "ItemID": 1066,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1073,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 950,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "缠斗几回合后，你佯装强攻卖了个破绽，对手如你所料全力进攻。躲过迎面而来的神通后，你趁对方还未反应过来便是全力爆发，终于是结束了这场战斗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 951,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但还未等你高兴，更强的{$shili}修士已然到场。问清情形后，也不磨叽，直接催动神通向你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 852,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 853,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 854,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 751,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 771,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 772,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 773,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 613,
+      "Name": "初次战斗",
+      "Description": "初次战斗",
+      "Position": "(-2645.439,-1304.157)",
+      "Commands": [
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "633(炼气初次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "634(筑基初次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "635(金丹初次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "636(元婴及以上初次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战斗回合数判定",
+      "Description": "战斗回合数判定",
+      "Position": "(-2801.329,-1235.644)",
+      "Commands": [
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.If",
+          "Condition": "HuiHe <= 2"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "580(低回合数击杀)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(其他回合数击杀)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 973,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-2463.377,-856.7855)",
+      "Commands": [
+        {
+          "ItemID": 974,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这{$shili}，从今天开始便在宁州除名吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1295,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 975,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "！！？{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 976,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你正欲动手毁灭{$shili}山门时，却突然发现{$shili}广场上不知何时多了一人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 977,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此人仅是袖手站在死去的元婴修士旁，身上没有半分灵气或是神识波动，仿若一个普通凡人，但你却感觉到此间万物都会受他驱使。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 978,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但{$shili}的其他修士却像是没有看到这人一般，只是一脸惊恐的盯着你。直到这人开始向你缓步走来，你才不自主的将注意力集中在他身上，无暇再留意其他修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 979,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着他的走近，你能感到自己的神识探查范围迅速缩小，外界的灵气也随之不再回应。这已然不是你所面对过的任何一种强者威压，而是来自这一方天地，或者说是来自道的极致压迫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 980,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "HuaShenID",
+          "StoryText": "{$称呼}，就此罢手吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 982,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "HuaShenID",
+          "StoryText": "呵呵，{$shili}有难，老朽出手自是理所应当，不过这宁州如今是风起云涌，怕是在不久后会有偌大变故，老朽还指着用这把老骨头再为宁州出点力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 983,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "HuaShenID",
+          "StoryText": "不如{$称呼}就此离去，老朽也就当这徒孙是与人切磋时被失手击杀，不再过多追究。也让老朽得以在此界再停留几日，可好？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1272,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "晚辈来这{$shili}原意也不过是借贵派神通功法一观，只不过此间修士不由分说便是驱逐晚辈，才不得已催动功法自卫，若是前辈能让晚辈如愿，自然会就此离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1273,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "附近重伤的{$shili}修士无不是一脸愤懑的看着你。明明上门抢夺功法，却还不动声色的将责任推到受害者身上，他们即便是修练数百年，也未曾见过如此厚颜无耻之人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "HuaShenID",
+          "StoryText": "好说好说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在他的示意下，纵是不乐意，{$shili}幸存的长老也只得派一人带你前往藏经阁。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1297,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1276,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1018(索要秘籍)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 580,
+      "Name": "低回合数击杀",
+      "Description": "低回合数击杀",
+      "Position": "(-2932.271,-1180.831)",
+      "Commands": [
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你强大的实力下，这场战斗被迅速结束了，以至于{$shili}的修士还没来得及通知宗内强者。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续",
+          "TargetBlockID": "this:588(继续战斗)"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Menu",
+          "Text": "撤离",
+          "TargetBlockID": "this:584(撤离)"
+        }
+      ]
+    },
+    {
+      "ItemID": 634,
+      "Name": "筑基初次",
+      "Description": "筑基初次",
+      "Position": "(-2474.01,-1330.712)",
+      "Commands": [
+        {
+          "ItemID": 1060,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1078,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 846,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 847,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 848,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 960,
+      "Name": "化神境",
+      "Description": "化神境",
+      "Position": "(-2307.662,-1114.813)",
+      "Commands": [
+        {
+          "ItemID": 1238,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这就化神了？改存档了吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 885,
+      "Name": "化神境界判定",
+      "Description": "化神境界判定",
+      "Position": "(-2464.336,-1115.429)",
+      "Commands": [
+        {
+          "ItemID": 964,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 1242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 965,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 967,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "959(元婴及以下)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 601,
+      "Name": "初次判定",
+      "Description": "初次判定",
+      "Position": "(-2796.387,-1366.843)",
+      "Commands": [
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 841,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 842,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1096,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1099,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1097,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1100,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1105,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1106,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1103,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1104,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1101,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1102,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1098,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.If",
+          "Condition": "ZhanDou == 0"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "613(初次战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1107(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 633,
+      "Name": "炼气初次",
+      "Description": "炼气初次",
+      "Position": "(-2468.946,-1390.13)",
+      "Commands": [
+        {
+          "ItemID": 1059,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1077,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 844,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 845,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 581,
+      "Name": "其他回合数击杀",
+      "Description": "其他回合数击杀",
+      "Position": "(-2645.662,-1114.834)",
+      "Commands": [
+        {
+          "ItemID": 834,
+          "CmdType": "Fungus.If",
+          "Condition": "ZhanDou == 6"
+        },
+        {
+          "ItemID": 835,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(筑基抢夺)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 836,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhanDou == 9"
+        },
+        {
+          "ItemID": 837,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "382(金丹抢夺)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 838,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhanDou == 12"
+        },
+        {
+          "ItemID": 839,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "383(掌门战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 886,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhanDou == 15"
+        },
+        {
+          "ItemID": 887,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "885(化神境界判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1247,
+      "Name": "竹山时间判定",
+      "Description": "竹山时间判定",
+      "Position": "(-2300.639,-989.6964)",
+      "Commands": [
+        {
+          "ItemID": 1279,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1282,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1256,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 1257,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 200"
+        },
+        {
+          "ItemID": 1262,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1294,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1298,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 382,
+      "Name": "金丹抢夺",
+      "Description": "金丹抢夺",
+      "Position": "(-2638.396,-982.7864)",
+      "Commands": [
+        {
+          "ItemID": 1067,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1072,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 952,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "缠斗几回合后，你佯装强攻卖了个破绽，对手如你所料全力进攻。躲过迎面而来的神通后，你趁对方还未反应过来便是全力爆发，终于是结束了这场战斗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 953,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但还未等你高兴，更强的{$shili}修士已然到场。问清情形后，也不磨叽，直接催动神通向你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 855,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 856,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 857,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 776,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 777,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 778,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 779,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 780,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 781,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 782,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 783,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 784,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 785,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 786,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 787,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 788,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 789,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 790,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 791,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 792,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 793,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 794,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 795,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 796,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 797,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 798,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 799,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 800,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 801,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1018,
+      "Name": "索要秘籍",
+      "Description": "索要秘籍",
+      "Position": "(-2463.313,-769.7813)",
+      "Commands": [
+        {
+          "ItemID": 1025,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1038,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1028,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1039,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1031,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1040,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1034,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1041,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1037,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1042,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1107,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2799.108,-1297.216)",
+      "Commands": [
+        {
+          "ItemID": 1108,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 1109,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战斗回合数判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1110,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1111,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 972,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2303.189,-1051.617)",
+      "Commands": [
+        {
+          "ItemID": 1081,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你觉得堂堂{$shili}也不过如此，兴致缺缺的离开了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1043,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 890,
+      "Name": "快速筑基战",
+      "Description": "快速筑基战",
+      "Position": "(-2801.327,-1027.391)",
+      "Commands": [
+        {
+          "ItemID": 1063,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1076,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 893,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 894,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 895,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 896,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 897,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 898,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 899,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 900,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 901,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 902,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 903,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 904,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 905,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 906,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 907,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 908,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 909,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 910,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 911,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 912,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 913,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 914,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 915,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 916,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 917,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 918,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 919,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 984,
+      "Name": "废弃",
+      "Description": "废弃",
+      "Position": "(-2464.552,-936.152)",
+      "Commands": [
+        {
+          "ItemID": 1300,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 1069,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1070,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 1024,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 985,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 986,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1044,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1254,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1247(竹山时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 990,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1010,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1045,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1255,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1248(金虹时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 995,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1046,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1278,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1284,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1000,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1012,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1048,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1253,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1249(离火特殊)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1005,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1013,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1047,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1277,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1285,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1014,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1015,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 584,
+      "Name": "撤离",
+      "Description": "撤离",
+      "Position": "(-3062.845,-1115.031)",
+      "Commands": [
+        {
+          "ItemID": 1056,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 588,
+      "Name": "继续战斗",
+      "Description": "继续战斗",
+      "Position": "(-2798.43,-1116.146)",
+      "Commands": [
+        {
+          "ItemID": 828,
+          "CmdType": "Fungus.If",
+          "Condition": "ZhanDou == 6"
+        },
+        {
+          "ItemID": 833,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "890(快速筑基战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 830,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhanDou == 9"
+        },
+        {
+          "ItemID": 832,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "891(快速金丹战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 843,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhanDou == 12"
+        },
+        {
+          "ItemID": 831,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "774(阵法未开版掌门战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 888,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhanDou == 15"
+        },
+        {
+          "ItemID": 889,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "885(化神境界判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 383,
+      "Name": "掌门战",
+      "Description": "掌门战",
+      "Position": "(-2640.208,-927.6655)",
+      "Commands": [
+        {
+          "ItemID": 1068,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1071,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 1049,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 956,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "缠斗几回合后，你佯装强攻卖了个破绽，对手如你所料全力进攻。躲过迎面而来的神通后，你趁对方还未反应过来便是全力爆发，终于是结束了这场战斗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 957,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但还未等你高兴，更强的{$shili}修士已然到场。问清情形后，也不磨叽，直接催动神通向你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 802,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1163,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1164,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1176,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1183,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1186,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1187,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

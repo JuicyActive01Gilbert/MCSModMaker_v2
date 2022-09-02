@@ -1,0 +1,865 @@
+{
+  "Name": "Talk4223",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "关于幻雾境",
+      "Description": "关于幻雾境",
+      "Position": "(-2998.229,-1079.743)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，{$chenghu}有所不知，我们吞云蟒一族身具上古神兽玄武之血脉，天生便对操控水雾之道领悟极高。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这幻雾境只是本座日常修炼吐纳时自动形成的，并非刻意操控。不过即便如此，也不是一般人可以随随便便就破解的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.CheckSkill"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.If",
+          "Condition": "tmpbool == True"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我也曾学过一门神通，唤作幻雾术，想来倒是与大圣的吐纳术有几分相似之处。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "说着，你便运起了幻雾法门，展示给吞云大圣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "有趣...有趣...未曾想到人类也能掌握此等操控云雾的神通，似与我族功法同源，但也有一些独特的变化。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只见吞云大圣运起了不知名的云雾功法，瞬间周遭云雾缭绕。你一边观察着这云雾的走向，一边向他请教，感触颇深。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "领悟神通：{color=#d0380a}雾隐术{/color}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 383,
+      "Name": "关于其它海域的传闻",
+      "Description": "关于其它海域的传闻",
+      "Position": "(-2583.04,-1076.7)",
+      "Commands": [
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "本座平日在幻雾境隐修，极少离开吞云海，对于那些虚无飘渺的海上传闻了解的倒是不多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过百余年前，本座曾与那无尽海渊的九幽大圣起过一些冲突。只是没想到同为化神期修为，他居然未曾出手便逃回他的老巢去了。如此一来，本座倒也不屑于再与他有何争斗了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "九幽大圣...的确是不值一提。大圣可能还不知道，前段时间...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将自己在无尽海渊斩杀九幽大圣一事向吞云一一道来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "难怪本座察觉无尽海渊似乎有了一些异动...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那九幽虽说实力不如我，但毕竟也是化神期妖圣...真没想到{$chenghu}居然有这样的实力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 300,
+      "Name": "关于飞升的准备",
+      "Description": "关于飞升的准备",
+      "Position": "(-2732.332,-1079.021)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友既已突破化神，想必对于天劫已经也感应。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "小友还未突破化神，想必对于天劫之事还不太清楚。等小友成功突破后，自然能感应到日后天劫降临的时间。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "就我而言，化神期与过往其它境界是完全不同的。此前突破至化神中期，为我带来的提升已远超过去所有突破的总和。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我想，在天劫来临前，我们应该尽可能提升自己的境界。境界越高，能够成功飞升的机会也一定会更高。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 335,
+      "Name": "功法",
+      "Description": "功法",
+      "Position": "(-2981.04,-944.6996)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "人类与妖兽不同，各家族，门派势力在千万年来都留下了大量的功法传承。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "有一定修炼资质的人便会被各势力收入门下，从最基础的功法学起，便算是踏入仙途了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，你们人类的功法确实种类繁多，可惜大部分并非妖兽能够修炼的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "本座虽已突破化神，但对于水道与气道以外的其它大道仍是一窍不通，不知从何入手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Menu",
+          "Text": "从自身经历说起",
+          "TargetBlockID": "this:337(经历)"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "从论道感悟说起",
+          "TargetBlockID": "this:336(论道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2801.331,-1225.794)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$chenghu}想问何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "关于化神的经验",
+      "Description": "关于化神的经验",
+      "Position": "(-2870.2,-1079.742)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们吞云蟒一族，与你们人类突破的方式虽说大不相同，却也殊途同归。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "所谓的化神，实际便是蜕凡化仙的过程。小友只需在突破的过程中，细细体会仙凡之别。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "即便是第一次尝试突破失败了，也已初具仙格，日后再次尝试突破，成功的机会便会高上一些。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2798.708,-1154.671)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于幻雾境",
+          "TargetBlockID": "this:298(关于幻雾境)"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于化神的经验",
+          "TargetBlockID": "this:299(关于化神的经验)"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于飞升的准备",
+          "TargetBlockID": "this:300(关于飞升的准备)"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于其它海域的传闻",
+          "TargetBlockID": "this:383(关于其它海域的传闻)"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么想问的了",
+          "TargetBlockID": "this:301(没什么想问的了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 337,
+      "Name": "经历",
+      "Description": "经历",
+      "Position": "(-2578.04,-948.6996)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.If",
+          "Condition": "tmpbool == False"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当年，我以一本最为基础的《吐纳功法》进入了修真者的行列，如今……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当年，我以家族遗留的一本《五府锻元决》进入了修真者的行列，如今……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你同吞云大圣聊起了你在宁州的成长经历，又讲到海上的奇闻异事。只见吞云大圣时而点头附和、时而质疑询问，时而释然发笑，竟是听的格外认真。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你同吞云大圣聊起了之前没有提到过的成长经历，又讲到海上的奇闻异事。只见吞云大圣时而点头附和、时而质疑询问，时而释然发笑，竟是听的格外认真。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "想不到人类的世界还有这么多趣事，不错……不错。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "CmdRefreshNPCUI"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "大圣既然可以化为人形，可有兴趣到人类的世界游历一番？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "（摇了摇头）虽然你所描述的世界很有趣，可惜并不适合我。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这是为何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我族世代在此修炼，无论功法、修行方式还是此地灵气都是最为适合我族的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "人类的世界固然有趣，对于我来说却也只能作为修炼之余的消遣罢了，只有早日飞升才是正途。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "确实……人妖殊途。无论如何，如果最终不能飞升，也只是空忙活一场。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你二人又聊起了其它{color=#d0380a}海域奇闻{/color}，{color=#d0380a}人生大道{/color}...你只觉仙路漫漫，命途多舛。良久，你们不约而同地陷入了沉默，你便知道，大概到了分别的时候。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "今日当真所谈甚欢。大圣要专心修炼，在下便不打扰大圣了，有缘再会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，若道友日后若遇到新的奇闻异事，还请务必来此地分享一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你向吞云大圣作了一揖，便意犹未尽地离开了此地。此番奇遇，你只觉受益匪浅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "没什么想问的了",
+      "Description": "没什么想问的了",
+      "Position": "(-2802.27,-1019.821)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "人类修炼的方式与我族大相径庭，我族天生便有吞云吐雾的本领，通过吐纳感悟灵气与云雾的流动，便可悟得水气之道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不知你们人类修士又是如何开始修炼的？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Menu",
+          "Text": "从论道感悟说起",
+          "TargetBlockID": "this:336(论道)"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Menu",
+          "Text": "从功法传承说起",
+          "TargetBlockID": "this:335(功法)"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Menu",
+          "Text": "从自身经历说起",
+          "TargetBlockID": "this:337(经历)"
+        }
+      ]
+    },
+    {
+      "ItemID": 336,
+      "Name": "论道",
+      "Description": "论道",
+      "Position": "(-2799.04,-945.6996)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "人类修士虽说各系大道皆可参悟，但许多人终其一生也只是初窥门径而已，如何比的上大圣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "人类若想感悟大道，就必须抓住日常奇遇与论道交流时灵光一闪所得到的思绪，潜心感悟数十年时间，方能有所成就。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，你们人类虽说先天天赋不足，但潜力却也是最大的。小友能有如今修为，想必也有不少奇遇与感悟吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Menu",
+          "Text": "从自身经历说起",
+          "TargetBlockID": "this:337(经历)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

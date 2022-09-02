@@ -1,0 +1,274 @@
+{
+  "Name": "Talk8104",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 296,
+      "Name": "烧毁",
+      "Description": "烧毁",
+      "Position": "(-2633.934,-1155.879)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你捏了个手印，召来火焰想要将这些剩余的藤蔓烧个干净，以免留下祸害。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "谁知这藤蔓在火焰的炙烤下竟丝毫没有要被烧毁的样子，反倒像是经过了炼制一般，光泽更胜以往。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这魔藤果然神奇，韧性强又不怕烈火炙烤，若是用来炼器简直是再好不过了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你用同样的方法烤制了散落一地的藤蔓，然后心满意足的将它们统统收入囊中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2796.434,-1155.879)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "被你切得四分五裂的藤蔓在地上翻动着，看上去还没有死透。你想起藤蔓能够吸人精血的诡异能力，不禁也感到有些后怕。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "仔细观察",
+          "TargetBlockID": "this:295(观察)"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "焚烧殆尽",
+          "TargetBlockID": "this:296(烧毁)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2796.32,-1225.866)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(败逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "败逃",
+      "Description": "败逃",
+      "Position": "(-2633.039,-1226.513)",
+      "Commands": []
+    },
+    {
+      "ItemID": 295,
+      "Name": "观察",
+      "Description": "观察",
+      "Position": "(-2795.897,-1076.692)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你仔细观察这些散落一地的藤蔓，藤蔓内的经络不断向外渗出鲜红色的，仿佛血液一般的液体。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 1"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你隐约感觉这种植物的经络走向似乎与修真者灵气的运行方式有异曲同工之妙，但其中具体的玄妙之处却难以领悟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你隐约感觉这种植物的经络走向似乎与修真者灵气的运行方式有异曲同工之妙，看来这种能够吸人精血的能力便是与它有关。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你下意识的尝试用这种新的运气方式施展木系神通，召唤而来的藤蔓果真与平日不同，似乎也具备了某种吸人精血的能力！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "领悟神通：{color=#d0380a}汲血藤{/color}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没想到这次因祸得福，也算是不虚此行了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

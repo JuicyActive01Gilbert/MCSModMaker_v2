@@ -1,0 +1,2326 @@
+{
+  "Name": "Talk4029",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2429.551,-1317.778)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "842(关于魔门的线索)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1028,
+      "Name": "血剑宫后线索一总结",
+      "Description": "血剑宫后线索一总结",
+      "Position": "(-2284.672,-857.5044)",
+      "Commands": [
+        {
+          "ItemID": 1126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫在当年大战后不久便出现在宁州，甚至救下了重伤的凌轩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫救下凌轩是为了弄清楚御剑门之战时发生了什么，看来他们并没有直接经历这次战斗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1132,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1133,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫与白帝有宿怨，为此不惜兴师动众数次攻打白帝楼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1136(血剑宫线索二推理)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 944,
+      "Name": "天魔道线索二推理",
+      "Description": "天魔道线索二推理",
+      "Position": "(-2586.456,-788.0482)",
+      "Commands": [
+        {
+          "ItemID": 945,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "除此以外，天魔道来宁州的主要目的应该是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 946,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查并夺取戮仙剑",
+          "TargetBlockID": "this:1177(天魔道线索二总结)"
+        },
+        {
+          "ItemID": 949,
+          "CmdType": "Fungus.Menu",
+          "Text": "报复玄道宗",
+          "TargetBlockID": "this:1177(天魔道线索二总结)"
+        },
+        {
+          "ItemID": 948,
+          "CmdType": "Fungus.Menu",
+          "Text": "释放天魔眼中的天魔",
+          "TargetBlockID": "this:1177(天魔道线索二总结)"
+        },
+        {
+          "ItemID": 951,
+          "CmdType": "Fungus.Menu",
+          "Text": "抓取活人炼丹",
+          "TargetBlockID": "this:1177(天魔道线索二总结)"
+        },
+        {
+          "ItemID": 965,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 977,
+      "Name": "血剑宫赋值",
+      "Description": "血剑宫赋值",
+      "Position": "(-2263.979,-659.1776)",
+      "Commands": [
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1158,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这番推断倒也合理。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "997(正确判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1164,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这么说确有一定道理，但总觉得还遗漏了一些什么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这么说确有一定道理，但总觉得还遗漏了一些什么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.Menu",
+          "Text": "或许还有其它可能？",
+          "TargetBlockID": "this:1175(血剑宫线索一推理)"
+        },
+        {
+          "ItemID": 1261,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的",
+          "TargetBlockID": "this:860(字符串赋值刷新)"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1043,
+      "Name": "古神教线索一推理",
+      "Description": "古神教线索一推理",
+      "Position": "(-2430.916,-933.105)",
+      "Commands": [
+        {
+          "ItemID": 1022,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "目前收集到有关古神教的线索中，其实包含着一个可能与御剑门有关的重要的信息。古神教...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "CmdJianLingIsUnlockXianSuo"
+        },
+        {
+          "ItemID": 1233,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == True"
+        },
+        {
+          "ItemID": 1024,
+          "CmdType": "Fungus.Menu",
+          "Text": "长期通过魔神蛊渗透离火门",
+          "TargetBlockID": "this:1176(古神教线索一总结)"
+        },
+        {
+          "ItemID": 1234,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1232,
+          "CmdType": "CmdJianLingIsUnlockXianSuo"
+        },
+        {
+          "ItemID": 1235,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == True"
+        },
+        {
+          "ItemID": 1236,
+          "CmdType": "Fungus.Menu",
+          "Text": "长期通过魔神蛊渗透离火门",
+          "TargetBlockID": "this:1176(古神教线索一总结)"
+        },
+        {
+          "ItemID": 1237,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1238,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1025,
+          "CmdType": "Fungus.Menu",
+          "Text": "长期通过魔神蛊渗透化尘教",
+          "TargetBlockID": "this:1176(古神教线索一总结)"
+        },
+        {
+          "ItemID": 1026,
+          "CmdType": "Fungus.Menu",
+          "Text": "长期通过魔神蛊渗透白帝楼",
+          "TargetBlockID": "this:1176(古神教线索一总结)"
+        },
+        {
+          "ItemID": 1027,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 947,
+      "Name": "血剑宫线索二总结",
+      "Description": "血剑宫线索二总结",
+      "Position": "(-2274.865,-719.4365)",
+      "Commands": [
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1145,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 1147,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫兴师动众来宁州攻打白帝楼，便是为了夺取戮仙剑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1148,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 1149,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫来宁州的目的，正是为了攻打白帝楼，向白帝寻仇。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1152,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫对白帝所创的剑术功法觊觎已久，他们暗中调查与攻打白帝楼，实际是为了盗取白帝楼功法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1154,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "977(血剑宫赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1190,
+      "Name": "伺机夺取魔剑",
+      "Description": "伺机夺取魔剑",
+      "Position": "(-1904.253,-756.2705)",
+      "Commands": [
+        {
+          "ItemID": 1191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师兄曾说过，你们在宁州古迹发现魔剑之前，已有魔修捷足先登了。既然魔剑最终被你收服，那魔门定然要另想办法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "而当年最先流传出御剑门私通魔门传闻的是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1197,
+          "CmdType": "Fungus.Menu",
+          "Text": "竹山宗",
+          "TargetBlockID": "this:1200(竹山宗)"
+        },
+        {
+          "ItemID": 1199,
+          "CmdType": "Fungus.Menu",
+          "Text": "离火门",
+          "TargetBlockID": "this:1201(离火门)"
+        },
+        {
+          "ItemID": 1198,
+          "CmdType": "Fungus.Menu",
+          "Text": "白帝楼",
+          "TargetBlockID": "this:1270(白帝楼)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1193,
+      "Name": "还是再想想",
+      "Description": "还是再想想",
+      "Position": "(-1798.774,-901.4017)",
+      "Commands": [
+        {
+          "ItemID": 1194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我还是再想想吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1229,
+          "CmdType": "CmdJianLingPanelJiaoTanEnd"
+        }
+      ]
+    },
+    {
+      "ItemID": 1175,
+      "Name": "血剑宫线索一推理",
+      "Description": "血剑宫线索一推理",
+      "Position": "(-2280.712,-930.5417)",
+      "Commands": [
+        {
+          "ItemID": 1113,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "目前收集到有关血剑宫的线索中，其实包含着一个可能与御剑门有关的重要的信息。血剑宫...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1114,
+          "CmdType": "Fungus.Menu",
+          "Text": "当年救下了重伤的凌轩",
+          "TargetBlockID": "this:1028(血剑宫后线索一总结)"
+        },
+        {
+          "ItemID": 1115,
+          "CmdType": "Fungus.Menu",
+          "Text": "向凌轩询问御剑门之战的情况",
+          "TargetBlockID": "this:1028(血剑宫后线索一总结)"
+        },
+        {
+          "ItemID": 1116,
+          "CmdType": "Fungus.Menu",
+          "Text": "血剑宫与白帝有宿怨",
+          "TargetBlockID": "this:1028(血剑宫后线索一总结)"
+        },
+        {
+          "ItemID": 1117,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 963,
+      "Name": "再想想",
+      "Description": "再想想",
+      "Position": "(-2771.632,-783.9018)",
+      "Commands": [
+        {
+          "ItemID": 1228,
+          "CmdType": "CmdJianLingPanelJiaoTanEnd"
+        }
+      ]
+    },
+    {
+      "ItemID": 1270,
+      "Name": "白帝楼",
+      "Description": "白帝楼",
+      "Position": "(-1619.269,-823.3106)",
+      "Commands": [
+        {
+          "ItemID": 1271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白帝楼？当年哪儿来的白帝楼？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1272,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1193(还是再想想)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 851,
+      "Name": "关于古神教",
+      "Description": "关于古神教",
+      "Position": "(-2423.85,-999.1241)",
+      "Commands": [
+        {
+          "ItemID": 1014,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1015,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1016,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教{$gsjstr1}，而古神教来宁州的目的有两个，分别是{$gsjstr2}和{$gsjstr3}...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1017,
+          "CmdType": "Fungus.Menu",
+          "Text": "或许还有其它可能？",
+          "TargetBlockID": "this:1043(古神教线索一推理)"
+        },
+        {
+          "ItemID": 1018,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的",
+          "TargetBlockID": "this:860(字符串赋值刷新)"
+        },
+        {
+          "ItemID": 1019,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1020,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1043(古神教线索一推理)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 852,
+      "Name": "关于血剑宫",
+      "Description": "关于血剑宫",
+      "Position": "(-2273.205,-994.8286)",
+      "Commands": [
+        {
+          "ItemID": 1118,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1119,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1120,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫{$xjgstr1}，而血剑宫来宁州的主要目的，则是{$xjgstr2}...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1121,
+          "CmdType": "Fungus.Menu",
+          "Text": "或许还有其它可能？",
+          "TargetBlockID": "this:1175(血剑宫线索一推理)"
+        },
+        {
+          "ItemID": 1122,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的",
+          "TargetBlockID": "this:860(字符串赋值刷新)"
+        },
+        {
+          "ItemID": 1123,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1124,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1175(血剑宫线索一推理)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1176,
+      "Name": "古神教线索一总结",
+      "Description": "古神教线索一总结",
+      "Position": "(-2430.382,-859.9135)",
+      "Commands": [
+        {
+          "ItemID": 1029,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1030,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1031,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 1032,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "从千年前起，古神教就不断尝试通过魔神蛊控制离火门的弟子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1033,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 1034,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教通过魔神蛊控制化尘教的恒如长老，由此渗透化尘教长达数百年。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1035,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1036,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教曾通过魔神蛊控制倪府长老，试图以此达到渗透白帝楼的目的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1037,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1038,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1044(古神教线索二选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1068,
+      "Name": "古神教线索三总结",
+      "Description": "古神教线索三总结",
+      "Position": "(-2430.213,-598.6021)",
+      "Commands": [
+        {
+          "ItemID": 1079,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1080,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1081,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 1082,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教通过控制倪府长老，查清了戮仙剑并不在白帝手中。此后又通过化尘教内鬼恒如的帮助，顺利在宁州古迹中夺取了戮仙剑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1083,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 1084,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教通过魔神蛊渗了宁州各大势力，以获取情报和利益，发展自身在宁州的势力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1085,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 3"
+        },
+        {
+          "ItemID": 1086,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教通过魔神蛊控制了不少散修为己所用，目的正是为了发展自身在宁州的势力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1087,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1088,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教屡次渗透离火门，正是为了调查火麒麟的情报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1089,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1091,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1090(古神教赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1211,
+      "Name": "结果赋值",
+      "Description": "结果赋值",
+      "Position": "(-1616.387,-762.4647)",
+      "Commands": [
+        {
+          "ItemID": 1215,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1214,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1216,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 1217,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天魔道通过活人炼制的延寿丹药，与不少势力都有勾结。当年应该就是他们在各大门派安插了内鬼，挑拨与御剑门的关系。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这番推断倒也合理，不过仅凭目前的线索，却也无法断言此事一定与他们有关。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1218,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 1219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "古神教为了调查火麒麟的情报，常年通过魔神蛊渗透离火门。若他们想通过在离火门内安插的内鬼散布御剑门私通魔门的谣言，想必不是难事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这番推断倒也合理，至少仅凭目前的线索来看，这种可能性还是很大。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1220,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "血剑宫一直以来的目标都是收集魔剑，当年事发之时也曾出现在宁州。当年最有可能对御剑门下手的应该就是他们。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这番推断倒也合理，不过仅凭目前的线索，却也无法断言此事一定与他们有关。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1252,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不管怎么说，至少我们可以有所防备...等下次见到凌轩师兄的时候，再问问他的看法吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1226,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "CmdJianLingPanelJiaoTanEnd"
+        }
+      ]
+    },
+    {
+      "ItemID": 850,
+      "Name": "关于天魔道",
+      "Description": "关于天魔道",
+      "Position": "(-2582.874,-996.1874)",
+      "Commands": [
+        {
+          "ItemID": 856,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 857,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 922,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道{$tmdstr1}，而天魔道来宁州的主要目的，则是{$tmdstr2}...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.Menu",
+          "Text": "或许还有其它可能？",
+          "TargetBlockID": "this:855(天魔道线索一推理)"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的",
+          "TargetBlockID": "this:860(字符串赋值刷新)"
+        },
+        {
+          "ItemID": 858,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 859,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "855(天魔道线索一推理)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 933,
+      "Name": "天魔道线索一总结",
+      "Description": "天魔道线索一总结",
+      "Position": "(-2588.895,-857.7157)",
+      "Commands": [
+        {
+          "ItemID": 935,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 934,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 936,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 937,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道修炼的功法恐怕离不开这些邪门的丹药，他们不惜冒险抓人炼丹，是因为他们需要长期潜伏在宁州。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 938,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 939,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道应当与玄道宗有宿怨，因此才会不惜派遣多名元婴期修士攻打玄道宗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 940,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 941,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道不仅与宁王府有勾结，与竹山宗长老亦有勾结。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 942,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 943,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "944(天魔道线索二推理)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 846,
+      "Name": "选择魔门",
+      "Description": "选择魔门",
+      "Position": "(-2425.872,-1072.132)",
+      "Commands": [
+        {
+          "ItemID": 844,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天魔道",
+          "TargetBlockID": "this:850(关于天魔道)"
+        },
+        {
+          "ItemID": 845,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于古神教",
+          "TargetBlockID": "this:851(关于古神教)"
+        },
+        {
+          "ItemID": 854,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于血剑宫",
+          "TargetBlockID": "this:852(关于血剑宫)"
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1264,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1265,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1266,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1267,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1268,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1269,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于御剑门",
+          "TargetBlockID": "this:1180(御剑门推理一)"
+        }
+      ]
+    },
+    {
+      "ItemID": 997,
+      "Name": "正确判定",
+      "Description": "正确判定",
+      "Position": "(-2418.515,-445.9325)",
+      "Commands": [
+        {
+          "ItemID": 999,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1002,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1001,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1003,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1000,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1004,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1008,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1006(解锁真相)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1009,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1010,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1012,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的",
+          "TargetBlockID": "this:860(字符串赋值刷新)"
+        },
+        {
+          "ItemID": 1013,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 860,
+      "Name": "字符串赋值刷新",
+      "Description": "字符串赋值刷新",
+      "Position": "(-2430.95,-1150.181)",
+      "Commands": [
+        {
+          "ItemID": 861,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 862,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 863,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 864,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 865,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 866,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 867,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 868,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 869,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 870,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 871,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 872,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 873,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 874,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 875,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 876,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 877,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 878,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 879,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 880,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 881,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 882,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 883,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 884,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 885,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 886,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 887,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 888,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 889,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 890,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 891,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 893,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 894,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 895,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 896,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 897,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 898,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 899,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 900,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 901,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 902,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 903,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 904,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 905,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 906,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 907,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 908,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 909,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 910,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 911,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 912,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 913,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 914,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 915,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 916,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 917,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 918,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 919,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "846(选择魔门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1177,
+      "Name": "天魔道线索二总结",
+      "Description": "天魔道线索二总结",
+      "Position": "(-2584.018,-720.9752)",
+      "Commands": [
+        {
+          "ItemID": 952,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 953,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 954,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 955,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道来宁州的主要目的，也是为了夺取戮仙剑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 956,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 957,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道来宁州的主要目的，是为了伺机报复玄道宗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 961,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 3"
+        },
+        {
+          "ItemID": 962,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道来宁州的主要目的，是为了调查天魔眼的情报，并找机会释放天魔眼中的天魔。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 958,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 959,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔道来宁州的目的，便是暗中抓捕宁州散修，行那活人炼丹之法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 960,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 983,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1178(天魔道赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1044,
+      "Name": "古神教线索二选项",
+      "Description": "古神教线索二选项",
+      "Position": "(-2429.862,-789.0176)",
+      "Commands": [
+        {
+          "ItemID": 1046,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "除此以外，古神教来宁州的目的应该有两个。其一是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1045,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查并夺取戮仙剑",
+          "TargetBlockID": "this:1047(古神教线索二总结)"
+        },
+        {
+          "ItemID": 1060,
+          "CmdType": "Fungus.Menu",
+          "Text": "渗透宁州各大势力",
+          "TargetBlockID": "this:1047(古神教线索二总结)"
+        },
+        {
+          "ItemID": 1059,
+          "CmdType": "Fungus.Menu",
+          "Text": "吸收门徒发展宗门",
+          "TargetBlockID": "this:1047(古神教线索二总结)"
+        },
+        {
+          "ItemID": 1239,
+          "CmdType": "CmdJianLingIsUnlockXianSuo"
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == True"
+        },
+        {
+          "ItemID": 1061,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查火麒麟的情报",
+          "TargetBlockID": "this:1047(古神教线索二总结)"
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1242,
+          "CmdType": "CmdJianLingIsUnlockXianSuo"
+        },
+        {
+          "ItemID": 1243,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == True"
+        },
+        {
+          "ItemID": 1244,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查火麒麟的情报",
+          "TargetBlockID": "this:1047(古神教线索二总结)"
+        },
+        {
+          "ItemID": 1247,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1248,
+          "CmdType": "CmdJianLingIsUnlockXianSuo"
+        },
+        {
+          "ItemID": 1249,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == True"
+        },
+        {
+          "ItemID": 1250,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查火麒麟的情报",
+          "TargetBlockID": "this:1047(古神教线索二总结)"
+        },
+        {
+          "ItemID": 1245,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1246,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1251,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1069,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1090,
+      "Name": "古神教赋值",
+      "Description": "古神教赋值",
+      "Position": "(-2423.663,-531.8835)",
+      "Commands": [
+        {
+          "ItemID": 1092,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1094,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1093,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1095,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1096,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 1097,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1098,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1099,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1100,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这番推断倒也合理。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1101,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "997(正确判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1102,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1103,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1104,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这么说确有一定道理，但总觉得还遗漏了一些什么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1105,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1106,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1107,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1108,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这么说确有一定道理，但总觉得还遗漏了一些什么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1109,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1110,
+          "CmdType": "Fungus.Menu",
+          "Text": "或许还有其它可能？",
+          "TargetBlockID": "this:1043(古神教线索一推理)"
+        },
+        {
+          "ItemID": 1262,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的",
+          "TargetBlockID": "this:860(字符串赋值刷新)"
+        },
+        {
+          "ItemID": 1111,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1178,
+      "Name": "天魔道赋值",
+      "Description": "天魔道赋值",
+      "Position": "(-2574.559,-656.8184)",
+      "Commands": [
+        {
+          "ItemID": 978,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 979,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 980,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 981,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 982,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 991,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这番推断倒也合理。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 998,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "997(正确判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 984,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 985,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 992,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这么说确有一定道理，但总觉得还遗漏了一些什么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 986,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 987,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 988,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 993,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...这么说确有一定道理，但总觉得还遗漏了一些什么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 989,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 994,
+          "CmdType": "Fungus.Menu",
+          "Text": "或许还有其它可能？",
+          "TargetBlockID": "this:855(天魔道线索一推理)"
+        },
+        {
+          "ItemID": 1260,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的",
+          "TargetBlockID": "this:860(字符串赋值刷新)"
+        },
+        {
+          "ItemID": 996,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1201,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-1764.139,-759.725)",
+      "Commands": [
+        {
+          "ItemID": 1202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "根据之前打听到的线索，当年是一名离火门弟子最先传出了御剑门私通魔门的消息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1203,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "由此看来，当年的幕后黑手最有可能是....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1210,
+          "CmdType": "Fungus.Menu",
+          "Text": "天魔道",
+          "TargetBlockID": "this:1211(结果赋值)"
+        },
+        {
+          "ItemID": 1213,
+          "CmdType": "Fungus.Menu",
+          "Text": "古神教",
+          "TargetBlockID": "this:1211(结果赋值)"
+        },
+        {
+          "ItemID": 1212,
+          "CmdType": "Fungus.Menu",
+          "Text": "血剑宫",
+          "TargetBlockID": "this:1211(结果赋值)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1062,
+      "Name": "古神教线索三选项",
+      "Description": "古神教线索三选项",
+      "Position": "(-2434.404,-660.1764)",
+      "Commands": [
+        {
+          "ItemID": 1063,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "另一个目的是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1071,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang != var1"
+        },
+        {
+          "ItemID": 1064,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查并夺取戮仙剑",
+          "TargetBlockID": "this:1068(古神教线索三总结)"
+        },
+        {
+          "ItemID": 1072,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1073,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang != var2"
+        },
+        {
+          "ItemID": 1065,
+          "CmdType": "Fungus.Menu",
+          "Text": "渗透宁州各大势力",
+          "TargetBlockID": "this:1068(古神教线索三总结)"
+        },
+        {
+          "ItemID": 1074,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1075,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang != var3"
+        },
+        {
+          "ItemID": 1066,
+          "CmdType": "Fungus.Menu",
+          "Text": "吸收门徒发展宗门",
+          "TargetBlockID": "this:1068(古神教线索三总结)"
+        },
+        {
+          "ItemID": 1076,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1077,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang != var5"
+        },
+        {
+          "ItemID": 1067,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查火麒麟的情报",
+          "TargetBlockID": "this:1068(古神教线索三总结)"
+        },
+        {
+          "ItemID": 1078,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1070,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1006,
+      "Name": "解锁真相",
+      "Description": "解锁真相",
+      "Position": "(-2417.89,-381.935)",
+      "Commands": [
+        {
+          "ItemID": 1007,
+          "CmdType": "CmdJianLingUnlockZhenXiang"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1180(御剑门推理一)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1136,
+      "Name": "血剑宫线索二推理",
+      "Description": "血剑宫线索二推理",
+      "Position": "(-2278.242,-787.9935)",
+      "Commands": [
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "除此以外，血剑宫来宁州的主要目的应该是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查并夺取戮仙剑",
+          "TargetBlockID": "this:947(血剑宫线索二总结)"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.Menu",
+          "Text": "攻打白帝楼",
+          "TargetBlockID": "this:947(血剑宫线索二总结)"
+        },
+        {
+          "ItemID": 1140,
+          "CmdType": "Fungus.Menu",
+          "Text": "偷学白帝楼功法",
+          "TargetBlockID": "this:947(血剑宫线索二总结)"
+        },
+        {
+          "ItemID": 1142,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1180,
+      "Name": "御剑门推理一",
+      "Description": "御剑门推理一",
+      "Position": "(-2044.69,-786.4058)",
+      "Commands": [
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "仔细想想，当年魔门盯上御剑门，真正的目的是为了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1187,
+          "CmdType": "Fungus.Menu",
+          "Text": "向御剑门寻仇",
+          "TargetBlockID": "this:1189(向御剑门寻仇)"
+        },
+        {
+          "ItemID": 1188,
+          "CmdType": "Fungus.Menu",
+          "Text": "伺机夺取魔剑",
+          "TargetBlockID": "this:1190(伺机夺取魔剑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 855,
+      "Name": "天魔道线索一推理",
+      "Description": "天魔道线索一推理",
+      "Position": "(-2589.768,-928.5506)",
+      "Commands": [
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "目前收集到有关天魔道的线索中，其实包含着一个可能与御剑门有关的重要的信息。天魔道...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 971,
+          "CmdType": "Fungus.Menu",
+          "Text": "长期潜伏于宁州",
+          "TargetBlockID": "this:933(天魔道线索一总结)"
+        },
+        {
+          "ItemID": 928,
+          "CmdType": "Fungus.Menu",
+          "Text": "与玄道宗有仇",
+          "TargetBlockID": "this:933(天魔道线索一总结)"
+        },
+        {
+          "ItemID": 927,
+          "CmdType": "Fungus.Menu",
+          "Text": "与其它势力勾结",
+          "TargetBlockID": "this:933(天魔道线索一总结)"
+        },
+        {
+          "ItemID": 964,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想",
+          "TargetBlockID": "this:963(再想想)"
+        }
+      ]
+    },
+    {
+      "ItemID": 842,
+      "Name": "关于魔门的线索",
+      "Description": "关于魔门的线索",
+      "Position": "(-2431.1,-1228.421)",
+      "Commands": [
+        {
+          "ItemID": 1183,
+          "CmdType": "CmdJianLingIsUnlockZhenXiang"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == True"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1180(御剑门推理一)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1186,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 853,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 932,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 931,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 930,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 950,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "如今魔门蠢蠢欲动，各有所图。而当年之事，背后也定有魔门暗中推手...你可是有什么思绪了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "千年来活跃于宁州之魔道无外乎天魔道，古神教与血剑宫三者，先按现在已经收集到的线索逐一推断试试吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "860(字符串赋值刷新)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1189,
+      "Name": "向御剑门寻仇",
+      "Description": "向御剑门寻仇",
+      "Position": "(-1904.253,-818.2705)",
+      "Commands": [
+        {
+          "ItemID": 1192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可老夫并不记得曾与什么魔门结过仇...而且若要说寻仇的话，玄道宗与其它五大门派才应该是首当其冲才对...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1195,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1193(还是再想想)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1200,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-1763.6,-822.7386)",
+      "Commands": [
+        {
+          "ItemID": 1205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "唔...老夫记得似乎不是这样...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1209,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1193(还是再想想)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1047,
+      "Name": "古神教线索二总结",
+      "Description": "古神教线索二总结",
+      "Position": "(-2428.109,-720.9288)",
+      "Commands": [
+        {
+          "ItemID": 1048,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1049,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1050,
+          "CmdType": "Fungus.If",
+          "Condition": "xuanxiang == 1"
+        },
+        {
+          "ItemID": 1051,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教通过控制倪府长老，查清了戮仙剑并不在白帝手中。此后又通过化尘教内鬼恒如的帮助，顺利在宁州古迹中夺取了戮仙剑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1052,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 2"
+        },
+        {
+          "ItemID": 1053,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教通过魔神蛊渗了宁州各大势力，以获取情报和利益，发展自身在宁州的势力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1054,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "xuanxiang == 3"
+        },
+        {
+          "ItemID": 1055,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教通过魔神蛊控制了不少散修为己所用，目的正是为了发展自身在宁州的势力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1056,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1057,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "古神教屡次渗透离火门，正是为了调查火麒麟的情报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1058,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1062(古神教线索三选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

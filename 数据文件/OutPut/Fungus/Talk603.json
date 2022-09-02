@@ -1,0 +1,294 @@
+{
+  "Name": "Talk603",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "战斗判断",
+      "Description": "战斗判断",
+      "Position": "(-2600.422,-1095.87)",
+      "Commands": [
+        {
+          "ItemID": 149,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "151(成功突破)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "169(结丹失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2604.035,-1174.115)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(战斗判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3248.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 151,
+      "Name": "成功突破",
+      "Description": "成功突破",
+      "Position": "(-2600.135,-1014.762)",
+      "Commands": [
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 83"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.GetJinDanLv"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 9"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.AddCyFu"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.SetChuanWenBlack"
+        }
+      ]
+    },
+    {
+      "ItemID": 169,
+      "Name": "结丹失败",
+      "Description": "结丹失败",
+      "Position": "(-2417.362,-1096.991)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

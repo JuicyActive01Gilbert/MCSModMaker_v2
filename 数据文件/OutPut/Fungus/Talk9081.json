@@ -1,0 +1,434 @@
+{
+  "Name": "Talk9081",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(吞噬事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 308,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2791.162,-1140.788)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你跟着他们一路逃遁，但很快就因为灵气风暴走散了。也不知过了多久，身后的吸力逐渐降低，你才终于逃过一劫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "回头只见方圆百里内，天地灵气被一扫而尽，无数海兽，没来得及逃跑的修士与船只被吸入一个巨大的漩涡，没有一个活物能够逃离...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "呼，终于逃出来了，没想到浪方大圣的吞噬神通竟恐怖如斯……还是先离开此地为好，免得节外生枝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "CmdRemoveSeaAI"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 307,
+      "Name": "一探究竟",
+      "Description": "一探究竟",
+      "Position": "(-2652.117,-1221.788)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "有意思，此等异象难得一见，我倒是要一探究竟！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你小心翼翼的朝那个方向前进，没过多久，只觉得远处传来的吸力越来越强，以你的修为根本难以抵挡。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你小心翼翼的朝那个方向前进，没过多久，只觉得远处传来的吸力越来越强，即便以你元婴期的实力也难以抵挡。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你小心翼翼的朝那个方向前进，没过多久，只觉得远处传来的吸力越来越强，即便以你化神期的实力也难以抵挡。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你疯了？快，快退！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu < 150"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你心下大骇，但此时反悔已经为时已晚，你顺着各处被吸来的船只于妖兽一起，被卷入一片黑暗之中...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "CmdRemoveSeaAI"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你全力施展遁术，拼了命的往回逃。也不知过了多久，身后的吸力逐渐降低，你才终于逃过一截。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "回头只见方圆百里内，天地灵气被一扫而尽，无数海兽，没来得及逃跑的修士与船只被吸入一个巨大的漩涡，没有一个活物能够逃离...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "呼，终于逃出来了，没想到浪方大圣的吞噬神通竟恐怖如斯……还是先离开此地为好，免得节外生枝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "CmdRemoveSeaAI"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "吞噬事件",
+      "Description": "吞噬事件",
+      "Position": "(-2797.994,-1223.457)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "SavePoint"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一声悠扬的鲸啸后，远处原本平静的海面掀起了巨浪。顷刻间，天地随之变色。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "如此天地异象，难道说……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见几名金丹期修士狼狈逃遁而来，就在他们身后，一股恐怖的吸引力在急速向你们蔓延而来...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "几位道友，请问那边究竟发生了何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "道...道友有所不知，那是浪方大圣在吞噬天地灵气，若我们这等修为被波及到，那...那可是必死无疑啊！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "道友也...也快逃离此地吧...再晚可...可就来不及了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "逃离此地",
+          "TargetBlockID": "this:308(逃)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:307(一探究竟)"
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2938.737,-1227.369)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "什么事也没有发生。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "CmdRemoveSeaAI"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

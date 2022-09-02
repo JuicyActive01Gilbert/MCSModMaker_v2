@@ -1,0 +1,423 @@
+{
+  "Name": "FightTalk3",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "UseSkill",
+      "Description": "UseSkill",
+      "Position": "(-2889.911,-1326.412)",
+      "Commands": [
+        {
+          "ItemID": 107,
+          "CmdType": "Fungus.If",
+          "Condition": "attaker == True"
+        },
+        {
+          "ItemID": 108,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "105(玩家释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 109,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "attaker == False"
+        },
+        {
+          "ItemID": 110,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "106(敌人释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 103,
+      "Name": "start",
+      "Description": "start",
+      "Position": "(-2500.146,-1309.214)",
+      "Commands": [
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "不好，附近的阵法已经启动了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "我们会想办法帮你破除这附近的阵法，你自己多加小心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "玩家释放技能",
+      "Description": "玩家释放技能",
+      "Position": "(-2921.108,-1223.69)",
+      "Commands": []
+    },
+    {
+      "ItemID": 106,
+      "Name": "敌人释放技能",
+      "Description": "敌人释放技能",
+      "Position": "(-3173.32,-1329.816)",
+      "Commands": []
+    },
+    {
+      "ItemID": 126,
+      "Name": "释放火弹后",
+      "Description": "释放火弹后",
+      "Position": "(-3172.975,-1090.675)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 128,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，以第一次实战来看，你这表现还算不错。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "有的时候，你需要重新沟通周天的灵气，{color=red}使用三张不同系{/color}的灵气牌，来释放运气术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "释放运气后",
+      "Description": "释放运气后",
+      "Position": "(-2967.294,-1088.949)",
+      "Commands": [
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "就是这样，现在，用{color=red}两张水系灵气牌{/color}来释放水弹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 151,
+      "Name": "释放水弹后",
+      "Description": "释放水弹后",
+      "Position": "(-2791.801,-1087.633)",
+      "Commands": [
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "看来你掌握的还不错，不过道家法门妙用无穷，你若是能领悟{color=red}五行相生{/color}的技巧，这些基础法术也会威力大增。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.FightClearSkill"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "修士间的对决，体内五行灵气的数量最为重要。如果你体内的灵气已经不足以释放法术了，就只能先{color=red}结束回合{/color}，再重新吸收天地灵气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "随着修为的提升，你体内能够储存的{color=red}灵气上限{/color}也会越来越多。只有这样，你才能使用那些更为强大的神通。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 156,
+      "Name": "RealClickEndRound",
+      "Description": "RealClickEndRound",
+      "Position": "(-2248.119,-1306.215)",
+      "Commands": [
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "183(第一回合)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "184(第二回合)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "185(第三回合)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "186(第五回合)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 183,
+      "Name": "第一回合",
+      "Description": "第一回合",
+      "Position": "(-2443.68,-1199.586)",
+      "Commands": [
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "他驱阵用的手法便是传说中的《乾坤百巧诀》，这种手法失传多年，没想到今天在这里又见到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 184,
+      "Name": "第二回合",
+      "Description": "第二回合",
+      "Position": "(-2303.861,-1200.404)",
+      "Commands": [
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，最外围的土相仙阵和灵水仙阵都已经破除了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 185,
+      "Name": "第三回合",
+      "Description": "第三回合",
+      "Position": "(-2171.861,-1205.404)",
+      "Commands": [
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，我们已经将聚灵阵和霜天寒月阵破除，他如今只能凭本能驱阵，接下来要一口气破除剩下所有的阵法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 186,
+      "Name": "第五回合",
+      "Description": "第五回合",
+      "Position": "(-2015.816,-1207.086)",
+      "Commands": [
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，剩下的大部分阵法都已经破除，剩下的就交给你了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

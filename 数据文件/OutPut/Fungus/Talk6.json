@@ -1,0 +1,471 @@
+{
+  "Name": "Talk6",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2662.746,-1304.58)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "128(GetStaticValues)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-2511.417,-1302.982)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(东石谷初次判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 209,
+      "Name": "初入东石谷",
+      "Description": "初入东石谷",
+      "Position": "(-2350.763,-1171.395)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "269(对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 225,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2158.859,-1256.143)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 261,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-2836.344,-1186.273)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "264(StartFight)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 264,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-2657.043,-1191.044)",
+      "Commands": [
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 202,
+      "Name": "东石谷初次判断",
+      "Description": "东石谷初次判断",
+      "Position": "(-2357.896,-1300.948)",
+      "Commands": [
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(东石谷二级判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "225(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 269,
+      "Name": "对话",
+      "Description": "对话",
+      "Position": "(-2350.498,-1112.299)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "没想到这东石谷中竟如此繁华，我还是第一次在同一个地方见到这么多的修真之人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，这东石谷盛会{color=#d0380a}一年一次{/color}，能聚拢许多修仙者各取所需，互通有无，机会可难得的很。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这么多好东西就这么摆在街上叫卖，难道不怕危险？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "大可放心！这盛会能延续几百年，背后底蕴非同小可，今年更是轮到{color=#d0380a}宁州四族{/color}主持。哼，就算那帮沂山派杂碎，也不敢在此造次。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{xiongdi}你修行尚浅，不妨去坊市内多看看，或许能碰到合适的兵器功法，将来行走江湖也多份保障。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这些灵石{xiongdi}你先收下，看着什么喜欢的就买，可别和我客气！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢！倪道友不一同前去看看么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "说来惭愧，之前战斗我硬吃了几招，如今得先{color=#d0380a}疗伤{/color}才行。我要去{color=#d0380a}客栈{/color}静养些时日",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不如我们下个月在{color=#d0380a}伴月楼{/color}碰头。一起去那里的竞拍会上开开眼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "东石谷二级判断",
+      "Description": "东石谷二级判断",
+      "Position": "(-2357.517,-1231.833)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.CheckTime"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "209(初入东石谷)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "225(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

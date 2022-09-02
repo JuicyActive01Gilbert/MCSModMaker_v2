@@ -1,0 +1,370 @@
+{
+  "Name": "Talk162001",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2810.296,-1378.3)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 547,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2810.833,-1146.482)",
+      "Commands": [
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "竟然已经有鲲族进入了，我还是快些行事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Menu",
+          "Text": "进去看看",
+          "TargetBlockID": "this:560(进去看看-判断龙珠)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 563,
+      "Name": "阵道没过",
+      "Description": "阵道没过",
+      "Position": "(-2440.309,-956.2251)",
+      "Commands": [
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你感受到，此地或有玄妙但不得要领。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我还是先去其他地方看看吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 577,
+      "Name": "无九龙玺-判断阵道",
+      "Description": "无九龙玺-判断阵道",
+      "Position": "(-2659.729,-955.4575)",
+      "Commands": [
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "562(阵道过了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "563(阵道没过)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 549,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2649.243,-1146.369)",
+      "Commands": [
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "呼~~这天机阁果真不好惹，还是走为上策。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 576,
+      "Name": "有九龙玺",
+      "Description": "有九龙玺",
+      "Position": "(-2975.064,-953.0645)",
+      "Commands": [
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你感受到，九龙玺似有感应轻轻颤动。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Menu",
+          "Text": "出示九龙玺",
+          "TargetBlockID": "this:584(出示九龙玺)"
+        }
+      ]
+    },
+    {
+      "ItemID": 603,
+      "Name": "以阵道破阵",
+      "Description": "以阵道破阵",
+      "Position": "(-2655.41,-800.8174)",
+      "Commands": [
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的空间泛起波纹，裂开一道光门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈，不过如此嘛~",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.Menu",
+          "Text": "进去看看",
+          "TargetBlockID": "this:587(进宝库)"
+        }
+      ]
+    },
+    {
+      "ItemID": 587,
+      "Name": "进宝库",
+      "Description": "进宝库",
+      "Position": "(-2809.193,-708.0468)",
+      "Commands": [
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.OutFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 584,
+      "Name": "出示九龙玺",
+      "Description": "出示九龙玺",
+      "Position": "(-2975.695,-802.2649)",
+      "Commands": [
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的空间泛起波纹，裂开一道光门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Menu",
+          "Text": "进去看看",
+          "TargetBlockID": "this:587(进宝库)"
+        }
+      ]
+    },
+    {
+      "ItemID": 560,
+      "Name": "进去看看-判断龙珠",
+      "Description": "进去看看-判断龙珠",
+      "Position": "(-2820.906,-1051.929)",
+      "Commands": [
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "进入楼中，眼前尽是废墟，大量法宝残片与流矢灵力的法宝躺在地上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.If",
+          "Condition": "checkitem == True"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "576(有九龙玺)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "577(无九龙玺-判断阵道)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断对话",
+      "Description": "判断对话",
+      "Position": "(-2810.131,-1237.82)",
+      "Commands": [
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "547(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        }
+      ]
+    },
+    {
+      "ItemID": 562,
+      "Name": "阵道过了",
+      "Description": "阵道过了",
+      "Position": "(-2655.547,-880.738)",
+      "Commands": [
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯？这里应该还有一层空间被封印了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.Menu",
+          "Text": "破阵",
+          "TargetBlockID": "this:603(以阵道破阵)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

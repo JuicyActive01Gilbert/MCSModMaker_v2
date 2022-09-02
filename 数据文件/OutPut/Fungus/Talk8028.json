@@ -1,0 +1,494 @@
+{
+  "Name": "Talk8028",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2805.59,-1414.771)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(任务赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 399,
+      "Name": "任务状态判定",
+      "Description": "任务状态判定",
+      "Position": "(-2809.293,-1241.782)",
+      "Commands": [
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(一级对话选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(没有其它事了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 407,
+      "Name": "我还要准备一下",
+      "Description": "我还要准备一下",
+      "Position": "(-2791.066,-1063.474)",
+      "Commands": []
+    },
+    {
+      "ItemID": 539,
+      "Name": "检查",
+      "Description": "检查",
+      "Position": "(-3071.822,-922.5069)",
+      "Commands": [
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你开始检查各个草药的生长情况，并通过自己草药理解对药材的生长环境做出调整。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好了，这药园应该没有什么隐患了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "有劳长老了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "一级对话选项",
+      "Description": "一级对话选项",
+      "Position": "(-2927.57,-1160.389)",
+      "Commands": [
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "您就是来维护宗门药田的{FirstName}长老吧。您是要现在开始么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:406(是的)"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还要准备一下",
+          "TargetBlockID": "this:407(我还要准备一下)"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "任务赋值",
+      "Description": "任务赋值",
+      "Position": "(-2807.307,-1321.165)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "399(任务状态判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "是的",
+      "Description": "是的",
+      "Position": "(-3069.503,-1073.66)",
+      "Commands": [
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我这就打开禁制。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "只见他催动手中的信物，眼前笼罩着药田的光幕撤去。一阵草木灵气迸发而出，不过当他们触及药园边缘时，又被聚拢回来并没有散溢出去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "此时药园边的一块阵基，其上铭刻的灵纹在一阵闪烁之后消失了，药园的聚灵阵似乎出现了一个缺口。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "药园的草木灵气开始缓缓外泄。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不好...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.If",
+          "Condition": "wudaolv >= 3"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "你不过扫视一眼，你分辨出这阵法不过是一改良的巨型聚灵阵罢了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "别慌。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "你手掐法诀隔空就修复了那块阵基上的灵纹，同时草木灵气也停止了泄露。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "没想到，长老作为炼丹长老在阵法上的造诣也是了得，晚辈佩服。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈，举手之劳何足挂齿我门还是先办正事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "以你的阵道造诣很难分辨出这是什么阵法，更别提如何修复。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不过，远处一道遁光赶来，来者更换了阵基，灵气外溢也就止住了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "呼~我门还是先办正事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Menu",
+          "Text": "检查药田",
+          "TargetBlockID": "this:539(检查)"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "没有其它事了",
+      "Description": "没有其它事了",
+      "Position": "(-2692.577,-1149.201)",
+      "Commands": [
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "长老，您还有别的吩咐么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

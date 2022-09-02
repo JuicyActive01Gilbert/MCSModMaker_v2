@@ -1,0 +1,502 @@
+{
+  "Name": "Talk11900",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3494.318,-1444.433)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(竹山宗-境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 404,
+      "Name": "介绍",
+      "Description": "介绍",
+      "Position": "(-2688.32,-1396.971)",
+      "Commands": [
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "幻雾阵是我派长老们联合布下的阵法，一旦入阵，就会进入幻境，受到长老们所设幻象的攻击。在幻阵之中坚持的越久，越能磨炼你的{color=#d0380a}心境{/color}，如果你的{color=#d0380a}悟性{/color}高，还有可能从幻象的攻击中领悟我派的至深法门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "当然，想要通过与幻象的交手来领悟法门是很难的，这么多年来我还没有见到有哪位师兄成功过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 437,
+      "Name": "称赞1",
+      "Description": "称赞1",
+      "Position": "(-2841.956,-1453.565)",
+      "Commands": [
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "见过{shixiong}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 313,
+      "Name": "通关检测",
+      "Description": "通关检测",
+      "Position": "(-2992.154,-1353.243)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 6"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "419(炼气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "429(称赞)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "传送",
+      "Description": "传送",
+      "Position": "(-2843.586,-1340.971)",
+      "Commands": [
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "好，我这便为你启动阵法。如果你被幻象击败，会自动传送出阵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "云雾在你的眼前开始翻涌，你感到一阵天旋地转，恍惚中，你已经进入了幻境之中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 419,
+      "Name": "炼气期",
+      "Description": "炼气期",
+      "Position": "(-2841.956,-1277.565)",
+      "Commands": [
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，要去幻雾阵历练一番么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:411(传送)"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Menu",
+          "Text": "只是路过",
+          "TargetBlockID": "this:409(路过)"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Menu",
+          "Text": "幻雾阵是...？",
+          "TargetBlockID": "this:404(介绍)"
+        }
+      ]
+    },
+    {
+      "ItemID": 429,
+      "Name": "称赞",
+      "Description": "称赞",
+      "Position": "(-3051.956,-1286.565)",
+      "Commands": [
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}能够在炼气期就闯过幻雾阵，日后成就一定不可限量啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 439,
+      "Name": "通关检测 2",
+      "Description": "通关检测 2",
+      "Position": "(-2990.956,-1400.565)",
+      "Commands": [
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 6"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "437(称赞1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2988.374,-1498.257)",
+      "Commands": [
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "见过前辈",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 172,
+      "Name": "竹山宗-境界测试",
+      "Description": "竹山宗-境界测试",
+      "Position": "(-3306.181,-1444.267)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(通关检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "439(通关检测 2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(元婴期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2990.196,-1444.828)",
+      "Commands": [
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "见过前辈",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 316,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2987.626,-1549.922)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "见过前辈",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 409,
+      "Name": "路过",
+      "Description": "路过",
+      "Position": "(-2671.32,-1283.971)",
+      "Commands": []
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2848.036,-1401.131)",
+      "Commands": [
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "{shixiong}，要去幻雾阵历练一番么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:411(传送)"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Menu",
+          "Text": "只是路过",
+          "TargetBlockID": "this:409(路过)"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Menu",
+          "Text": "幻雾阵是...？",
+          "TargetBlockID": "this:404(介绍)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

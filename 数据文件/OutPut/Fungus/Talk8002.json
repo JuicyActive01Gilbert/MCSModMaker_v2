@@ -1,0 +1,480 @@
+{
+  "Name": "Talk8002",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2805.59,-1415.907)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(任务赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 399,
+      "Name": "任务状态判定",
+      "Description": "任务状态判定",
+      "Position": "(-2809.293,-1235.203)",
+      "Commands": [
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(一级对话选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(没有其它事了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 407,
+      "Name": "我还要准备一下",
+      "Description": "我还要准备一下",
+      "Position": "(-2791.066,-1063.474)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "一级对话选项",
+      "Description": "一级对话选项",
+      "Position": "(-2922.09,-1159.019)",
+      "Commands": [
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "是来协助药园守卫的外门{shidi}吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可是来协助药园守卫内门{shidi}？目前人手空缺，{shidi}的到来也是解了燃眉之急。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:406(是的)"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还要准备一下",
+          "TargetBlockID": "this:407(我还要准备一下)"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "任务赋值",
+      "Description": "任务赋值",
+      "Position": "(-2807.307,-1317.869)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "399(任务状态判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "是的",
+      "Description": "是的",
+      "Position": "(-3069.503,-1070.92)",
+      "Commands": [
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}你这前往药园吧。\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}你这前往药园吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我这就前去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "没有其它事了",
+      "Description": "没有其它事了",
+      "Position": "(-2692.577,-1148.102)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "宗门重地，办完事{shidi}还是速速离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此地乃宗门重地，若是无事{shidi}还是不要多做逗留。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

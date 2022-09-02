@@ -1,0 +1,605 @@
+{
+  "Name": "Talk8303",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 275,
+      "Name": "请问可有吩咐。",
+      "Description": "请问可有吩咐。",
+      "Position": "(-2286.049,-839.1856)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "276(剧情1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "为何找我",
+      "Description": "为何找我",
+      "Position": "(-2563.322,-624.4127)",
+      "Commands": [
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我绝焰堂本就人丁稀少，最近本门附近也不太平，确实是分不出像{shidi}你这样修为精深又办事牢靠的人了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 270,
+      "Name": "询问麟尊何在",
+      "Description": "询问麟尊何在",
+      "Position": "(-2420.14,-915.3217)",
+      "Commands": [
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "你察觉到对方似是苦笑一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "{FirstName}{shidi}，你最近是见不到家师了。自我接手绝焰堂之后，唉，师尊倒是也放心把这里里外外的事情都交给我。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Menu",
+          "Text": "...",
+          "TargetBlockID": "this:274(...)"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Menu",
+          "Text": "请问可有吩咐。",
+          "TargetBlockID": "this:275(请问可有吩咐。)"
+        }
+      ]
+    },
+    {
+      "ItemID": 243,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2426.984,-1015.921)",
+      "Commands": [
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "眼前之人在你的感知之下，似是一座即将喷发的火山，内里炙热翻涌表面气息却是静若止水。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "眼前之人你在他身上感受不到任何灵气波动好似一个凡人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "你是宗门新晋的{FirstName}长老吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "正是晚辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我虽是久居麟庙之内，但对你也是早有耳闻。不论是外门大比夺得魁首，还是天魔眼为门争光，称得上我离火门的栋梁之材。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我虽是久居麟庙之内，但对你也是早有耳闻，外门大比夺得魁首之时我就很看好你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我虽是久居麟庙之内，但对你也是早有耳闻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "麟尊前辈过誉了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "嗯？哈哈...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "你搞错了，炎麟大圣乃是家师，目前在外云游。在下绝焰堂大长老钟焰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "原来是钟长老当面，失礼了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "{FirstName}{shidi}，客气了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问麟尊何在？",
+          "TargetBlockID": "this:270(询问麟尊何在)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "与谁交接",
+      "Description": "与谁交接",
+      "Position": "(-2259.913,-625.549)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "化尘教来信，此次交易由恒如真人负责，你到了化尘教他应会接待你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "转身出发",
+      "Description": "转身出发",
+      "Position": "(-2414.458,-453.9585)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "{shidi}!",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "嗯？还有嘱咐？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "嗯...化尘教近年来不与各派联络，突然找我离火门求购火麟玉，总感觉蹊跷的很。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "此剑，你且收着。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "只见他一掐法诀，一柄赤红的飞剑从一旁的墙上向你飞来。剑身上炙热的波动，让你明白这至少是柄上品法宝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.If",
+          "Condition": "wudaolv >= 3"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "以你的炼器造诣，也是察觉了一丝不对。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "（这剑在成胚之时融入了两颗火龙牙，怎么才侃侃达到上品法宝的品阶。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "此剑本是我闲暇时的练手之作，就先借给{shidi}防身吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "也许是我多心了，{shidi}不要嫌我烦就好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "没什么要了解的了",
+      "Description": "没什么要了解的了",
+      "Position": "(-2425.821,-536.9128)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "我就知道{shidi}你不会推辞，这个储物袋就是火麟玉。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "那我立刻动身。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身出发",
+          "TargetBlockID": "this:302(转身出发)"
+        }
+      ]
+    },
+    {
+      "ItemID": 276,
+      "Name": "剧情1",
+      "Description": "剧情1",
+      "Position": "(-2420.139,-767.5945)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "哈哈哈，不是这些了，今日请{shidi}过来除了是例行公事之外，也有一件小事想要劳烦{shidi}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "钟长老但说无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "是这样的，最近化尘教向我门求购一批火麟玉，我想劳烦{shidi}运送此物。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2416.731,-693.7311)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "为何找我",
+          "TargetBlockID": "this:282(为何找我)"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Menu",
+          "Text": "注意事项",
+          "TargetBlockID": "this:283(注意事项)"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Menu",
+          "Text": "与谁交接",
+          "TargetBlockID": "this:284(与谁交接)"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "交由我吧",
+          "TargetBlockID": "this:285(没什么要了解的了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 274,
+      "Name": "...",
+      "Description": "...",
+      "Position": "(-2559.913,-840.3219)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "276(剧情1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "注意事项",
+      "Description": "注意事项",
+      "Position": "(-2416.73,-619.8675)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "最近虽是风平浪静，但我总觉得心神不宁，{shidi}你还是路上多多留心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2432.367,-1118.267)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "243(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

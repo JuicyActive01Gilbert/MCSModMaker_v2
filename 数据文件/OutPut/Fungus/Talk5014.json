@@ -1,0 +1,363 @@
+{
+  "Name": "Talk5014",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2931.014,-1606.352)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(获取势力、获得好感度)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2931.703,-1686.225)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1595,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2723.632,-1443.16)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1585,
+      "Name": "判断",
+      "Description": "判断",
+      "Position": "(-2929.632,-1369.16)",
+      "Commands": [
+        {
+          "ItemID": 1587,
+          "CmdType": "Fungus.If",
+          "Condition": "TempHaoGanDu >= 0"
+        },
+        {
+          "ItemID": 1590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1588,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这地方似乎不是很欢迎我...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1591,
+          "CmdType": "Fungus.Menu",
+          "Text": "扭头离开",
+          "TargetBlockID": "this:1593(离开)"
+        },
+        {
+          "ItemID": 1592,
+          "CmdType": "Fungus.Menu",
+          "Text": "悄悄潜入",
+          "TargetBlockID": "this:1594(潜入)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1594,
+      "Name": "潜入",
+      "Description": "潜入",
+      "Position": "(-3084.632,-1322.16)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1593,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-3086.632,-1395.16)",
+      "Commands": []
+    },
+    {
+      "ItemID": 172,
+      "Name": "产生武将",
+      "Description": "产生武将",
+      "Position": "(-2931.544,-1445.691)",
+      "Commands": [
+        {
+          "ItemID": 1540,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi == 0"
+        },
+        {
+          "ItemID": 1541,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1542,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1543,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1544,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1545,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1546,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1547,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1548,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1549,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1550,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1551,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1552,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1553,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1554,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1555,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1556,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1557,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1558,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1559,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1560,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1561,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1562,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1563,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1564,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1565,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1566,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1567,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1568,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1569,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1570,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1571,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1572,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1573,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1574,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1575,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1576,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1577,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1578,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1579,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1580,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1581,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1584,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1586,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1585(判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "获取势力、获得好感度",
+      "Description": "获取势力、获得好感度",
+      "Position": "(-2952.771,-1524.678)",
+      "Commands": [
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(产生武将)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

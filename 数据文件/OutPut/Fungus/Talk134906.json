@@ -1,0 +1,867 @@
+{
+  "Name": "Talk134906",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2449.452,-1399.115)",
+      "Commands": [
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "275(药园2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 346,
+      "Name": "获得龙鳞2",
+      "Description": "获得龙鳞2",
+      "Position": "(-2553.987,-994.4504)",
+      "Commands": [
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 390,
+      "Name": "初次进入-核心气眼",
+      "Description": "初次进入-核心气眼",
+      "Position": "(-2235.987,-1112.45)",
+      "Commands": [
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前是一气眼，龙脉之气喷涌而出。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然，周围喷涌的龙脉之力向你汇聚而来，被你吸收一空。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.AddHPMax"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "看来你{xiaozi}还真是龙族后裔，竟能吸收这龙脉之力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "龙脉之力？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "传闻上古龙族掌握一条龙脉用于龙族修炼特殊地脉，看这地脉喷涌的程度，应该即将主脉出世届时有可能上古龙宫一并出世。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "周围四溢着某种能量，但你并不能吸收调用。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "看情形这就是传闻之中的龙脉之力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "龙脉之力？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "传闻上古龙族掌握一条龙脉用于龙族修炼特殊地脉，看这地脉喷涌的程度，应该即将主脉出世届时有可能上古龙宫一并出世。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不愧是上古龙族，当年所修的龙脉今日竟还有复苏的迹象，这等要事还是尽快回复龙族一声吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 275,
+      "Name": "药园2",
+      "Description": "药园2",
+      "Position": "(-2450.987,-1248.45)",
+      "Commands": [
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetChuanWenBlack"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(九玄大圣1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "281(九玄大圣2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "390(初次进入-核心气眼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(后续进入-核心气眼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(后续进入-核心气眼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 281,
+      "Name": "九玄大圣2",
+      "Description": "九玄大圣2",
+      "Position": "(-2556.987,-1114.45)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一片黯淡的逆鳞悬浮于空中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你感受到其中的波动很是熟悉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "九玄大圣的传承？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然龙鳞光芒大方，从龙鳞中一阵男声：“吾乃龙族太上长老九玄，今日我族为无耻鲲族所暗算，此番大劫也不知我龙族能否挺过，你作为我龙族后裔这《真龙九变》与《真龙血怒》就传与你，切记大仇不可忘，传承不可断。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.LearningStaticSkill"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然龙鳞光芒大方，从龙鳞中一阵男声：“吾乃龙族太上长老九婴，今日我族为无耻鲲族所暗算，此番大劫也不知我龙族能否挺过，道友即为我族客卿还希望将此物归还族中直系。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这片龙鳞应是龙族先祖之遗物，有机会可以交还龙族。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "拿走龙鳞",
+          "TargetBlockID": "this:346(获得龙鳞2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "九玄大圣1",
+      "Description": "九玄大圣1",
+      "Position": "(-2696.987,-1112.45)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一片黯淡的逆鳞悬浮于空中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然龙鳞光芒大方，从龙鳞中一阵男声：“吾乃龙族太上长老九玄，今日我族为无耻鲲族所暗算，此番大劫也不知我龙族能否挺过，你作为我龙族后裔这《九龙引雷决》就传与你，切记大仇不可忘，传承不可断。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "话毕，龙鳞冲出一光团直冲你的识海。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.LearningStaticSkill"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来这一缕残魂，认为我是龙族后裔，将龙族传承传与我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然龙鳞光芒大方，从龙鳞中一阵男声：“吾乃龙族太上长老九婴，今日我族为无耻鲲族所暗算，此番大劫也不知我龙族能否挺过，道友即为我族客卿还希望将此物归还族中直系。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这片龙鳞应是龙族先祖之遗物，有机会可以交还龙族。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "拿走龙鳞",
+          "TargetBlockID": "this:344(获得龙鳞1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "获得龙鳞1",
+      "Description": "获得龙鳞1",
+      "Position": "(-2699.987,-997.4504)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 391,
+      "Name": "后续进入-核心气眼",
+      "Description": "后续进入-核心气眼",
+      "Position": "(-2052.987,-1114.45)",
+      "Commands": [
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前是一气眼，龙脉之气喷涌而出。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "周围喷涌的龙脉之力向你汇聚而来，被你吸收一空。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.AddHPMax"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "周围四溢着某种能量，但你并不能吸收调用。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不愧是上古龙族，当年所修的龙脉今日竟还有复苏的迹象，这等要事还是尽快回复龙族一声吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

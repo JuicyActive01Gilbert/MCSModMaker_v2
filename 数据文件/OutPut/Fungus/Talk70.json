@@ -1,0 +1,66 @@
+{
+  "Name": "Talk70",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2431.193,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "太虚无形，气之本体。肉身虽仍滞留在凡界{color=#d0380a}不断修炼{/color}，精神力量却已经能够沟通太虚之境。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "逐渐熟悉这种感觉后，你便开始尝试运用这种新的力量施展足以应对天劫到来的法术...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

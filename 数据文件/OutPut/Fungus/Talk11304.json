@@ -1,0 +1,449 @@
+{
+  "Name": "Talk11304",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3061.25,-1413.988)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(第一场结束对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "第二战の对白-1",
+      "Description": "第二战の对白-1",
+      "Position": "(-2614.562,-1411.357)",
+      "Commands": [
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你干净利落地赢下了第一轮比试的胜利，只要再赢一场，就能拿到所有炼气期修士梦寐以求的筑基丹了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "请{FirstName}\r{LastName}上台比试！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(第二战の随机战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2742.887,-1231.765)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 444,
+      "Name": "第二战の对白-2-3",
+      "Description": "第二战の对白-2-3",
+      "Position": "(-2611.969,-1345.176)",
+      "Commands": [
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你干净利落地赢下了第一轮比试的胜利，只要再赢一场，就能拿到所有炼气期修士梦寐以求的筑基丹了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "请{FirstName}\r{LastName}上台比试！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(第二战の随机战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "传出去",
+      "Description": "传出去",
+      "Position": "(-2597.199,-1256.982)",
+      "Commands": [
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，看来我还是太过急躁了，现在的我难以再大比中取得好成绩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "第一场结束对话",
+      "Description": "第一场结束对话",
+      "Position": "(-3062.932,-1281.5)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(大比次数判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 402,
+      "Name": "大比次数判定",
+      "Description": "大比次数判定",
+      "Position": "(-2791.606,-1370.993)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "411(第二战の对白-1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "444(第二战の对白-2-3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "444(第二战の对白-2-3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "第二战の随机战斗",
+      "Description": "第二战の随机战斗",
+      "Position": "(-2439.357,-1383.782)",
+      "Commands": [
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-2742.949,-1281.826)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2616.51,-1481.077)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "承让了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "这是哪位师兄，未有耳闻啊，竟能战胜端木师兄。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "对啊，虽然与林师姐相比略逊一筹，但也是成名已久的外门弟子，传闻端木师兄为了这次大比刻意压制了修为。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "",
+          "StoryText": "二位最近刚刚出关吧，这位也算是个名人了，以伪灵根之身通过擂台加入宗门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "那倒是厉害了，上一次做到的应该是几百年前的事了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "怪不得，此人出手之凌厉，连端木师兄都败下阵来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}\r{LastName}对阵温杰！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "他对上“竹剑”温杰了，我竹山宗少有的剑修一脉的传人啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "",
+          "StoryText": "也不知这一战鹿死谁手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "我觉得温师兄更强，剑修之名可不是吹的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 235,
+          "AvatarBindKey": "",
+          "StoryText": "看开始了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请指教。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方点头致意后，祭出一柄飞剑，虽只是符器，但一股锐利的剑意扑面而来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

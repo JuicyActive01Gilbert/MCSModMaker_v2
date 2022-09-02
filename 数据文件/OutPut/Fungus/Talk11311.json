@@ -1,0 +1,343 @@
+{
+  "Name": "Talk11311",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2796.441,-1378.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(任务进度检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 282,
+      "Name": "提醒领取",
+      "Description": "提醒领取",
+      "Position": "(-3032.036,-1244.089)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，还没去神兵阁么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "传功长老检测",
+      "Description": "传功长老检测",
+      "Position": "(-2714.929,-1252.965)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(提醒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(完成传功长老任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "还有事吗",
+      "Description": "还有事吗",
+      "Position": "(-2657.96,-1322.851)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，还有什么事么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "完成传功长老任务",
+      "Description": "完成传功长老任务",
+      "Position": "(-2722.861,-1197.752)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "好了{shidi}，你入门的相关事项都已经处理完毕了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "你在门派内的居所刚刚我已经派人打扫干净，宗门内的大部分地方你都可以随意走动。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "另外，门派每三十年会举办一次{color=#d0380a}宗门大比{/color}，夺魁者不仅可以直接成为内门弟子，拜入我派任一一位长老门下修习，还能获得一枚筑基丹作为奖励。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，不过到时候，师兄我可就是你的对手了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "神兵阁检测",
+      "Description": "神兵阁检测",
+      "Position": "(-2879.06,-1247.532)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(提醒领取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(完成神兵阁任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "提醒",
+      "Description": "提醒",
+      "Position": "(-2543.861,-1243.752)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，还没去领取入门功法么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "任务进度检测",
+      "Description": "任务进度检测",
+      "Position": "(-2797.83,-1319.69)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(神兵阁检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(传功长老检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(还有事吗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "完成神兵阁任务",
+      "Description": "完成神兵阁任务",
+      "Position": "(-2881.952,-1194.95)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "不错，看来你已经领好外门弟子的衣物了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "我派外门弟子也可以学习门派的一些基础功法和法术，外门的传功长老一般都会在宗门广场，你可以先去挑选一本适合你的基础功法来修炼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "等你挑选完自己的主修功法，{color=#d0380a}再回来找我{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

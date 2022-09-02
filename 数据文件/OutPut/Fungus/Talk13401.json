@@ -1,0 +1,742 @@
+{
+  "Name": "Talk13401",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "初入金虹剑派",
+      "Description": "初入金虹剑派",
+      "Position": "(-3173.162,-1152.936)",
+      "Commands": [
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哟，是新来的小{shidi}。你等着，我去帮你挑上几本适合你修炼的功法来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...嗯，这几本就差不多了...{shidi}之前对修炼的功法可有了解？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Menu",
+          "Text": "略知一二",
+          "TargetBlockID": "this:547(继续)"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Menu",
+          "Text": "请师兄指点",
+          "TargetBlockID": "this:308(指点)"
+        }
+      ]
+    },
+    {
+      "ItemID": 591,
+      "Name": "打听天魔眼",
+      "Description": "打听天魔眼",
+      "Position": "(-2977.372,-1033.457)",
+      "Commands": [
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "听说天魔眼越往中心深入，出现的魔物就越强。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "往年都只有宗门最厉害的几位师兄，才敢到天魔眼的{color=#d0380a}中心区域{/color}猎魔。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 619,
+      "Name": "无事 (Copy)",
+      "Description": "无事 (Copy)",
+      "Position": "(-3042.146,-1326.068)",
+      "Commands": [
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "书海无涯，学无止境。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 307,
+      "Name": "正常对话 (Copy)",
+      "Description": "正常对话 (Copy)",
+      "Position": "(-3049.98,-1230.948)",
+      "Commands": [
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，可有什么疑问？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于元灵石",
+          "TargetBlockID": "this:618(砂晶 (Copy))"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有什么要问的了",
+          "TargetBlockID": "this:619(无事 (Copy))"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "书海无涯，学无止境。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "金丹",
+      "Description": "金丹",
+      "Position": "(-2797.79,-1153.964)",
+      "Commands": [
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过前辈",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2919.708,-1152.594)",
+      "Commands": [
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shixiong}，今日来藏经阁有什么事么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听天魔眼的消息",
+          "TargetBlockID": "this:591(打听天魔眼)"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Menu",
+          "Text": "只是随便逛逛",
+          "TargetBlockID": "this:595(随便逛逛)"
+        }
+      ]
+    },
+    {
+      "ItemID": 618,
+      "Name": "砂晶 (Copy)",
+      "Description": "砂晶 (Copy)",
+      "Position": "(-3209.146,-1230.068)",
+      "Commands": [
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈，宗门内的资源可不能用灵石换取，只有对宗门做出贡献的弟子才有资格在藏经阁与神兵阁兑换功法及法器，而这元灵石正是弟子们贡献度的体现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "宗门广场的外务执事每隔一段时间会发放宗门任务，{shidi}完成任务后便可获得元灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}初来乍到，作为师兄我便私下赠与你一些元灵石，你可小心切莫被长老知晓。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.If",
+          "Condition": "ZiZhi >= 80"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-3041.998,-1151.417)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(初入金虹剑派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(正常对话 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 554,
+      "Name": "重剑决",
+      "Description": "重剑决",
+      "Position": "(-3447.735,-1108.73)",
+      "Commands": [
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "《重剑决》是修炼类功法，在战斗时也有【蓄势】攻击，厚积薄发的效果。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了。",
+          "TargetBlockID": "this:566(选3)"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再考虑一下别的。",
+          "TargetBlockID": "this:547(继续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "化神",
+      "Description": "化神",
+      "Position": "(-2547.105,-1158.073)",
+      "Commands": [
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过前辈",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 574,
+      "Name": "金芒诀",
+      "Description": "金芒诀",
+      "Position": "(-3447.735,-1208.73)",
+      "Commands": [
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "《金芒诀》是战斗类的功法，修炼后能够提升五行连击时金系法门的威能。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了。",
+          "TargetBlockID": "this:576(选1)"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再考虑一下别的。",
+          "TargetBlockID": "this:547(继续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 566,
+      "Name": "选3",
+      "Description": "选3",
+      "Position": "(-3580.734,-1107.73)",
+      "Commands": [
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 570,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-3720.921,-1161.503)",
+      "Commands": [
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}若还想兼修本门的其它功法，可以来藏经阁借阅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.79,-1239.896)",
+      "Commands": [
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(元婴)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 575,
+      "Name": "养刀术",
+      "Description": "养刀术",
+      "Position": "(-3447.734,-1157.73)",
+      "Commands": [
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "《养刀术》是中庸类的功法，能够在平日修炼时于体内积蓄力量，提升每场战斗造成的第一次伤害。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了。",
+          "TargetBlockID": "this:577(选2)"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再考虑一下别的。",
+          "TargetBlockID": "this:547(继续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "指点",
+      "Description": "指点",
+      "Position": "(-3312.281,-1096.139)",
+      "Commands": [
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这修炼的功法以天阶为首，地阶次之，人阶则最为普通。相对的，越强大的功法也越难领悟，想要突破到高层更是需要上百年的苦修努力。所以从人阶功法开始打好基础，非常重要。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "一般同阶的功法可以分为几种类型，战斗类的功法可以在与人斗法时提供更强的帮助，修炼类的功法则在修炼速度上有很大的优势，而中庸型的功法则都能兼顾的到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这几种功法类型各有优劣，你也可以同时兼修多个不同的功法，但我建议你把修炼速度最快的功法，作为你的{color=#d0380a}主修功法{/color}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄指点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "547(继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "元婴",
+      "Description": "元婴",
+      "Position": "(-2675.873,-1156.704)",
+      "Commands": [
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过前辈",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 576,
+      "Name": "选1",
+      "Description": "选1",
+      "Position": "(-3585.734,-1211.73)",
+      "Commands": [
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 547,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-3310.598,-1155.73)",
+      "Commands": [
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "本派入门功法有《金芒诀》，《养刀术》和《重剑决》，你想学习哪一个？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Menu",
+          "Text": "《金芒诀》",
+          "TargetBlockID": "this:574(金芒诀)"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Menu",
+          "Text": "《养刀术》",
+          "TargetBlockID": "this:575(养刀术)"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Menu",
+          "Text": "《重剑决》",
+          "TargetBlockID": "this:554(重剑决)"
+        }
+      ]
+    },
+    {
+      "ItemID": 595,
+      "Name": "随便逛逛",
+      "Description": "随便逛逛",
+      "Position": "(-2856.372,-1034.457)",
+      "Commands": []
+    },
+    {
+      "ItemID": 577,
+      "Name": "选2",
+      "Description": "选2",
+      "Position": "(-3584.734,-1157.73)",
+      "Commands": [
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

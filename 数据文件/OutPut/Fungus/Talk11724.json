@@ -1,0 +1,199 @@
+{
+  "Name": "Talk11724",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3227.61,-1328.94)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3018,
+          "AvatarBindKey": "",
+          "StoryText": "不知宗门内是否也遭到魔门迫害...我们要抓紧时间回到宗门调查此事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3018,
+          "AvatarBindKey": "",
+          "StoryText": "此行竹山宗伤亡惨重，我还要清点损失，望道友见谅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(New Block1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 348,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(-3058.417,-1392.916)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将先前在战场外围拾到的储物袋出示给李青麟，他一向儒雅随和的面孔流露出几分尴尬的神色。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3018,
+          "AvatarBindKey": "",
+          "StoryText": "此物确是我不慎遗落于古迹中的，不知道友是何时发现的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "就在那空间裂隙中，我拾起储物袋时见你已经离去，便擅自替你保存了一阵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3018,
+          "AvatarBindKey": "",
+          "StoryText": "在下在此谢过道友，实不相瞒，这储物袋内本也没什么值钱的东西。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "李青麟当着你的面打开了储物袋，里面整齐地摆放着许多竹山宗道袍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3018,
+          "AvatarBindKey": "",
+          "StoryText": "这还是当年我未结丹时留作纪念的储物袋，真是多谢道友帮忙找回，这枚丹药便当做谢礼聊表心意吧，哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

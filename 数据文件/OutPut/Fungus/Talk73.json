@@ -1,0 +1,1314 @@
+{
+  "Name": "Talk73",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(初次触发判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "初次触发",
+      "Description": "初次触发",
+      "Position": "(-2795.595,-1151.401)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "雾气渐浓，一开始你只觉得这在吞云海上是正常现象，但没过多久，四周就变成了白茫茫的一片，一时间竟让你分不清方向。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这浓雾非同寻常，竟然还能阻挡我的神识...在这吞云海上有能力施展此等神通的，恐怕...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "恐怕只有化神期妖圣，吞云大圣吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "看来不破除这片幻雾，是没有办法从这里离开了。得想想办法...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "强行破除",
+      "Description": "强行破除",
+      "Position": "(-2655.187,-982.2189)",
+      "Commands": [
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你施展神通，向四周的浓雾中猛然攻去。雾气一阵翻滚后又恢复了平静，似乎什么事也没有发生...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 12"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "若是施展领域神通，未必不能破除这里的云雾。要为此强行开启领域么...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Menu",
+          "Text": "施展领域神通",
+          "TargetBlockID": "this:399(施展领域)"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的办法",
+          "TargetBlockID": "this:319(选项)"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "若是施展神通连续攻击，未必不能破除这里的云雾，但恐怕对灵力损耗颇大...要强行破除这里的幻雾么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Menu",
+          "Text": "强行破除",
+          "TargetBlockID": "this:474(强行破除2)"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Menu",
+          "Text": "再想想别的办法",
+          "TargetBlockID": "this:319(选项)"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 424,
+      "Name": "白帝",
+      "Description": "白帝",
+      "Position": "(-2381.972,-914.3508)",
+      "Commands": [
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "前辈息怒，其实在下来自宁州，还与化神期强者白帝颇有渊源，望前辈给两分薄面...放过离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "噢？这白帝是何许人也？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "白帝乃是白帝楼楼主，宁州第一剑修，凭一己之力便击退了那血剑宫的血河老祖，其创下的天地人剑，堪称一绝……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "这么说，这血河老祖也是化神修为？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正是，不过他并非宁州之人，而是从雍州而来……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "435(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 315,
+      "Name": "神识破除成功",
+      "Description": "神识破除成功",
+      "Position": "(-3185.021,-1057.85)",
+      "Commands": []
+    },
+    {
+      "ItemID": 375,
+      "Name": "仔细观察",
+      "Description": "仔细观察",
+      "Position": "(-3075.939,-987.5265)",
+      "Commands": [
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.If",
+          "Condition": "tmpbool == True"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你天生异瞳，目力便异于常人。将灵气灌入双目之中，隐隐约约便看见前方站着一名身着青衣的白发男子，竟也在打量着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（此人莫非...便是吞云大圣？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "有趣...你的眼睛很独特，竟能看破本座的幻雾。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(正常破除成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将灵气灌入双目之中，但目力所及皆是白茫茫的一片，最多不过看到数百米开外的地方。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来还得想想别的办法...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 435,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2222.598,-882.4832)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你讲了一些宁州广为流传的精彩传说，每当讲的告一段落，吞云大圣便简单地问两个问题，你便又同他解释。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这吞云大圣虽然修为高深，但似乎对人类世界很是陌生，连一些基础的概念都不知道...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "按照这个思路，你讲完传说后，便又开始讲一些关于化神强者的传闻，或是一些捕风捉影的故事。吞云大圣同样听的津津有味。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就这样过了一两个时辰，你实在是讲无可讲，一时间不知道说些什么，愣在了原地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见周围的雾气淡了下来，不远处隐约出现了一名身着青衣的白发男子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "呵呵呵，听来人类的世界倒也颇为有趣，只可惜小友实力稍欠火候。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "罢了，下次来你若能通过本座的考验，本座倒不是不能指点你一二。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，你身前的云雾分出了一条小道，吞云大圣也消失在了云雾中。你凭空作了一揖，便离开了此地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "361(成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "强行破除2",
+      "Description": "强行破除2",
+      "Position": "(-2651.386,-854.7563)",
+      "Commands": [
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你全力施展神通，连续不断的向着同一处攻去。也不知过了多久，雾气渐渐淡了，远处一名身着青衣的白发男子若隐若现，似乎正在打量着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(正常破除成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "毫无办法",
+      "Description": "毫无办法",
+      "Position": "(-2530.728,-981.2524)",
+      "Commands": [
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你收敛起气息，过了一会，云雾不但没有散去，反而更重了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "无奈之下，你只得向他求饶。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "前辈，在下无意打扰前辈静修，只是无意间飞入此处，还望前辈恕罪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "哦？本座为何要放过你？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "给他灵石",
+          "TargetBlockID": "this:355(给他灵石（500000）)"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Menu",
+          "Text": "提起与龙族的交情...",
+          "TargetBlockID": "this:356(我乃龙族供奉……)"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Menu",
+          "Text": "提起与白帝的交情...",
+          "TargetBlockID": "this:424(白帝)"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai != 0"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Menu",
+          "Text": "提起宁州的宗门势力...",
+          "TargetBlockID": "this:429(宗门)"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 356,
+      "Name": "我乃龙族供奉……",
+      "Description": "我乃龙族供奉……",
+      "Position": "(-2387.386,-980.6932)",
+      "Commands": [
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在下乃是龙族供奉，还望看在龙族的份上，给在下几分薄面……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "笑话，就算是覆海大圣亲至本座也不一定给他面子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "初次触发判断",
+      "Description": "初次触发判断",
+      "Position": "(-2797.632,-1226.649)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(初次触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "潜心感悟",
+      "Description": "潜心感悟",
+      "Position": "(-2790.912,-986.347)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你盘腿坐下，细细感悟云雾的流动...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.CheckSkill"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.If",
+          "Condition": "tmpbool == True"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此...虽然变化更加复杂，但与我所学的幻雾法门还是有许多相似之处。用操控幻雾的手法，应当可以破除这里的云雾。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你尝试操控周天的云雾，云雾开始慢慢翻滚着向两旁褪去，远处一名身着青衣的白发男子若隐若现，似乎正在打量着你...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（此人莫非...便是吞云大圣？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "有意思，短短不到十日的时间，便能看破本座的云雾幻象...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(正常破除成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 5"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此...云雾虽然变换莫测，但终究不过是对于水之道的一种运用方式。凭我对于水之道的感悟，应当可以破除这里的云雾。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你尝试操控周天的云雾，云雾开始慢慢翻滚着向两旁褪去，远处一名身着青衣的白发男子若隐若现，似乎正在打量着你...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（此人莫非...便是吞云大圣？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "有意思，短短不到十日的时间，便能看破本座的云雾幻象...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(正常破除成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不行，这云雾法门相当高明，仅凭我目前对于水道的感悟，还不足以破开它...得想想别的办法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "出言挑衅",
+      "Description": "出言挑衅",
+      "Position": "(-2998.609,-779.7238)",
+      "Commands": [
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "传言吞云大圣修为通天，不过依我看……也不过尔尔。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "哈哈哈哈哈，口出狂言。那就让本座看看你有几分能耐！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "神识看破",
+      "Description": "神识看破",
+      "Position": "(-2933.877,-984.8917)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi > 180"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这里的云雾虽然有一定阻挡神识的效果，但你将神识凝于一点，穿透力便大大的增强了。反复试探之下，终于穿透了厚厚的云层。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "云层之后，一名身着青衣的白发男子，竟也在打量着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "好强的神识修为...难怪能够看破本座的幻雾。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(正常破除成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将神识展开，向周围探去。但这里的云雾有一定阻挡神识的效果。反复尝试了多次以后，你还是没能找到正确的方向。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来还得想想别的办法...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "失败",
+      "Description": "失败",
+      "Position": "(-2219.328,-984.8359)",
+      "Commands": [
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "CmdSetHideIsland"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "虚心讨教",
+      "Description": "虚心讨教",
+      "Position": "(-2868.609,-782.6599)",
+      "Commands": [
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "传言吞云大圣修为通天，在下特来讨教，还望大圣指点一二。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "道友与我修为相当，又何须用指点二字。本座也许久未与同阶修士切磋交流了，今日便与道友过上两招罢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "哈哈哈，小友既能破了我的幻雾境，也算是与本座有缘，今日便与小友过上两招罢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 399,
+      "Name": "施展领域",
+      "Description": "施展领域",
+      "Position": "(-2726.031,-913.5165)",
+      "Commands": [
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你施展领域，全力一击下，雾气轰然散开，远处一名身着青衣的白发男子若隐若现，似乎正在打量着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(正常破除成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "正常破除成功",
+      "Description": "正常破除成功",
+      "Position": "(-2936.056,-852.2316)",
+      "Commands": [
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Menu",
+          "Text": "出言挑衅",
+          "TargetBlockID": "this:406(出言挑衅)"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Menu",
+          "Text": "虚心讨教",
+          "TargetBlockID": "this:407(虚心讨教)"
+        }
+      ]
+    },
+    {
+      "ItemID": 319,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2793.53,-1080.19)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Menu",
+          "Text": "仔细观察",
+          "TargetBlockID": "this:375(仔细观察)"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识探查",
+          "TargetBlockID": "this:307(神识看破)"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Menu",
+          "Text": "潜心感悟",
+          "TargetBlockID": "this:308(潜心感悟)"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Menu",
+          "Text": "强行破除",
+          "TargetBlockID": "this:309(强行破除)"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Menu",
+          "Text": "毫无办法",
+          "TargetBlockID": "this:310(毫无办法)"
+        }
+      ]
+    },
+    {
+      "ItemID": 429,
+      "Name": "宗门",
+      "Description": "宗门",
+      "Position": "(-2379.776,-847.3184)",
+      "Commands": [
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "前辈息怒，其实在下来自宁州{$menpaistr}，还望前辈给两分薄面……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "噢？这{$menpaistr}是什么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这...门派其实是人类特有的称谓，每个门派都有其独特的功法传承，自成一方势力，这{$menpaistr}便是在下师承的门派……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "435(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "成功",
+      "Description": "成功",
+      "Position": "(-2058.935,-882.4509)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2950.913,-1226.997)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "给他灵石（500000）",
+      "Description": "给他灵石（500000）",
+      "Position": "(-2393.979,-1038.935)",
+      "Commands": [
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我要给前辈多少灵石，前辈才肯放过我？前辈不妨直说便是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc1",
+          "StoryText": "笑话，本座要人类的灵石有何用？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

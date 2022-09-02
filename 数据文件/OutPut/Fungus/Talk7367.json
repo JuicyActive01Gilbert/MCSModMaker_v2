@@ -1,0 +1,356 @@
+{
+  "Name": "Talk7367",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2623.108,-1294.618)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(战斗后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你暗自盘算下敌我实力差距，有了大致结论后运起遁速头也不回地离开了。\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "那人对你也不感兴趣，又与先前的女修斗在一处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "遁速判定",
+      "Description": "遁速判定",
+      "Position": "(-2794.616,-1234.18)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu >= 0"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "281(战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "追了半晌后，因为遁速不济，已是不见二人踪影。你不想浪费更多时间，只好选择放弃。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "战斗后续",
+      "Description": "战斗后续",
+      "Position": "(-2428.99,-1294.619)",
+      "Commands": [
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这人不知是先前耗费了太多灵力还是如何，竟在数招过后，被你的神通直接击破护盾，连带着身体也被击穿，就此毙命。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友，他没伤到你吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "可恶，就不应该想着...否则早就...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "少女的话语声脆如银铃，很是好听。只是像在自言自语，声音小到让你完全无法听清她在说什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "哼，能有啥事，本还想从他嘴里问出这帮修炼采补之术的妖人来自何处，现在倒好，托你的福，我又得去找其他妖人了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "但...我见你落了下风才...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "要是我认真起来，他才不是我对手呢，哼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "算了...终归是一番好意，这法器就当谢礼送你好了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "她将一个法器丢过来，并向你扮了个鬼脸，然后运起遁术，仅是眨眼间便已消失在你视野内。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "CmdAddFavor"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2793.697,-1295.794)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(遁速判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "318(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 281,
+      "Name": "战斗",
+      "Description": "战斗",
+      "Position": "(-2794.004,-1171.783)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不多时，你便是发现这二人正运起法器激战，只是那女性修士略显颓势。你也没多想便已是手捏法诀，介入战局。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "反倒是那女修见有陌生修士突入，一时竟愣在原地，只留你二人打斗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

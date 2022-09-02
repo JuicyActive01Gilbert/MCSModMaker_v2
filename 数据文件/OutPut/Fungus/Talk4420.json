@@ -1,0 +1,151 @@
+{
+  "Name": "Talk4420",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 253,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-2428.082,-1043.355)",
+      "Commands": [
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "交易会很快就要开始了，道友请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 250,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2280.83,-1122.477)",
+      "Commands": [
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我没什么兴趣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2430.094,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友请留步。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "今年除了这拍卖会外，我们天机阁还受人之托，将要举办一场只针对元婴期以上修士的小型交易会，不知道友可有兴趣参加？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "小型交易会？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们天机阁的拍卖会虽然盛名在外，但还是会有一些道友虽有重宝在身，却不想只用来交换灵石，而是希望能直接兑换到一些自己急需的物品。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "像这种小型交易会，只是提供给道友一个以物易物的机会，所以有时甚至能换取到一些平日里在拍卖会上都见不到的稀有物件。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友若有兴致的话，不妨来看一看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:253(同意)"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:250(拒绝)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

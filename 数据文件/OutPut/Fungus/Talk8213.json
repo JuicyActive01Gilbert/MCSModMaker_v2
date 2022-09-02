@@ -1,0 +1,117 @@
+{
+  "Name": "Talk8213",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(幽冥海黑曜石碑)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "幽冥海黑曜石碑",
+      "Description": "幽冥海黑曜石碑",
+      "Position": "(-2801.404,-1223.593)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不远处是一座火山，不过其四周已然是郁郁葱葱，一片生机盎然的景象，想必已经很久没有爆发过了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "见此美景，你的脚步不由得慢了下来。四处打量下，你发现脚边的草丛里有一块黑的深邃的石碑。清理过后，只见石碑上刻满了你不认识的字。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没准是什么稀有古代的遗物，先拿着罢...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看样子又是什么古代的遗物，拿去给采筠阁那些修士鉴定一番好了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

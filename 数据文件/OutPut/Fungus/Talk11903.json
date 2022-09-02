@@ -1,0 +1,416 @@
+{
+  "Name": "Talk11903",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3118.697,-1417.18)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 346,
+      "Name": "是否领悟",
+      "Description": "是否领悟",
+      "Position": "(-2968.708,-1366.458)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 3"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "通过了幻象的考验，你的{color=#d0380a}心境{/color}提升了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "刚刚那道幻象所用的法术似乎暗藏玄机...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "尝试领悟",
+          "TargetBlockID": "this:351(悟性判定)"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续前进",
+          "TargetBlockID": "this:291(继续挑战)"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开幻雾阵",
+          "TargetBlockID": "this:292(放弃挑战)"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续前进",
+          "TargetBlockID": "this:291(继续挑战)"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开幻雾阵",
+          "TargetBlockID": "this:292(放弃挑战)"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2824.155,-1226.74)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不愧是幻雾阵，看来我还要在修炼些时日。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "放弃挑战",
+      "Description": "放弃挑战",
+      "Position": "(-2680.778,-1371.12)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "传出去",
+      "Description": "传出去",
+      "Position": "(-2679.011,-1254.653)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "悟性判定",
+      "Description": "悟性判定",
+      "Position": "(-2969.928,-1423.774)",
+      "Commands": [
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "WuXin > 10"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在脑海中不断推演刚刚幻象所施展的法术，终于成功领悟了其中的要领。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "领悟法术：{color=#d0380a}青蛇劲{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "也不知这是门内哪位前辈所创的法术，当真精妙。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你尝试领悟刚刚幻象所施展的法术，但始终无法领悟其中的要领，只能先放弃了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(再胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断首次对话",
+      "Description": "判断首次对话",
+      "Position": "(-3118.249,-1335.788)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(是否领悟)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "继续挑战",
+      "Description": "继续挑战",
+      "Position": "(-2682.682,-1422.447)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你继续在幻阵中坚持，上百个幻象在你周围游荡，突然，又一个幻象向你扑了过来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-2828.693,-1277.325)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不愧是幻雾阵，看来我还要在修炼些时日。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "再胜",
+      "Description": "再胜",
+      "Position": "(-2849.227,-1423.246)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续坚持",
+          "TargetBlockID": "this:291(继续挑战)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开幻雾阵",
+          "TargetBlockID": "this:292(放弃挑战)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,1327 @@
+{
+  "Name": "Talk9018",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2804.259,-1369.709)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(获取变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 421,
+      "Name": "遁速",
+      "Description": "遁速",
+      "Position": "(-2624.118,-802.0148)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu >= Temdunsu"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你凭借遁速强闯而过，但还是难免狼狈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "呼~~",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不好！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "遁速不足的你，在阵中相形见绌只得退回来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 752,
+      "Name": "返回",
+      "Description": "返回",
+      "Position": "(-2472.982,-804.2875)",
+      "Commands": [
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 419,
+      "Name": "悟道2",
+      "Description": "悟道2",
+      "Position": "(-2901.393,-803.1511)",
+      "Commands": [
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "wudaoplayer >= 1"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你通过对{$wudaoname2}的领悟，通过了此地阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 784,
+          "CmdType": "Fungus.SetRandomTalkClick"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不好！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对{$wudaoname2}的领悟，难以通过此地阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "获取变量",
+      "Description": "获取变量",
+      "Position": "(-2803.267,-1225.593)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.GetFuBenShuXin"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "751(发生事件-炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(发生事件-筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "750(发生事件-金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "发生事件-筑基",
+      "Description": "发生事件-筑基",
+      "Position": "(-2823.55,-1033.378)",
+      "Commands": [
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShuXing == 0"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 1"
+        },
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 2"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 3"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 4"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 5"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 750,
+      "Name": "发生事件-金丹",
+      "Description": "发生事件-金丹",
+      "Position": "(-2674.685,-1034.515)",
+      "Commands": [
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShuXing == 0"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 1"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 2"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 3"
+        },
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 4"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 5"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 771,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 772,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 773,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 774,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 775,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 776,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 777,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 778,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 420,
+      "Name": "宝物",
+      "Description": "宝物",
+      "Position": "(-2770.711,-800.8782)",
+      "Commands": [
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.ItemCheckVar"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.If",
+          "Condition": "itemcheck == True"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你御起{$Var1}，抽空此方空间灵气，使得此地阵法暂时失效，通过了此地阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 785,
+          "CmdType": "Fungus.SetRandomTalkClick"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你翻了翻储物袋，发现你并没有{$Var1}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 751,
+      "Name": "发生事件-炼气",
+      "Description": "发生事件-炼气",
+      "Position": "(-2966.889,-1043.151)",
+      "Commands": [
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShuXing == 0"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 1"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 2"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 3"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 4"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 5"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 418,
+      "Name": "悟道1",
+      "Description": "悟道1",
+      "Position": "(-3054.802,-804.2874)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.If",
+          "Condition": "wudaoplayer >= 1"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你通过对{$wudaoname1}的领悟，通过了此地阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 783,
+          "CmdType": "Fungus.SetRandomTalkClick"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不好！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对{$wudaoname1}的领悟，难以通过此地阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 398,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2835.482,-892.9244)",
+      "Commands": [
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的是一座{$Var}的防御阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你决定.......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Menu",
+          "Text": "通过以{$wudaoname1}的领悟，通过此地异象。",
+          "TargetBlockID": "this:418(悟道1)"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Menu",
+          "Text": "通过以{$wudaoname2}的领悟，通过此地异象。",
+          "TargetBlockID": "this:419(悟道2)"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Menu",
+          "Text": "御起{$Var1}，通过此地异象。",
+          "TargetBlockID": "this:420(宝物)"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Menu",
+          "Text": "凭借遁速强闯而过。",
+          "TargetBlockID": "this:421(遁速)"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.Menu",
+          "Text": "原路返回",
+          "TargetBlockID": "this:752(返回)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

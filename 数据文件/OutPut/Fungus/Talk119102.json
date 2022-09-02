@@ -1,0 +1,214 @@
+{
+  "Name": "Talk119102",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2796.071,-1307.443)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 308,
+      "Name": "英杰会",
+      "Description": "英杰会",
+      "Position": "(-2796.419,-1101.909)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(倪少爷)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-2797.792,-1169.032)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1018,
+          "AvatarBindKey": "",
+          "StoryText": "这位道友可听说过武陵城五年举办一次的盛会？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "你可是说英杰会？",
+          "TargetBlockID": "this:308(英杰会)"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "走开走开，英杰会谁没听说过？",
+          "TargetBlockID": "this:313(独自修炼)"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "独自修炼",
+      "Description": "独自修炼",
+      "Position": "(-2642.994,-1167.663)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友请便，我忙着修练要先回客房了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "小师妹",
+      "Description": "小师妹",
+      "Position": "(-2632.035,-1229.306)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1018,
+          "AvatarBindKey": "",
+          "StoryText": "唉，要是能在英杰会上夺魁的话就可以把筑基丹送给小师妹了。如此这般，这般如此，嘿嘿......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "判断",
+      "Description": "判断",
+      "Position": "(-2797.79,-1230.677)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "304(小师妹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "倪少爷",
+      "Description": "倪少爷",
+      "Position": "(-2799.159,-1036.156)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1018,
+          "AvatarBindKey": "",
+          "StoryText": "说起这英杰会，主办方倪家在武陵城真可谓家喻户晓。但提起倪家，最盛的传闻却是那神龙见首不见尾的小少爷。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1018,
+          "AvatarBindKey": "",
+          "StoryText": "那小少爷也不知怎的偏生和安逸日子过不去，非要离家出走。这不，已经是第五次了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1018,
+          "AvatarBindKey": "",
+          "StoryText": "每次见到倪家大张旗鼓地四处寻人，就知道一定是这位倪少爷又偷偷溜出家门了。世家大把大把的资源放着不用偏要自己出门修练，真是怪人一个。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

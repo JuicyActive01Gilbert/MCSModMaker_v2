@@ -1,0 +1,1806 @@
+{
+  "Name": "Talk4404",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3490.097,-1219.449)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 488,
+      "Name": "随便逛逛",
+      "Description": "随便逛逛",
+      "Position": "(-2155.712,-874.1535)",
+      "Commands": [
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我只是刚好游历至此，随便逛逛而已，就不劳道友费心了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "那在下便先行告退了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 604,
+      "Name": "天机大比介绍0",
+      "Description": "天机大比介绍0",
+      "Position": "(-2448.016,-1331.998)",
+      "Commands": [
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "这{color=#d0380a}天机大比{/color}，乃是每百年才有一次、全宁州规模最大的赛事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "各路金丹、元婴高手都会前来参赛，甚至贵为五大派的掌门也不例外。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "每届大比也都会有成千上万的炼气、筑基修士前来观赛，以求在高手对战时能启发思绪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "竟连各大掌门都来参赛？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "没错。道友以为，对五大派掌门这等大能来说最重要的是什么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Menu",
+          "Text": "宗门",
+          "TargetBlockID": "this:610(宗门)"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.Menu",
+          "Text": "化神",
+          "TargetBlockID": "this:611(化神1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2991.11,-1220.18)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(炼气、筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 6"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(金丹、元婴)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "457(化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 487,
+      "Name": "前来观战",
+      "Description": "前来观战",
+      "Position": "(-2155.712,-955.4319)",
+      "Commands": [
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.If",
+          "Condition": "b1426 == 1"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此前都没有机会前来观战，今日倒想来看看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "前辈今日能前来观战，顿使我阁蓬荜生辉。只是不知前辈欲在何处观战？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此事，你们自行安排便是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "前辈放心，我阁自会安排妥当，前辈明日只管前来观战便是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "b1426 == 2"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此时前来，自然是想借大比观摩一二。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "阁下今日能前来观战，我阁必是夹道欢迎。此事我阁自会安排妥当，阁下明日只管前来观战便是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 421,
+      "Name": "正有此意",
+      "Description": "正有此意",
+      "Position": "(-2016.409,-1392.915)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在下正有此意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "好，道友这边请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(转场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 422,
+      "Name": "婉言推脱",
+      "Description": "婉言推脱",
+      "Position": "(-2018.854,-1446.75)",
+      "Commands": [
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我自己随便逛逛就好了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "无妨，道友若改变主意了，可自行前往报名处安排座次，在下便不叨扰了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 343,
+      "Name": "天机大比介绍",
+      "Description": "天机大比介绍",
+      "Position": "(-2164.683,-1334.18)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "而大比给出的机缘，便与此有关。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "所以他们才能放下身份，只为来寻觅这一丝化神的希望。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这机缘究竟为何物？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见他略显深意地笑了笑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "这个，等道友夺得魁首时，自然便会知晓。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.If",
+          "Condition": "b1425 == 1"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "nishao",
+          "StoryText": "{FirstName}{xiongdi}！我就知道你会来！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不远处，一阵熟悉的声音传来，打断了那位执事的话。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你转头望去，只见倪旭欣高呼着向你跑来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪兄…",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "既然如此，在下就不叨扰了。二位若对大比有兴趣，前往接引阁安排座次便是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "座次？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "nishao",
+          "StoryText": "这是自然，我们走吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你对状况尚未完全了解，倪旭欣便拉着你一路走到了接引阁。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(转场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "b1425 != 1"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "若道友真想知道其中玄机，大可以先观摩一番，不知道友意下如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Menu",
+          "Text": "正有此意",
+          "TargetBlockID": "this:421(正有此意)"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Menu",
+          "Text": "婉言推脱",
+          "TargetBlockID": "this:422(婉言推脱)"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量",
+      "Description": "变量",
+      "Position": "(-3252.403,-1219.366)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "转场",
+      "Description": "转场",
+      "Position": "(-1855.747,-1193.009)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 610,
+      "Name": "宗门",
+      "Description": "宗门",
+      "Position": "(-2300.295,-1373.67)",
+      "Commands": [
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "莫非…是与宗门有关？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "非也，纵然位至掌门，号令一方修士的存在，若无法突破化神，恐怕也只能沦为笑柄而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(天机大比介绍)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 611,
+      "Name": "化神1",
+      "Description": "化神1",
+      "Position": "(-2299.295,-1287.362)",
+      "Commands": [
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "莫非…是与化神有关？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "不错，纵然位至掌门，修仙界登峰造极般的存在，若无法突破化神，终究也只会化为尘土而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(天机大比介绍)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 441,
+      "Name": "正有此意金丹元婴",
+      "Description": "正有此意金丹元婴",
+      "Position": "(-2166.761,-1048.481)",
+      "Commands": [
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.If",
+          "Condition": "b1426 == 1"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正是…阁下知道我？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "即便是放眼整个宁州，元婴期修士也是屈指可数的存在，天机阁自然不会不知道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "道友这边请吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "呵呵，任何修士但凡能结丹成功，天机阁都不会收不到消息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "道友这边请吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(转场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "b1426 == 2"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.If",
+          "Condition": "money >= 100000"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "道友这边请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "道友先凑齐十万灵石，去接引阁处报名即可。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "不是",
+      "Description": "不是",
+      "Position": "(-2592.383,-1294.814)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在下虽已拜访过此处，但对天机大比还未有太多了解。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "那便好说了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "604(天机大比介绍0)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "是",
+      "Description": "是",
+      "Position": "(-2590.716,-1373.237)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在下的确是第一次来此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "那在下便为道友简要介绍一二吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "天机阁内分为拍卖会、天衍阁、接引阁与主阁。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "拍卖会每十年举行一次，每届都会有不同的奇珍异宝出现，引得大量金丹期以上修士前来参加。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "天衍阁主要负责情报收集与交易，道友若想寻得某物，都可以委托天衍阁收集相关情报。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "主阁乃是阁主所在重地，若无允许，道友还是勿要接近为好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "而这接引阁便是天机大比安排座次之所在了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天机大比？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "604(天机大比介绍0)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "炼气、筑基",
+      "Description": "炼气、筑基",
+      "Position": "(-2745.362,-1327.647)",
+      "Commands": [
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.If",
+          "Condition": "b1426 == 2"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天机大比马上就要开始了，天机阁又重新变得热闹了起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天机阁坐落于群山之间，平日里少有人烟。只有每隔十年举办一次的拍卖大会，才得以吸引一批高阶修士来到此地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而今日的天机阁，却是人声鼎沸，热闹非凡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "从大门外的旅店至接引阁前的空地，都布满了三五成群的散修，或是统一穿着宗门道袍、成群结队的弟子们。天上也常有高阶修士飞过，引得众人侧目。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一时间，你被这纷繁的景象所吸引，竟是愣在了原地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "敢问道友，可是来参加这天机大比？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一段柔和的青年音将你从思绪中拉了出来，只见身旁一位穿着天机阁服饰的修士正微笑地看着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正是…敢问阁下是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "在下是天机阁执事，方才观道友独自站在原地，想来是遇到了些麻烦，特地前来指引一二。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "敢问道友可是第一次来天机阁？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Menu",
+          "Text": "是",
+          "TargetBlockID": "this:327(是)"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "不是",
+          "TargetBlockID": "this:328(不是)"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "模板",
+      "Description": "模板",
+      "Position": "(-2984.732,-1423.013)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "旁白",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "主角",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "jieyinzhishi",
+          "StoryText": "接引执事",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "供奉",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "nishao",
+          "StoryText": "倪少",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "阁主",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.If",
+          "Condition": "b1425 == 1"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "b1425 != 1"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.If",
+          "Condition": "b1426 == 1"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "b1426 == 2"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "YSGame.TianJiDaBi.CmdTianJiDaBiStart"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 457,
+      "Name": "化神",
+      "Description": "化神",
+      "Position": "(-2737.84,-913.9565)",
+      "Commands": [
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.If",
+          "Condition": "b1426 == 1"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天机阁坐落于群山之间，平日里少有人烟。只有每隔十年举办一次的拍卖大会，才得以吸引一批高阶修士来到此地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而今日的天机阁，却是人声鼎沸，热闹非凡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见地面上布满了三五成群的散修，或是统一穿着宗门道袍、成群结队的弟子们。偶有遁光闪过，引得众人侧目。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不过你既然已是化神修为，早已了却了凡性，这三千繁华，你自然是毫不关心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一道遁光从天机阁主阁内疾驰而出，向你飞来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "{FirstName}前辈，幸会。在下天机阁阁主范杰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "幸会…道友知道我？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "岂止是知道，前辈名讳，在下已是久仰了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "只是不知，前辈此次前来所为何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "b1426 == 2"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天机阁还是往年的景象，但此时的你却不可同日而语。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一道遁光从天机阁主阁内疾驰而出，向你飞来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "{FirstName}道友，想不到这一次相见，在下倒要叫你一声前辈了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "承蒙阁主的机缘，有幸突破到化神罢了。阁主只需像以前那般称呼便可。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "阁下过谦了，就算有此机缘，能突破到化神之人也是寥寥无几。在下便止步于瓶颈不知多少年了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "突破化神后，不管寿元如何，都只有千年时间准备迎接天劫了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "想必阁主是想多些时间准备渡劫之事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阁主那若隐若现的笑再次一闪而过。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "呵呵，此事不说也罢。只是不知阁下今日来此所为何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天机阁还是往年的景象，但此时的你却不可同日而语。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一道遁光从天机阁主阁内疾驰而出，向你飞来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "{FirstName}道友，想不到这一次相见，在下倒要叫你一声前辈了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "承蒙阁主的照顾，侥幸突破到化神罢了。阁主只需像以前那般称呼便可。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "阁下过谦了，能突破到化神之人根本寥寥无几。在下便止步于瓶颈不知多少年了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "突破化神后，不管寿元如何，都只有千年时间准备迎接天劫了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "想必阁主是想多些时间准备渡劫之事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阁主那若隐若现的笑再次一闪而过。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanjie",
+          "StoryText": "呵呵，此事不说也罢。只是不知阁下今日来此所为何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Menu",
+          "Text": "前来观战",
+          "TargetBlockID": "this:487(前来观战)"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Menu",
+          "Text": "随便逛逛",
+          "TargetBlockID": "this:488(随便逛逛)"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "金丹、元婴",
+      "Description": "金丹、元婴",
+      "Position": "(-2737.176,-1103.396)",
+      "Commands": [
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.If",
+          "Condition": "b1425 == 1"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天机阁坐落于群山之间，平日里少有人烟。只有每隔十年举办一次的拍卖大会，才得以吸引一批高阶修士来到此地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而今日的天机阁，却是人声鼎沸，热闹非凡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "从大门外的旅店至接引阁前的空地，都布满了三五成群的散修，或是统一穿着宗门道袍、成群结队的弟子们。天上也偶有遁光闪过，引得众人侧目。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你从天上御剑飞过，俯瞰着这一切，心里却毫无波澜。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一道遁光从天机阁主阁内疾驰而出，向你飞来。你能明显感受到此人境界之不俗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "{FirstName}道友，此次前来可是为了参加天机大比？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正是…阁下知道我？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "呵呵呵，道友年纪轻轻便已结丹成功，天机阁若想不知道反倒是难事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "这边请吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，他便飞至前方为你引路。你虽然心生疑惑，但还是跟着他一路飞到了接引阁前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "刚落脚，你便听到一个熟悉的声音在不远处响起。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "nishao",
+          "StoryText": "{FirstName}{xiongdi}！我就知道你会来！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "转头望去，只见倪旭欣高呼着向你跑来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "呵呵，像道友这么杰出的人才，与倪家少主相识倒也在情理之中。二位，且随我来罢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(转场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.If",
+          "Condition": "b1426 == 1"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天机阁坐落于群山之间，平日里少有人烟。只有每隔十年举办一次的拍卖大会，才得以吸引一批高阶修士来到此地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而今日的天机阁，却是人声鼎沸，热闹非凡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "从大门外的旅店至接引阁前的空地，都布满了三五成群的散修，或是统一穿着宗门道袍、成群结队的弟子们。天上也偶有遁光闪过，引得众人侧目。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你从天上御剑飞过，俯瞰着这一切，心里却毫无波澜。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一道遁光从天机阁主阁内疾驰而出，向你飞来，你能明显感受到此人境界之不俗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "{FirstName}道友，此次前来可是为了参加天机大比？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "584(非50年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "由于天机大比在今年举行，天机阁又重新变得热闹了起来。只见一道遁光从天机阁主阁内疾驰而出，向你飞来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "原来是{FirstName}道友，想必也是来参加这天机大比？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Menu",
+          "Text": "正有此意",
+          "TargetBlockID": "this:441(正有此意金丹元婴)"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Menu",
+          "Text": "婉言推脱",
+          "TargetBlockID": "this:451(婉言推辞金丹元婴)"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 584,
+      "Name": "非50年",
+      "Description": "非50年",
+      "Position": "(-2379.962,-1098.263)",
+      "Commands": [
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Menu",
+          "Text": "正有此意",
+          "TargetBlockID": "this:441(正有此意金丹元婴)"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.Menu",
+          "Text": "婉言推脱",
+          "TargetBlockID": "this:451(婉言推辞金丹元婴)"
+        }
+      ]
+    },
+    {
+      "ItemID": 451,
+      "Name": "婉言推辞金丹元婴",
+      "Description": "婉言推辞金丹元婴",
+      "Position": "(-2167.484,-1141.739)",
+      "Commands": [
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "的确有此打算，不过在下却想先四处逛逛。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "gongfeng",
+          "StoryText": "无妨，若道友之后想参加天机大比，到接引阁报名即可。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

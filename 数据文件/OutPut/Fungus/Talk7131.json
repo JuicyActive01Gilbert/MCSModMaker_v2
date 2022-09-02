@@ -1,0 +1,137 @@
+{
+  "Name": "Talk7131",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 165,
+      "Name": "切磋",
+      "Description": "切磋",
+      "Position": "(-2424.309,-1021.213)",
+      "Commands": [
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 160,
+      "Name": "试探",
+      "Description": "试探",
+      "Position": "(-2346.181,-1087.523)",
+      "Commands": [
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你祭起法宝，便向他攻了过去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "165(切磋)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2425.193,-1151.775)",
+      "Commands": [
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "碧幽潭边，一名白衣剑修驱使着一柄灵剑上下翻飞，嘶嘶破风，划出一道道令人眼花缭乱的剑花。灵剑穿梭之下，漫天的竹叶纷崩，散落一地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Menu",
+          "Text": "交口称赞",
+          "TargetBlockID": "this:159(称赞)"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手试探",
+          "TargetBlockID": "this:160(试探)"
+        }
+      ]
+    },
+    {
+      "ItemID": 159,
+      "Name": "称赞",
+      "Description": "称赞",
+      "Position": "(-2508.919,-1090.839)",
+      "Commands": [
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好剑法！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "那白衣剑修嘴角抹过一丝笑意，竟挥剑向你刺来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "165(切磋)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

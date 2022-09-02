@@ -1,0 +1,212 @@
+{
+  "Name": "Talk7122",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(门派检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "遇敌",
+      "Description": "遇敌",
+      "Position": "(-2797.273,-1108.717)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "什么人？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "站住！此地竹山宗所属，闲杂人等速速离去！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "乖乖离开",
+          "TargetBlockID": "this:303(离开)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手攻击",
+          "TargetBlockID": "this:305(攻击)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 294,
+      "Name": "境界检测",
+      "Description": "境界检测",
+      "Position": "(-2797.273,-1166.717)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 7"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(遇敌)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(避开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 290,
+      "Name": "门派检测",
+      "Description": "门派检测",
+      "Position": "(-2796.273,-1233.717)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(境界检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2943.792,-1109.684)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.OutFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "避开",
+      "Description": "避开",
+      "Position": "(-2648.792,-1166.684)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一名竹山宗的巡逻弟子从前方经过，但因为修为太低，并没有发现你的存在。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2945.065,-1233.539)",
+      "Commands": []
+    },
+    {
+      "ItemID": 305,
+      "Name": "攻击",
+      "Description": "攻击",
+      "Position": "(-2797.792,-1043.684)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

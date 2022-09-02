@@ -1,0 +1,293 @@
+{
+  "Name": "Talk11901",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.27,-1295.903)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2823.609,-1227.467)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没想到这幻象居然如此厉害...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "放弃挑战",
+      "Description": "放弃挑战",
+      "Position": "(-2588.95,-1327.062)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 330,
+      "Name": "奖励",
+      "Description": "奖励",
+      "Position": "(-2894.88,-1360.412)",
+      "Commands": [
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 1"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "通过了幻象的考验，你的{color=#d0380a}心境{/color}提升了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "传出去",
+      "Description": "传出去",
+      "Position": "(-2589.687,-1250.775)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断首次对话",
+      "Description": "判断首次对话",
+      "Position": "(-3077.823,-1291.107)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "330(奖励)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "继续挑战",
+      "Description": "继续挑战",
+      "Position": "(-2589.887,-1377.765)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你继续在幻阵中坚持，上百个幻象在你周围游荡，突然，又一个幻象向你扑了过来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-2822.929,-1281.956)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没想到这幻象居然如此厉害...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2740.689,-1358.457)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续坚持",
+          "TargetBlockID": "this:291(继续挑战)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开幻雾阵",
+          "TargetBlockID": "this:292(放弃挑战)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,175 @@
+{
+  "Name": "Talk9004",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(灵核数量判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "灵核数量判定",
+      "Description": "灵核数量判定",
+      "Position": "(-2797.026,-1234.957)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(获得灵核)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "获得灵核",
+      "Description": "获得灵核",
+      "Position": "(-2797.753,-1165.697)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{$str}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

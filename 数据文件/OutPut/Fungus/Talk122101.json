@@ -1,0 +1,300 @@
+{
+  "Name": "Talk122101",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2588.955,-1103.817)",
+      "Commands": [
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，要住店么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:194(住店)"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听最近发生的事",
+          "TargetBlockID": "this:196(打听 (Copy))"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听购买洞府",
+          "TargetBlockID": "this:212(询问客栈)"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:192(不住)"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2596.081,-1175.251)",
+      "Commands": [
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 194,
+      "Name": "住店",
+      "Description": "住店",
+      "Position": "(-2584.807,-1040.201)",
+      "Commands": [
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.OpenZuLi"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 192,
+      "Name": "不住",
+      "Description": "不住",
+      "Position": "(-2403.101,-1098.321)",
+      "Commands": []
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 196,
+      "Name": "打听 (Copy)",
+      "Description": "打听 (Copy)",
+      "Position": "(-2755.395,-1096.672)",
+      "Commands": [
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 714,
+          "AvatarBindKey": "",
+          "StoryText": "让我想想...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 212,
+      "Name": "询问客栈",
+      "Description": "询问客栈",
+      "Position": "(-2423.631,-1022.555)",
+      "Commands": [
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

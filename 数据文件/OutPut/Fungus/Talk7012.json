@@ -1,0 +1,753 @@
+{
+  "Name": "Talk7012",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2981.483,-1231.606)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 316,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2374.062,-1229.493)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "战后，你立马投身进对另外两只异种魔的围剿，没过多久，那只魔物也应声倒下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "{FirstName}{shidi}好身手。此番我等能活下来，还是多亏了你，这魔物理应归你所有。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "道友好身手。此番我等能活下来，还是多亏了道友，这魔物理应归道友所有。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你观察到，他之前略显慌乱的神色已经消失不见，完全看不出刚刚经历过一场大战。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "IsKnowPlayer == False"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "在下竹山宗李青麟，这位是我的同门师妹，敢问阁下尊姓大名？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "幸会，在下{FirstName}{LastName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "原来是{FirstName}道友，幸会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{$称呼}，此地当属天魔眼外围，为何会有如此强大的异种魔出现？难道此地生出了什么变故？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他叹了一口气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "我只当这三只是普通的下等魔，才贸然出手，若我早知道它们是异种魔，也不会身处险境了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在回应你的同时，李青麟检查起了师妹的伤势。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "此伤虽重，但尚未伤及根本，只需运春草决，数日之内便可痊愈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说着，又拿出了两颗疗伤用的丹药给师妹服下。片刻过后，师妹的脸色好转了不少。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "同门",
+          "StoryText": "多谢师兄，我好多了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "此地不宜久留，我等还是先找一偏僻去处落脚为好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随后，你们三人便转移到了附近一处较为隐蔽的山洞。能在此处修养，想必不会有什么大碍了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既然你师妹已经安顿下来了，我们便继续前往核心区域杀魔罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "以我二人的实力，像之前那些异种魔，定然不是我们的对手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听到异种魔的字眼，李青麟的神情隐隐露出些微异样。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这异样虽然转瞬即逝，不过你却依然有所察觉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "我还是在此等师妹痊愈再作打算罢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此处极为隐蔽，师妹伤势也有所控制，就算没有你我二人，也定然不会有事的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "再说各宗不是还有猎魔竞赛之事？若杀魔杀的少了，说不定会令整个宗门蒙羞，难道{$称呼}一点都不在乎？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "李青麟眉头微皱，稍作思索，却还是没有答应。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "这天魔眼的险恶远不止魔物这么简单，若是有人暗中对我等有所图谋，就算此地再隐蔽，也会被找到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "至于杀魔竞赛，只是长老们相互打趣的消遣罢了，不值得为之冒险。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "按理说，同辈之间几乎不可能有人能跟踪你们，而不被察觉。不过既然李青麟的立场如此坚定，你也不便过多劝说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“他如此袒护师妹，难道关系并不一般？也罢，我还是不要多问了。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.If",
+          "Condition": "是否是传音符好友 == False"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:380(留下传音符印记)"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Menu",
+          "Text": "告辞",
+          "TargetBlockID": "this:381(告辞)"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "模板",
+      "Description": "模板",
+      "Position": "(-2594.557,-1353.782)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "旁白",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "主角",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "李青麟",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "同门",
+          "StoryText": "同门",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "Option Text",
+          "TargetBlockID": ""
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.AddCyFriend"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2596.09,-1231.005)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2804.377,-1232.185)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2804.875,-1139.517)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.AvatarDeath"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好险，看来还是不要轻易招惹异种魔为好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 381,
+      "Name": "告辞",
+      "Description": "告辞",
+      "Position": "(-2164.793,-1109.318)",
+      "Commands": [
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既然如此，那便祝愿二位早日康复，后会有期。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "嗯，助你在杀魔竞赛上取得一个好名次，后会有期。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 380,
+      "Name": "留下传音符印记",
+      "Description": "留下传音符印记",
+      "Position": "(-2164.793,-1347.318)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既然{$称呼}执意如此，在下便不过多劝说了。不如留下传音符，以便日后联系？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "李青麟",
+          "StoryText": "如此甚好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "交换过传音符后，你便告别离开了此地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,726 @@
+{
+  "Name": "Talk134301",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2451.452,-1535.115)",
+      "Commands": [
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "321(判断敖玄回来了没)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 265,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2446.557,-1289.956)",
+      "Commands": [
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "道友来找我何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Menu",
+          "Text": "是否有适合我的功法",
+          "TargetBlockID": "this:276(询问功法)"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Menu",
+          "Text": "交易天材地宝",
+          "TargetBlockID": "this:279(交易天才地宝-判断是否是供奉)"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其他事了",
+          "TargetBlockID": "this:277(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 291,
+      "Name": "有1",
+      "Description": "有1",
+      "Position": "(-2810.987,-1161.45)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "道友寻回的传功龙鳞我已经提取了其中内容。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 321,
+      "Name": "判断敖玄回来了没",
+      "Description": "判断敖玄回来了没",
+      "Position": "(-2456.987,-1435.45)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "347(判断-第一次见面)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "此事紧急道友还是快快行动。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "都有",
+      "Description": "都有",
+      "Position": "(-2812.987,-1244.45)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "道友寻回的传功龙鳞我已经提取了其中内容。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 279,
+      "Name": "交易天才地宝-判断是否是供奉",
+      "Description": "交易天才地宝-判断是否是供奉",
+      "Position": "(-2482.987,-1145.45)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(交易-供奉)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(交易-客卿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 333,
+      "Name": "非第一次",
+      "Description": "非第一次",
+      "Position": "(-2745.987,-853.4504)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "自上古之后我龙族遗失大量秘法，目前族中已经没有适合道友的术法了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "都无",
+      "Description": "都无",
+      "Position": "(-2812.987,-1011.45)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "328(判断是否第一次询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 277,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2188.987,-1176.45)",
+      "Commands": []
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 328,
+      "Name": "判断是否第一次询问",
+      "Description": "判断是否第一次询问",
+      "Position": "(-2825.987,-942.4504)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "332(第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(非第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 341,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2887.987,-754.4504)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "上古龙宫虽是沉没于东海海底，但龙宫的残垣断壁每隔百年会上浮至海面。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "陨龙之地中出现的上古遗物，就包括我龙族的传功龙鳞。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "你救出敖玄的陨龙之地，可惜并没有遇到传功龙鳞，道友只能等下次机会了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 347,
+      "Name": "判断-第一次见面",
+      "Description": "判断-第一次见面",
+      "Position": "(-2452.987,-1367.45)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "道友可曾听闻过我龙族的各种天材地宝？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "愿闻其详，还请赐教。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "不敢不敢，这《金鳞草集》乃是我龙族先辈所著，其上记载了不少我龙族特产的天才地宝，这就赠与道友吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "交易-客卿",
+      "Description": "交易-客卿",
+      "Position": "(-2529.987,-1024.45)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 276,
+      "Name": "询问功法",
+      "Description": "询问功法",
+      "Position": "(-2654.987,-1138.45)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(都有)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(有1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(有2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(都无)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 307,
+      "Name": "交易-供奉",
+      "Description": "交易-供奉",
+      "Position": "(-2363.987,-1025.45)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 332,
+      "Name": "第一次",
+      "Description": "第一次",
+      "Position": "(-2888.987,-848.4504)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "自上古之后我龙族遗失大量秘法，目前族中已经没有适合道友的术法了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "不过，听闻东海有人在{color=#d0380a}东海陨龙之地{/color}之中寻得过我龙族的传功龙鳞。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Menu",
+          "Text": "陨龙之地？",
+          "TargetBlockID": "this:341(询问)"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "有2",
+      "Description": "有2",
+      "Position": "(-2810.987,-1082.45)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "道友寻回的传功龙鳞我已经提取了其中内容。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

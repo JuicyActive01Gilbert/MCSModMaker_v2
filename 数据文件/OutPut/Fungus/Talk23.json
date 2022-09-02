@@ -1,0 +1,877 @@
+{
+  "Name": "Talk23",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2933.202,-1501.225)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "411(大蛇副本后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2932.857,-1575.362)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "大蛇副本后",
+      "Description": "大蛇副本后",
+      "Position": "(-2767.09,-1501.453)",
+      "Commands": [
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "环顾四周，倪旭欣已不在身边，大概是传送符将你们二人分别送到了不同的地方。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这符也太突然了，连句再见都没说上，也不知道倪兄顺利逃走了没有......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.SendChuanYingFu"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(抢婚判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "来路不明",
+      "Description": "来路不明",
+      "Position": "(-2927.419,-1162.901)",
+      "Commands": [
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "这修士之间争斗也是常有发生，有争斗自然就会得到一些见不得光的，这些东西若是去坊市堂而皇之的售卖，难免会遇上一些麻烦，所以才有了这种隐蔽的交易形式。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "眼下这天星城里就有一场秘市交易会要开始了，阁下若是信得过的话，在下可以作为你的推荐人，带你去参加这次的交易会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "397(对白)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 375,
+      "Name": "被引荐",
+      "Description": "被引荐",
+      "Position": "(-2934.661,-1309.297)",
+      "Commands": [
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "阁下，请留步。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "什么事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "在下吴武凯，就住在这天星城坊市的附近，对这里很是熟悉。若是阁下想在这里买到些特殊的宝贝的话，在下也许可以帮得上忙。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Menu",
+          "Text": "说来听听",
+          "TargetBlockID": "this:383(听下去)"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么兴趣",
+          "TargetBlockID": "this:381(没兴趣)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 442,
+      "Name": "抢婚判定",
+      "Description": "抢婚判定",
+      "Position": "(-2625.185,-1501.637)",
+      "Commands": [
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "448(冲虚作妖剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "425(李事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 464,
+      "Name": "进府",
+      "Description": "进府",
+      "Position": "(-2629.581,-1318.121)",
+      "Commands": [
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "啊，光顾着和{FirstName}{xiongdi}闲聊险些忘了正事，我们这便进入林府吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 434,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2323.387,-1500.985)",
+      "Commands": [
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 448,
+      "Name": "冲虚作妖剧情",
+      "Description": "冲虚作妖剧情",
+      "Position": "(-2624.084,-1428.012)",
+      "Commands": [
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "也不知林沐心用了什么方法，不出几日，宁州便是四处谣传滥用采补功法的邪修重现，一时间宁州的金丹期及以下修士皆是人人自危，影响之深俨然已成燎原之势，远超你的预料。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId1",
+          "StoryText": "你听说了么，云汐城那边最近好像又有修习采补之术的邪修了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "这有什么奇怪的，虽然没见过高境界的这类邪修，但一直是野火烧不尽。也不知他们功法哪来的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId1",
+          "StoryText": "嘿嘿，这次可不一样，听说原本就是个金丹后期的邪修，最近靠着采补秘术突破到了元婴期，你往后出城可要小心些。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "元婴期...但他都元婴期了，也不会对我这种低阶修士感兴趣了吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId1",
+          "StoryText": "可不是你想的那样。以前都说修习采补秘术突破到筑基虽然快，但要到金丹就已是难上加难。现在却有人能籍此修炼到元婴境，你觉得那些资质不佳的邪修会怎么想？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "啊...那不是...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId1",
+          "StoryText": "而且啊，我听说，这人可是从天星城...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "面对这种情况，你作为始作俑者之一也只能暗自苦笑，希望在达到原来目标的同时不要太超出掌控。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "你正思考着，一道黑影不知从何处出现在身后。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "你要找我也不必这样吧，现在可是全宁州都在传我们星宫出了叛徒。若想平息这波谣言可得费不少功夫。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "果然是星铃儿，而且不出所料的，她一开口满满的全是埋怨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "或者，我只要把你挂在天星城头三个月，同时贴一条横幅，上书“我再也不敢造谣了”，说不定能省去不少麻烦嘻嘻。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "咳，星道友稍安勿躁...变成这个局面我也是没想到...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "但还真不一定是谣传。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "哦？难道还是真的不成？我可是对采补之术深恶痛绝，若是敢骗我，可有你受的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "此等大事自然不会当做儿戏。星道友不如与我回到林家，让林沐心姑娘和你详细说说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId2",
+          "StoryText": "你见星铃儿默认了，便领着她前往林府。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 364,
+      "Name": "判断-初次被引荐",
+      "Description": "判断-初次被引荐",
+      "Position": "(-2940.544,-1378.522)",
+      "Commands": [
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(被引荐)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 387,
+      "Name": "继续说",
+      "Description": "继续说",
+      "Position": "(-3058.661,-1170.297)",
+      "Commands": [
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "眼下这天星城里就有一场秘市交易会要开始了，阁下若是信得过的话，在下可以作为你的推荐人，带你去参加这次的交易会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "397(对白)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 397,
+      "Name": "对白",
+      "Description": "对白",
+      "Position": "(-2927.661,-1082.585)",
+      "Commands": [
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "为什么找上我？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "呵呵，这点阁下无需顾虑。在下的工作便是在交易会举办期间，带人前往秘市。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "这秘市之中的交易抽水很大，所以物价也比一般坊市要贵上不少。若是阁下在秘市中买了什么东西，我自然也能得到一笔不错的报酬。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Menu",
+          "Text": "那便带我去看看吧",
+          "TargetBlockID": "this:406(带走)"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么兴趣",
+          "TargetBlockID": "this:381(没兴趣)"
+        }
+      ]
+    },
+    {
+      "ItemID": 457,
+      "Name": "特殊身份",
+      "Description": "特殊身份",
+      "Position": "(-2692.218,-1375.264)",
+      "Commands": [
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{xiongdi}可知大名鼎鼎的星宫双圣？这两位前辈便是星宫的创始人，而林家便是双圣中广微仙子的家族。所以林家家主丹阳子前辈，虽不是广微仙子的嫡系，但也是关系较近的后辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "当代宫主虽很少出面，但对林家也是照顾有加。所以丹阳子前辈在星宫中的地位可不一般。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.If",
+          "Condition": "进度 == 2"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "464(进府)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Menu",
+          "Text": "两情相悦",
+          "TargetBlockID": "this:458(两情相悦)"
+        }
+      ]
+    },
+    {
+      "ItemID": 383,
+      "Name": "听下去",
+      "Description": "听下去",
+      "Position": "(-2933.661,-1240.297)",
+      "Commands": [
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "阁下可曾听说过秘市？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "秘市？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 746,
+          "AvatarBindKey": "",
+          "StoryText": "这秘市的存在可能很多人都知道，但想要参加又是另外一回事了。毕竟秘市里交易的东西虽然都是外面难得一见的精品，但大多来路有些问题，所以这交易的时间和场所也时常变化。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续说",
+          "TargetBlockID": "this:387(继续说)"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Menu",
+          "Text": "来路不明的东西？",
+          "TargetBlockID": "this:388(来路不明)"
+        }
+      ]
+    },
+    {
+      "ItemID": 458,
+      "Name": "两情相悦",
+      "Description": "两情相悦",
+      "Position": "(-2561.448,-1375.264)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "倒也不是没有可能，毕竟对于修士来说年龄并不重要，只是与一个陷入瓶颈还寿元无多的长老结为道侣，不像是我所熟识的林家二小姐的作风。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.If",
+          "Condition": "进度 == 2"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "464(进府)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Menu",
+          "Text": "身份特殊？",
+          "TargetBlockID": "this:457(特殊身份)"
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "带走",
+      "Description": "带走",
+      "Position": "(-2924.635,-990.0356)",
+      "Commands": [
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "判断-初次进天星城商店",
+      "Description": "判断-初次进天星城商店",
+      "Position": "(-3166.245,-1372.488)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 381,
+      "Name": "没兴趣",
+      "Description": "没兴趣",
+      "Position": "(-2793.78,-1166.366)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 425,
+      "Name": "李事件",
+      "Description": "李事件",
+      "Position": "(-2483.871,-1501.354)",
+      "Commands": [
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 90"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "434(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

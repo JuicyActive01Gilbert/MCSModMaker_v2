@@ -1,0 +1,149 @@
+{
+  "Name": "Talk8103",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 290,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2632.799,-1219.516)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2792.312,-1222.457)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "空气中弥漫着一股淡淡的血腥味，你发现这个洞窟深处长满了你此前从未见过的藤蔓类植物。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这些藤蔓粗细不一，小的只有手指般粗细，大的则有一腰之宽。它们或吸附在岩壁上，或横倒在地，你只能小心翼翼地避开它们。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "再往前走去，这些藤蔓也越发的密集，几乎没有可以下脚的地方了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "也不知若是触碰到这些藤蔓会发生什么，直觉告诉你它们并不简单，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续前进",
+          "TargetBlockID": "this:289(悟道检测)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "原路返回",
+          "TargetBlockID": "this:290(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "悟道检测",
+      "Description": "悟道检测",
+      "Position": "(-2789.618,-1143.38)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你决定冒险一试，果然，你刚一碰到这些藤蔓，它们立刻就动了起来，将你紧紧缠住，动弹不得。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

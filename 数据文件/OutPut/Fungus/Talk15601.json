@@ -1,0 +1,327 @@
+{
+  "Name": "Talk15601",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2526.484,-1686.732)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "331(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2705.597,-1687.368)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-2871.162,-1101.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 202,
+      "Name": "竹山宗神兵阁-初次进入-判断1",
+      "Description": "竹山宗神兵阁-初次进入-判断1",
+      "Position": "(-2352.49,-1309.894)",
+      "Commands": [
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 516,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可是新来的小{shidi}？我教所用法器较为特殊，这是能储存灵尘的葫芦。你聚集的尘可暂时储存在此物内，待战斗时一并放出。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(尘葫)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "620(系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2345.22,-1687.256)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 261,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-2739.564,-1127.426)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "264(StartFight)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "Splash1",
+      "Description": "Splash1",
+      "Position": "(-2311.981,-1379.672)",
+      "Commands": [
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(竹山宗神兵阁-初次进入-判断1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 343,
+      "Name": "尘葫",
+      "Description": "尘葫",
+      "Position": "(-2314.358,-1217.52)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 264,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-2727.873,-1045.289)",
+      "Commands": [
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 620,
+      "Name": "系统talk",
+      "Description": "系统talk",
+      "Position": "(-2115.749,-1306.41)",
+      "Commands": [
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2314.524,-1153.34)",
+      "Commands": [
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 516,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}拿好，千万小心别弄丢了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

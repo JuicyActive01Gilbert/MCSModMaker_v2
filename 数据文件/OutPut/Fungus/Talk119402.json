@@ -1,0 +1,143 @@
+{
+  "Name": "Talk119402",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1307.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 315,
+      "Name": "对话",
+      "Description": "对话",
+      "Position": "(-2630.228,-1127.977)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 748,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "若是难敌林家修士，不妨来我这里看看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 306,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2779.228,-1212.977)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(对话1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(对话1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "对话1",
+      "Description": "对话1",
+      "Position": "(-2911.928,-1121.662)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 748,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友，这秘市也算是武陵城一年一次的盛会了，可不要空手而归啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

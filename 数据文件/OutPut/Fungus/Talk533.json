@@ -1,0 +1,146 @@
+{
+  "Name": "Talk533",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(胜负判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 281,
+      "Name": "逃跑",
+      "Description": "逃跑",
+      "Position": "(-2638.885,-1240.265)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好险好险...这沂山派的杂鱼也不是那么容易对付的嘛。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "胜负判断",
+      "Description": "胜负判断",
+      "Position": "(-2797.06,-1241.532)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(胜利)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "281(逃跑)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "胜利",
+      "Description": "胜利",
+      "Position": "(-2797.79,-1171.772)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "沂山派也不过如此，你们一起上好了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

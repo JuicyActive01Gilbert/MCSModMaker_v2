@@ -1,0 +1,705 @@
+{
+  "Name": "Talktiaozhan",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2472.366,-1165.659)",
+      "Commands": [
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 365,
+      "Name": "挑战",
+      "Description": "挑战",
+      "Position": "(-2472.365,-1280.588)",
+      "Commands": [
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我看上这里的矿脉了，按规矩来比试比试吧。谁赢了，这里就归谁。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.If",
+          "Condition": "Level >= JinJie"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哼，那就来吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "在下自然不是前辈的对手，不劳您动手，在下自己离开便是...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "CmdWarpNPCToMap"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "CmdRemoveNPCFromFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-3083.217,-1018.253)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "噢？我看不出有什么理由要把这里让给你，有本事赢了我再说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "好感度高",
+      "Description": "好感度高",
+      "Position": "(-2792.118,-994.2534)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "CmdWarpNPCToMap"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "CmdRemoveNPCFromFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 366,
+      "Name": "商量",
+      "Description": "商量",
+      "Position": "(-2468.172,-1224.269)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$shangliang}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel >= 5"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "既然是{$NickName}你有需要，那我让与你便是，请！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "CmdWarpNPCToMap"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "CmdRemoveNPCFromFuBen"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 500"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$NickName}名声在外，我早有听闻。既然你开口了，今日我便卖你这个面子，请吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "CmdWarpNPCToMap"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "CmdRemoveNPCFromFuBen"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "噢？我看不出有什么理由要把这里让给你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 324,
+      "Name": "对手好感度判定",
+      "Description": "对手好感度判定",
+      "Position": "(-2797.217,-1058.253)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel >= 5"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(好感度高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "328(好感度低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "好感度低",
+      "Description": "好感度低",
+      "Position": "(-2950.217,-1057.253)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我看上这里的矿脉了，不知道友可否割爱，把这里让给我？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应",
+          "TargetBlockID": "this:341(答应)"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:342(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2796.994,-1229.275)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "npcid == 0"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(被挑战-随机对手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 1452,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1453,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1455,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1459,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1456,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1457,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1458,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1454,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(玩家主动挑战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "被挑战-随机对手",
+      "Description": "被挑战-随机对手",
+      "Position": "(-2803.211,-1142.334)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.If",
+          "Condition": "npcleixing == 1"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcleixing == 2"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcleixing == 3"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcleixing == 4"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcleixing == 5"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.If",
+          "Condition": "LingMaiLevel == 1"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "LingMaiLevel == 2"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "LingMaiLevel == 3"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "LingMaiLevel == 4"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "LingMaiLevel == 5"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "CmdWarpNPCToFuBen"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "324(对手好感度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 341,
+      "Name": "答应",
+      "Description": "答应",
+      "Position": "(-3087.217,-1103.253)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "既然道友你有需要，那我让与你便是，请！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "玩家主动挑战",
+      "Description": "玩家主动挑战",
+      "Position": "(-2611.208,-1233.015)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel >= 5"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Menu",
+          "Text": "挑战",
+          "TargetBlockID": "this:365(挑战)"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Menu",
+          "Text": "商量",
+          "TargetBlockID": "this:366(商量)"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:367(离开)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

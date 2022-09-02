@@ -1,0 +1,76 @@
+{
+  "Name": "Talk7140",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2428.995,-1121.676)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.If",
+          "Condition": "BigLevel == 3"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

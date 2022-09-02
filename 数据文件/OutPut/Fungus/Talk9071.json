@@ -1,0 +1,489 @@
+{
+  "Name": "Talk9071",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "收购",
+      "Description": "收购",
+      "Position": "(-2790.753,-994.5154)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，只要价格合适，我们商会都能吃得下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不过若是你能拿出我们商会中也比较稀缺的资源，那我们自然也愿意出更高的价格来收购。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.StartNTask"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{$miaoshu}{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.IsNTaskCanFinish"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.If",
+          "Condition": "wancheng == True"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:739(同意)"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.Menu",
+          "Text": "回绝",
+          "TargetBlockID": "this:740(放弃)"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.Menu",
+          "Text": "我没有这样东西",
+          "TargetBlockID": "this:740(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 740,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-2727.117,-914.9689)",
+      "Commands": [
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.NTaskAbandon"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "还有什么事么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看有什么值得买的",
+          "TargetBlockID": "this:308(交易)"
+        },
+        {
+          "ItemID": 751,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里的价格似乎并不便宜",
+          "TargetBlockID": "this:310(价格)"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:301(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 301,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2610.072,-1213.833)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 739,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-2846.435,-916.1056)",
+      "Commands": [
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不错，不错。这些灵石现在是你的了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "还有什么事么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看有什么值得买的",
+          "TargetBlockID": "this:308(交易)"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里的价格似乎并不便宜",
+          "TargetBlockID": "this:310(价格)"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:301(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "交易",
+      "Description": "交易",
+      "Position": "(-3075.981,-1044.515)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "还有什么需要的么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里收购{$shougou}么？",
+          "TargetBlockID": "this:309(收购)"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里的价格似乎并不便宜",
+          "TargetBlockID": "this:310(价格)"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:301(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "价格",
+      "Description": "价格",
+      "Position": "(-2508.933,-1053.606)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友有所不知，这价格也不是我私下定的，而是由商会根据最近的海况统一制定。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们晨星商会收购这些东西也有不小的成本，你能用这样的价格买到已经很不错了，若是到其它城市里的拍卖行买，那可要贵多了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看有什么值得买的",
+          "TargetBlockID": "this:308(交易)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里收购{$shougou}么？",
+          "TargetBlockID": "this:309(收购)"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:301(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2797.994,-1212.23)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID < 692"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你眼前的是一间用大块岩石简单搭建出来的临时商铺，掌柜正悠闲地坐在里面。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这间商铺出售的似乎都是些{$dian}，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Menu",
+          "Text": "交谈",
+          "TargetBlockID": "this:300(交谈)"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:301(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "交谈",
+      "Description": "交谈",
+      "Position": "(-2795.3,-1135.424)",
+      "Commands": [
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这位道友，看看有什么需要的？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看有什么值得买的",
+          "TargetBlockID": "this:308(交易)"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.If",
+          "Condition": "leixing == 1"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == False"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里收购草药么？",
+          "TargetBlockID": "this:309(收购)"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == False"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里收购妖兽材料么？",
+          "TargetBlockID": "this:309(收购)"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "这里的价格似乎并不便宜",
+          "TargetBlockID": "this:310(价格)"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:301(离开)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

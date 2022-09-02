@@ -1,0 +1,201 @@
+{
+  "Name": "Talk5001",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "choice",
+      "Description": "choice",
+      "Position": "(-2858.344,-1000.205)",
+      "Commands": []
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-2820.564,-929.9401)",
+      "Commands": [
+        {
+          "ItemID": 117,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 118,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3248.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2430.016,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != year"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

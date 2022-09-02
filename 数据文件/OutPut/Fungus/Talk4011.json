@@ -1,0 +1,221 @@
+{
+  "Name": "Talk4011",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(巡逻判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 303,
+      "Name": "打架",
+      "Description": "打架",
+      "Position": "(-2796.778,-1206.38)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.If",
+          "Condition": "IsZhongYaoNPC == True"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "CmdWarpNPCToMap"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "巡逻判定",
+      "Description": "巡逻判定",
+      "Position": "(-2797.058,-1259.851)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.CheckXunLuo"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "npcid != 0"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "一道神识扫过，你似乎被什么人盯上了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "站住，此地乃我派驻地，非我{$Var}弟子不得擅入！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接动手",
+          "TargetBlockID": "this:303(打架)"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开此地",
+          "TargetBlockID": "this:304(离开)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2670.896,-1258.146)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

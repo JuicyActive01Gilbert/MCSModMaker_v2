@@ -1,0 +1,293 @@
+{
+  "Name": "Talk8109",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2807.369,-1381.267)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(npc性格获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1337,
+      "Name": "土",
+      "Description": "土",
+      "Position": "(-2729.668,-1077.07)",
+      "Commands": [
+        {
+          "ItemID": 1439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是伴生的地龙干么，那妖王应该就在附近了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1440,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 1163,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2808.196,-1215.13)",
+      "Commands": [
+        {
+          "ItemID": 1441,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1402(金)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1401(木)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1200(水)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1336(火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1337(土)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1336,
+      "Name": "火",
+      "Description": "火",
+      "Position": "(-2891.864,-1077.069)",
+      "Commands": [
+        {
+          "ItemID": 1437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是伴生的火精芝么，那妖王应该就在附近了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1438,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 1200,
+      "Name": "水",
+      "Description": "水",
+      "Position": "(-2654.027,-1140.238)",
+      "Commands": [
+        {
+          "ItemID": 1435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是伴生的冰精芝么，那妖王应该就在附近了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1436,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 1401,
+      "Name": "木",
+      "Description": "木",
+      "Position": "(-2808.188,-1143.149)",
+      "Commands": [
+        {
+          "ItemID": 1433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是伴生的苦蔓藤么，那妖王应该就在附近了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1434,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 1402,
+      "Name": "金",
+      "Description": "金",
+      "Position": "(-2956.152,-1142.677)",
+      "Commands": [
+        {
+          "ItemID": 1431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是伴生的天剑笋么，那妖王应该就在附近了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1432,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "npc性格获取",
+      "Description": "npc性格获取",
+      "Position": "(-2808.189,-1295.668)",
+      "Commands": [
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1163(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

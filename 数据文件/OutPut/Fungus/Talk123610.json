@@ -1,0 +1,129 @@
+{
+  "Name": "Talk123610",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(设置对象)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 281,
+      "Name": "对话2",
+      "Description": "对话2",
+      "Position": "(-2663.036,-1241.854)",
+      "Commands": [
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这次不小心遇上两个禾山道的修士，差点就丢了性命。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "设置对象",
+      "Description": "设置对象",
+      "Position": "(-2797.06,-1241.532)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(对话1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "281(对话2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "对话1",
+      "Description": "对话1",
+      "Position": "(-2959.928,-1241.662)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友，看看有什么需要的？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

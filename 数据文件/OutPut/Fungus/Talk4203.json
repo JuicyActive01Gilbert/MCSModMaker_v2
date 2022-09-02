@@ -1,0 +1,255 @@
+{
+  "Name": "Talk4203",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "419(战斗胜利对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 419,
+      "Name": "战斗胜利对话",
+      "Description": "战斗胜利对话",
+      "Position": "(-2797.572,-1242.243)",
+      "Commands": [
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "九幽狡猾无比，这次你没有再给他逃跑的机会，而是一剑彻底的将他的元神剿灭。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 5401,
+          "AvatarBindKey": "",
+          "StoryText": "不...这不...可能...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "九幽的瞳孔逐渐黯淡，漫天挥舞的巨大触手跌落在地。一代妖圣，就此陨落...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着九幽气息渐渐消散，另一股轻微的灵力波动引起了你的注意。你顺着灵力感应，在九幽遗骸下方的阵法中心，找到了一块被嵌入其中的碎壳。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这碎壳上铭刻的灵纹似乎颇为玄妙，是阵法么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看，这碎壳上铭刻的灵纹和我们刚刚遇到的那个四象聚灵阵好像是一样的！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "难怪区区海兽能够有如此高深的阵法造诣，恐怕就是从这片碎壳之中感悟而来的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这碎壳，究竟是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你看着碎壳上的灵纹，竟不由自主的陷入了一种顿悟的状态...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你沉浸于感悟中时，整个海底巢穴开始剧烈震动起来，以九幽残骸为中心，一个巨大的漩涡逐渐形成。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "糟糕，看来你拿走的碎壳是整个海底阵法的支点。现在没有了阵法的压制，无尽海渊的灵力乱流很快就会把这里毁掉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "快离开这里！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜九幽)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜九幽",
+      "Description": "战胜九幽",
+      "Position": "(-2795.723,-1180.412)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "CmdSetHideIsland"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "CmdCloseSeaJiZhi"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

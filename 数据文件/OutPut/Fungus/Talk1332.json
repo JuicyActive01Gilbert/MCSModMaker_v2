@@ -1,0 +1,1461 @@
+{
+  "Name": "Talk1332",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2066.167,-1395.028)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "463(fame)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 626,
+      "Name": "+1",
+      "Description": "+1",
+      "Position": "(-2063.851,-1224.432)",
+      "Commands": [
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 11"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "471(random)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上的两位修士修为高深，一时胜负难分，令观看这场比赛的你获益匪浅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.AddEXP"
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-2259.569,-1307.883)",
+      "Commands": []
+    },
+    {
+      "ItemID": 356,
+      "Name": "80",
+      "Description": "80",
+      "Position": "(-2082.926,-1134.174)",
+      "Commands": [
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 573,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-2617.876,-1305.777)",
+      "Commands": [
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈，道友定不会为今日所做的决定后悔，放眼无尽之海，只有我连家的功法最为强劲。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "成为千流岛供奉，便可修炼圣坛内的秘法，令道友实力更上一层。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友请先随总管事面见岛主，其后再商议具体事宜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 471,
+      "Name": "random",
+      "Description": "random",
+      "Position": "(-2064.685,-1309.992)",
+      "Commands": [
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上修习金系功法的修士以锐不可当的攻势迅猛出击，你在这其中体悟到了金的锋锐。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上修习木系功法的修士一手毒功出神入化，你通过他的比试领悟到一丝道法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上修习水系功法的修士一手惊涛止水令人拍案叫绝，你在她精妙的操控中隐隐得到了一些启发。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上修习火系功法的修士一出手烈焰灼灼，场内的温度都高了几分，不愧是玄火神通！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上修习土系功法的修士防御神通精彩绝伦，通过他的比试你领悟到一丝道法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上擅用神识功法的修士招式诡秘莫测，你沉浸在他精妙的神通中不可自拔。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 7"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上体魄强劲的体修修士凭借霸道的体魄连连退敌，通过他的比赛你掌握了些许体道技巧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 8"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上的剑修招式凌厉，一柄灵剑杀气四溢，你体悟到些许剑的真意。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 9"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上擅用暗劲的修士招招毒辣，令对方接应不暇，在这场比试中你隐约触摸到一丝气之道的法门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 10"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上的修士布下奇阵，你定睛观察，似乎是效果奇特的太阴奇门阵。通过揣摩他的阵法，你也获得了一些领悟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 11"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上的两位修士修为平平，也没什么独门功法，你看得甚是无趣。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 12"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上的两位修士修为高深，一时胜负难分，令观看这场比赛的你获益匪浅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.AddEXP"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 13"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "擂台上的两位修士修为差距过大，很快便结束了比赛。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在台下打了个盹儿，再睁眼时擂台已经结束了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "进入方式判定",
+      "Description": "进入方式判定",
+      "Position": "(-2438.941,-1307.745)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你来到千流岛势力搭建的擂台附近，台下已经聚集了许多准备参赛的修士。擂台四周人声鼎沸，许多散修支起了摊贩，甚至还有修士搭设起盘口。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你有些好奇地凑上前去，发现掌管盘口的修士们清一色地穿着连家道袍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "此处为千流岛连家开设的盘口，为防止修士在擂台上投机取巧，比赛前须得为自己押注。若是道法高深赢得擂台，这里自然按赌注做赔。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "不过若是逊人一筹输了擂台，这赌注嘛...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "参加擂台",
+          "TargetBlockID": "this:304(押注)"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:305(算了)"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友是参加擂台还是台下观赛？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Menu",
+          "Text": "台下观赛",
+          "TargetBlockID": "this:443(watch)"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Menu",
+          "Text": "上台参赛",
+          "TargetBlockID": "this:304(押注)"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:305(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "上台",
+      "Description": "上台",
+      "Position": "(-2256.005,-980.8394)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "有请{FirstName}{LastName}上台！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你整理衣冠，飞身上台，开始了这一轮的比试。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 40"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(40)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue > 60"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "356(80)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "355(60)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 443,
+      "Name": "watch",
+      "Description": "watch",
+      "Position": "(-2439.051,-1224.346)",
+      "Commands": [
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友请缴纳500灵石的观赛费。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Menu",
+          "Text": "缴纳灵石",
+          "TargetBlockID": "this:505(give)"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:305(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "5000",
+      "Description": "5000",
+      "Position": "(-2616.877,-982.8814)",
+      "Commands": [
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.If",
+          "Condition": "money > 5000"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(战前)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "身上的灵石好像不太够，还是改日再来吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(算了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 505,
+      "Name": "give",
+      "Description": "give",
+      "Position": "(-2258.346,-1225.294)",
+      "Commands": [
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.If",
+          "Condition": "money > 500"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "那连家修士收下灵石后递给你一块玉简，上面刻有观众席的座位号。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你循着编号很快找到了自己的座位并落座，准备观看接下来的比试。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "626(+1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "身上的灵石好像不太够，还是改日再来吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(算了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "60",
+      "Description": "60",
+      "Position": "(-2064.754,-1064.661)",
+      "Commands": [
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "3000",
+      "Description": "3000",
+      "Position": "(-2616.941,-1065.605)",
+      "Commands": [
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.If",
+          "Condition": "money > 3000"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(战前)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "身上的灵石好像不太够，还是改日再来吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(算了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "战前",
+      "Description": "战前",
+      "Position": "(-2438.877,-1065.669)",
+      "Commands": [
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "这是你的参赛玉简，请千万拿好切勿丢失。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "过了一段时间后，你注意到搭设盘口的连家修士们收起了摊位，想来擂台即将开赛了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{w}{w=0.5}不须多时第一组修士飞身上台，擂台上顿时术法纷呈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Menu",
+          "Text": "仔细观战",
+          "TargetBlockID": "this:325(look)"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "闭目养神",
+          "TargetBlockID": "this:326(not)"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(上台)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 202,
+      "Name": "577",
+      "Description": "577",
+      "Position": "(-2438.464,-1394.796)",
+      "Commands": [
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 80"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(进入方式判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友果真是人中翘楚，令我等钦佩折服。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "不知道友可有意入我连家麾下，成为千流岛供奉？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:573(同意)"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:574(拒绝)"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 574,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2619.876,-1394.777)",
+      "Commands": [
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "看来道友志不在此，我等也自不强留，凭借道友的修为想必能在无尽之海打出自己的名头来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "40",
+      "Description": "40",
+      "Position": "(-2064.696,-981.8296)",
+      "Commands": [
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 326,
+      "Name": "not",
+      "Description": "not",
+      "Position": "(-2256.004,-1064.669)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你丝毫不在意嘈杂的打斗声，只是静静地闭上眼睛调养生息，为自己的比赛养精蓄锐。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(上台)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "1000",
+      "Description": "1000",
+      "Position": "(-2618.941,-1144.073)",
+      "Commands": [
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.If",
+          "Condition": "money > 1000"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(战前)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "身上的灵石好像不太够，还是改日再来吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(算了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "押注",
+      "Description": "押注",
+      "Position": "(-2618.569,-1224.883)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "要押注多少灵石？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Menu",
+          "Text": "下注一千灵石",
+          "TargetBlockID": "this:307(1000)"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Menu",
+          "Text": "下注三千灵石",
+          "TargetBlockID": "this:311(3000)"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Menu",
+          "Text": "下注五千灵石",
+          "TargetBlockID": "this:312(5000)"
+        }
+      ]
+    },
+    {
+      "ItemID": 463,
+      "Name": "fame",
+      "Description": "fame",
+      "Position": "(-2260.629,-1395.826)",
+      "Commands": [
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 80"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(进入方式判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "你远远地看到擂台上似乎有修士正在斗法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(577)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(算了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 325,
+      "Name": "look",
+      "Description": "look",
+      "Position": "(-2438.941,-981.8395)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "台上修士一人擅用神识功法，另一人则为用毒高手。灵力碰撞间保护擂台的屏障受击荡出阵阵涟漪，妙法纷纭的战斗令你获益匪浅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.AddEXP"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(上台)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

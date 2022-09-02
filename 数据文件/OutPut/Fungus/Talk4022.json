@@ -1,0 +1,263 @@
+{
+  "Name": "Talk4022",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2798.707,-1144.516)",
+      "Commands": [
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，看来你掌握的不错，功力也是大有长进。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过接下来我要传你的{$shentong}乃人阶上品神通，唯有对{$xi}系的大道感悟达到{color=#d0380a}初窥门径{/color}方可领悟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "它还是少见的{color=#d0380a}双属性{/color}神通，所以能够灵活触发两种不同的连击效果，妙用无穷。你且收下，好好回去领悟吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1061,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2797.994,-1225.866)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2650.981,-1225.197)",
+      "Commands": [
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "先释放手印，便可以触发后续神通的五行连击效果。若能掌握好这一点，撑过傀儡的攻击也就不难了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

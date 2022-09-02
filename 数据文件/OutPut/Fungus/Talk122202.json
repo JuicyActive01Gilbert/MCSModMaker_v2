@@ -1,0 +1,475 @@
+{
+  "Name": "Talk122202",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(变量判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 356,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2510.667,-1210.278)",
+      "Commands": []
+    },
+    {
+      "ItemID": 323,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2638.667,-1242.278)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，可是来与我交换修炼资源的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:355(交易)"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事",
+          "TargetBlockID": "this:356(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 328,
+      "Name": "好感度判断",
+      "Description": "好感度判断",
+      "Position": "(-2638.667,-1103.278)",
+      "Commands": [
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.GetHaoGanDu"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 35"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "336(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 336,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2475.667,-1103.278)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.GetHaoGanDu"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 45"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "交易",
+      "Description": "交易",
+      "Position": "(-2510.667,-1306.278)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "门派判断",
+      "Description": "门派判断",
+      "Position": "(-2798.79,-1167.896)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "咦？你是先前在连石山......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "徐道友可唤我{FirstName}{LastName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，昔日一番话令在下受益匪浅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "或许是我过于故步自封，忘记了本应走的路。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "闭关几日后我终于找回了仙途伊始时的信念，离开门派云游历练，如今总算小有所成。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "在丹药的辅助下我也已经突破了筑基，同青嫣的关系也有所缓和。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "多谢你当日的那些话点醒了我，这份我自己研制的丹方还请{FirstName}道友收下，作为谢礼，希望对道友能有所帮助。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "328(好感度判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2799.667,-1103.278)",
+      "Commands": [
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 6"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "咦？{FirstName}{shixiong}？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来是徐凡师弟，看来你已经找回了自己的道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "正是。当初或许是我过于故步自封，忘记了本应走的路。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "宗门大比后醒悟的我离开门派云游历练，如今总算小有所成。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "在丹药的辅助下我也已经突破了筑基，同青嫣的关系也有所缓和。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "多谢你当日的那些话点醒了我，这份我自己研制的丹方还请{FirstName}{shixiong}收下，作为谢礼，希望对道友能有所帮助。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "328(好感度判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "咦？{FirstName}{shidi}？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来是徐凡师兄，师兄看来已经找回了自己的道？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "正是。当初或许是我过于故步自封，忘记了本应走的路。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "宗门大比后醒悟的我离开门派云游历练，如今总算小有所成。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "在丹药的辅助下我也已经突破了筑基，同青嫣的关系也有所缓和。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "多谢你当日的那些话点醒了我，这份我自己研制的丹方还请{FirstName}{shixiong}收下，作为谢礼，希望对道友能有所帮助。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "328(好感度判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "变量判定",
+      "Description": "变量判定",
+      "Position": "(-2798.667,-1242.278)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 5"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(门派判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "323(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

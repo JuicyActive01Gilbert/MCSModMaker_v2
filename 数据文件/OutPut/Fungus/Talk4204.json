@@ -1,0 +1,108 @@
+{
+  "Name": "Talk4204",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "419(战斗胜利对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 419,
+      "Name": "战斗胜利对话",
+      "Description": "战斗胜利对话",
+      "Position": "(-2798.708,-1242.243)",
+      "Commands": [
+        {
+          "ItemID": 426,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "无尽海渊的灵气乱流似乎比往日更加猛烈了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "深海章鱼在这无尽之海中虽然数量众多，但数万年来唯有九幽能够突破至化神期，靠的应该就是这神奇的聚灵阵法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "不错，如今阵基被毁，在这无尽海渊之中恐怕再也找不到一处灵气像这样稳定的修炼宝地了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

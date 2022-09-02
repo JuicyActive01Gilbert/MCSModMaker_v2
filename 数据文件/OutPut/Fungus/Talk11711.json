@@ -1,0 +1,121 @@
+{
+  "Name": "Talk11711",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "闲聊",
+      "Description": "闲聊",
+      "Position": "(-3387.92,-1375.053)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3024,
+          "AvatarBindKey": "",
+          "StoryText": "传闻宁州古迹乃为上古正魔大战的主战场，其内定有许多大能残存的剑意。若机缘之下体悟此等剑意，定令我等获益匪浅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3024,
+          "AvatarBindKey": "",
+          "StoryText": "临行前掌门曾嘱托我寻找千年前于古迹中失踪的衍复长老，不过长老失踪已有千年，我担心...唉......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3024,
+          "AvatarBindKey": "",
+          "StoryText": "万年前一战令魔修四把魔剑沦落各地，真想见识一下那魔剑究竟何等威力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3387.839,-1455.538)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(闲聊)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

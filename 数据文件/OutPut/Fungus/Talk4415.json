@@ -1,0 +1,161 @@
+{
+  "Name": "Talk4415",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "588(年份判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 592,
+      "Name": "450年大比",
+      "Description": "450年大比",
+      "Position": "(-2500.389,-1362.275)",
+      "Commands": [
+        {
+          "ItemID": 599,
+          "CmdType": "YSGame.TianJiDaBi.CmdTianJiDaBiStart"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "593(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 593,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2352.389,-1302.275)",
+      "Commands": [
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "普通大比",
+      "Description": "普通大比",
+      "Position": "(-2500.312,-1304.457)",
+      "Commands": [
+        {
+          "ItemID": 582,
+          "CmdType": "YSGame.TianJiDaBi.CmdTianJiDaBiStart"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "593(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 588,
+      "Name": "年份判定",
+      "Description": "年份判定",
+      "Position": "(-2648.389,-1307.275)",
+      "Commands": [
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 450"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "592(450年大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(普通大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

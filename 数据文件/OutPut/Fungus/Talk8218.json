@@ -1,0 +1,611 @@
+{
+  "Name": "Talk8218",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2794.032,-1302.664)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "第三次",
+      "Description": "第三次",
+      "Position": "(-2649.844,-1207.015)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "洞窟内阴风阵阵，只一靠近便感觉到一阵晕眩，似乎有什么东西正牵引着你的神识。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来这里便是最后一座拘魂阵所在了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接出手",
+          "TargetBlockID": "this:319(动手)"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "尝试破阵",
+          "TargetBlockID": "this:320(破阵判定)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 320,
+      "Name": "破阵判定",
+      "Description": "破阵判定",
+      "Position": "(-2506.985,-1203.595)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你对于阵法一道颇有研究，想要偷偷破除这几个拘魂阵法对你来说并非难事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阵法刚被破除，其中束缚着的数百个魂体便夺阵而出，万魂殿的长老们也发现了你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你打算先将这里的阵法破除，但还是低估了这些阵法的精妙程度，很快便被人发现了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(动手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 293,
+      "Name": "第二次",
+      "Description": "第二次",
+      "Position": "(-2650.979,-1273.788)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "洞窟内阴风阵阵，只一靠近便感觉到一阵晕眩，似乎有什么东西正牵引着你的神识。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来这里便是第二座拘魂阵所在了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接出手",
+          "TargetBlockID": "this:319(动手)"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "尝试破阵",
+          "TargetBlockID": "this:320(破阵判定)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2795.722,-1238.366)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "化神分支 == 1"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(化神分支)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(初次触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(第二次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(第三次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 343,
+      "Name": "化神分支",
+      "Description": "化神分支",
+      "Position": "(-2976.985,-1238.595)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不远处传来了修士交谈的声音。你稍加敛息，即便走到距他们很近的位置，他们仍未发现你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这鸟不拉屎的地方，咱们到底还要呆多久？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "大长老那根万魂幡，据说来之前已经有八千魂，分下来我们只要收集五百魂就够了，现在已经收集了四百魂，再熬几年也就差不多了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是一直都像刚来时那么快自然可以，可这收集的速度越来越慢，这都几个月了，一个魂影都没有，再这样下去别说几年了，几十年也抓不够啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "这……大长老不是在考虑迁阵吗？将这拘魂阵迁至阴冥海或者幽冥海，若是能敲定一个好去处，顺利的话一年之内便能搞定了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "敢问二位，这大长老现在何处？可否帮在下引荐一二？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "？？！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "？！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他们二人完全没有注意到你的气息，你就像凭空出现在他们身前一般。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "…这位前辈，敢问，找我殿大长老究竟是有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "自然是劝她就此收手，莫要再残害生灵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你们光是布下这拘魂阵，就不知残害了多少冤魂罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说着，你随手一击便将拘魂阵击碎，一众魂体从中四散逃开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阵中掉落出几块神阴石，你便也一并收了起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这可是我们……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "师兄，莫要冲动，对手可是化神修士，不是我们能应对的了的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "前辈若想与大长老一叙，晚辈自当给前辈带路。前辈这边请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "初次触发",
+      "Description": "初次触发",
+      "Position": "(-2796.027,-1155.561)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不远处传来了修士交谈的声音，你迅速躲至掩体后，未有惊动到他们。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这鸟不拉屎的地方，咱们到底还要呆多久？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "大长老那根万魂幡，据说来之前已经有八千魂，分下来我们只要收集五百魂就够了，现在已经收集了四百魂，再熬几年也就差不多了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是一直都像刚来时那么快自然可以，可这收集的速度越来越慢，这都几个月了，一个魂影都没有，再这样下去别说几年了，几十年也抓不够啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "这……大长老不是在考虑迁阵吗？将这拘魂阵迁至阴冥海或者幽冥海，若是能敲定一个好去处，顺利的话一年之内便能搞定了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听着这两名修士抱怨，你心里在盘算着究竟应该如何处理。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "此阵法颇为诡异，若是不能破除此阵法...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "忽然间，那拘魂阵好似感应到了什么，亮起了黑光。几条细长的黑手从阵中飞出，直奔你背后的铁剑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "avater2",
+          "StoryText": "何人在此？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 319,
+      "Name": "动手",
+      "Description": "动手",
+      "Position": "(-2514.985,-1273.595)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，什么人？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

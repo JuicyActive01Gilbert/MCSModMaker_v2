@@ -1,0 +1,149 @@
+{
+  "Name": "Talk9",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 283,
+      "Name": "无事",
+      "Description": "无事",
+      "Position": "(-2650.845,-1242.895)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "公孙叛徒剧情",
+      "Description": "公孙叛徒剧情",
+      "Position": "(-2797.05,-1171.402)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（此山地处竹山宗与逸风城交界，又历来人迹罕至，实是藏身的好地方。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "SavePoint"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断首次对话",
+      "Description": "判断首次对话",
+      "Position": "(-2797.06,-1244.66)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(公孙叛徒剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(无事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,147 @@
+{
+  "Name": "Talk18201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(死亡判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 282,
+      "Name": "不放过",
+      "Description": "不放过",
+      "Position": "(-2795.05,-1123.407)",
+      "Commands": [
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 607,
+          "AvatarBindKey": "",
+          "StoryText": "咳咳咳...等我养好伤，一定不会放过沂山那两只小鬼！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "疑惑",
+      "Description": "疑惑",
+      "Position": "(-2595.294,-1228.043)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 607,
+          "AvatarBindKey": "",
+          "StoryText": "哼，就这么死了，真是便宜那赤发鬼和青面鬼了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "死亡判断",
+      "Description": "死亡判断",
+      "Position": "(-2795.293,-1228.044)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(不放过)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "year > TempValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(疑惑)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(不放过)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

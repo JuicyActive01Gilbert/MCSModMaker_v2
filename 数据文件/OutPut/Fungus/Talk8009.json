@@ -1,0 +1,716 @@
+{
+  "Name": "Talk8009",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2781.532,-1329.937)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(随机任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "正确1",
+      "Description": "正确1",
+      "Position": "(-2441.582,-1222.841)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "从现场的痕迹判断，这些失踪的凡人应该是被什么妖兽给杀害了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你顺着这些痕迹一路追踪过去，很快便来到一处隐蔽的洞穴处...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 2"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一条巨蟒向你咬了过来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一头岩鳄向你咬了过来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 346,
+      "Name": "正确2",
+      "Description": "正确2",
+      "Position": "(-2424.308,-1087.189)",
+      "Commands": [
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "383(焦飞分支)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你猜测这些失踪的凡人应该是被禾山道的邪修，施展炼魂的邪术所伤。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你顺着这股阴冷的气息一路追踪过去，很快便来到一处隐蔽的洞府外...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1105,
+          "AvatarBindKey": "",
+          "StoryText": "桀桀桀，又有新鲜的魂魄送上门来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 302,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2771.694,-1091.195)",
+      "Commands": [
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "勘察周围环境",
+          "TargetBlockID": "this:298(勘察周围环境)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问附近村民",
+          "TargetBlockID": "this:299(询问附近村民)"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "检测术法痕迹",
+          "TargetBlockID": "this:300(检测术法痕迹)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "我已经知道了",
+          "TargetBlockID": "this:301(我已经知道了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 347,
+      "Name": "错误2",
+      "Description": "错误2",
+      "Position": "(-2430.57,-1017.643)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你猜测这些失踪的凡人应该是被禾山道的邪修，施展炼魂的邪术所伤。但你在此处兜兜转转找了几天，也没有找到那名“邪修”，只能就此作罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "询问附近村民",
+      "Description": "询问附近村民",
+      "Position": "(-2961.567,-1087.398)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{$cunming}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "禾山",
+      "Description": "禾山",
+      "Position": "(-2574.227,-1087.196)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 2"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(正确2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "347(错误2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "随机任务",
+      "Description": "随机任务",
+      "Position": "(-2778.254,-1247.925)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 1"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "suiji == 2"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(调查)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "错误1",
+      "Description": "错误1",
+      "Position": "(-2435.524,-1172.119)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你猜测这些失踪的凡人应该是被附近的妖兽所害，但你在此处兜兜转转找了几天，也没有发现那只“妖兽”，只能就此作罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "调查",
+      "Description": "调查",
+      "Position": "(-2777.539,-1167.912)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "距离此处不远就是几座凡人村落，而这里原本是他们前往大城市的必经之路，如今却人烟稀少。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那些传闻中的失踪案件大多都发生在这儿附近，要先从何处开始调查呢？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 349,
+      "Name": "错误3",
+      "Description": "错误3",
+      "Position": "(-2432.452,-851.9543)",
+      "Commands": [
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你猜测这些失踪的凡人应该是被附近的山贼强盗，目的是夺取他们的商品与钱财。但你在此处兜兜转转找了几天，也没有找到那群“山贼”，只能就此作罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "妖兽",
+      "Description": "妖兽",
+      "Position": "(-2576.757,-1188.663)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 1"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(正确1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "335(错误1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 383,
+      "Name": "焦飞分支",
+      "Description": "焦飞分支",
+      "Position": "(-2280.871,-1088.261)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "我已经知道了",
+      "Description": "我已经知道了",
+      "Position": "(-2772.692,-1027.903)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来导致附近凡人失踪的原因应该是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "附近有妖兽伤人",
+          "TargetBlockID": "this:328(妖兽)"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Menu",
+          "Text": "禾山派的邪术",
+          "TargetBlockID": "this:329(禾山)"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "沂山派拦路截道",
+          "TargetBlockID": "this:330(沂山)"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Menu",
+          "Text": "普通山贼截杀",
+          "TargetBlockID": "this:331(强盗)"
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "正确3",
+      "Description": "正确3",
+      "Position": "(-2431.187,-910.2714)",
+      "Commands": [
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "现场的打斗痕迹看起来不像修真者所留下的，倒更像凡人之间的打斗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你施展神识在附近探查，很快便找到一处隐藏于山林之中的强盗窝点。那些普通凡人哪里是你的对手，三下五除二便被你打得四散逃跑，想来是不敢再回此地作恶了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 330,
+      "Name": "沂山",
+      "Description": "沂山",
+      "Position": "(-2576.493,-971.9415)",
+      "Commands": [
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你猜测这些失踪的凡人应该是被沂山派的修士拦路截杀，目的是夺取他们的商品与钱财。但你在此处兜兜转转找了几天，也没有找到那名“沂山派的修士”，只能就此作罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "强盗",
+      "Description": "强盗",
+      "Position": "(-2574.226,-877.2704)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 3"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(正确3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "349(错误3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "勘察周围环境",
+      "Description": "勘察周围环境",
+      "Position": "(-2964.097,-1145.625)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{$huanjing}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "检测术法痕迹",
+      "Description": "检测术法痕迹",
+      "Position": "(-2960.301,-1039.295)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{$shufa}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,794 @@
+{
+  "Name": "Talk119101",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2593.661,-1104.994)",
+      "Commands": [
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，要住店么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.If",
+          "Condition": "year == TempValue"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.Menu",
+          "Text": "出示白帝令",
+          "TargetBlockID": "this:209(出示白帝令（及时）)"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.Menu",
+          "Text": "出示白帝令",
+          "TargetBlockID": "this:257(出示白帝令（晚了）)"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:194(住店)"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听最近发生的事",
+          "TargetBlockID": "this:198(打听)"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听购买洞府",
+          "TargetBlockID": "this:212(询问客栈)"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:192(不住)"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2594.081,-1259.251)",
+      "Commands": [
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 257,
+      "Name": "出示白帝令（晚了）",
+      "Description": "出示白帝令（晚了）",
+      "Position": "(-2437.975,-1183.955)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "客栈掌柜眼神微微一凝，随即面色恢复正常，低声说道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "原来是白帝楼来人，不知有何吩咐？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "白帝楼与倪家府邸附近总有陌生人出现，我特来调查此事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "武陵城因为英杰会是有各地修士来此，但近些时日确实是发生了一些不同寻常之事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "怎么，有可疑的陌生人打听倪家和白帝楼的事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "恰恰相反，是我熟识的一位老顾客，近来很是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "直说了吧，此人名叫李天是逸风城附近的一名散修，虽机缘巧合之下突破至炼气中期，但种种原因影响已无再进的可能，前两届英杰会都是来碰碰运气，一来二去也算是我和熟识。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "今年他正好39岁也是最后一次参加这个盛会了，但今年的他突破至炼气巅峰，更是习得数门威力强大的术法，虽未获得魁首却也小出风头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "本来我也很替他高兴，但是今年我和他喝酒的时候，一次偶然间觉得他体内散发出某种气息，不像是正道功法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "而且也就如你所说，本是普通散修的他，突然富裕了起来，结交不少好友，他对于倪家和白帝楼的上心程度也太诡异了，你这一说我就想起来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Menu",
+          "Text": "我在哪里可以找到他？",
+          "TargetBlockID": "this:276(后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 226,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2270.975,-1102.955)",
+      "Commands": [
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.Menu",
+          "Text": "诡异的气息？",
+          "TargetBlockID": "this:222(气息)"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.Menu",
+          "Text": "诡异的行径？",
+          "TargetBlockID": "this:229(行径)"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.Menu",
+          "Text": "我在哪里可以找到他？",
+          "TargetBlockID": "this:235(继续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 212,
+      "Name": "询问客栈",
+      "Description": "询问客栈",
+      "Position": "(-2744.975,-1104.955)",
+      "Commands": [
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 194,
+      "Name": "住店",
+      "Description": "住店",
+      "Position": "(-2588.657,-1020.864)",
+      "Commands": [
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.OpenZuLi"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 229,
+      "Name": "行径",
+      "Description": "行径",
+      "Position": "(-2130.975,-1066.955)",
+      "Commands": [
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "他的师傅也不过是一老道士，拿到一本残缺的《吐纳功法》。和您这样的青年才俊不同，我们这种散修一般能破先天入炼气已是福缘了，像是倪家、白帝楼这种顶流修仙势力，哪是我们应该关心的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "但今年，李天对于倪家大少、家主的事格外上心，不过我们这些底层修士也没啥能告诉他的就是了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "226(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 192,
+      "Name": "不住",
+      "Description": "不住",
+      "Position": "(-2422.101,-1025.321)",
+      "Commands": []
+    },
+    {
+      "ItemID": 222,
+      "Name": "气息",
+      "Description": "气息",
+      "Position": "(-2129.975,-1143.955)",
+      "Commands": [
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "是的，每次英杰会我们都会相聚，那时我们正在喝酒，突然他面色很痛苦，也是在那时候他体内有这股气息的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "226(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 276,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2260.975,-1182.955)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "...\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "唉，你来晚了，他上个月就退房离去了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.SetTaskFaild"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 198,
+      "Name": "打听",
+      "Description": "打听",
+      "Position": "(-2721.975,-1024.955)",
+      "Commands": [
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "让我想想...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 235,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-2133.975,-1007.955)",
+      "Commands": [
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "...\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "他现在就住在我这里...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "带我去见见他吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "...\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "好的。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 209,
+      "Name": "出示白帝令（及时）",
+      "Description": "出示白帝令（及时）",
+      "Position": "(-2439.975,-1103.955)",
+      "Commands": [
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "客栈掌柜眼神微微一凝，随即面色恢复正常，低声说道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "原来是白帝楼来人，不知有何吩咐？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "白帝楼与倪家府邸附近总有陌生人出现，我特来调查此事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "武陵城因为英杰会是有各地修士来此，但近些时日确实是发生了一些不同寻常之事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "怎么，有可疑的陌生人打听倪家和白帝楼的事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "恰恰相反，是我熟识的一位老顾客，近来很是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "直说了吧，此人名叫李天，原是这附近的一名散修，与我有几分交情。他虽机缘巧合之下突破至炼气中期，但多次参加英杰会比试都铩羽而归。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "我原以为他已无再进的可能，没想到今年他却突然突破至炼气巅峰，更是习得数门威力强大的法门，虽未获得魁首却也小出风头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "本来我也很替他高兴，但是今年我和他喝酒的时候，一次偶然间觉得他体内散发出某种气息，不像是正道功法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 712,
+          "AvatarBindKey": "",
+          "StoryText": "况且本是普通散修的他，却突然富裕了起来，还结交不少好友。他确实有意无意中打听过有关倪府的消息，你这一说我就想起来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "226(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

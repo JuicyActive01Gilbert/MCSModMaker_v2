@@ -1,0 +1,370 @@
+{
+  "Name": "FightTalk6",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "UseSkill",
+      "Description": "UseSkill",
+      "Position": "(-2889.911,-1325.276)",
+      "Commands": [
+        {
+          "ItemID": 107,
+          "CmdType": "Fungus.If",
+          "Condition": "attaker == True"
+        },
+        {
+          "ItemID": 108,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 109,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "attaker == False"
+        },
+        {
+          "ItemID": 110,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 103,
+      "Name": "start",
+      "Description": "start",
+      "Position": "(-2500.146,-1309.214)",
+      "Commands": []
+    },
+    {
+      "ItemID": 105,
+      "Name": "玩家释放技能",
+      "Description": "玩家释放技能",
+      "Position": "(-2921.108,-1223.69)",
+      "Commands": [
+        {
+          "ItemID": 112,
+          "CmdType": "Fungus.If",
+          "Condition": "SkillID == 301"
+        },
+        {
+          "ItemID": 131,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "126(释放火弹后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 115,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.If",
+          "Condition": "SkillID == 501"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "133(释放运气后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 125,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.If",
+          "Condition": "SkillID == 201"
+        },
+        {
+          "ItemID": 149,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "151(释放水弹后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 106,
+      "Name": "敌人释放技能",
+      "Description": "敌人释放技能",
+      "Position": "(-3173.32,-1329.816)",
+      "Commands": []
+    },
+    {
+      "ItemID": 126,
+      "Name": "释放火弹后",
+      "Description": "释放火弹后",
+      "Position": "(-3172.975,-1090.675)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 128,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，以第一次实战来看，你这表现还算不错。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "有的时候，你需要重新沟通周天的灵气，{color=red}使用三张不同系{/color}的灵气牌，来释放运气术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "释放运气后",
+      "Description": "释放运气后",
+      "Position": "(-2967.294,-1088.949)",
+      "Commands": [
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "就是这样，现在，用{color=red}两张水系灵气牌{/color}来释放水弹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 151,
+      "Name": "释放水弹后",
+      "Description": "释放水弹后",
+      "Position": "(-2791.801,-1087.633)",
+      "Commands": [
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "看来你掌握的还不错，不过道家法门妙用无穷，你若是能领悟{color=red}五行相生{/color}的技巧，这些基础法术也会威力大增。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.FightClearSkill"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "修士间的对决，体内五行灵气的数量最为重要。如果你体内的灵气已经不足以释放法术了，就只能先{color=red}结束回合{/color}，再重新吸收天地灵气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "随着修为的提升，你体内能够储存的{color=red}灵气上限{/color}也会越来越多。只有这样，你才能使用那些更为强大的神通。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 156,
+      "Name": "RealClickEndRound",
+      "Description": "RealClickEndRound",
+      "Position": "(-2279.557,-1316.807)",
+      "Commands": [
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.FightAddBuff"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

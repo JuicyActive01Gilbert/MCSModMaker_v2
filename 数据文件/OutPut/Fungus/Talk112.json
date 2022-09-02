@@ -1,0 +1,733 @@
+{
+  "Name": "Talk112",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2563.961,-1215.168)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(竹山宗洞府-初次进入-判断1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2725.717,-1217.798)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "竹山",
+      "Description": "竹山",
+      "Position": "(-2589.44,-989.2178)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里就是我的洞府了吧，虽然简单倒也是五脏俱全了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，新入门弟子的道袍我已经派人为你取来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "每年的七月份，我派{color=#d0380a}外门传功长老{/color}都会在宗门广场讲道授法，{shidi}虽然已入我派内门，也可以多去听听，应该会有所收获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是你还想兼修我派其它功法，可以自行去往{color=#d0380a}藏经阁{/color}借阅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外，门派每三十年会举办一次{color=#d0380a}宗门大比{/color}，夺魁者不仅可以直接成为内门弟子，拜入我派任一一位长老门下修习，还能获得一枚{color=#d0380a}筑基丹{/color}作为奖励。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}虽然已入内门拜师，但这筑基丹也是极为稀有的宝贝。未来{shidi}筑基突破时若能服下几颗，可以大大提高筑基成功的概率。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄提点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 202,
+      "Name": "竹山宗洞府-初次进入-判断1",
+      "Description": "竹山宗洞府-初次进入-判断1",
+      "Position": "(-2351.029,-1214.104)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "554(门派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "331(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2079.948,-1215.551)",
+      "Commands": [
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 636,
+      "Name": "离火",
+      "Description": "离火",
+      "Position": "(-2385.715,-987.9565)",
+      "Commands": [
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里就是我的洞府了吧，虽然简单倒也是五脏俱全了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，新入门弟子的道袍我已经派人为你取来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "每年的七月份，我派{color=#d0380a}外门传功长老{/color}都会在宗门广场讲道授法，{shidi}虽然已入我派内门，也可以多去听听，应该会有所收获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是你还想兼修我派其它功法，可以自行去往{color=#d0380a}藏经阁{/color}借阅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外，门派每三十年会举办一次{color=#d0380a}宗门大比{/color}，夺魁者不仅可以直接成为内门弟子，拜入我派任一一位长老门下修习，还能获得一枚{color=#d0380a}筑基丹{/color}作为奖励。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}虽然已入内门拜师，但这筑基丹也是极为稀有的宝贝。未来{shidi}筑基突破时若能服下几颗，可以大大提高筑基成功的概率。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄提点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 637,
+      "Name": "金虹",
+      "Description": "金虹",
+      "Position": "(-2235.533,-987.9565)",
+      "Commands": [
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里就是我的洞府了吧，虽然简单倒也是五脏俱全了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，新入门弟子的道袍我已经派人为你取来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "每年的七月份，我派{color=#d0380a}外门传功长老{/color}都会在宗门广场讲道授法，{shidi}虽然已入我派内门，也可以多去听听，应该会有所收获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是你还想兼修我派其它功法，可以自行去往{color=#d0380a}藏经阁{/color}借阅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外，门派每三十年会举办一次{color=#d0380a}宗门大比{/color}，夺魁者不仅可以直接成为内门弟子，拜入我派任一一位长老门下修习，还能获得一枚{color=#d0380a}筑基丹{/color}作为奖励。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}虽然已入内门拜师，但这筑基丹也是极为稀有的宝贝。未来{shidi}筑基突破时若能服下几颗，可以大大提高筑基成功的概率。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄提点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 554,
+      "Name": "门派判定",
+      "Description": "门派判定",
+      "Position": "(-2307.533,-1083.002)",
+      "Commands": [
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "119(竹山)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "637(金虹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "638(星河)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "636(离火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "639(化尘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 638,
+      "Name": "星河",
+      "Description": "星河",
+      "Position": "(-2072.941,-985.5475)",
+      "Commands": [
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里就是我的洞府了吧，虽然简单倒也是五脏俱全了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 639,
+      "Name": "化尘",
+      "Description": "化尘",
+      "Position": "(-1901.444,-982.5475)",
+      "Commands": [
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里就是我的洞府了吧，虽然简单倒也是五脏俱全了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，新入门弟子的道袍我已经派人为你取来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此外，这是我教入门神通《还尘》，《化沙》，以及入门功法《化尘诀》。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "化尘诀乃我教弟子必须修习的基础功法。尘，扬土也。化尘之窍在于沉可中正稳健，扬则灵动敏迅。{shidi}可配合我教其他神通，仔细体悟其中法门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "每年的七月份，我派{color=#d0380a}外门传功长老{/color}都会在宗门广场讲道授法，{shidi}虽然已入我派内门，也可以多去听听，应该会有所收获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是你还想领悟我派其它功法神通，可以自行去往{color=#d0380a}藏经阁{/color}借阅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外，门派每三十年会举办一次{color=#d0380a}宗门大比{/color}，夺魁者不仅可以直接成为内门弟子，拜入我派任一一位长老门下修习，还能获得一枚{color=#d0380a}筑基丹{/color}作为奖励。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}虽然已入内门拜师，但这筑基丹也是极为稀有的宝贝。未来{shidi}筑基突破时若能服下几颗，可以大大提高筑基成功的概率。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师姐提点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.SetTaskDisabled"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.SetTaskDisabled"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.SetTaskDisabled"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.SetTaskDisabled"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

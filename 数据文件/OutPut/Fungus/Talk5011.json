@@ -1,0 +1,294 @@
+{
+  "Name": "Talk5011",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "choice",
+      "Description": "choice",
+      "Position": "(-3024.016,-1012.146)",
+      "Commands": []
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2611.686,-1226.349)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "148(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-3042.952,-940.388)",
+      "Commands": [
+        {
+          "ItemID": 117,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 118,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3248.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 152,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2759.306,-1030.611)",
+      "Commands": [
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2608.56,-1126.133)",
+      "Commands": [
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 149,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "152(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "153(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2433.932,-1021.656)",
+      "Commands": [
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "呼~~可算甩掉了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 153,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-2605.574,-1024.64)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

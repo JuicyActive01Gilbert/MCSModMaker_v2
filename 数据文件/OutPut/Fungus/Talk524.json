@@ -1,0 +1,256 @@
+{
+  "Name": "Talk524",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "325(询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 355,
+      "Name": "新打听",
+      "Description": "新打听",
+      "Position": "(-2797.228,-1167.484)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "门派判定",
+      "Description": "门派判定",
+      "Position": "(-2798.228,-1076.484)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "御剑门......你打听此事作何？莫非千年前余孽未清，今日再次祸乱宁州？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "千年前围剿御剑门之事我也只是从过往的记事玉简中得知一二。其掌门勾结魔修，作恶多端，好在当时各大门派将其围剿，免我宁州百姓苦难。修仙之人当正道心，莫再打听魔门妖道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此事你从何听来？御剑门乃千古罪人，其掌门手持魔剑，更是其心可诛！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当年我派掌门受其唆使，险些酿成大祸！若不是掌门心生疑窦，恐怕我金虹剑派也落得同御剑门一样的下场！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "千年前之事我也不太清楚，但据师祖说当时金虹剑派掌门似与御剑门掌门私交甚密，不知为何最后竟势同水火，以至后来竟率各大派围攻御剑门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "传闻二人最初是因一把灵剑发生争执，尔后不欢而散，甚少往来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "千年前我师尊也不过是离火门中一个普通的弟子，据说各大门派掌门齐聚一堂商讨要事，那之后便举派攻上九嶷山，我听得他转述只觉其中有不少谜团。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当时只道御剑门私通魔门，却也不知通的哪门，又是何人私通......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我派消息闭塞，当年之事哪怕记事玉简也未曾留下多少有用讯息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只依稀说了个金虹剑派掌门率各大门派攻上御剑门，讨伐魔门党羽。至于当年具体发生了什么，倒是没人清楚......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 325,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2798.228,-1242.484)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "当年御剑门是被五大门派联手剿灭的，说不定{$zhangmen}知道一些内幕...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问掌门",
+          "TargetBlockID": "this:355(新打听)"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:344(New Block)"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2621.228,-1239.484)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

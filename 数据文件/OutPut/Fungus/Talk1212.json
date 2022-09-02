@@ -1,0 +1,706 @@
+{
+  "Name": "Talk1212",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3404.164,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "413(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 413,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-3193.347,-1439.333)",
+      "Commands": [
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 120"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 300"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "379(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "384(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "384(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 384,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-3012.434,-1497.208)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 424,
+      "Name": "加入拍卖",
+      "Description": "加入拍卖",
+      "Position": "(-2592.987,-1439.611)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "一时间拍卖场加价声此起彼伏，你也不甘寂寞的加入其中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.OpenPaiMai"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 428,
+      "Name": "等待",
+      "Description": "等待",
+      "Position": "(-2591.105,-1495.2)",
+      "Commands": [
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "一时间拍卖场加价声此起彼伏，你无意参与其中，选择在场外静候...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 379,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-3012.749,-1440.281)",
+      "Commands": [
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.If",
+          "Condition": "HanXuKaiShi == 0"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(拍卖行)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.If",
+          "Condition": "HanXuKaiShi == 1"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "430(拍卖会结束)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "384(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "384(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 430,
+      "Name": "拍卖会结束",
+      "Description": "拍卖会结束",
+      "Position": "(-2806.098,-1390.324)",
+      "Commands": [
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着你成功拍下涵虚玉佩，这件引起各大势力豪掷灵石的物事，虽然不知道还会在宁州引起什么波澜，但至少现在也算是归处已定。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着拍卖师锤落音定，这件引起各大势力豪掷灵石的玉佩，虽然不知道还会在宁州引起什么波澜，但至少现在也算是归处已定。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当大家准备退场时。一个意料之外的声音传入在场各位的耳中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "关于涵虚仙府，在下有一言，请诸位一听。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "原本嘈杂的人流，在公孙季的言语下猛地安静起来。显然都对他要说的话兴趣不浅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "在下游历时曾获得一些关于涵虚仙人的消息，值此拍卖之际，愿与在场正派道友分享一二。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "诸位不用怀疑在下的用意。只是考虑到涵虚此人乖僻好战，当初也是连败多位公孙家修士。甚至到云汐城布阵挑衅，以至公孙家老祖当年不得不出手将之镇压。在下由此认为其洞府恐怕也是凶险异常。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "若是各大势力联手进入，共同破解仙府阵法，而后合理分配其中收获，避免内斗的损失，才是切实壮大我正派之实力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "公孙季说完顿了顿，像是在等别人打断他。但场中修士多是保持沉默，甚至有的修士抱着掺和其中机缘的想法，迫不及待的点点头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "",
+          "StoryText": "我刚入门的时候，曾听师祖提到过涵虚仙人破尽公孙家阵法，然后摆阵求战一事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "",
+          "StoryText": "只是没想到公孙兄竟会主动提起，我可听说那一战是公孙家多位长老轮番上阵，结果还被打得灰头土脸。更好笑的是几位长老联手都没突破涵虚仙人的阵法，只得请出老祖破阵，也不知是真是假。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "公孙季闻言脸色转阴，但很快就隐藏好自己的情绪。也没有反驳，只是假笑着拱了拱手，表示认同。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "见笑了，公孙家虽在多年前因涵虚丢尽脸面，但如今魔道妖人蠢蠢欲动，还是以宁州正道发展为先，置私情于后。况且，被涵虚找上门的也不止公孙一家，只是在下认为不宜提起罢了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "言归正传，在下最近探访得涵虚仙府便是在云汐城左近，若有诸位有意结队前往探访，在下便在云汐城恭候了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（该死，这公孙季说的堂而皇之，也不知打得什么算盘。看来我单独探访涵虚仙府的想法多半是没戏了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这公孙季说的堂而皇之，虽不知打的什么算盘。倒也方便了我探访涵虚仙府之事。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "拍卖行",
+      "Description": "拍卖行",
+      "Position": "(-2805.196,-1440.9)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "待与会者都坐定后，拍卖师走上台来。其身后的杂役推着一个蒙着红布的小车，你估摸着红布下就是这次拍卖会的主角了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "相信大家都是为了仙府钥匙而来的，但还请诸位稍安勿躁，待在下介绍一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "此次拍卖的物品是一枚灵石玉佩，其材质不过是稍好的灵石而已，主要价值嘛，还是其上所布的精妙阵法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "经天机阁长老鉴定，该拍品上所布的阵法不但能感应识别其他的玉佩，还有自我防御功能，纵使尽元婴期巅峰修士之力也难以凭蛮力破除。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "近年来阵法大能并不多见，所以天机阁大胆推测，该拍品的主人是千年前的元婴散修涵虚仙人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{vpunch=10,0.5}（台下某人）可是那个号称剑阵双绝，同阶无敌的涵虚仙人？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "没错，正是他！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "场内变得嘈杂了起来，只是各位修士都在身边设下了禁制，听不太清他们在讨论些什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "看来你小子与涵虚仙人的缘分不浅，竟能接连获得涵虚仙府玉佩的消息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是不是涵虚仙府的玉佩还不好说，我可不敢在这种地方把玉佩拿出来验证一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "名号挺响亮，但老夫可不记得千年前的剑修有这号人物。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "老头子你连自己的功法都忘了，不记得有这号人物也很正常。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极被气得直吹胡子，然后消失在铁剑中，不再理会你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "诸位还请安静。虽然部分道友已经知道涵虚仙人的威名，但还请容许我给其他道友介绍一下此次拍卖物品的正主。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "涵虚仙人乃千年前突现的绝世剑修，其出身、师承不详，但仅凭一人，一剑，一阵，纵横宁州数百年。据说当时甚至以元婴修为与化神大能大战数十回合，最后即便是因境界差距而后力不济，也不过重伤逃走，并未陨落在大能手下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "所以诸位若是能在其洞府内寻觅到涵虚仙人的秘宝，甚至获得其传承，其中好处自不用在下多说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "你看到其他人再次交头接耳，心中不免也对涵虚仙人的洞府多了几分遐想。但天机阁执事接下来的话语，让整个会场瞬间归于安静。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "除此之外，我天机阁有幸获得了一些涵虚仙府的消息，届时也会一并奉上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 912,
+          "AvatarBindKey": "",
+          "StoryText": "我宣布，此次拍卖正式开始！低价3万灵石，每次加价不得低于1000灵石！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Menu",
+          "Text": "加入拍卖",
+          "TargetBlockID": "this:424(加入拍卖)"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Menu",
+          "Text": "场外等待",
+          "TargetBlockID": "this:428(等待)"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

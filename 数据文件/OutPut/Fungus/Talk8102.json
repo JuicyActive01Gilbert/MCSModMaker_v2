@@ -1,0 +1,259 @@
+{
+  "Name": "Talk8102",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2958.936,-1227.47)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "嗜焰蟒王不甘地低吼了一声，它没有想到刚刚突破到金丹期的自己，竟会被一个筑基期的人类击败。硕大的身躯跌落在地上，百余年的修为毁于一旦。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.AddXinJin"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2800.267,-1225.866)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(败逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "败逃",
+      "Description": "败逃",
+      "Position": "(-2800.981,-1146.789)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你被一团炙热的火蛇紧紧围住，难以挣脱。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "刚刚突破到金丹期的嗜焰蟒王实力太强了，无论是力量，速度还是施展法门的威力都远胜于你。好在你对于火之道感悟颇深，这才能够勉力支撑到现在。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而嗜焰蟒王似乎并不准备马上杀了你，反而像是把你当成了某种有趣的玩具一般戏耍。它不断喷吐出蛇形的灵气火焰攻击你，而你也只能疲于应对。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一次，两次...你的精神高度集中，尝试用各种方法破解火蛇的攻势。慢慢的，你似乎找到了其中窍门，同样开始尝试操控周天密布的火灵气进行反击。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "以你对于火之道的感悟，学会更高难度的火焰操控技巧只是时间问题，而嗜焰蟒王给你带来的巨大压力正好令你跨出了那一步。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "领悟神通：{color=#d0380a}火蛇术{/color}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "另一条巨大的火蛇凭空出现，一口将周围的小蛇吞噬干净，然后将嗜焰蟒王硕大的蛇头紧紧缠住。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 5170,
+          "AvatarBindKey": "",
+          "StoryText": "嘶~",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "低沉的嘶鸣，嗜焰蟒王被你触怒了，它没有想到刚刚突破到金丹期的自己，竟会被一个筑基期的人类困住。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "斩杀蛇王",
+          "TargetBlockID": "this:306(斩杀)"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "趁机逃离",
+          "TargetBlockID": "this:307(逃离)"
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "斩杀",
+      "Description": "斩杀",
+      "Position": "(-2803.254,-1076.333)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "逃离",
+      "Description": "逃离",
+      "Position": "(-2630.527,-1150.196)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈哈，今天就打到这，嗜焰蟒王，多谢你助我突破！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你大笑着离开了这里，背后传来蛇王不甘的低吼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

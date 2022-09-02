@@ -1,0 +1,155 @@
+{
+  "Name": "Talk1206",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(触发判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "触发判定",
+      "Description": "触发判定",
+      "Position": "(-2798.694,-1209.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(初次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "初次对话",
+      "Description": "初次对话",
+      "Position": "(-2801.694,-1135.018)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "宁王殿下，属下已将人带到。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你悄悄抬起头看向高坐堂上的宁王，此人形销骨立，面容枯槁，一身华服松松垮垮地挂在瘦削的躯体上，看起来格外滑稽。正在此时你恰巧对上他的目光，那一瞬间从他眼中露出的寒芒令你心生畏惧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "！！！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "外界传闻宁王不过是筑基初期的修士，没想到气势竟如此恐怖！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}没见过世面，这可是凡世的真龙天子。不过依老夫观察，这宁王身上龙气涣散，且被浊气侵蚀，怕是为了延长寿命练了什么{color=#d0380a}奇怪的功法{/color}，才落得如此模样。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2657.694,-1210.018)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

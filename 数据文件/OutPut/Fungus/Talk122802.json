@@ -1,0 +1,236 @@
+{
+  "Name": "Talk122802",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "茶",
+      "Description": "茶",
+      "Position": "(-2652.667,-1238.278)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 500"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你点了一杯灵茶，掀盖时一股清香携着淡淡的灵气扑面而来。饮罢一杯茶水，你的心境平和了不少。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1835,
+          "AvatarBindKey": "",
+          "StoryText": "仙长，我们这灵茶着实珍贵，您这些灵石连沏茶的水都买不起呢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 285,
+      "Name": "走",
+      "Description": "走",
+      "Position": "(-2798.667,-1175.278)",
+      "Commands": []
+    },
+    {
+      "ItemID": 305,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2946.667,-1238.278)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你点了一杯花茶，掀盖时朵朵花瓣在浅青茶盏中绽开，一股甜香味扑面而来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.79,-1238.896)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 12"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1835,
+          "AvatarBindKey": "",
+          "StoryText": "本次盈手露的拍卖已经结束了，仙长若无事也可坐下吃茶。这灵茶取自仙山之巅，初次饮之有清心静气之效。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Menu",
+          "Text": "坐下饮茶",
+          "TargetBlockID": "this:284(茶)"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:285(走)"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1835,
+          "AvatarBindKey": "",
+          "StoryText": "本次盈手露的拍卖已经结束了，仙长若无事也可坐下吃茶。不过这灵茶对您来讲已经是无用之物，本阁将为您奉上特色的花茶。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "坐下饮茶",
+          "TargetBlockID": "this:305(New Block)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:285(走)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1835,
+          "AvatarBindKey": "",
+          "StoryText": "仙长若无事可坐下吃茶，本阁将为您奉上特色的花茶。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "坐下饮茶",
+          "TargetBlockID": "this:305(New Block)"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:285(走)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

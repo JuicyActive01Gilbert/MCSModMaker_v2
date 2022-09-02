@@ -1,0 +1,482 @@
+{
+  "Name": "Talk11305",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3061.25,-1413.988)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(第二场结束对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 407,
+      "Name": "第三战の对白-3",
+      "Description": "第三战の对白-3",
+      "Position": "(-2729.239,-1404.674)",
+      "Commands": [
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你顺利地又赢下了第二轮的比试，台下传来一片叫好声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "诸位同门，本次宗门大比已决出了前四位弟子，他们也将各自得到门派奖赏的筑基丹一枚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "接下来你们四人将进行最后的两轮比试，只有最终夺魁者才能够直接晋升为内门弟子，希望你们都能发挥出自己的实力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{shixiong}两战连胜，说不定可以争夺魁首之位。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "",
+          "StoryText": "本届大比没什么名人参加，{FirstName}{shixiong}胜算更大。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{shixiong}早就拿过大比魁首了，还来与我们这些外门弟子争夺名额...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "",
+          "StoryText": "哎，没办法，就算对内门弟子来说，筑基丹也是很重要的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}\r{LastName}上台对阵！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "415(第三战の敌人-3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 415,
+      "Name": "第三战の敌人-3",
+      "Description": "第三战の敌人-3",
+      "Position": "(-2550.89,-1407.768)",
+      "Commands": [
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2744.887,-1215.765)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "传出去",
+      "Description": "传出去",
+      "Position": "(-2589.622,-1248.678)",
+      "Commands": [
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 239,
+          "AvatarBindKey": "",
+          "StoryText": "承让。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不敢当。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（比起端木林，身为剑修的温杰强的不止一筹。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，温杰在外门之中也是有名的强手，你能战胜端木林已是不易，不要太过在意一时的胜负。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，看来我还是太过急躁了，现在的我难以再大比中取得成绩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "第二场结束对话",
+      "Description": "第二场结束对话",
+      "Position": "(-3062.932,-1281.5)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(大比次数判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 402,
+      "Name": "大比次数判定",
+      "Description": "大比次数判定",
+      "Position": "(-2877.438,-1406.323)",
+      "Commands": [
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "407(第三战の对白-3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "继续挑战",
+      "Description": "继续挑战",
+      "Position": "(-2513.691,-1531.311)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-2743.98,-1280.795)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(传出去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2714.915,-1532.683)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "承让。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 232,
+          "AvatarBindKey": "",
+          "StoryText": "连温师兄都不敌此人，看来本次大比倒是又多出一个猛人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "（温杰都败了，X师弟此次真的是一鸣惊人了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "XXX对阵墨景山！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 235,
+          "AvatarBindKey": "",
+          "StoryText": "墨师兄，据称闭关研习地阶功法《五毒噬心决》。这一场不知是更强。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请赐教。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 240,
+          "AvatarBindKey": "",
+          "StoryText": "请。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(继续挑战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

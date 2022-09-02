@@ -1,0 +1,122 @@
+{
+  "Name": "Talk76",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3230.187,-1356.497)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "方正古朴的大殿内一尘不染，与宁州古迹内的其它断壁残垣截然不同，只有在这里你还能感受到古原城旧日的辉煌景象。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一块方尖碑伫立在大殿的正中，石碑的表面散发着柔和的光芒。而除了这块石碑外，四周空荡荡的，什么也没有。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "阅读碑文",
+          "TargetBlockID": "this:350(阅读碑文)"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "触碰石碑",
+          "TargetBlockID": "this:351(触碰石碑)"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 350,
+      "Name": "阅读碑文",
+      "Description": "阅读碑文",
+      "Position": "(-3051.534,-1435.101)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "若想开启试炼，只需将灵气注入石碑。切记，凡入登仙阁者，皆只有一次机会接受试炼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Menu",
+          "Text": "触碰石碑",
+          "TargetBlockID": "this:351(触碰石碑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "触碰石碑",
+      "Description": "触碰石碑",
+      "Position": "(-3050.358,-1279.667)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将手掌贴在石碑之上，一道耀眼的强光旋即将你淹没...当光芒消散后，你也凭空消失了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

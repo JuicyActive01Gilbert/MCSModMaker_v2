@@ -1,0 +1,294 @@
+{
+  "Name": "Talk6803",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "高声望",
+      "Description": "高声望",
+      "Position": "(-2936.21,-1132.644)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来是{FirstName}小友，不知来此何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "邀请切磋",
+          "TargetBlockID": "this:308(邀请切磋)"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Menu",
+          "Text": "痛下杀手",
+          "TargetBlockID": "this:288(痛下杀手)"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Menu",
+          "Text": "只是路过",
+          "TargetBlockID": "this:311(路过)"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "路过",
+      "Description": "路过",
+      "Position": "(-3079.4,-1028.045)",
+      "Commands": []
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 288,
+      "Name": "痛下杀手",
+      "Description": "痛下杀手",
+      "Position": "(-2642.499,-1030.473)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 298,
+      "Name": "中声望",
+      "Description": "中声望",
+      "Position": "(-2796.003,-1133.675)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "人类，这里不是你该来的地方，速速离去，莫要扰了本座修行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "邀请切磋",
+          "TargetBlockID": "this:289(手下留情)"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Menu",
+          "Text": "痛下杀手",
+          "TargetBlockID": "this:288(痛下杀手)"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:311(路过)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2797.995,-1197.926)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 50"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(高声望)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue < 50"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > -10"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(中声望)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(低声望)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "邀请切磋",
+      "Description": "邀请切磋",
+      "Position": "(-2935.096,-1029.31)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，早就听说{FirstName}小友修为不俗，能与你全力一战想必也是痛快之事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "手下留情",
+      "Description": "手下留情",
+      "Position": "(-2787.92,-1031.375)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，小小蝼蚁，不自量力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "低声望",
+      "Description": "低声望",
+      "Position": "(-2645.11,-1129.643)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，好大的胆子。既然你自己送上门来，那就受死吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Menu",
+          "Text": "手下留情",
+          "TargetBlockID": "this:289(手下留情)"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "痛下杀手",
+          "TargetBlockID": "this:288(痛下杀手)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

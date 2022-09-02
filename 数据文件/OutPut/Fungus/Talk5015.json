@@ -1,0 +1,401 @@
+{
+  "Name": "Talk5015",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2931.014,-1631.058)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2931.703,-1706.225)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 346,
+      "Name": "金丹",
+      "Description": "金丹",
+      "Position": "(-2855.236,-1417.355)",
+      "Commands": [
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == 1"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "381(保存妖兽-讲话-进战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 381,
+      "Name": "保存妖兽-讲话-进战斗",
+      "Description": "保存妖兽-讲话-进战斗",
+      "Position": "(-2940.479,-1296.535)",
+      "Commands": [
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "只见一{SayStcVal=929}向你扑来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.If",
+          "Condition": "beijing == 2"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "beijing == 3"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2995.236,-1416.178)",
+      "Commands": [
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 4"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == 1"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "381(保存妖兽-讲话-进战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "境界测试",
+      "Description": "境界测试",
+      "Position": "(-2927.838,-1501.71)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-3147.408,-1416.177)",
+      "Commands": [
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 2"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 3"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "381(保存妖兽-讲话-进战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,1079 @@
+{
+  "Name": "Talk4025",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 1462,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1682,
+      "Name": "恒如真人",
+      "Description": "恒如真人",
+      "Position": "(-2753.635,-1149.224)",
+      "Commands": [
+        {
+          "ItemID": 1685,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "嗯？这宁州古迹前前后后都被搜刮不知多少次了吧，还能剩下什么机缘？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1687,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "再者说，若真有什么机缘，我又凭什么告诉{$TmpTalkString}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1686,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1506,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-2119.325,-1139.849)",
+      "Commands": [
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1581,
+      "Name": "百里家",
+      "Description": "百里家",
+      "Position": "(-2276.164,-945.4252)",
+      "Commands": [
+        {
+          "ItemID": 1598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "有关宁州古迹的情报么...{$TmpTalkString}可曾听说过空间乱流？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1599,
+          "CmdType": "Fungus.Menu",
+          "Text": "未曾听说过",
+          "TargetBlockID": "this:1592(百里家情报)"
+        },
+        {
+          "ItemID": 1600,
+          "CmdType": "Fungus.Menu",
+          "Text": "听说过",
+          "TargetBlockID": "this:1594(通用已知道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1475,
+      "Name": "其它",
+      "Description": "其它",
+      "Position": "(-2420.038,-874.1014)",
+      "Commands": [
+        {
+          "ItemID": 1636,
+          "CmdType": "Fungus.If",
+          "Condition": "XingGe > 10"
+        },
+        {
+          "ItemID": 1637,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1631(魔剑)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1638,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1647,
+          "CmdType": "Fungus.If",
+          "Condition": "XingGe > 3"
+        },
+        {
+          "ItemID": 1639,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1646(煞气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1657,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "XingGe == 3"
+        },
+        {
+          "ItemID": 1658,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1631(魔剑)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1681,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1661,
+          "CmdType": "Fungus.If",
+          "Condition": "XingGe == 8"
+        },
+        {
+          "ItemID": 1663,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1660(暴躁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1662,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1649,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1630(登仙殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1482,
+      "Name": "判定门派",
+      "Description": "判定门派",
+      "Position": "(-2113.258,-1075.969)",
+      "Commands": [
+        {
+          "ItemID": 1567,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1505,
+          "CmdType": "Fungus.If",
+          "Condition": "NPCType == 1"
+        },
+        {
+          "ItemID": 1514,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1506(竹山宗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1515,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 2"
+        },
+        {
+          "ItemID": 1516,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1510(金虹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1517,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 3"
+        },
+        {
+          "ItemID": 1518,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1512(星河)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1519,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 4"
+        },
+        {
+          "ItemID": 1520,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1508(离火门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1521,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1522,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1513(化尘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1508,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-1739.807,-1142.086)",
+      "Commands": [
+        {
+          "ItemID": 1617,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1465,
+      "Name": "重要NPC判定",
+      "Description": "重要NPC判定",
+      "Position": "(-2589.777,-1146.069)",
+      "Commands": [
+        {
+          "ItemID": 1626,
+          "CmdType": "CmdGetNPCName"
+        },
+        {
+          "ItemID": 1627,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpStrValue == 公孙季"
+        },
+        {
+          "ItemID": 1629,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1474(公孙家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1683,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 恒如真人"
+        },
+        {
+          "ItemID": 1684,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1682(恒如真人)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1628,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1564,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1467(NPC流派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1590,
+      "Name": "星宫和林家情报",
+      "Description": "星宫和林家情报",
+      "Position": "(-2107.63,-1030.106)",
+      "Commands": [
+        {
+          "ItemID": 1604,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这《意守法》乃突破化神之秘术，如今掌握在宁州各大势力手中，唯有用大量灵核方可兑换。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不过要说这《意守法》的出处，其实也是前人在宁州古迹中寻得的。据说这秘术就记载于古原城一处石碑之上，不过唯有{color=#d0380a}心境与神识{/color}修为极高者，方可领悟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1679,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1467,
+      "Name": "NPC流派判定",
+      "Description": "NPC流派判定",
+      "Position": "(-2424.068,-1071.041)",
+      "Commands": [
+        {
+          "ItemID": 1469,
+          "CmdType": "Fungus.If",
+          "Condition": "NPCType <= 5"
+        },
+        {
+          "ItemID": 1470,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1471(门派NPC)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 7"
+        },
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1473(星宫和林家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 8"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1581(百里家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 9"
+        },
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1474(公孙家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1584,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 23"
+        },
+        {
+          "ItemID": 1585,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1473(星宫和林家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1480,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1481,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1650,
+      "Name": "煞气情报",
+      "Description": "煞气情报",
+      "Position": "(-2107.705,-797.1283)",
+      "Commands": [
+        {
+          "ItemID": 1654,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "杀戮之地往往煞气凝结，这宁州古迹本就是古代战场，煞气累积万年更是只增不减。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1655,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "即便修为再深，若长期被困在古迹之中，也会被这煞气侵蚀失去神智，变成不人不鬼的{color=#d0380a}活死人{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1656,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "但若{color=#d0380a}心境{/color}不坚，即便只是短时间接触煞气，也会被它影响至头晕目眩而无法施展神通。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1674,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1648,
+      "Name": "跳转回交互talk",
+      "Description": "跳转回交互talk",
+      "Position": "(-1860.777,-931.88)",
+      "Commands": [
+        {
+          "ItemID": 1671,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1672,
+          "CmdType": "CmdWarpToNPCJiaoHuTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 1510,
+      "Name": "金虹",
+      "Description": "金虹",
+      "Position": "(-1992.5,-1139.905)",
+      "Commands": [
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1631,
+      "Name": "魔剑",
+      "Description": "魔剑",
+      "Position": "(-2276.296,-853.3962)",
+      "Commands": [
+        {
+          "ItemID": 1640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "有关宁州古迹的情报么...{$TmpTalkString}可曾听说过万年前遗失的四柄魔剑？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1641,
+          "CmdType": "Fungus.Menu",
+          "Text": "未曾听说过",
+          "TargetBlockID": "this:1635(魔剑情报)"
+        },
+        {
+          "ItemID": 1642,
+          "CmdType": "Fungus.Menu",
+          "Text": "听说过",
+          "TargetBlockID": "this:1594(通用已知道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1592,
+      "Name": "百里家情报",
+      "Description": "百里家情报",
+      "Position": "(-2105.062,-945.96)",
+      "Commands": [
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我曾听族中前辈提过，想要进入宁州古迹，必须先穿过一片空间乱流。若肉体力量未修炼至大成，便无法在这乱流中控制方向，只能随波逐流，随意寻一处缝隙进入古迹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不过这空间乱流虽然危险，但却有不少像{color=#d0380a}陨母{/color}这样的稀有材料无须漂浮于其中。那时若有{color=#d0380a}体道大成{/color}修为，自然便可顺路收集更多的材料。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1677,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1473,
+      "Name": "星宫和林家",
+      "Description": "星宫和林家",
+      "Position": "(-2275.299,-1030.821)",
+      "Commands": [
+        {
+          "ItemID": 1588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "有关宁州古迹的情报么...{$TmpTalkString}可曾听说过《意守法》？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1587,
+          "CmdType": "Fungus.Menu",
+          "Text": "未曾听说过",
+          "TargetBlockID": "this:1590(星宫和林家情报)"
+        },
+        {
+          "ItemID": 1589,
+          "CmdType": "Fungus.Menu",
+          "Text": "听说过",
+          "TargetBlockID": "this:1594(通用已知道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1593,
+      "Name": "登仙殿情报",
+      "Description": "登仙殿情报",
+      "Position": "(-2107.501,-903.2769)",
+      "Commands": [
+        {
+          "ItemID": 1611,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "传说万年前这古原城能够被称为宁州第一大城，便是因为在城中的登仙殿里藏着一本极为神秘的天阶功法，吸引来自各地的修士前来观摩。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1612,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "可惜随着正魔之战后古原城的陷落，如今这功法便只有在每千年一次古迹开启之时，才有可能见到了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1676,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1513,
+      "Name": "化尘",
+      "Description": "化尘",
+      "Position": "(-1612.434,-1141.932)",
+      "Commands": [
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1594,
+      "Name": "通用已知道",
+      "Description": "通用已知道",
+      "Position": "(-2427.015,-978.887)",
+      "Commands": [
+        {
+          "ItemID": 1613,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "唔...原来{$TmpTalkString}早就听说过了么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1512,
+      "Name": "星河",
+      "Description": "星河",
+      "Position": "(-1864.326,-1142.24)",
+      "Commands": [
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1635,
+      "Name": "魔剑情报",
+      "Description": "魔剑情报",
+      "Position": "(-2107.147,-855.5239)",
+      "Commands": [
+        {
+          "ItemID": 1643,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "传说魔门有四柄魔剑，分别唤作诛仙，戮仙，陷仙与绝仙，合于一处便可布下强大的诛仙剑阵，即便是化神强者亦可诛杀。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1644,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "当年金虹剑仙一剑破碎虚空，劈出了如今的宁州古迹，也劈开了这诛仙剑阵，四柄魔剑也因此下落不明。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1645,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "依我看，这四柄魔剑有很大的可能仍然留在宁州古迹之中，不过即便是能够找到，能否收为己用又是另一回事了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1675,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1471,
+      "Name": "门派NPC",
+      "Description": "门派NPC",
+      "Position": "(-2274.437,-1075.433)",
+      "Commands": [
+        {
+          "ItemID": 1487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1482(判定门派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1660,
+      "Name": "暴躁",
+      "Description": "暴躁",
+      "Position": "(-2282.824,-727.2679)",
+      "Commands": [
+        {
+          "ItemID": 1664,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哼，古迹里真正的宝贝几千年前就被瓜分一空了，如今再去也不过是碰碰运气罢了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1666,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "就拿那个《玄清天衍录》说吧，万年来从未听说过有人从古迹里成功领悟过这本功法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1665,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "总之，能找到些稀有草药矿石就不错了。像那些不靠谱的传言，不听也罢！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1673,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1646,
+      "Name": "煞气",
+      "Description": "煞气",
+      "Position": "(-2275.79,-797.1283)",
+      "Commands": [
+        {
+          "ItemID": 1667,
+          "CmdType": "Fungus.If",
+          "Condition": "XingGe == 18"
+        },
+        {
+          "ItemID": 1668,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1660(暴躁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1669,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1651,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "有关宁州古迹的情报么...{$TmpTalkString}可曾听说过煞气？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1652,
+          "CmdType": "Fungus.Menu",
+          "Text": "未曾听说过",
+          "TargetBlockID": "this:1650(煞气情报)"
+        },
+        {
+          "ItemID": 1653,
+          "CmdType": "Fungus.Menu",
+          "Text": "听说过",
+          "TargetBlockID": "this:1594(通用已知道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1630,
+      "Name": "登仙殿",
+      "Description": "登仙殿",
+      "Position": "(-2277.505,-899.479)",
+      "Commands": [
+        {
+          "ItemID": 1632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "有关宁州古迹的情报么...{$TmpTalkString}可曾听说过登仙殿？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1633,
+          "CmdType": "Fungus.Menu",
+          "Text": "未曾听说过",
+          "TargetBlockID": "this:1593(登仙殿情报)"
+        },
+        {
+          "ItemID": 1634,
+          "CmdType": "Fungus.Menu",
+          "Text": "听说过",
+          "TargetBlockID": "this:1594(通用已知道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1622,
+      "Name": "不知道",
+      "Description": "不知道",
+      "Position": "(-2272.974,-1143.019)",
+      "Commands": [
+        {
+          "ItemID": 1688,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1625,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1680,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1474,
+      "Name": "公孙家",
+      "Description": "公孙家",
+      "Position": "(-2278.39,-987.543)",
+      "Commands": [
+        {
+          "ItemID": 1595,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "有关宁州古迹的情报么...{$TmpTalkString}可曾听说过失传已久的阵道功法《奇门遁甲录》？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1596,
+          "CmdType": "Fungus.Menu",
+          "Text": "未曾听说过",
+          "TargetBlockID": "this:1591(公孙家情报)"
+        },
+        {
+          "ItemID": 1597,
+          "CmdType": "Fungus.Menu",
+          "Text": "听说过",
+          "TargetBlockID": "this:1594(通用已知道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1591,
+      "Name": "公孙家情报",
+      "Description": "公孙家情报",
+      "Position": "(-2107.63,-988.6859)",
+      "Commands": [
+        {
+          "ItemID": 1606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "族中古籍记载的许多阵道功法如今都已经失传了，当下宁州阵道一途式微，除我公孙一族外再无专心研究阵道的门派，大概也是因此缘由。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1608,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这《奇门遁甲录》又名《阵道》，实乃阵法一道的集大成之作。若能寻得这功法，对于阵道一途必定大有裨益。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1607,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "万年之前宁州不乏阵道大师，若说哪里最有希望得到这些失传的阵道绝学，恐怕也只有在这宁州古迹之中了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1620,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1678,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2425.225,-1143.637)",
+      "Commands": [
+        {
+          "ItemID": 1586,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1463,
+          "CmdType": "Fungus.If",
+          "Condition": "IsZhongYaoNPC == True"
+        },
+        {
+          "ItemID": 1464,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1465(重要NPC判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1466,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1621,
+          "CmdType": "Fungus.If",
+          "Condition": "Level > 6"
+        },
+        {
+          "ItemID": 1468,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1467(NPC流派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1623,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1624,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1622(不知道)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,1358 @@
+{
+  "Name": "Talk1235",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.602,-1478.688)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1132,
+      "Name": "胜利奖励",
+      "Description": "胜利奖励",
+      "Position": "(-2435.374,-1417.537)",
+      "Commands": [
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 1136,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倒是林家姐妹来到你近旁坐下。料是星宫宫主已经了解完事情经过，整个事件也是尘埃落定罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你眼看林家姐妹并未急着提到结果，便只是饮酒赏花，闲聊几句无关的话题而已。偶尔远离清修，又有佳人在侧，倒也称得上是惬意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1140,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1141,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闲聊许久后，林沐心终于是按捺不住，主动提到你帮林家解除这次危机的回报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1142,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{$NickName}出面，若不是你，此次危机恐是要让林家费尽心力，甚至让父亲修为再次受损才能解决。所以通羽长老让我吧这个储物袋交给你，算是林家的一点心意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1143,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 1145,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1147,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1148,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1149,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1150,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不过是举手之劳而已，{$Lin}不必客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1152,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哼，瞧你装的，越阶挑战元婴修士都成举手之劳了。要不是打不过你，我一定要消消你的气焰。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哎哟，冲虚散人好像在我体内下了暗劲，{$Lin}快帮我看看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1154,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闻言，你装作一副身受重伤的样子连连痛哼，就差没真口吐鲜血了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哪呢哪呢，我去帮你拿疗伤的...好啊你，连我都敢骗，看我不把你打成重伤，这两年就留在林府疗伤吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着林沐心一副气鼓鼓要动手的样子，你不禁大笑出声，但也结结实实地挨了好几下她粉嫩的拳头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着打作一团的你二人，林沐雪也是在一旁掩嘴轻笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1158,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倒是林沐心来到你近旁坐下。料是星宫宫主已经了解完事情经过，整个事件也是尘埃落定罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你眼看林沐心并未急着提到结果，便只是饮酒赏花，闲聊几句无关的话题而已。偶尔远离清修，又有佳人在侧，倒也称得上是惬意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 1162,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1163,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闲聊许久后，林沐心终于是按捺不住，主动提到你帮林家解除这次危机的回报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{$NickName}出面，若不是你，此次危机恐是要让林家费尽心力，甚至让父亲修为再次受损才能解决。所以通羽长老让我吧这个储物袋交给你，算是林家的一点心意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1170,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不过是举手之劳而已，{$Lin}不必客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哼，瞧你装的，越阶挑战元婴修士都成举手之劳了。要不是打不过你，我一定要消消你的气焰。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哎哟，冲虚散人好像在我体内下了暗劲，{$Lin}快帮我看看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闻言，你装作一副身受重伤的样子连连痛哼，就差没真口吐鲜血了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哪呢哪呢，我去帮你拿疗伤的...好啊你，连我都敢骗，看我不把你打成重伤，这两年就留在林府疗伤吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着林沐心一副气鼓鼓要动手的样子，你不禁大笑出声，但也结结实实地挨了好几下她粉嫩的拳头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "CmdAddFavor"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "倪少对话",
+      "Description": "倪少对话",
+      "Position": "(-2797.694,-1173.891)",
+      "Commands": [
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "进入林家后，在倪旭欣的带领下，你们很快就来到林家大殿前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不似你印象中凡俗婚礼的热闹，林家内只有十数个修士三两成群的交谈着，数十个侍从忙碌着，再就是大殿中几个你看不出修为深浅的前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "倪少",
+          "StoryText": "{FirstName}{xiongdi}，你看那大殿中左首便是林家大长老通羽上人了。右首那位我没见过，估摸着应该是星宫的某位长老吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "倪少",
+          "StoryText": "你向倪旭欣所指方位望去，注意力却停留在了空着的主位上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "倪少",
+          "StoryText": "哦，主位应该是给林家家主留的吧，只是不知前辈忙什么去了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "倪少",
+          "StoryText": "那位稍显儒雅之气的老者便是公孙府大长老公孙璞，旁边与他格格不入的壮汉则是百里家家主百里邑，至于我父亲，{FirstName}{xiongdi}你也见过了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "倪少",
+          "StoryText": "还剩下两位没介绍的就是林家的二长老苗矮上人和栖云真人了，据说这次的联姻便是他们两人促成的了，也不知其中有什么...咳咳，我们还是先去拜见诸位前辈吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "拜见过长老后，倪旭欣便是被其父倪振东留在了大殿里，只留你一人在林府闲逛。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 302,
+      "Name": "抢婚线判定",
+      "Description": "抢婚线判定",
+      "Position": "(-2926.438,-1362.018)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "进入三长老房间",
+          "TargetBlockID": "this:316(进入栖云房间)"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Menu",
+          "Text": "进入三长老房间",
+          "TargetBlockID": "this:316(进入栖云房间)"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Menu",
+          "Text": "进入二长老房间",
+          "TargetBlockID": "this:308(进入苗矮房间)"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(完美线判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 333,
+      "Name": "完美线判定",
+      "Description": "完美线判定",
+      "Position": "(-2926.502,-1299.484)",
+      "Commands": [
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Menu",
+          "Text": "进入三长老房间",
+          "TargetBlockID": "this:316(进入栖云房间)"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "进入三长老房间",
+          "TargetBlockID": "this:316(进入栖云房间)"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Menu",
+          "Text": "进入二长老房间",
+          "TargetBlockID": "this:308(进入苗矮房间)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(开端判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1133,
+      "Name": "失败奖励",
+      "Description": "失败奖励",
+      "Position": "(-2433.021,-1363.42)",
+      "Commands": [
+        {
+          "ItemID": 1183,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倒是林家姐妹来到你近旁坐下。料是星宫宫主已经了解完事情经过，整个事件也是尘埃落定罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你眼看林家姐妹并未急着提到结果，便只是饮酒赏花，闲聊几句无关的话题而已。偶尔远离清修，又有佳人在侧，倒也称得上是惬意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1187,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 1188,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1189,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闲聊许久后，林沐心终于是按捺不住，主动提到你帮林家解除这次危机的回报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{$NickName}出面，若不是你，此次危机恐是要让林家费尽心力，甚至让父亲修为再次受损才能解决。所以通羽长老让我吧这个储物袋交给你，算是林家的一点心意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1192,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1193,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 1194,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1195,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1196,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1197,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1198,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1199,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1200,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不过是举手之劳而已，{$Lin}不必客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哼，瞧你装的，越阶挑战元婴修士都成举手之劳了。要不是打不过你，我一定要消消你的气焰。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哎哟，冲虚散人好像在我体内下了暗劲，{$Lin}快帮我看看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1203,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闻言，你装作一副身受重伤的样子连连痛哼，就差没真口吐鲜血了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1204,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哪呢哪呢，我去帮你拿疗伤的...好啊你，连我都敢骗，看我不把你打成重伤，这两年就留在林府疗伤吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着林沐心一副气鼓鼓要动手的样子，你不禁大笑出声，但也结结实实地挨了好几下她粉嫩的拳头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1206,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着打作一团的你二人，林沐雪也是在一旁掩嘴轻笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1207,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1208,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倒是林沐心来到你近旁坐下。料是星宫宫主已经了解完事情经过，整个事件也是尘埃落定罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你眼看林沐心并未急着提到结果，便只是饮酒赏花，闲聊几句无关的话题而已。偶尔远离清修，又有佳人在侧，倒也称得上是惬意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1210,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 1211,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1212,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闲聊许久后，林沐心终于是按捺不住，主动提到你帮林家解除这次危机的回报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{$NickName}出面，若不是你，此次危机恐是要让林家费尽心力，甚至让父亲修为再次受损才能解决。所以通羽长老让我吧这个储物袋交给你，算是林家的一点心意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1215,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1216,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 1217,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1218,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1219,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1220,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不过是举手之劳而已，{$Lin}不必客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哼，瞧你装的，越阶挑战元婴修士都成举手之劳了。要不是打不过你，我一定要消消你的气焰。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哎哟，冲虚散人好像在我体内下了暗劲，{$Lin}快帮我看看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闻言，你装作一副身受重伤的样子连连痛哼，就差没真口吐鲜血了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "哪呢哪呢，我去帮你拿疗伤的...好啊你，连我都敢骗，看我不把你打成重伤，这两年就留在林府疗伤吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看着林沐心一副气鼓鼓要动手的样子，你不禁大笑出声，但也结结实实地挨了好几下她粉嫩的拳头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1226,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1228,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1229,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "CmdAddFavor"
+        }
+      ]
+    },
+    {
+      "ItemID": 500,
+      "Name": "存档点",
+      "Description": "存档点",
+      "Position": "(-2601.257,-1302.243)",
+      "Commands": [
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 316,
+      "Name": "进入栖云房间",
+      "Description": "进入栖云房间",
+      "Position": "(-3078.694,-1361.018)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 403,
+      "Name": "冲虚作妖剧情",
+      "Description": "冲虚作妖剧情",
+      "Position": "(-2605.119,-1360.273)",
+      "Commands": [
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "回到林府后，星宫宫主便是向通羽上人及林沐心等人了解情况。而你却觉得该帮的忙都已是帮完，再无兴致旁听，反倒是要一壶仙酿，在林家诸位修士的恭敬中往那辰溪薇亭去了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "老头子，若是你处于瓶颈之下久不得突破，又寿元将尽，会像冲虚一般不择手段么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...老夫不知道当年的自己会怎么做，但现在的话，当是不会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "为何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "天地间修仙者无数，能得偿所愿者又有几人？得之吾幸，失之亦吾命。且如今辞世千年，亲友不在，道侣弟子尽亡，老夫更是忘却孤身苦修是为何，又...嗯？有个神识异常强大的修士正在往这边来，择日再说吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（孤身苦修是为何么？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（呵呵，看来老头子是真老了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（呵呵，看来老头子是真老了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不多时，你远远地看到星铃儿的身影在近旁一晃而过，却未驻足。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1232,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1233,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 1234,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1132(胜利奖励)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1235,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1236,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1133(失败奖励)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "进入苗矮房间",
+      "Description": "进入苗矮房间",
+      "Position": "(-3077.694,-1299.018)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2798.87,-1359.842)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 36"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(抢婚线判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year < 37"
+        },
+        {
+          "ItemID": 1238,
+          "CmdType": "Fungus.If",
+          "Condition": "month == 1"
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(抢婚线判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1239,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1237,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year < 151"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 114"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "403(冲虚作妖剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "500(存档点)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1242,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1243,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "500(存档点)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2601.694,-1245.018)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "开端判定",
+      "Description": "开端判定",
+      "Position": "(-2796.694,-1245.018)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(倪少对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

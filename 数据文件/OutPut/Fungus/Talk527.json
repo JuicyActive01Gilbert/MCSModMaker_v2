@@ -1,0 +1,934 @@
+{
+  "Name": "Talk527",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1346.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(门派赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 465,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-3415.97,-1038.201)",
+      "Commands": [
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "对方脸色一冷。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "神兵阁重地，{shidi}还是不要多做逗留。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 492,
+      "Name": "要",
+      "Description": "要",
+      "Position": "(-3877.97,-1037.201)",
+      "Commands": [
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 500"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈，{shidi}我看好你啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我没有500灵石...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "对方脸色一冷。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "什么嘛，浪费我这么多时间",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 414,
+      "Name": "领取阵旗对话",
+      "Description": "领取阵旗对话",
+      "Position": "(-2949.286,-948.7797)",
+      "Commands": [
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "恭喜{FirstName}长老结成金丹，门派里都已经传遍了，以后可要请长老多多关照了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "替我将阵旗取来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "明白，明白。我事先都已经准备好了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说着，他便从储物袋中取出五面被白雾笼罩着的旗帜递给了你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哎...也不知道我什么时候才有在宗门自己开辟洞府的权利...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 447,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-3003.97,-817.2008)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 408,
+      "Name": "领取阵旗判断",
+      "Description": "领取阵旗判断",
+      "Position": "(-2796.652,-1005.043)",
+      "Commands": [
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "414(领取阵旗对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "415(其它对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2937.353,-1077.072)",
+      "Commands": [
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{shixiong}，有何吩咐？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想要开启一间炼器室",
+          "TargetBlockID": "this:439(开始炼器)"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:447(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 453,
+      "Name": "初次炼器引导",
+      "Description": "初次炼器引导",
+      "Position": "(-3273.97,-1077.201)",
+      "Commands": [
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{shidi}初入门派，不知可了解过炼器之道？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Menu",
+          "Text": "愿闻其详",
+          "TargetBlockID": "this:464(愿闻其详)"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:465(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 391,
+      "Name": "化神",
+      "Description": "化神",
+      "Position": "(-2523.879,-1074.44)",
+      "Commands": [
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "见过前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想要开启一间炼器室",
+          "TargetBlockID": "this:439(开始炼器)"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:447(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 475,
+      "Name": "五维？",
+      "Description": "五维？",
+      "Position": "(-3729.97,-1118.201)",
+      "Commands": [
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "世间材料皆有五种属性：灵力亲和、灵力操控、灵性、坚固、坚韧；在炼制法宝时，若有一项为零则不能成器，同样五维各项越高越好，越能把灵力发挥到极致。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "473(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 476,
+      "Name": "五行？",
+      "Description": "五行？",
+      "Position": "(-3732.97,-1053.201)",
+      "Commands": [
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "世间材料皆分五行，材料之中若是五行相克就需要五行相合的炼器手法才能成器。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "473(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.312,-1152.457)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 3"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "388(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 6"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "390(元婴)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 485,
+      "Name": "还有吗？",
+      "Description": "还有吗？",
+      "Position": "(-3732.97,-992.2008)",
+      "Commands": [
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "同一组材料在炼制不同武器的时候也呈现不同特性，{shidi}你自己还要多多实验。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "而且，炼器之道也颇为危险，领悟的不够精深就难以驾驭炼制高阶法宝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我这里有一本《炼器入门》，领悟之后炼器之道便可初窥门径，{shidi}你就可以着手炼器了。都是同门500灵石就给你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Menu",
+          "Text": "要",
+          "TargetBlockID": "this:492(要)"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Menu",
+          "Text": "不要",
+          "TargetBlockID": "this:493(不要)"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "门派赋值",
+      "Description": "门派赋值",
+      "Position": "(-2799.352,-1228.125)",
+      "Commands": [
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "阴？阳？",
+      "Description": "阴？阳？",
+      "Position": "(-3727.97,-1184.201)",
+      "Commands": [
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "世间材料皆分天阳、地阴。同种五行属性不同种阴阳表现的效果也会不同，所以要是追求极致便要追求极阴、极阳。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "473(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 390,
+      "Name": "元婴",
+      "Description": "元婴",
+      "Position": "(-2652.719,-1075.493)",
+      "Commands": [
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "见过前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想要开启一间炼器室",
+          "TargetBlockID": "this:439(开始炼器)"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:447(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 439,
+      "Name": "开始炼器",
+      "Description": "开始炼器",
+      "Position": "(-2783.97,-802.2008)",
+      "Commands": [
+        {
+          "ItemID": 440,
+          "CmdType": "OpenLianQi"
+        }
+      ]
+    },
+    {
+      "ItemID": 415,
+      "Name": "其它对话",
+      "Description": "其它对话",
+      "Position": "(-2796.65,-947.464)",
+      "Commands": [
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}长老还有什么别的吩咐么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想要开启一间炼器室",
+          "TargetBlockID": "this:439(开始炼器)"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:447(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 464,
+      "Name": "愿闻其详",
+      "Description": "愿闻其详",
+      "Position": "(-3414.97,-1118.201)",
+      "Commands": [
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "对方脸色一暖。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈，那就由我来给{shidi}聊聊炼器之道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "炼器首先要有炼器室，本门的炼器室你来找我开启就好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "炼器是一门将不同五维特性、不同阴阳属性、不同五行属性的材料融合在一起成器的法门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "473(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 473,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-3565.97,-1119.201)",
+      "Commands": [
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Menu",
+          "Text": "阴？阳？",
+          "TargetBlockID": "this:474(阴？阳？)"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Menu",
+          "Text": "五维？",
+          "TargetBlockID": "this:475(五维？)"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Menu",
+          "Text": "五行？",
+          "TargetBlockID": "this:476(五行？)"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Menu",
+          "Text": "还有吗？",
+          "TargetBlockID": "this:485(还有吗？)"
+        }
+      ]
+    },
+    {
+      "ItemID": 493,
+      "Name": "不要",
+      "Description": "不要",
+      "Position": "(-3869.97,-952.2008)",
+      "Commands": [
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "对方脸色一冷。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "神兵阁重地，{shidi}还是不要多做逗留。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-3068.879,-1076.756)",
+      "Commands": [
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "453(初次炼器引导)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{shidi}何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想要开启一间炼器室",
+          "TargetBlockID": "this:439(开始炼器)"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:447(无事发生)"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 389,
+      "Name": "金丹",
+      "Description": "金丹",
+      "Position": "(-2795.984,-1076.344)",
+      "Commands": [
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "408(领取阵旗判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

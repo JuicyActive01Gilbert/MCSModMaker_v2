@@ -1,0 +1,447 @@
+{
+  "Name": "Talk4401",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(轮次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "对手判定-特殊关系",
+      "Description": "对手判定-特殊关系",
+      "Position": "(-2810.473,-1095.871)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(对手判定-好感)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "轮次判定",
+      "Description": "轮次判定",
+      "Position": "(-2798.708,-1232.58)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "lunci == 1"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "lunci == 2"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "lunci == 3"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "lunci == 4"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "lunci == 5"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(获取对手ID)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 312,
+      "Name": "对手判定-好感",
+      "Description": "对手判定-好感",
+      "Position": "(-2799.392,-1016.197)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "CmdGetNPCFaceJson"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < 20"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(低好感)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 20"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "310(中好感)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(高好感)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "获取对手ID",
+      "Description": "获取对手ID",
+      "Position": "(-2798.131,-1171.784)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "CmdGetNPCFaceJson"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(对手判定-特殊关系)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "中好感",
+      "Description": "中好感",
+      "Position": "(-2797.392,-947.1967)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(开始比试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "低好感",
+      "Description": "低好感",
+      "Position": "(-2941.392,-946.1967)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(开始比试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "开始比试",
+      "Description": "开始比试",
+      "Position": "(-2799.71,-870.652)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 913,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天机大比{$dixlun}，由{FirstName}{LastName}对阵{$TmpStrValue}！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.If",
+          "Condition": "Avatar == 609"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{xiongdi}，可还记得当年的约定？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这是自然…没想到真能在擂台上一战。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈哈，先说好了，我可不会留手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "来吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，我们又见面了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "高好感",
+      "Description": "高好感",
+      "Position": "(-2650.392,-950.4161)",
+      "Commands": [
+        {
+          "ItemID": 333,
+          "CmdType": "CmdCheckGuanXi2"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "CmdCheckGuanXi2"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "师徒关系 == True"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "道侣关系 == True"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(开始比试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,191 @@
+{
+  "Name": "Talk9012",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(获取变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "获取变量",
+      "Description": "获取变量",
+      "Position": "(-2795.267,-1224.593)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.GetFuBenShuXin"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(发生事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2720.752,-1055.878)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此地看上去乃是有主之地，我还是不要乱动为好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "发生事件",
+      "Description": "发生事件",
+      "Position": "(-2798.752,-1136.878)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "虽是许久无人维护，但是你仍可以看出此地是洞府主人的藏书之地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你决定......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "搜索一番",
+          "TargetBlockID": "this:312(翻找)"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Menu",
+          "Text": "不要乱动",
+          "TargetBlockID": "this:311(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "翻找",
+      "Description": "翻找",
+      "Position": "(-2866.752,-1064.878)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此地看上去废弃已久，看看还有什么有价值的东西。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你发现一处被阵法隐匿的暗格，打开后是一份秘籍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.AddItemByVar"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

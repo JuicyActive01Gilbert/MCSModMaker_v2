@@ -1,0 +1,236 @@
+{
+  "Name": "Talk4213",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2946.435,-1224.061)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "肉壁被你轰出一个大洞，海水瞬间涌了进来。你抓住机会，从洞口逃了出去...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "CmdSetHideIsland"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "CmdCloseSeaJiZhi"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2797.994,-1228.139)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2799.846,-1152.471)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着吸力的减弱，你终于从浪方黏糊糊的肉壁上挣脱开，跳到了下方开阔的空地上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "小心，不要轻易刺激到这里的胃壁，那样会加快这些酸液的腐蚀性。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来浪方大圣果然不在全盛状态，连这吞噬神通的威能也下降了不少。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "短时间内应该没什么危险了，这浪方体内的灵气极其充裕，只要能把带有腐蚀性的部分净化掉，我甚至能在这里闭关修炼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，这里确实是个不错的修行之处。鲲族直接施展神通吞噬天地灵气，效果可比一般的聚灵阵法好太多了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "仔细看看，这里还有不少没有被消化干净的妖兽残骸，仔细搜索一番应该会有所收获。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你四处搜索了一番，果然找到了不少未被腐蚀高阶材料，和几颗不知来路的红色晶石。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "能抵挡住浪方大圣腐蚀的肯定都不是凡物，这些红色晶石说不定也大有名堂...先一并收下再说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

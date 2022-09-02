@@ -1,0 +1,311 @@
+{
+  "Name": "Talk123502",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(自言自语)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 301,
+      "Name": "没什么事了",
+      "Description": "没什么事了",
+      "Position": "(-2526.694,-999.0183)",
+      "Commands": []
+    },
+    {
+      "ItemID": 299,
+      "Name": "关于联姻",
+      "Description": "关于联姻",
+      "Position": "(-2818.694,-1001.018)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1633,
+          "AvatarBindKey": "",
+          "StoryText": "我们林府和星宫的联姻本就是千年以来的传统，事关重大，由不得沐心这个毛还没有长齐的丫头自己做主。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1633,
+          "AvatarBindKey": "",
+          "StoryText": "这百年来我们两家之间的联姻大多是老夫一手操办的，还从来没有出过如此纰漏。真是无法无天，无法无天！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "好感度判断",
+      "Description": "好感度判断",
+      "Position": "(-2798.694,-1176.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.GetHaoGanDu"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 20"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "低",
+      "Description": "低",
+      "Position": "(-2932.694,-1144.018)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1633,
+          "AvatarBindKey": "",
+          "StoryText": "客人要有做客的样子，整天在府里瞎晃悠像什么话？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2671.694,-1069.018)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于联姻",
+          "TargetBlockID": "this:299(关于联姻)"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于栖云长老",
+          "TargetBlockID": "this:300(关于栖云长老)"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:301(没什么事了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "高",
+      "Description": "高",
+      "Position": "(-2670.694,-1138.018)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1633,
+          "AvatarBindKey": "",
+          "StoryText": "是你？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1633,
+          "AvatarBindKey": "",
+          "StoryText": "来找我何事?",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "自言自语",
+      "Description": "自言自语",
+      "Position": "(-2796.693,-1244.049)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "",
+          "StoryText": "哼，我可是金丹后期修士，离进阶元婴也只差一筹，林家那筑基丫头居然还不乐意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "",
+          "StoryText": "只要我早日突破元婴，嘿嘿嘿",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "",
+          "StoryText": "哪来的小辈，去，去，别在这碍眼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "关于栖云长老",
+      "Description": "关于栖云长老",
+      "Position": "(-2671.694,-1001.018)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1633,
+          "AvatarBindKey": "",
+          "StoryText": "栖云本就负责我们林府与星宫之间的商业往来，这次沐心闯了祸，让星宫的冲虚长老丢了脸面。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1633,
+          "AvatarBindKey": "",
+          "StoryText": "难为栖云为了此事还要亲自去星宫登门道歉，老夫也是问心有愧啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

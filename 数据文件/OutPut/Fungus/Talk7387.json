@@ -1,0 +1,899 @@
+{
+  "Name": "Talk7387",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1439.016)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(道侣判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1195,
+      "Name": "一同前往",
+      "Description": "一同前往",
+      "Position": "(-2622.49,-1229.366)",
+      "Commands": [
+        {
+          "ItemID": 1234,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1235,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 9"
+        },
+        {
+          "ItemID": 1233,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好，我已神识传音宫主告知{FirstName}{$NickName}将一同前往，有你助力肯定会轻松上不少。 ",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1236,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1232,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好，有你助力肯定会轻松上不少。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1237,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1238,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1239,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1199,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2790.726,-1299.954)",
+      "Commands": [
+        {
+          "ItemID": 1202,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1203,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1209,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1200(客房)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1208,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1210,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1201(长老堂)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 1211,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1207,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-3167.158,-1219.565)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2791.903,-1229.366)",
+      "Commands": [
+        {
+          "ItemID": 1122,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1121,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哟，忙着呢？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1123,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1136,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "上次留下的神识创伤还没好利落吧，怎么就开始忙碌了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "没办法，谁让我是林家最勤劳的小蜜蜂呢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1140,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哟，原来{$Lin}是只老妖怪级别的蜜蜂啊，可让我长见识了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1141,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你才是老妖怪，我可是在宁州修仙界享有盛名的沐心仙子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1142,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "是啊，和逍遥剑仙并称移动人形天灾的沐心仙子，可不是享有盛...哈，哈哈，你怎么还动手的，哈哈哈...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1143,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，我就动手，让你瞎说，让你再瞎说！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "趁林沐心开口说话时，你也抓住时机奋起反抗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "一时间林府长老堂竟成了你们俩个高阶修士挠痒打闹的场所，原本严肃的场合如今满溢着的欢乐气息更是令人咂舌。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1147,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1148,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好了，好了，我认输，沐心仙子赢了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1149,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "算你识相，嘿嘿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1150,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "眼见林沐心对这小小的胜利心满意足，你将话题转到之前的探索上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1152,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "说起来，上次从那元婴妖兽洞窟出来时，我见到的那个修士好像冲虚散人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我后来想了想，上次从那元婴妖兽洞窟出来见到的修士，好像是冲虚散人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "冲虚散人...也许是他吧。从上次事件后我都没怎么见过他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你们平时都在天星城，不是应该经常会见到么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "本来应该是这样，而且我后来还经常去星宫。但这冲虚散人被他师父关了近百年禁闭后，一转之前的性格，变得...嗯，变得非常的低调。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "据说平时他除了出门游历就是修炼，也没再想找林家麻烦。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "起初通羽大长老还有些不信他改邪归正了，但这些年一直相安无事，由不得我们不信，所以后来也就没怎么关注冲虚的事了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这转变是挺奇怪的，他可不像是能放下的类型。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "倒是无惑真人陨落后出现过一个小插曲。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哦？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当时是无惑真人寿尽后不久，宫主见冲虚散人诚心思过百年，想让他接受无惑真人的权责，但不知为何两人起了矛盾。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当时我以为这事就这么过去了，结果过了约摸三十年，冲虚散人又主动找宫主承担元婴长老一职，之后也是对此尽职尽责，乃至更胜其师父一筹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "所以后来若是没什么大事，我很少去星宫，见到他的次数也就很少了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这一系列转变还真是奇怪，你和通羽大长老之后没谈论过此事么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "有谈论过，但没什么头绪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 9"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那...{$Lin}找过星铃儿么，她作为宫主弟子应该知道更多信息才对。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "唔，她好像是一直在外游历，都没怎么在星宫见过，我每次去都只见到了宫主。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "会不会是因为{$Lin}去星宫太少，所以刚好都错过了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "应该不会，我还在金丹期时，因为父亲日常闭关的缘故，所以总是去打扰宫主，她也会很亲切地指点我的修炼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "倒是我晋升元婴期后常常为家族事务所缚，与宫主的联系淡了不少。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这样么...算了，只要冲虚散人不跳出来找事，也没必要管他。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唔，之前我在星宫战胜冲虚后，看到宫主身旁跟着一个年轻女修，好像叫星铃儿，感觉是宫主的亲传弟子，{$Lin}没有询问过她么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯？宫主的亲传弟子？姓星的话可能是宫主家族中人。但说到弟子...无惑真人以前一直希望宫主收弟子来着，但未能如愿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "上次事件后，宫主倒是提过想收我为弟子，也不知是认真的还是开玩笑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那宫主的道侣呢，会不会对冲虚散人的事也有了解?",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不好说，但...要见到她们比见到宫主还要难。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1187,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "她们...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好啦好啦，反正冲虚散人没找我们麻烦，不用管他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1189,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只是刚好想起而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{vpunch=10,0.5}！！？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只见原本脸上挂满笑容的林沐心逐渐严肃起来，待她再次开口时，已是满脸愤怒。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1193,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{$NickName}，宫主刚神识传音说发现冲虚散人勾结魔教，且后者正在逃窜，要我循她留下的神识印记前去围剿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1196,
+          "CmdType": "Fungus.Menu",
+          "Text": "一同前往",
+          "TargetBlockID": "this:1195(一同前往)"
+        },
+        {
+          "ItemID": 1197,
+          "CmdType": "Fungus.Menu",
+          "Text": "留在林府",
+          "TargetBlockID": "this:1194(留在林府)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1200,
+      "Name": "客房",
+      "Description": "客房",
+      "Position": "(-2622.49,-1298.777)",
+      "Commands": [
+        {
+          "ItemID": 1212,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "约摸三天过去，你感应到林沐心的神识波动出现在林府，这才浅吐一口浊气，将四肢百骸中按功法路线运行的浓稠灵气液收归丹田。而后则是悠闲地走向大殿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1216,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1217,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "道侣判定",
+      "Description": "道侣判定",
+      "Position": "(-2791.902,-1367.013)",
+      "Commands": [
+        {
+          "ItemID": 1126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1132,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1133,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1201,
+      "Name": "长老堂",
+      "Description": "长老堂",
+      "Position": "(-2966.02,-1301.13)",
+      "Commands": [
+        {
+          "ItemID": 1218,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一迈入长老堂就看见疲惫不堪的林沐心正趴在桌上，甚至不是经历一场持续多天的战斗所能带来的疲惫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{$Lin},还顺利么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1220,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听到你的话语声，林沐心才慢慢地抬起头来，却见她脸色惨白，眼角依稀挂着泪痕，更是紧咬这下唇，令原本晶莹的芳唇也是透出丝丝凄红。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你这是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "宫主...{size=28}她...{/size}{size=26}陨落...{/size}{size=24}了...{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一句话还未说完，林沐心竟已是泣不成声，又将头埋在自己的臂弯里。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1226,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "还好你作为修士听力非常人可比，在这种情况下依旧能听出她说的是星宫宫主陨落了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "发生了什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1228,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1229,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "任你再询问什么，林沐心也只是低头不语，你也只得安慰她一番后起身离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1243,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1194,
+      "Name": "留在林府",
+      "Description": "留在林府",
+      "Position": "(-2791.902,-1151.718)",
+      "Commands": [
+        {
+          "ItemID": 1198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，那我便先动身了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见林沐心御空而去，你选择回客房修炼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1214,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1215,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

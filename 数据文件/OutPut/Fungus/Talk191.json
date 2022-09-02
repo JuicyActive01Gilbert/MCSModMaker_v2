@@ -1,0 +1,864 @@
+{
+  "Name": "Talk191",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2662.746,-1306.143)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "128(GetStaticValues)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-2511.417,-1302.982)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(破庙初次判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-2886.951,-1073.398)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 369,
+      "Name": "19102",
+      "Description": "19102",
+      "Position": "(-2357.529,-935.3351)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "264(StartFight)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 209,
+      "Name": "破庙事件",
+      "Description": "破庙事件",
+      "Position": "(-2356.693,-1158.445)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetChuanWenBlack"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "269(对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "答应",
+      "Description": "答应",
+      "Position": "(-2171.092,-1094.813)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是晚辈有能出的上力的地方，定当全力而为！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "桀桀桀桀，你倒是爽快。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老夫有一死敌，平日里倒也不怕他，但前些日子怪我贪心，想要夺那巫山的仙蛊天锣，便和那蛊真人打了一架。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嘿，那小子的法门很是邪道，不知对老子用了什么蛊术，令我这一身功力散去了七七八八，如今若是再被我那死敌寻到，肯定不是他的对手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "前辈的大敌定是修为高深，晚辈又能做什么呢？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我这伤还得有一些时日才能养好，这段时间，你便与老夫一同住在这破庙里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这颗“血煞丹”是老夫从巫山换得的秘药，有短暂提升修为的作用，你且收着。若是我那死敌真的寻来，我自有办法与他周旋。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你一个炼气期的{xiaozi}，他必然不会在意，等时机一到，你便服下这颗丹药，偷袭于他，定能见效。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "是,晚辈记下了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 225,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2171.628,-1231.728)",
+      "Commands": []
+    },
+    {
+      "ItemID": 261,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-2836.344,-1186.273)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "推脱",
+      "Description": "推脱",
+      "Position": "(-2160.145,-1001.086)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "晚辈修为浅薄，恐怕帮不上前辈什么忙。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "罢了，这事你若不愿，老夫强求也是无用，你自行离开便是了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢前辈！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "言语试探",
+      "Description": "言语试探",
+      "Position": "(-2357.462,-1006.281)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "前辈这般修为高深的修士，却躲在这处破庙里疗伤，恐怕这麻烦不小吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你这{xiaozi}眼珠子总是骨碌碌乱转，倒也是个心思灵巧之人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老夫孤身一人，没有什么门派约束，你若是敢帮我这个忙，我这身修行的法门就是传授给你也无妨，如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应",
+          "TargetBlockID": "this:289(答应)"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "推脱",
+          "TargetBlockID": "this:290(推脱)"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Menu",
+          "Text": "这老道恐怕伤的不轻，不如趁他病，要他命！",
+          "TargetBlockID": "this:369(19102)"
+        }
+      ]
+    },
+    {
+      "ItemID": 264,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-2353.81,-876.582)",
+      "Commands": [
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 202,
+      "Name": "破庙初次判断",
+      "Description": "破庙初次判断",
+      "Position": "(-2357.896,-1303.125)",
+      "Commands": [
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(破庙二级判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(破庙后续判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "死敌来了",
+      "Description": "死敌来了",
+      "Position": "(-1984.044,-1300.688)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{vpunch=10,0.5}轰！！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天邪子，你不好好地做你那古神教的护教护法，一路追着老子来了宁州，真是辛苦你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师兄...把噬血珠交出来，我不想与你为难。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天邪子，你那一套假惺惺的模样，对老子可不管用。这噬血珠是认主的法宝，老子若是没死，你根本操控不了它。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，师兄，那蛊真人使的黑丝蛊，可是天下奇毒，你现在还能剩下几成功力？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我本想与师兄叙叙旧，既然师兄你没有这个意思，那师弟我便送你上路吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "噢？那你不妨运气试试。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{vpunch=10,0.5}咳咳...咳咳...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这...这是巫山的虫蛊！你什么时候...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "桀桀桀桀，这通心蛊是巫山十大蛊中发作最快的一种，以你的修为，没两个时辰，是压制不住的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，我有教主大人赐我的凤血魔袍，你剩下这几成功力，又能奈我何？便让你多活两个时辰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "（此时正是出手的大好时机！）",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手！",
+          "TargetBlockID": "this:367(StartFight2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "StartFight2",
+      "Description": "StartFight2",
+      "Position": "(-1981.79,-1230.216)",
+      "Commands": [
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 269,
+      "Name": "对话",
+      "Description": "对话",
+      "Position": "(-2357.471,-1092.044)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哪家的{xiaozi}这么不长眼，打搅老子修炼，难道没看到这庙前有老夫留下的印记么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "晚辈只是想找个地方暂住几日，没想到冲撞了前辈，这...这便离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呵，这破庙有什么好，老子若不是受了点伤，一时也没地方可去，怎么会待在这儿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过...你这{xiaozi}来的倒巧，老子恰好遇到点麻烦，你若是能帮我办好这件事，老夫也不会亏待你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "（这老道神识远高于我，修为深不可测，说话行事又颇为怪癖，我该怎么应答？）",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应",
+          "TargetBlockID": "this:289(答应)"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "推脱",
+          "TargetBlockID": "this:290(推脱)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "言语试探",
+          "TargetBlockID": "this:291(言语试探)"
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "破庙后续判断",
+      "Description": "破庙后续判断",
+      "Position": "(-2171.363,-1302.353)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(死敌来了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "225(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "破庙二级判断",
+      "Description": "破庙二级判断",
+      "Position": "(-2357.517,-1231.833)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 3"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "209(破庙事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "225(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

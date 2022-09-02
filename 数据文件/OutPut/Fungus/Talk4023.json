@@ -1,0 +1,1553 @@
+{
+  "Name": "Talk4023",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 1462,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1648,
+      "Name": "跳转回交互talk",
+      "Description": "跳转回交互talk",
+      "Position": "(-2276.897,-812.5703)",
+      "Commands": [
+        {
+          "ItemID": 1649,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1650,
+          "CmdType": "CmdWarpToNPCJiaoHuTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 1506,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-1954.85,-1226.332)",
+      "Commands": [
+        {
+          "ItemID": 1523,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门...此派已经覆灭数百年了，我也只是听说过一些传闻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1524,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "据说当年御剑门掌门私通魔门，因而被五大派的高手围攻，宗门也付之一炬。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "此派覆灭后，宗门遗迹也被五派共同布阵封印，此后数百年间便再也没有人提起它了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "私通魔门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "没错，据说当年是一名{color=#d0380a}离火门弟子{/color}最先发现此事，双方争斗了一场还死伤了不少弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这御剑门所处的九嶷山与我派相邻，因此与我派也是偶有交际。因此消息传来后，我派很快就曾派遣长老前往九嶷山调查，果真发现了魔门出没的踪迹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1556,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1557,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1657,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1475,
+      "Name": "其它",
+      "Description": "其它",
+      "Position": "(-2279.321,-907.3905)",
+      "Commands": [
+        {
+          "ItemID": 1492,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1493,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1483(通用不知情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1482,
+      "Name": "判定门派",
+      "Description": "判定门派",
+      "Position": "(-2113.258,-1075.969)",
+      "Commands": [
+        {
+          "ItemID": 1567,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1505,
+          "CmdType": "Fungus.If",
+          "Condition": "NPCType == 1"
+        },
+        {
+          "ItemID": 1514,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1506(竹山宗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1515,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 2"
+        },
+        {
+          "ItemID": 1516,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1510(金虹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1517,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 3"
+        },
+        {
+          "ItemID": 1518,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1512(星河)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1519,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 4"
+        },
+        {
+          "ItemID": 1520,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1508(离火门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1521,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1522,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1513(化尘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1508,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-1951.994,-1071.034)",
+      "Commands": [
+        {
+          "ItemID": 1529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门？此派虽已覆灭数百年了，但当年确实与我派有些瓜葛。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这御剑门掌门当年私通魔门，我派也有不少弟子死在他们手上。后来还是我们五派的元婴高手一同出手，才把这魔门给灭了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "私通魔门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不错，当年这御剑门私通魔门之事被我派弟子发现，而后便是由火云长老与当时的首席内门弟子一同前去调查的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1580,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "那些御剑门弟子见事迹败露，竟直接对那些前去调查的离火门弟子动了杀心。双方在九嶷山大打出手，我派死伤惨重，连当时的首席弟子也命陨于此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1562,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1563,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1654,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1465,
+      "Name": "重要NPC判定",
+      "Description": "重要NPC判定",
+      "Position": "(-2589.777,-1146.069)",
+      "Commands": [
+        {
+          "ItemID": 1568,
+          "CmdType": "CmdGetNPCName"
+        },
+        {
+          "ItemID": 1569,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpStrValue == 火云老祖"
+        },
+        {
+          "ItemID": 1571,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1572(火云老祖)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 公孙季"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1581(公孙季)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1596,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 倪旭欣"
+        },
+        {
+          "ItemID": 1597,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1598(倪旭欣)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1606,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 雷音真人"
+        },
+        {
+          "ItemID": 1607,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1603(雷音真人)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1625,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 冲和剑仙"
+        },
+        {
+          "ItemID": 1627,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1623(冲和剑仙)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1626,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 青元剑仙"
+        },
+        {
+          "ItemID": 1628,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1624(青元剑仙)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1644,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 广成散人"
+        },
+        {
+          "ItemID": 1645,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1643(广成散人)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1666,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 恒如真人"
+        },
+        {
+          "ItemID": 1667,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1665(恒如真人)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1671,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 星凝"
+        },
+        {
+          "ItemID": 1672,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1670(星凝)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1570,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1564,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1467(NPC流派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1467,
+      "Name": "NPC流派判定",
+      "Description": "NPC流派判定",
+      "Position": "(-2424.205,-1074.45)",
+      "Commands": [
+        {
+          "ItemID": 1469,
+          "CmdType": "Fungus.If",
+          "Condition": "Level < 7"
+        },
+        {
+          "ItemID": 1611,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1483(通用不知情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1610,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.If",
+          "Condition": "NPCType <= 5"
+        },
+        {
+          "ItemID": 1470,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1471(门派NPC)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 6"
+        },
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1473(倪家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 9"
+        },
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1474(公孙家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1480,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1481,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1581,
+      "Name": "公孙季",
+      "Description": "公孙季",
+      "Position": "(-2741.154,-1094.284)",
+      "Commands": [
+        {
+          "ItemID": 1586,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1584,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门？{$TmpTalkString}说的若是九嶷山上那座被阵法封印的遗迹，我倒是知晓一二。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1587,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "按我族记载，这御剑门当年被五大派围攻后，虽然落败，但宗门内外四溢的魔气却仍然相当棘手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "魔气？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "没错，那御剑门掌门私通魔门，也不知做了什么，竟能散布如此之多的魔气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "若是放任不管，待魔气自然消散，对我等修真者自然不会有太大影响，但九嶷山一带的凡人却难免因此遭罪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1591,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "是时，我派长老便想出了将一柄纯阳仙剑作为阵眼，同时也是容器，布阵于御剑门之中。在阵法的引导下，门内的魔气会不断被引入仙剑之中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1592,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "如此一来，只需再设一普通封印法阵将仙剑锁住，外围再配合五派一同布下迷踪法阵，便可确保御剑门之危解除。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "此布阵之法即便如今看来也是颇为巧妙，因此被记录在我族古籍之中。不知我说的这些，对{$TmpTalkString}可有帮助？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1594,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1595,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1662,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1510,
+      "Name": "金虹",
+      "Description": "金虹",
+      "Position": "(-1953.026,-1172.849)",
+      "Commands": [
+        {
+          "ItemID": 1535,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门...此派已经覆灭数百年了，我也只是听说过一些传闻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1536,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "据说当年御剑门掌门私通魔门，因而被五大派的高手围攻，宗门也付之一炬。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "此派覆灭后，宗门遗迹也被五派共同布阵封印，此后数百年间便再也没有人提起它了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "私通魔门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "没错，据说当年是一名{color=#d0380a}离火门弟子{/color}最先发现此事，双方争斗了一场还死伤了不少弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我派掌门原本与那御剑门掌门交好，一开始也不愿相信此事。可事发之时，那御剑门掌门已魔化，证据确凿也由不得我们不信呐。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1558,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1559,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1656,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1623,
+      "Name": "冲和剑仙",
+      "Description": "冲和剑仙",
+      "Position": "(-2740.226,-1204.752)",
+      "Commands": [
+        {
+          "ItemID": 1629,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门...你说的是那个擅使游身剑法的门派吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哎，当年御剑门被灭门之时，老夫才刚刚突破元婴，而那御剑门掌门早已是宁州赫赫有名的剑修。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1631,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "他用剑如神，又与掌门师兄私交匪浅，本是老夫十分敬仰的一位前辈。也不知他是受了什么蛊惑，竟敢私通魔门，最后连累整个宗门与他陪葬。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "可惜，可惜啊...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1633,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1634,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1660,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1624,
+      "Name": "青元剑仙",
+      "Description": "青元剑仙",
+      "Position": "(-2739.772,-1259.616)",
+      "Commands": [
+        {
+          "ItemID": 1635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门？此事我倒是知晓一二。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "那御剑门掌门当年可是被称为同阶无敌手的宁州第一人，就连那金虹剑派的掌门也略逊他一筹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1637,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不过我们竹山宗对于私通魔门之人一向不留情面。既然那御剑门掌门步入魔道，只能说是他自取灭亡，怪不得旁人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "私通魔门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1639,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "没错，据说当年是一名{color=#d0380a}离火门弟子{/color}最先发现此事，双方争斗了一场还死伤了不少弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这御剑门所处的九嶷山与我派相邻，因此与我派也是偶有交际。因此消息传来后，我派很快就曾派遣长老前往九嶷山调查，果真发现了魔门出没的踪迹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1641,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1642,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1659,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1483,
+      "Name": "通用不知情",
+      "Description": "通用不知情",
+      "Position": "(-2110.906,-910.1759)",
+      "Commands": [
+        {
+          "ItemID": 1585,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1652,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1473,
+      "Name": "倪家",
+      "Description": "倪家",
+      "Position": "(-2284.117,-1022.685)",
+      "Commands": [
+        {
+          "ItemID": 1496,
+          "CmdType": "Fungus.If",
+          "Condition": "Age > 300"
+        },
+        {
+          "ItemID": 1497,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1494(倪家知情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1498,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1500,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1494,
+      "Name": "倪家知情",
+      "Description": "倪家知情",
+      "Position": "(-2112.829,-1023.474)",
+      "Commands": [
+        {
+          "ItemID": 1565,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1513,
+      "Name": "化尘",
+      "Description": "化尘",
+      "Position": "(-1951.908,-1023.51)",
+      "Commands": [
+        {
+          "ItemID": 1547,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这御剑门覆灭数百年了，若非{$TmpTalkString}问起，我倒是都快忘了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "当年传言这御剑门掌门私通魔门，咱们宁州五派自然不可坐视不管，便一同出手将此宗门灭了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "私通魔门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1551,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "没错，据说当年是一名{color=#d0380a}离火门弟子{/color}最先发现此事，双方争斗了一场还死伤了不少弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1552,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我派原先在宁州古迹中就与这御剑门有过冲突，怀疑这御剑门掌门在古迹中得了什么魔物，便派遣长老暗中调查。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1553,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "谁曾想正好遇上那御剑门掌门魔化以后实力大增，与其它各门长老战作一团。若非我派长老出手相助，恐怕还真拿不下他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1554,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1555,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1653,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1512,
+      "Name": "星河",
+      "Description": "星河",
+      "Position": "(-1951.168,-1115.924)",
+      "Commands": [
+        {
+          "ItemID": 1541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这御剑门数百年前倒也算有些实力，不过如今已经很少有人提起这段过往了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "当年这御剑门掌门也不知受了什么蛊惑，竟敢私通魔门，还惹出了不少事端，这才遭得我们宁州五派合力围攻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "私通魔门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1545,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "没错，据说当年是一名{color=#d0380a}离火门弟子{/color}最先发现此事，双方争斗了一场还死伤了不少弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1546,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "此事原本与我派无关，不过受那金虹剑派掌门所邀去为两派化解矛盾。没想到事发之时，那御剑门掌门已魔化，证据确凿也由不得我们不信呐。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1560,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1561,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1655,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1471,
+      "Name": "门派NPC",
+      "Description": "门派NPC",
+      "Position": "(-2284.026,-1076.803)",
+      "Commands": [
+        {
+          "ItemID": 1608,
+          "CmdType": "Fungus.If",
+          "Condition": "Age > 100"
+        },
+        {
+          "ItemID": 1487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1482(判定门派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1488,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1491,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1483(通用不知情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1598,
+      "Name": "倪旭欣",
+      "Description": "倪旭欣",
+      "Position": "(-2741.618,-1037.091)",
+      "Commands": [
+        {
+          "ItemID": 1599,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1600,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门？我记得学《青莲剑诀》的时候好像听谁起过这个门派来着...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1602,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "是大长老...还是杨管家...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1601,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "害，记不太清了，{$TmpTalkString}问这个做什么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1663,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1670,
+      "Name": "星凝",
+      "Description": "星凝",
+      "Position": "(-2743.037,-1417.922)",
+      "Commands": [
+        {
+          "ItemID": 1673,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}怎么想起打听这个了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1674,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "此事或许还有什么不为人知的内幕，但像这样没有底蕴的门派，偶然靠一两个成功突破到元婴期的天才崛起一时，但到底是不能长久的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1675,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "若是某一日元婴陨落，又无后继之人掌舵，这宗门从没落到覆灭往往也不过百年罢了，与如今的结局也不会有什么不同。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1676,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1572,
+      "Name": "火云老祖",
+      "Description": "火云老祖",
+      "Position": "(-2740.341,-1147.237)",
+      "Commands": [
+        {
+          "ItemID": 1573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门？哼，此派覆灭数百年了，{$TmpTalkString}怎么想起打听它了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1574,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这御剑门掌门当年私通魔门，我派也有不少弟子死在他们手上。后来还是我们五派的元婴高手一同出手，才把这魔门给灭了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "私通魔门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1576,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不错，当年这御剑门私通魔门之事被我派弟子发现，正是由大师兄和我一起带着几名内门弟子一起去调查的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1577,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "那些御剑门弟子拒不承认也就罢了，竟然还用卑劣的手段暗算我们。若非大师兄舍命相助，恐怕我们是难以逃回离火门的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1578,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1579,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1661,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1603,
+      "Name": "雷音真人",
+      "Description": "雷音真人",
+      "Position": "(-2741.619,-982.6608)",
+      "Commands": [
+        {
+          "ItemID": 1604,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哼...陈年往事，何必再提，这千年来宁州覆灭的宗门又何止那御剑门一个。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "你若真想调查些什么，就去问问五大门派的那些个长老们吧，看看他们又会编出些什么理由来为自己辩解。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1664,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1665,
+      "Name": "恒如真人",
+      "Description": "恒如真人",
+      "Position": "(-2740.684,-1363.665)",
+      "Commands": [
+        {
+          "ItemID": 1668,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不该打听的事少打听，像这等小门小派被灭了也只能怪自己实力不济。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1669,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1643,
+      "Name": "广成散人",
+      "Description": "广成散人",
+      "Position": "(-2741.282,-1311.2)",
+      "Commands": [
+        {
+          "ItemID": 1646,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "噢？你说的是几百年前被那五大门派围攻的御剑门吧，当年此事确实是轰动一时啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1647,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不过散人我无拘无束惯了，从来不去掺和这些与我无关的事情。你要是想知道些什么，就亲自去问问那些个宗门的长老吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1658,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1474,
+      "Name": "公孙家",
+      "Description": "公孙家",
+      "Position": "(-2279.321,-966.2142)",
+      "Commands": [
+        {
+          "ItemID": 1501,
+          "CmdType": "Fungus.If",
+          "Condition": "Age > 40"
+        },
+        {
+          "ItemID": 1502,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1495(公孙家知情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1503,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1504,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1475(其它)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1495,
+      "Name": "公孙家知情",
+      "Description": "公孙家知情",
+      "Position": "(-2110.299,-967.7783)",
+      "Commands": [
+        {
+          "ItemID": 1612,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1613,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "御剑门？{$TmpTalkString}说的若是九嶷山上那座被阵法封印的遗迹，我倒是知晓一二。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "按我族记载，这御剑门当年被五大派围攻后，虽然落败，但宗门内外四溢的魔气却仍然相当棘手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "魔气？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "没错，那御剑门掌门私通魔门，也不知做了什么，竟能散布如此之多的魔气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1617,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "若是放任不管，待魔气自然消散，对我等修真者自然不会有太大影响，但九嶷山一带的凡人却难免因此遭罪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "是时，我派长老便想出了将一柄纯阳仙剑作为阵眼，同时也是容器，布阵于御剑门之中。在阵法的引导下，门内的魔气会不断被引入仙剑之中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "如此一来，只需再设一普通封印法阵将仙剑锁住，外围再配合五派一同布下迷踪法阵，便可确保御剑门之危解除。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "此布阵之法即便如今看来也是颇为巧妙，因此被记录在我族古籍之中。不知我说的这些，对{$TmpTalkString}可有帮助？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1621,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1622,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1651,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2427.664,-1142.417)",
+      "Commands": [
+        {
+          "ItemID": 1484,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 1485,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1463,
+          "CmdType": "Fungus.If",
+          "Condition": "IsZhongYaoNPC == True"
+        },
+        {
+          "ItemID": 1464,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1465(重要NPC判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1466,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1468,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1467(NPC流派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

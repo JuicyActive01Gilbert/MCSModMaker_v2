@@ -1,0 +1,80 @@
+{
+  "Name": "FightTalk2",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "UseSkill",
+      "Description": "UseSkill",
+      "Position": "(-2921.556,-1326.542)",
+      "Commands": [
+        {
+          "ItemID": 107,
+          "CmdType": "Fungus.If",
+          "Condition": "attaker == True"
+        },
+        {
+          "ItemID": 108,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "105(玩家释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 109,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "attaker == False"
+        },
+        {
+          "ItemID": 110,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "106(敌人释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 103,
+      "Name": "start",
+      "Description": "start",
+      "Position": "(-2500.146,-1310.39)",
+      "Commands": [
+        {
+          "ItemID": 104,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}小心，我来助你！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "玩家释放技能",
+      "Description": "玩家释放技能",
+      "Position": "(-2921.108,-1223.69)",
+      "Commands": []
+    },
+    {
+      "ItemID": 106,
+      "Name": "敌人释放技能",
+      "Description": "敌人释放技能",
+      "Position": "(-3173.32,-1329.816)",
+      "Commands": []
+    },
+    {
+      "ItemID": 156,
+      "Name": "ClickEndRound",
+      "Description": "ClickEndRound",
+      "Position": "(-2294.061,-1312.509)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

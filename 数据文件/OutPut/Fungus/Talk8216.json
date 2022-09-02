@@ -1,0 +1,551 @@
+{
+  "Name": "Talk8216",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 320,
+      "Name": "不买",
+      "Description": "不买",
+      "Position": "(-2947.569,-1053.607)",
+      "Commands": [
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我对这种东西没有兴趣，道友还是另寻他人吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 319,
+      "Name": "10000",
+      "Description": "10000",
+      "Position": "(-2638.479,-1122.925)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(买的起判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 321,
+      "Name": "还价",
+      "Description": "还价",
+      "Position": "(-2798.709,-986.5613)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "太贵了，我最多出...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Menu",
+          "Text": "八千灵石",
+          "TargetBlockID": "this:326(8000)"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "五千灵石",
+          "TargetBlockID": "this:327(5000)"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Menu",
+          "Text": "一千灵石",
+          "TargetBlockID": "this:328(1000)"
+        }
+      ]
+    },
+    {
+      "ItemID": 326,
+      "Name": "8000",
+      "Description": "8000",
+      "Position": "(-2639.736,-1055.144)",
+      "Commands": [
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这...八千便八千吧，若非我急着用钱，可不会这样贱卖给道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(买的起判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2797.994,-1242.911)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(随机NPC)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 330,
+      "Name": "买不起",
+      "Description": "买不起",
+      "Position": "(-2333.99,-967.0025)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "可惜我并没有那么多灵石…",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "可惜…我再去找别人吧…",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 364,
+      "Name": "6000",
+      "Description": "6000",
+      "Position": "(-2638.442,-902.0291)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(买的起判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "5000",
+      "Description": "5000",
+      "Position": "(-2637.346,-987.6975)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这...五千便五千吧，若非我急着用钱，可不会这样贱卖给道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(买的起判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "随机NPC",
+      "Description": "随机NPC",
+      "Position": "(-2798.705,-1182.016)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(判定好感度)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "买的起判定",
+      "Description": "买的起判定",
+      "Position": "(-2480.794,-997.3234)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= money"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(买得起)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "330(买不起)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 296,
+      "Name": "判定好感度",
+      "Description": "判定好感度",
+      "Position": "(-2937.344,-1185.424)",
+      "Commands": [
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.GetHaoGanDuVar"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 20"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "i < 10"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(随机NPC)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(后续剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(后续剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "买得起",
+      "Description": "买得起",
+      "Position": "(-2332.734,-1045.733)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "就暂且相信你一回。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "那便多谢道友了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "1000",
+      "Description": "1000",
+      "Position": "(-2799.739,-907.3901)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "一千灵石！道友莫非是在拿我寻开心？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这价格我接受不了，最低...最低也得要六千灵石！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Menu",
+          "Text": "买",
+          "TargetBlockID": "this:364(6000)"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "不买",
+          "TargetBlockID": "this:320(不买)"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "后续剧情",
+      "Description": "后续剧情",
+      "Position": "(-2799.845,-1120.652)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "道友请留步！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "咳咳，是这样的，我是蓬莎岛的商人，遇到了致命的海上乱流，货物几乎全部都丢了，就只有这个我一直贴身保存……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "说着，他拿出了一大块红棕色的琥珀，其中藏着一根大得夸张的羽毛——整体看就像一柄金灿灿地单锋剑，细看之下，一根根羽片都如松针一般，的确不似凡物。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "怎么样，这可是远古神兽鲲鹏的羽毛，虽然只是化石，但单做装饰用也是非常气派了。现在我急需用钱，就便宜你一回。一万灵石，这块化石便是你的了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "……一万灵石，只能作装饰，你怎么不去抢？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这可是古代神兽别的羽毛，怎么可能仅作装饰？就算你转手卖出去，也不见得只能卖这么点…",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Menu",
+          "Text": "买",
+          "TargetBlockID": "this:319(10000)"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "还价",
+          "TargetBlockID": "this:321(还价)"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Menu",
+          "Text": "不买",
+          "TargetBlockID": "this:320(不买)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

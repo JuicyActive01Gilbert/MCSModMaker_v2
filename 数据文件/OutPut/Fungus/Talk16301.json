@@ -1,0 +1,196 @@
+{
+  "Name": "Talk16301",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(变量设置)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2652.784,-1017.783)",
+      "Commands": []
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 314,
+      "Name": "寄卖",
+      "Description": "寄卖",
+      "Position": "(-2789.369,-1020.223)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 700,
+          "AvatarBindKey": "",
+          "StoryText": "为了保证拍卖会的质量，我们会请专门的鉴定师对拍品进行鉴定。因此，所有价值低于50灵石的物品都是不允许在这里寄卖的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 700,
+          "AvatarBindKey": "",
+          "StoryText": "按照惯例，在拍卖成功后，我们还会收取您成交价的10%作为抽水。不过若是物品流拍，就不会再另外收取费用啦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(对话+选择)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 305,
+      "Name": "查看",
+      "Description": "查看",
+      "Position": "(-2927.174,-1019.002)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 700,
+          "AvatarBindKey": "",
+          "StoryText": "{gongzi}，这是我们拍卖行的传音符印记，日后{gongzi}若是想知道最新的拍品情况，直接用{color=#d0380a}传音符{/color}与我们联系便可。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.OpenPaiMai"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.OpenPaiMai"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "变量设置",
+      "Description": "变量设置",
+      "Position": "(-2795.79,-1208.896)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(对话+选择)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "对话+选择",
+      "Description": "对话+选择",
+      "Position": "(-2790.589,-1117.32)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 700,
+          "AvatarBindKey": "",
+          "StoryText": "这位{gongzi}，要参加下一次的拍卖会么？入场费只要10灵石噢~",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "查看拍品",
+          "TargetBlockID": "this:305(查看)"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于寄卖...",
+          "TargetBlockID": "this:314(寄卖)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:306(离开)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

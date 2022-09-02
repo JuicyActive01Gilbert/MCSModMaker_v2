@@ -1,0 +1,711 @@
+{
+  "Name": "Talk13502",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "295(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 325,
+      "Name": "夜交藤检测",
+      "Description": "夜交藤检测",
+      "Position": "(-2941.737,-1149.315)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "338(天青花检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 384,
+      "Name": "拒绝3",
+      "Description": "拒绝3",
+      "Position": "(-2654,-932.5571)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 319,
+      "Name": "阶段判定",
+      "Description": "阶段判定",
+      "Position": "(-2797.501,-1149.313)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "325(夜交藤检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "331(轻灵草检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "332(3阶段)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "399(自言自语)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 290,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2518.726,-1190.544)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 316,
+      "Name": "结束1",
+      "Description": "结束1",
+      "Position": "(-2652.798,-1320.078)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "去去去，没事别打扰我炼药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2798.706,-1230.879)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(徐凡)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(结束1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(阶段判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "徐凡",
+      "Description": "徐凡",
+      "Position": "(-2662.876,-1230.586)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "你是新来的{shidi}？麻烦你帮忙找来{color=#d0380a}夜交藤{/color}和{color=#d0380a}天青花{/color}吧，我正在炼丹一时走不开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 113,
+          "AvatarBindKey": "",
+          "StoryText": "唉，这家伙丹不炼成不出炼丹房，麻烦{shidi}帮个忙让他赶快炼好丹从我这儿出去吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "那我便跑一趟吧",
+          "TargetBlockID": "this:289(接取)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有要事 师兄请别人来帮忙吧",
+          "TargetBlockID": "this:290(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "天青花检测",
+      "Description": "天青花检测",
+      "Position": "(-3079.854,-1149.49)",
+      "Commands": [
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "结局",
+      "Description": "结局",
+      "Position": "(-2653.872,-1086.429)",
+      "Commands": [
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{shidi}的几次相助，这是我研究出的丹方，你拿去研究吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "轻灵草检测",
+      "Description": "轻灵草检测",
+      "Position": "(-2797.93,-1084.901)",
+      "Commands": [
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(天青花检测2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 376,
+      "Name": "天青花检测2",
+      "Description": "天青花检测2",
+      "Position": "(-2796,-1024.557)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "374(完成2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "未完成",
+      "Description": "未完成",
+      "Position": "(-3079.072,-1216.72)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "草药还没找回来吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "完成",
+      "Description": "完成",
+      "Position": "(-3080.268,-1084.31)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "徐凡接过草药便丢进了丹炉，露出了如释重负的笑容。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "TempValue",
+          "StoryText": "对了，我炼制的凝神丹还需{color=#d0380a}轻灵草{/color}、{color=#d0380a}天青花{/color}两味草药，麻烦{shidi}多走一趟了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "那我再跑一趟吧...",
+          "TargetBlockID": "this:359(进度更新)"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有要事 师兄请别人来帮忙吧",
+          "TargetBlockID": "this:349(拒绝2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 374,
+      "Name": "完成2",
+      "Description": "完成2",
+      "Position": "(-2796.315,-963.5571)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{shidi}。实不相瞒我准备将这些丹药送予一位朋友，女性修士想来更喜欢驻颜丹多些。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "劳烦{shidi}最后帮我寻{color=#d0380a}玄冰花{/color}回来吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Menu",
+          "Text": "这次真的是最后一次帮师兄了",
+          "TargetBlockID": "this:383(进度更新2)"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有要事 师兄请别人来帮忙吧",
+          "TargetBlockID": "this:384(拒绝3)"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "接取",
+      "Description": "接取",
+      "Position": "(-2516.405,-1276.348)",
+      "Commands": [
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 113,
+          "AvatarBindKey": "",
+          "StoryText": "那便有劳{shidi}了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "进度更新",
+      "Description": "进度更新",
+      "Position": "(-2937,-1084.557)",
+      "Commands": [
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 349,
+      "Name": "拒绝2",
+      "Description": "拒绝2",
+      "Position": "(-3219,-1084.557)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 383,
+      "Name": "进度更新2",
+      "Description": "进度更新2",
+      "Position": "(-2656,-1006.557)",
+      "Commands": [
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 399,
+      "Name": "自言自语",
+      "Description": "自言自语",
+      "Position": "(-2948.936,-1289.557)",
+      "Commands": [
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "徐凡守着炼丹炉，口中喃喃自语。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 137,
+          "AvatarBindKey": "",
+          "StoryText": "这培元丹炼制时可用{color=#d0380a}天青花{/color}替代{color=#d0380a}轻灵草{/color}，但需要换一味药引来中和药性......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 332,
+      "Name": "3阶段",
+      "Description": "3阶段",
+      "Position": "(-2654.561,-1148.314)",
+      "Commands": [
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(结局)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

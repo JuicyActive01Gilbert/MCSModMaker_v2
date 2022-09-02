@@ -1,0 +1,359 @@
+{
+  "Name": "Talk120501",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2799.441,-1359.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "318(自动保存)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "自动保存",
+      "Description": "自动保存",
+      "Position": "(-2797.115,-1281.812)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(提问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 299,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-2472.694,-1006.018)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "天下仙道会只有{color=#d0380a}筑基期{/color}以上境界的修士可参与，道友还是待日后修为精进再前来报名吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2468.694,-953.0183)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "这斗法台的比试随时都开放着，道友若是对自己有信心，上台比试便是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你正与擂台管事了解相关事宜，就听得台下传来一阵高呼声。原是台上之人已打退几波攻擂修士，管事见此也面露赞色。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此情此景使你不觉技痒，示意擂台管事后便运起功法跃上擂台。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，金道友果然实力不凡，不过我看这位{FirstName}道友信心满满，想来也有不俗的法力。你们二位谁能在这场比试中胜出，我便将他引荐与宁王。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你暗中打量对手，他单手执一柄金属扇子法器，隐隐透出锋锐之气，想来应主修金属性功法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此人相貌风流，却不知为何眉间戾气不散，给人一种凶恶之感。你摇了摇头，决定不再多想，眼下还是比赛更为重要。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "参赛（境界判定）",
+      "Description": "参赛（境界判定）",
+      "Position": "(-2630.694,-973.0183)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 4"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 288,
+      "Name": "关于比赛",
+      "Description": "关于比赛",
+      "Position": "(-2632.694,-1213.018)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "天下仙道会乃宁王为选拔供奉所举办，所有表现出色的修士均可成为宁王府座上宾。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(提问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 289,
+      "Name": "奖励",
+      "Description": "奖励",
+      "Position": "(-2631.694,-1148.018)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "嘿，一旦进了宁王府，那便有了享不尽的荣华富贵，多少人挤破头皮也想得到宁王的赏识，这岂不就是最大的赏赐。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(提问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "逸风府",
+      "Description": "逸风府",
+      "Position": "(-2635.694,-1080.018)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "逸风府为宁王处理政务之地，平日里不对外开放。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(提问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "提问",
+      "Description": "提问",
+      "Position": "(-2798.694,-1209.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "道友可是前来参加天下仙道会的？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天下仙道会",
+          "TargetBlockID": "this:288(关于比赛)"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于奖励",
+          "TargetBlockID": "this:289(奖励)"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听逸风府",
+          "TargetBlockID": "this:290(逸风府)"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听宁王府",
+          "TargetBlockID": "this:291(宁王府)"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Menu",
+          "Text": "上台参赛",
+          "TargetBlockID": "this:292(参赛（境界判定）)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:293(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-2627.694,-911.0183)",
+      "Commands": []
+    },
+    {
+      "ItemID": 291,
+      "Name": "宁王府",
+      "Description": "宁王府",
+      "Position": "(-2631.694,-1022.018)",
+      "Commands": [
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 630,
+          "AvatarBindKey": "",
+          "StoryText": "宁王府是宁王同家眷及供奉住所，就位于逸风城东北部。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(提问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

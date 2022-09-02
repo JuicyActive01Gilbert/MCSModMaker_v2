@@ -1,0 +1,291 @@
+{
+  "Name": "Talk8033",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1390.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 370,
+      "Name": "直接动手",
+      "Description": "直接动手",
+      "Position": "(-2670.288,-1217.108)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不愿与这些凡人多费口舌，手起刀落，几息之间便将寨子里的数十个山贼尽数解决，没有留下一个活口。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 296,
+      "Name": "触发",
+      "Description": "触发",
+      "Position": "(-2790.87,-1281.706)",
+      "Commands": [
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一伙劫匪占据了这里的山头，你刚一走近，就被一人拦住。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "站住站住，眼睛放大点，这里是你该来的地方么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "趁爷爷我心情好，不想死的话就快滚！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这些山贼只是普通凡人，不通法术，要解决他们并非难事，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Menu",
+          "Text": "言语威胁",
+          "TargetBlockID": "this:357(言语威胁)"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接动手",
+          "TargetBlockID": "this:370(直接动手)"
+        }
+      ]
+    },
+    {
+      "ItemID": 357,
+      "Name": "言语威胁",
+      "Description": "言语威胁",
+      "Position": "(-2920.527,-1208.161)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这些山贼或许也是因家中贫困不得已落草为寇，倒也不必因此就赶尽杀绝...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你略施了几个小法术就将山贼吓趴在地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "仙师饶命，仙师饶命啊！是我有眼不识泰山，冒犯了仙师，还请仙师不要与小人计较，放我一条生路啊！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我给你们一天时间，把抢来的粮食财物都归还给附近的村子，然后把这寨子给我烧了。日后若再让我看到你们为非作歹，就别怪我手下不留情了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢仙师，多谢仙师！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你的威胁下，这窝山贼一哄而散，想必是不敢再生事端了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 385,
+      "Name": "完成",
+      "Description": "完成",
+      "Position": "(-2788.582,-1142.718)",
+      "Commands": [
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.AvatarDeath"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "正确3 (Copy)",
+      "Description": "正确3 (Copy)",
+      "Position": "(-3210.145,-1212.917)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "现场的打斗痕迹看起来不像修真者所留下的，倒更像凡人之间的打斗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你施展神识在附近探查，很快便找到一处隐藏于山林之中的强盗窝点。那些普通凡人哪里是你的对手，三下五除二便被你打得四散逃跑，想来是不敢再回此地作恶了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

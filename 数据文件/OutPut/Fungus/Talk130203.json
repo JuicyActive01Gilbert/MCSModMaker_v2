@@ -1,0 +1,316 @@
+{
+  "Name": "Talk130203",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2795.441,-1359.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "关于选举",
+      "Description": "关于选举",
+      "Position": "(-2643.165,-1286.652)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "会长在商会内部拥有很大的权力，所以每次换选除了会长与长老会内部选出候选人外，各族都要额外选出数名金丹及和婴期修士参与投票。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们已经给各族长老发送了传音符，大家应该会在一两年内陆续赶回南崖城参与这次投票。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 315,
+      "Name": "碎星商会的由来",
+      "Description": "碎星商会的由来",
+      "Position": "(-2646.285,-1359.357)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "碎星商会乃是万年前鹤真人所创，鹤真人突破化神后隐居深海闭关修炼，商会便由其家族继承。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "家族后分为吴家与百里家，后又加入了唐家与白家，才有如今的局面。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "现如今唐家所用神通“鹤回翔”便是当年鹤真人的成名招数。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 301,
+      "Name": "关于白家",
+      "Description": "关于白家",
+      "Position": "(-2642.285,-1168.357)",
+      "Commands": [
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "白家主要负责商会内部灵舟的炼制，白家长老白灵冰更是当世为数不多有能力炼制六品灵舟之人，在商会内地位极高。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只是白家素来保持中立，也极少直接参与商会管理权位的争夺。可惜这次比试没能获胜，想换取他们的支持恐怕很难...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只是白家素来保持中立，也极少直接参与商会管理权位的争夺。好在这次比试我们赢了，应该能换取他们的支持。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 290,
+      "Name": "关于唐家",
+      "Description": "关于唐家",
+      "Position": "(-2641.891,-1225.197)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当年唐家的祖先本只是百里家的一名供奉，因善于炼器而被商会重用，而后得以加入长老会，唐家才成为共同管理商会的家族之一。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "唐家长老唐平一贯主张集商会的资源着重培养族内弟子，反对用商会资源拉拢外族之人，更是对我们吴家招揽供奉的事指手画脚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，我看这唐平是忘了当年唐家是怎么加入商会的。若让此人当上会长，难免以此缘由私自挪用商会资源，我可信不过他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2796.858,-1224.73)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Menu",
+          "Text": "碎星商会的由来",
+          "TargetBlockID": "this:315(碎星商会的由来)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于选举",
+          "TargetBlockID": "this:289(关于选举)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于唐家",
+          "TargetBlockID": "this:290(关于唐家)"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于白家",
+          "TargetBlockID": "this:301(关于白家)"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:291(没有其它事了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "没有其它事了",
+      "Description": "没有其它事了",
+      "Position": "(-2642.754,-1111.606)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2796.285,-1293.357)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}供奉找我何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,727 @@
+{
+  "Name": "Talk7008",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2798.441,-1391.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "368(首次踩入判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "变量判定",
+      "Description": "变量判定",
+      "Position": "(-2357.551,-1094.523)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 6"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "335(少)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue >= 6"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 15"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "336(中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "337(多)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 371,
+      "Name": "首次提示",
+      "Description": "首次提示",
+      "Position": "(-2624.443,-1318.983)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你踏入此地后不久，便开始感到强烈的不适...充斥着整个空间的魔气仿佛有意识般朝着你的方向蜂拥而上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "远处游荡着的魔物也和外围遇到的下等魔不太一样...看来这里大家所说的{color=#d0380a}中心区域{/color}吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "boss战判定",
+      "Description": "boss战判定",
+      "Position": "(-2796.42,-1240.901)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 70"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(随机事件判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(随机事件判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "变异魔",
+      "Description": "变异魔",
+      "Position": "(-2917.09,-1101.701)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "boss战斗",
+      "Description": "boss战斗",
+      "Position": "(-2675.171,-1100.17)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 0"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(随机事件判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "前方灵气混乱，且伴随兵戈碰撞之声，定是有人激战。你加快脚步想上前一探究竟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2511.52,-1097.585)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{shixiong}小心！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "话音未落一位同门{$shidi}扑上前来，将你撞向一旁。凌厉的攻击落在你方才站立之地，地面应声而裂。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{$shidi}，此地发生了何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{shixiong}且看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你顺着他指示的方向看去，只见刀光剑影中一只赤红魔物破阵而出，各大宗弟子联手围攻却效果甚微。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我在外围从未见过这般魔物，这......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{shixiong}有所不知，试炼之地魔物有强弱之分，往届众人屠戮的即是{shixiong}外围所见的下等魔。而正中合各宗之力共同应对的乃是地魔，实力仅次于最强的天魔。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "长老可曾传授如何战胜地魔？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不曾，想来宗门长老未曾料到我等竟敢在这天魔眼中同地魔交手便未告知。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "也怪这些弟子年轻气盛，毕竟有能力到达中心地区的都是门派精锐。原本计划击败地魔后再一齐向更深处行进，没想到低估了这地魔的实力......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "闻言你屏息认真地观察着地魔，希望能通过之前的经验来推测它的{color=#d0380a}弱点{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "331(变量判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 401,
+      "Name": "wu",
+      "Description": "wu",
+      "Position": "(-2945.469,-1320.065)",
+      "Commands": []
+    },
+    {
+      "ItemID": 335,
+      "Name": "少",
+      "Description": "少",
+      "Position": "(-2211.52,-1170.585)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你看得眼睛酸胀，也没能从中获得什么有用讯息，只觉此魔物难以攻破。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "转眼间只见又有数名弟子被地魔所伤，你摇了摇头，决定不再多想，便祭出法器加入了战局。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 337,
+      "Name": "多",
+      "Description": "多",
+      "Position": "(-2209.52,-1022.805)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "......{$shidi}，你们可否尝试攻击地魔胸腹间的那张巨口？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "尚未，{shixiong}好提议，待你我合力试上一试如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你连施法术，配合{$shidi}偷袭地魔。地魔腹部的巨口被数道法术击中，发出了痛苦的哀嚎。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈，{shixiong}果真慧眼如炬！将地魔逼至如此地步，我等胜利在望了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-3046.878,-1101.91)",
+      "Commands": []
+    },
+    {
+      "ItemID": 368,
+      "Name": "首次踩入判断",
+      "Description": "首次踩入判断",
+      "Position": "(-2796.381,-1320.137)",
+      "Commands": [
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.GetRestTime"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == False"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "401(wu)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "371(首次提示)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(boss战判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 336,
+      "Name": "中",
+      "Description": "中",
+      "Position": "(-2211.52,-1097.585)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "咦？外围的低阶魔物额头上有眼睛吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "应该没有，我也曾考虑到这点。但地魔狡猾得很，我几次偷袭都没能得手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不如我来替{$shidi}吸引它的注意，师兄趁机攻击！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你连施法术，配合{$shidi}偷袭地魔。地魔的独眼正巧被一道法术击中，发出了痛苦的哀嚎。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "得手了！我们乘胜追击！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2673.009,-1174.513)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.CheckFuBenTime"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(boss战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(随机事件判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "随机事件判定",
+      "Description": "随机事件判定",
+      "Position": "(-2934.145,-1176.484)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(变异魔)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

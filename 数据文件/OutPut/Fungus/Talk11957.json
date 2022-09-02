@@ -1,0 +1,987 @@
+{
+  "Name": "Talk11957",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 290,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(-2797.667,-1149.278)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "sword",
+          "StoryText": "看起来像是装饰，但当你靠近时锋锐的剑气扑面而来，似乎这把剑鞘曾装过品质不凡的剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 373,
+      "Name": "检查苗矮房间",
+      "Description": "检查苗矮房间",
+      "Position": "(-2948.667,-1511.778)",
+      "Commands": [
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.If",
+          "Condition": "物品1 == 0"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Menu",
+          "Text": "检查书桌",
+          "TargetBlockID": "this:392(桌)"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.If",
+          "Condition": "物品2 == 0"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Menu",
+          "Text": "检查衣柜",
+          "TargetBlockID": "this:393(柜)"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.If",
+          "Condition": "物品3 == 0"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Menu",
+          "Text": "检查灵石台座",
+          "TargetBlockID": "this:394(台座)"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.If",
+          "Condition": "物品1 == 1"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "物品2 == 1"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.If",
+          "Condition": "物品3 == 1"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（难道是我猜错了？趁着还有时间，赶紧去三长老的居所调查吧，希望能有所发现。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "栖云房间",
+      "Description": "栖云房间",
+      "Position": "(-2646.667,-1460.778)",
+      "Commands": [
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你进入了栖云真人的居所。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一开门，各种物事涌入你的眼帘。字画、盆栽、玉石摆件、香炉、书籍……还有些一眼看不出功用的小玩意见缝插针般的塞满了剩下的角落。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "墙上的各色字画，皆无署名，也不知从何而来。其中一副似有剑意透纸而出吸引了你的目光，但上前查看时又未发现丝毫特殊之处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(检查栖云房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 392,
+      "Name": "桌",
+      "Description": "桌",
+      "Position": "(-2799.667,-1529.778)",
+      "Commands": [
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "桌上仅有一个砚台，一个笔架，若干支毛笔，和一本名唤《苗矮杂记》的书籍而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你简单的翻看了这本书，没发现什么特别的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(检查苗矮房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你随意的翻看着桌上散乱的杂物，却没有有用的发现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "！！？{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "桌上竟是用些略含灵气的杂物摆了一个微型阵法，由于之前被其他物事盖住，竟是瞒过了你的检查。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时阵法正在散发着几不可见的微弱光芒。虽不知道是做什么用的，但对你一个闯入者来说，肯定不是什么好事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(检查栖云房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2798.167,-1381.278)",
+      "Commands": [
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 36"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "366(苗矮房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(栖云房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(栖云房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(-2621.667,-1306.278)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "调查得差不多了，还是赶快离开以免被发现......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "台座",
+      "Description": "台座",
+      "Position": "(-2797.667,-1630.778)",
+      "Commands": [
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这是一个修炼用的灵石台座，上刻聚灵阵，应该是苗矮上人平日修炼静修之处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "近旁摆放着一盆修剪过的玉桂盆栽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你用神识扫过台座和盆栽，没有可疑的地方。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(检查苗矮房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这台座初见时没什么特殊的，你走进了仔细查看才发现竟是由念铜所铸。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "虽说是对鉴定没有深入研究过，但即便只是粗浅的感受一番台座上所镌刻聚灵阵的复杂程度和强大效用，也不难猜出此等台座乃非凡之物。造价甚至可能要高于寻常宗门金丹长老的本命法宝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但你用神识仔细地检查了台座，却没有任何发现，连一丝不和谐之处都没能发觉。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（林府修士都擅长神识，这长老境界又比我高，仅靠神识没有发现也是正常，不如再敲打敲打试试。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不死心地用各种方法尝试了许久，终于是在台座上发现了一个小暗格。一枚不知记载了什么的玉简正静静的躺在暗格中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这...竟是三长老的私账！他暗中吞没了如此多的财物，上交天星城的整体营收竟还在连年上涨...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（等等！这一笔的备注是冲虚！呵呵，这老鬼也真是舍得，看来真是寿元无多，找不到其他方法突破了，只得大出血。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（哼哼，得来全不费工夫。我也该去见大长老了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(检查栖云房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2974.667,-1240.278)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一扇华美的鎏金屏风，上面绘制着美轮美奂的建筑群。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.79,-1238.896)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "即使处于闭关中，倪府的下人仍仔细地打扫了倪振东的房间。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你打算先调查",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "screen == 0"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Menu",
+          "Text": "屏风",
+          "TargetBlockID": "this:289(New Block)"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "sword == 0"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "装饰剑鞘",
+          "TargetBlockID": "this:290(New Block1)"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.If",
+          "Condition": "table == 0"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "长案",
+          "TargetBlockID": "this:291(New Block2)"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经没什么在意的了",
+          "TargetBlockID": "this:348(New Block3)"
+        }
+      ]
+    },
+    {
+      "ItemID": 366,
+      "Name": "苗矮房间",
+      "Description": "苗矮房间",
+      "Position": "(-2946.667,-1460.778)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你进入苗矮上人的居所。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "走进屋内，只觉整洁。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "窗明几净，罕有尘杂。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(检查苗矮房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "柜",
+      "Description": "柜",
+      "Position": "(-2798.667,-1578.778)",
+      "Commands": [
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "衣柜里满是叠好的粗布衣服，乍一看还以为房间主人不过是一位凡俗农夫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你谨慎地检查了衣柜，没有有用的发现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(检查苗矮房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "书柜里胡乱的塞了一些书籍和杂物。你稍稍翻阅了一番，发现其中大都是与修炼无关的书籍，一时半会看不出个所以然来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(检查栖云房间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "检查栖云房间",
+      "Description": "检查栖云房间",
+      "Position": "(-2645.167,-1508.278)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "物品1 == 0"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "检查书桌",
+          "TargetBlockID": "this:392(桌)"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "物品2 == 0"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Menu",
+          "Text": "检查衣柜",
+          "TargetBlockID": "this:393(柜)"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.If",
+          "Condition": "物品3 == 0"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Menu",
+          "Text": "检查灵石台座",
+          "TargetBlockID": "this:394(台座)"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.If",
+          "Condition": "物品3 == 1"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(-2622.667,-1239.278)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一张被涂抹得乌漆墨黑的纸吸引了你的注意，从没被涂掉的画面看来这似乎是一张地图。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

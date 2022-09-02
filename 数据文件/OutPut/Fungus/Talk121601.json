@@ -1,0 +1,809 @@
+{
+  "Name": "Talk121601",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2793.441,-1377.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 376,
+      "Name": "都知道了",
+      "Description": "都知道了",
+      "Position": "(-2383.562,-685.7637)",
+      "Commands": [
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 335,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2601.438,-1475.955)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "执事",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "旁白",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "主角",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "YSGame.TianJiDaBi.CmdTianJiDaBiGuanZhanSim"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "报名",
+      "Description": "报名",
+      "Position": "(-2257.432,-1221.872)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 372,
+      "Name": "大赛的规则？",
+      "Description": "大赛的规则？",
+      "Position": "(-2383.562,-930.7637)",
+      "Commands": [
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "所有参赛者在比赛期间都{color=#d0380a}禁用任何武器、防具、法宝与丹药{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(关于大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 283,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2794.585,-1157.036)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想参赛",
+          "TargetBlockID": "this:286(报名-境界判定)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想观战",
+          "TargetBlockID": "this:287(观赛)"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天机大比",
+          "TargetBlockID": "this:289(关于大比)"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:292(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 373,
+      "Name": "大赛的赛制？",
+      "Description": "大赛的赛制？",
+      "Position": "(-2383.562,-874.7637)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "比赛将采用天机阁独创的赛制——{color=#d0380a}天机轮{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天机轮一共会举行{color=#d0380a}六轮{/color}比试，并且每轮都{color=#d0380a}不会有人被淘汰{/color}，任何修士都可以打满六轮。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "除第一轮是随机抽签决定对战情况外，剩下的轮次中每个人都会遇到与自己实力相近的对手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们会记录每位选手的{color=#d0380a}胜场数{/color}，以及他们战胜过的{color=#d0380a}对手的胜场总数{/color}并记作{color=#d0380a}天机点{/color}，并根据这两个数据编排对战场次，最终的排名也是根据这个得出的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(关于大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2795.894,-1228.602)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= TempValue"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "您好，请问需要什么帮助吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "报名-境界判定",
+      "Description": "报名-境界判定",
+      "Position": "(-2639.64,-1222.969)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 7"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "295(练气筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(金丹元婴)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "观赛",
+      "Description": "观赛",
+      "Position": "(-2640.839,-1157.234)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 7"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "观战需要缴纳五千灵石作为座次费与客房费，道友确定要观战吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "是",
+          "TargetBlockID": "this:346(是)"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "否",
+          "TargetBlockID": "this:347(否)"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天机阁将为金丹期或元婴期修士观战准备特殊席位，阁下这边请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2639.039,-1351.312)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2795.333,-1082.663)",
+      "Commands": [
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "前辈……请问您是要观赛吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Menu",
+          "Text": "是",
+          "TargetBlockID": "this:346(是)"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Menu",
+          "Text": "否",
+          "TargetBlockID": "this:347(否)"
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "金丹元婴",
+      "Description": "金丹元婴",
+      "Position": "(-2498.981,-1223.199)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "需要缴纳十万灵石作为参赛费，道友确定要参赛吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 100000"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "确定",
+          "TargetBlockID": "this:315(报名)"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:292(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 374,
+      "Name": "大赛的奖励？",
+      "Description": "大赛的奖励？",
+      "Position": "(-2382.562,-804.7637)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "魁首将获得一次前往太虚境参悟的机会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "前十将获得一些仙缘石与一些灵石。前二十也会有一些灵石奖励。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外，排名前十位的选手，将会被记录在{color=#d0380a}天机榜{/color}上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(关于大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "关于大比",
+      "Description": "关于大比",
+      "Position": "(-2639.74,-907.3)",
+      "Commands": [
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友有什么想了解的？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Menu",
+          "Text": "大赛是什么？",
+          "TargetBlockID": "this:371(大赛是什么？)"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Menu",
+          "Text": "大赛的规则？",
+          "TargetBlockID": "this:372(大赛的规则？)"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Menu",
+          "Text": "大赛的赛制？",
+          "TargetBlockID": "this:373(大赛的赛制？)"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Menu",
+          "Text": "大赛的奖励？",
+          "TargetBlockID": "this:374(大赛的奖励？)"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Menu",
+          "Text": "大赛的门槛？",
+          "TargetBlockID": "this:375(大赛的门槛？)"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Menu",
+          "Text": "都知道了",
+          "TargetBlockID": "this:376(都知道了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 346,
+      "Name": "是",
+      "Description": "是",
+      "Position": "(-2384.562,-1177.764)",
+      "Commands": [
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "前辈这边请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.If",
+          "Condition": "money >= 5000"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友这边请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这些灵石可不够观战。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 371,
+      "Name": "大赛是什么？",
+      "Description": "大赛是什么？",
+      "Position": "(-2382.562,-989.7637)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "现在举办的是每百年才有一次的{color=#d0380a}天机大比{/color}，由我天机阁主阁举办。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "所有{color=#d0380a}金丹期或元婴期{/color}修士都可以报名参加大会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(关于大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 375,
+      "Name": "大赛的门槛？",
+      "Description": "大赛的门槛？",
+      "Position": "(-2381.76,-748.7637)",
+      "Commands": [
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "除开参赛者实力必须为金丹期或元婴期之外，参赛费需十万灵石，观战的座位也需五千灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(关于大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 347,
+      "Name": "否",
+      "Description": "否",
+      "Position": "(-2385.562,-1127.764)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "练气筑基",
+      "Description": "练气筑基",
+      "Position": "(-2386.981,-1319.311)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "抱歉，只有境界达到金丹期或元婴期才有资格报名。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "还有什么事么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

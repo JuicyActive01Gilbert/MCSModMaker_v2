@@ -1,0 +1,365 @@
+{
+  "Name": "Talk134202",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2449.452,-1399.115)",
+      "Commands": [
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断初次进入龙宫)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断初次进入龙宫",
+      "Description": "判断初次进入龙宫",
+      "Position": "(-2456.493,-1290.701)",
+      "Commands": [
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "275(救出来了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "274(没救出来)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(拒绝)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "邀请飞升观礼",
+      "Description": "邀请飞升观礼",
+      "Position": "(-2149.987,-1180.45)",
+      "Commands": [
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 820,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}供奉飞升如此盛事，我龙族自然不会错过。届时我与兄长定会前来为{FirstName}供奉护法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 275,
+      "Name": "救出来了",
+      "Description": "救出来了",
+      "Position": "(-2309.987,-1178.45)",
+      "Commands": [
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 820,
+          "AvatarBindKey": "",
+          "StoryText": "道友，找我何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Menu",
+          "Text": "邀请飞升观礼",
+          "TargetBlockID": "this:284(邀请飞升观礼)"
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 274,
+      "Name": "没救出来",
+      "Description": "没救出来",
+      "Position": "(-2590.987,-1176.45)",
+      "Commands": [
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 820,
+          "AvatarBindKey": "",
+          "StoryText": "道友此事十万火急，还望道友速速行事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2445.987,-1180.45)",
+      "Commands": [
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 820,
+          "AvatarBindKey": "",
+          "StoryText": "道友我龙族正直多事之秋。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

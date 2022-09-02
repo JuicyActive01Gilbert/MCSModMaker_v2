@@ -1,0 +1,888 @@
+{
+  "Name": "Talk115101",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "随机采药",
+      "Description": "随机采药",
+      "Position": "(-2451.162,-1130.487)",
+      "Commands": [
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 60"
+        },
+        {
+          "ItemID": 149,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "144(一品)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 61"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 90"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "145(二品)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 91"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 100"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "157(三品)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2626.239,-1136.161)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(随机采药)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 263,
+      "Name": "流莹草",
+      "Description": "流莹草",
+      "Position": "(-2702.643,-996.3311)",
+      "Commands": [
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 266,
+      "Name": "天青花",
+      "Description": "天青花",
+      "Position": "(-2699.938,-819.0381)",
+      "Commands": [
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 319,
+      "Name": "四品",
+      "Description": "四品",
+      "Position": "(-2101.127,-1138.616)",
+      "Commands": [
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "真走运，居然找到了珍贵的四品灵药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "紫侯",
+      "Description": "紫侯",
+      "Position": "(-2325.989,-1217.356)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 274,
+      "Name": "火精枣",
+      "Description": "火精枣",
+      "Position": "(-2105.185,-797.4381)",
+      "Commands": [
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "二品",
+      "Description": "二品",
+      "Position": "(-2258.948,-935.4114)",
+      "Commands": [
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID == 1"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "271(轻灵草)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 2"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "273(风灵花)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 3"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "276(百草露)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 162,
+      "Name": "银月花",
+      "Description": "银月花",
+      "Position": "(-2707.269,-1056.235)",
+      "Commands": [
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 264,
+      "Name": "恒心草",
+      "Description": "恒心草",
+      "Position": "(-2702.643,-934.3058)",
+      "Commands": [
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 271,
+      "Name": "轻灵草",
+      "Description": "轻灵草",
+      "Position": "(-2108.949,-949.7377)",
+      "Commands": [
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "一品",
+      "Description": "一品",
+      "Position": "(-2519.642,-935.6976)",
+      "Commands": [
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID == 1"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "263(流莹草)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 2"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "264(恒心草)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 3"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(宁心草)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 4"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "267(凝血草)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 5"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "162(银月花)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 6"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "268(宁神花)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 275,
+      "Name": "蛇涎果",
+      "Description": "蛇涎果",
+      "Position": "(-2102.527,-748.7744)",
+      "Commands": [
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 157,
+      "Name": "三品",
+      "Description": "三品",
+      "Position": "(-2279.768,-1134.455)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID < 5"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(紫侯)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID >= 5"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID < 10"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(龙纹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID >= 10"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(四品)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 273,
+      "Name": "风灵花",
+      "Description": "风灵花",
+      "Position": "(-2106.29,-850.4842)",
+      "Commands": [
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 272,
+      "Name": "天元果",
+      "Description": "天元果",
+      "Position": "(-2106.897,-900.6241)",
+      "Commands": [
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 276,
+      "Name": "百草露",
+      "Description": "百草露",
+      "Position": "(-2094.278,-700.7684)",
+      "Commands": [
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 269,
+      "Name": "七星草",
+      "Description": "七星草",
+      "Position": "(-2113.54,-1052.423)",
+      "Commands": [
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "龙纹",
+      "Description": "龙纹",
+      "Position": "(-2166.279,-1216.939)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 267,
+      "Name": "凝血草",
+      "Description": "凝血草",
+      "Position": "(-2698.256,-757.247)",
+      "Commands": [
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 268,
+      "Name": "宁神花",
+      "Description": "宁神花",
+      "Position": "(-2697.943,-702.5026)",
+      "Commands": [
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "宁心草",
+      "Description": "宁心草",
+      "Position": "(-2703.065,-874.1535)",
+      "Commands": [
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 270,
+      "Name": "红绫草",
+      "Description": "红绫草",
+      "Position": "(-2110.418,-1003.459)",
+      "Commands": [
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

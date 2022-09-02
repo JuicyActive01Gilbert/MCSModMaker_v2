@@ -1,0 +1,314 @@
+{
+  "Name": "Talk11954",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 314,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2632.788,-1315.839)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.If",
+          "Condition": "Tem == False"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "还有些地方没调查完，我再检查一下吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "Tem == False"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "还有些地方没调查完，我再检查一下吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "调查得差不多了，还是赶快离开以免被发现......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "2",
+      "Description": "2",
+      "Position": "(-2796.667,-1167.278)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "枕头下，被褥里，床帐后你都翻了个遍，却什么也没发现。正当你失望地打算调查下个地方时，脚底踩到了什么硬邦邦的东西——一小块玉简碎片。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.79,-1238.896)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "房间里十分整洁，书架上的花带来一种雅致的氛围。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你打算先调查",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "desk == 0"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Menu",
+          "Text": "书桌",
+          "TargetBlockID": "this:287(1)"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "bed == 0"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Menu",
+          "Text": "床头",
+          "TargetBlockID": "this:288(2)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.If",
+          "Condition": "vase == 0"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Menu",
+          "Text": "花瓶",
+          "TargetBlockID": "this:289(3)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经没什么在意的了",
+          "TargetBlockID": "this:314(New Block)"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "1",
+      "Description": "1",
+      "Position": "(-2964.667,-1239.278)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "桌案上十分整洁，你上下翻找一通，最后在桌角发现了一枚残破的玉简。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "3",
+      "Description": "3",
+      "Position": "(-2635.667,-1242.278)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "花瓶里的海棠已经变成了干花。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

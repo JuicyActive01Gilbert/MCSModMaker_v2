@@ -1,0 +1,2952 @@
+{
+  "Name": "Talk6601",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2964.487,-1302.664)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取-声望判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1035,
+      "Name": "完成后打听",
+      "Description": "完成后打听",
+      "Position": "(-1672.795,-1590.051)",
+      "Commands": [
+        {
+          "ItemID": 1037,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1038,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 348,
+      "Name": "打听判定",
+      "Description": "打听判定",
+      "Position": "(-2318.055,-1579.784)",
+      "Commands": [
+        {
+          "ItemID": 893,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 894,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 902,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "886(敖灵的求助)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 896,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 901,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "791(海域情报赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 324,
+      "Name": "友好（玩家境界判断）",
+      "Description": "友好（玩家境界判断）",
+      "Position": "(-2795.129,-1055.505)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > NPCLV"
+        },
+        {
+          "ItemID": 1087,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < NPCLV"
+        },
+        {
+          "ItemID": 1088,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1089,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1090,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(对话选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 517,
+      "Name": "打劫蓬莎岛",
+      "Description": "打劫蓬莎岛",
+      "Position": "(-2307.645,-1179.981)",
+      "Commands": [
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "你想做什么？敢对我们蓬莎岛的人动手？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手！",
+          "TargetBlockID": "this:630(进入战斗)"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Menu",
+          "Text": "我只是开个玩笑...",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 717,
+      "Name": "CD中",
+      "Description": "CD中",
+      "Position": "(-1977.323,-1313.914)",
+      "Commands": [
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "看看我这里有没有你需要的东西吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 296,
+      "Name": "境界相同",
+      "Description": "境界相同",
+      "Position": "(-2596.072,-1394.057)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（提防地看着你）我听说过你的名字，你想做什么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听这片海域的传闻",
+          "TargetBlockID": "this:768(拒绝打听)"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:517(打劫蓬莎岛)"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:350(打劫碎星岛)"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 958,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 985,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 986,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == False"
+        },
+        {
+          "ItemID": 959,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:957(留下传音符印记)"
+        },
+        {
+          "ItemID": 960,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 987,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "敌对（玩家境界判断）",
+      "Description": "敌对（玩家境界判断）",
+      "Position": "(-2795.301,-1389.88)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > NPCLV"
+        },
+        {
+          "ItemID": 1075,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "295(玩家境界高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < NPCLV"
+        },
+        {
+          "ItemID": 1076,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(玩家境界低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1077,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(境界相同)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 413,
+      "Name": "关于碎星岛",
+      "Description": "关于碎星岛",
+      "Position": "(-2314.308,-1452.252)",
+      "Commands": [
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "噢？看来你对这片海域还所知甚少。我们晨星商会可是这片无尽之海里最大的商会组织。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "如果你想赚上一笔，就去碎星岛或者南崖城找找我们商会的负责人吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 347,
+      "Name": "关于蓬莎岛",
+      "Description": "关于蓬莎岛",
+      "Position": "(-2316.071,-1404.403)",
+      "Commands": [
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "看你的样子，应该是第一次出海吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "无尽之海危险重重，若是没有同行修士结伴，又没有情报来源，普通散修去远海猎杀海兽无异于自寻死路。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们蓬莎岛其实就是因此而成立的一个散修同盟，我们在那里交易物资与情报，组队同行，久而久之也成为了这片无尽之海中数一数二的势力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "玩家境界高",
+      "Description": "玩家境界高",
+      "Position": "(-2598.23,-1450.907)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（惊恐地看着你）你...你想做什么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听这片海域的传闻",
+          "TargetBlockID": "this:348(打听判定)"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:517(打劫蓬莎岛)"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:350(打劫碎星岛)"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 954,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 982,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 983,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == False"
+        },
+        {
+          "ItemID": 956,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:957(留下传音符印记)"
+        },
+        {
+          "ItemID": 955,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 984,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1023,
+      "Name": "浪方已完成",
+      "Description": "浪方已完成",
+      "Position": "(-1846.48,-1661.578)",
+      "Commands": [
+        {
+          "ItemID": 1029,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1030,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1032,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1031,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1033,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1034,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1036,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1035(完成后打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 736,
+      "Name": "没有",
+      "Description": "没有",
+      "Position": "(-1814.323,-1247.914)",
+      "Commands": [
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "可惜...可惜...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "中立（玩家境界判断）",
+      "Description": "中立（玩家境界判断）",
+      "Position": "(-2793.861,-1227.47)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > NPCLV"
+        },
+        {
+          "ItemID": 1091,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < NPCLV"
+        },
+        {
+          "ItemID": 1092,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1093,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1094,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1095,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(对话选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1059,
+      "Name": "废弃打听",
+      "Description": "废弃打听",
+      "Position": "(-2146.795,-1738.051)",
+      "Commands": [
+        {
+          "ItemID": 1060,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "让我想想...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1061,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1062,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1063,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1064,
+          "CmdType": "Fungus.GetSeaEventNum"
+        },
+        {
+          "ItemID": 1065,
+          "CmdType": "Fungus.If",
+          "Condition": "eventnum == 0"
+        },
+        {
+          "ItemID": 1066,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这附近并没有发生什么特殊的事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1067,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "eventnum == 1"
+        },
+        {
+          "ItemID": 1068,
+          "CmdType": "Fungus.GetSeaEventInfoByIndex"
+        },
+        {
+          "ItemID": 1069,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "前不久，我们在这附近发现了一只{$name}的踪迹。除此以外，似乎还没有发生什么特殊的事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1070,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1071,
+          "CmdType": "Fungus.GetSeaEventInfoByIndex"
+        },
+        {
+          "ItemID": 1072,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这附近的海域似乎聚集了不少的海兽，前不久，我们才发现了一只{$name}的踪迹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1073,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "玩家境界低",
+      "Description": "玩家境界低",
+      "Position": "(-2595.896,-1336.394)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（煞气腾腾地看着你）噢？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听这片海域的传闻",
+          "TargetBlockID": "this:768(拒绝打听)"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:517(打劫蓬莎岛)"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:350(打劫碎星岛)"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 961,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 989,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 990,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == False"
+        },
+        {
+          "ItemID": 962,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:957(留下传音符印记)"
+        },
+        {
+          "ItemID": 963,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 991,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "碎星岛收购",
+      "Description": "碎星岛收购",
+      "Position": "(-2312.181,-1237.431)",
+      "Commands": [
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.GetNowSeaID"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.If",
+          "Condition": "seaID == 2"
+        },
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 3"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 4"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 5"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 6"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 7"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 8"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 9"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 10"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 11"
+        },
+        {
+          "ItemID": 697,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 12"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 13"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 14"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 15"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 16"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 17"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 18"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "675(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 630,
+      "Name": "进入战斗",
+      "Description": "进入战斗",
+      "Position": "(-2141.303,-1157.474)",
+      "Commands": [
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量获取-声望判断",
+      "Description": "变量获取-声望判断",
+      "Position": "(-2785.628,-1304.404)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.GetHaiShangNpcId"
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1610,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPaiHGD < -10"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(敌对（玩家境界判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPaiHGD >= -10"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPaiHGD < 30"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(中立（玩家境界判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "324(友好（玩家境界判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 675,
+      "Name": "任务CD判定",
+      "Description": "任务CD判定",
+      "Position": "(-2131.323,-1273.05)",
+      "Commands": [
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "717(CD中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "718(可以接取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "还有什么事么？",
+      "Description": "还有什么事么？",
+      "Position": "(-2133.447,-1405.483)",
+      "Commands": [
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "还有什么事么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听附近海域的消息",
+          "TargetBlockID": "this:348(打听判定)"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于蓬莎岛",
+          "TargetBlockID": "this:347(关于蓬莎岛)"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:517(打劫蓬莎岛)"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于碎星岛",
+          "TargetBlockID": "this:413(关于碎星岛)"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:350(打劫碎星岛)"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1014,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 1015,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 1016,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == False"
+        },
+        {
+          "ItemID": 1017,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:957(留下传音符印记)"
+        },
+        {
+          "ItemID": 1018,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1019,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 886,
+      "Name": "敖灵的求助",
+      "Description": "敖灵的求助",
+      "Position": "(-2535.321,-1580.212)",
+      "Commands": [
+        {
+          "ItemID": 887,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "让我想想...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 888,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "西北角那边似有一方小岛上浮，疑似是上古龙宫的残骸。有一龙族直奔而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 891,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 903,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 905,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 906,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 904,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 768,
+      "Name": "拒绝打听",
+      "Description": "拒绝打听",
+      "Position": "(-2312.956,-1513.903)",
+      "Commands": [
+        {
+          "ItemID": 771,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 772,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 791,
+      "Name": "海域情报赋值",
+      "Description": "海域情报赋值",
+      "Position": "(-1997.455,-1583.654)",
+      "Commands": [
+        {
+          "ItemID": 803,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 792,
+          "CmdType": "Fungus.GetNowSeaID"
+        },
+        {
+          "ItemID": 793,
+          "CmdType": "Fungus.If",
+          "Condition": "seaID == 9"
+        },
+        {
+          "ItemID": 1024,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1025,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1026,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1023(浪方已完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1027,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 855,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 800,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 795,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 845,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 839,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 926,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 927,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 928,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 930,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 931,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 932,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 933,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1020,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 1021,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1022,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 807,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 808,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 809,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1028,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 811,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 10"
+        },
+        {
+          "ItemID": 934,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 935,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1617(击杀吞云后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 936,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 937,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 938,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 939,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 940,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 941,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 945,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 946,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 947,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 948,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 949,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 950,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 951,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 952,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 953,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 942,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 943,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 944,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 812,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 813,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 11"
+        },
+        {
+          "ItemID": 814,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 815,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 12"
+        },
+        {
+          "ItemID": 816,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 817,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 13"
+        },
+        {
+          "ItemID": 1628,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1629,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1634,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 1635,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1636,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1637,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1638,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1639,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1640,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1642,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1641,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 819,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 14"
+        },
+        {
+          "ItemID": 1630,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1631,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1643,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 1644,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1645,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1646,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1647,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1648,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1649,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1650,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1651,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 859,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 15"
+        },
+        {
+          "ItemID": 1632,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1633,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1652,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 1653,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1654,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1655,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1656,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1657,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1658,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1659,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1660,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 821,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 16"
+        },
+        {
+          "ItemID": 872,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 873,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 874,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 875,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 876,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 877,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 878,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 879,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 880,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1612,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 882,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1611,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 881,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1613,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 884,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 860,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 885,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 825,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 17"
+        },
+        {
+          "ItemID": 847,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 858,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 848,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 867,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 851,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 863,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 864,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 865,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 866,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 849,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 868,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 869,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 870,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 871,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 852,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 826,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 853,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 861,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 18"
+        },
+        {
+          "ItemID": 908,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1041,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1043,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1044(无尽海渊完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1042,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1040,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 909,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 910,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 914,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 917,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 915,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 916,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 918,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 919,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 922,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1096,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 1097,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1098,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "838(获取海域情报)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 911,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 912,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 913,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1045,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 827,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 828,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(补位打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 957,
+      "Name": "留下传音符印记",
+      "Description": "留下传音符印记",
+      "Position": "(-2313.376,-1347.802)",
+      "Commands": [
+        {
+          "ItemID": 1010,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1012,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1013,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "对话选项",
+      "Description": "对话选项",
+      "Position": "(-2585.698,-1153.601)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{$TmpTalkString}{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听这片海域的传闻",
+          "TargetBlockID": "this:348(打听判定)"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于蓬莎岛",
+          "TargetBlockID": "this:347(关于蓬莎岛)"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:517(打劫蓬莎岛)"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于碎星岛",
+          "TargetBlockID": "this:413(关于碎星岛)"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对你身上的东西感兴趣",
+          "TargetBlockID": "this:350(打劫碎星岛)"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 976,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 1000,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 1001,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == False"
+        },
+        {
+          "ItemID": 977,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:957(留下传音符印记)"
+        },
+        {
+          "ItemID": 978,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1005,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1078,
+      "Name": "打听过的人",
+      "Description": "打听过的人",
+      "Position": "(-1990.954,-1459.717)",
+      "Commands": [
+        {
+          "ItemID": 1079,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我这里没有其它值得一提的传闻了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1080,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 737,
+      "Name": "回绝",
+      "Description": "回绝",
+      "Position": "(-1815.323,-1202.914)",
+      "Commands": [
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "可惜...可惜...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.NTaskAbandon"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 349,
+      "Name": "蓬莎岛易物(海域判断)",
+      "Description": "蓬莎岛易物(海域判断)",
+      "Position": "(-2316.396,-1294.59)",
+      "Commands": [
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.GetNowSeaID"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.If",
+          "Condition": "seaID == 2"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 3"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 4"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 5"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 6"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 7"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 8"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 9"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 10"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 11"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 12"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 13"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 14"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 15"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 16"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 17"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 18"
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "675(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 350,
+      "Name": "打劫碎星岛",
+      "Description": "打劫碎星岛",
+      "Position": "(-2312.257,-1125.885)",
+      "Commands": [
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "你想做什么？敢动我们晨星商会的货？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手！",
+          "TargetBlockID": "this:630(进入战斗)"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Menu",
+          "Text": "我只是开个玩笑...",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 735,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-1816.323,-1290.914)",
+      "Commands": [
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "多谢道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "CmdAddFavorByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 1044,
+      "Name": "无尽海渊完成",
+      "Description": "无尽海渊完成",
+      "Position": "(-1843.795,-1581.051)",
+      "Commands": [
+        {
+          "ItemID": 1048,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1049,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1046,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1050,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1052,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1051,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1053,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1054,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1047,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1035(完成后打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 718,
+      "Name": "可以接取",
+      "Description": "可以接取",
+      "Position": "(-1976.323,-1248.914)",
+      "Commands": [
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.StartNTask"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{$miaoshu}{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.IsNTaskCanFinish"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.If",
+          "Condition": "wancheng == True"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:735(同意)"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.Menu",
+          "Text": "我并没有这些东西",
+          "TargetBlockID": "this:736(没有)"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.Menu",
+          "Text": "回绝",
+          "TargetBlockID": "this:737(回绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 773,
+      "Name": "补位打听",
+      "Description": "补位打听",
+      "Position": "(-2150.392,-1648.714)",
+      "Commands": [
+        {
+          "ItemID": 1086,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "最近似乎没有什么值得一提的传闻，道友有什么想知道的，不妨去蓬沙岛的{color=#d0380a}采筠阁{/color}打听一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 788,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1617,
+      "Name": "击杀吞云后",
+      "Description": "击杀吞云后",
+      "Position": "(-1846.095,-1511.842)",
+      "Commands": [
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1620,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1621,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1622,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1623,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1624,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1625,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1626,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1627,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1035(完成后打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2310.671,-1064.153)",
+      "Commands": []
+    },
+    {
+      "ItemID": 838,
+      "Name": "获取海域情报",
+      "Description": "获取海域情报",
+      "Position": "(-1995.273,-1516.929)",
+      "Commands": [
+        {
+          "ItemID": 1055,
+          "CmdType": "CmdGetPlayerDaTing"
+        },
+        {
+          "ItemID": 1056,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpBool == True"
+        },
+        {
+          "ItemID": 1057,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1078(打听过的人)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1058,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 856,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 841,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 857,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 842,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 843,
+          "CmdType": "CmdSetPlayerDaTing"
+        },
+        {
+          "ItemID": 854,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

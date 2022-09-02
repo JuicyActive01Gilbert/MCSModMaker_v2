@@ -1,0 +1,168 @@
+{
+  "Name": "Talk19307",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3061.25,-1413.988)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "415(战后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 415,
+      "Name": "战后",
+      "Description": "战后",
+      "Position": "(-3063.441,-1333.119)",
+      "Commands": [
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你好不容易战胜了这些剑灵，但那名离火门的弟子却已身死道消。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Menu",
+          "Text": "将他身上所有的东西都取走",
+          "TargetBlockID": "this:422(扒光)"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Menu",
+          "Text": "只拿走储物袋中的东西",
+          "TargetBlockID": "this:423(储物袋)"
+        }
+      ]
+    },
+    {
+      "ItemID": 437,
+      "Name": "对白",
+      "Description": "对白",
+      "Position": "(-3056.09,-1190.766)",
+      "Commands": [
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这位道友，对不住啦。反正这些东西生不带来死不带去的，与其让它们一直留在这破遗迹里，还不如留给我算了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 422,
+      "Name": "扒光",
+      "Description": "扒光",
+      "Position": "(-3197.266,-1271.943)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "437(对白)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 423,
+      "Name": "储物袋",
+      "Description": "储物袋",
+      "Position": "(-2909.03,-1267.236)",
+      "Commands": [
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "437(对白)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,370 @@
+{
+  "Name": "Talk7386",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(道侣判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1164,
+      "Name": "失败分支",
+      "Description": "失败分支",
+      "Position": "(-2794.256,-1087.013)",
+      "Commands": [
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "好在那冥蛛追击了你们到洞口后，应该是担心被调虎离山，转身守护那万载冰心石去了，让你们得以安全逃离。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你们也未在此处多做停留，驾驭着法宝回到天星城林府养伤。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1147,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2793.079,-1230.542)",
+      "Commands": [
+        {
+          "ItemID": 1148,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1149,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1152,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1151,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1154,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1150(客房剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1150,
+      "Name": "客房剧情",
+      "Description": "客房剧情",
+      "Position": "(-2611.902,-1231.719)",
+      "Commands": [
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（在林府休息好几天了，去看看{$Lin}在做什么吧。没猜错的话，她应该在{color=#d0380a}林府长老堂{/color}。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1158,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1156,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2794.256,-1165.836)",
+      "Commands": [
+        {
+          "ItemID": 1122,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1121,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1136,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你们离开洞窟时，恰巧一个修士驾驭着法宝如流光般往化尘教方向飞去，没等你们细看已是消失在视野范围内。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯？刚才那修士好像有点眼熟？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "算了，当务之急还是回林府给{$Lin}治疗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1123,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk != (0.0, 2.0)"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1164(失败分支)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1162,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1140,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你们离开洞窟时，恰巧一个修士驾驭着法宝如流光般往化尘教方向飞去，没等你们细看已是消失在视野范围内。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯？刚才那路过的修士好像有点眼熟？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1141,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "别管他了，我们还是快些回林府给你疗伤吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1142,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "（那种熟悉感...好像修炼的是神识相关的功法...究竟是谁呢...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1143,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 1145,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "道侣判定",
+      "Description": "道侣判定",
+      "Position": "(-2791.902,-1292.895)",
+      "Commands": [
+        {
+          "ItemID": 1126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1132,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1133,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1147(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

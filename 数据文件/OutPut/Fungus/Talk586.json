@@ -1,0 +1,292 @@
+{
+  "Name": "Talk586",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "享乐多",
+      "Description": "享乐多",
+      "Position": "(-2917.694,-1056.018)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "此人已在府内待满6日，这6日内倒有{$TempValue}日在花天酒地，想必如今药性也渗透的差不多了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 302,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2782.694,-969.0183)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你大惊失色，连忙运足一口灵气，怎想体内灵力一运转起来，便自动消散的无影无踪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2131,
+          "AvatarBindKey": "",
+          "StoryText": "呵呵，看来此时药性已经发作，他这一身修为都被吸收了个干净，待我将他炼成精粉，做这药引子是刚刚好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2131,
+          "AvatarBindKey": "",
+          "StoryText": "你回去告诉宁王，等这炉丹药炼制完成，按照约定我会给他送去一颗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "惊恐之下，还没等你缕清其中原委，便眼前一黑失去了知觉...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetPlayerDie"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "判断",
+      "Description": "判断",
+      "Position": "(-2786.694,-1135.018)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(享乐多)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(闲逛多)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(都不多)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 288,
+      "Name": "都不多",
+      "Description": "都不多",
+      "Position": "(-2647.694,-1057.018)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "此人已在府内待满6日，大部分时间都在屋内享受足不出户，想必如今药性也渗透的差不多了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2798.694,-1209.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你随着管事竟一路走到了城外，正当你觉得奇怪是什么任务不能在王府内说，而偏要跑到城外来时，一个低沉的声音传入你的耳朵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2131,
+          "AvatarBindKey": "",
+          "StoryText": "人带来了么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "许长老，人已经带到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "闲逛多",
+      "Description": "闲逛多",
+      "Position": "(-2781.694,-1052.018)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "此人已在府内待满6日，这6日内倒有{$TempValue}日在到处闲逛取乐，想必如今药性也渗透的差不多了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

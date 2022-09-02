@@ -1,0 +1,684 @@
+{
+  "Name": "Talk11301",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2621.795,-1198.538)",
+      "Commands": [
+        {
+          "ItemID": 24,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(招新擂台-判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2619.888,-1268.016)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 433,
+      "Name": "第一个上判定",
+      "Description": "第一个上判定",
+      "Position": "(-2773.594,-1092.317)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "435(第一个上)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "436(观望)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 392,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-3133.206,-826.6275)",
+      "Commands": [
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Menu",
+          "Text": "药田",
+          "TargetBlockID": "this:367(药田)"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Menu",
+          "Text": "幻雾阵",
+          "TargetBlockID": "this:368(幻雾阵)"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Menu",
+          "Text": "方壶山",
+          "TargetBlockID": "this:369(方壶山)"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Menu",
+          "Text": "我没什么想了解的了。",
+          "TargetBlockID": "this:370(end)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 456,
+      "Name": "神兵阁",
+      "Description": "神兵阁",
+      "Position": "(-2778.769,-844.8647)",
+      "Commands": [
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，{shidi}有所不知，你可是最近几年来唯一一个可以通过外门擂台挑战的人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那擂台之上的可是真正修习过竹山宗功法的外门弟子，又岂是寻常的散修能够战胜的。{shidi}年纪虽轻，但攻守有度，我看刚刚连大师兄都对你的表现颇为赞许。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师兄过奖了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不说这些了，{shidi}刚入门，还有诸多事情要办。你先带上我这块信物，去{color=#d0380a}神兵阁{/color}领取门派配属的符器和道袍，然后{color=#d0380a}再回来找我{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 436,
+      "Name": "观望",
+      "Description": "观望",
+      "Position": "(-2717.891,-1030.68)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你成为了第一个能够赢得擂台胜利的挑战者，台下赞许声不绝于耳...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "169(胜利加入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 169,
+      "Name": "胜利加入",
+      "Description": "胜利加入",
+      "Position": "(-2781.387,-965.257)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.setMenPai"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 988,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 984,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 985,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 986,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "李青麟赞许地望了你一眼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetTaskDisabled"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetTaskDisabled"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "恭喜{shidi}通过擂台赛的考验，以后你就是我们竹山宗的外门弟子了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "等今日所有的比试结束以后，那边的外门执事会负责你入门的相关事宜，",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "448(询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 368,
+      "Name": "幻雾阵",
+      "Description": "幻雾阵",
+      "Position": "(-3310.853,-817.1388)",
+      "Commands": [
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "幻雾阵其中许多前辈留下的意识形成的灵体，供弟子历练，提升心境和实战经验。但传闻也有高人前辈留下传承考验在其中，静候有缘人了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "392(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 369,
+      "Name": "方壶山",
+      "Description": "方壶山",
+      "Position": "(-3303.005,-776.9761)",
+      "Commands": [
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "方壶山乃是门下资产由金丹期长老驻守，其中有一条灵石矿脉，同时饲养灵兽的御灵监，也在上面。弟子可以执行矿脉巡逻等任务，换取修炼资源。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "392(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 435,
+      "Name": "第一个上",
+      "Description": "第一个上",
+      "Position": "(-2840.351,-1031.118)",
+      "Commands": [
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你第一个上场就战胜了竹山宗的外门弟子，场下一片哗然...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "169(胜利加入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 370,
+      "Name": "end",
+      "Description": "end",
+      "Position": "(-2984.854,-826.7475)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "对了，本门的上乘功法，皆拜师之后习得；不过这是你我突破进入筑基期才能考虑的事情。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这是为何？？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "因为只有成为了内门弟子才能，选择一脉拜师加入，不过要是能取得门派大比的魁首倒是也能拜长老为师。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来如此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，没什么要注意的了，你自己走走吧，记得去神兵堂领符器。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "劳烦师兄了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "招新擂台-判断",
+      "Description": "招新擂台-判断",
+      "Position": "(-2624.074,-1091.306)",
+      "Commands": [
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "433(第一个上判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "171(败者退场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 171,
+      "Name": "败者退场",
+      "Description": "败者退场",
+      "Position": "(-2484.852,-1089.035)",
+      "Commands": [
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.HideNPC"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，就凭你也想进我竹山宗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 448,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2782.801,-900.6973)",
+      "Commands": [
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "没过多久，剩下的比试便都结束了，除了你以外，再没有一个人能在擂台上获得胜利。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{shidi}，久等了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Menu",
+          "Text": "比我想象中要快",
+          "TargetBlockID": "this:456(神兵阁)"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Menu",
+          "Text": "没想到只有我一人通过",
+          "TargetBlockID": "this:456(神兵阁)"
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "药田",
+      "Description": "药田",
+      "Position": "(-3308.802,-863.3011)",
+      "Commands": [
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "药田，竹山宗以培植灵植闻名，其中十数万年的先天乙木、金雷竹更是十分珍贵，弟子可以帮忙照顾灵植，换取修炼资源。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "392(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,840 @@
+{
+  "Name": "Talk733302",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "328(位置判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 391,
+      "Name": "逃 (Copy)",
+      "Description": "逃 (Copy)",
+      "Position": "(-3135.656,-1226.491)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.If",
+          "Condition": "huihe < 3"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和倪旭欣尽力配合出手，但由于默契太差，你在他之前就击碎了阵法核心，因此没有成功破阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和倪旭欣尽力配合出手，但由于默契太差，他在你之前就击碎了阵法核心，因此没有成功破阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "再次尝试",
+          "TargetBlockID": "this:392(再战 (Copy))"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Menu",
+          "Text": "交换对手",
+          "TargetBlockID": "this:393(换位 (Copy))"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Menu",
+          "Text": "放弃",
+          "TargetBlockID": "this:394(放弃 (Copy))"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "位置判定",
+      "Description": "位置判定",
+      "Position": "(-2796.041,-1228.638)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定右)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "390(胜负判定左1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2653.102,-1150.166)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你和倪旭欣合力之下，两个核心几乎同时被击破。这一次，核心只是闪耀了几次便碎裂开来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "啊，终于解决了，这个涵虚仙人的阵法真是复杂，可累死我了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "这两个阵眼相辅相生，涵虚的手段实属高明。只是没想到两位竟能这么快想到破阵之法，换做是在下恐怕也要琢磨许久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "公孙兄谬赞了，我也是在倪兄的提醒下才能猜到破阵方法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}别客气了，公孙家可是宁州公认的阵道第一，他说我们厉害那肯定是厉害了。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "没想到我倪某人也有成为阵道大师的潜质哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你摇了摇头，先行离开了。公孙季也微笑的跟在后面，只留下倪旭欣还在原地大笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(积分增加)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "再战",
+      "Description": "再战",
+      "Position": "(-2344.11,-1225.022)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，我已经找到窍门了，我们两个必须同时破阵！让我们再试一次。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 389,
+      "Name": "积分增加 (Copy)",
+      "Description": "积分增加 (Copy)",
+      "Position": "(-2970.41,-1094.082)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 390,
+      "Name": "胜负判定左1",
+      "Description": "胜负判定左1",
+      "Position": "(-2960.481,-1228.819)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.If",
+          "Condition": "huihe == 4"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "388(胜 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(逃 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(逃 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定右",
+      "Description": "胜负判定右",
+      "Position": "(-2653.429,-1228.398)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.If",
+          "Condition": "huihe == 6"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2497.717,-1227.121)",
+      "Commands": [
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.If",
+          "Condition": "huihe < 5"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和倪旭欣尽力配合出手，但由于默契太差，你在他之前就击碎了阵法核心，因此没有成功破阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和倪旭欣尽力配合出手，但由于默契太差，他在你之前就击碎了阵法核心，因此没有成功破阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Menu",
+          "Text": "再次尝试",
+          "TargetBlockID": "this:293(再战)"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "交换对手",
+          "TargetBlockID": "this:294(换位)"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Menu",
+          "Text": "放弃",
+          "TargetBlockID": "this:295(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "换位",
+      "Description": "换位",
+      "Position": "(-2498.974,-1300.87)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和倪旭欣经过简单商量后，觉得还是交换一下对手比较好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetSTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "积分增加",
+      "Description": "积分增加",
+      "Position": "(-2652.339,-1087.347)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 392,
+      "Name": "再战 (Copy)",
+      "Description": "再战 (Copy)",
+      "Position": "(-3299.503,-1225.291)",
+      "Commands": [
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，我已经找到窍门了，我们两个必须同时破阵！让我们再试一次。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetSTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "胜 (Copy)",
+      "Description": "胜 (Copy)",
+      "Position": "(-2960.114,-1151.739)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你和倪旭欣合力之下，两个核心几乎同时被击破。这一次，核心只是闪耀了几次便碎裂开来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "啊，终于解决了，这个涵虚仙人的阵法真是复杂，可累死我了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "这两个阵眼相辅相生，涵虚的手段实属高明。只是没想到两位竟能这么快想到破阵之法，换做是在下恐怕也要琢磨许久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "公孙兄谬赞了，我也是在倪兄的提醒下才能猜到破阵方法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}别客气了，公孙家可是宁州公认的阵道第一，他说我们厉害那肯定是厉害了。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "没想到我倪某人也有成为阵道大师的潜质哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你摇了摇头，先行离开了。公孙季也微笑的跟在后面，只留下倪旭欣还在原地大笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(积分增加 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "换位 (Copy)",
+      "Description": "换位 (Copy)",
+      "Position": "(-3136.212,-1305.713)",
+      "Commands": [
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和倪旭欣经过简单商量后，觉得还是交换一下对手比较好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetSTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "放弃 (Copy)",
+      "Description": "放弃 (Copy)",
+      "Position": "(-3135.218,-1151.966)",
+      "Commands": [
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你尝试了几次后选择了放弃，正当你和倪旭欣疗伤时，有其他修士配合击碎了人阵眼核心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-2496.72,-1146.74)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你尝试了几次后选择了放弃，正当你和倪旭欣疗伤时，有其他修士配合击碎了人阵眼核心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

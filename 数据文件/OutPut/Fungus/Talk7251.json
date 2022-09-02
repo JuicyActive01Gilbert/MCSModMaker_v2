@@ -1,0 +1,169 @@
+{
+  "Name": "Talk7251",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-3075.096,-1252.813)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "金丹",
+      "Description": "金丹",
+      "Position": "(-2797.79,-1153.964)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判断",
+      "Description": "胜负判断",
+      "Position": "(-2799.583,-1254.999)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(胜利)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(逃跑)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "化神",
+      "Description": "化神",
+      "Position": "(-2547.105,-1158.073)",
+      "Commands": []
+    },
+    {
+      "ItemID": 302,
+      "Name": "胜利",
+      "Description": "胜利",
+      "Position": "(-2937.861,-1254.876)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 521,
+          "AvatarBindKey": "",
+          "StoryText": "多谢道友救命之恩，财物有价生命无价，我只能倾囊以报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "逃跑",
+      "Description": "逃跑",
+      "Position": "(-2657.014,-1254.876)",
+      "Commands": []
+    },
+    {
+      "ItemID": 287,
+      "Name": "元婴",
+      "Description": "元婴",
+      "Position": "(-2675.873,-1156.704)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

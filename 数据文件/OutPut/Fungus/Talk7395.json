@@ -1,0 +1,1542 @@
+{
+  "Name": "Talk7395",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2789.671,-1471.032)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "538(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 538,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2789.251,-1386.329)",
+      "Commands": [
+        {
+          "ItemID": 873,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 875,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 750"
+        },
+        {
+          "ItemID": 876,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 877,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 874,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(白袍修士称呼载入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "白帝",
+      "Description": "白帝",
+      "Position": "(-2271.533,-1281.197)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "信物有么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你拿出此前凌轩交给你的信物递给他，后者也是在扫了一眼后丢换给你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "进去吧，葛师叔在大殿等你，有什么事跟他说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "信物有么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你拿出此前凌轩交给你的信物，在他眼前晃了晃。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "进去吧，葛师叔在大殿等你，有什么事跟他说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "前辈请前往大殿，葛师叔在那等候前辈，有什么事情请和他交流。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你冷漠地点点头，而后便进入玄道宗山门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 438,
+      "Name": "宁王府见过化神线",
+      "Description": "宁王府见过化神线",
+      "Position": "(-2728.028,-1034.5)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "前辈可还记得数百年前宁王府之事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "不敢，在下不过元婴修士，怎当得起阁下口中的“前辈”二字。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "我当初在逸风城擂台取胜从而成为宁王府供奉，之后又在误打误撞之下获知宁王勾结魔修将供奉炼为丹药以延寿增修的真相，险些遭天魔道长老灭口。当时还是前辈从魔修手里救下我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "我当初在逸风城擂台取胜从而成为宁王府供奉，之后又在误打误撞之下遇到前辈，应要求监视魔教妖女。但追查过程中险些遭天魔道长老灭口，还是前辈从魔修手里救下我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "这...好像确有此事...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "这才数百年你竟已臻至吾辈修仙者所追求的化神境，而在下却还在元婴期聊无精进，真是后生可畏，后生可畏啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "前辈当时还曾赠予我秘术气沉丹田，想来我能结成高品金丹而后修炼进步神速还多亏了前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "前辈当时赠与的法宝乌靴对我修行之路大有裨益，一直想感谢前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "前辈当时赠与的补灵丹对我修行之路大有裨益，一直想感谢前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "前辈当时还曾赠予我秘术气沉丹田，想来我能结成高品金丹而后修炼进步神速还多亏了前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "以现在的修为差距，这声前辈在下可不敢当，若是不嫌弃，称呼一声葛小友或葛道友便已是在下的荣幸了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Menu",
+          "Text": "葛道友",
+          "TargetBlockID": "this:454(道友)"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Menu",
+          "Text": "葛小友",
+          "TargetBlockID": "this:453(小友)"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "自动存档",
+      "Description": "自动存档",
+      "Position": "(-2622.635,-1233.744)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(门童对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2792.917,-1234.714)",
+      "Commands": [
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == 4"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(自动存档)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(白袍修士对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 512,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2718.147,-825.6528)",
+      "Commands": [
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "为何不用传音符联系？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "老祖临行前曾特地吩咐，此行事关重要，若非紧要事件切勿打扰。而且每20年便会检视修复一次，天魔眼在玄道宗的看守及维护下，已是稳定了数千年，现下又无相关迹象表明天魔眼面临危机，只怕是不太方便联系...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "{$DaoYou1}临行时，白帝可还有其他相关交代？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "这倒没有，但既然让我来调查，想必{$BaiDi}不会事出无由。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "前辈放心，在下领会得。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "在下想起来，离火门的炎萧炎道友前不久才进入过天魔眼核心区域，前辈不如先去询问一番炎道友，若有迹象表明天魔眼封印出了任何差池，在下斗胆作主陪前辈进天魔眼调查。可好？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 320,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2977.917,-1233.324)",
+      "Commands": [
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 21,
+          "AvatarBindKey": "",
+          "StoryText": "道友止步",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 343,
+      "Name": "师兄",
+      "Description": "师兄",
+      "Position": "(-2271.469,-1195.963)",
+      "Commands": [
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "呵，我修炼数百年连白帝的师承都未曾听人提起，只怕几百年前早已飞升或是故去，怎会有你这金丹期的师弟？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "劳烦编身份也编一个像话一点的，哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一脸不快地从储物袋中掏出此前凌轩给你的信物递给他，后者显然是识货的，扫了两眼后又丢还于你。至于之前的嘲笑，却是闭口不谈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "嘁，去吧，葛师叔在大殿等你，有什么事跟他说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "{size=24}信物倒是真的，不过我可不信白帝会有这么个金丹师弟。算了，跟我也没什么关系，就交给葛师叔分辨吧。{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "白帝的师弟？我可从未听闻白帝还有师弟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你有些不满，但还是拿出此前凌轩交给你的信物，在他眼前晃了晃。这玄道宗修士显然算是识货的，一转之前傲慢的态度，满脸堆笑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "是晚辈见识短浅了，前辈请进，葛师叔将会在大殿等候前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听你说完这人先是愣了一愣，但旋即便反应过来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "前辈请进，葛师叔将会大殿等候前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你平淡地回应一声，同时迈步前往玄道宗大殿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "化神后续",
+      "Description": "化神后续",
+      "Position": "(-2717.24,-889.4637)",
+      "Commands": [
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "{FirstName}{$DaoYou1}，您之前提到天魔眼？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "对，我奉{$BaiDi}之命，欲往天魔眼调查，特来玄道宗知会一声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "进入核心区事关重大，历来是即便有信物也需向混元子老祖请示。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "可老祖最近不在宗门内，在下也不能擅作主张，可否请前辈等上一段时间？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "512(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 383,
+      "Name": "宁王府未见过白袍修士",
+      "Description": "宁王府未见过白袍修士",
+      "Position": "(-2974.447,-1034.125)",
+      "Commands": [
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 4"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "大殿正中，一位白袍修士正于此等候，料想便是所谓的葛师叔了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "玄道宗大殿乍一看与五行门派也大差不差，并不会因为门人倨傲就装饰得更为奢华。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "葛{$DaoYou},我奉{$BaiDi}之命，欲往天魔眼调查，还请行个方便。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "唔...天魔眼么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "进入核心区事关重大，所以即便有信物历来也需向混元子老祖请示。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "可...老祖他最近不知在忙何事久不示人，{$DaoYou1}可否等上几月？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "葛小友，我奉{$BaiDi}之命，欲往天魔眼调查，特来玄道宗知会一声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "进入核心区事关重大，所以即便有信物历来也需向混元子老祖请示。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "可老祖最近不在宗门内，我也不能擅作主张，可否请前辈等上一段时间？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "512(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 384,
+      "Name": "宁王府见过白袍修士",
+      "Description": "宁王府见过白袍修士",
+      "Position": "(-2493.557,-1033.323)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "前辈可还记得数百年前宁王府之事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "你是...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "数百年前，我在逸风城擂台取胜从而成为宁王府供奉，之后又在误打误撞之下获知宁王勾结魔修，将供奉炼为丹药以延寿增修的真相，险些遭魔教长老灭口。当时还是前辈从魔修手里救下我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "我当初在逸风城擂台取胜从而成为宁王府供奉，之后又在误打误撞之下遇到前辈，应要求监视魔教妖女。但追查过程中险些遭天魔道长老灭口，还是前辈从魔修手里救下我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "好像确有此事...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "见你说得信誓旦旦，这白袍修士好像是想起来什么，但又不敢肯定。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "道友当时赠与的补灵丹对我修行之路大有裨益，还要多谢葛道友。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "道友当时赠与的法宝乌靴对我修行之路大有裨益，还要多谢葛道友。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "事了之后前辈还曾赠予我秘术气沉丹田作为报酬，想来我当初能成功结丹还多亏了前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "你是当初那个筑基修士...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "几百年不见，你还在停留在金丹境...唉，修行不易，倒也正常。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "白袍修士",
+          "StoryText": "几百年不见，如今你都是元婴境修士，与在下已无差距，真是后生可畏啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "话说回来，{FirstName}{$DaoYou1}，你之前可是提到天魔眼？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "对，我奉{$BaiDi}之命，欲往天魔眼调查，特来玄道宗知会一声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "进入核心区事关重大，历来是即便有信物也需向混元子老祖请示。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "葛白袍",
+          "StoryText": "可老祖最近不在宗门内，在下也不能擅作主张，可否请前辈等上一段时间？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "512(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "门童对话",
+      "Description": "门童对话",
+      "Position": "(-2451.321,-1234.387)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不同于五行门派，玄道宗的山门只有一位金丹修士在此闭目修炼。你不想打搅他，便想绕至旁边而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你正欲拾级而上却被一奇形法宝挡住去路，回头再看时，这金丹修士还是闭目坐于山门前，连坐姿都未曾有变化，只是退回山门前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你早就听闻玄道宗修士自恃门派强大，面对其他修士时有些盛气凌人，再加上有事在身于是没有太在意他的态度。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "来玄道宗何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你正欲拾级而上却被一奇形法宝挡住去路，回头再看时，这金丹修士还是坐于山门前，只是已经张开眼睛正看着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你早就听闻玄道宗修士自恃门派强大，面对其他修士时有些盛气凌人，再加上有事在身于是没有太在意他的态度，只是退回山门前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "知客长老",
+          "StoryText": "前辈，请问来玄道宗有何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你正欲拾级而上却有人声从后方传来，转身看时，那金丹修士正恭敬地站在原地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Menu",
+          "Text": "奉白帝之命欲往天魔眼调查",
+          "TargetBlockID": "this:342(白帝)"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Menu",
+          "Text": "奉师兄白帝之命欲往天魔眼调查",
+          "TargetBlockID": "this:343(师兄)"
+        }
+      ]
+    },
+    {
+      "ItemID": 455,
+      "Name": "选择提起往事",
+      "Description": "选择提起往事",
+      "Position": "(-2644.941,-1099.282)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "384(宁王府见过白袍修士)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "438(宁王府见过化神线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 453,
+      "Name": "小友",
+      "Description": "小友",
+      "Position": "(-2785.363,-967.9891)",
+      "Commands": [
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "474(化神后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 454,
+      "Name": "道友",
+      "Description": "道友",
+      "Position": "(-2647.792,-969.1487)",
+      "Commands": [
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "474(化神后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "白袍修士称呼载入",
+      "Description": "白袍修士称呼载入",
+      "Position": "(-2800.398,-1297.386)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "白袍修士对话",
+      "Description": "白袍修士对话",
+      "Position": "(-2791.745,-1159.92)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "玄道宗大殿乍一看与五行门派也大差不差，并不会因为门人倨傲就装饰得更为奢华。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "大殿正中，一位白袍修士正于此等候，料想便是所谓的葛师叔了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "葛{$DaoYou1},我奉{$BaiDi}之命...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你看眼前这人有些眼熟，可不正是当年宁王府遇见的那位身着白衣的前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Menu",
+          "Text": "提起往事",
+          "TargetBlockID": "this:455(选择提起往事)"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Menu",
+          "Text": "不提往事",
+          "TargetBlockID": "this:383(宁王府未见过白袍修士)"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "383(宁王府未见过白袍修士)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

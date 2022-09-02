@@ -1,0 +1,739 @@
+{
+  "Name": "Talk130204",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "加好友",
+      "Description": "加好友",
+      "Position": "(-2793.357,-1107.599)",
+      "Commands": [
+        {
+          "ItemID": 396,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.AddCyFriend"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 327,
+      "Name": "选项后",
+      "Description": "选项后",
+      "Position": "(-2367.095,-1268.662)",
+      "Commands": [
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来如此，我会好好考虑{FirstName}供奉的意见的...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "天元石心",
+      "Description": "天元石心",
+      "Position": "(-3127.052,-1112.026)",
+      "Commands": [
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 316,
+      "Name": "吴家",
+      "Description": "吴家",
+      "Position": "(-2510.28,-1319.799)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我自然支持吴家。碎星商会能够有如今的实力，靠的正是不断吸纳各种人才，唐家和你们白家不也是如此么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(选项后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2794.164,-1174.061)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于选举",
+          "TargetBlockID": "this:295(关于选举)"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于灵舟",
+          "TargetBlockID": "this:296(关于灵舟)"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "炼制六品灵舟",
+          "TargetBlockID": "this:344(六品灵舟)"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == False"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 3"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:394(加好友)"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其他事了",
+          "TargetBlockID": "this:297(没有其他事了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 296,
+      "Name": "关于灵舟",
+      "Description": "关于灵舟",
+      "Position": "(-2642.989,-1174.061)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "早就听闻白家善于炼制灵舟，白长老更是当世为数不多有能力炼制六品灵舟之人，特意来与白长老讨教一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}供奉过奖了，这只是我们白家世代相传的手艺而已，既然{FirstName}供奉感兴趣，那我便说上一二。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "一件好的灵舟法宝有三点至关重要，速度，防御，和聚灵能力。若是用最好的灵舟，横跨一片海域也仅需数月，还能抵御各种灵气乱流，闭关修行之时也能更稳定的供给灵气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "想要炼制上好的灵舟，除了对炼制材料有极为严苛的要求，还需要在炼制时铭刻精妙的防御和聚灵阵法，没有独到的手法是不可能炼制成功的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若我能自行收集到足够的材料，白长老可愿帮我炼制六品灵舟？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 3"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "炼制六品灵舟所必须的{color=#d0380a}六品木属性材料{/color}极为稀有，若{FirstName}供奉真能找来的话，我答应为你炼制便是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "想要炼制六品灵舟对我而言也并非易事，何况最近长老会诸事繁杂，恐怕没有空帮{FirstName}供奉炼制了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "关于选举",
+      "Description": "关于选举",
+      "Position": "(-2639.618,-1238.833)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "既然这次的比试是唐家取胜，那此次选举我可能更倾向于选择唐家的长老。当然，我也需要参考现任会长的建议，在长老会开始前还不好下定论。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "既然这次的比试是{FirstName}供奉代表吴家取胜，那我可能更倾向于选择吴家的长老。当然，我也需要参考现任会长的建议，在长老会开始前还不好下定论。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过我倒是很好奇，{FirstName}供奉从外族人的角度来看，更愿意支持哪一方呢？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "吴家",
+          "TargetBlockID": "this:316(吴家)"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Menu",
+          "Text": "唐家",
+          "TargetBlockID": "this:317(唐家)"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "白家",
+          "TargetBlockID": "this:318(白家)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "白家",
+      "Description": "白家",
+      "Position": "(-2502.326,-1210.708)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "比试之日，你们商会的会长曾提及商会的立足之本，在我看来，这立足之本便是团结。从这一点来看，一直保持中立的白家反倒是最好的选择。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(选项后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2796.858,-1240.639)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来是{FirstName}供奉，不知找我何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 373,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-3291.492,-1182.385)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，这种材料的确可以用来炼制六品灵舟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过炼制六品灵舟可能需要花费我数月时间，待我炼制完成后，会将灵舟用传音符寄回给你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SendChuanYingFu"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.AddCyFriend"
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "枫玄玉髓",
+      "Description": "枫玄玉髓",
+      "Position": "(-3130.151,-1159.026)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "朽木冥铁",
+      "Description": "朽木冥铁",
+      "Position": "(-3128.151,-1205.026)",
+      "Commands": [
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "六品灵舟",
+      "Description": "六品灵舟",
+      "Position": "(-2959.151,-1173.026)",
+      "Commands": [
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "炼制六品灵舟需要花费我数月时间，待我炼制完成后，会将灵舟用传音符寄回给你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}供奉可是找到了能用来炼制灵舟的{color=#d0380a}六品木属性材料{/color}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Menu",
+          "Text": "翠虹木蕴铁",
+          "TargetBlockID": "this:347(翠虹木蕴铁)"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == True"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Menu",
+          "Text": "朽木冥铁",
+          "TargetBlockID": "this:348(朽木冥铁)"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.If",
+          "Condition": "Var3 == True"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "枫玄玉髓",
+          "TargetBlockID": "this:353(枫玄玉髓)"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "Var4 == True"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Menu",
+          "Text": "天元石心",
+          "TargetBlockID": "this:354(天元石心)"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "还没有",
+          "TargetBlockID": "this:297(没有其他事了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "唐家",
+      "Description": "唐家",
+      "Position": "(-2504.599,-1264.117)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "唐家更注重培养族内弟子的想法其实没有错，抛开我的身份而言，我更欣赏唐家。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(选项后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 347,
+      "Name": "翠虹木蕴铁",
+      "Description": "翠虹木蕴铁",
+      "Position": "(-3131.151,-1253.026)",
+      "Commands": [
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "没有其他事了",
+      "Description": "没有其他事了",
+      "Position": "(-2638.48,-1111.561)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

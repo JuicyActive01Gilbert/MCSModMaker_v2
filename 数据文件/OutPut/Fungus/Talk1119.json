@@ -1,0 +1,152 @@
+{
+  "Name": "Talk1119",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2636.441,-1350.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(New Block (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 301,
+      "Name": "say",
+      "Description": "say",
+      "Position": "(-2636.215,-1194.266)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.GetHaoGanDu"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 25"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1732,
+          "AvatarBindKey": "",
+          "StoryText": "道友何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1732,
+          "AvatarBindKey": "",
+          "StoryText": "道友何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不知你们少主现今去了何处，听管家说他也跟随商队来了蓬莎岛，但我却没看见他的身影。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1732,
+          "AvatarBindKey": "",
+          "StoryText": "原来阁下竟是少主的旧识，今日少主并未到坊市来，想来或许是在城中其他地方歇憩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 352,
+      "Name": "New Block (Copy)",
+      "Description": "New Block (Copy)",
+      "Position": "(-2652.215,-1270.266)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 300"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(say)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

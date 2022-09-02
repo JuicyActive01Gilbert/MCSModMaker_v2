@@ -1,0 +1,564 @@
+{
+  "Name": "Talk75",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3226.188,-1348.776)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "毕竟是上古城池，这间房屋里或许还残存着一些珍贵的功法宝物，你打算简单地搜查一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Menu",
+          "Text": "查看柜子",
+          "TargetBlockID": "this:429(查看柜子)"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Menu",
+          "Text": "查看桌子",
+          "TargetBlockID": "this:430(查看桌子)"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Menu",
+          "Text": "查看床幔",
+          "TargetBlockID": "this:431(查看床幔)"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3226.045,-1577.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "477(New Block1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 437,
+      "Name": "none",
+      "Description": "none",
+      "Position": "(-3225.869,-1441.854)",
+      "Commands": [
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "或许是空间错乱的缘故，你和倪旭欣并未传送到一处。而你落脚的这处空间似乎处于地底，室内的摆设不曾受到战争的波及，只是积了厚厚的灰尘。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 430,
+      "Name": "查看桌子",
+      "Description": "查看桌子",
+      "Position": "(-3046.869,-1348.854)",
+      "Commands": [
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "桌子上落满了灰尘，你在铜镜的旁边发现了一根断裂的玉簪，从材料看来原本应当是护身法宝一类的东西。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "难不成这间屋主也是修士吗...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 477,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(-3225.869,-1512.854)",
+      "Commands": [
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "482(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "437(none)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 446,
+      "Name": "就此罢手",
+      "Description": "就此罢手",
+      "Position": "(-3398.869,-1441.854)",
+      "Commands": [
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "直觉告诉你，床帐后的东西并不简单。为了安全着想，你并没有继续靠近。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "屋内已经没什么值得调查的东西了，你沿着屋内的台阶向上走去。幸好此处的空间还算稳定，你重新回到了古原城内。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2502.022,-1525.316)",
+      "Commands": []
+    },
+    {
+      "ItemID": 432,
+      "Name": "掀开帷幔",
+      "Description": "掀开帷幔",
+      "Position": "(-3399.869,-1255.854)",
+      "Commands": [
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你的动作虽然轻柔，但饱经时间摧折的布料早已脆弱不堪。你的手刚刚放上去，便听见唰啦一声，轻薄的床幔被扯成两段，飘散的灰尘充斥了整张红木床，你只得用灵气将浮尘统统除去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "失去了床帐的遮掩，塌上的黑影显露在你面前，一具身着星河道袍、早已失去生气的尸体面色惨然，直勾勾地盯着你所在的方向！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.GetXinJin"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 1000"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你猝不及防，被吓了一跳，下意识地将手上的灵气送了出去。那尸体吃了一击，咔啦啦地散成几块，露出身后掩藏的什么东西来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你心性宽厚，波澜不惊，外物的刺激并不能左右你的心情。这具尸体虽然出现突然，但你并没有受到什么影响。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此时微弱的灵力波动传来，你看向尸体的后方，一柄闪烁着浅淡灵光的剑落入视野。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "即使历经时间洗礼，这把剑依旧纤尘不染，精美的剑鞘似乎彰显着它的不凡。你将剑握入掌中，澎湃的水系灵气顿时似江入海般奔涌而来，剑穗上天青色宝珠也应和般地亮了起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你低头看去，以古文刻画的“辰星”二字泛着萤萤微光。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这就是星河剑派遗失的仙剑吗...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "屋内已经没什么值得调查的东西了，你沿着屋内的台阶向上走去。幸好此处的空间还算稳定，你重新回到了古原城内。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "屋内已经没什么值得调查的东西了，你沿着屋内的台阶向上走去。幸好此处的空间还算稳定，你重新回到了古原城内。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 429,
+      "Name": "查看柜子",
+      "Description": "查看柜子",
+      "Position": "(-3045.869,-1441.854)",
+      "Commands": [
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你翻箱倒柜，最终在最底层的木箱里发现了一件勉强能看出原本形状的道袍，显然是不能再穿了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "金丹期（初次检测）",
+      "Description": "金丹期（初次检测）",
+      "Position": "(-2502.051,-1454.887)",
+      "Commands": [
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 316,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2502.45,-1598.745)",
+      "Commands": []
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期（初次检测）",
+      "Description": "筑基期（初次检测）",
+      "Position": "(-2511.132,-1389.917)",
+      "Commands": [
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 431,
+      "Name": "查看床幔",
+      "Description": "查看床幔",
+      "Position": "(-3399.869,-1348.854)",
+      "Commands": [
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "古色古香的红木大床被烟粉色的帷幔遮挡着，随着你的靠近，薄布后深色的轮廓若隐若现，看来似乎有什么东西隐藏在帐子里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "床幔近在咫尺，你...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Menu",
+          "Text": "掀开帷幔",
+          "TargetBlockID": "this:432(掀开帷幔)"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Menu",
+          "Text": "就此罢手",
+          "TargetBlockID": "this:446(就此罢手)"
+        }
+      ]
+    },
+    {
+      "ItemID": 482,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-3048.783,-1510.941)",
+      "Commands": [
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,106 @@
+{
+  "Name": "Talk11701",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3226.064,-1339.206)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.GetHaoGanDu"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 20"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3002,
+          "AvatarBindKey": "",
+          "StoryText": "据族中长老说，宁州古迹中还残存着许多上古的宝物与传承，我费心搜罗好久，才得这几张古图。待进入古迹后若有缘相遇，我定与{$TmpTalkString}同享宝图，哈哈！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倪旭欣拿着几张古旧的卷轴翻来覆去看得起劲儿，好像并没有注意到你的存在。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

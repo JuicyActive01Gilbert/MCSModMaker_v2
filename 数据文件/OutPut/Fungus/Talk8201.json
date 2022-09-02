@@ -1,0 +1,810 @@
+{
+  "Name": "Talk8201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 330,
+      "Name": "正确（遁速检测）",
+      "Description": "正确（遁速检测）",
+      "Position": "(-2649.844,-992.2422)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "到了第五日的酉时，风口的风力陡然减小。你等了整整五日，等待的就是这个机会，立刻运足灵力，毫不犹豫地冲了出去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu < 35"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你全力施展遁术，但距离风口只有几步远时，一股恐怖的劲风又从裂缝中吹来。此时的风力已胜外围百倍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你终究还是慢了一些，被吹出好远的距离，重重地砸在岩壁之上，晕死过去...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你全力施展遁术，短短三息之间便来到了风口的深处，巨风便是从这里的一个裂缝中吹出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你一口气冲过裂缝，发现自己已经来到了一个地下溶洞之中。身后隐约还能听到呼啸的风声，而洞窟中却安静的很，不到百米的距离却仿佛进入了另外一个世界。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(进入溶洞)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "错误",
+      "Description": "错误",
+      "Position": "(-2504.392,-1066.106)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "到了第五日时，你毫不犹豫地冲了出去。可是风力并没有像你预想的那样减弱。你被烈风吹出好远的距离，重重地砸在岩壁之上，晕死过去...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.FadeScreen"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 298,
+      "Name": "前进（悟道检测）",
+      "Description": "前进（悟道检测）",
+      "Position": "(-2652.12,-1157.015)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你平日里不曾炼体，尽管已有金丹修为，但此时竟也感到有些力不从心，只能勉强用灵力护住周身不被罡风刮伤，确是难以继续前进了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "停下观察",
+          "TargetBlockID": "this:299(观察)"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开此地",
+          "TargetBlockID": "this:292(还是算了)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你平日里虽也修行过一些炼体法门，但不甚精通。又走不到百米，风势渐涨，你也开始感到力不从心，只能勉强用灵力护住周身不被罡风刮伤，确是难以继续前进了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Menu",
+          "Text": "停下观察",
+          "TargetBlockID": "this:299(观察)"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开此地",
+          "TargetBlockID": "this:292(还是算了)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你平日里也算修行过一些炼体法门，又顶着巨风走了数百米后，风势渐涨，竟也开始感到力不从心，只能勉强用灵力护住周身不被罡风刮伤，却是难以继续前进了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "停下观察",
+          "TargetBlockID": "this:299(观察)"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开此地",
+          "TargetBlockID": "this:292(还是算了)"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你于炼体一道颇有所成，强顶着罡风又走了半日，这才走到风口的深处，巨风便是从这里的一个裂缝中吹出，而这里的风力已胜外围百倍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一口气冲过裂缝，发现自己已经来到了一个地下溶洞之中。身后还能听到呼啸的风声，而洞窟中却平静的很，不到百米的距离却仿佛进入了另外一个世界。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(进入溶洞)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 379,
+      "Name": "收尸",
+      "Description": "收尸",
+      "Position": "(-2641.89,-696.0026)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既然我受了前辈传承，也应当算前辈的半个弟子了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你这样想着，于是在洞窟中凿除了一个小小的墓穴，又简单的立了一个墓碑，将鸿凌子的尸首安葬了进去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在修真这条大道上，身份贵贱，男女之别，年龄大小，皆是虚妄，而若是不能最终跨过仙凡那道鸿沟，那现在所经历的一些都不过是镜花雪月，毫无意义。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在鸿凌子的墓前磕了几个响头，然后便转身离开了这里。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.AddXinJin"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 291,
+      "Name": "一探究竟",
+      "Description": "一探究竟",
+      "Position": "(-2794.162,-1158.152)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "妙哉妙哉，如此奇地，若非有人刻意布阵所为，就是大自然的鬼斧神工，无论如何都值得一看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你顶着罡风慢慢向峡谷深处走去，没走多远就感觉风阻越来越大，已是谷口处的数倍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续前进",
+          "TargetBlockID": "this:298(前进（悟道检测）)"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Menu",
+          "Text": "停下观察",
+          "TargetBlockID": "this:299(观察)"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "进入溶洞",
+      "Description": "进入溶洞",
+      "Position": "(-2639.615,-914.9701)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这地下溶洞本来应该是一片漆黑，但远处却隐隐能够看到一丝亮光。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "循着亮光走去，原来是一枚夜明珠被摆放在一张石桌之上，再向旁边望去，还有一张石床，上面是一具盘膝而坐的骷髅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来这里曾经是这位前辈的清修之地，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "向前辈行礼",
+          "TargetBlockID": "this:354(行礼)"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Menu",
+          "Text": "仔细搜索",
+          "TargetBlockID": "this:355(搜索)"
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "搜索",
+      "Description": "搜索",
+      "Position": "(-2503.252,-914.9681)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你在这小小的洞府中仔细搜索了一番，可惜除了几本已经无法阅读的书册外，一无所获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你心有不甘的想要看看石床下还有没有别的暗格，谁知刚一用力，便不知启动了什么机关，整个石床“砰”的一下炸成了粉末。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "洞府已毁，你懊恼不已，但也只能愤愤地离开了这里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2795.722,-1231.548)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一阵猛烈的狂风从不远处的峡谷刮来，未曾防备之下竟将你吹得一个踉跄，皮肤也被刮的生疼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你惊讶地向峡谷望去，只见峡谷两侧的山石全部都被这里的狂风刮得如同刀削一般平整，没有一棵草木生长。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这座峡谷似乎并不简单，要冒险前往探索一番么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:292(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 366,
+      "Name": "查看玉简",
+      "Description": "查看玉简",
+      "Position": "(-2640.754,-769.8654)",
+      "Commands": [
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "本座乃通古门长老鸿凌子，若有人能看到这里，证明本座修真之路已断，最终也未能突破到化神期。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "本座能够修行近千载，靠的也是当年游历时偶然得到的那几本秘术。如今既已身死，倒也不希望它们就此埋没。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这个石床之下另有一层机关，你只需将灵力输入床头的那枚石球便能打开，切勿使用蛮力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "第一本《凝水归流》乃水系法门，自身灵力越强，效果越好，当年帮本座度过了不少难关。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "另外的那本《逆周天结婴术》乃结婴所用秘术，能够提高结婴的成功率。若你已是元婴修为自然无用，但若还在金丹，想必会对你有所帮助。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你走到床头，果然看到一枚石球。随着你将灵气注入，石床之下的暗格缓缓打开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "暗格中只有两片碧绿的玉简，和几本颜色发黄，已经四分五裂的书册。随着暗阁的震动，书册竟碎成了一堆粉末。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "通古门的名号我之前从未听说过，也不知鸿凌子前辈已经离世多少年了，书纸都腐败成了这样。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这两片玉简应当就是前辈提及的两本秘术，那几本书册或许是前辈记录的一些心得体会，就这样毁了真是可惜...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Menu",
+          "Text": "替鸿凌子收尸",
+          "TargetBlockID": "this:379(收尸)"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:380(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "行礼",
+      "Description": "行礼",
+      "Position": "(-2643.024,-842.2406)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你走到床边，对着这具骷髅恭敬地行了一礼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "晚辈多有打扰，还请前辈见谅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不知是不是你的动作太大，那句骷髅发出一声轻微的咔嚓声，倒落碎成了一堆。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哎，这位前辈能在这种奇地搭建洞府修炼，想来当年也是一方大能，但到最后也逃不过这身死道消的命运...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正当你唏嘘不已时，恍惚见看到一道淡淡的反光闪过，竟是一枚玉简。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这枚玉简刚刚正被这具骷髅握在手中，因此不曾被你看到。如今骷髅碎成了一堆，反倒是让这枚玉简漏了出来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Menu",
+          "Text": "查看玉简",
+          "TargetBlockID": "this:366(查看玉简)"
+        }
+      ]
+    },
+    {
+      "ItemID": 380,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2500.981,-765.3209)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "观察",
+      "Description": "观察",
+      "Position": "(-2640.752,-1067.243)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你后退几步，找了个地方盘腿坐下，一边观察，一边等待起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "等到第二日{color=#d0380a}子{/color}时，风力突然有所减弱，但只持续了短短几息时间便又恢复如常。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "到第三日的{color=#d0380a}卯{/color}时，和第四日的{color=#d0380a}午{/color}时，风力同样会有一瞬间的减弱。若能精确把握这个时间，提前做好准备，也许就能成功冲入风口。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "风力的变化应该是有规律的，你猜测，下一次风力减弱的时间应当是...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "明日丑时",
+          "TargetBlockID": "this:331(错误)"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Menu",
+          "Text": "明日酉时",
+          "TargetBlockID": "this:330(正确（遁速检测）)"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Menu",
+          "Text": "明日申时",
+          "TargetBlockID": "this:331(错误)"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Menu",
+          "Text": "明日子时",
+          "TargetBlockID": "this:331(错误)"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-2643.026,-1229.742)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,367 @@
+{
+  "Name": "Talk19308",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3061.25,-1413.988)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "415(战后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 426,
+      "Name": "对话-1",
+      "Description": "对话-1",
+      "Position": "(-2910.611,-1334.068)",
+      "Commands": [
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "一般来说，元婴期修士的魂魄，如果找不到新的躯体夺舍，百年之内就会消散。我能在这柄剑中沉睡一千多年，本就说明了这剑并非凡品。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "再加上它刚刚吸收的可是纯阳法宝级别的剑灵，虽说这剑灵才刚刚被你重创...我想这至少也得是同级别的法宝才能做得到的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没想到这锈渍斑驳，看着普普通通的破剑居然还颇有来头。老头，有啥办法能让这剑重新恢复成纯阳法宝么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "它刚刚吸收完魔气，应该就已经提升了一个档次了，就连我都觉得自己的魂魄又壮大了几分。想来若是有足够的补充，它是有自行恢复的能力的。\r\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "要是再能找到这样的宝地让此剑吸收魔气，它的威能大概可以更进一层。对于我魂魄的修复想来也是大有益处！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来得想办法打听打听，宁州还有哪些地方可能会产生“魔气”，也许可以获得其它的线索...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "总之，现在这剑灵老大被灭了，那些小剑灵应该也不会再有什么异动了，还是先离开这里吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "482(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 482,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-3059.212,-1233.702)",
+      "Commands": [
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(门派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "443(散修)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 415,
+      "Name": "战后",
+      "Description": "战后",
+      "Position": "(-3060.032,-1333.119)",
+      "Commands": [
+        {
+          "ItemID": 502,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 10"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.OpenTieJianHongDian"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 5"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.OpenTieJianHongDian"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "锈渍铁剑从你的背后挣脱出来，飞至半空之中，红光大盛，将剑灵周身翻涌的魔气不断吸入。那剑灵才被你重创，没能挣扎几下，就彻底消失不见了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这破剑...怎么会？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此，我早该想到的...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Menu",
+          "Text": "这锈剑到底什么来头？",
+          "TargetBlockID": "this:426(对话-1)"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Menu",
+          "Text": "你想起什么了？",
+          "TargetBlockID": "this:426(对话-1)"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "482(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 442,
+      "Name": "门派",
+      "Description": "门派",
+      "Position": "(-3209.435,-1081.149)",
+      "Commands": [
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 443,
+      "Name": "散修",
+      "Description": "散修",
+      "Position": "(-2915.752,-1084.913)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

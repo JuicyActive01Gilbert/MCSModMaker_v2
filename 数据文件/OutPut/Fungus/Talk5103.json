@@ -1,0 +1,414 @@
+{
+  "Name": "Talk5103",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "随机敌人",
+      "Description": "随机敌人",
+      "Position": "(-2606.313,-1047.336)",
+      "Commands": [
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.If",
+          "Condition": "Avatar == 1"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "看什么看，没见过打劫的？把身上值钱的东西都交出来，大爷我就放你一马",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Avatar == 2"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "站住，老子允许你从这儿过了么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "站...站...站住，打劫！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "163(选择)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2605.134,-1216.544)",
+      "Commands": [
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "186(判断1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-2605.414,-882.1121)",
+      "Commands": [
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3248.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 163,
+      "Name": "选择",
+      "Description": "选择",
+      "Position": "(-2606.753,-994.8007)",
+      "Commands": [
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "又是沂山派的修士，我该怎么办呢...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Menu",
+          "Text": "花钱消灾",
+          "TargetBlockID": "this:145(检测钱)"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.Menu",
+          "Text": "要钱没有，要命一条！",
+          "TargetBlockID": "this:146(随机地图)"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "检测钱",
+      "Description": "检测钱",
+      "Position": "(-2471.812,-972.9821)",
+      "Commands": [
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.If",
+          "Condition": "GetID < 11"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "就这么点灵石？你打发叫花子呢？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "146(随机地图)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "就这么点儿？算了，今天就先放你一马，滚吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 186,
+      "Name": "判断1",
+      "Description": "判断1",
+      "Position": "(-2606.369,-1154.033)",
+      "Commands": [
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "153(判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "184(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 184,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2481.049,-1092.745)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "随机地图",
+      "Description": "随机地图",
+      "Position": "(-2605.684,-937.0438)",
+      "Commands": [
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "105(StartFight)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 153,
+      "Name": "判断",
+      "Description": "判断",
+      "Position": "(-2606.109,-1092.68)",
+      "Commands": [
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 1"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "93(随机敌人)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "184(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,450 @@
+{
+  "Name": "Talk4202",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "210(阵道判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 324,
+      "Name": "失败",
+      "Description": "失败",
+      "Position": "(-2504.792,-1077.695)",
+      "Commands": [
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你虽对于阵法一道有所涉猎，但眼前这处阵法的玄妙复杂却远超你的想象。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一番尝试后，你最终确认，仅凭目前对阵道的感悟，是绝不可能破除这座大阵的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 202,
+      "Name": "后续触发",
+      "Description": "后续触发",
+      "Position": "(-2651.809,-1156.725)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 15"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 35"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这里应当是{$Var}阵...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "尝试破除此处阵法",
+          "TargetBlockID": "this:230(判定)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:229(再等等)"
+        }
+      ]
+    },
+    {
+      "ItemID": 229,
+      "Name": "再等等",
+      "Description": "再等等",
+      "Position": "(-2651.809,-1078.725)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 200,
+      "Name": "触发判定",
+      "Description": "触发判定",
+      "Position": "(-2799.809,-1157.725)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "201(初次触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(后续触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 230,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2503.809,-1155.725)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID > 4"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "321(破除)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "324(失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 321,
+      "Name": "破除",
+      "Description": "破除",
+      "Position": "(-2365.792,-1155.695)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好，成了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 5406,
+          "AvatarBindKey": "",
+          "StoryText": "人类...你,,,你竟敢毁我大阵！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "灵纹的光芒黯淡下来，整个海底洞窟开始剧烈抖动起来，无数黑色的烟雾从各处缝隙中涌现，几息之间便将你笼罩在其中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 45"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 201,
+      "Name": "初次触发",
+      "Description": "初次触发",
+      "Position": "(-2800.809,-1080.725)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "灵纹...还有这异样的灵力波动...是四象聚灵阵？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "能够在海底布下达到宗门规格的聚灵大阵，看来这九幽大圣对于布阵的造诣颇深啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这布阵手法我竟从未见过...想必这九幽数千年来也是有所{color=#d0380a}奇遇{/color}，不知从哪里得来的上古传承...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "像这样的四象阵法一般都是由四处阵法组成。东面的青龙阵，北面的是玄武阵，西面的白虎阵和南面的朱雀阵...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "只需任意破除其中一个小阵，便可使大阵的作用大幅降低。但唯有找到大阵的阵眼藏在哪一处小阵之中，才能{color=#d0380a}一次{/color}将整座大阵破除。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(后续触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 210,
+      "Name": "阵道判定",
+      "Description": "阵道判定",
+      "Position": "(-2798.809,-1227.725)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID > 0"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "200(触发判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "217(一窍不通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 217,
+      "Name": "一窍不通",
+      "Description": "一窍不通",
+      "Position": "(-2652.809,-1228.725)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "灵纹...难道是阵法么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你对于阵道一窍不通，虽然猜测此处可能布下了阵法，但还是一头雾水，不知要从何处下手调查。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

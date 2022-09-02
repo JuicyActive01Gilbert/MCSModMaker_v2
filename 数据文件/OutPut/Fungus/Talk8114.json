@@ -1,0 +1,2813 @@
+{
+  "Name": "Talk8114",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2794.459,-1408.854)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1886(任务失败判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1526,
+      "Name": "有些枯燥",
+      "Description": "有些枯燥",
+      "Position": "(-2901.659,-991.7977)",
+      "Commands": [
+        {
+          "ItemID": 1531,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "整日闭关修炼是有些枯燥，但既然选择了修真一途，{FirstName}{$NickName}只怕是早就做好准备罢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "确实如此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1536,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1527(阴险稳重后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1730,
+      "Name": "暴躁类接受",
+      "Description": "暴躁类接受",
+      "Position": "(-2573.177,-999.4695)",
+      "Commands": [
+        {
+          "ItemID": 1767,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1766,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "多谢！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1768,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1769,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不用客气，我对星宫的男性修士也没什么好感。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1772,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1773,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那人便在星河剑派往青石灵脉的支路上，就交给{FirstName}{$NickName}了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1757,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1758,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 1759,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 1731,
+      "Name": "暴躁类拒绝",
+      "Description": "暴躁类拒绝",
+      "Position": "(-2569.96,-941.0284)",
+      "Commands": [
+        {
+          "ItemID": 1765,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不过一点小忙而已，亏我还第一个就找你帮忙呢。算了算了，我去找其他人帮忙吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1762,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1763,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 1775,
+      "Name": "暴躁类交任务",
+      "Description": "暴躁类交任务",
+      "Position": "(-2428.241,-1229.464)",
+      "Commands": [
+        {
+          "ItemID": 1860,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}可有找到那星宫弟子？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1861,
+          "CmdType": "Fungus.Menu",
+          "Text": "如实相告",
+          "TargetBlockID": "this:1867(如实相告1)"
+        },
+        {
+          "ItemID": 1862,
+          "CmdType": "Fungus.Menu",
+          "Text": "已然惩治",
+          "TargetBlockID": "this:1669(已然惩治1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1176,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2998.042,-1215.596)",
+      "Commands": [
+        {
+          "ItemID": 1406,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1577,
+      "Name": "接受",
+      "Description": "接受",
+      "Position": "(-3030.173,-871.5194)",
+      "Commands": [
+        {
+          "ItemID": 1579,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$NpcName}脸上一喜，但很快便掩盖下去，一副什么都没发生的样子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1580,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$ZaiXia}先谢过{FirstName}{$NickName}了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1581,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "无须客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那星宫男性修士便在星河剑派前往青石灵脉的支路上，还请{FirstName}{$NickName}尽快前往。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "等我消息吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1587,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1588,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 1589,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 1595,
+      "Name": "战后",
+      "Description": "战后",
+      "Position": "(-2590.444,-1217.324)",
+      "Commands": [
+        {
+          "ItemID": 1703,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1704,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1628,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 1629,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "少时，这星宫修士眼见不是你对手，也顾不上脸面，连忙出声试图让你停下手来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "等...等等！你真的冤枉我了！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1631,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "但你并没有理会他的意思。直到他只守不攻连连求饶，你才在击破他防御并小小惩戒他一番后，停下手来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "哎哟，都叫你等等了啊，真疼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1633,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你还有什么想说的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1634,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "我...别派的男修士能在星河剑派附近停留，为何我星宫就不行？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "他见你终于是停下手来，竟忘了刚才的低声下气，话语声又硬气了起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1636,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1637,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "呵，你们星宫的男修不都这样？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1654,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "道友对星宫的男性修士是不是有什么误解？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1655,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "呵，可不只是我，只怕宁州五行宗门对你们星宫修士都有些看法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1656,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1657,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "至少我不是那么龌蹉的修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1658,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "我之所以滞留在星河剑派附近，也不过是听说此处有炼心芝的踪迹而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1659,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "怕不是你的借口罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1660,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1661,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "{size=24}这么多天都没找到，估计是没希望了，不如就此离开吧，省得看这帮伪君子的脸色。{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1662,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "唉，也罢，我这就离开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1663,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "不等你再说什么这星宫修士已是转身离去。只有那满溢的愤懑还留在原地，萦绕不散。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1664,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "怕不是心虚了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1665,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "那星宫修士显然是已经远去，并未听到你的言语，自然也不会有回应。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1666,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "算了，回去复命吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1639,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "此事与门派无关，我与星宫从未有仇怨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "说的好听，还不是一见到星宫的男性修士就满脸厌恶。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1869,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 1"
+        },
+        {
+          "ItemID": 1873,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "若不是{$NpcName}说你在这附近滞留太久，让星河剑派的女性修士有些担忧，还托我前来询问情况，我可没兴趣管你星宫的人想做什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1871,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 6"
+        },
+        {
+          "ItemID": 1874,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "若不是{$NpcName}说你在这附近滞留太久，让星河剑派的女性修士有些担忧，还托我前来询问情况，我可没兴趣管你星宫的人想做什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1875,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 3"
+        },
+        {
+          "ItemID": 1876,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "若不是{$NpcName}说你在这附近滞留太久，让星河剑派的女性修士有些担忧，还托我前来询问情况，我可没兴趣管你星宫的人想做什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1872,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1643,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "若不是{$NpcName}说你在这附近骚扰星河剑派的女性修士，还托我出面赶你离开，我可没兴趣管你星宫的人想做什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1870,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1644,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1645,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "抱歉，是我错怪你了。唉，作为星宫的男性修士总是被宁州五行宗门的修士瞧不上，久而久之也有些过于敏感，还请见谅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1646,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "所以你不是为了星河剑派的修士停留在这附近的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1647,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "当然不是，此事说来话长，但告诉你也无妨。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1648,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "前些年我花重金托人为我寻觅炼心芝。没想到他居然告诉我在星河剑派西方接近衡州处有炼心芝的消息，若不是此人与我合作多次，颇有信誉，我是不会相信这个消息的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1649,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "但即便如此，他当初也只是远远的感受到炼心芝的气息而已，随后便被守护在其身边的妖王给发现，只好赶紧离开了。如今不知是那炼心芝提前成熟，还是妖王用了什么手段，我在他说的位置竟感受不到炼心芝的气息，只得在这附近慢慢寻找。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1650,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "原来如此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1651,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "唉，这么些时日还未发现炼心芝的气息，只怕是已被人捷足先登了。我还是另想办法吧，省的又引起误会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1652,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "告辞。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1653,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "（虽说可能是误会，但不论如何他也离开了，回去复命吧。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1641,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1667,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1910,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1911,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 1668,
+      "Name": "如实相告2",
+      "Description": "如实相告2",
+      "Position": "(-2273.111,-1074.577)",
+      "Commands": [
+        {
+          "ItemID": 1843,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcXingGe",
+          "StoryText": "你将星宫修士的辩解转述给{$NpcName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1844,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "原来如此。多谢{FirstName}{$NickName}解开此层误会，我稍候会转告星河剑派的好友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1904,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1905,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1906,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1851,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，还请收下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1852,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便不客气了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1853,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你二人又闲聊一会无关紧要的修炼杂事后，才各自离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1854,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1855,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1856,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1707,
+      "Name": "暴躁，活泼",
+      "Description": "暴躁，活泼",
+      "Position": "(-2571.453,-1063.417)",
+      "Commands": [
+        {
+          "ItemID": 1714,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}你可算来了，我这等得都...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1715,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你刚迈入云汐城的客栈，{$NpcName}便迎了上来。打招呼的语气除高兴外似乎还掺杂些抱怨，不过反应倒是很快，后半句话还没说出口便是戛然而止。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1716,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "久等了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1717,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$Xiao}，不久不久，我就这急性子，你别放心上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1718,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你也只是轻轻点头，表示没往心里去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1719,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不知{$NpcName}有何棘手的事找我？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1720,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这件事嘛，对我棘手，但对{FirstName}{$NickName}你只是一桩小事而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1721,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "哦？愿闻其详。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1722,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "事情其实很简单，就是有一个星宫的男性修士最近一直在星河剑派外逗留，看他那样子我就不顺眼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1723,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我后来上前询问他几句，这人竟然还对我恶语相向。若不是前段时间出了些事，如今有伤未愈，我当场就跟他“切磋切磋”论论斤两了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1724,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那想让我怎么帮忙呢？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1725,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "很简单，帮我揍他一顿，然后赶他离开就好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1726,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "只是因为他待在星河剑派附近么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1727,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "星宫的男性修士嘛，走到哪都不安好心，更何况还是在星河剑派这女性修士的胜地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1878,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1879,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 1"
+        },
+        {
+          "ItemID": 1728,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "而且实不相瞒，我有位好友也是星河剑派门人，也正是她此前在传音符中与我提起此事，我才上前询问的，结果他一开口比我还不耐烦。这才请{FirstName}{$NickName}过来相商此事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1880,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1877,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我有位交好的星河剑派修士此前在传音符中向我提起此事，还说虽然有些担心，但碍于门派关系不能随意出手逐他离开，烦闷得紧，这才请{FirstName}{$NickName}过来相商。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1881,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1734,
+          "CmdType": "Fungus.Menu",
+          "Text": "接受",
+          "TargetBlockID": "this:1730(暴躁类接受)"
+        },
+        {
+          "ItemID": 1735,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:1731(暴躁类拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1606,
+      "Name": "礼貌询问",
+      "Description": "礼貌询问",
+      "Position": "(-2272.692,-1370.777)",
+      "Commands": [
+        {
+          "ItemID": 1610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "我在干嘛与你有何关系？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1611,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你不会真是在做什么与星河剑派有关的事吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1612,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你别血口喷人！我只是有私事要办而已！可不会用神识探查星河剑派！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1613,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "我只是...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你再啰嗦我要动手了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1791,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1792,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1793,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你本只想心平气和的询问一番，但这星宫修士不知为何态度竟如此恶劣。回想起多年前在林府遇到的那个星宫弟子，让你更是气不打一处来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1794,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1795,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你本只想心平气和的询问一番，但这星宫修士不知为何态度竟如此恶劣，让你也是气不打一处来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1796,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1798,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "怕你不成？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1627,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1305.799)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1398,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2793.047,-1216.014)",
+      "Commands": [
+        {
+          "ItemID": 1401,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1402,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1591,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1598,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1912(随机npc生成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1592,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 1599,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1595(战后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1593,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 1600,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1705(性格判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1404,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1176(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1597,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1732,
+      "Name": "基准类接受",
+      "Description": "基准类接受",
+      "Position": "(-2723.691,-997.7451)",
+      "Commands": [
+        {
+          "ItemID": 1744,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1745,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1746,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "就星宫男性修士那风评，我只能说尽量吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1747,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1748,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "嗯，我先去问问情况吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1749,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1750,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那星宫修士便在星河剑派往青石灵脉的支路上，{FirstName}{$NickName}多加小心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1751,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1754,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1755,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 1756,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 1199,
+      "Name": "阴险，稳重",
+      "Description": "阴险，稳重",
+      "Position": "(-2961.423,-1064.17)",
+      "Commands": [
+        {
+          "ItemID": 1409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}，好久不见，近来可好？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1528,
+          "CmdType": "Fungus.Menu",
+          "Text": "一切都好",
+          "TargetBlockID": "this:1525(一切都好)"
+        },
+        {
+          "ItemID": 1529,
+          "CmdType": "Fungus.Menu",
+          "Text": "有些枯燥",
+          "TargetBlockID": "this:1526(有些枯燥)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1865,
+      "Name": "如实相告",
+      "Description": "如实相告",
+      "Position": "(-2274.439,-1178.342)",
+      "Commands": [
+        {
+          "ItemID": 1673,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcXingGe",
+          "StoryText": "你将星宫修士的辩解转述给{$NpcName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1674,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "呵呵，{$ZaiXia}早料到他会找借口推脱，不过没想到他竟说自己在星河剑派附近寻找炼心芝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1675,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "宁州金丹期以上的修士谁人不知这炼心芝早就在宁州绝迹，没想到还会有人以此为借口来掩盖自己令人不耻的行迹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1676,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不过话说回来，辛苦{FirstName}{$Nickname}道友了，也让{$ZaiXia}和星河剑派的修士们安心不少，多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1677,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "举手之劳而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1898,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1899,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1900,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1678,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，还请笑纳。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1679,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便不客气了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1683,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你二人又闲聊一会无关紧要的修炼杂事后，才各自离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1684,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1685,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1686,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1399,
+      "Name": "其他性格",
+      "Description": "其他性格",
+      "Position": "(-2725.493,-1064.075)",
+      "Commands": [
+        {
+          "ItemID": 1736,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你步入云汐城客栈时，{$NpcName}正倚栏赏花。见你到来也是转头微笑，而后领你找了一处坐下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1737,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "多谢{FirstName}{$NickName}愿意前来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1738,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不知{$NpcName}何事找我？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1739,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，事情是这样的。我有一位关系很好的星河剑派修士，此前在传音符中找我抱怨说最近总有个星宫的男性修士在星河剑派近旁逗留，令其有些担忧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1740,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "出于星宫男性修士的名声考量，任其长期停留在星河剑派附近确实影响不太好，但他也确实未做什么出格的事情，星河门人碍于门派关系也不方便直接出手驱离他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1741,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以是想让我帮忙逐他离开？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1787,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 3"
+        },
+        {
+          "ItemID": 1790,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "是有此意。原本我想询问他一番，但此人有些不好交流，所以想请{FirstName}{$NickName}帮忙交涉一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1788,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1742,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "是有此意。原本我想询问他一番，但此人有些不好交流，所以只能请{FirstName}{$NickName}帮忙交涉一番。如非必要，还请不要用武力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1789,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1752,
+          "CmdType": "Fungus.Menu",
+          "Text": "接受",
+          "TargetBlockID": "this:1732(基准类接受)"
+        },
+        {
+          "ItemID": 1753,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:1733(基准类拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1669,
+      "Name": "已然惩治1",
+      "Description": "已然惩治1",
+      "Position": "(-2274.603,-1230.716)",
+      "Commands": [
+        {
+          "ItemID": 1800,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcXingGe",
+          "StoryText": "你向{$NpcName}述说星宫修士被你教训的惨状，而下意识地忽视了他的“借口”。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1864,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$Xiao},痛快！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1863,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "辛苦{FirstName}{$Nickname}道友了，此举让{$ZaiXia}和星河剑派的修士们安心不少，多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1802,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "可惜这星宫的男修士虽令人厌恶，但也不能归于魔教一类，不然哪用这么麻烦。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1803,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1895,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1896,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1897,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1807,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，请收下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1808,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便不客气了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1809,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你二人又闲聊一会无关紧要的修炼杂事后，才各自离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1810,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1811,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1812,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1866,
+      "Name": "已然惩治",
+      "Description": "已然惩治",
+      "Position": "(-2275.93,-1123.118)",
+      "Commands": [
+        {
+          "ItemID": 1687,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcXingGe",
+          "StoryText": "你向{$NpcName}}述说星宫修士被你教训的惨状，而下意识地忽视了他的“借口”。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1688,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "辛苦{FirstName}{$Nickname}道友了，此举让{$ZaiXia}和星河剑派的修士们安心不少，多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1689,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "可惜这星宫的男修士虽令人厌恶，但也不能归于魔教一类，不然哪用这么麻烦。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1690,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1901,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1902,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1903,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1695,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，还请笑纳。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1696,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便不客气了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1697,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你二人又闲聊一会无关紧要的修炼杂事后，才各自离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1698,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1699,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1700,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1527,
+      "Name": "阴险稳重后续",
+      "Description": "阴险稳重后续",
+      "Position": "(-2959.947,-937.9635)",
+      "Commands": [
+        {
+          "ItemID": 1534,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$NickName}今日找我来怕不只是叙旧罢？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "自然不是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "只见他轻叩桌面两下，便有道童端着酒菜上前来，一一摆放于桌上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "难得一见怎能只是叙旧呢？之前{FirstName}{$NickName}应允赴会后，{$ZaiXia}便是着手准备了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "他为你斟好酒又以双手持杯奉上，而后才为自己也斟满。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "云汐城盈手露，干焯剑芦，天元伏龙汤，请品尝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "且慢，若是叙旧只怕不会有这么大排场，{$NpcName}不如说在前头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$NpcName}闻言只是爽朗地两声大笑，似乎是早就知道你会这么问。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那今天{FirstName}{$NickName}可是看走眼了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1545,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "要找{$NickName}帮忙的事嘛，确实有，但于{$NickName}的实力而言，只是件不足挂齿的小事。相比与{$NickName}叙旧饮酒而言，自当是不在话下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1546,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "来来来，喝酒。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "席间，你二人交流了一番修炼感悟、对修仙界的看法以及一些其他的烦扰杂事，倒也称得上是聊得尽兴。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "话说回来，近期我发现有一星宫男性长老时常于星河剑派外滞留，也不知是为何。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1547,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "推杯换盏之间，你见他突然提起此事，心想正事要来了。但表面上还是装作不知，仅是随口应付。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "作为修士，估摸着只是在寻觅仙缘罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1551,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "呵呵，若是寻常修士倒不无可能，但这星宫向来以双修为重，星河剑派又是女性修士圣地，只怕他是心怀鬼胎。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1552,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1553,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 1555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "星宫修士我也有接触过，却没有{$NickName}说的那般不堪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1556,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "哦？既是{FirstName}{$NickName}所说，那应是不会错了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1557,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$ZaiXia}听信流言，误解星宫，当罚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1572,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "但...{$ZaiXia}还是有些担心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "哦？为何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1554,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "还有这等说法？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "在下所述皆是实情。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1565,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "但{$NickName}为何会知道这些呢？我没记错的话，你不是星河剑派门人吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1566,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "咳，实不相瞒，{$ZaiXia}的好友正是星河剑派门人。最近也是她与我提起此事，才令我有些担忧 。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1570,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "关心则乱嘛，理解，理解。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1574,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以若是{FirstName}{$NickName}能帮{$ZaiXia}提点提点这星宫弟子，感激不尽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1571,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "（虽说是有事找我，但他也是盛情相待在先，该帮这个忙么？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1576,
+          "CmdType": "Fungus.Menu",
+          "Text": "接受",
+          "TargetBlockID": "this:1577(接受)"
+        },
+        {
+          "ItemID": 1575,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:1578(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1774,
+      "Name": "基类交任务",
+      "Description": "基类交任务",
+      "Position": "(-2425.968,-1074.919)",
+      "Commands": [
+        {
+          "ItemID": 1857,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}可有找到那星宫弟子？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1858,
+          "CmdType": "Fungus.Menu",
+          "Text": "如实相告",
+          "TargetBlockID": "this:1668(如实相告2)"
+        },
+        {
+          "ItemID": 1859,
+          "CmdType": "Fungus.Menu",
+          "Text": "已然惩治",
+          "TargetBlockID": "this:1868(已然惩治2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1578,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2887.996,-871.2877)",
+      "Commands": [
+        {
+          "ItemID": 1584,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$NpcName}倒也不恼，又招呼你饮酒品菜，对之前的事绝口不提。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1585,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "酒尽菜绝后方推说有事而离席。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1586,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1590,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 1867,
+      "Name": "如实相告1",
+      "Description": "如实相告1",
+      "Position": "(-2273.111,-1275.713)",
+      "Commands": [
+        {
+          "ItemID": 1814,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcXingGe",
+          "StoryText": "你将星宫修士的辩解转述给{$NpcName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1815,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$Xiao}，不过是借口而已，{FirstName}{$NickName}切莫相信他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1816,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "要知道这炼心芝早就在宁州绝迹，怎么可能会在星河剑派附近出现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1817,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不过话说回来，辛苦{FirstName}{$Nickname}道友了，也让{$ZaiXia}和星河剑派的修士们安心不少，多谢，{$Xia}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1818,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "举手之劳而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1819,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1820,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1821,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1822,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，不用跟我客气，{$Xiao}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1823,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便收下了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1824,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你二人又闲聊一会无关紧要的修炼杂事后，才各自离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1825,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1826,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1827,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2791.903,-1144.034)",
+      "Commands": [
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 2"
+        },
+        {
+          "ItemID": 1410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1407,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1408,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1522,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 12"
+        },
+        {
+          "ItemID": 1524,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1523,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1708,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 4"
+        },
+        {
+          "ItemID": 1709,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1710,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1707(暴躁，活泼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1711,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 8"
+        },
+        {
+          "ItemID": 1712,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1713,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1707(暴躁，活泼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1447,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1399(其他性格)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1525,
+      "Name": "一切都好",
+      "Description": "一切都好",
+      "Position": "(-3026.494,-993.2904)",
+      "Commands": [
+        {
+          "ItemID": 1530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "料想也是，强如{FirstName}{$NickName}又怎会有烦恼呢，哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$NickName}说笑了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1535,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1527(阴险稳重后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1400,
+      "Name": "npc性格获取",
+      "Description": "npc性格获取",
+      "Position": "(-2794.258,-1278.208)",
+      "Commands": [
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1521,
+          "CmdType": "CmdGetNPCFaceJson"
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1327,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1882,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 4"
+        },
+        {
+          "ItemID": 1884,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1883,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 8"
+        },
+        {
+          "ItemID": 1885,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1329,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1398(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1868,
+      "Name": "已然惩治2",
+      "Description": "已然惩治2",
+      "Position": "(-2272.329,-1022.762)",
+      "Commands": [
+        {
+          "ItemID": 1829,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcXingGe",
+          "StoryText": "你向{$NpcName}}述说星宫修士被你教训的惨状，而下意识地忽视了他的“借口”。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1830,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "辛苦{FirstName}{$Nickname}道友了，此举让{$ZaiXia}和星河剑派的修士们安心不少，多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1907,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1908,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1909,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1836,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，还请收下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1837,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那我便不客气了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1838,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你二人又闲聊一会无关紧要的修炼杂事后，才各自离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1839,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1840,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1841,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1607,
+      "Name": "暴力驱赶",
+      "Description": "暴力驱赶",
+      "Position": "(-2273.47,-1323.305)",
+      "Commands": [
+        {
+          "ItemID": 1617,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "此处既不是门派领地，又不是你私人所有，凭什么赶我离开？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你在星河剑派附近骚扰其中女修，还有理了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "怎么，我星宫修士不过是在这星河剑派的附近停留一会，在你眼里就是骚扰女修了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "这可不是我...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "敢说不敢认，我看你才是自己口中的小人！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1624,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "看你败在我手下后还敢不敢口放狂言！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1625,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "（看他这反应，难不成真是被冤枉的？还是先制服他再说吧。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1626,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1622,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1623,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1912,
+      "Name": "随机npc生成",
+      "Description": "随机npc生成",
+      "Position": "(-2588.698,-1322.57)",
+      "Commands": [
+        {
+          "ItemID": 1913,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1914,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1915,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 1916,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1917,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1925,
+          "CmdType": "Fungus.GetNPCName"
+        },
+        {
+          "ItemID": 1932,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1594(战前)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1886,
+      "Name": "任务失败判定",
+      "Description": "任务失败判定",
+      "Position": "(-2794.296,-1349.197)",
+      "Commands": [
+        {
+          "ItemID": 1887,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1888,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1889,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1400(npc性格获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1890,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1891,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1176(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1892,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1596,
+      "Name": "稳重类交任务",
+      "Description": "稳重类交任务",
+      "Position": "(-2433.371,-1149.156)",
+      "Commands": [
+        {
+          "ItemID": 1670,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}可有找到那星宫弟子？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1671,
+          "CmdType": "Fungus.Menu",
+          "Text": "如实相告",
+          "TargetBlockID": "this:1865(如实相告)"
+        },
+        {
+          "ItemID": 1672,
+          "CmdType": "Fungus.Menu",
+          "Text": "已然惩治",
+          "TargetBlockID": "this:1866(已然惩治)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1733,
+      "Name": "基准类拒绝",
+      "Description": "基准类拒绝",
+      "Position": "(-2723.691,-938.0437)",
+      "Commands": [
+        {
+          "ItemID": 1764,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "既是如此，那我另想他法好了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1760,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1761,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 1594,
+      "Name": "战前",
+      "Description": "战前",
+      "Position": "(-2434.211,-1322.065)",
+      "Commands": [
+        {
+          "ItemID": 1601,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你来到星河剑派左近，果然有一星宫修士于此不知用神识在探查着什么，一副聚精会神的样子，甚至没有留意你的到来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "（这便是{$NpcName}说的那个星宫修士吧？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1608,
+          "CmdType": "Fungus.Menu",
+          "Text": "礼貌询问",
+          "TargetBlockID": "this:1606(礼貌询问)"
+        },
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.Menu",
+          "Text": "暴力驱赶",
+          "TargetBlockID": "this:1607(暴力驱赶)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1705,
+      "Name": "性格判定",
+      "Description": "性格判定",
+      "Position": "(-2586.376,-1151.477)",
+      "Commands": [
+        {
+          "ItemID": 1893,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1894,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1776,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 2"
+        },
+        {
+          "ItemID": 1706,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1596(稳重类交任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1778,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1779,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1596(稳重类交任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1777,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 12"
+        },
+        {
+          "ItemID": 1780,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1596(稳重类交任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1781,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 4"
+        },
+        {
+          "ItemID": 1782,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1775(暴躁类交任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1783,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 8"
+        },
+        {
+          "ItemID": 1784,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1775(暴躁类交任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1785,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1786,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1774(基类交任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

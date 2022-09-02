@@ -1,0 +1,224 @@
+{
+  "Name": "Talk32",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2601.162,-1017.221)",
+      "Commands": [
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1000"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "这码头人声鼎沸，往来之人十之八九皆为商贩，想来此地便是碎星岛了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "不过我既已穿过碎星海域来到岛上，却未发生什么意外，想来家族族训必然有所纰漏。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "确实...也不知在这海上是否能发现什么端倪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "既然如此，我们便先在这碎星岛上搜罗一番，看看能否发现什么线索。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2603.035,-1174.115)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(New Block (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 352,
+      "Name": "New Block (Copy)",
+      "Description": "New Block (Copy)",
+      "Position": "(-2619.843,-1094.594)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 300"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2350.843,-1094.594)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

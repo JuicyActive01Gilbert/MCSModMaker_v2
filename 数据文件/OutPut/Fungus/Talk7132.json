@@ -1,0 +1,669 @@
+{
+  "Name": "Talk7132",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 157,
+      "Name": "赢",
+      "Description": "赢",
+      "Position": "(-2431.759,-1040.332)",
+      "Commands": [
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 3"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好身手，领教{$TmpTalkString}高招了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，温兄的剑招进步也很大，今日的切磋我也受益颇丰呐。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好身手，领教阁下高招了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友的剑招也很高明，此番切磋令我也受益颇丰呐。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "在下温杰，不知阁下是...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我名叫{FirstName}{LastName}，见温兄剑招舞的高明，不由自主便想与你切磋一二。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "185(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 185,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2280.077,-1040.668)",
+      "Commands": [
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "依道友所见，我这剑法如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Menu",
+          "Text": "大开大合",
+          "TargetBlockID": "this:190(错)"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Menu",
+          "Text": "剑走偏锋",
+          "TargetBlockID": "this:190(错)"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Menu",
+          "Text": "生生不息",
+          "TargetBlockID": "this:189(对)"
+        }
+      ]
+    },
+    {
+      "ItemID": 235,
+      "Name": "直接结束",
+      "Description": "直接结束",
+      "Position": "(-2006.106,-973.0261)",
+      "Commands": [
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 190,
+      "Name": "错",
+      "Description": "错",
+      "Position": "(-2142.43,-1040.034)",
+      "Commands": [
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友所言有几分道理，但其实我这竹山剑法最为讲究的，却是那生生不息的剑势。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "199(再后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 234,
+      "Name": "加微信",
+      "Description": "加微信",
+      "Position": "(-2141.27,-911.4875)",
+      "Commands": [
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好好好，今日相谈甚欢，日后若是有什么见闻感悟，也好与{$TmpTalkString}分享。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 189,
+      "Name": "对",
+      "Description": "对",
+      "Position": "(-2283.055,-975.9719)",
+      "Commands": [
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友果然眼光独到啊，一眼便看出了我这竹山剑法的精髓所在。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "199(再后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 158,
+      "Name": "输",
+      "Description": "输",
+      "Position": "(-2274.615,-1121.363)",
+      "Commands": [
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 3"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "比试切磋需点到为止，咱们就到这里吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呼...温兄的剑招真是进步神速。今日的切磋令我受益颇丰呐。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "比试切磋需点到为止，咱们就到这里吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呼...道友的剑招真是高明，此番切磋令我受益颇丰呐。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "在下温杰，不知阁下是...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我名叫{FirstName}{LastName}，见温兄剑招舞的高明，不由自主便想与你切磋一二。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "185(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 199,
+      "Name": "再后续",
+      "Description": "再后续",
+      "Position": "(-2140.308,-970.72)",
+      "Commands": [
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 3"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过这门竹山剑法，真是除了温兄以外，再没听别人练过了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过平日里倒是很少听闻竹山宗人善使剑法的，今天算是开了眼了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}说的是，我也听闻各派都有一套自称一派的剑法传承多年，不过除去金虹与星河两大剑派外，剩下三派的剑法几乎都已经失传了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我会修炼这竹山剑法，说来倒也是因为有过一番奇遇。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "奇遇？那我可就感兴趣了，温兄可有兴致与我说上一二？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此事我倒还未曾向他人提起，不过今日难得打的尽兴，与{$TmpTalkString}说说也无妨。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这奇遇还得从我炼气期时说起。{$TmpTalkString}应该知道，宗门藏经阁内的地阶秘籍，是只对筑基期以上的弟子才开放的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过这本《竹山剑法》的秘籍，也不知是不是因为太久无人问津了，竟然被遗落在了一层的一个角落里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我只匆匆翻看了几眼，便又放回了原处。如此一二来去，几番去藏经阁后便已记了个大概。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我不敢明目张胆在宗门广场上练剑，所以此后便常常独自一人来到方壶山的这处碧幽潭练剑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来温兄的这套剑法竟是这样自学而来的，真是了不起啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}过奖了。说来惭愧，我竹山宗大部分的功法典籍都与这竹山剑法格格不入，所以我独自琢磨了很久也不得要领。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "后来还是经过两位高人指点，才令我的剑道得以突飞猛进的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "两位高人？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那日我和往常一样，独自在碧悠潭练着剑，突然却听到有两人的对谈之声。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "其中一人哈哈笑道：青元啊，没想到你那绣花剑法居然还有人会练。你今日正好来了，不如去指点他一二吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "另外一人辩解道：太上长老，我这点剑法自然入不了你的法眼。不过你这么说，未免太不在小辈面前给我留面子了吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这两位前辈只闻其声，却不见其人，我知道必然是遇着了了不得的机缘，连忙高声呼喊，请前辈指点。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "于是那名被叫做青元的前辈便随便点出了我的几处问题，句句都直指要害，许多困扰了我数年的问题都迎刃而解了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "太上长老...莫非...莫非这是哪位化神期的前辈！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎，这我也不得而知了。从那以后，我虽然修为突飞猛进，却再也没有见到过这两位前辈了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "话说回来，你能有如此奇遇，也是因为你过去数年日复一日在这碧悠潭练剑的缘故吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "说不定总有一日，我们也可以修炼到他们那样的境界。到时候，你一定能够再见到那两位前辈的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，{$TmpTalkString}说的是，我们都该以这样更高的目标努力才是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.AddNpcNextToPoLv"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:234(加微信)"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:235(直接结束)"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "235(直接结束)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2431.193,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "157(赢)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "158(输)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

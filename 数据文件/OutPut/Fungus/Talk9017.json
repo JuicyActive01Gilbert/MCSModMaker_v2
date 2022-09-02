@@ -1,0 +1,1708 @@
+{
+  "Name": "Talk9017",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2804.259,-1369.709)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(获取变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 421,
+      "Name": "遁速",
+      "Description": "遁速",
+      "Position": "(-2625.255,-802.0148)",
+      "Commands": [
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.If",
+          "Condition": "Temdunsu == 0"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在阵中兜兜转转有回到了原地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu >= Temdunsu"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你凭借遁速强闯而过。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "遁速不足的你，在其中相形见绌只得退回来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 752,
+      "Name": "返回",
+      "Description": "返回",
+      "Position": "(-2476.552,-803.0849)",
+      "Commands": [
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 419,
+      "Name": "悟道2",
+      "Description": "悟道2",
+      "Position": "(-2902.492,-804.3705)",
+      "Commands": [
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "wudaoplayer >= 1"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你通过对{$wudaoname2}的领悟，通过了此地异象。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 789,
+          "CmdType": "Fungus.SetRandomTalkClick"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对{$wudaoname2}的领悟，难以通过此地异象。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "获取变量",
+      "Description": "获取变量",
+      "Position": "(-2803.267,-1225.593)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.GetFuBenShuXin"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(发生事件-炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "634(发生事件-筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "635(发生事件-金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 635,
+      "Name": "发生事件-金丹",
+      "Description": "发生事件-金丹",
+      "Position": "(-2662.185,-1036.787)",
+      "Commands": [
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShuXing == 0"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径遍布锋利的金石，罡风四射。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 1"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径遍布生生不息的藤蔓，稍有不慎便会深陷其中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 2"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径寒气四溢，寒风四起。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 3"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径烈火熊熊，温度及其骇人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 4"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前山石散去化沙，一滩巨大的流沙横亘于前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 5"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地有一滩毒沼，瘴气弥漫在空中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 6"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地由数块奇石组成，似乎是一座天然的困阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地由数块奇石组成，似乎是一座天然的困阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 634,
+      "Name": "发生事件-筑基",
+      "Description": "发生事件-筑基",
+      "Position": "(-2816.73,-1037.924)",
+      "Commands": [
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShuXing == 0"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径遍布锋利的金石，罡风四射。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 1"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径遍布生生不息的藤蔓，稍有不慎便会深陷其中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 2"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径寒气四溢，寒风四起。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 3"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径烈火熊熊，温度及其骇人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 4"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前山石散去化沙，一滩巨大的流沙横亘于前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 5"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地有一滩毒沼，瘴气弥漫在空中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 6"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地由数块奇石组成，似乎是一座天然的困阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地由数块奇石组成，似乎是一座天然的困阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 771,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 772,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 773,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 420,
+      "Name": "宝物",
+      "Description": "宝物",
+      "Position": "(-2770.711,-800.8782)",
+      "Commands": [
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.ItemCheckVar"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.If",
+          "Condition": "itemcheck == True"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "御起{$Var1}，通过此地异象。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 790,
+          "CmdType": "Fungus.SetRandomTalkClick"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你翻了翻储物袋，发现你并没有{$Var1}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "发生事件-炼气",
+      "Description": "发生事件-炼气",
+      "Position": "(-2966.889,-1043.151)",
+      "Commands": [
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShuXing == 0"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径遍布锋利的金石，罡风四射。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 1"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径遍布生生不息的藤蔓，稍有不慎便会深陷其中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 2"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径寒气四溢，寒风四起。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 3"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的路径烈火熊熊，温度及其骇人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 4"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前山石散去化沙，一滩巨大的流沙横亘于前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 5"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地有一滩毒沼，瘴气弥漫在空中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 6"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地由数块奇石组成，似乎是一座天然的困阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 774,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 775,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地由数块奇石组成，似乎是一座天然的困阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 776,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 777,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 778,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 779,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 780,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 781,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 782,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 783,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 418,
+      "Name": "悟道1",
+      "Description": "悟道1",
+      "Position": "(-3053.666,-805.4238)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.If",
+          "Condition": "wudaoplayer >= 1"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你通过对{$wudaoname1}的领悟，通过了此地异象。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 788,
+          "CmdType": "Fungus.SetRandomTalkClick"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.If",
+          "Condition": "TemJingJie == 3"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemJingJie == 6"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对{$wudaoname1}的领悟，难以通过此地异象。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 398,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2835.482,-894.0608)",
+      "Commands": [
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你决定.......",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Menu",
+          "Text": "通过以{$wudaoname1}的领悟，通过此地异象。",
+          "TargetBlockID": "this:418(悟道1)"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Menu",
+          "Text": "通过以{$wudaoname2}的领悟，通过此地异象。",
+          "TargetBlockID": "this:419(悟道2)"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Menu",
+          "Text": "御起{$Var1}，通过此地异象。",
+          "TargetBlockID": "this:420(宝物)"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Menu",
+          "Text": "凭借遁速强闯而过。",
+          "TargetBlockID": "this:421(遁速)"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.Menu",
+          "Text": "原路返回",
+          "TargetBlockID": "this:752(返回)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

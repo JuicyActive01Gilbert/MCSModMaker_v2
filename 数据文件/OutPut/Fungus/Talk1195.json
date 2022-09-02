@@ -1,0 +1,478 @@
+{
+  "Name": "Talk1195",
+  "Blocks": [
+    {
+      "ItemID": 0,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(336.0446,34.98507)",
+      "Commands": [
+        {
+          "ItemID": 7,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 1,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "113(御剑门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 131,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(990,35.87805)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你答应了倪旭欣的请求，但倪府内高手林立，你二人秉烛夜谈，制定了粗略的计划。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "昨日你答应倪旭欣探寻众人隐瞒他之事，先去哪里好呢？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.Menu",
+          "Text": "倪振南的房间",
+          "TargetBlockID": "this:146(倪振南)"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Menu",
+          "Text": "长老堂",
+          "TargetBlockID": "this:147(长老堂)"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.Menu",
+          "Text": "倪旭荣的房间",
+          "TargetBlockID": "this:148(倪旭荣)"
+        },
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.Menu",
+          "Text": "倪振东的房间",
+          "TargetBlockID": "this:149(倪振东)"
+        }
+      ]
+    },
+    {
+      "ItemID": 113,
+      "Name": "御剑门",
+      "Description": "御剑门",
+      "Position": "(529.8031,34.24048)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 500"
+        },
+        {
+          "ItemID": 114,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 115,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 119,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，你总算来了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "唉，自打我回府以来的这段时间真是不自在极了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Menu",
+          "Text": "你又闯什么祸了？",
+          "TargetBlockID": "this:358(闯祸了？)"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Menu",
+          "Text": "莫非是家中出了什么意外？",
+          "TargetBlockID": "this:359(家里出事)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "倪振东",
+      "Description": "倪振东",
+      "Position": "(1148,108)",
+      "Commands": [
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将准备去的地点告知倪旭欣，由他出马缠住房间主人，你乘机溜入房内展开调查。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "倪旭荣",
+      "Description": "倪旭荣",
+      "Position": "(1149,58)",
+      "Commands": [
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将准备去的地点告知倪旭欣，由他出马缠住房间主人，你乘机溜入房内展开调查。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "长老堂",
+      "Description": "长老堂",
+      "Position": "(1149,6)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将准备去的地点告知倪旭欣，由他出马缠住房间主人，你乘机溜入房内展开调查。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "倪振南",
+      "Description": "倪振南",
+      "Position": "(1149,-43)",
+      "Commands": [
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将准备去的地点告知倪旭欣，由他出马缠住房间主人，你乘机溜入房内展开调查。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 358,
+      "Name": "闯祸了？",
+      "Description": "闯祸了？",
+      "Position": "(675.0227,-0.4858398)",
+      "Commands": [
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我可是已经突破到金丹期了，怎么会还会到处闯祸！{xiongdi}可别把我还当成那个成天离家出走的孩子了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "家里出事",
+      "Description": "家里出事",
+      "Position": "(675.0226,81.60364)",
+      "Commands": [
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我也是这么认为的，可若是家里出了什么大事，怎么可能没人告诉我呢？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(842.1872,32.34997)",
+      "Commands": [
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "总之...也不知道为什么，府里的人见我像见了什么洪水猛兽一般，什么都不肯和我说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "长老还算有迹可循，毕竟我刚回府那日练剑时不小心一剑削了他的胡子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "倪旭荣这小子也算了，平日就不怎么亲近我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "但我绞尽脑汁也想不出为何二叔也要躲着我，难不成这几人偷偷做了什么对不起我的事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“一剑削了胡子...这谁看了都得绕着你走吧......”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "不成，我想想还是觉得有些古怪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "若觉得我到处惹是生非招人嫌何必等到今日才表露出来？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "一定是他们做了什么对不起我的亏心事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "不知{FirstName}{xiongdi}可有时间在府中逗留几日，帮我探寻一下他们的情况？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:131(同意)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

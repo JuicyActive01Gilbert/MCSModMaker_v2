@@ -1,0 +1,113 @@
+{
+  "Name": "OptionChoiceBase",
+  "Blocks": [
+    {
+      "ItemID": 0,
+      "Name": "addOption",
+      "Description": "addOption",
+      "Position": "(759,97)",
+      "Commands": [
+        {
+          "ItemID": 2,
+          "CmdType": "Fungus.YSOpenOptions"
+        },
+        {
+          "ItemID": 3,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1(addValue)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1,
+      "Name": "addValue",
+      "Description": "addValue",
+      "Position": "(760,192)",
+      "Commands": [
+        {
+          "ItemID": 4,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 != 0"
+        },
+        {
+          "ItemID": 5,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 6,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 25,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 != 0"
+        },
+        {
+          "ItemID": 28,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 27,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 22,
+          "CmdType": "Fungus.If",
+          "Condition": "Var3 != 0"
+        },
+        {
+          "ItemID": 29,
+          "CmdType": "Fungus.AddEXP"
+        },
+        {
+          "ItemID": 24,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 19,
+          "CmdType": "Fungus.If",
+          "Condition": "Var4 != 0"
+        },
+        {
+          "ItemID": 30,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 21,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 16,
+          "CmdType": "Fungus.If",
+          "Condition": "Var5 != 0"
+        },
+        {
+          "ItemID": 31,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 18,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 13,
+          "CmdType": "Fungus.If",
+          "Condition": "Var6 != 0"
+        },
+        {
+          "ItemID": 32,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 15,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

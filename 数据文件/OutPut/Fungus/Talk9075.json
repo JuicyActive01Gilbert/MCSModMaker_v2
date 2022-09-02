@@ -1,0 +1,2389 @@
+{
+  "Name": "Talk9075",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2964.487,-1302.664)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取-声望判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 901,
+      "Name": "前往碎星-一年1",
+      "Description": "前往碎星-一年1",
+      "Position": "(-1864.848,-1762.963)",
+      "Commands": [
+        {
+          "ItemID": 903,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，如果你愿意分担我一部分修理灵舟的费用，大概是{color=#d0380a}2000灵石{/color}，我不介意带你一程。一切顺利的话，我想我们会在{color=#d0380a}一年{/color}后抵达那里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 904,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 905,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2000"
+        },
+        {
+          "ItemID": 906,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:909(前往碎星-一年1触发)"
+        },
+        {
+          "ItemID": 907,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 908,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 916,
+      "Name": "南-一年1",
+      "Description": "南-一年1",
+      "Position": "(-1701.321,-1539.435)",
+      "Commands": [
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，如果你愿意分担我一部分修理灵舟的费用，大概是{color=#d0380a}4000灵石{/color}，我不介意带你一程。一切顺利的话，我想我们会在{color=#d0380a}两年{/color}后抵达那里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 926,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 927,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4000"
+        },
+        {
+          "ItemID": 928,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:918(南-一年1出发)"
+        },
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 930,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 348,
+      "Name": "目标地点判定",
+      "Description": "目标地点判定",
+      "Position": "(-2314.139,-1406.115)",
+      "Commands": [
+        {
+          "ItemID": 774,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID == 1251"
+        },
+        {
+          "ItemID": 775,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 776,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1252"
+        },
+        {
+          "ItemID": 777,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 782,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1261"
+        },
+        {
+          "ItemID": 784,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 781,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1262"
+        },
+        {
+          "ItemID": 785,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 780,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1255"
+        },
+        {
+          "ItemID": 786,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 779,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1265"
+        },
+        {
+          "ItemID": 787,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 778,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1258"
+        },
+        {
+          "ItemID": 788,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 783,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1268"
+        },
+        {
+          "ItemID": 789,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "770(前往宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 790,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1256"
+        },
+        {
+          "ItemID": 794,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "771(前往蓬莎)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 793,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1266"
+        },
+        {
+          "ItemID": 795,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "771(前往蓬莎)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 792,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1259"
+        },
+        {
+          "ItemID": 796,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "771(前往蓬莎)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 791,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1269"
+        },
+        {
+          "ItemID": 797,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "771(前往蓬莎)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 798,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1253"
+        },
+        {
+          "ItemID": 802,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "772(前往碎星-半年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 801,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1263"
+        },
+        {
+          "ItemID": 803,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "772(前往碎星-半年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 800,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1260"
+        },
+        {
+          "ItemID": 804,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "772(前往碎星-半年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 799,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 1270"
+        },
+        {
+          "ItemID": 805,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "772(前往碎星-半年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 806,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 807,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "773(前往南崖)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 868,
+      "Name": "宁-两年1出发",
+      "Description": "宁-两年1出发",
+      "Position": "(-2768.767,-1692.469)",
+      "Commands": [
+        {
+          "ItemID": 869,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 870,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 871,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "相同",
+      "Description": "相同",
+      "Position": "(-2599.813,-1226.307)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（平静地看着你）道友何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们似乎正准备出海？",
+          "TargetBlockID": "this:348(目标地点判定)"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 850,
+      "Name": "宁-半年1",
+      "Description": "宁-半年1",
+      "Position": "(-2903.321,-1808.55)",
+      "Commands": [
+        {
+          "ItemID": 852,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，如果你愿意分担我一部分修理灵舟的费用，大概是{color=#d0380a}2000灵石{/color}，我不介意带你一程。一切顺利的话，我想我们会在{color=#d0380a}一年{/color}后抵达那里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 863,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 864,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2000"
+        },
+        {
+          "ItemID": 859,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:861(宁-一年1出发)"
+        },
+        {
+          "ItemID": 865,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 860,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 324,
+      "Name": "友好（玩家境界判断）",
+      "Description": "友好（玩家境界判断）",
+      "Position": "(-2795.129,-1055.505)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > NPCLV"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < NPCLV"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(同)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "335(低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 717,
+      "Name": "CD中",
+      "Description": "CD中",
+      "Position": "(-2125.269,-1293.365)",
+      "Commands": [
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "看看我这里有没有你需要的东西吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 296,
+      "Name": "境界相同",
+      "Description": "境界相同",
+      "Position": "(-2592.14,-1384.057)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（提防地看着你）我听说过你的名字，你有何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "敌对（玩家境界判断）",
+      "Description": "敌对（玩家境界判断）",
+      "Position": "(-2795.301,-1386.561)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > NPCLV"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "295(玩家境界高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < NPCLV"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(玩家境界低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(境界相同)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 861,
+      "Name": "宁-一年1出发",
+      "Description": "宁-一年1出发",
+      "Position": "(-2775.767,-1811.469)",
+      "Commands": [
+        {
+          "ItemID": 866,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 862,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 867,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 888,
+      "Name": "蓬-两年1出发",
+      "Description": "蓬-两年1出发",
+      "Position": "(-2175.435,-1686.493)",
+      "Commands": [
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 893,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 894,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 819,
+      "Name": "南-一年",
+      "Description": "南-一年",
+      "Position": "(-1849.698,-1538.424)",
+      "Commands": [
+        {
+          "ItemID": 913,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们正准备前往{color=#d0380a}南崖城{/color}，看能不能赶上下一次的拍卖会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 840,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:916(南-一年1)"
+        },
+        {
+          "ItemID": 841,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 295,
+      "Name": "玩家境界高",
+      "Description": "玩家境界高",
+      "Position": "(-2596.668,-1444.639)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（惊恐地看着你）你...你有何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 771,
+      "Name": "前往蓬莎",
+      "Description": "前往蓬莎",
+      "Position": "(-2600.476,-1739.238)",
+      "Commands": [
+        {
+          "ItemID": 842,
+          "CmdType": "Fungus.If",
+          "Condition": "weizhi == 2"
+        },
+        {
+          "ItemID": 843,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "816(蓬-一年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 844,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 845,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "817(蓬-两年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 736,
+      "Name": "没有",
+      "Description": "没有",
+      "Position": "(-1812.954,-1178.05)",
+      "Commands": [
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "可惜...可惜...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 817,
+      "Name": "蓬-两年",
+      "Description": "蓬-两年",
+      "Position": "(-2468.636,-1689.089)",
+      "Commands": [
+        {
+          "ItemID": 902,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这次带来的货物都已经出手了，我们正准备返航回{color=#d0380a}蓬莎岛{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 834,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:879(蓬-两年1)"
+        },
+        {
+          "ItemID": 835,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 878,
+      "Name": "蓬-一年1",
+      "Description": "蓬-一年1",
+      "Position": "(-2323.669,-1804.141)",
+      "Commands": [
+        {
+          "ItemID": 880,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，如果你愿意分担我一部分修理灵舟的费用，大概是{color=#d0380a}2000灵石{/color}，我不介意带你一程。一切顺利的话，我想我们会在{color=#d0380a}一年{/color}后抵达那里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 881,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 882,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2000"
+        },
+        {
+          "ItemID": 883,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:887(蓬-一年1出发)"
+        },
+        {
+          "ItemID": 884,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 885,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "中立（玩家境界判断）",
+      "Description": "中立（玩家境界判断）",
+      "Position": "(-2794.038,-1231)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > NPCLV"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "310(玩家高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < NPCLV"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(玩家低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(相同)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "玩家境界低",
+      "Description": "玩家境界低",
+      "Position": "(-2595.896,-1334.154)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（煞气腾腾地看着你）何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "碎星岛收购",
+      "Description": "碎星岛收购",
+      "Position": "(-2307.534,-1177.65)",
+      "Commands": [
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.GetNowSeaID"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.If",
+          "Condition": "seaID == 2"
+        },
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 3"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 4"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 5"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 6"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 7"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 8"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 9"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 10"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 11"
+        },
+        {
+          "ItemID": 697,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 12"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 13"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 14"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 15"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 16"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 17"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 18"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "675(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 770,
+      "Name": "前往宁州",
+      "Description": "前往宁州",
+      "Position": "(-3146.229,-1754.841)",
+      "Commands": [
+        {
+          "ItemID": 824,
+          "CmdType": "Fungus.If",
+          "Condition": "weizhi == 1"
+        },
+        {
+          "ItemID": 825,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "814(宁-一年2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 826,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 827,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "815(宁-两年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量获取-声望判断",
+      "Description": "变量获取-声望判断",
+      "Position": "(-2786.764,-1302.002)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 915,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID < 1261"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPaiHGD < -10"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(敌对（玩家境界判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPaiHGD >= -10"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPaiHGD < 30"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(中立（玩家境界判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "324(友好（玩家境界判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 675,
+      "Name": "任务CD判定",
+      "Description": "任务CD判定",
+      "Position": "(-2128.584,-1180.132)",
+      "Commands": [
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "717(CD中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "718(可以接取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 772,
+      "Name": "前往碎星-半年",
+      "Description": "前往碎星-半年",
+      "Position": "(-2012.117,-1759.005)",
+      "Commands": [
+        {
+          "ItemID": 810,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们正准备去附近的海域收集一些珍贵的草药，如果运气不差的话，最后我们会在{color=#d0380a}碎星岛{/color}出手这些货物。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 812,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:901(前往碎星-一年1)"
+        },
+        {
+          "ItemID": 813,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "还有什么事么？",
+      "Description": "还有什么事么？",
+      "Position": "(-2132.447,-1404.419)",
+      "Commands": [
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "还有什么事么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 918,
+      "Name": "南-一年1出发",
+      "Description": "南-一年1出发",
+      "Position": "(-1553.086,-1538.259)",
+      "Commands": [
+        {
+          "ItemID": 934,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 935,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 936,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 917,
+      "Name": "南-半年1出发",
+      "Description": "南-半年1出发",
+      "Position": "(-1551.91,-1641.788)",
+      "Commands": [
+        {
+          "ItemID": 931,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 932,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 933,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 909,
+      "Name": "前往碎星-一年1触发",
+      "Description": "前往碎星-一年1触发",
+      "Position": "(-1722.494,-1755.905)",
+      "Commands": [
+        {
+          "ItemID": 910,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 911,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 912,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 914,
+      "Name": "南-半年1",
+      "Description": "南-半年1",
+      "Position": "(-1707.201,-1639.435)",
+      "Commands": [
+        {
+          "ItemID": 919,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，如果你愿意分担我一部分修理灵舟的费用，大概是{color=#d0380a}2000灵石{/color}，我不介意带你一程。一切顺利的话，我想我们会在{color=#d0380a}一年{/color}后抵达那里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2000"
+        },
+        {
+          "ItemID": 922,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:917(南-半年1出发)"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 853,
+      "Name": "冷漠拒绝",
+      "Description": "冷漠拒绝",
+      "Position": "(-2923.09,-1101.876)",
+      "Commands": [
+        {
+          "ItemID": 854,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不错，我们的确正在做出海的准备，你打听这个做什么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 855,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:857(拒绝)"
+        },
+        {
+          "ItemID": 856,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "玩家低",
+      "Description": "玩家低",
+      "Position": "(-2590.538,-1172.723)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（冷漠地看着你）何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们似乎正准备出海？",
+          "TargetBlockID": "this:853(冷漠拒绝)"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 857,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2926.613,-1169.664)",
+      "Commands": [
+        {
+          "ItemID": 858,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我对你的实力与品性都所知甚少，出海本就危机四伏，我不能冒险把你一起带上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "高",
+      "Description": "高",
+      "Position": "(-2587.812,-1112.82)",
+      "Commands": [
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（恭敬地看着你）我听说过前辈的大名，有什么可以效劳的么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们似乎正准备出海？",
+          "TargetBlockID": "this:348(目标地点判定)"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 815,
+      "Name": "宁-两年",
+      "Description": "宁-两年",
+      "Position": "(-3022.725,-1695.606)",
+      "Commands": [
+        {
+          "ItemID": 886,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们正准备去附近的海域猎杀海兽，之后再把这批货物运往{color=#d0380a}宁州{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 830,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:851(宁-两年1)"
+        },
+        {
+          "ItemID": 831,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "玩家高",
+      "Description": "玩家高",
+      "Position": "(-2597.634,-1280.697)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（尊敬地看着你）前辈有何吩咐？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们似乎正准备出海？",
+          "TargetBlockID": "this:348(目标地点判定)"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 887,
+      "Name": "蓬-一年1出发",
+      "Description": "蓬-一年1出发",
+      "Position": "(-2183.671,-1801.787)",
+      "Commands": [
+        {
+          "ItemID": 889,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 890,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 891,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 818,
+      "Name": "南-半年",
+      "Description": "南-半年",
+      "Position": "(-1852.761,-1637.531)",
+      "Commands": [
+        {
+          "ItemID": 836,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们正准备前往{color=#d0380a}南崖城{/color}，看能不能赶上下一次的拍卖会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 837,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:914(南-半年1)"
+        },
+        {
+          "ItemID": 838,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "同",
+      "Description": "同",
+      "Position": "(-2588.875,-1061.601)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（友好地看着你）我听说过道友你的名号，也许有机会我们也可以合作一番。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们似乎正准备出海？",
+          "TargetBlockID": "this:348(目标地点判定)"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 816,
+      "Name": "蓬-一年",
+      "Description": "蓬-一年",
+      "Position": "(-2473.419,-1801.527)",
+      "Commands": [
+        {
+          "ItemID": 822,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这次带来的货物都已经出手了，我们正准备返航回{color=#d0380a}蓬莎岛{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 832,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:878(蓬-一年1)"
+        },
+        {
+          "ItemID": 833,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 851,
+      "Name": "宁-两年1",
+      "Description": "宁-两年1",
+      "Position": "(-2899.768,-1694.101)",
+      "Commands": [
+        {
+          "ItemID": 872,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，如果你愿意分担我一部分修理灵舟的费用，大概是{color=#d0380a}4000灵石{/color}，我不介意带你一程。一切顺利的话，我想我们会在{color=#d0380a}两年{/color}后抵达那里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 873,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 874,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4000"
+        },
+        {
+          "ItemID": 875,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:868(宁-两年1出发)"
+        },
+        {
+          "ItemID": 876,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 877,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 879,
+      "Name": "蓬-两年1",
+      "Description": "蓬-两年1",
+      "Position": "(-2310.728,-1685.317)",
+      "Commands": [
+        {
+          "ItemID": 895,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，如果你愿意分担我一部分修理灵舟的费用，大概是{color=#d0380a}4000灵石{/color}，我不介意带你一程。一切顺利的话，我想我们会在{color=#d0380a}两年{/color}后抵达那里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 896,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 897,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4000"
+        },
+        {
+          "ItemID": 898,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:888(蓬-两年1出发)"
+        },
+        {
+          "ItemID": 899,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 900,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 814,
+      "Name": "宁-一年2",
+      "Description": "宁-一年2",
+      "Position": "(-3026.336,-1807.332)",
+      "Commands": [
+        {
+          "ItemID": 820,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们正准备去附近的海域猎杀海兽，之后再把这批货物运往{color=#d0380a}宁州{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 828,
+          "CmdType": "Fungus.Menu",
+          "Text": "介意多带一个人出海么？",
+          "TargetBlockID": "this:850(宁-半年1)"
+        },
+        {
+          "ItemID": 829,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 737,
+      "Name": "回绝",
+      "Description": "回绝",
+      "Position": "(-1816.693,-1090.584)",
+      "Commands": [
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "可惜...可惜...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.NTaskAbandon"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(还有什么事么？)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 349,
+      "Name": "蓬莎岛易物(海域判断)",
+      "Description": "蓬莎岛易物(海域判断)",
+      "Position": "(-2320.193,-1269.273)",
+      "Commands": [
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.GetNowSeaID"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.If",
+          "Condition": "seaID == 2"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 3"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 4"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 5"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 6"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 7"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 8"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 9"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 10"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 11"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 12"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 13"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 14"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 15"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 16"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 17"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "seaID == 18"
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "675(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 735,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-1816.323,-1250.187)",
+      "Commands": [
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "多谢道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 773,
+      "Name": "前往南崖",
+      "Description": "前往南崖",
+      "Position": "(-2007.905,-1567.665)",
+      "Commands": [
+        {
+          "ItemID": 846,
+          "CmdType": "Fungus.If",
+          "Condition": "weizhi == 2"
+        },
+        {
+          "ItemID": 847,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "818(南-半年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 848,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 849,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "819(南-一年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 718,
+      "Name": "可以接取",
+      "Description": "可以接取",
+      "Position": "(-1976.323,-1185.9)",
+      "Commands": [
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.StartNTask"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{$miaoshu}{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.IsNTaskCanFinish"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.If",
+          "Condition": "wancheng == True"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:735(同意)"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.Menu",
+          "Text": "我并没有这些东西",
+          "TargetBlockID": "this:736(没有)"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.Menu",
+          "Text": "回绝",
+          "TargetBlockID": "this:737(回绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "低",
+      "Description": "低",
+      "Position": "(-2587.81,-1011.555)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "（友善地看着你）我听说过你的名字，有什么事么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们似乎正准备出海？",
+          "TargetBlockID": "this:348(目标地点判定)"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 20"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:349(蓬莎岛易物(海域判断))"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 21"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么值得交易的东西？",
+          "TargetBlockID": "this:411(碎星岛收购)"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:351(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2305.191,-1050.455)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

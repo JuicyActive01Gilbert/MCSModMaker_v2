@@ -1,0 +1,998 @@
+{
+  "Name": "Talk8106",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1381.267)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(npc性格获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1176,
+      "Name": "失败剧情",
+      "Description": "失败剧情",
+      "Position": "(-2617.01,-1217.32)",
+      "Commands": [
+        {
+          "ItemID": 1312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你一时疏忽之下，竟被这魔修抢中破绽，一记神识攻击直入你头部。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "好在这一击有些仓促，只让你的神魂如受千针万刺般痛苦，乃至短暂地失去了思考的能力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "那魔修也深知在{$NpcName}的掩护下，他难以对你补上致命一击，所以也不作试探，而是御起遁术化作一道血光远去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "{$NpcName}则是守护在你身旁，一时忘了阻止他离开。待你从神魂受到攻击的痛苦中解脱出来时，那魔修早已不知去向。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "可恶，竟让他跑了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "抱歉，是我...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不，我应该谢谢你，刚才那种情形下若不是有你在一旁震慑他，只怕我已是被炼作那魂幡中的恶鬼了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "但看他的神通路数，应该不是我们要找的血剑宫魔修，此事只怕没我们想的简单。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "嗯，不过也算是有些收获。我只需将收集到的情报上报门派即可，后续估计要交给风雨楼了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "此番多谢{FirstName}{$NickName}帮忙了，一点小礼不成敬意。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1322,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "只可惜没能帮上更多的忙。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "魔教妖人手段诡异，若不是有{FirstName}{$NickName}陪同，{$ZaiXia}更不是那魔修对手了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$ZaiXia}便先回门派复命了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1332,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1333,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1163,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2791.911,-1216.014)",
+      "Commands": [
+        {
+          "ItemID": 1232,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1233,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1234,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1176(失败剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1199,
+      "Name": "诛杀",
+      "Description": "诛杀",
+      "Position": "(-2792.305,-1063.073)",
+      "Commands": [
+        {
+          "ItemID": 1259,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "可惜，可惜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1260,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "可...可惜什么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1261,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "可惜你是个邪修，受死吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1285,
+          "CmdType": "Fungus.SetNewNpcDeath"
+        },
+        {
+          "ItemID": 1286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你明明...啊！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1288,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1334,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1309,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "对此等魔修确实无需手软。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1310,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "如今确定了事情经过，我的任务也算是完成了，多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不用客气。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1293,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1295,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1296,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便先行回门派复命了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1297,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1298,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1307,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1302,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1200,
+      "Name": "放走",
+      "Description": "放走",
+      "Position": "(-2614.571,-1063.073)",
+      "Commands": [
+        {
+          "ItemID": 1201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你虽可恶，但此事确实应该算在那血剑宫修士头上，我倒是可以放你一马。{$NpcId}你怎么看？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1265,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 2"
+        },
+        {
+          "ItemID": 1264,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "他不是我的目标，就由{FirstName}{$NickName}定夺吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1266,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1267,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "他不是我的目标，就由{FirstName}{$NickName}定夺吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1268,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唔...就由{FirstName}{$NickName}拿主意吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1270,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "好，你走吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1272,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "谢...谢谢，我这就滚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1273,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "这魔修一边说着，像是担心你们反悔，还一边把自己的储物袋掏了出来，交到你手上。而后才忍着疼痛御起遁术，化作一道血光迅速远去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1274,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1275,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1335,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "如今确定了事情经过，我的任务也算是完成了，多谢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不用客气。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1279,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1283,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1281,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1282,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便先行回门派复命了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1284,
+          "CmdType": "Fungus.SetNewNpcDeath"
+        },
+        {
+          "ItemID": 1299,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1300,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1308,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1301,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2793.122,-1144.034)",
+      "Commands": [
+        {
+          "ItemID": 1217,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这魔修虽是实力不错，但还远不如你。初时，他还能与你正面碰撞一番，可几招过后就只能在慌乱中躲闪你的法宝及神通。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1218,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 4"
+        },
+        {
+          "ItemID": 1219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{$NpcId}见此情形更是早已放松警惕，在一旁为你鼓掌叫好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1220,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不知是出于顾忌在一旁盯着他的{$NpcId}，还是已然灵气枯竭，这魔修在硬结一记躲不开的攻击神通后，出现了短暂的停顿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "以你丰富的战斗经验又怎么会放过这等好机会，立时便驱动法宝一顿猛攻，随后而至的强力神通更是直接让其丧失战斗力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 2"
+        },
+        {
+          "ItemID": 1224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}的实力真是让在下大开眼界，原只道金丹修士在战斗时打不过还是能跑的，{FirstName}{$NickName}却能生擒金丹修士，只怕击杀他更是轻而易举。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1336,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1226,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}的实力真是让我大开眼界了，原只道金丹修士在战斗时打不过还是能跑的，{FirstName}{$NickName}却能生擒金丹修士，只怕击杀他更是轻而易举。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1228,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{$NpcId}过奖了，只是这魔修实力不济而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1229,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "先不说这些，我们还是审问这魔修一番吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1235,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1236,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你转头向在地上痛苦呻吟的魔修。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1237,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "饶...饶我一命，我...我什么都说！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1238,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "那得看你表现了。说说是怎么回事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1239,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "我本是它州修士，奉命来宁州打探情报。但在机缘巧合之下获得了一些炼制魂幡的绝佳材料。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "魂幡炼成后就想设法在宁州弄些修士魂魄淬炼一番，但门派之命我又不敢违抗，只能在其他修士仇杀或争斗天材地宝后捡捡漏。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你是想说这门派的覆灭与你无关？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1242,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "是...是啊，这门派上下几十位修士可没一个是我杀的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1243,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "哦？那这拘魂阵怎么说？我可听说是你提前设下的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1244,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "这...这...这是我提前知道有人要上门来寻仇，对，就是这样！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1245,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "哼，我看你是想吃点苦头才会说了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1246,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "别...我说，我说！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1247,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "唉，其实是这样的。这青羽门的副门主在其他州假扮血剑宫修士截杀修士赚取灵石、法宝及天材地宝等物事。要知血剑宫这名头是好用，但其中修士也是对这些假借名头的修士厌恶至极。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1248,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "这副门主又恰巧截杀到我头上。我虽不是同阶血剑宫修士的对手，但也不至于听到名号就闻风而逃。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1249,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "只一招，我就看穿他是在假扮血剑宫修士。将之击败后，觉得此人很是有趣，也就没对他如何。只是每隔一段时间便敲诈他一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "然后呢？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1251,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "但最近不是急着淬炼我这刚炼成的魂幡么，我又不方便自己出手暴露身份，就...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1252,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "就把他卖给血剑宫修士了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1253,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "咳，我只是把消息告诉血剑宫修士了而已，这...这种拦路截杀的修士，不...不是人人得而诛之么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那血剑宫修士如今去哪了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1255,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "以他们的习惯，遇到冒用血剑宫名头的修士，先诛其人，再灭其门，辱其先祖，断其传承。现在四项俱成，只怕是回雍州复命去了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1256,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "我还听说，诛杀冒用血剑宫名头的修士在宫内是会有大量奖励的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1257,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "你知道的还挺多。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1258,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "RDNpcId",
+          "StoryText": "那...是不是...能放我一条生路？我...我保证这就离开宁州，永不再回。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1198,
+          "CmdType": "Fungus.Menu",
+          "Text": "放走",
+          "TargetBlockID": "this:1200(放走)"
+        },
+        {
+          "ItemID": 1197,
+          "CmdType": "Fungus.Menu",
+          "Text": "诛杀",
+          "TargetBlockID": "this:1199(诛杀)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "npc性格获取",
+      "Description": "npc性格获取",
+      "Position": "(-2793.122,-1305.089)",
+      "Commands": [
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1262,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1327,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1329,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1163(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,366 @@
+{
+  "Name": "Talk123501",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2795.441,-1380.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(自言自语)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "关于林家与星宫",
+      "Description": "关于林家与星宫",
+      "Position": "(-2984.694,-1223.018)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "天星双尊是大名鼎鼎的散修夫妻，星辰尊者与广微仙子二人皆是化神期修为，这点世人皆知。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "但很少有人知道，广微仙子实则是我林家老祖。千余年前老祖与星辰前辈结为道侣，而后才有了星宫与这天星城。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 333,
+      "Name": "自言自语",
+      "Description": "自言自语",
+      "Position": "(-2797.694,-1322.018)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "心儿不知跑哪去了，要是让二长老知道，又该责骂她了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 299,
+      "Name": "试探",
+      "Description": "试探",
+      "Position": "(-2667.694,-1057.018)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "大长老心里是不是也对二长老和三长老有所怀疑？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "通羽长老默不作声，只是意味深长地看着你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "没什么事了",
+      "Description": "没什么事了",
+      "Position": "(-2596.694,-1222.018)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "心儿生性率直，望小友多担待。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "变量判定",
+      "Description": "变量判定",
+      "Position": "(-2803.694,-1167.018)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(关于联姻)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(沉默)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(求助)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(试探)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "关于联姻",
+      "Description": "关于联姻",
+      "Position": "(-2802.694,-1109.018)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "那天在长老堂外的果然是你...林沐心那丫头派你来的吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "唉，这丫头从小就不教人省心。若不是我暗中用神识护着你，凭你这点微末道行，还做不到在我们林府来去自如。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "保持沉默",
+          "TargetBlockID": "this:297(沉默)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "出言求助",
+          "TargetBlockID": "this:298(求助)"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "言语试探",
+          "TargetBlockID": "this:299(试探)"
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "求助",
+      "Description": "求助",
+      "Position": "(-2801.694,-1057.018)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "栖云和苗矮平日里说话做事都颇为谨慎，这次也是打着巩固林家与星宫关系的名号，于情于理我都没有立场反对。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "既然你有意帮助心儿调查此事，那我便给你一个机会。你们在府内行事我会想办法照应，至于能查出什么来，就看你们自己的了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2803.694,-1223.018)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "多谢小友将心儿带回，这府中有什么不明白的可以找我解惑。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于林家与星宫",
+          "TargetBlockID": "this:286(关于林家与星宫)"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于联姻",
+          "TargetBlockID": "this:280(变量判定)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:289(没什么事了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "沉默",
+      "Description": "沉默",
+      "Position": "(-2928.694,-1058.018)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "你不必害怕，我既然没有当场揭穿你，自然不打算在这件事情上责怪你和心儿。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "不过下一次若是你被苗矮或是栖云发现了，可就没有我这么好说话了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,527 @@
+{
+  "Name": "Talk26",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3070.425,-1238.206)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(判定是否传音)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 308,
+      "Name": "打得过",
+      "Description": "打得过",
+      "Position": "(-2477.185,-1310.955)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我来吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2655.382,-1235.213)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "打得过",
+          "TargetBlockID": "this:308(打得过)"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "打不过",
+          "TargetBlockID": "this:309(打不过)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 285,
+      "Name": "模板",
+      "Description": "模板",
+      "Position": "(-3006.259,-1380.158)",
+      "Commands": [
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "旁白",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "主角",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "杜老二",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "颜老怪",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "麻老九",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Menu",
+          "Text": "Option Text",
+          "TargetBlockID": ""
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "判定是否传音",
+      "Description": "判定是否传音",
+      "Position": "(-2931.413,-1238.223)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "a1903 > 0"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.If",
+          "Condition": "死亡情况 == False"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(开始对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "435(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "435(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "开始对话",
+      "Description": "开始对话",
+      "Position": "(-2796.227,-1237.213)",
+      "Commands": [
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "a1903",
+          "StoryText": "{FirstName}道友，可算把你等来了，就是他们。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "循着{ta}所指的方向望去，只见一群低阶修士毕恭毕敬地簇拥着一人，其境界已然达到筑基后期。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanpai",
+          "StoryText": "这便是你请来的救兵？好像也没有强到哪里去啊？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanpai",
+          "StoryText": "我最后奉劝你一句，这青石灵脉自然是强者所得，你们实力不足，乖乖拱手相让便是，别不识好歹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanpai",
+          "StoryText": "若真打起来，一个失手…呵呵，说不定就小命不保了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "a1903",
+          "StoryText": "如果是你要采这灵脉，我技不如人也不会多说什么。可这灵脉分明是那喽啰要用，你凭什么帮他出手？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanpai",
+          "StoryText": "这挖出来的东西本就是我们山门所得，只是由我小弟代劳而已，我出手又有何问题？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "a1903",
+          "StoryText": "照你这么说，以后这青石灵脉就是谁后台硬就归谁，还有什么公平可言？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanpai",
+          "StoryText": "若你能叫来比我强的，我们自然转身就走。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "a1903",
+          "StoryText": "岂有此理...{FirstName}道友，你有信心打过他吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 435,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2797.179,-1164.26)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "打不过",
+      "Description": "打不过",
+      "Position": "(-2476.155,-1156.39)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "他实力很强，我只怕不是对手…",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "a1903",
+          "StoryText": "…也罢，我去会会他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他运起功法攻了过去，但根本不是对手，不一会儿就败下阵来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见他的法袍已经变得破破烂烂，身上也是伤痕累累，显得极为狼狈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "…你没事吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "a1903",
+          "StoryText": "没事，这点小伤过两天就好了，你不必担心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "a1903",
+          "StoryText": "只是我技不如人，让{FirstName}道友见笑了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "fanpai",
+          "StoryText": "既然比试已经输了，还留在此地作甚？丢人现眼吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在一阵哄笑声中，{ta}转过身去，默默离开了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

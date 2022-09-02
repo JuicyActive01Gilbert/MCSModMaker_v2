@@ -1,0 +1,576 @@
+{
+  "Name": "Talk601",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "筑基战",
+      "Description": "筑基战",
+      "Position": "(-2873.244,-930.2858)",
+      "Commands": [
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你盘膝而坐，将精神集中到丹田之中，进入了空灵的状态。周边灵气开始疯狂向你的丹田中涌入，你不断地压缩丹田中的灵气...这种状态不会维持太久，你必须在此期间完成筑基。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.If",
+          "Condition": "xiantian == True"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "CmdGetPlayerHasWuDaoSeid"
+        },
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.If",
+          "Condition": "wudao == True"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "CmdGetPlayerHasWuDaoSeid"
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.If",
+          "Condition": "wudao == True"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 96,
+      "Name": "瓶颈检测",
+      "Description": "瓶颈检测",
+      "Position": "(-2604.162,-1120.843)",
+      "Commands": [
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "157(神游太虚)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.CheckPingJin"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "194(保存提醒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "192(不能突破)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2604.035,-1174.115)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(瓶颈检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3473.366,-1161.423)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3455.663,-899.0535)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3445.691,-1070.438)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3449.955,-1249.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3460.633,-993.135)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 155,
+      "Name": "金丹战",
+      "Description": "金丹战",
+      "Position": "(-2735.715,-926.6532)",
+      "Commands": [
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你盘膝而坐，将精神集中到丹田之中，进入了空灵的状态。周边灵气开始疯狂向你的丹田中涌入，这种状态不会维持太久，你必须在此期间，完成结丹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 203,
+      "Name": "放弃突破",
+      "Description": "放弃突破",
+      "Position": "(-2436.772,-1058.039)",
+      "Commands": []
+    },
+    {
+      "ItemID": 156,
+      "Name": "化神战",
+      "Description": "化神战",
+      "Position": "(-2467.584,-930.8115)",
+      "Commands": [
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你盘膝而坐，将精神集中到丹田之中，进入了空灵的状态。周边灵气开始疯狂向你的丹田中涌入...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "CmdStartHuaShen"
+        }
+      ]
+    },
+    {
+      "ItemID": 157,
+      "Name": "神游太虚",
+      "Description": "神游太虚",
+      "Position": "(-2442.5,-1114.973)",
+      "Commands": [
+        {
+          "ItemID": 258,
+          "CmdType": "CmdSaveSceneNameBeforeShenYou"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 192,
+      "Name": "不能突破",
+      "Description": "不能突破",
+      "Position": "(-2743.64,-1117.689)",
+      "Commands": [
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你盘膝而坐，将精神集中到丹田之中，但因为自身修为还没有到达巅峰，所以并没有能够突破的感觉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 194,
+      "Name": "保存提醒",
+      "Description": "保存提醒",
+      "Position": "(-2602.64,-1062.689)",
+      "Commands": [
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "每次境界突破都伴随着巨大的风险，已经做好万全的准备要开始突破了么...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接突破",
+          "TargetBlockID": "this:153(境界判断)"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.Menu",
+          "Text": "查看规则",
+          "TargetBlockID": "this:231(规则境界判断)"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Menu",
+          "Text": "放弃突破",
+          "TargetBlockID": "this:203(放弃突破)"
+        }
+      ]
+    },
+    {
+      "ItemID": 171,
+      "Name": "元婴战",
+      "Description": "元婴战",
+      "Position": "(-2599.539,-926.1538)",
+      "Commands": [
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你盘膝而坐，将精神集中到丹田之中，进入了空灵的状态。周边灵气开始疯狂向你的丹田中涌入...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 231,
+      "Name": "规则境界判断",
+      "Description": "规则境界判断",
+      "Position": "(-2741.627,-1060.316)",
+      "Commands": [
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 3"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "CmdTuJianHyperlink"
+        },
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 6"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "CmdTuJianHyperlink"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 9"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "CmdTuJianHyperlink"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 12"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "CmdTuJianHyperlink"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 15"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "暂未开放。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 153,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2605.428,-1008.875)",
+      "Commands": [
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 3"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "93(筑基战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 6"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "155(金丹战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 9"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "171(元婴战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 12"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "156(化神战)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 15"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "157(神游太虚)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

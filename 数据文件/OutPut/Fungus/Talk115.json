@@ -1,0 +1,750 @@
+{
+  "Name": "Talk115",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3051.746,-1425.866)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(竹山宗-丹房-境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3206.936,-1427.866)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-2871.162,-1101.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 418,
+      "Name": "沉默",
+      "Description": "沉默",
+      "Position": "(-2411.981,-1298.253)",
+      "Commands": [
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "算了算了，我这炉丹可不等人，这次就先用你这{xiaozi}吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "423(开始)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 313,
+      "Name": "炼气初次测试",
+      "Description": "炼气初次测试",
+      "Position": "(-2690.093,-1295.835)",
+      "Commands": [
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(初次进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "361(正常进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2529.875,-1092.751)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 261,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-2729.107,-1190.206)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "264(StartFight)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 417,
+      "Name": "解释",
+      "Description": "解释",
+      "Position": "(-2411.981,-1357.253)",
+      "Commands": [
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao < 2"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "前辈误会了，在下...在下是刚入门的外门弟子，这次是不小心误入丹房，这便离开！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "哼，又想反悔？我看你们这群外门弟子就该多吃吃苦，你今天可别想再跑了，谁来问我要人我都不放！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "前辈误会了，在下不知前辈正在开炉炼丹，这次是不小心误入丹房，这便离开！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "哼，又想反悔？好不容易青竹给我送来个靠谱的弟子，你今天可别想再跑了，谁来问我要人我都不放！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "423(开始)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2691.032,-1479.162)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 172,
+      "Name": "竹山宗-丹房-境界测试",
+      "Description": "竹山宗-丹房-境界测试",
+      "Position": "(-2880.71,-1425.731)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(炼气初次测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(元婴期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "初次进入",
+      "Description": "初次进入",
+      "Position": "(-2550.661,-1297.528)",
+      "Commands": [
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走进炼丹房，一股浓郁的药香便包围了你，只是深深地吸了几口气，就让你觉得精神充沛了起来。正当你好奇地四处张望时，你被人从身后一把揪住...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "臭{xiaozi}，来得这么晚，还要老夫亲自出去找你么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他轻而易举地就把你像孩子似的提了起来，将你上下打量了一翻，你被他钳子一样的大手牢牢抓住，动弹不得。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao < 2"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "啧啧，法力低微，力气又小，这青竹也太不厚道，怎么给我找了个这么孱弱的弟子来？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "不错...不错，资质根骨具佳，这次青竹倒是肯给我找个靠谱的弟子来了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Menu",
+          "Text": "解释",
+          "TargetBlockID": "this:417(解释)"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Menu",
+          "Text": "沉默",
+          "TargetBlockID": "this:418(沉默)"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2690.031,-1421.92)",
+      "Commands": []
+    },
+    {
+      "ItemID": 316,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2691.459,-1542.702)",
+      "Commands": []
+    },
+    {
+      "ItemID": 264,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-2718.62,-1097.485)",
+      "Commands": [
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 358,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2692.111,-1352.395)",
+      "Commands": []
+    },
+    {
+      "ItemID": 423,
+      "Name": "开始",
+      "Description": "开始",
+      "Position": "(-2256.981,-1295.253)",
+      "Commands": [
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "一会儿我开炉炼丹，你便开始帮我煽火。记住，我这炉丹须得炼制七七四十九天，期间丹火必须一直保持旺盛，不能有任何停顿。要是让我这一炉养气丹炼废了，你小子可赔不起。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他一边说着，一边拎着你大步流星地走进丹房，然后把你放在丹炉边，从储物袋里取出一柄巨大地蒲扇，交到你手里。你一把抓住扇子，只觉得重的几乎难以握住，不由得心中暗自叫苦...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 1"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你炼气初期的修为，举起上百斤的东西也毫不费力，但这扇子每挥一次，都要耗尽你全身的所有气力。你只能一边运转功法恢复体力，才能勉强维持住消耗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 2"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你炼气中期的修为，举起数百斤的东西也毫不费力，但这扇子每挥一次，都要耗尽你全身的所有气力。你只能一边运转功法恢复体力，才能勉强维持住消耗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 3"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你炼气后期的修为，举起数百斤的东西也毫不费力，但这扇子每挥一次，都要耗尽你全身的所有气力。你只能一边运转功法恢复体力，才能勉强维持住消耗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "即便如此，在连续煽了七七四十九天后，你再也拿不住扇子，一屁股跌坐在地，大口地喘着粗气。好在由于这段时间不断的运转功法，消耗与吸收灵气，你的修为也似乎精进了不少。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "修为{color=#d0380a}+500{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.AddEXP"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "嘿，你修为虽差，不过毅力倒是可佳，也算是个可造之才。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "老夫找人帮忙炼丹，丹成之后都会送一粒作为报酬，这枚养气丹你且收下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 208,
+          "AvatarBindKey": "",
+          "StoryText": "老夫{color=#d0380a}每年{/color}都会为宗门开炉炼丹，你要是有空，就来炼丹房帮忙煽火，好处我自然少不了你的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.AddHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "正常进入",
+      "Description": "正常进入",
+      "Position": "(-2550.981,-1238.253)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,1849 @@
+{
+  "Name": "Talk528",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(门派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 2788,
+      "Name": "成为炼丹长老",
+      "Description": "成为炼丹长老",
+      "Position": "(-2792.948,-783.2145)",
+      "Commands": [
+        {
+          "ItemID": 2814,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 2815,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 100"
+        },
+        {
+          "ItemID": 2848,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2849,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 2850,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 2853,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 2854,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2855,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2856,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 2857,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 2851,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 3039,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 2858,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "唔...{shidi}对于炼丹一道的造诣恐怕还无法胜任我派炼丹长老一职。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2859,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2852,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 2820,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 2821,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "以你在宗门的声望，若是成为炼丹长老恐怕不能服众。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2822,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 2823,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2824,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 339,
+      "Name": "关于炼丹长老",
+      "Description": "关于炼丹长老",
+      "Position": "(-2788.483,-893.3792)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "炼丹长老负责掌管门派炼丹房，定期组织普通弟子，或是亲自为门派炼制所需的丹药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2837,
+          "CmdType": "Fungus.Menu",
+          "Text": "决定成为炼丹长老",
+          "TargetBlockID": "this:2788(成为炼丹长老)"
+        }
+      ]
+    },
+    {
+      "ItemID": 2774,
+      "Name": "成为授业长老",
+      "Description": "成为授业长老",
+      "Position": "(-3065.948,-790.7368)",
+      "Commands": [
+        {
+          "ItemID": 2790,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 2791,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 100"
+        },
+        {
+          "ItemID": 2796,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 2797,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2798,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2799,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 2842,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 2793,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 2801,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "以你在宗门的声望，若是成为授业长老恐怕不能服众。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2802,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 2800,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2795,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 2772,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2979.948,-704.7368)",
+      "Commands": [
+        {
+          "ItemID": 2880,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "炼丹长老能够以更低的价格在门派内购得草药资源，以精进自身丹道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2881,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "炼器长老能够以更低的价格在门派内购得各类材料，以精进自身器道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2882,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "授业长老能够以较低的价格在门派藏经阁内兑换各类秘籍，以提升自身修为与悟道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "关于授业长老",
+      "Description": "关于授业长老",
+      "Position": "(-3065.158,-897.7882)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "授业长老需负责指点门派内门子弟，并定期举办讲法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2786,
+          "CmdType": "Fungus.Menu",
+          "Text": "决定成为授业长老",
+          "TargetBlockID": "this:2774(成为授业长老)"
+        }
+      ]
+    },
+    {
+      "ItemID": 341,
+      "Name": "关于挂名长老",
+      "Description": "关于挂名长老",
+      "Position": "(-2490.115,-896.6524)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "挂名长老虽在门派内担负长老名位，但实际上没有什么俗事缠身，只是一种威慑的存在，最为自由。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，挂名长老没有其它的实权，所能获得的俸禄也会相应的低上许多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "决定成为挂名长老",
+          "TargetBlockID": "this:359(成为挂名长老)"
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "1~2",
+      "Description": "1~2",
+      "Position": "(-2979.475,-1107.815)",
+      "Commands": [
+        {
+          "ItemID": 1058,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "只见掌门与各位长老们面面相觑，然后纷纷摇头叹息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "可惜，可惜...但总算是突破这层难关，总好过一辈子被困在筑基。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 318,
+      "Name": "金丹品阶判断",
+      "Description": "金丹品阶判断",
+      "Position": "(-2796.209,-1161.323)",
+      "Commands": [
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.GetJinDanLv"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 2"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "407(1~2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue > 2"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 5"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "408(3~5)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue > 5"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 8"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "409(6~8)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "410(9)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "3~5",
+      "Description": "3~5",
+      "Position": "(-2855.299,-1110.012)",
+      "Commands": [
+        {
+          "ItemID": 1059,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "只见{$zhangmen}眉头微微一皱，似乎在考虑些什么...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这...倒也不算太糟，若是未来有些别的机缘，师侄还是有望再进一步的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 320,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2789.617,-1024.061)",
+      "Commands": [
+        {
+          "ItemID": 1057,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "好了...该说正事了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄，如今你既然已经突破金丹，自然也该成为我派长老，享受和其他金丹期长老一样的待遇。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我派长老按职责不同，分为授业长老，外务长老，炼丹、炼器长老以及挂名长老。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不同职位的长老职责不同，权利与俸禄也不相同，师侄可以按照自己的特长与需求进行选择。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "332(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2792.876,-1209.65)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 84"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄修炼至今，似乎还不到100岁吧，真是不可思议。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year >= 85"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 134"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄修炼至今，似乎还不到150岁吧，真是前途不可限量。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year >= 134"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 184"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄能够在200岁前顺利结丹，总算是渡过了这个难关。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄这般年纪还能够结丹成功，倒是大大出乎我们的预料，也算没有辜负师侄这些年来的努力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不知...{FirstName}师侄丹成几品？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "告知{$zhangmen}",
+          "TargetBlockID": "this:318(金丹品阶判断)"
+        }
+      ]
+    },
+    {
+      "ItemID": 332,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2788.48,-959.2885)",
+      "Commands": [
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于授业长老",
+          "TargetBlockID": "this:331(关于授业长老)"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于外务长老",
+          "TargetBlockID": "this:338(关于外务长老)"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于炼丹长老",
+          "TargetBlockID": "this:339(关于炼丹长老)"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于炼器长老",
+          "TargetBlockID": "this:340(关于炼器长老)"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于挂名长老",
+          "TargetBlockID": "this:341(关于挂名长老)"
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "成为挂名长老",
+      "Description": "成为挂名长老",
+      "Position": "(-2487.57,-787.3796)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 992,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 993,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 994,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 2787,
+      "Name": "成为外务长老",
+      "Description": "成为外务长老",
+      "Position": "(-2933.948,-794.7219)",
+      "Commands": [
+        {
+          "ItemID": 2803,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 2804,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 100"
+        },
+        {
+          "ItemID": 2805,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 2806,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2807,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2808,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 2841,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 2809,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 2810,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "以你在宗门的声望，若是成为外务长老恐怕不能服众。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2811,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 2812,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2813,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "关于外务长老",
+      "Description": "关于外务长老",
+      "Position": "(-2933.934,-896.652)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "外务长老负责驻守门派驻地，以及外出收集门派需求的资源等等事宜。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "虽然杂事诸多且需及时处理，却也是门派内俸禄最高的职位。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2883,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不过若是耽误了宗门要务，你在宗门的声望也会遭受损失的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2836,
+          "CmdType": "Fungus.Menu",
+          "Text": "决定成为外务长老",
+          "TargetBlockID": "this:2787(成为外务长老)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "门派判定",
+      "Description": "门派判定",
+      "Position": "(-2795.534,-1259.615)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1003,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1001,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1002,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1004,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1005,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1006,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1012,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1013,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1009,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1014,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1015,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1016,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1017,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1018,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1019,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1020,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1021,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1022,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1023,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1024,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1025,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1026,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1027,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1028,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1029,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1030,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1031,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1032,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1033,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1034,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1035,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1036,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1037,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1038,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1039,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1040,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1041,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1042,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1043,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1044,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1045,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1046,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1047,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1048,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1049,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1050,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1051,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1052,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1053,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1054,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1055,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你来到宗门大殿，只见门派内的诸位长老都悉数在场，{$zhangmen}站在大殿中央，正笑脸盈盈地看着你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "见过{$zhangmen}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 397,
+      "Name": "选址",
+      "Description": "选址",
+      "Position": "(-2949.569,-604.5158)",
+      "Commands": [
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "开辟洞府，自然是选择灵气越浓郁的地方越好，这样对未来闭关修炼时的速度大有益处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 409,
+      "Name": "6~8",
+      "Description": "6~8",
+      "Position": "(-2736.618,-1113.309)",
+      "Commands": [
+        {
+          "ItemID": 1060,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈，妙哉，妙哉。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "师侄这般资质，可万万不可荒废。说不定数百年后，我派又能多一个元婴实力的长老啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 410,
+      "Name": "9",
+      "Description": "9",
+      "Position": "(-2614.639,-1113.309)",
+      "Commands": [
+        {
+          "ItemID": 1061,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "只见{$zhangmen}与各位长老们面面相觑，用不可思议的眼神看着你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄所言非虚？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这九品金丹可是传说中的存在，我派最近数千年来的记载中也无一人有此机缘啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄能结成如此金丹，只要不遇到什么重大的变故，何愁大道不成啊！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 2789,
+      "Name": "成为炼器长老",
+      "Description": "成为炼器长老",
+      "Position": "(-2640.44,-784.2294)",
+      "Commands": [
+        {
+          "ItemID": 2825,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 2826,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 100"
+        },
+        {
+          "ItemID": 2860,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2861,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 2862,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 2872,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 2873,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2874,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2875,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 2876,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 2868,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 3040,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 2869,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "唔...{shidi}对于炼器一道的造诣恐怕还无法胜任我派炼丹长老一职。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2870,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2871,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 2831,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 2832,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "以你在宗门的声望，若是成为炼器长老恐怕不能服众。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2833,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 2834,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2835,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 2756,
+      "Name": "517",
+      "Description": "517",
+      "Position": "(-2781.948,-379.7369)",
+      "Commands": [
+        {
+          "ItemID": 2758,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2759,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2764,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 2765,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 2760,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 2761,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 2762,
+          "CmdType": "Fungus.SetSTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 398,
+      "Name": "阵旗",
+      "Description": "阵旗",
+      "Position": "(-2949.888,-509.1069)",
+      "Commands": [
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "宗门炼制有一些基础的聚灵阵旗，有了这些阵旗，即便是对阵道一窍不通之人也能布下阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不过若是{FirstName}师侄本就精通于布阵之道，以后也可以自己在洞府内布置更好的阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 340,
+      "Name": "关于炼器长老",
+      "Description": "关于炼器长老",
+      "Position": "(-2645.569,-896.3793)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "炼器长老负责掌管门派神兵阁，定期组织普通弟子，或是亲自为门派炼制所需的法宝。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Menu",
+          "Text": "我再了解下别的",
+          "TargetBlockID": "this:332(选项)"
+        },
+        {
+          "ItemID": 2838,
+          "CmdType": "Fungus.Menu",
+          "Text": "决定成为炼器长老",
+          "TargetBlockID": "this:2789(成为炼器长老)"
+        }
+      ]
+    },
+    {
+      "ItemID": 389,
+      "Name": "选项1",
+      "Description": "选项1",
+      "Position": "(-2776.071,-569.1069)",
+      "Commands": [
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于洞府的选址",
+          "TargetBlockID": "this:397(选址)"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于阵旗",
+          "TargetBlockID": "this:398(阵旗)"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Menu",
+          "Text": "多谢{$zhangmen}",
+          "TargetBlockID": "this:388(多谢掌门)"
+        }
+      ]
+    },
+    {
+      "ItemID": 376,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2790.8,-672.1067)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "呵呵，我就猜到你会这么选。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 3041,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "师侄你以后所若是想要担任其他长老，也可以来寻我，不过间隔时间需在50年以上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "以后，宗门的重要事务都会以传音符的形式发放，师侄务必记得及时查看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "另外，金丹期长老就有权在我派的驻守范围内自行开辟洞府进行修炼了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{$shanming}附近{$shuxing}属性灵气丰富，很适合我派修士修炼。一会儿师侄去神兵阁领取了开辟洞府需要用到的阵旗，就可以前往{$shanming}寻觅合适的洞府地点了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 2877,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 2879,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 2878,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "多谢掌门",
+      "Description": "多谢掌门",
+      "Position": "(-2778.251,-480.5613)",
+      "Commands": [
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "多谢{$zhangmen}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}师侄虽然刚刚晋入金丹期，但对于金丹期的修炼，乃至未来结婴所需做的准备想必还是一头雾水，陌生的很吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "若师侄在这方面有任何问题，皆可向我请教，我定倾囊相授。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1063,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 2723,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 2721,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 2720,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 2766,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 2767,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 2722,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 2724,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 2725,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 2726,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 2768,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 2769,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 2727,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 2730,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 2731,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 2738,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 2735,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 2736,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 2732,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 2770,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 2771,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 2734,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 2737,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 2750,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 2748,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 2"
+        },
+        {
+          "ItemID": 2757,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "2756(517)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 2749,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 2741,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 2718,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 2716,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1603,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue <= 9"
+        },
+        {
+          "ItemID": 2763,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "2756(517)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 2715,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,1120 @@
+{
+  "Name": "Talk11309",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "任务状态判定",
+      "Description": "任务状态判定",
+      "Position": "(-2949.67,-1428.331)",
+      "Commands": [
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(接任务-境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "378(任务未完)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2950.051,-1603.908)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "500(初次进入检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 497,
+      "Name": "打扰了，告辞！",
+      "Description": "打扰了，告辞！",
+      "Position": "(-2326.816,-1127.582)",
+      "Commands": []
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 391,
+      "Name": "巡逻",
+      "Description": "巡逻",
+      "Position": "(-3273.021,-1478.499)",
+      "Commands": [
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "我已传信方壶山执事堂，你还是快快前去为好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那我就出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 367,
+      "Name": "矿脉巡逻",
+      "Description": "矿脉巡逻",
+      "Position": "(-2327.815,-1291.813)",
+      "Commands": [
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "我已传信方壶山执事堂，你直接过去找负责矿脉的执事就好了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那我就出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 500,
+      "Name": "初次进入检测",
+      "Description": "初次进入检测",
+      "Position": "(-2952.358,-1512.739)",
+      "Commands": [
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "师弟很是面生，可是新入门的弟子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我最近刚刚入门，听闻师兄这里可以接取任务？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "正是，我执事堂有不少任务需要人手，不过师弟也要量力而行啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我明白了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(任务状态判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 385,
+      "Name": "任务完成",
+      "Description": "任务完成",
+      "Position": "(-2948.554,-1361.443)",
+      "Commands": [
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "406(巡逻1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "407(广陵城人口失踪1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "410(九嶷山遗迹调查1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "炼气期",
+      "Description": "炼气期",
+      "Position": "(-2502.103,-1227.611)",
+      "Commands": [
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "480(练气任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}师弟，是来执行任务的吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请问师兄，目前可有适合外门弟子的任务？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "本门方壶山灵石矿脉有不明修士踪迹，需要增派弟子巡逻。\n\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "近来广陵城附近屡屡有人失踪，需要弟子调查。\n\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "九嶷山御剑门遗址似有异动需要查探。\n\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}师弟，你要接取哪个任务？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Menu",
+          "Text": "去方壶山",
+          "TargetBlockID": "this:367(矿脉巡逻)"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Menu",
+          "Text": "去广陵城",
+          "TargetBlockID": "this:368(调查失踪)"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Menu",
+          "Text": "去九嶷山",
+          "TargetBlockID": "this:408(探查遗迹)"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Menu",
+          "Text": "打扰了，告辞！",
+          "TargetBlockID": "this:497(打扰了，告辞！)"
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "巡逻1",
+      "Description": "巡逻1",
+      "Position": "(-3099.125,-1279.026)",
+      "Commands": [
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "师弟，回来的正好。这是本来要奖励你的灵石。李师兄，也在找你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "师弟，接下来的事宜就由我单独和{FirstName}师弟谈谈吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "此次，你得知古神教的踪迹对宗门实属大功一件，但此事不宜打草惊蛇所以就没有大肆宣扬。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "不过，这一次和你为敌的修士，根据我对现场的查看却是是天魔道的修士。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "幽州的魔道之首？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，正是。这次你对宗门有功，这枚养气丹，你且收好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 410,
+      "Name": "九嶷山遗迹调查1",
+      "Description": "九嶷山遗迹调查1",
+      "Position": "(-2794.516,-1278.356)",
+      "Commands": [
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "师弟，师弟可有眉目？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我已查探清楚，是有御剑门遗迹的法阵波动，并无大事发生。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "任务奖励你且收好，待我上报宗门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2492.448,-1727.444)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 172,
+      "Name": "接任务-境界测试",
+      "Description": "接任务-境界测试",
+      "Position": "(-2761.593,-1430.031)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(炼气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(元婴期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "探查遗迹",
+      "Description": "探查遗迹",
+      "Position": "(-2328.379,-1172.116)",
+      "Commands": [
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，我已经备案了，在师弟你有结果之前，其他弟子不会插手你的任务。\n传闻九嶷山有些邪修出没，{FirstName}师弟，你小心行事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄关心，那我就出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 368,
+      "Name": "调查失踪",
+      "Description": "调查失踪",
+      "Position": "(-2328.416,-1228.362)",
+      "Commands": [
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，我已经备案了，在师弟你有结果之前，其他弟子不会插手你的任务。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那我就出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2495.7,-1665.525)",
+      "Commands": []
+    },
+    {
+      "ItemID": 316,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2490.748,-1791.298)",
+      "Commands": []
+    },
+    {
+      "ItemID": 392,
+      "Name": "广陵城人口失踪",
+      "Description": "广陵城人口失踪",
+      "Position": "(-3275.148,-1425.307)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "广陵城的人口失踪可有眉目了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那我就出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 429,
+      "Name": "九嶷山遗迹调查",
+      "Description": "九嶷山遗迹调查",
+      "Position": "(-3275.149,-1373.18)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "御剑门哪里的异动可有眉目了？\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那我就出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 480,
+      "Name": "练气任务完成",
+      "Description": "练气任务完成",
+      "Position": "(-2327.915,-1350.658)",
+      "Commands": [
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}师弟，目前没有需要外门弟子的任务了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "广陵城人口失踪1",
+      "Description": "广陵城人口失踪1",
+      "Position": "(-2955.441,-1278.292)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "师弟，师弟可有眉目？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我已查探清楚，是有人在猎捕凡人和低阶散修，疑似是魔门的人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 220,
+          "AvatarBindKey": "",
+          "StoryText": "任务奖励你且收好，待我上报宗门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2489.042,-1572.645)",
+      "Commands": []
+    },
+    {
+      "ItemID": 378,
+      "Name": "任务未完",
+      "Description": "任务未完",
+      "Position": "(-3117.703,-1427.437)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(巡逻)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "392(广陵城人口失踪)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "429(九嶷山遗迹调查)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

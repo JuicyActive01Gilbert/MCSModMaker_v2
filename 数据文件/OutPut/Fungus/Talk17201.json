@@ -1,0 +1,1586 @@
+{
+  "Name": "Talk17201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(选项判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 466,
+      "Name": "5",
+      "Description": "5",
+      "Position": "(-3084.398,-1159.487)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "之前太让{xiongdi}你费心了，我这里暂时也没什么别的事了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 371,
+      "Name": "数量大于等于5",
+      "Description": "数量大于等于5",
+      "Position": "(-2170.637,-1252.425)",
+      "Commands": [
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...这数量虽然不多，但也聊胜于无了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 502,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2942.749,-1157.765)",
+      "Commands": [
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "498(打听消息失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "506(打听消息成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "交任务进度判定",
+      "Description": "交任务进度判定",
+      "Position": "(-2498.109,-1236.873)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(交任务1判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(交任务2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(交任务3数量判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 374,
+      "Name": "数量小于5",
+      "Description": "数量小于5",
+      "Position": "(-2171.494,-1298.818)",
+      "Commands": [
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "这火铜精的数量是越多越好啊，{xiongdi}你还是再去找找吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 454,
+      "Name": "介绍火铜",
+      "Description": "介绍火铜",
+      "Position": "(-3352.547,-1200.899)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "沃焦山有整个宁州最大的火铜矿脉，但那里属于离火门的管辖范围。好在火铜精也不算太珍贵的材料，你去广陵城的{color=red}百宝行{/color}应该就可以买到。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "明白，这事儿就交给我了",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "453(交给我了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 431,
+      "Name": "准备",
+      "Description": "准备",
+      "Position": "(-2941.495,-1297.896)",
+      "Commands": [
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "准备的怎么样了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Menu",
+          "Text": "准备好了",
+          "TargetBlockID": "this:438(准备好了)"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Menu",
+          "Text": "还没准备好",
+          "TargetBlockID": "this:437(还没准备好)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 352,
+      "Name": "数量够",
+      "Description": "数量够",
+      "Position": "(-2259.221,-1361.147)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{xiongdi}你跑这一趟了，这些灵石你收着。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 442,
+      "Name": "任务4归来",
+      "Description": "任务4归来",
+      "Position": "(-2652.233,-1307.612)",
+      "Commands": [
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "百里家的这支商队运送的都是一些海妖兽的妖丹，虽然品质不算很高，但这种东西在内陆一直都非常稀有，我们这次算是收获颇丰了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "小{xiongdi}，你这次表现的也不错，这些灵石是给你的奖励。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Menu",
+          "Text": "这些妖丹要怎么处理？",
+          "TargetBlockID": "this:475(询问)"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Menu",
+          "Text": "坐在大殿上的那人是谁？",
+          "TargetBlockID": "this:474(是谁)"
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "数量不够",
+      "Description": "数量不够",
+      "Position": "(-2410.65,-1362.387)",
+      "Commands": [
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "哎，这几颗可不够用啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 475,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2511.806,-1309.894)",
+      "Commands": [
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "这些赃物自然是不能在宁州出手，不过我们在中州，渝州，幽州都有自己出货的渠道，所以不必担心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "478(好了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 546,
+      "Name": "请教",
+      "Description": "请教",
+      "Position": "(-3103.416,-1354.778)",
+      "Commands": [
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.GetHaoGanDuSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "交任务2",
+      "Description": "交任务2",
+      "Position": "(-2331.739,-1233.935)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈哈，好好好，我果然没有看错你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "是谁",
+      "Description": "是谁",
+      "Position": "(-2690.526,-1358.831)",
+      "Commands": [
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "你来的晚，也难怪你不知道。他就是青面鬼，也就是我们沂山派的二当家。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "478(好了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 296,
+      "Name": "任务进度判定",
+      "Description": "任务进度判定",
+      "Position": "(-3088.158,-1241.306)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(任务1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "310(任务2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(任务3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(任务4)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "466(5)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 372,
+      "Name": "数量大于等于10",
+      "Description": "数量大于等于10",
+      "Position": "(-2167.401,-1200.34)",
+      "Commands": [
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...这数量虽然不多，但也聊胜于无了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 397,
+      "Name": "数量大于等于30",
+      "Description": "数量大于等于30",
+      "Position": "(-2164.445,-1112.479)",
+      "Commands": [
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "噢？你居然找到了这么多火铜精！这下大阵需要的材料应该够用了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 514,
+      "Name": "问人",
+      "Description": "问人",
+      "Position": "(-2927.977,-1019.129)",
+      "Commands": [
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "自从得了这件宝贝，大哥与二哥便{color=#d0380a}进山{/color}闭关研究了，你若最近进山，也切记不要打扰到他们。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "交任务3数量判定",
+      "Description": "交任务3数量判定",
+      "Position": "(-2331.638,-1128.46)",
+      "Commands": [
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "374(数量小于5)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == False"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "371(数量大于等于5)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == False"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "372(数量大于等于10)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == False"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(数量大于等于20)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "397(数量大于等于30)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 506,
+      "Name": "打听消息成功",
+      "Description": "打听消息成功",
+      "Position": "(-2851.838,-1081.629)",
+      "Commands": [
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "你也不算外人，此事说来给你听倒也无妨，只是你切记不可到处宣扬。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "前段时日，大哥二哥与那禾山道的颜老怪一起去探了一处秘境。那颜老怪本来想利用我们帮他取宝，没想到反而被二哥给摆了一道，不仅没得到宝贝，还差点送了性命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "你也知道，那颜老怪虽然有金丹修为，但大哥二哥联起手来想要逃命也是不成问题。那颜老怪气急败坏，便让他们禾山道的人来我们这里闹事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "哼，等大哥二哥弄清楚这宝贝的法门，到时候我们也就不用再怕这群禾山道的人了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Menu",
+          "Text": "大哥和二哥现在何处？",
+          "TargetBlockID": "this:514(问人)"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Menu",
+          "Text": "到底是件什么宝贝？",
+          "TargetBlockID": "this:515(问宝贝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "选项判定",
+      "Description": "选项判定",
+      "Position": "(-2797.166,-1239.334)",
+      "Commands": [
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "431(准备)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(任务4归来)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(接任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(交任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "281(任务进行中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 281,
+      "Name": "任务进行中",
+      "Description": "任务进行中",
+      "Position": "(-2797.237,-1182.135)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "事情办得怎么样了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经在办了",
+          "TargetBlockID": "this:298(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "任务3",
+      "Description": "任务3",
+      "Position": "(-3219.43,-1199.599)",
+      "Commands": [
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "我准备把门内的大阵重新启用起来，布此阵需要消耗大量的火铜精作为材料，我已经让其他弟兄去收集了，你也帮忙去收集一些吧，越多越好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Menu",
+          "Text": "火铜精？",
+          "TargetBlockID": "this:454(介绍火铜)"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Menu",
+          "Text": "交给我了",
+          "TargetBlockID": "this:453(交给我了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 498,
+      "Name": "打听消息失败",
+      "Description": "打听消息失败",
+      "Position": "(-3029.113,-1081.628)",
+      "Commands": [
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "杜老二戒备地看了你一眼",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，这可是两位老大的私事，你还是不要乱打听了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "任务4",
+      "Description": "任务4",
+      "Position": "(-3219.244,-1153.556)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "我收到下面弟兄们的消息，在九嶷山一带发现了百里家商队的踪迹，我准备带兄弟们，干他娘的一票大的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "百里...家？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "虽然有点风险，但百里家的商队运的可都是价值不菲的宝贝。这次我们提前进山，以阵法设伏。你马上去准备准备，我们这次一起出发。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "明白了，我这就去准备。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 515,
+      "Name": "问宝贝",
+      "Description": "问宝贝",
+      "Position": "(-2772.294,-1021.402)",
+      "Commands": [
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "我只晓得这是件品质极高的法宝，光用神识探查就能感受到它的不凡。自从得了这件宝贝，大哥与二哥便{color=#d0380a}进山{/color}闭关研究去了，你若最近进山，也切记不要打扰到他们。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "接任务",
+      "Description": "接任务",
+      "Position": "(-2940.498,-1240.992)",
+      "Commands": [
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，今天来有什么事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么事要交给我去办么？",
+          "TargetBlockID": "this:296(任务进度判定)"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Menu",
+          "Text": "请教沂山法门",
+          "TargetBlockID": "this:546(请教)"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于“那件东西”...",
+          "TargetBlockID": "this:502(进度判定)"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.If",
+          "Condition": "是否有传音符 == False"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.If",
+          "Condition": "Favor >= 40"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Menu",
+          "Text": "交换传音符",
+          "TargetBlockID": "this:552(交换传音符)"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事",
+          "TargetBlockID": "this:298(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "任务2",
+      "Description": "任务2",
+      "Position": "(-3220.05,-1250.775)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "禾山道又派人来我们沂山附近作乱，伤了我们好几个弟兄，你得想办法教训一下他们，叫他们知道沂山派可不是这么好惹的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "任务1",
+      "Description": "任务1",
+      "Position": "(-3220.652,-1296.948)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "上次禾山道来捣乱，我们损失不小，很多弟兄如今都在养伤，丹药也已经不太够用了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "麻烦{xiongdi}你跑一趟，帮我收集{color=red}3颗化瘀丹{/color}来，给其它弟兄们服用。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 453,
+      "Name": "交给我了",
+      "Description": "交给我了",
+      "Position": "(-3355.739,-1254.163)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 373,
+      "Name": "数量大于等于20",
+      "Description": "数量大于等于20",
+      "Position": "(-2164.238,-1155.519)",
+      "Commands": [
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "噢？你这找到的数量倒是不少，辛苦你跑这一趟了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "交任务",
+      "Description": "交任务",
+      "Position": "(-2643.168,-1240.814)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "事情办得怎么样了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经办妥了",
+          "TargetBlockID": "this:297(交任务进度判定)"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事",
+          "TargetBlockID": "this:298(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 478,
+      "Name": "好了",
+      "Description": "好了",
+      "Position": "(-2557.55,-1359.894)",
+      "Commands": [
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "好了，如今二当家回来了，你这段时间为门派做出了不少贡献，这些我都会如实向二当家禀告的，你就先回去休息吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2794.691,-1127.761)",
+      "Commands": []
+    },
+    {
+      "ItemID": 552,
+      "Name": "交换传音符",
+      "Description": "交换传音符",
+      "Position": "(-2806.684,-1376.414)",
+      "Commands": [
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "好说好说，今后传音符联系。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "交任务1判定",
+      "Description": "交任务1判定",
+      "Position": "(-2335.649,-1306.242)",
+      "Commands": [
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(数量不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(数量够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 438,
+      "Name": "准备好了",
+      "Description": "准备好了",
+      "Position": "(-2943,-1346.721)",
+      "Commands": [
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "好，那我们出发。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 437,
+      "Name": "还没准备好",
+      "Description": "还没准备好",
+      "Position": "(-3094.138,-1297.721)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

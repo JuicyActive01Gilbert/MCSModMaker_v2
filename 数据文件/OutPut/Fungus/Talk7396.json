@@ -1,0 +1,933 @@
+{
+  "Name": "Talk7396",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2793.912,-1443.255)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "472(炎萧称号载入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2791.74,-1228.831)",
+      "Commands": [
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "533(苍阳随判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(门童对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 320,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2977.917,-1229.795)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 533,
+      "Name": "苍阳随判定",
+      "Description": "苍阳随判定",
+      "Position": "(-2791.355,-1164.759)",
+      "Commands": [
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.If",
+          "Condition": "苍 == False"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.If",
+          "Condition": "阳 == False"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.If",
+          "Condition": "苍阳随境界 >= 3"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "苍阳随境界 <= -3"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(苍阳随对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 472,
+      "Name": "炎萧称号载入",
+      "Description": "炎萧称号载入",
+      "Position": "(-2793.707,-1349.465)",
+      "Commands": [
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpStrValue == 离火门长老"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 离火门大长老"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 离火门掌门"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(玩家对炎萧称呼自适应)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "门童对话",
+      "Description": "门童对话",
+      "Position": "(-2604.263,-1230.857)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "前辈，请问来我离火门何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "炎萧道友可在门内？玄道宗说他最近去过天魔眼核心区，我需要找他了解一番天魔眼内的情况。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "请前辈稍等，待我询问门内长老一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "说完，这位离火门修士便是往宗门内快步离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "不出盏茶功夫，之前离去的离火门修士便已是归来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "十分抱歉，炎萧{$YXChenHao}目前不在宗门内，听门中长老说他从天魔眼归来后便是往无尽之海去了，目的地应该是雷鸣海域。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "前辈如若不急可在离火门等炎萧{$YXChenHao}归来，若是事情重要也可以前往此片海域寻他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "前辈如若不急可在离火门等炎萧{$YXChenHao}归来，若是事情重要也可以前往此片海域寻他。但此行凶险，还请前辈准备充分再自行前往。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Var",
+          "StoryText": "此事不能耽搁，我还是去海上寻他吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Var",
+          "StoryText": "若是不出意外，炎萧{$YXChenHao}应当会在此片海域的东南角。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Var",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Var",
+          "StoryText": "好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 563,
+      "Name": "原本用来做称呼细分，但发现对于实现效果还差一点",
+      "Description": "原本用来做称呼细分，但发现对于实现效果还差一点",
+      "Position": "(-3289.003,-1297.7)",
+      "Commands": [
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue > 2"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue < -2"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.If",
+          "Condition": "炎萧境界 > JinJie"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "炎萧境界 < JinJie"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "白袍修士称呼载入",
+      "Description": "白袍修士称呼载入",
+      "Position": "(-3203.927,-1372.681)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 486,
+      "Name": "玩家对炎萧称呼自适应",
+      "Description": "玩家对炎萧称呼自适应",
+      "Position": "(-2811.355,-1289.465)",
+      "Commands": [
+        {
+          "ItemID": 498,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "苍阳随对话",
+      "Description": "苍阳随对话",
+      "Position": "(-2791.745,-1091.684)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{$NpcName}{$DaoYou}，炎萧{$ChenHu}不在宗门么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "嗯，炎萧{$ChenHao}前些日子有事前往天魔眼，而后应是往{color=#d0380a}雷鸣海域{/color}方向去了，目前应该在{color=#d0380a}东南方{/color}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "找他有事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "嗯，之前在海外遇见白帝，让我前往天魔眼调查一番。但登门造访玄道宗后，他们老祖不在门内，长老又不能越权放我进天魔眼。只是最后提到炎萧{$ChenHao}此前到访过天魔眼，让我先向他询问一番其中核心区是否有异象发生。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "原来如此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "但炎萧{$ChenHao}所在之处凶险异常，{color=#d0380a}最好准备充分再前往{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "多谢提醒。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,93 @@
+{
+  "Name": "Talk4031",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 218,
+      "Name": "神游太虚",
+      "Description": "神游太虚",
+      "Position": "(-2424.028,-1037.979)",
+      "Commands": [
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你屏气凝神，神魂再一次自天灵脱壳而出，融于周身天地之间...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "CmdSaveSceneNameBeforeShenYou"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2431.193,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你清晰地感应到天地意志对你力量的排斥，来自天劫的强大地压迫感开始笼罩着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这便是天劫的威能么...用寻常的神通法门绝不可能抵挡...这是更高层次，凌驾于这一方天地之上的力量。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你回想突破时神魂出窍时感受到的力量，只有那种力量才能与天劫相抗衡...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Menu",
+          "Text": "神游太虚",
+          "TargetBlockID": "this:218(神游太虚)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

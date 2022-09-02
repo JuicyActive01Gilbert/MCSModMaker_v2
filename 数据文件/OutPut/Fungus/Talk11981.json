@@ -1,0 +1,679 @@
+{
+  "Name": "Talk11981",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 319,
+      "Name": "时间",
+      "Description": "时间",
+      "Position": "(-2640.135,-1103.012)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 500"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "这宁州古迹虽隐迹于时空狭缝中，但每隔千年左右便会在宁州的岫络谷附近出现，某些资质泛泛者可能终其一生都没有机会触摸到宁州古迹的大门。细细算来，大概{$TempValue}年后宁州古迹便会开启了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "我观{FirstName}小友心性可嘉，多年过去不受杂念侵扰，道心仍如初到武陵城那般坚定，很好，很好。希望你勿失本心，早日领悟道之法门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "这宁州古迹虽隐迹于时空狭缝中，但每隔一千五百年左右便会在宁州出现，某些资质泛泛者可能终其一生都没有机会触摸到宁州古迹的大门。细细算来，大概{$TempValue}年后宁州古迹便会开启了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "我观{FirstName}小友心性可嘉，多年过去不受杂念侵扰，道心仍如初到武陵城那般坚定，很好，很好。希望你勿失本心，早日领悟道之法门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "机遇",
+      "Description": "机遇",
+      "Position": "(-2638.869,-1063.848)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "上古时期，宁州古迹也算是一座较为繁荣的城池。后因成为正魔大战的主战场而衰败，整座城池也由于巨大的灵力引起空间塌陷，落入了时空乱流中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "宁州古迹中法宝灵器随处可见，除此之外，上古时期的大能也在其中留下了不少传承。历年来能够在其中获得传承的修士无一例外，皆成就造化，距化神一步之遥！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "可以说只要获得宁州古迹中的传承，便打开了通往化神期的大门。不过在这古迹中传承多处于凶险之地，像是器灵纷杂的战场，灵力汹涌的深谷，凶兽遍地的密林...而且这些大能性格古怪，即使有幸寻得传承之地，也不知会面临怎样的考验。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "宁州古迹看似是难得一见的福缘之地，但其中隐藏的危险与杀机足以令人万劫不复。机遇总是与风险并行，日后如有机会前往古迹，{FirstName}小友定要牢记这句话。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 288,
+      "Name": "御剑门",
+      "Description": "御剑门",
+      "Position": "(-2483.762,-1209.959)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "御剑门...让我想想......可是九嶷山之上的那个御剑门？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "据说御剑门掌门也是个惊艳绝伦的人物，可惜与魔门勾结落了个死无全尸的下场。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "不过也不见得那掌门修习了魔门功法才如此猖狂...或许问题出现在剑身上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "剑......？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "正是，御剑门掌门曾在千年前的宁州古迹中误打误撞得到了一柄魔剑。他性格本就桀骜乖张，得了通天灵宝后愈发目中无人。与他知交的时任金虹剑派掌门闻讯前去劝说他，反倒被打出了九嶷山。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "自那以后，御剑门掌门性情大变，好杀喜伐。几大门派联手打探后终于确信御剑门掌门已弃明投暗，魔功大成，才有了后续剿灭御剑门之事。而那魔剑也随着御剑门掌门的陨落不知所踪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "我倪氏一族曾揣测这四把魔剑绝非凡物，心智不坚定之人会受其内魔气侵蚀，逐步堕入魔道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 363,
+      "Name": "进入",
+      "Description": "进入",
+      "Position": "(-2638.06,-1022.865)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "宁州古迹如今已经陷入时空乱流之中，要想进入那片空间，唯有趁千年一次空间壁障薄弱时强行闯入。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "按往年的记录，这薄弱之处往往会出现在{color=#d0380a}岫络谷{/color}的附近，到时仅需靠金丹期修为便可打开通道，进入宁州古迹所在的那片空间。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "戮仙剑",
+      "Description": "戮仙剑",
+      "Position": "(-2795.401,-1190.342)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "提起戮仙剑，就不得不说诛仙剑阵。此剑阵威力无穷，变幻莫测，阵法内幻境法术虚实相生，令入阵者心神动摇，若修为不足便会当场殒命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "这诛仙剑阵由四把魔剑构成，戮仙剑便是其中一把。其余则分别为诛仙剑。绝仙剑和陷仙剑。此四把剑各有所长，以任何一柄作为阵眼，皆可发挥不同妙用。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "万年前在宁州的那场正魔大战，金虹剑仙凭借独到的剑意强行破阵，甚至破开了位面屏障，将整个区域卷入了另外一处小空间，四把魔剑也就此下落不明。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "这处独立的小空间便是所谓的宁州古迹...后来宁州修士倾尽人力几经搜罗，几次进入古迹搜索，才觅得戮仙剑，交由武陵城中的白帝保管。而绝仙剑被魔修找回，诛仙剑与陷仙剑则下落不明。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "魔门沉寂千年，只怕这次假借二弟之手取回戮仙剑的计划只是一个开端。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 320,
+      "Name": "选项1",
+      "Description": "选项1",
+      "Position": "(-2491.667,-1065.278)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于宁州古迹开启的时间",
+          "TargetBlockID": "this:319(时间)"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于宁州古迹的机遇",
+          "TargetBlockID": "this:318(机遇)"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Menu",
+          "Text": "如何才能进入宁州古迹",
+          "TargetBlockID": "this:363(进入)"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有什么要问的了",
+          "TargetBlockID": "this:325(end)"
+        }
+      ]
+    },
+    {
+      "ItemID": 325,
+      "Name": "end",
+      "Description": "end",
+      "Position": "(-2948.401,-1067.81)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我省得了，多谢倪家主的提点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "今日多有叨扰，待家主痊愈之后我必定再来拜访。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2793.401,-1126.278)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "我知道你心中定有很多未解之惑，若有什么想知晓的来问我便是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于玄微剑仙",
+          "TargetBlockID": "this:286(玄微)"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于戮仙剑",
+          "TargetBlockID": "this:287(戮仙剑)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么要问的了",
+          "TargetBlockID": "this:312(New Block)"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2796.79,-1249.428)",
+      "Commands": [
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}小友别来无恙？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你悄悄地打量着倪家主，他略显苍白的面庞上仍旧带着威不可侵的气势。看来倪府供奉们颇有手段，短短数十日时间便将倪家主的病象拔除干净。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "一切安好，不知倪家主近期如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "多亏小友的天蝉灵叶，想必再有几日我便能恢复如初。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "我知道你心中定有很多未解之惑，若有什么想知晓的来问我便是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于玄微剑仙",
+          "TargetBlockID": "this:286(玄微)"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于戮仙剑",
+          "TargetBlockID": "this:287(戮仙剑)"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么要问的了",
+          "TargetBlockID": "this:312(New Block)"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2791.53,-1067.81)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢倪家主。说来有件事在下十分在意，家主方才所言中的宁州古迹为何地？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "宁州古迹乃是上古时期大战后形成的战场残骸，因聚集的灵力过多造成了空间扭曲而鲜少现世，只有其灵力波动与大陆达成一致时才会在化尘教以北的荒漠中出现。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于宁州古迹开启的时间",
+          "TargetBlockID": "this:319(时间)"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于宁州古迹的机遇",
+          "TargetBlockID": "this:318(机遇)"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Menu",
+          "Text": "如何才能进入宁州古迹",
+          "TargetBlockID": "this:363(进入)"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有什么要问的了",
+          "TargetBlockID": "this:325(end)"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "玄微",
+      "Description": "玄微",
+      "Position": "(-2951.667,-1189.415)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倪家主沉吟片刻，像是在组织语言。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "二弟他本性忠厚纯良，这次不知怎的中了古神教的阴谋诡计。倪府众人已把控住他，并押送至秘境治疗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "希望长老及供奉能够尽快祛除二弟体内的魔蛊，让他恢复本心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

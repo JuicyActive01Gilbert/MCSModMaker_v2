@@ -1,0 +1,555 @@
+{
+  "Name": "Talk11104",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2794.441,-1393.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(获得要诀判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 336,
+      "Name": "传授要诀",
+      "Description": "传授要诀",
+      "Position": "(-3070.283,-1331.847)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 204,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...你身上的印记？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 204,
+          "AvatarBindKey": "",
+          "StoryText": "莫非你在幻雾阵中，领悟了我当年留下的传承？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来那青蛇劲是前辈留在阵中的传承...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 204,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，如此也算缘分，这样吧，我便把我当年自创的《青蛇要诀》一并传授于你，希望对你有所帮助。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "请教师尊系统talk",
+      "Description": "请教师尊系统talk",
+      "Position": "(-3056.138,-1240.14)",
+      "Commands": [
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "金丹",
+      "Description": "金丹",
+      "Position": "(-2798.79,-1153.964)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "342(请教师尊系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "筑基1",
+      "Description": "筑基1",
+      "Position": "(-2917.537,-1070.656)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 204,
+          "AvatarBindKey": "",
+          "StoryText": "天魔眼中的魔物最多也不过是地魔一级，灵智又低，算不得多难对付。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2920.708,-1150.502)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "342(请教师尊系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "355(筑基1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(筑基2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-3042.998,-1154.594)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "342(请教师尊系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(炼气1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "炼气1",
+      "Description": "炼气1",
+      "Position": "(-3045.37,-1063.439)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 204,
+          "AvatarBindKey": "",
+          "StoryText": "这竹山宗内的毒经也差不多被我学尽了，若有机会，倒是还想见识一番巫山的毒蛊之术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "青蛇判定",
+      "Description": "青蛇判定",
+      "Position": "(-2932.252,-1331.847)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "336(传授要诀)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(青蛇境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(青蛇境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "化神",
+      "Description": "化神",
+      "Position": "(-2547.105,-1158.073)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "筑基2",
+      "Description": "筑基2",
+      "Position": "(-2788.671,-1069.625)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 204,
+          "AvatarBindKey": "",
+          "StoryText": "青麟这小子就是太照顾他那些不成器的师弟师妹了，否则又怎么会让离火门的人在试炼里占尽了上风。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "青蛇境界判断",
+      "Description": "青蛇境界判断",
+      "Position": "(-2800.79,-1245.896)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(元婴)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "元婴",
+      "Description": "元婴",
+      "Position": "(-2675.873,-1156.704)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "342(请教师尊系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 346,
+      "Name": "获得要诀判定",
+      "Description": "获得要诀判定",
+      "Position": "(-2796.976,-1328.847)",
+      "Commands": [
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(青蛇境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(青蛇判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

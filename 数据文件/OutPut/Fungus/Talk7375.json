@@ -1,0 +1,439 @@
+{
+  "Name": "Talk7375",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2794.134,-1262.104)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将速度提升到最快，竟还只能看着那道身影渐渐化为一个黑点，还是一个越来越小乃至若隐若现的黑点。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "黑点即将消失在你眼前时，也不知星铃儿是发现你在努力追上她还是怎的，竟停在半空等你。见状你也是连忙赶过去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "星姑娘。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，是你...好像是叫...哦，是上次那个坏我事的对吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "咳...没想到星姑娘在遁术上竟会如此厉害，让我险些追不上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "哦？你为何要追在我身后？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Menu",
+          "Text": "以为遇到麻烦",
+          "TargetBlockID": "this:359(遇到麻烦)"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "夸赞冰灵面纱",
+          "TargetBlockID": "this:360(冰灵面纱1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-3151.864,-1277.212)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "冰灵面纱1",
+      "Description": "冰灵面纱1",
+      "Position": "(-2595.433,-1262.307)",
+      "Commands": [
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "只是想说上次星道友送我的冰灵面纱很好用，多谢星道友，哈...哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "哦，不用客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "星道友呢？为何在此停下？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，告诉你也无妨。我本是奉师命于云汐城追查左近出现修习邪术的妖人一事，方才打伤其中一人后便一路追寻至此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那星道友停下，是因为他躲在这附近？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "没有啊，让他跑了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 3"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "竟然以星道友的速度都没能追上？难道那妖人是金丹期？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "竟然以星道友的速度都没能追上？难道那妖人是筑基？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "想啥呢，是我故意放跑他的，不然就算是金丹期也跑不了，哼哼，我可是很厉害的！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "之前交战时，我顺手留下了神识印记，以他的修为想消除我的印记可没那么容易。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "刚才我发现印记已在前方不远处停滞，估摸着是快到他洞府之类的落脚处了，于是想着慢慢走过去就停下来咯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此。我作为正派修士，对妖人邪道等也是深恶痛绝，若是星姑娘不介意，请让我与道友一同前去剿灭妖人，如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...既然你有此兴致，便随我一同前往吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "遇到麻烦",
+      "Description": "遇到麻烦",
+      "Position": "(-2793.08,-1184.659)",
+      "Commands": [
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我看星道友行色匆匆，还以为遇到麻烦，想着助道友一臂之力就追上来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不知星道友有什么需要帮忙的么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，告诉你也无妨。我本是奉师命于云汐城追查左近出现修习邪术的妖人一事，方才打伤其中一人后便一路追寻至此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那星道友停下，是因为他躲在这附近？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "没有啊，让他跑了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 3"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "竟然以星道友的速度都没能追上？难道那妖人是金丹期？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "竟然以星道友的速度都没能追上？难道那妖人是筑基？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "想啥呢，是我故意放跑他的，不然就算是金丹期也跑不了，哼哼，我可是很厉害的！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "之前交战时，我顺手留下了神识印记，以他的修为想消除我的印记可没那么容易。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "刚才我发现印记已在前方不远处停滞，估摸着是快到他洞府之类的落脚处了，于是想着慢慢走过去就停下来咯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此。我作为正派修士，对妖人邪道等也是深恶痛绝，若是星姑娘不介意，请让我与道友一同前去剿灭妖人，如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...既然你有此兴致，便随我一同前往吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

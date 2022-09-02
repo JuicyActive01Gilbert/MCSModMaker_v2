@@ -1,0 +1,140 @@
+{
+  "Name": "Talk123503",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2798.694,-1209.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你怎么一付闷闷不乐的样子？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "唉...爹说以我的天赋，要是用点功早就应该筑基了。还说要是我再突破不到筑基，就不让我出门了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "... ...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.GetHaoGanDuVar"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 50"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:289(传音符)"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "传音符",
+      "Description": "传音符",
+      "Position": "(-2799.57,-1131.915)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "太好了，我也正有此意。以后多跟我分享一点有趣的见闻嘻嘻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,1537 @@
+{
+  "Name": "Talk14101",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "choice",
+      "Description": "choice",
+      "Position": "(-1802.661,-1110.16)",
+      "Commands": [
+        {
+          "ItemID": 39,
+          "CmdType": "Fungus.Portrait"
+        },
+        {
+          "ItemID": 75,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{t}(Do I really want to do this?){/t}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 106,
+          "CmdType": "Fungus.Menu",
+          "Text": "Option Text",
+          "TargetBlockID": "this:105(StartFight)"
+        }
+      ]
+    },
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-1915.162,-1047.221)",
+      "Commands": [
+        {
+          "ItemID": 24,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "93(choice)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 131,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2874.335,-1481.474)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1118(主线判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-1780.927,-1059.401)",
+      "Commands": [
+        {
+          "ItemID": 117,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 118,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3597.426,-1208.754)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3248.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3518.678,-1286.544)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1027.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(-2577.513,-1106.994)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走到玄伶仙子身前，行拜师之礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1046,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1087,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "她略带微笑地看了另外两位长老一眼。那两位长老也是相视一笑，对此毫不在意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1089,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 302,
+          "AvatarBindKey": "",
+          "StoryText": "咳咳，从今天开始你就是我的徒弟了，在你{color=#d0380a}结丹之前{/color}，可要好好的听为师的话。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1088,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，师父从储物袋中拿出一把剑，递给了你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1084,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 302,
+          "AvatarBindKey": "",
+          "StoryText": "此剑唤作星河，是我筑基时所炼制的武器，如今已经用不上，就送给你了~",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1090,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "谢谢师父。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1092,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 302,
+          "AvatarBindKey": "",
+          "StoryText": "嗯…希望你成为一个出色的人！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1091,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1070,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1071,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1050,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 1051,
+          "CmdType": "CmdSetPlayerRelationship"
+        },
+        {
+          "ItemID": 1052,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 1053,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.setMenPai"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "910(天灵根判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(-2574.256,-961.424)",
+      "Commands": [
+        {
+          "ItemID": 1099,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走到凝霜仙子身前，行拜师之礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1048,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1086,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见她笑着向你点了点头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 304,
+          "AvatarBindKey": "",
+          "StoryText": "好，在你{color=#d0380a}结丹之前{/color}，就由为师来指点你吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1096,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，师父从储物袋中拿出一把剑，递给了你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 922,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1103,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 304,
+          "AvatarBindKey": "",
+          "StoryText": "此剑，名为初寒，乃为师年轻时所炼制，用起来颇为顺手。今日便送给你当见面礼了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1097,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "谢谢师父。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1104,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 304,
+          "AvatarBindKey": "",
+          "StoryText": "修仙一途有太多邪魔歪道，为师只希望你能一直坚守正道，恪守本心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1098,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1074,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1075,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1058,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 1059,
+          "CmdType": "CmdSetPlayerRelationship"
+        },
+        {
+          "ItemID": 1060,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 1061,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 926,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.setMenPai"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "910(天灵根判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2575.659,-1031.058)",
+      "Commands": [
+        {
+          "ItemID": 1085,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走到润熹仙子身前，行拜师之礼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1047,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1100,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见她笑着向你点了点头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 303,
+          "AvatarBindKey": "",
+          "StoryText": "好，在你{color=#d0380a}结丹之前{/color}，就由为师来指点你吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1093,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，师父从储物袋中拿出一个匣子，递给了你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1102,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 303,
+          "AvatarBindKey": "",
+          "StoryText": "此匣，名为漪涟，乃是我年轻时所炼制的武器，今日便送给你当见面礼了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1094,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "谢谢师父。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1101,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 303,
+          "AvatarBindKey": "",
+          "StoryText": "修仙一途有太多邪魔歪道，为师只希望你能一直坚守正道，恪守本心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1095,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1072,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1073,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1054,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 1055,
+          "CmdType": "CmdSetPlayerRelationship"
+        },
+        {
+          "ItemID": 1056,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 1057,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.setMenPai"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "910(天灵根判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 346,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2940.94,-1026.37)",
+      "Commands": [
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Menu",
+          "Text": "玄伶仙子",
+          "TargetBlockID": "this:334(剑)"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "凝霜仙子",
+          "TargetBlockID": "this:335(冰)"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "润熹仙子",
+          "TargetBlockID": "this:336(愈)"
+        }
+      ]
+    },
+    {
+      "ItemID": 336,
+      "Name": "愈",
+      "Description": "愈",
+      "Position": "(-2758.123,-1031.823)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "润熹仙子主修的《水灵妙法》能活用{color=#d0380a}五行相生{/color}之力，一经施展便是连绵不断的攻势，极难防备。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Menu",
+          "Text": "拜润熹仙子为师",
+          "TargetBlockID": "this:359(New Block)"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Menu",
+          "Text": "再了解一下其他长老",
+          "TargetBlockID": "this:346(选项)"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "冰",
+      "Description": "冰",
+      "Position": "(-2760.849,-963.8236)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "凝霜仙子为{color=#d0380a}冰{/color}派长老，主修《冰魄经》的她操控冰的能力宁州无人能出其右。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Menu",
+          "Text": "拜凝霜仙子为师",
+          "TargetBlockID": "this:360(New Block1)"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Menu",
+          "Text": "再了解一下其他长老",
+          "TargetBlockID": "this:346(选项)"
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "剑",
+      "Description": "剑",
+      "Position": "(-2754.23,-1108.35)",
+      "Commands": [
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "师尊管辖{color=#d0380a}剑派{/color}，是掌门的亲传弟子。年纪轻轻就已经到达了元婴期。她独创的《乾坤化剑诀》也成为了我派秘传功法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Menu",
+          "Text": "拜玄伶仙子为师",
+          "TargetBlockID": "this:361(New Block2)"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "再了解一下其他长老",
+          "TargetBlockID": "this:346(选项)"
+        }
+      ]
+    },
+    {
+      "ItemID": 910,
+      "Name": "天灵根判断",
+      "Description": "天灵根判断",
+      "Position": "(-2322.247,-1030.352)",
+      "Commands": [
+        {
+          "ItemID": 1105,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 1106,
+          "CmdType": "CmdRefreshNPCUI"
+        },
+        {
+          "ItemID": 911,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 912,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 913,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "878(内门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 914,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1107,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1112,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "你既已成内门弟子，分内的奖励我现在便交给你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1113,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "此乃清月令，我派执掌的后山中有一清月谭，持有此令方可前往潭中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1114,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1115,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "清月谭？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1116,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "不错，此潭天然成于谷内深处，迄今约有万年历史。其中玄妙待你前往清月谭一观便知，不过能够领悟多少还是看你个人的机遇。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1117,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师姐。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 916,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 878,
+      "Name": "内门",
+      "Description": "内门",
+      "Position": "(-2322.927,-1191.97)",
+      "Commands": [
+        {
+          "ItemID": 881,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{LastName}，你虽有百年难得一遇的灵根天赋，但修炼一途也并非只靠着天赋便能取得大成就的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1124,
+          "CmdType": "CmdGetNPCName"
+        },
+        {
+          "ItemID": 1125,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 882,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "千万年来，因为实力不济，或是心智不够坚定而身死道销的“天才”数不胜数。古人云：成大事者，必先苦其心志，劳其筋骨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 883,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "此番虽破格收录你为内门弟子，但你仍需在外门磨炼数年，与其他炼气期的外门弟子一样修行，不能有半点骄横。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 884,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "弟子谨记掌门教诲。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 918,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 885,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 894,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(-2999.971,-1236.4)",
+      "Commands": [
+        {
+          "ItemID": 898,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 897,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 902,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "师尊，本届的宗门大比的结果出来了，这次夺魁的是{FirstName}{LastName}{shidi}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 903,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "不错颖儿，辛苦你了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 904,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{LastName}，从今日起你就是我派的内门弟子了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 905,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 906,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "按大比的规矩，你可以从自行选择拜入在座的任意一名长老门下继续修行。颖儿，你将诸位长老的情况向你{shidi}介绍一下吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 907,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "是，师尊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 908,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，我派目前共有3位授业长老，你想先了解哪一位？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 909,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 900,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 901,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(no)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 890,
+      "Name": "宗门大比",
+      "Description": "宗门大比",
+      "Position": "(-2875.27,-1296.707)",
+      "Commands": [
+        {
+          "ItemID": 1007,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 7"
+        },
+        {
+          "ItemID": 1008,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1009,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1010,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1012,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1013,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1038,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1039,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1034,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1040,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1041,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1037,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1042,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1044,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 891,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 893,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(首次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 895,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 896,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "894(New Block4)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 306,
+      "Name": "yes",
+      "Description": "yes",
+      "Position": "(-2876.036,-1126.922)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "禀掌门师尊，今年的招收的外门弟子中，收取到了一名资质鉴定为天灵根的弟子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "天灵根，你可确定？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "的确是纯净的天灵根，没有一丝一毫杂灵根，这点我看的清清楚楚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 304,
+          "AvatarBindKey": "",
+          "StoryText": "此等资质自是要拜入冰派修习御冰之术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "凝霜仙子轻轻一挥，几朵剔透的冰莲出现在你的周围。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 304,
+          "AvatarBindKey": "",
+          "StoryText": "做我的亲传弟子可比做那些劳什子长老的亲传弟子有意思多了，你可愿入我门下？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "话音未落一道剑气破空而过，将那些莲花击成碎屑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你侧目一看，玄伶仙子指尖凝气，一寸蓝芒似剑刃般聚于指上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 302,
+          "AvatarBindKey": "",
+          "StoryText": "雕虫小技，不过尔尔罢了。若是想先一步踏入仙途，自然应当入剑派修行。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 303,
+          "AvatarBindKey": "",
+          "StoryText": "两位师妹，依我看不如让这位小友自己选择拜入哪派，你们看如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "此等资质连本座也有些心动，可惜本座如今修为已达元婴期瓶颈，要专心为之后的天劫做准备。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 301,
+          "AvatarBindKey": "",
+          "StoryText": "颖儿，你将诸位长老的情况向你师妹介绍一下吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "是，师尊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 317,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，我派目前共有三位授业长老，你想先了解哪一位？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 928,
+      "Name": "正常进入",
+      "Description": "正常进入",
+      "Position": "(-2479.446,-1297.923)",
+      "Commands": [
+        {
+          "ItemID": 1126,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "CmdChangeNPCAction"
+        }
+      ]
+    },
+    {
+      "ItemID": 1062,
+      "Name": "拯救老档",
+      "Description": "拯救老档",
+      "Position": "(-2663.141,-1492.901)",
+      "Commands": [
+        {
+          "ItemID": 1066,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1067,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1064,
+          "CmdType": "Fungus.If",
+          "Condition": "a211 > 0"
+        },
+        {
+          "ItemID": 1068,
+          "CmdType": "Fungus.If",
+          "Condition": "a211 == 1"
+        },
+        {
+          "ItemID": 1076,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1077,
+          "CmdType": "CmdSetPlayerRelationship"
+        },
+        {
+          "ItemID": 1078,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "a211 == 2"
+        },
+        {
+          "ItemID": 1080,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1081,
+          "CmdType": "CmdSetPlayerRelationship"
+        },
+        {
+          "ItemID": 1079,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "a211 == 3"
+        },
+        {
+          "ItemID": 1082,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1083,
+          "CmdType": "CmdSetPlayerRelationship"
+        },
+        {
+          "ItemID": 1065,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1069,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1063,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1118,
+      "Name": "主线判定",
+      "Description": "主线判定",
+      "Position": "(-2873.398,-1387.155)",
+      "Commands": [
+        {
+          "ItemID": 1119,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1120,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1123,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 1121,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1122,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "890(宗门大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "首次",
+      "Description": "首次",
+      "Position": "(-2874.601,-1201.087)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(no)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(yes)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 927,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2478.336,-1227.142)",
+      "Commands": [
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 930,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 931,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 932,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 933,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 934,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 935,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 936,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "928(正常进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "no",
+      "Description": "no",
+      "Position": "(-2645.667,-1229.278)",
+      "Commands": [
+        {
+          "ItemID": 937,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 938,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "927(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 939,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 940,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "928(正常进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

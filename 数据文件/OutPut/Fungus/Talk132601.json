@@ -1,0 +1,398 @@
+{
+  "Name": "Talk132601",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 293,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2603.255,-1224.061)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2792.312,-1222.457)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}供奉，我是碎星商会的管事{$name}，有什么需要我帮助的？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友，我是碎星商会的管事{$name}，有什么需要我帮助的？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.GetNPCName"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于碎星商会",
+          "TargetBlockID": "this:292(关于)"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想出售一些稀有的材料",
+          "TargetBlockID": "this:291(出售)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:293(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "关于",
+      "Description": "关于",
+      "Position": "(-2788.48,-1132.016)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们商会由碎星岛上的三大家族共同管理，商会的总部就设在南崖城，可以说是遍布于整片无尽之海上最大的商会组织。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不仅仅只是收集海上的宝物，我们还与中州，宁州的{color=#d0380a}天机阁{/color}，雍州，衡州的{color=#d0380a}广源商盟{/color}都有贸易往来，见过的奇珍异宝可谓数不胜数。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "因此，每隔十年在南崖城举办的拍卖会，可以说是无尽之海上的一大盛事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于三大家族",
+          "TargetBlockID": "this:303(家族)"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1000"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于百里家",
+          "TargetBlockID": "this:304(百里)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想出售一些稀有的材料",
+          "TargetBlockID": "this:291(出售)"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:293(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "家族",
+      "Description": "家族",
+      "Position": "(-2880.528,-1044.516)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我指的自然是唐家，白家和吴家。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我们商会里用的灵舟，大多是由白家炼制，远比寻常修士使用的灵舟要坚固许多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "因此，我们的船才敢开进那些密布灵气乱流的海域。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "至于唐家与吴家，也是传承已久的古老家族，你在拍卖会上能买到的法宝与丹药大多出自他们两家之手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1000"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于百里家",
+          "TargetBlockID": "this:304(百里)"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想出售一些稀有的材料",
+          "TargetBlockID": "this:291(出售)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:293(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "出售",
+      "Description": "出售",
+      "Position": "(-2981.662,-1222.924)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "当然，我们商会愿意用高价收购那些稀有的草药和材料，让我看看你有些什么吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "百里",
+      "Description": "百里",
+      "Position": "(-2691.892,-1045.652)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "噢，你是从何听起他们的？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "千余年前，百里家的确也是岛上的一大家族，实力甚至并不逊色于现在的三大家族。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "他们祖传的炼体法门强悍无比，甚至能与一般的海兽正面抗衡而不落下风。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "可惜...不知为何他们一族得罪了龙族。这龙族势力强大，即便是商会也不愿与他们起冲突。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "总之，因为这件事，百里全族一起迁离了碎星岛，也不知现在情况如何...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于三大家族",
+          "TargetBlockID": "this:303(家族)"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想出售一些稀有的材料",
+          "TargetBlockID": "this:291(出售)"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:293(离开)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

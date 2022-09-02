@@ -1,0 +1,783 @@
+{
+  "Name": "Talk8007",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2811.272,-1410.225)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(任务赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 550,
+      "Name": "3潜入散修",
+      "Description": "3潜入散修",
+      "Position": "(-2597.989,-1124.285)",
+      "Commands": [
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.If",
+          "Condition": "WanChengDu == 0"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "任务完成，前来复命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，此番值守可有异常？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我{SayStcVal=928}盛名在外，自然没有宵小之辈出没。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好，辛苦你了，这是任务奖励。我还有宗门事务在身，恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "WanChengDu == 1"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "任务完成，前来复命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，此番值守可有异常？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "遇到过 有人潜入，不过已经被我击毙了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哦？连示警都没有，这是我山门守备的失职啊，我会吩咐下去加强戒备的，这枚丹药算是我个人的补偿了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，被发现的时候就已经昏迷了，潜入的宵小之辈已被长老擒住，你不必担心，只是{shidi}你还需勤加修炼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我还有宗门事务在身，恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "600(任务失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 551,
+      "Name": "4本门弟子",
+      "Description": "4本门弟子",
+      "Position": "(-2745.574,-1123.716)",
+      "Commands": [
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "任务完成，前来复命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，此番值守可有异常？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我{SayStcVal=928}盛名在外，自然没有宵小之辈出没。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好，辛苦你了，这是任务奖励。我还有宗门事务在身，恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 548,
+      "Name": "1正常巡逻",
+      "Description": "1正常巡逻",
+      "Position": "(-3042.022,-1125.137)",
+      "Commands": [
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "任务完成，前来复命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，此番值守可有异常？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我{SayStcVal=928}盛名在外，自然没有宵小之辈出没。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好，辛苦你了，这是任务奖励。我还有宗门事务在身，恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 600,
+      "Name": "任务失败",
+      "Description": "任务失败",
+      "Position": "(-2738.706,-1005.08)",
+      "Commands": [
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 549,
+      "Name": "2遭遇妖兽",
+      "Description": "2遭遇妖兽",
+      "Position": "(-2883.643,-1123.006)",
+      "Commands": [
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.If",
+          "Condition": "WanChengDu == 0"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "任务完成，前来复命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，此番值守可有异常？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我{SayStcVal=928}盛名在外，自然没有宵小之辈出没。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好，辛苦你了，这是任务奖励。我还有宗门事务在身，恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "WanChengDu == 1"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，此番值守可有异常？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我{SayStcVal=928}盛名在外，自然没有宵小之辈出没，不过倒是遇到了了妖兽作祟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多是些吸纳了些灵气的野兽，灵智不清，哼，竟对我{SayStcVal=928}门下出手，{shidi}你也算是协助执事堂清扫了{SayStcVal=943}，这枚丹药算是我个人的酬谢了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好，辛苦你了，这是任务奖励。我还有宗门事务在身，恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(任务完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，这么早就回来了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我遭受妖兽突袭，慌乱之下不是其敌手，所以....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多是些吸纳了些灵气的野兽，灵智不清，哼，竟对我{SayStcVal=928}门下出手，看来执事堂又要着手清扫一下{SayStcVal=943}了，",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，你先下去养伤吧。我还有宗门事务在身，恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "600(任务失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "炼气期（随机境界（选人））",
+      "Description": "炼气期（随机境界（选人））",
+      "Position": "(-2476.678,-1539.313)",
+      "Commands": []
+    },
+    {
+      "ItemID": 308,
+      "Name": "任务赋值",
+      "Description": "任务赋值",
+      "Position": "(-2810.006,-1297.84)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 1"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 1"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 1"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 1"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 1"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "542(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 599,
+      "Name": "任务完成",
+      "Description": "任务完成",
+      "Position": "(-2886.43,-1008.624)",
+      "Commands": [
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.AddTime"
+        }
+      ]
+    },
+    {
+      "ItemID": 542,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2813.33,-1203.125)",
+      "Commands": [
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.If",
+          "Condition": "TemTask == 1"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "548(1正常巡逻)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemTask == 2"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "549(2遭遇妖兽)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemTask == 3"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "550(3潜入散修)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "551(4本门弟子)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

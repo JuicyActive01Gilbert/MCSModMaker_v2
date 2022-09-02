@@ -1,0 +1,873 @@
+{
+  "Name": "Talk115404",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2511.103,-1291.874)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "496(是否接任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-2501.901,-1006.44)",
+      "Commands": [
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄，你可听说过与火铜伴生的草药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "",
+          "StoryText": "古籍《本草纲目》或有记载，待我查看一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "",
+          "StoryText": "有是有，名唤{color=#d0380a}宁州香薷{/color}，因极其{color=#d0380a}畏寒{/color}，故生于火铜四周。但这种植物在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五百年前？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}缘何大惊小怪，难道你寻这草药有要事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，好不容易探得音讯，却又不是什么好消息。暂且先去武陵城将此事告知李相书吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "偶然听说而已，师兄莫放心上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 202,
+      "Name": "花妖询问疗法-初次进入-判断1",
+      "Description": "花妖询问疗法-初次进入-判断1",
+      "Position": "(-2352.093,-1212.104)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "178(身份判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 417,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-1938.508,-1008.618)",
+      "Commands": [
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄，你可听说过与火铜伴生的草药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "",
+          "StoryText": "古籍《本草纲目》或有记载，待我查看一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "",
+          "StoryText": "有是有，名唤{color=#d0380a}宁州香薷{/color}，因极其{color=#d0380a}畏寒{/color}，故生于火铜四周。但这种植物在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五百年前？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 413,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}缘何大惊小怪，难道你寻这草药有要事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，好不容易探得音讯，却又不是什么好消息。暂且先去武陵城将此事告知李相书吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "偶然听说而已，师兄莫放心上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2097.498,-1291.5)",
+      "Commands": []
+    },
+    {
+      "ItemID": 418,
+      "Name": "化尘教",
+      "Description": "化尘教",
+      "Position": "(-1799.163,-1011.356)",
+      "Commands": [
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄，你可听说过与火铜伴生的草药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 512,
+          "AvatarBindKey": "",
+          "StoryText": "古籍《本草纲目》或有记载，待我查看一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 512,
+          "AvatarBindKey": "",
+          "StoryText": "有是有，名唤{color=#d0380a}宁州香薷{/color}，因极其{color=#d0380a}畏寒{/color}，故生于火铜四周。但这种植物在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五百年前？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 512,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}缘何大惊小怪，难道你寻这草药有要事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，好不容易探得音讯，却又不是什么好消息。暂且先去武陵城将此事告知李相书吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "偶然听说而已，师兄莫放心上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 496,
+      "Name": "是否接任务",
+      "Description": "是否接任务",
+      "Position": "(-2311.085,-1291.901)",
+      "Commands": [
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(花妖询问疗法-初次进入-判断1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 416,
+      "Name": "星河剑派",
+      "Description": "星河剑派",
+      "Position": "(-2080.592,-1009.736)",
+      "Commands": [
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师姐，你可听说过与火铜伴生的草药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 312,
+          "AvatarBindKey": "",
+          "StoryText": "古籍《本草纲目》或有记载，待我查看一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 312,
+          "AvatarBindKey": "",
+          "StoryText": "有是有，名唤{color=#d0380a}宁州香薷{/color}，因极其{color=#d0380a}畏寒{/color}，故生于火铜四周。但这种植物在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五百年前？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 312,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}缘何大惊小怪，难道你寻这草药有要事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，好不容易探得音讯，却又不是什么好消息。暂且先去武陵城将此事告知李相书吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "偶然听说而已，师姐莫放心上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 178,
+      "Name": "身份判定",
+      "Description": "身份判定",
+      "Position": "(-2302.201,-1121.573)",
+      "Commands": [
+        {
+          "ItemID": 503,
+          "CmdType": "CmdGetMapType"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 2"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(散修)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 0"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(散修)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "413(竹山宗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 2"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "414(玄道宗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "415(金虹剑派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "416(星河剑派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "417(离火门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "418(化尘教)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 412,
+      "Name": "散修",
+      "Description": "散修",
+      "Position": "(-2650.559,-1006.98)",
+      "Commands": [
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "老板，你可听说过与火铜伴生的草药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 729,
+          "AvatarBindKey": "",
+          "StoryText": "古籍《本草纲目》或有记载，待我查看一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 729,
+          "AvatarBindKey": "",
+          "StoryText": "有是有，名唤{color=#d0380a}宁州香薷{/color}，因极其{color=#d0380a}畏寒{/color}，故生于火铜四周。但这种植物在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五百年前？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 729,
+          "AvatarBindKey": "",
+          "StoryText": "{gongzi}缘何大惊小怪，难道你寻这草药有要事？可惜宁州香薷已经灭绝，小店有心无力......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，好不容易探得音讯，却又不是什么好消息。暂且先去武陵城将此事告知李相书吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "偶然听说而已，老板莫放心上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 414,
+      "Name": "玄道宗",
+      "Description": "玄道宗",
+      "Position": "(-2356.433,-1009.18)",
+      "Commands": [
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄，你可听说过与火铜伴生的草药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 12,
+          "AvatarBindKey": "",
+          "StoryText": "古籍《本草纲目》或有记载，待我查看一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 12,
+          "AvatarBindKey": "",
+          "StoryText": "有是有，名唤{color=#d0380a}宁州香薷{/color}，因极其{color=#d0380a}畏寒{/color}，故生于火铜四周。但这种植物在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五百年前？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 12,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}缘何大惊小怪，难道你寻这草药有要事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，好不容易探得音讯，却又不是什么好消息。暂且先去武陵城将此事告知李相书吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "偶然听说而已，师兄莫放心上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 415,
+      "Name": "金虹剑派",
+      "Description": "金虹剑派",
+      "Position": "(-2223.808,-1009.178)",
+      "Commands": [
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄，你可听说过与火铜伴生的草药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 112,
+          "AvatarBindKey": "",
+          "StoryText": "古籍《本草纲目》或有记载，待我查看一下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 112,
+          "AvatarBindKey": "",
+          "StoryText": "有是有，名唤{color=#d0380a}宁州香薷{/color}，因极其{color=#d0380a}畏寒{/color}，故生于火铜四周。但这种植物在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五百年前？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 112,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}缘何大惊小怪，难道你寻这草药有要事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唉，好不容易探得音讯，却又不是什么好消息。暂且先去武陵城将此事告知李相书吧......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "偶然听说而已，师兄莫放心上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

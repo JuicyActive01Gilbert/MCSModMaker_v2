@@ -1,0 +1,211 @@
+{
+  "Name": "Talk7337",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(天阵眼核心)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 370,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2920.211,-1445.303)",
+      "Commands": [
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Menu",
+          "Text": "以道破阵",
+          "TargetBlockID": "this:348(以道破阵)"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Menu",
+          "Text": "以力破阵",
+          "TargetBlockID": "this:349(以力破阵)"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "天阵眼核心",
+      "Description": "天阵眼核心",
+      "Position": "(-3063.405,-1440.9)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "击破一个傀儡后，你在附近发现了几个照顾伤者的修士，正是李青麟，慕容颖等人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "稍远处传来神通轰击阵法的声音，走进一看，发现是炎萧，百里奇等人在尝试以力破阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你观战了一会，发现炎萧等人不但没击破阵法核心，反倒受伤不轻。等他们退下来后，你走上去准备尝试一下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "370(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 349,
+      "Name": "以力破阵",
+      "Description": "以力破阵",
+      "Position": "(-2770.958,-1407.989)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "以道破阵",
+      "Description": "以道破阵",
+      "Position": "(-2766.482,-1506.497)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "观察许久后，你看破了此阵。走上前去，随意一挥手便是灵力澎湃而出轰击在核心薄弱部位，只听“咔嚓“一声，后者也是随之碎裂。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你观察了一会，发现自己完全看不懂这个阵法的路数。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "370(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

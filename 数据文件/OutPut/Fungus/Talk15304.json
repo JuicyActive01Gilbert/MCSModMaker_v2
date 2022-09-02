@@ -1,0 +1,312 @@
+{
+  "Name": "Talk15304",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(是否结束判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 478,
+      "Name": "宗门大比询问",
+      "Description": "宗门大比询问",
+      "Position": "(-2789.996,-1183.114)",
+      "Commands": [
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 416,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，门派大比就要开始了，快来登记吧。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Menu",
+          "Text": "好的",
+          "TargetBlockID": "this:483(参加对话)"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等吧",
+          "TargetBlockID": "this:482(不参加)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 482,
+      "Name": "不参加",
+      "Description": "不参加",
+      "Position": "(-2923.996,-1182.114)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "是否结束判定",
+      "Description": "是否结束判定",
+      "Position": "(-2789.421,-1242.786)",
+      "Commands": [
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == year"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 416,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "今年的大比真是精彩。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "478(宗门大比询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 493,
+      "Name": "看比试",
+      "Description": "看比试",
+      "Position": "(-2865.368,-1079.806)",
+      "Commands": [
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走到擂台旁，观看其他师兄弟间的比试。大比之上，众人纷纷拿出自己的看家本领，法术横飞，打得好不热闹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你从观战中又得到了一些新的感悟，修为{color=#d0380a}+1000{/color}，心境{color=#d0380a}+1{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.AddEXP"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "485(随机战斗第一场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 485,
+      "Name": "随机战斗第一场",
+      "Description": "随机战斗第一场",
+      "Position": "(-2787.996,-998.6456)",
+      "Commands": [
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 416,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "请{FirstName}{LastName}上台比试！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 494,
+      "Name": "调整",
+      "Description": "调整",
+      "Position": "(-2705.368,-1080.806)",
+      "Commands": [
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走到一个安静的角落，盘腿坐下，很快进入了心境空明的状态...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "大战在即，亦能保持心境平和，心境{color=#d0380a}+3{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "485(随机战斗第一场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 483,
+      "Name": "参加对话",
+      "Description": "参加对话",
+      "Position": "(-2789.996,-1128.114)",
+      "Commands": [
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 416,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好了，这是你的签，你拿好到台下候着，等轮到你上台比试了，会有人来叫你的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（还有一段时间才能轮到我，现在做什么好呢？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看其他人的比试",
+          "TargetBlockID": "this:493(看比试)"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Menu",
+          "Text": "静心调整自己的状态",
+          "TargetBlockID": "this:494(调整)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

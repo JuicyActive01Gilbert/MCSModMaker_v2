@@ -1,0 +1,1229 @@
+{
+  "Name": "Talk119201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(小二)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "随便看看",
+      "Description": "随便看看",
+      "Position": "(-2658.104,-1306.654)",
+      "Commands": [
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 439,
+      "Name": "奖励",
+      "Description": "奖励",
+      "Position": "(-2644.123,-987.4314)",
+      "Commands": [
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.GetNTaskReward"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "我们灵药堂愿意以{$jiangli}的价格收购这批丹药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "377(接取任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "任务完成判定",
+      "Description": "任务完成判定",
+      "Position": "(-2607.489,-1162.272)",
+      "Commands": [
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.IsNTaskCanFinish"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.If",
+          "Condition": "wancheng == True"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "444(完成选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "检测灵石",
+      "Description": "检测灵石",
+      "Position": "(-3431.848,-1223.597)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 400"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(钱够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "347(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 316,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-3132.694,-1245.018)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于药材",
+          "TargetBlockID": "this:322(关于药材)"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于丹方",
+          "TargetBlockID": "this:323(关于丹方)"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于丹炉",
+          "TargetBlockID": "this:324(关于丹炉)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于炼丹的场所",
+          "TargetBlockID": "this:325(关于炼丹的场所)"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它问题了",
+          "TargetBlockID": "this:326(没有其它问题了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 412,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-2319.248,-1068.12)",
+      "Commands": [
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "可惜，可惜...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 346,
+      "Name": "钱够",
+      "Description": "钱够",
+      "Position": "(-3561.535,-1270.472)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "我这里正好还有一副“生骨丹”的丹方，倒也不值什么钱，便一起送给你好了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "完成",
+      "Description": "完成",
+      "Position": "(-2317.248,-1188.12)",
+      "Commands": [
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "不错，不错，丹药的品质上乘，这些灵石是给你的报酬。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 411,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-2319.248,-1126.12)",
+      "Commands": [
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "很好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 444,
+      "Name": "完成选项",
+      "Description": "完成选项",
+      "Position": "(-2459.123,-1187.431)",
+      "Commands": [
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "托你炼制的丹药你可带来了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经带来了",
+          "TargetBlockID": "this:394(完成)"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经在准备炼制了",
+          "TargetBlockID": "this:411(继续)"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想放弃这个任务",
+          "TargetBlockID": "this:412(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 347,
+      "Name": "钱不够",
+      "Description": "钱不够",
+      "Position": "(-3558.41,-1181.409)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "没钱？那我可不能白送你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "上2楼",
+      "Description": "上2楼",
+      "Position": "(-2504.421,-1309.103)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "客官，您...您这边请。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 365,
+      "Name": "任务开始判定",
+      "Description": "任务开始判定",
+      "Position": "(-2794.34,-1162.336)",
+      "Commands": [
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 1"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "420(炼气初期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "423(初次触发对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "关于炼丹",
+      "Description": "关于炼丹",
+      "Position": "(-2969.694,-1244.581)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "教嘛倒也谈不上，这炼丹本来也不是什么难事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "备齐了药材，再配上一个高品质的丹炉，按着丹方一步步走，任谁都能炼出一炉上好的丹药来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "不过若是没有丹方，那就得自行鉴别药材，调整配方，再中和药性...这可就是一门学问了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 377,
+      "Name": "接取任务",
+      "Description": "接取任务",
+      "Position": "(-2794.335,-992.7855)",
+      "Commands": [
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "眼下我们的库存的确略有不足，因此{$Var}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:388(接任务)"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于报酬",
+          "TargetBlockID": "this:439(奖励)"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:385(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 323,
+      "Name": "关于丹方",
+      "Description": "关于丹方",
+      "Position": "(-3290.792,-1276.018)",
+      "Commands": [
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "这丹药的品阶越高越难炼制，这丹方的价格自然也是水涨船高，一些稀有的丹方甚至可以在拍卖会上拍出数万灵石的高价。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "不过若只是炼制常见的基础丹药，丹药不妨去{color=#d0380a}天星城{/color}看看，他们那里不仅出售神通术法也出售各类丹方。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "而且若是熟知药理，又精通药性的鉴别，即便没有丹方，也未必不能自己摸索炼制出丹药来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "检测1",
+      "Description": "检测1",
+      "Position": "(-2654.428,-1242.018)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(检测2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(上2楼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "检测2",
+      "Description": "检测2",
+      "Position": "(-2504.557,-1239.882)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我是要购置一些宝物，不过我只要你们这儿最好的东西，那些次品就不要拿出来给我看了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一边说着，一边将自己的灵力外放，那管事感受到你的气势，知道自己遇到的是一位大主顾，脸上的笑容也越发真切了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(上2楼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID >= 100000"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一边说着，一边挥手将自己的灵石展示给他看，那管事知道自己遇到的是一位大主顾，脸上的笑容也越发真切了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(上2楼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "客官，您说笑了，我们这里卖的可都是上品，您看看便知。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(随便看看)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "未完成",
+      "Description": "未完成",
+      "Position": "(-2460.248,-1126.12)",
+      "Commands": [
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "托你炼制的丹药你可带来了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经在准备炼制了",
+          "TargetBlockID": "this:411(继续)"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想放弃这个任务",
+          "TargetBlockID": "this:412(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 423,
+      "Name": "初次触发对话",
+      "Description": "初次触发对话",
+      "Position": "(-2794.806,-1103.785)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(暂无任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "你也会炼制丹药？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "我们灵药堂向来有自己的炼丹大师，不过偶尔也确实会因为某些草药短缺而库存不足。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "若是你也能炼成符合我们品质要求的丹药来，我可以用比市场价略高一筹的价格从你这里收购。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "366(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "366(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 376,
+      "Name": "暂无任务",
+      "Description": "暂无任务",
+      "Position": "(-2938.712,-1046.739)",
+      "Commands": [
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "我们灵药堂近日货存充足，没有什么需要补充的丹药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "小二",
+      "Description": "小二",
+      "Position": "(-2797.06,-1244.797)",
+      "Commands": [
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "这位客官想要看些什么，要不要小的帮忙介绍一下？本店的东西绝对会让所有客人满意而归！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Menu",
+          "Text": "能不能教教我怎么炼丹？",
+          "TargetBlockID": "this:311(关于炼丹)"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于上次你托我炼制的丹药",
+          "TargetBlockID": "this:365(任务开始判定)"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么任务可以交给我么",
+          "TargetBlockID": "this:365(任务开始判定)"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Menu",
+          "Text": "我就自己随便看看吧",
+          "TargetBlockID": "this:282(随便看看)"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Menu",
+          "Text": "给我看看你们这里最好的东西",
+          "TargetBlockID": "this:294(检测1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 366,
+      "Name": "任务CD判定",
+      "Description": "任务CD判定",
+      "Position": "(-2794.896,-1047.278)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(暂无任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "377(接取任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 420,
+      "Name": "炼气初期",
+      "Description": "炼气初期",
+      "Position": "(-2940.248,-1164.12)",
+      "Commands": [
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "（上下打量）你一个才刚踏入炼气期的{xiaozi}能炼出什么好丹药来？别在这里捣乱了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 385,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-2935.505,-992.8491)",
+      "Commands": [
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这种丹药的话...我炼制起来也颇有难度。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "可惜，可惜....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 324,
+      "Name": "关于丹炉",
+      "Description": "关于丹炉",
+      "Position": "(-3283.34,-1224.581)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "炼丹用的丹炉也分品阶，高品质的丹炉更耐用，也能够承受更多的药力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "若是强行用低品阶的丹炉炼制高品阶的丹药，甚至会有炸炉的风险！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "你刚开始学习炼丹，倒是用不上什么太好的炉子。像这种普通的一品丹炉，出个400灵石拿去便是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买丹炉（400灵石）",
+          "TargetBlockID": "this:342(检测灵石)"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:326(没有其它问题了)"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 325,
+      "Name": "关于炼丹的场所",
+      "Description": "关于炼丹的场所",
+      "Position": "(-3286.059,-1169.107)",
+      "Commands": [
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "这炼丹场地倒也颇有讲究，一般的房间可经受不住“地火”的炙烤。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "我们灵药堂的炼丹房当然不会随便对外开放，不过稍稍花些钱，便可以在白帝楼租借到一间地火房，倒也不算麻烦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 326,
+      "Name": "没有其它问题了",
+      "Description": "没有其它问题了",
+      "Position": "(-3289.855,-1123.834)",
+      "Commands": [
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 322,
+      "Name": "关于药材",
+      "Description": "关于药材",
+      "Position": "(-3287.693,-1329.581)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "这不同的药材之间，药性自然不同。但即便是同一种草药，在炼丹时作为主药，辅药或是药引使用，功效也大有差别。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "就比如咱们宁州最常见的流莹草，作为主药使用可“生息”，作为辅药使用可“培元”。同时，作为一味“性热”的药草，它也可以作为药引，中和其他“性寒”的草药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "有经验的炼丹师，只需要自己动手炼制一次药材，就可以从药渣中鉴别出它独特的药性。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "",
+          "StoryText": "不过光咱们宁州常见的草药便数不胜数，何况还有各种稀有的海外仙草，药性各不相同，恐怕最有经验的炼丹师也没办法鉴别出所有药材功效来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "接任务",
+      "Description": "接任务",
+      "Position": "(-2795.424,-938.7518)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.StartNTask"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这件事就交给我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

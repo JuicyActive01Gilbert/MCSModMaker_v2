@@ -1,0 +1,245 @@
+{
+  "Name": "Talk9051",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2802.147,-1374.309)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量获取",
+      "Description": "变量获取",
+      "Position": "(-2797.995,-1234.957)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地看来是一处天然形成的洞窟，你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识探查",
+          "TargetBlockID": "this:290(神识检测)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "神识检测",
+      "Description": "神识检测",
+      "Position": "(-2919.161,-1164.77)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你谨慎地用神识扫过洞窟，随即惊喜地发现了两株极为罕见的{SayStcVal=948}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi >= 45"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(高神识)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(低神识)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "转身离开",
+      "Description": "转身离开",
+      "Position": "(-2921.596,-1004.262)",
+      "Commands": []
+    },
+    {
+      "ItemID": 294,
+      "Name": "低神识",
+      "Description": "低神识",
+      "Position": "(-2790.566,-1102.711)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此等品阶的草药实乃可遇而不可求之物，但机遇往往也可能伴随着巨大的风险。你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "进入洞窟",
+      "Description": "进入洞窟",
+      "Position": "(-3185.395,-1006.655)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你小心翼翼地摘下草药，将其纳入储物袋，然后心满意足地离开了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.AddItemByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "一探究竟",
+      "Description": "一探究竟",
+      "Position": "(-2665.355,-1157.631)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你收敛气息，慢慢走进洞窟深处，索性并没有遇到其他的危险，",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将草药其纳入储物袋，然后心满意足地离开了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.AddItemByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "高神识",
+      "Description": "高神识",
+      "Position": "(-3054.778,-1101.575)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此等品阶的草药实乃可遇而不可求之物，索性还没有人在你之前发现此处机缘。你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "采摘草药",
+          "TargetBlockID": "this:301(进入洞窟)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

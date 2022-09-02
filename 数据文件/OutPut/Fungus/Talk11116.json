@@ -1,0 +1,541 @@
+{
+  "Name": "Talk11116",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "出手",
+      "Description": "出手",
+      "Position": "(-2603.162,-1018.221)",
+      "Commands": [
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "哼，能接下我几招，倒也有几分本事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "我们龙族一向以强者为尊，我认可你的实力。但百里家所窃龙珠于我族意义重大，又事关我龙族尊严，今日若是无法讨得一个说法，我定不会善罢甘休！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "474(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2603.035,-1175.115)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "468(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 522,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2426.802,-932.6556)",
+      "Commands": [
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于龙族",
+          "TargetBlockID": "this:527(龙族)"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于妖圣",
+          "TargetBlockID": "this:528(关于妖圣)"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它想问的了",
+          "TargetBlockID": "this:509(结尾赋值)"
+        }
+      ]
+    },
+    {
+      "ItemID": 528,
+      "Name": "关于妖圣",
+      "Description": "关于妖圣",
+      "Position": "(-2601.527,-838.1502)",
+      "Commands": [
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "传说无尽之海有四大妖圣，分别是化龙海的{color=#d0380a}覆海大圣{/color}，吞云海的{color=#d0380a}吞云大圣{/color}，无尽海渊的{color=#d0380a}九幽大圣{/color}，以及浪方海域的{color=#d0380a}浪方大圣{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "不过这四大妖圣个个都有{color=#d0380a}化神期{/color}实力，我虽然很想见识一番，但只凭我如今的修为实在是有些不自量力了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "522(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 456,
+      "Name": "未出手",
+      "Description": "未出手",
+      "Position": "(-2428.49,-1095.313)",
+      "Commands": [
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "龙湛出手的速度比你快上许多，电光火石间便与百里奇战成一团。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在一旁观战，趁两人距离稍远时大喊出声。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "474(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2430.49,-1018.313)",
+      "Commands": [
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "龙湛前辈，且先听我一言。百里兄并非有意失约，实在是事出有因！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将这阵发生的事情细细道来，龙湛看起来略显不悦地接受了你的解释。百里奇乘机奉还龙珠，龙湛的脸色这才好看了许多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "哎...没想到你们两个小娃娃能有这般心境，倒是比百里家那些个虚长几辈的长老有出息的多。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 805,
+          "AvatarBindKey": "",
+          "StoryText": "也罢，既然我已取回龙珠，那先前同百里家的恩怨便既往不咎，与蓬莎岛及广陵城的协议也就此作罢。不过若你们百里家再打龙珠的主意，我龙族之威可不是你们承受得起的！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不臾多时，得了龙珠的龙族果然信守承诺，没有过多计较便返回了无尽之海。你与百里奇回到码头，跳下飞剑落在地面上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，这次多亏你出手相助，才能化解我们百里家与龙族的恩怨，真不知该如何答谢你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "百里兄言重了，这次与你一同出海，我也长了不少见识，收获颇丰。何况以我们之间的交情，谈谢不谢的未免有些见外。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，那这次就先算我百里奇欠{xiongdi}一个人情，日后若有任何需要我帮忙的地方，我必当尽力而为！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不知百里兄之后有什么打算？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "如今龙族与我们的协议已经作罢，我要先与父亲一起重新规划家族商队的航线。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "等眼下的事情忙完...或许我会重新出海游历，去挑战不同海域的强者，磨练自己的修为。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "龙族长老未曾化为本体，就已经有如此实力，真想见识见识那名列于四大妖圣之位的龙族族长覆海大圣，到底有多强。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "更不用说海上还有另外三位与之齐名的妖圣，个个修为通天，若此生没有机会与这样的强者交手，岂不是一大憾事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "522(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 468,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2602.49,-1095.313)",
+      "Commands": [
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(出手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "456(未出手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 527,
+      "Name": "龙族",
+      "Description": "龙族",
+      "Position": "(-2605.922,-932.6207)",
+      "Commands": [
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "我曾听说龙族在化龙海建有一座{color=#d0380a}龙宫{/color}，不过却并不知道龙宫的确切位置。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "想找到龙宫的话，只有先去化龙海，向{color=#d0380a}附近的修士{/color}打探一番，看能不能得到一些有用的线索了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "522(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 509,
+      "Name": "结尾赋值",
+      "Description": "结尾赋值",
+      "Position": "(-2427.391,-834.6097)",
+      "Commands": [
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "好，那我便先回府处理家族事宜了。日后有事，{xiongdi}便用传音符与我联系吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetTaskDisabled"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "CmdAddNPCEvent"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

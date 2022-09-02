@@ -1,0 +1,540 @@
+{
+  "Name": "Talk551",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 293,
+      "Name": "倪家",
+      "Description": "倪家",
+      "Position": "(-2962.516,-1156.142)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一轮的对手似乎是倪家的修士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 290,
+      "Name": "随机战斗",
+      "Description": "随机战斗",
+      "Position": "(-2792.311,-1119.717)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(倪家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "295(林家)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(竹山宗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 7"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(金虹剑派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 8"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(星河剑派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 9"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(化尘教)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(离火门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-2607.922,-1123.884)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一轮的对手似乎是离火门的修士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "林家",
+      "Description": "林家",
+      "Position": "(-2960.516,-1097.142)",
+      "Commands": [
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一轮的对手似乎是林家的修士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "金虹剑派",
+      "Description": "金虹剑派",
+      "Position": "(-2609.189,-1074.518)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一轮的对手似乎是金虹剑派的修士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-2608.782,-1180.069)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一轮的对手似乎是竹山宗的修士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2798.43,-1247.012)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(胜利)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "星河剑派",
+      "Description": "星河剑派",
+      "Position": "(-2607.921,-977.0475)",
+      "Commands": [
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一轮的对手似乎是星河剑派的修士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "化尘教",
+      "Description": "化尘教",
+      "Position": "(-2609.188,-1025.149)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这一轮的对手似乎是化尘教的修士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "胜利",
+      "Description": "胜利",
+      "Position": "(-2797.79,-1182.731)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1131,
+          "AvatarBindKey": "",
+          "StoryText": "恭喜{FirstName}{LastName}选手获得第二轮比试的胜利。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1131,
+          "AvatarBindKey": "",
+          "StoryText": "接下来马上开始第三轮的比试！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(随机战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "失败",
+      "Description": "失败",
+      "Position": "(-2523.111,-1240.822)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 1"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "咳咳咳...没想到第二轮就输了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你这{xiaozi}才修炼没几日，能过第一轮就已经算不错了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "还是好好提升一番实力，等五年后再来吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "咳咳咳...没想到第二轮就输了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "人外有人，天外有天，让你这{xiaozi}多吃吃教训也好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

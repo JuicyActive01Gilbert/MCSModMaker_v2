@@ -1,0 +1,1275 @@
+{
+  "Name": "Talk35",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(初次触发判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 426,
+      "Name": "模板",
+      "Description": "模板",
+      "Position": "(-2431.367,-415.5089)",
+      "Commands": [
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "旁白",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "主角",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "岛主",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Menu",
+          "Text": "Option Text",
+          "TargetBlockID": ""
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 310,
+      "Name": "修士？",
+      "Description": "修士？",
+      "Position": "(-2580.3,-890.6524)",
+      "Commands": [
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "偶尔有外界修士来此交易，由于是互惠互利的关系，外界修士也很少透露我们的存在，避免更多人前来竟争。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 403,
+      "Name": "交易？",
+      "Description": "交易？",
+      "Position": "(-2572.345,-831.5615)",
+      "Commands": [
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们用外界修士需要的一些情报、草药等，换取{color=#d0380a}神阴石{/color}、以及帮我们清除一些威胁。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 404,
+      "Name": "修炼？",
+      "Description": "修炼？",
+      "Position": "(-2571.21,-778.1525)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "尽管不如正常修士效果明显，但灵魂体也是可以修炼的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "修炼分两个方向，一个是通过{color=#d0380a}神阴石{/color}修炼自己的神识，另一个则是利用阴{color=#d0380a}气旋{/color}修炼自己的{color=#d0380a}阴体{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 381,
+      "Name": "没有什么想问的了",
+      "Description": "没有什么想问的了",
+      "Position": "(-2555.975,-504.8074)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那{$xiaoyou}便四处看看罢，有什么不懂的再问老夫便是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(化神分支)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 405,
+      "Name": "魂体？",
+      "Description": "魂体？",
+      "Position": "(-2583.708,-1013.38)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "在这极阴三海上，由于被极强的阴气覆盖，一些修为较高或神识较强的修士死后，元神并不会立刻溃散，而是会依附于这阴气之上，形成自己的{color=#d0380a}阴体{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "但这也不是必然之事，至于什么情况元神能留存下来，什么情况不能，就不得而知了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "体系？",
+      "Description": "体系？",
+      "Position": "(-2580.3,-951.5616)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "灵魂体比修士弱得多，如果没有一套互惠的体系，便根本无法立足。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "将阴魂岛作为据点，灵魂体既可以在此{color=#d0380a}修炼{/color}，又可共同抵御外敌，还能吸引特殊的{color=#d0380a}修士{/color}前来{color=#d0380a}交易{/color}，一举三得。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 288,
+      "Name": "初次触发剧情",
+      "Description": "初次触发剧情",
+      "Position": "(-2791.89,-1150.197)",
+      "Commands": [
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "岛上零星点缀着一座座不太高的山，地面也起伏不平。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "整座岛充满了阴郁的气息，看上去不太适合人类居住，也许只有灵魂体会选择栖息在这样的岛上吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着你越来越接近，四周灵魂体也越来越多——他们看上去极为透光，似乎随时都会被风吹散一般。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "作为一名修士，灵魂体们无不对你侧目。时常有三五成群的灵魂体小声议论你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这些只是一群小角色，无需理会他们，直接去岛内打探罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "越过一座稍微大些的山峰，顿觉柳暗花明——远方赫然有一个极为显眼的灰白色气旋，从地面一直盘旋到天际。众多灵魂体纷纷聚集在气旋四周，场面颇为壮观。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不知不觉便被这场景吸引了过去。而与此同时，不远处一个极为凝实的灵魂体也发现了你，朝你飞了过来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他浑身灰白，一副饱经风霜的花甲老人模样，一眼看去便觉实力不俗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呵呵，难得有修士来此，欢迎欢迎。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "在下阴魂岛岛主李司魂，愿为{$xiaoyou}解惑，{$xiaoyou}可有什么想知道的？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "神阴石？",
+      "Description": "神阴石？",
+      "Position": "(-2558.708,-619.0613)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "神阴石是极阴三海中罕见的纯黑石块，由阴气与神识共同汇集而成，多于一些海岛上出现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此物对修士并无大用，但对我等灵魂体却大有裨益。{$xiaoyou}若有寻到，与我兑换一些天才地宝，也算是互惠互利了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "初次触发判断",
+      "Description": "初次触发判断",
+      "Position": "(-2792.312,-1222.457)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(初次触发剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 1000"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "阴体？",
+      "Description": "阴体？",
+      "Position": "(-2560.688,-670.4896)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阴体的本质是我们所依附的阴气，阴气修炼的越凝实，就越接近于修士的身体。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阴体最开始甚至连一块石头都拿不起来，但修炼过后却能如臂使指。阴体修的越强，{color=#d0380a}重铸肉身{/color}的可能性也就越高。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 442,
+      "Name": "化神分支",
+      "Description": "化神分支",
+      "Position": "(-2344.9,-505.2871)",
+      "Commands": [
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Menu",
+          "Text": "隐藏实力",
+          "TargetBlockID": "this:446(隐藏实力)"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Menu",
+          "Text": "略施威压",
+          "TargetBlockID": "this:447(略施威压)"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2578.859,-1168.365)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 409,
+      "Name": "阴魂岛？",
+      "Description": "阴魂岛？",
+      "Position": "(-2578.255,-1077.334)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "自古以来这阴魂岛便存在于此，至于可以追溯到什么时期老夫也不得而知。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阴魂岛内除了适合{color=#d0380a}魂体{/color}修炼之外，最重要的是有一套适合灵魂体的{color=#d0380a}体系{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 446,
+      "Name": "隐藏实力",
+      "Description": "隐藏实力",
+      "Position": "(-2162.9,-586.2871)",
+      "Commands": [
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不希望他们因为境界差距而改变对你的态度，便将自身修为隐藏了起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "以你化神期的实力，别人自然也看不出任何端倪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 410,
+      "Name": "重铸肉身？",
+      "Description": "重铸肉身？",
+      "Position": "(-2553.026,-566.7885)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "司徒礼意味深长地看了你一眼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这…倒也不算什么秘密了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这重铸肉身之法名为{color=#d0380a}逆天造化术{/color}，灵魂体若使用此术，便可重新铸造一副与生前无二的身躯。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老夫也正是因为此物，才在这阴魂岛有些威望。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "…若真有这么神奇的秘术，岛主为何不先给自己重铸一个肉身？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呵呵，之所以还是这副模样，是因为这逆天造化术的使用要求极为严苛。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过老夫已经找到了解决之道，要重回人形不过是时间问题而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你自然要说已经找到了解决方法，不然此术岂不是空中楼阁？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "况且若这秘术当真如此神奇，我怎会从未听说？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此术乃是不知多少万年前，机缘巧合下所得，你又从何听起？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只是想不到，有朝一日我还真要用到它。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "…若当真如此，要如何才能获得？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呵呵，此术可不是能轻易获得的，只有收集到{color=#d0380a}五块神阴石{/color}才可与我交换，阴魂岛上历来便是这个规矩。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过{$xiaoyou}既然是修士之身，眼下倒是有两件事需要道友帮忙，若能办成其中一件，这逆天造化术便归道友了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "至于事情的详细内容，道友去向之恒与无尘那打听即可。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "听完这番话，你表面陷入沉思，实则是在用神念沟通铁剑中的魏无极。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老头，若此话当真，你岂不是重生有望了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯…",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "话虽如此，不过我有预感，此事不会这么简单…",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若你有心，且去了解一下任务内容也无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "气旋？",
+      "Description": "气旋？",
+      "Position": "(-2562.118,-723.6069)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阴气旋能聚集大量的阴气供灵魂体修炼，所以才会有大量的灵魂体聚集于此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此乃阴魂岛重地，{$xiaoyou}还是不要靠近为好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2788.579,-827.145)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "q1 == 1"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Menu",
+          "Text": "阴魂岛？",
+          "TargetBlockID": "this:409(阴魂岛？)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.If",
+          "Condition": "q2 == 1"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "魂体？",
+          "TargetBlockID": "this:405(魂体？)"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.If",
+          "Condition": "q3 == 1"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Menu",
+          "Text": "体系？",
+          "TargetBlockID": "this:406(体系？)"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.If",
+          "Condition": "q4 == 1"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Menu",
+          "Text": "修士？",
+          "TargetBlockID": "this:310(修士？)"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.If",
+          "Condition": "q5 == 1"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "交易？",
+          "TargetBlockID": "this:403(交易？)"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.If",
+          "Condition": "q6 == 1"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Menu",
+          "Text": "修炼？",
+          "TargetBlockID": "this:404(修炼？)"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.If",
+          "Condition": "q7 == 1"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Menu",
+          "Text": "气旋？",
+          "TargetBlockID": "this:411(气旋？)"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.If",
+          "Condition": "q8 == 1"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Menu",
+          "Text": "阴体？",
+          "TargetBlockID": "this:408(阴体？)"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.If",
+          "Condition": "q9 == 1"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Menu",
+          "Text": "神阴石？",
+          "TargetBlockID": "this:407(神阴石？)"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.If",
+          "Condition": "q10 == 1"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Menu",
+          "Text": "重铸肉身？",
+          "TargetBlockID": "this:410(重铸肉身？)"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.If",
+          "Condition": "q11 == 1"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有什么想问的了",
+          "TargetBlockID": "this:381(没有什么想问的了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 425,
+      "Name": "1000年以后判断",
+      "Description": "1000年以后判断",
+      "Position": "(-2579.025,-1263.281)",
+      "Commands": []
+    },
+    {
+      "ItemID": 447,
+      "Name": "略施威压",
+      "Description": "略施威压",
+      "Position": "(-2161.9,-425.2871)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不再收敛修为，释放出了一丝化神的威压，岛主马上便察觉到了这一点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "？！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来前辈乃是化神修为，此前在下有所不敬，还望前辈海涵…",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只是…前辈可有考虑过在这三冥海渡劫？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "自然没有，本座为何要在此处渡劫？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若前辈肯在三冥海渡劫，这逆天造化术在下便双手奉上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你迟疑地看了他一眼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“老头，在这三冥海渡劫莫非有何不妥？”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "“虽然我对渡劫之事知之甚少，不过渡劫地点确实是至关重要、需要好好筛选的。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "“这三冥海阴气极重，恐怕不是渡劫的好地方，你还是不要答应他为好。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“嗯。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此事本座无法答应你，秘术之事就按此前说的来罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那在下便恭候前辈的好消息了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

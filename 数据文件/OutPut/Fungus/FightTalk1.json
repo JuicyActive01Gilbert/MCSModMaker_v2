@@ -1,0 +1,321 @@
+{
+  "Name": "FightTalk1",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "UseSkill",
+      "Description": "UseSkill",
+      "Position": "(-2925.276,-1315.52)",
+      "Commands": [
+        {
+          "ItemID": 107,
+          "CmdType": "Fungus.If",
+          "Condition": "attaker == True"
+        },
+        {
+          "ItemID": 108,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "105(玩家释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 109,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "attaker == False"
+        },
+        {
+          "ItemID": 110,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "106(敌人释放技能)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 103,
+      "Name": "start",
+      "Description": "start",
+      "Position": "(-2498.926,-1310.433)",
+      "Commands": [
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.FightClearSkill"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "修士之间对决，{color=red}遁速{/color}尤为重要。遁速更快的一方可以抢先出手，占尽先机。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "还记得我教你的东西么？道家法门的诀窍，在于吸收天地间的五行灵气，来释放对应的法术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 111,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这{color=red}火弹术{/color}乃是火系的基础法门，点击技能图标，调动体内灵气并释放它。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 116,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "玩家释放技能",
+      "Description": "玩家释放技能",
+      "Position": "(-2921.108,-1224.826)",
+      "Commands": [
+        {
+          "ItemID": 112,
+          "CmdType": "Fungus.If",
+          "Condition": "SkillID == 301"
+        },
+        {
+          "ItemID": 131,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "126(释放火弹后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 115,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.If",
+          "Condition": "SkillID == 501"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "133(释放运气后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 125,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 106,
+      "Name": "敌人释放技能",
+      "Description": "敌人释放技能",
+      "Position": "(-3173.32,-1329.816)",
+      "Commands": []
+    },
+    {
+      "ItemID": 126,
+      "Name": "释放火弹后",
+      "Description": "释放火弹后",
+      "Position": "(-3047.366,-1133.358)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 128,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "看来你掌握的还不错，不过道家法门妙用无穷，你若是能领悟{color=red}五行相生{/color}的技巧，这些基础法术也会威力大增。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "运气术能够帮助你调整体内灵气属性，若能吸取木属性灵气释放{color=red}木刺{/color}，{color=red}火弹{/color}的威力也会得到提升。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "点击技能图标以释放运气术。释放技能时，你可以手动调整中央待选区的灵气。选择三种你暂时无需使用的灵气，便有可能通过运气术重新吸收到你所需要的灵气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.FightAddSkill"
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "如果你体内的灵气已经不足以释放法术了，就只能先{color=red}结束回合{/color}，再重新吸收天地灵气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "随着修为的提升，你体内能够储存的{color=red}灵气上限{/color}也会越来越多。只有这样，你才能使用那些更为强大的神通。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "释放运气后",
+      "Description": "释放运气后",
+      "Position": "(-2794.124,-1132.851)",
+      "Commands": [
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "不错，现在尝试先释放木刺后，再次释放火弹，以触发{color=red}五行连击{/color}的效果。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 156,
+      "Name": "ClickEndRound",
+      "Description": "ClickEndRound",
+      "Position": "(-2279.557,-1315.491)",
+      "Commands": [
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "喂，臭{xiaozi}，你不会连个区区{color=red}火弹{/color}都使不出来吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "运气术可是修真者最最基础的法术了，点击技能图标，然后释放运气术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

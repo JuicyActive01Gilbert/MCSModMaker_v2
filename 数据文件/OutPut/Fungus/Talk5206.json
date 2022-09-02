@@ -1,0 +1,374 @@
+{
+  "Name": "Talk5206",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2621.896,-1123.328)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "155(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 105,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-3078.564,-1005.94)",
+      "Commands": [
+        {
+          "ItemID": 117,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 118,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3248.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 217,
+      "Name": "出手相助",
+      "Description": "出手相助",
+      "Position": "(-2874.413,-915.0191)",
+      "Commands": [
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既是如此，不如我便陪你一同寻找，也开开眼界。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 0"
+        },
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "云汐城的中草堂或许有此物的记载，我回去翻找一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "宗门的藏经阁或许有此物的记载，我回去翻找一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 623,
+          "AvatarBindKey": "",
+          "StoryText": "感激不尽！我名李相书，下一个目的地是{color=#d0380a}武陵城{/color}，道友若有消息可去客栈寻我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "李兄可唤我{FirstName}{LastName}，那么暂此别过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 218,
+      "Name": "生死有命",
+      "Description": "生死有命",
+      "Position": "(-2625.232,-912.7404)",
+      "Commands": [
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 160,
+      "Name": "漠不关心",
+      "Description": "漠不关心",
+      "Position": "(-2493.573,-990.0138)",
+      "Commands": [
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 155,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2615.573,-1053.014)",
+      "Commands": [
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一位衣着朴素的修士唉声叹气地坐在路旁，看起来十分困扰。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前询问",
+          "TargetBlockID": "this:159(上前询问)"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Menu",
+          "Text": "漠不关心",
+          "TargetBlockID": "this:160(漠不关心)"
+        }
+      ]
+    },
+    {
+      "ItemID": 159,
+      "Name": "上前询问",
+      "Description": "上前询问",
+      "Position": "(-2740.573,-984.0138)",
+      "Commands": [
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 623,
+          "AvatarBindKey": "",
+          "StoryText": "说来话长，道友可听说过与{color=#d0380a}火铜{/color}伴生的植物？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "火铜？据说{color=#d0380a}沃焦山{/color}内盛产火铜，但那地方焦金流石，怎么可能有植物生长，道友莫不是在消遣在下？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 623,
+          "AvatarBindKey": "",
+          "StoryText": "道友莫怪，我左思右想实在不知从何说起，只得先问了这么奇怪的问题。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 623,
+          "AvatarBindKey": "",
+          "StoryText": "实不相瞒，我同师妹前些日子误入上古遗迹。本是福缘美事，熟料那洞府竟处处藏毒。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 623,
+          "AvatarBindKey": "",
+          "StoryText": "我二人步步为营，师妹却还是被毒所伤。她出来时面色便欠佳，现在......唉......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 623,
+          "AvatarBindKey": "",
+          "StoryText": "我也是在其中偶然得知有味与火铜伴生的草药或能解此毒，便寻了大半宁州打探它的消息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手相助",
+          "TargetBlockID": "this:217(出手相助)"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Menu",
+          "Text": "生死有命",
+          "TargetBlockID": "this:218(生死有命)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

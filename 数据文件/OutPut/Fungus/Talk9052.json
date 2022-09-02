@@ -1,0 +1,638 @@
+{
+  "Name": "Talk9052",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2796.992,-1454.722)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(获取妖兽)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 312,
+      "Name": "获取妖兽",
+      "Description": "获取妖兽",
+      "Position": "(-2793.087,-1375.178)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.GetFuBenShuXin"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXin == 2"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 4"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 5"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 336,
+      "Name": "木",
+      "Description": "木",
+      "Position": "(-3332.265,-1064.867)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "金",
+      "Description": "金",
+      "Position": "(-3334.327,-1117.444)",
+      "Commands": [
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 337,
+      "Name": "水",
+      "Description": "水",
+      "Position": "(-3329.172,-1012.29)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量获取",
+      "Description": "变量获取",
+      "Position": "(-2791.809,-1299.905)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地看来是一处天然形成的洞窟，你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识探查",
+          "TargetBlockID": "this:290(神识检测)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "火",
+      "Description": "火",
+      "Position": "(-3328.142,-961.7745)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "金1",
+      "Description": "金1",
+      "Position": "(-2501.747,-1241.297)",
+      "Commands": [
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "神识检测",
+      "Description": "神识检测",
+      "Position": "(-2919.161,-1164.77)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你谨慎地用神识扫过洞窟，随即惊喜地发现了两株极为罕见的{SayStcVal=948}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi >= 45"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(高神识)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(低神识)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 340,
+      "Name": "普通",
+      "Description": "普通",
+      "Position": "(-3332.411,-859.5668)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "转身离开",
+      "Description": "转身离开",
+      "Position": "(-2920.565,-1005.293)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（没有必要冒此风险...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "木1",
+      "Description": "木1",
+      "Position": "(-2503.21,-1183.813)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 339,
+      "Name": "土",
+      "Description": "土",
+      "Position": "(-3330.203,-911.259)",
+      "Commands": [
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "低神识",
+      "Description": "低神识",
+      "Position": "(-2790.566,-1102.711)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此等品阶的草药实乃可遇而不可求之物，但机遇往往也可能伴随着巨大的风险。你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "进入洞窟",
+      "Description": "进入洞窟",
+      "Position": "(-3185.395,-1006.655)",
+      "Commands": [
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXin == 2"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "335(金)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "336(木)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 4"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "337(水)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 5"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "338(火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "339(土)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "340(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 364,
+      "Name": "普通1",
+      "Description": "普通1",
+      "Position": "(-2492.235,-946.0079)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 362,
+      "Name": "火1",
+      "Description": "火1",
+      "Position": "(-2498.333,-1058.204)",
+      "Commands": [
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "土1",
+      "Description": "土1",
+      "Position": "(-2495.894,-999.6667)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "一探究竟",
+      "Description": "一探究竟",
+      "Position": "(-2665.355,-1157.631)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你收敛气息，慢慢走进洞窟深处...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然，你汗毛倒立，一道劲风从你背后袭来，你躲闪不及，被重重地拍打到洞壁之上！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXin == 2"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "359(金1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(木1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 4"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "361(水1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 5"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "362(火1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(土1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "364(普通1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "高神识",
+      "Description": "高神识",
+      "Position": "(-3054.778,-1101.575)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此等品阶的草药实乃可遇而不可求之物，可惜你并不是第一个发现它的人，另有一股强大的妖兽气息已经锁定了它。你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手抢夺",
+          "TargetBlockID": "this:301(进入洞窟)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "水1",
+      "Description": "水1",
+      "Position": "(-2498.332,-1120.398)",
+      "Commands": [
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

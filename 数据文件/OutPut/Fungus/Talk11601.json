@@ -1,0 +1,404 @@
+{
+  "Name": "Talk11601",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2326.47,-1403.748)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(竹山宗神兵阁-进入-判断1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "620(系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2325.5,-1480.272)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 358,
+      "Name": "桃木符剑简介",
+      "Description": "桃木符剑简介",
+      "Position": "(-2320.35,-1130.242)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "桃木符剑-主动：造成1点剑系伤害",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Menu",
+          "Text": "再看看别的。",
+          "TargetBlockID": "this:370(选项-初始)"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了",
+          "TargetBlockID": "this:344(桃木符剑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 202,
+      "Name": "竹山宗神兵阁-进入-判断1",
+      "Description": "竹山宗神兵阁-进入-判断1",
+      "Position": "(-2351.802,-1310.804)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师兄你好，我是新入门的外门弟子，来领取符器。这是信物。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 216,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，没想到终于又有人能通过外门守擂的挑战了，不容易。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 216,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这三把都是外门弟子可以领取的符器，{shidi}可以随意挑选一把。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "370(选项-初始)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "620(系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 620,
+      "Name": "系统talk",
+      "Description": "系统talk",
+      "Position": "(-2153.844,-1403.501)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 359,
+      "Name": "陨铁符剑简介",
+      "Description": "陨铁符剑简介",
+      "Position": "(-2135.735,-1128.746)",
+      "Commands": [
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "陨铁符剑-主动：造成6点剑系伤害，获得【滞气】*5",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "再看看别的。",
+          "TargetBlockID": "this:370(选项-初始)"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了",
+          "TargetBlockID": "this:345(陨铁符剑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "陨铁符剑",
+      "Description": "陨铁符剑",
+      "Position": "(-2133.256,-1051.281)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(新手奖励-领取完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 370,
+      "Name": "选项-初始",
+      "Description": "选项-初始",
+      "Position": "(-2324.742,-1244.264)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Menu",
+          "Text": "碧玉符剑",
+          "TargetBlockID": "this:357(碧玉符剑简介)"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Menu",
+          "Text": "桃木符剑",
+          "TargetBlockID": "this:358(桃木符剑简介)"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Menu",
+          "Text": "陨铁符剑",
+          "TargetBlockID": "this:359(陨铁符剑简介)"
+        }
+      ]
+    },
+    {
+      "ItemID": 357,
+      "Name": "碧玉符剑简介",
+      "Description": "碧玉符剑简介",
+      "Position": "(-2477.447,-1130.154)",
+      "Commands": [
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "碧玉符剑-主动：敌方获得【中毒】*1",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Menu",
+          "Text": "再看看别的。",
+          "TargetBlockID": "this:370(选项-初始)"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了",
+          "TargetBlockID": "this:343(碧玉符剑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "桃木符剑",
+      "Description": "桃木符剑",
+      "Position": "(-2319.256,-1050.281)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(新手奖励-领取完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 343,
+      "Name": "碧玉符剑",
+      "Description": "碧玉符剑",
+      "Position": "(-2475.535,-1056.343)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(新手奖励-领取完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "新手奖励-领取完成",
+      "Description": "新手奖励-领取完成",
+      "Position": "(-2318.256,-927.2814)",
+      "Commands": [
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这是门派弟子法袍，{shidi}收好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

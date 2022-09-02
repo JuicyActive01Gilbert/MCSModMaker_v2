@@ -1,0 +1,724 @@
+{
+  "Name": "Talk5025",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2289.956,-1305.194)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "318(沂山线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 662,
+      "Name": "杜老二筑基",
+      "Description": "杜老二筑基",
+      "Position": "(-1856.119,-1224.302)",
+      "Commands": [
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼见麻老九落败，周遭的练气期修士瞬间作鸟兽散，麻老九也落荒而逃。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "649(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "变量",
+      "Description": "变量",
+      "Position": "(-2469.884,-1305.516)",
+      "Commands": [
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2641.994,-1304.866)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2642.981,-1152.197)",
+      "Commands": []
+    },
+    {
+      "ItemID": 285,
+      "Name": "模板",
+      "Description": "模板",
+      "Position": "(-2291.451,-1405.73)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "旁白",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "主角",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "杜老二",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "颜老怪",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "麻老九",
+          "StoryText": "麻老九",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "Option Text",
+          "TargetBlockID": ""
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 649,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-1587.119,-1305.302)",
+      "Commands": [
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "谢了{xiongdi}。这次要不是你，我怕是要交代在这了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "无妨。那人说沂山派散了，究竟是何缘由？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "这事说来真他娘的蹊跷。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "前段时间，我们大哥二哥莫名其妙死在了后山，也不知道是哪个王八蛋干的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“……”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "之后，颜老怪就不停的派人在我们的地盘挑事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "没有了大哥二哥，我们根本不是那帮瘪三的对手，最后就只能散伙了…",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既然沂山派已然不复存在，禾山派的人为何还要追杀你？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "这跟沂山派一点关系都没有，我跟禾山派本来就是不共戴天之仇。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "杜老二的眼神流露出一丝坚毅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "…此事又是从何说起？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "在我小时候，禾山派为了修炼他们那邪道功法，便时常来我杜家村偷偷抓人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "起初我爹娘以为只是些寻常山贼，便号召全村人奋起反抗，不料那些人竟是修士，我们这些凡人根本不是对手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "我爹娘带头反抗，就被最先抓了去…",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "虽说这事后来上报了仙府，禾山派再也不敢这么猖狂了，但我爹娘却永远回不来了…",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "再后来，沂山派的人找到了我，发现我身具灵根，就把我带回了沂山。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "加入沂山派后，我每天拼命修炼，就是为了能报这一箭之仇。当年那些人，我非手撕了他们不可！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你能感受到他语气中的决绝与恨意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你的心情我理解…可是人死不能复生，你为了向他们寻仇，险些将命赔进去，真的值得嘛？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "当初沂山派或许也只是想利用你的仇恨才拉你入伙的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "修行本应追求长生之道，你父母一定更希望你好好活下去才对吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他只是犹豫了一瞬。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "就算沂山派只是为了利用我也无关紧要，这仇要是不报，我修炼都没法安心。{xiongdi}你就别再劝我了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "我要赶紧找地方疗伤了。今天的救命之恩，我会记在心里，后会有期。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 697,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "杜兄也要多加小心才是，再会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“当初除掉那二人只想是为民除害，顺便还能得个宝贝，没想倒是让禾山派一家独大了起来…”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“没了沂山派制衡，这禾山派只怕更肆无忌惮了…结丹以后还是想办法治治他们吧。”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 891,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 661,
+      "Name": "杜老二金丹",
+      "Description": "杜老二金丹",
+      "Position": "(-1855.864,-1391.366)",
+      "Commands": [
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.If",
+          "Condition": "麻老九境界 >= 7"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼见小弟落败，麻老九的处境也变得微妙起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "哈哈哈哈，看来你的小弟也不怎么顶用啊？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "麻老九",
+          "StoryText": "算你走运，今天就饶你们一回。我们走。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "待到麻老九走远，杜老二也支撑不住，栽倒在了地上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼见小弟落败，颜老怪的处境也变得微妙起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "杜老二",
+          "StoryText": "哈哈哈哈，看来你的小弟也不怎么顶用啊？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "颜老怪",
+          "StoryText": "哼，没用的东西，看我回去怎么收拾你。我们走。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "待到颜老怪走远，杜老二也支撑不住，栽倒在了地上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "649(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "沂山线",
+      "Description": "沂山线",
+      "Position": "(-2082.119,-1303.302)",
+      "Commands": [
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.If",
+          "Condition": "杜老二境界 >= 7"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "661(杜老二金丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "662(杜老二筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

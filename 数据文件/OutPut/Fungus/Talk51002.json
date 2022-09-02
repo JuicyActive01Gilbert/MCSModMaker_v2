@@ -1,0 +1,369 @@
+{
+  "Name": "Talk51002",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 316,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2468.667,-1240.278)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于如何前往岱舆山",
+          "TargetBlockID": "this:308(岱舆山)"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天蝉灵叶",
+          "TargetBlockID": "this:304(天蝉灵叶)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:309(New Block2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(-2628.667,-1163.278)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此，当年许多人想查出鲛人一族的驻地好将其一网打尽，役使其生产鲛纱，却始终不得其道。没想到离山的鲛人会被抹除记忆，连他们都无法回到自己的故乡，何谈修士了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“看来只能寄希望于阮五娘的族人了......”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "商讨了一番后，你决定先暂住在永安镇内，等候阮五娘与族人取得联络。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "岱舆山",
+      "Description": "岱舆山",
+      "Position": "(-2629.667,-1238.278)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 651,
+          "AvatarBindKey": "",
+          "StoryText": "只有岱舆山上的住民才知道前往岱舆山的方法，虽然我也曾住于山上，但决定追随阿山来到永安镇时，阿爹与阿娘便将关于道路的记忆从我的识海中抹去了。并非不愿告知前辈，我实在是记不得如何回去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "天蝉灵叶",
+      "Description": "天蝉灵叶",
+      "Position": "(-2630.667,-1312.278)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 651,
+          "AvatarBindKey": "",
+          "StoryText": "我幼时曾见过这种灵药，天蝉灵叶生长条件苛刻，只有山脚的玉梁桥旁才偶尔得见。虽无法回到岱舆山，但前辈若是想采得此药的话我可以尝试呼唤族人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.79,-1238.896)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你三下五除二就解决了毕钟天，他这才知道自己踢到了铁板，面色一白急忙向你告罪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 649,
+          "AvatarBindKey": "",
+          "StoryText": "小的有眼不识泰山！求仙师饶了小的吧！小的这就把阮五娘请来！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他连忙朝屋内的仓库跑去，不须多时便带出来一位衣冠楚楚的女子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 650,
+          "AvatarBindKey": "",
+          "StoryText": "阮娘！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "棠阿三急急迎上前，两人执手相看泪眼。你略感尴尬，不禁别过头去，正巧瞥见一旁鬼鬼祟祟想要逃跑的毕钟天。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "往哪逃！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你祭出飞剑，一剑刺穿了毕钟天的小腿，他见退路已断，情急之下一时凶相毕露。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 649,
+          "AvatarBindKey": "",
+          "StoryText": "你这{xiaozi}竟敢伤我！我定要叫我爹给我讨回公道！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听见他的威胁，你顿感为免日后生事，此人决不可留，倒不如一剑结果了他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 650,
+          "AvatarBindKey": "",
+          "StoryText": "等...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阿三见你心生杀意，刚想出口阻拦，未料剑影横飞，眨眼间那毕钟天便没了生气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 650,
+          "AvatarBindKey": "",
+          "StoryText": "前辈不知，这毕钟天的父亲已筑基多年，在禾山道也有一席之地，将他除掉恐怕会惹来不小的麻烦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "禾山道...无碍，我方入仙门时倒是常与他们打交道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 650,
+          "AvatarBindKey": "",
+          "StoryText": "阮娘，快见过前辈，多亏了他我才能这么快就将你救出来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 651,
+          "AvatarBindKey": "",
+          "StoryText": "多谢前辈救命之恩，阮娘无以为报，不如便将这匹织好的霁光锦赠与前辈吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这匹锦缎于我并无用处，此次我本前来打听岱舆山的消息，不知五娘知道多少？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阮五娘面有难色地向棠阿三看去，后者微笑着向她点了点头，她才犹豫着开口。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 651,
+          "AvatarBindKey": "",
+          "StoryText": "前辈有什么想问的，我必知无不言，言无不尽。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于如何前往岱舆山",
+          "TargetBlockID": "this:308(岱舆山)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天蝉灵叶",
+          "TargetBlockID": "this:304(天蝉灵叶)"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事了",
+          "TargetBlockID": "this:309(New Block2)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

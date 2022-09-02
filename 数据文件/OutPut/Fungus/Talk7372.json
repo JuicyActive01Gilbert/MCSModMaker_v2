@@ -1,0 +1,366 @@
+{
+  "Name": "Talk7372",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "328(触发判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 352,
+      "Name": "已触发",
+      "Description": "已触发",
+      "Position": "(-2622.463,-1291.396)",
+      "Commands": [
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "若无其他要事，小友还是快些回去找心儿吧，料想那丫头正担心着呢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "触发判定",
+      "Description": "触发判定",
+      "Position": "(-2790.646,-1290.26)",
+      "Commands": [
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(剧情对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(已触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "剧情对话",
+      "Description": "剧情对话",
+      "Position": "(-2791.424,-1229.886)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "小友，你来了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "{FirstName}小友，你来了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "见过前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "前辈知道我要来？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "呵呵，本来老夫也不太肯定出现于此的会是谁，但片刻前老夫感知到小友出现在林府，便是有了些许结论。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "？！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "小友不用惊慌，心儿给你的法宝是能一定程度上遮掩小友的气息，其他长老也确是未能发现小友潜入林府，否则这一路不会这么顺畅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "这些暂且不多说，还是让老来为小友解释一番此前的问题吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "心儿此前刚出林府，天星城便已是启动大阵封锁，老夫料想心儿也未能出城。但若是停留城中，暴露行踪也不过是时间问题。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "再者以心儿的性子，若是被困住，自是不肯坐以待毙。如今能破此局的方法，除家主出关亲自主持大局外，便只有找个合适的理由，让老夫出手干涉了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "而家主闭关多年，谁也不知道其中是什么情况，若不到最后关头，心儿自然不会选这条路。那老夫就只要于此静候心儿的消息便好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "至于为什么是小友，老夫也有一定猜想，小友若是感兴趣，不妨听老夫再啰嗦几句。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "前辈请说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "呵呵，那就得先说说宁州几大家族年轻一辈的大少爷了。百里家那位性烈如火，但过于崇尚实力；而公孙家那位举止文雅，却是工于心计；最后倪家的大少爷，虽说贪玩且好管闲事，但因为性格直爽，也是人缘最好的一位。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "心儿的大哥也是与其交情不浅，还是孩童之时算得上是往来密切。连带之下，雪儿与心儿也是与他熟稔起来。心儿若要找人帮忙，找他自是上上之选。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "但封城时，老夫已是见到倪家家主与其一同离去，心儿却滞留城中，定是寻而不得。在此种情况下，与倪家少爷一同前来林府的小友，也就顺理成章地成了心儿的选择了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "原本老夫还在猜想心儿是否知道，小友与倪家少爷此前乃是一同前来林府。即便心儿知晓此事且找上了小友，小友又是否愿意帮助心儿。这就不是老夫能妄加揣测的了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "但我适时出现在了林府。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "呵呵，不错，小友的出现让答案昭然若揭。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "听老夫啰嗦了这么久，现在该小友说说你们的计划了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "你将此前与林沐心的交流一一道来，通羽上人只是静静聆听，直到你说完还保持着一副若有所思的样子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "事到如今，老夫也不瞒着什么了。星宫素来以双修为重，而林家作为星宫的一支，素有与它系联姻的惯例，族中上下已是习以为常。虽说心儿对此一直有不满，甚至有些偏见，但对此次联姻的猜疑也不无道理。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "这冲虚散人虽说是星宫大长老座下弟子，但已是停留在金丹后期数十年无半点进步，细细算来也当是寿元无多。心儿又是林家这一代中资质最好的一位，假以时日，有望同广微老祖一般化神飞升。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "家主又是最为疼爱心儿，由此可想，这冲虚散人别说是星宫大长老弟子，即便是大长老本人，此次联姻也无半点可能。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "嗯...请小友转告心儿，若是你们有了计划，老夫会伺机配合。如有找到其他长老收贿受赂的证据，老夫更是可以强行终止这次联姻，等家主出关再做处理。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽上人",
+          "StoryText": "晚辈知晓。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

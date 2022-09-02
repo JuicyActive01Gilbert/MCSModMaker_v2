@@ -1,0 +1,610 @@
+{
+  "Name": "Talk538",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2933.202,-1501.225)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(境界-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2932.154,-1579.461)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 354,
+      "Name": "被拒绝",
+      "Description": "被拒绝",
+      "Position": "(-2734.325,-1231.768)",
+      "Commands": [
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TemAvatar",
+          "StoryText": "抱歉，我{SayStcVal=917}二层，只接纳金丹期及以上前辈，或是财资雄厚的道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 352,
+      "Name": "金钱-判定",
+      "Description": "金钱-判定",
+      "Position": "(-2805.325,-1342.768)",
+      "Commands": [
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.GetMoney"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 100000"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(进场1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(被拒绝)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "进场",
+      "Description": "进场",
+      "Position": "(-3057.325,-1344.768)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TemAvatar",
+          "StoryText": "前辈请~",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "境界-判定",
+      "Description": "境界-判定",
+      "Position": "(-2934.325,-1412.768)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(进场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(进场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(进场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(进场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(进场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(进场)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(金钱-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 389,
+      "Name": "进场1",
+      "Description": "进场1",
+      "Position": "(-2883.325,-1235.768)",
+      "Commands": [
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TemAvatar",
+          "StoryText": "道友请~",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

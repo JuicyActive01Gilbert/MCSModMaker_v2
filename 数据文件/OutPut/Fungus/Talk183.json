@@ -1,0 +1,527 @@
+{
+  "Name": "Talk183",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2436.661,-1064.16)",
+      "Commands": [
+        {
+          "ItemID": 149,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "152(猴子事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 96,
+      "Name": "三眼灵猴事件判断",
+      "Description": "三眼灵猴事件判断",
+      "Position": "(-2447.162,-1137.221)",
+      "Commands": [
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 24,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "93(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "146(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2604.035,-1138.115)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(三眼灵猴事件判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 161,
+      "Name": "判断遁速",
+      "Description": "判断遁速",
+      "Position": "(-2436.639,-926.4424)",
+      "Commands": [
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu < 9"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "165(遁速不足)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "168(遁速充足)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2262.694,-1131.995)",
+      "Commands": []
+    },
+    {
+      "ItemID": 165,
+      "Name": "遁速不足",
+      "Description": "遁速不足",
+      "Position": "(-2576.094,-925.3976)",
+      "Commands": [
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你一路追着灰猴跑进了幽谷，但灰猴身姿轻盈，在林间穿梭，把你戏弄一番后，消失在了竹林深处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 168,
+      "Name": "遁速充足",
+      "Description": "遁速充足",
+      "Position": "(-2432.977,-858.9178)",
+      "Commands": [
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你一路追着灰猴跑进了幽谷，灰猴身姿轻盈，在林间穿梭，你运起遁术，紧追不舍。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "眼看就要追上灰猴，突然，一股恶心欲吐的感觉从体内泛起，你止住身形，朝四周望去，只见眼前有一寒潭，灰猴正跌落在潭边，面露痛苦之色，似乎在向你求救。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Menu",
+          "Text": "救",
+          "TargetBlockID": "this:177(救)"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Menu",
+          "Text": "不救",
+          "TargetBlockID": "this:176(不救)"
+        }
+      ]
+    },
+    {
+      "ItemID": 176,
+      "Name": "不救",
+      "Description": "不救",
+      "Position": "(-2572.371,-857.2342)",
+      "Commands": [
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此地魔气肆溢，必有古怪，不可久留。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 177,
+      "Name": "救",
+      "Description": "救",
+      "Position": "(-2432.812,-800.0921)",
+      "Commands": [
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你强忍住不适，将小猴抱离寒潭，随后你也头痛欲裂，昏睡过去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "当你再次醒来时，发现自己已经回到了幽谷竹林之中。你的手边传来阵阵凉意，只见一堆颜色各异的果子被放在你的手边。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "是那只灰猴放在你身边的么？你扭头四处张望，但灰猴早已不见了踪影。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 162,
+      "Name": "不追",
+      "Description": "不追",
+      "Position": "(-2580.414,-993.187)",
+      "Commands": [
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "无知畜生，犯不着和它计较。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 152,
+      "Name": "猴子事件",
+      "Description": "猴子事件",
+      "Position": "(-2435.694,-990.9954)",
+      "Commands": [
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "咚！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你的脑门一痛，好像被什么东西砸了一下，回头一看，只见一只灰猴正冲你做着鬼脸。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "吱吱吱吱",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好你个畜生...有种你下来！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "吱吱吱吱",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "灰猴朝你放声大笑，随后转身一跃，逃进了幽谷深处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.Menu",
+          "Text": "追上去",
+          "TargetBlockID": "this:161(判断遁速)"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:162(不追)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,1674 @@
+{
+  "Name": "Talk4002",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(门派系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "炼气期",
+      "Description": "炼气期",
+      "Position": "(-2928.57,-1101.106)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= -10"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "什么魑魅魍魉都敢闯我{$shili}，快滚，这里不欢迎你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(低声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "不知道友来我{$shili}何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 500"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "原来是{FirstName}道友，请问来我{$shili}何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 371,
+      "Name": "炼气拜访",
+      "Description": "炼气拜访",
+      "Position": "(-2953.201,-879.8332)",
+      "Commands": [
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= 49"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，道友请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，道友请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 999"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，{FirstName}道友请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 1000"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，{FirstName}道友请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 302,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2932.965,-1054.124)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= -10"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "哼，正派之耻，这里不欢迎你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(低声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "不知前辈来我{$shili}有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 500"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "原来是{FirstName}前辈，请问来我{$shili}有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "低声望交互",
+      "Description": "低声望交互",
+      "Position": "(-2724.18,-981.1335)",
+      "Commands": [
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Menu",
+          "Text": "抢夺秘籍",
+          "TargetBlockID": "this:397(抢夺秘籍)"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:394(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 358,
+      "Name": "拜访长老",
+      "Description": "拜访长老",
+      "Position": "(-2856.047,-915.662)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "371(炼气拜访)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 5"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "368(筑基前中期拜访)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 6"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "471(筑基后期拜访)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 7"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "370(金丹期拜访)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "370(金丹期拜访)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "369(元婴及以上拜访)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 369,
+      "Name": "元婴及以上拜访",
+      "Description": "元婴及以上拜访",
+      "Position": "(-2954.299,-740.2729)",
+      "Commands": [
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= 49"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 999"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，{FirstName}前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 1000"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，{FirstName}前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 368,
+      "Name": "筑基前中期拜访",
+      "Description": "筑基前中期拜访",
+      "Position": "(-2953.2,-831.4818)",
+      "Commands": [
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= 49"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 999"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，{FirstName}前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 1000"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，{FirstName}前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 343,
+      "Name": "中高声望交互",
+      "Description": "中高声望交互",
+      "Position": "(-2856.048,-983.0624)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Menu",
+          "Text": "拜访长老",
+          "TargetBlockID": "this:358(拜访长老)"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:394(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 380,
+      "Name": "炼气抢夺",
+      "Description": "炼气抢夺",
+      "Position": "(-2374.56,-863.4984)",
+      "Commands": [
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.GetNpcId"
+        }
+      ]
+    },
+    {
+      "ItemID": 397,
+      "Name": "抢夺秘籍",
+      "Description": "抢夺秘籍",
+      "Position": "(-2722.437,-914.9985)",
+      "Commands": [
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "门派系统talk",
+      "Description": "门派系统talk",
+      "Position": "(-2798.329,-1235.644)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.If",
+          "Condition": "抢夺触发判定 == 2"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "610(门派已毁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.If",
+          "Condition": "抢夺触发判定 == 2"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "610(门派已毁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.If",
+          "Condition": "抢夺触发判定 == 2"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "610(门派已毁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.If",
+          "Condition": "抢夺触发判定 == 2"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "610(门派已毁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.If",
+          "Condition": "抢夺触发判定 == 2"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "610(门派已毁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(境界判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "境界判定",
+      "Description": "境界判定",
+      "Position": "(-2800.542,-1167.852)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(炼气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "304(元婴期及以上)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "前往大殿",
+      "Description": "前往大殿",
+      "Position": "(-2950.737,-682.2871)",
+      "Commands": [
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "元婴期及以上",
+      "Description": "元婴期及以上",
+      "Position": "(-2665.934,-1058.519)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= -10"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "你……你是{FirstName}{LastName}！快去禀告掌门！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(低声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "不知前辈来我{$shili}有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 500"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "原来是{FirstName}前辈，有失远迎。请问来我{$shili}有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 381,
+      "Name": "筑基抢夺",
+      "Description": "筑基抢夺",
+      "Position": "(-2375.348,-816.5569)",
+      "Commands": []
+    },
+    {
+      "ItemID": 610,
+      "Name": "门派已毁",
+      "Description": "门派已毁",
+      "Position": "(-2635.284,-1234.519)",
+      "Commands": [
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你悠闲地来到{$shili}山门，作为原本宁州五行宗门之一的郊近，如今却是四下无人。只有运转中的大阵依旧在无声地诉说着该宗门仍未消亡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{$shili}自上次后一直龟缩在山门大阵中，鲜有弟子离开，还是别在这无趣的门派上浪费时间了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 587,
+      "Name": "抢夺秘籍备份",
+      "Description": "抢夺秘籍备份",
+      "Position": "(-2377.093,-911.1407)",
+      "Commands": []
+    },
+    {
+      "ItemID": 357,
+      "Name": "门派集会（待开发）",
+      "Description": "门派集会（待开发）",
+      "Position": "(-2379.21,-969.0964)",
+      "Commands": []
+    },
+    {
+      "ItemID": 471,
+      "Name": "筑基后期拜访",
+      "Description": "筑基后期拜访",
+      "Position": "(-3080.679,-831.9454)",
+      "Commands": [
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= 49"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 999"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，{FirstName}前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 1000"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，{FirstName}前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 382,
+      "Name": "金丹抢夺",
+      "Description": "金丹抢夺",
+      "Position": "(-2375.344,-769.2021)",
+      "Commands": []
+    },
+    {
+      "ItemID": 303,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2672.799,-1106.87)",
+      "Commands": [
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= -10"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "不……不好！是{FirstName}{LastName}，快去禀告长老！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(低声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "不知前辈来我{$shili}有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 500"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "原来是{FirstName}前辈，请问来我{$shili}有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 370,
+      "Name": "金丹期拜访",
+      "Description": "金丹期拜访",
+      "Position": "(-2951.005,-784.2289)",
+      "Commands": [
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= 49"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 999"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，{FirstName}前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 1000"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，{FirstName}前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2787.332,-831.9198)",
+      "Commands": [
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 472,
+      "Name": "金丹中后期拜访",
+      "Description": "金丹中后期拜访",
+      "Position": "(-3153.67,-777.1724)",
+      "Commands": [
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= 49"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "抱歉，长老事务繁忙，暂不见客，前辈请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(中高声望交互)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 499"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= 999"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，{FirstName}前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= 1000"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "守门修士ID",
+          "StoryText": "长老正在宗门大殿中等候，{FirstName}前辈请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(前往大殿)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 383,
+      "Name": "元婴及以上抢夺",
+      "Description": "元婴及以上抢夺",
+      "Position": "(-2373.699,-723.6454)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

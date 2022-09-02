@@ -1,0 +1,1268 @@
+{
+  "Name": "Talk4001",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1348.93)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "593(势力读取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 358,
+      "Name": "中高声望",
+      "Description": "中高声望",
+      "Position": "(-2726.319,-1110.177)",
+      "Commands": [
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 381,
+      "Name": "极低声望潜入",
+      "Description": "极低声望潜入",
+      "Position": "(-3157.628,-1051.76)",
+      "Commands": [
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.CheckStaticSkill"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.If",
+          "Condition": "LianXiShu == True"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi >= 28"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你佯装离开后找了个隐蔽位置运起敛息术，自身散发的神识波动随着功法的效果被最大限度的降低了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就在你即将进入城中时，一股强大的神识扫过，却径直掠过你向其他位置而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你佯装离开后找了个隐蔽位置运起敛息术，自身散发的神识波动随着功法的效果被最大限度的降低了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就在你即将进入城中时，一股强大的神识扫过你的位置，然后锁定住了你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}！你被发现了！快脱离锁定范围！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "在魏无极出声的同时，你运起遁术迅速远离。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "大概是考虑到城中还需要他坐镇，此人并没有追你太久便主动解除锁定离去了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi >= 45"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你佯装离开后以神识掩盖气息，准备潜入城中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你即将得手时，一股强大的神识从你的位置扫过，但和预想的一样，什么都没有发生。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你佯装离开后以神识掩盖气息，准备潜入城中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你自以为即将得手时，一股强大的神识从你的位置扫过，一时间城内警报大作，显然是触发了其中警戒。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，城内大阵被触发了！快离开！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "声望判定",
+      "Description": "声望判定",
+      "Position": "(-2798.906,-1234.446)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= -500"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "356(极低声望)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW <= -10"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "357(低声望)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "358(中高声望)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 593,
+      "Name": "势力读取",
+      "Description": "势力读取",
+      "Position": "(-2797.875,-1289.144)",
+      "Commands": [
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 19"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 23"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 29"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 22"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(声望判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 362,
+      "Name": "被阻拦",
+      "Description": "被阻拦",
+      "Position": "(-3013.674,-1050.818)",
+      "Commands": [
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW <= -10"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}你现在声望过低，还是想其他办法进城吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}你现在声望过低，还是想其他办法进城吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}你现在声望过低，还是想其他办法进城吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "顾忌到城外战斗可能引来无尽的麻烦，你决定运起遁术，赶在麻烦到来之前离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 356,
+      "Name": "极低声望",
+      "Description": "极低声望",
+      "Position": "(-3012.574,-1114.398)",
+      "Commands": [
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你发现原本喧闹的护城大阵外如今却是安静了不少，在严格的管制下连初入人流都少上了许多，反倒是多了一众守卫，三两修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "当你走上前去，准备像往常一样进入城中时，门口的修士却径直用神识锁定了你，同时催动功法，随时准备动手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "依旧是一众守卫在门口盘查着来往凡人，身后两三修士在闭目养神。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "当你走近，修士猛地睁开眼，神识也紧紧锁定着你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续",
+          "TargetBlockID": "this:362(被阻拦)"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.Menu",
+          "Text": "潜入",
+          "TargetBlockID": "this:381(极低声望潜入)"
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "低声望潜入",
+      "Description": "低声望潜入",
+      "Position": "(-2868.617,-1048.62)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.CheckStaticSkill"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.If",
+          "Condition": "LianXiShu == True"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi >= 20"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你运起敛息术，自身散发的神识波动随着功法的效果被最大限度的降低了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就在你即将进入城中时，一股强大的神识扫过，但只是稍稍停顿便掠过你向其他位置而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你运起敛息术，自身散发的神识波动随着功法的效果被最大限度的降低了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "就在你即将进入城中时，一股强大的神识扫过你的位置，然后锁定住了你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}！你被发现了！快脱离锁定范围！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在魏无极出声的同时，你运起遁术迅速远离，却发现并没有人追上来。显然是觉得你既已自行离去，没有赶尽杀绝的必要。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi >= 32"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你以神识掩盖气息，准备潜入城中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你即将得手时，一股强大的神识从你的位置扫过，但和预想的一样，什么都没有发生。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你以神识掩盖气息，准备潜入城中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你自以为即将得手时，一股强大的神识从你的位置扫过。紧接着几个守卫向你所在的方位赶来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，你被发现了！快离开！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 357,
+      "Name": "低声望",
+      "Description": "低声望",
+      "Position": "(-2868.618,-1113.455)",
+      "Commands": [
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "念及自己声望较低，你远远地观察着这曾是经常初入的护城大阵出入口。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "门口仅有两名守卫与一名金丹修士。两守卫分别负责凡人和低阶修士的入城手续，倒也是井井有条。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而那金丹修士却是在闭目养神。只有在筑基期及以上的修士通过时，才会稍稍睁眼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "依旧是两个守卫在门口注视着来往凡人，身后一个修士闭目养神。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.Menu",
+          "Text": "贿赂",
+          "TargetBlockID": "this:360(贿赂)"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续",
+          "TargetBlockID": "this:362(被阻拦)"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "潜入",
+          "TargetBlockID": "this:361(低声望潜入)"
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "贿赂",
+      "Description": "贿赂",
+      "Position": "(-2941.703,-987.1727)",
+      "Commands": [
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 19"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将一个装着灵石的储物袋丢向城门附近的修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "修士并未理会你的储物袋，反倒是从储物袋中取出了传音符。你只得运起遁术先行离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.If",
+          "Condition": "NingZhouSW > -50"
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 100"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他也是很自然的将储物袋收入怀中，然后向守卫点了点头。后者也不作理会，一脸平淡的放你入城了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将一个装着灵石的储物袋丢向城门附近的修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你发现自己囊中羞涩，甚至没有足够的灵石用来交“过路费”，只能转身离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= -199"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 10000"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将一个装着灵石的储物袋丢向城门附近的修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他也是很自然的将储物袋收入怀中，然后向守卫点了点头。后者也不作理会，一脸平淡的放你入城了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你发现自己囊中羞涩，甚至没有足够的灵石用来交“过路费”，只能转身离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= -299"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 20000"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将一个装着灵石的储物袋丢向城门附近的修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他也是很自然的将储物袋收入怀中，然后向守卫点了点头。后者也不作理会，一脸平淡的放你入城了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你发现自己囊中羞涩，甚至没有足够的灵石用来交“过路费”，只能转身离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= -399"
+        },
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 30000"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将一个装着灵石的储物袋丢向城门附近的修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他也是很自然的将储物袋收入怀中，然后向守卫点了点头。后者也不作理会，一脸平淡的放你入城了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你发现自己囊中羞涩，甚至没有足够的灵石用来交“过路费”，只能转身离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NingZhouSW >= -499"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 42000"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将一个装着灵石的储物袋丢向城门附近的修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他也是很自然的将储物袋收入怀中，然后向守卫点了点头。后者也不作理会，一脸平淡的放你入城了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "398(进城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你发现自己囊中羞涩，甚至没有足够的灵石用来交“过路费”，只能转身离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}你现在声望过低，还是想其他办法进城吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}你现在声望过低，还是想其他办法进城吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "还未等你习惯性地掏出灵石贿赂守卫，他已是向城内修士发出了传音符。虽然不知道传音符的具体内容，但一看从城中御剑而来的几位金丹修士，便知局势肯定是不利于你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "顾忌到城外战斗可能引来无尽的麻烦，你决定运起遁术，赶在麻烦到来之前离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 398,
+      "Name": "进城",
+      "Description": "进城",
+      "Position": "(-2801.306,-920.0488)",
+      "Commands": [
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.If",
+          "Condition": "ZhuCheng == 19"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhuCheng == 23"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhuCheng == 29"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ZhuCheng == 22"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

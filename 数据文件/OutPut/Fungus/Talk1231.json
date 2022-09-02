@@ -1,0 +1,167 @@
+{
+  "Name": "Talk1231",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2798.588,-1221.066)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 287,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2607.126,-1222.286)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.If",
+          "Condition": "year == TempValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "CmdRefreshNPCUI"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "CmdRefreshNPCUI"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > year"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "焦兄不在这里...看来他已经出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

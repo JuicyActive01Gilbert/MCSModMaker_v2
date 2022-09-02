@@ -1,0 +1,225 @@
+{
+  "Name": "Talk7353",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2605.666,-1207.01)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "143(万宝楼掌柜打听)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 143,
+      "Name": "万宝楼掌柜打听",
+      "Description": "万宝楼掌柜打听",
+      "Position": "(-2607.444,-1110.806)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "不好意思，我们这万宝楼忙着买卖，平时也没什么太多余力关心图南海的太多状况，对岛外之事知之甚少。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "这位道友，建议你还是去碎星商会问一问吧，他们终日行于海上，应该会知道更多相关情况。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= -100"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.If",
+          "Condition": "jindu == 1"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "jindu == 2"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "jindu == 3"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "刚才已经告诉道友了，我们万宝楼对图南海的状况并不熟悉，你还是去碎星商会问问吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Menu",
+          "Text": "参加拍卖会",
+          "TargetBlockID": "this:476(跳转拍卖talk)"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 476,
+      "Name": "跳转拍卖talk",
+      "Description": "跳转拍卖talk",
+      "Position": "(-2604.81,-1022.648)",
+      "Commands": [
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2332.443,-1131.859)",
+      "Commands": [
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

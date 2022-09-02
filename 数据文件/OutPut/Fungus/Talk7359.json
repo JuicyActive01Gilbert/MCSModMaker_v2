@@ -1,0 +1,107 @@
+{
+  "Name": "Talk7359",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3001.551,-1307.443)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "354(选择)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 354,
+      "Name": "选择",
+      "Description": "选择",
+      "Position": "(-2802.329,-1307.267)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticValues == (0.0, 0.0)"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "410(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "411(其他)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 411,
+      "Name": "其他",
+      "Description": "其他",
+      "Position": "(-2803.745,-1434.351)",
+      "Commands": [
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 410,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2615.529,-1309.311)",
+      "Commands": [
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

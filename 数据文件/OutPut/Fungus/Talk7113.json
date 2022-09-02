@@ -1,0 +1,253 @@
+{
+  "Name": "Talk7113",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 167,
+      "Name": "推演破阵",
+      "Description": "推演破阵",
+      "Position": "(-2576.107,-1047.528)",
+      "Commands": [
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 1"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你对阵道颇有研究，轻易便将入口的阵法破除了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你凭借自己对阵道的理解随意摆弄了一下阵法，似乎没有什么反应...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "好像...这样就可以了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "169(进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 168,
+      "Name": "敛息潜入",
+      "Description": "敛息潜入",
+      "Position": "(-2289.804,-1046.159)",
+      "Commands": [
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi > 40"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你神识远超同水平修士，一眼便看出这只是一个预警阵法，在你敛息之下，倒也能瞒天过海。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你隐约觉得这只是一个预警阵法，于是你收敛气息，打算瞒天过海。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "169(进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2431.193,-1122.775)",
+      "Commands": [
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "方壶山本是郁郁葱葱，草木繁茂，可是此处的树木大半都枯萎发黄，地上也布满了干枯的落叶，老死的树皮以及折断的杂草。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "整体弥漫着一股腐朽、衰败之感。若不说这是方壶山，外人绝不可能想到，此处竟然是竹山宗的辖地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "上次看这里还没有如此不堪，这些年究竟发生了什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "越往深处走，树木的枯萎便越严重。你顺着这个方向，找到了枯木林的中心——“枯木老祖”的洞府。你围着洞府四处搜寻了一番，但一无所获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这四周什么也没有，看来只有进去才能找到线索了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "洞府入口有一个小型阵法，你打算...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Menu",
+          "Text": "推演破阵",
+          "TargetBlockID": "this:167(推演破阵)"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Menu",
+          "Text": "敛息潜入",
+          "TargetBlockID": "this:168(敛息潜入)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接闯入",
+          "TargetBlockID": "this:169(进入)"
+        }
+      ]
+    },
+    {
+      "ItemID": 169,
+      "Name": "进入",
+      "Description": "进入",
+      "Position": "(-2429.532,-943.4189)",
+      "Commands": [
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,394 @@
+{
+  "Name": "Talk7382",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2796.265,-1315.485)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "310(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 372,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-3032.98,-1230.089)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2796.394,-1227.512)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(偷酒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "331(战后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(追山叛徒战后)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "372(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 375,
+      "Name": "追山叛徒战后",
+      "Description": "追山叛徒战后",
+      "Position": "(-2582.98,-1144.723)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "刚一走到废弃洞府周遭便是被这人偷袭，还好你反应及时才没被得逞，反倒是倚仗自身强大的实力将其击毙。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这应该就是风雨楼叛徒了。赶紧回去找公孙季吧。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "偷酒",
+      "Description": "偷酒",
+      "Position": "(-2796.395,-1142.285)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.If",
+          "Condition": "WuDaoLv >= 3"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "潜入公孙府后，几经寻觅得两幢疑似酒窖的建筑。这两处的阵法强度相差无几，只是规模略有不同。 ",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Menu",
+          "Text": "中型阵法",
+          "TargetBlockID": "this:340(中型阵法)"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "大型阵法",
+          "TargetBlockID": "this:341(大型阵法)"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "潜入公孙府后，由于阵道领悟不足，你很快便是陷入幻阵之中。乱逛一会后，来到一幢较大的建筑旁。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你考虑是否强行破阵闯入时，一人从建筑中走出，与你迎面撞上。见到你这陌生人他也是一愣，尔后便是驱动神通向你攻来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 341,
+      "Name": "大型阵法",
+      "Description": "大型阵法",
+      "Position": "(-3032.978,-1139.845)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你找到阵法薄弱处准备潜入时，一人从建筑中走出，与你迎面撞上。见到你这陌生人他也是一愣，然后便是驱动神通向你攻来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "战后",
+      "Description": "战后",
+      "Position": "(-2585.419,-1223.991)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你快速击晕他后，顺手掏走储物袋。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但袋中只有一本从未听说过的功法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在刚才的战斗中，近旁的阵法都已是被击破。其中一幢建筑飘散出浓烈的酒香，料想便是公孙府酒窖了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随意挑了两坛品质上佳的盈手露后，你趁着没人赶到现场，迅速离去了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 340,
+      "Name": "中型阵法",
+      "Description": "中型阵法",
+      "Position": "(-3031.76,-1089.845)",
+      "Commands": [
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此处果然是公孙家酒窖，你随手挑了两坛品质上佳的盈手露藏入储物袋中，便是趁无人发现时扬长而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

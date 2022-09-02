@@ -1,0 +1,346 @@
+{
+  "Name": "Talk11111",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2201.162,-1110.221)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1000"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 24,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2603.035,-1172.115)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(新-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 373,
+      "Name": "新-判定",
+      "Description": "新-判定",
+      "Position": "(-2601.056,-1045.228)",
+      "Commands": [
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 290"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "百里兄，这里就到了龙族掌控的海域了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "不错，一般来说化龙海的龙族不会主动攻击来往的人类商队。但你和我在一起，情况定然不同。我们还是要小心行事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "也不知要在哪里才能发现龙族的踪...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "！！！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然间海上掀起一股巨浪，一只硕大的龙头从水中探出，一双巨眼紧紧地盯着你们。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 5810,
+          "AvatarBindKey": "",
+          "StoryText": "人类...这股气息...莫非前些时日长老说的就是你二人？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是龙族，百里兄小心！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 5810,
+          "AvatarBindKey": "",
+          "StoryText": "哼，百里小贼还敢来化龙海？受死！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哼！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "等等，莫下重手！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Menu",
+          "Text": "痛下杀手",
+          "TargetBlockID": "this:327(kill)"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Menu",
+          "Text": "手下留情",
+          "TargetBlockID": "this:328(not)"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "not",
+      "Description": "not",
+      "Position": "(-2706.436,-964.9415)",
+      "Commands": [
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "kill",
+      "Description": "kill",
+      "Position": "(-2476.65,-972.8363)",
+      "Commands": [
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 352,
+      "Name": "New Block (Copy)",
+      "Description": "New Block (Copy)",
+      "Position": "(-2220.14,-1182.308)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 300"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2206.296,-1047.572)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.RemoveSeaMonstart"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

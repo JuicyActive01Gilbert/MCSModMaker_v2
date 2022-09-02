@@ -1,0 +1,281 @@
+{
+  "Name": "Talk8031",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 304,
+      "Name": "结识",
+      "Description": "结识",
+      "Position": "(-2795.765,-1008.305)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "呼...多...多谢道友出手相助，否则我一时不备，恐怕已糟了此人毒手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "CmdGetPlayerNowMapIndex"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "CmdWarpNPCToMap"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "还请道友收下我的传音符印记，日后若有事尽管吩咐，我一定尽力而为！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.AddCyFriend"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 296,
+      "Name": "结识（变量设置）",
+      "Description": "结识（变量设置）",
+      "Position": "(-2806.695,-1070.185)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel <= 4"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "304(结识)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2798.707,-1144.516)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哼，不过如此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(结识（变量设置）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 8"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(结识（变量设置）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2800.267,-1227.236)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2650.981,-1226.567)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

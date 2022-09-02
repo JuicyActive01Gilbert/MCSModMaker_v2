@@ -1,0 +1,696 @@
+{
+  "Name": "Talk119804",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2786.465,-1664.609)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(初次见面判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 372,
+      "Name": "任务继续-内",
+      "Description": "任务继续-内",
+      "Position": "(-2472.663,-1193.481)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "你？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，你开始以几块砖石，排布起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "哦？有些门道，一会我送你进入剑阵核心，入阵之后切记不要乱动，梳理好异常的灵力流动就回来复命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 319,
+      "Name": "前往",
+      "Description": "前往",
+      "Position": "(-2856.528,-1323.065)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "非我白帝楼内阁弟子弟子，需缴纳500灵石。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "前往",
+          "TargetBlockID": "this:334(交钱)"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:335(不交钱)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 306,
+      "Name": "初次",
+      "Description": "初次",
+      "Position": "(-2919.351,-1496.402)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "你是要前往底层吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "底层？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "对，我白帝楼底层是我白帝楼核心剑阵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "剑阵？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，阵法是由白帝大人所布置，内置8座剑池用以供能，剑池内部会有灵材凝结，可以用来炼制飞剑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你倒不妨进去看看，这剑阵乃是化神剑修所布置，要是能窥得一线，对你也有不小的好处。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "321(前往选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "交钱",
+      "Description": "交钱",
+      "Position": "(-2945.098,-1213.064)",
+      "Commands": [
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 500"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我没有500灵石....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 356,
+      "Name": "外围阵法维护",
+      "Description": "外围阵法维护",
+      "Position": "(-2393.477,-1400.663)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "358(核心弟子)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "362(外围弟子)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(没有任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "交易",
+      "Description": "交易",
+      "Position": "(-2594.902,-1611.872)",
+      "Commands": [
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "没有任务",
+      "Description": "没有任务",
+      "Position": "(-2216.158,-1503.756)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "目前，没有什么事情。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "不交钱",
+      "Description": "不交钱",
+      "Position": "(-2790.812,-1205.523)",
+      "Commands": []
+    },
+    {
+      "ItemID": 373,
+      "Name": "阵道不足",
+      "Description": "阵道不足",
+      "Position": "(-2616.158,-1241.901)",
+      "Commands": []
+    },
+    {
+      "ItemID": 362,
+      "Name": "外围弟子",
+      "Description": "外围弟子",
+      "Position": "(-2325.437,-1321.282)",
+      "Commands": [
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "我这里的任务例行维护底层阵法的，唯有内阁成员才能接取，你并不合适。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Menu",
+          "Text": "可是底层剑阵？我的阵道修为可以一试。",
+          "TargetBlockID": "this:385(任务继续-外)"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "不是",
+      "Description": "不是",
+      "Position": "(-2589.263,-1503.432)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Menu",
+          "Text": "前往底层",
+          "TargetBlockID": "this:319(前往)"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "请问有什么可以效劳的？",
+          "TargetBlockID": "this:349(任务判断（时间）)"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Menu",
+          "Text": "想要购买一些炼器材料",
+          "TargetBlockID": "this:408(交易)"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:407(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 349,
+      "Name": "任务判断（时间）",
+      "Description": "任务判断（时间）",
+      "Position": "(-2403.786,-1503.755)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 60"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "356(外围阵法维护)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(没有任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2591.71,-1418.255)",
+      "Commands": []
+    },
+    {
+      "ItemID": 321,
+      "Name": "前往选项",
+      "Description": "前往选项",
+      "Position": "(-2783.671,-1423.065)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "你是要前往底层吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "前往",
+          "TargetBlockID": "this:319(前往)"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Menu",
+          "Text": "不前往",
+          "TargetBlockID": "this:320(不前往)"
+        }
+      ]
+    },
+    {
+      "ItemID": 358,
+      "Name": "核心弟子",
+      "Description": "核心弟子",
+      "Position": "(-2469.767,-1321.282)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "我白帝楼底层阵法青龙剑阵最近法力流转不畅，需要阵道修为初窥门径的内阁成员前往例行维护。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Menu",
+          "Text": "我来吧。",
+          "TargetBlockID": "this:372(任务继续-内)"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还不足以完成此项任务",
+          "TargetBlockID": "this:373(阵道不足)"
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "初次见面判断",
+      "Description": "初次见面判断",
+      "Position": "(-2786.006,-1577.083)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(初次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(不是)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 320,
+      "Name": "不前往",
+      "Description": "不前往",
+      "Position": "(-2716.527,-1318.381)",
+      "Commands": []
+    },
+    {
+      "ItemID": 385,
+      "Name": "任务继续-外",
+      "Description": "任务继续-外",
+      "Position": "(-2324.402,-1240.871)",
+      "Commands": [
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说罢，你开始以几块砖石，排布起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "唉，此事迟迟无人处理，就为阁下破例一次吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "不过，毕竟是我白帝楼核心阵法，此行就由我与阁下一同前往吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.LoadFuBen"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 934,
+          "AvatarBindKey": "",
+          "StoryText": "以你的阵道修为，还是不要丢人现眼了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Menu",
+          "Text": "告辞",
+          "TargetBlockID": "this:373(阵道不足)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

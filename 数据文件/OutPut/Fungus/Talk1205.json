@@ -1,0 +1,311 @@
+{
+  "Name": "Talk1205",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 291,
+      "Name": "炼气期对话",
+      "Description": "炼气期对话",
+      "Position": "(-2494.694,-1208.018)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "斗法台上，两位头戴六合帽的修士打得不可开交，二人皆着墨绿小褂，上书遒劲古字，看来是师出同门。台下围观者众多，不时传来阵阵叫好声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此二人皆有筑基修为，你聚精会神地看了一会儿，只觉招招精妙，令你获益匪浅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.AddEXP"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 283,
+      "Name": "筑基期判断",
+      "Description": "筑基期判断",
+      "Position": "(-2795.694,-1141.018)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(筑基期对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 285,
+      "Name": "筑基期以上",
+      "Description": "筑基期以上",
+      "Position": "(-2945.694,-1212.018)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2644.694,-1142.018)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.694,-1211.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 4"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(炼气期判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 7"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(筑基期判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(筑基期以上)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "炼气期判断",
+      "Description": "炼气期判断",
+      "Position": "(-2644.694,-1210.018)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(炼气期对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "筑基期对话",
+      "Description": "筑基期对话",
+      "Position": "(-2795.694,-1071.018)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetChuanWenBlack"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "街路的两边人山人海，把斗法台围了个水泄不通，你不由地感到好奇，便也凑上前去...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1016,
+          "AvatarBindKey": "",
+          "StoryText": "又赢一个...此人已经连胜了三场，依我看他这次是很有希望啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1017,
+          "AvatarBindKey": "",
+          "StoryText": "哼，空有一身修为，却挖空心思想去为那宁王卖命，落入凡尘俗世被荣华富贵蒙蔽双眼，仙途也就到此止了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1016,
+          "AvatarBindKey": "",
+          "StoryText": "诶，道友此言差矣，这世上能筑基之人是不少，但最后能结丹的可真是万里出一。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1016,
+          "AvatarBindKey": "",
+          "StoryText": "像我们这种天赋平平的，能筑基便已是走运，闭关修炼也不知何时是个头。人生苦短，倒不如享受享受荣华富贵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1018,
+          "AvatarBindKey": "",
+          "StoryText": "听说宁王府年年招揽供奉，但人数却依旧不多，想来这供奉也不是那么好当的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

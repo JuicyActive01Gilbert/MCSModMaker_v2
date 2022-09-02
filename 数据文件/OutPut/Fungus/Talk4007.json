@@ -1,0 +1,501 @@
+{
+  "Name": "Talk4007",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 337,
+      "Name": "求饶",
+      "Description": "求饶",
+      "Position": "(-3087.344,-1262.379)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "CmdGetShangJin"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "还请前辈高抬贵手，饶我一命！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在下不知何处得罪了前辈，前辈若有任何要求尽管提来，在下一定尽力满足！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哈哈哈，有人花了{$lingshi}灵石买你的命，我也不过是收钱办事罢了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "你要能出得起这赏金，那我放你这一马也不是不行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "花钱消灾",
+          "TargetBlockID": "this:345(花钱)"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Menu",
+          "Text": "拼死一搏",
+          "TargetBlockID": "this:338(逃跑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 338,
+      "Name": "逃跑",
+      "Description": "逃跑",
+      "Position": "(-3087.344,-1194.379)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你眼前一黑，意识逐渐消散...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetNewNpcDeath"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetPlayerDie"
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "花钱",
+      "Description": "花钱",
+      "Position": "(-3239.344,-1265.379)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.GetMoney"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= lingshi"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "滚吧，此番就饶你一命。不过下次可就不一定了，哈哈哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetNewNpcDeath"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这...在下实在是拿不出这么多钱...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哼。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "338(逃跑)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-2798.707,-1143.379)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "CmdGetXuanShangLevel"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 1"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 2"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 4"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 5"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 7"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 8"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 9"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 10"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 11"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 12"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 13"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 14"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue == 15"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "CmdAddShangJinPingFen"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetNewNpcDeath"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2798.267,-1227.866)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2649.981,-1228.197)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好...好险...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SetNewNpcDeath"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-2952.344,-1229.379)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此人招式凌厉，出手皆是杀招。你一时之间难以抵挡，眼看就要殒命于此...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Menu",
+          "Text": "求饶",
+          "TargetBlockID": "this:337(求饶)"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "逃跑",
+          "TargetBlockID": "this:338(逃跑)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

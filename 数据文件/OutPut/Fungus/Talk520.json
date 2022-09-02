@@ -1,0 +1,1636 @@
+{
+  "Name": "Talk520",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2802.441,-1401.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(宗门判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 373,
+      "Name": "化尘炼丹开始判定",
+      "Description": "化尘炼丹开始判定",
+      "Position": "(-3122.877,-724.4426)",
+      "Commands": [
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 428,
+      "Name": "继续任务",
+      "Description": "继续任务",
+      "Position": "(-3634.393,-1307.998)",
+      "Commands": [
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好，此事就拜托{shidi}你了，还请{shidi}务必抓紧时间。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 371,
+      "Name": "星河炼丹开始判定",
+      "Description": "星河炼丹开始判定",
+      "Position": "(-3126.687,-807.9489)",
+      "Commands": [
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-2950.043,-1118.655)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Menu",
+          "Text": "我是来捐赠灵石的",
+          "TargetBlockID": "this:474(捐赠赋值)"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听最近的宗门消息",
+          "TargetBlockID": "this:357(宗门打听判断)"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事",
+          "TargetBlockID": "this:345(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 533,
+      "Name": "筑基俸禄",
+      "Description": "筑基俸禄",
+      "Position": "(-2798.435,-1212.473)",
+      "Commands": [
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.FaFengLu"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，你这段时间的宗门俸禄一共是{$TempValue}灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 358,
+      "Name": "执事任务判定",
+      "Description": "执事任务判定",
+      "Position": "(-2949.671,-954.1322)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "369(竹山任务开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "370(金虹任务开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "597(星河任务开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "372(离火任务开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(化尘任务开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 370,
+      "Name": "金虹任务开始判定",
+      "Description": "金虹任务开始判定",
+      "Position": "(-3142.49,-1073.81)",
+      "Commands": [
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 597,
+      "Name": "星河任务开始判定",
+      "Description": "星河任务开始判定",
+      "Position": "(-3141.538,-1032.964)",
+      "Commands": [
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "金虹剑派",
+      "Description": "金虹剑派",
+      "Position": "(-2484.147,-1034.52)",
+      "Commands": [
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 460,
+      "Name": "奖励",
+      "Description": "奖励",
+      "Position": "(-3626.053,-1059.751)",
+      "Commands": [
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.GetNTaskReward"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "作为完成任务的奖励，{shidi}可以获得{$jiangli}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "434(任务可接取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 546,
+      "Name": "丹房任务判定",
+      "Description": "丹房任务判定",
+      "Position": "(-2946.958,-806.4045)",
+      "Commands": [
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "601(竹山炼丹开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "600(金虹炼丹开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "371(星河炼丹开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "598(离火炼丹开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(化尘炼丹开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 372,
+      "Name": "离火任务开始判定",
+      "Description": "离火任务开始判定",
+      "Position": "(-3140.363,-993.3263)",
+      "Commands": [
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-2479.27,-937.0983)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 598,
+      "Name": "离火炼丹开始判定",
+      "Description": "离火炼丹开始判定",
+      "Position": "(-3122.88,-766.9953)",
+      "Commands": [
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "捐赠赋值",
+      "Description": "捐赠赋值",
+      "Position": "(-2798.604,-1028.784)",
+      "Commands": [
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "CmdOpenMiniShop"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "CmdOpenMiniShop"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "CmdOpenMiniShop"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "CmdOpenMiniShop"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "CmdOpenMiniShop"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "金丹以上",
+      "Description": "金丹以上",
+      "Position": "(-2655.372,-1113.915)",
+      "Commands": [
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师祖有何吩咐？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "长老有何吩咐？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Menu",
+          "Text": "我是来捐赠灵石的",
+          "TargetBlockID": "this:474(捐赠赋值)"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听最近的宗门消息",
+          "TargetBlockID": "this:357(宗门打听判断)"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事",
+          "TargetBlockID": "this:345(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 379,
+      "Name": "任务未完成",
+      "Description": "任务未完成",
+      "Position": "(-3488.311,-1248.283)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，之前托你办得事情完成的怎么样了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Menu",
+          "Text": "我已经在做了",
+          "TargetBlockID": "this:428(继续任务)"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对这件事无能为力",
+          "TargetBlockID": "this:429(放弃任务)"
+        }
+      ]
+    },
+    {
+      "ItemID": 369,
+      "Name": "竹山任务开始判定",
+      "Description": "竹山任务开始判定",
+      "Position": "(-3138.071,-1117.508)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 417,
+      "Name": "任务已完成",
+      "Description": "任务已完成",
+      "Position": "(-3487,-1306.323)",
+      "Commands": [
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，之前托你办得事情完成的怎么样了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经完成了",
+          "TargetBlockID": "this:454(完成)"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Menu",
+          "Text": "我已经在做了",
+          "TargetBlockID": "this:428(继续任务)"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Menu",
+          "Text": "我对这件事无能为力",
+          "TargetBlockID": "this:429(放弃任务)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-2483.536,-985.9833)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 599,
+      "Name": "化尘任务开始判定",
+      "Description": "化尘任务开始判定",
+      "Position": "(-3140.36,-950.7735)",
+      "Commands": [
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2796.309,-1115.979)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Menu",
+          "Text": "我是来捐赠灵石的",
+          "TargetBlockID": "this:474(捐赠赋值)"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听最近的宗门消息",
+          "TargetBlockID": "this:357(宗门打听判断)"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "没什么事",
+          "TargetBlockID": "this:345(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 529,
+      "Name": "金丹俸禄",
+      "Description": "金丹俸禄",
+      "Position": "(-2654.435,-1212.473)",
+      "Commands": [
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.FaFengLu"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "335(金丹以上)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{Firstname}长老，您这段时间的宗门俸禄一共是{$TempValue}灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过师祖，您这段时间的宗门俸禄一共是{$TempValue}灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2803.309,-1295.915)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "528(炼气俸禄)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 3"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "533(筑基俸禄)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "529(金丹俸禄)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "化尘教",
+      "Description": "化尘教",
+      "Position": "(-2486.143,-1131.282)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 438,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-3627.096,-1103.628)",
+      "Commands": [
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我还有些其他事情要办，此事还是交给其他人吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 547,
+      "Name": "任务选择",
+      "Description": "任务选择",
+      "Position": "(-2948.383,-1024.047)",
+      "Commands": [
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}想接取哪方面的任务？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于执事堂任务",
+          "TargetBlockID": "this:358(执事任务判定)"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于炼丹房任务",
+          "TargetBlockID": "this:546(丹房任务判定)"
+        }
+      ]
+    },
+    {
+      "ItemID": 454,
+      "Name": "完成",
+      "Description": "完成",
+      "Position": "(-3485.673,-1364.016)",
+      "Commands": [
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，不错，不错...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 600,
+      "Name": "金虹炼丹开始判定",
+      "Description": "金虹炼丹开始判定",
+      "Position": "(-3130.27,-848.7947)",
+      "Commands": [
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 385,
+      "Name": "任务完成判定",
+      "Description": "任务完成判定",
+      "Position": "(-3315.472,-1279.179)",
+      "Commands": [
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.IsNTaskCanFinish"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.If",
+          "Condition": "wancheng == True"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "417(任务已完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "379(任务未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 434,
+      "Name": "任务可接取",
+      "Description": "任务可接取",
+      "Position": "(-3453.584,-1101.987)",
+      "Commands": [
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "宗门{$renwu}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:437(同意)"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于报酬",
+          "TargetBlockID": "this:460(奖励)"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:438(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 429,
+      "Name": "放弃任务",
+      "Description": "放弃任务",
+      "Position": "(-3632.297,-1252.699)",
+      "Commands": [
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可惜...可惜...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "既然如此，那我便另寻他人吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "宗门判断",
+      "Description": "宗门判断",
+      "Position": "(-2802.79,-1359.162)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 601,
+      "Name": "竹山炼丹开始判定",
+      "Description": "竹山炼丹开始判定",
+      "Position": "(-3129.799,-893.8083)",
+      "Commands": [
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "380(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 435,
+      "Name": "任务不可接取",
+      "Description": "任务不可接取",
+      "Position": "(-3446.265,-1002.321)",
+      "Commands": [
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "宗门暂时没有什么需要你办的事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "星河剑派",
+      "Description": "星河剑派",
+      "Position": "(-2486.554,-1080.419)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 357,
+      "Name": "宗门打听判断",
+      "Description": "宗门打听判断",
+      "Position": "(-2659.932,-1037.904)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(竹山宗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(金虹剑派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(星河剑派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(离火门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(化尘教)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 380,
+      "Name": "任务CD判定",
+      "Description": "任务CD判定",
+      "Position": "(-3311.52,-1043.231)",
+      "Commands": [
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "435(任务不可接取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "434(任务可接取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 437,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-3627.294,-1147.145)",
+      "Commands": [
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此事就交给我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.StartNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 528,
+      "Name": "炼气俸禄",
+      "Description": "炼气俸禄",
+      "Position": "(-2950.435,-1216.473)",
+      "Commands": [
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.FaFengLu"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "333(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，你这段时间的宗门俸禄一共是{$TempValue}灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2952.905,-1307.274)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

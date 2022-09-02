@@ -1,0 +1,1599 @@
+{
+  "Name": "Talk631",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 398,
+      "Name": "关于太虚？",
+      "Description": "关于太虚？",
+      "Position": "(-1384.776,-1282.564)",
+      "Commands": [
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "以{$师祖}目前的神识强度，想必已经能轻易穿过苍穹了吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "而这苍穹之外，皆为太虚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "化神修士可以轻易地在修炼的同时神游太虚，也只有在太虚之中，{$师祖}才能领悟天道，从而掌握渡劫所必须的仙术。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "掌门为元婴",
+      "Description": "掌门为元婴",
+      "Position": "(-2189.797,-1129.131)",
+      "Commands": [
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.If",
+          "Condition": "化神老祖 == 0"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(没化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "362(有化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 396,
+      "Name": "关于天劫？",
+      "Description": "关于天劫？",
+      "Position": "(-1386.776,-1446.564)",
+      "Commands": [
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.If",
+          "Condition": "语气线 == 1"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "在化神成功的那一刻，你应该便感应到了天劫的存在。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "若史料记载无误，{$师祖}应该已经感应到了天劫的存在。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "天劫是一种考验。无论修为资质寿元如何，从化神成功的那一瞬间开始，便都只有千年时间准备与天劫抗衡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "而每动用一次领域的力量，天劫便会提前一百年，所以大多数化神修士都不希望相互之间产生纠纷，而是选择闭关修炼，不争世事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "当倒计时结束，{$师祖}无论身处何地，天劫都会找上门来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "届时，上界也会降下仙灵之气以供{$师祖}渡劫使用，",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "掌门为化神",
+      "Description": "掌门为化神",
+      "Position": "(-1925.885,-1507.892)",
+      "Commands": [
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "掌门在大殿正门处望着你，俨然也是化神境界。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "{FirstName}{shidi}，我已等候你多时了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此前你二人早已相互有所感应，便无需多言，径直向大殿内走了过去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "首先还是要恭喜{FirstName}{shidi}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "按照惯例，此等喜事应当昭告天下，让全宁州的能人志士前来道贺。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢掌门，但这凡俗之礼就不必了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "想必掌门也心知肚明，此次前来，我主要是想向掌门询问些事宜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "好说，{shidi}想了解什么，我定然倾囊相授。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 400,
+      "Name": "关于天道？",
+      "Description": "关于天道？",
+      "Position": "(-1385.776,-1124.564)",
+      "Commands": [
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "天道便是诸条大道的尽头。所谓大道归一，所归之处即为天道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "万物运行之法则，功法神通之根源，也皆为天道。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "就算仅窥得一丝天道，所领悟的仙术便能轻易超越世间任何神通。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "判定掌门是否为化神",
+      "Description": "判定掌门是否为化神",
+      "Position": "(-2414.195,-1304.497)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "Level >= 13"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(掌门为化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(掌门为元婴)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量",
+      "Description": "变量",
+      "Position": "(-2605.272,-1303.728)",
+      "Commands": [
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.If",
+          "Condition": "是否死亡 != True"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.If",
+          "Condition": "Level >= 13"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(判定掌门是否为化神)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 399,
+      "Name": "关于仙术？",
+      "Description": "关于仙术？",
+      "Position": "(-1385.776,-1202.564)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "仙术是调动仙灵之气所施展的法术。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "仙术种类繁多，没有人能参悟所有仙术，每个人都只能在自己擅长的领域，寻找对抗天劫的方法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那为何渡劫必须要使用仙术？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "雷劫本身便蕴含天道的力量，只有用同样蕴含天道的力量才能与之抗衡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "而寻常法术的力量与仙术、雷劫相比根本不在一个层次，就算最强的神通，在雷劫之下都显得脆弱不堪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 579,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2579.984,-1441.38)",
+      "Commands": [
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.If",
+          "Condition": "Level >= 13"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.If",
+          "Condition": "是否死亡 == True"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 401,
+      "Name": "还有什么？",
+      "Description": "还有什么？",
+      "Position": "(-1384.776,-1040.564)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "此外，渡劫之地的选择也是极为重要。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.If",
+          "Condition": "语气线 == 1"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "灵气越充裕的地方，渡劫便越容易成功；反之，灵气越杂乱的地方，渡劫便越难。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "所以前辈们大都是在一处灵气充裕的僻静之地，而不是海上这种灵气紊乱的地方渡劫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "409(其他结尾)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "据史料记载，灵气越充裕的地方，渡劫便越容易成功；反之，灵气越杂乱的地方，渡劫便越难。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "所以{$师祖}们大都是在一处灵气充裕的僻静之地，而不是海上这种灵气紊乱的地方渡劫。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "408(元婴掌门结尾)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 397,
+      "Name": "仙灵之气？",
+      "Description": "仙灵之气？",
+      "Position": "(-1388.776,-1360.564)",
+      "Commands": [
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "{$师祖}可大致理解为一种极为浓郁的灵气，但又有一些本质的区别。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "这仙灵之气，必须要对天道有着极深的感悟才可调动，寻常招式根本毫无用武之地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "而感悟天道与仙灵之气运用之法的地方，名曰太虚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "开始选项",
+      "Description": "开始选项",
+      "Position": "(-1680.776,-1254.564)",
+      "Commands": [
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天劫？",
+          "TargetBlockID": "this:396(关于天劫？)"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Menu",
+          "Text": "仙灵之气？",
+          "TargetBlockID": "this:397(仙灵之气？)"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于太虚？",
+          "TargetBlockID": "this:398(关于太虚？)"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于仙术？",
+          "TargetBlockID": "this:399(关于仙术？)"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天道？",
+          "TargetBlockID": "this:400(关于天道？)"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Menu",
+          "Text": "还有什么？",
+          "TargetBlockID": "this:401(还有什么？)"
+        }
+      ]
+    },
+    {
+      "ItemID": 362,
+      "Name": "有化神",
+      "Description": "有化神",
+      "Position": "(-1932.106,-1255.646)",
+      "Commands": [
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道人影突然出现在掌门身后，察觉到异样的掌门猛然转过身来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "？！是谁？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在看清那人样貌之后，掌门又变得恭敬起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "恭迎师祖，不知师祖出关所为何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "化神老祖",
+          "StoryText": "你待会便知道了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而这一切，自然也被你看在眼里。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不想浪费时间，身形一闪，便出现在大殿上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "化神老祖",
+          "StoryText": "{shidi}，恭喜。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "见此情形，掌门瞬间便明白了事情的原委，便识趣地退至一旁，不再说话。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "化神老祖",
+          "StoryText": "按照惯例，此等喜事应当昭告天下，让全宁州的能人志士前来道贺。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢师兄，但这凡俗之礼就不必了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "想必师兄也心知肚明，此次前来，我主要是想向掌门询问些事宜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "化神老祖",
+          "StoryText": "好说，{shidi}想了解什么，我定然倾囊相授。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 485,
+      "Name": "最终",
+      "Description": "最终",
+      "Position": "(-897.1484,-1241.483)",
+      "Commands": [
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.setChengHao"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "元婴掌门结尾",
+      "Description": "元婴掌门结尾",
+      "Position": "(-1105.776,-1342.564)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此，我都知道了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "既然{$师祖}已经满意了，在下却有个不情之请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "掌门双手作揖，低下了头，俨然露出一副严肃的神情。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "但说无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "如今{$师祖}已然是我派最强，倘若宗门有难，{$师祖}可愿出手相助？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你看出掌门此番用意，只是释然一笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这是自然。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倘若宗门有难，我必然不会坐视不理。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听完此话，掌门直起了身，神情也缓和了下来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "如此，在下便放心了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，今后传音符联系。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "是，恭送{$师祖}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你身形一晃，便消失在了大殿内。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "485(最终)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "没化神",
+      "Description": "没化神",
+      "Position": "(-1928.106,-997.6465)",
+      "Commands": [
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "掌门正在案前处理宗门事宜，全然没有发现你的到来。不得已，你只得故意制造出一些声响。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "？！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "原来是{FirstName}{shidi}，此次前来所为何……",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他随即意识到了情况不对。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "等等，你究竟是用了何种敛息的法门，我竟丝毫气息都没有察觉？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你并没有解释，只是释放出了一丝化神的威压，他的神情便瞬间变的紧张起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "你……？不对，{$师祖}竟已突破到化神境界？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "此等喜事，在下这就昭告天下，届时全宁州的能人志士都会前来恭贺{$师祖}！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "凡俗之礼就不必了，此次前来，只是想向掌门询问些事宜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我派既然底蕴深厚，可有其他前辈留下的经验以供参考？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "这个自然，{$师祖}想了解什么，在下定然知无不言。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(开始选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 409,
+      "Name": "其他结尾",
+      "Description": "其他结尾",
+      "Position": "(-1105.776,-1150.564)",
+      "Commands": [
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此，此番劳烦{$掌门}了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "既然{shidi}想问的都问完了，我倒有个问题想问{shidi}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{$掌门}请讲。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "如今你已达到化神境界，宁州屈指可数的存在，再也没有人可以制约你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "倘若此时，本宗、乃至整个宁州受到前所未有的威胁…",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "你，可愿出手？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他笔直地看着你，而你自然也明白他的意思。气氛有些微妙。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这是自然。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倘若宗门有难，我必然不会坐视不理。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听完此话，他释然而笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "哈哈哈哈，{shidi}能这么说，我便放心了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你二人又寒暄了几句。相互道别后，你身形一晃，便消失在了大殿内。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "485(最终)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "模板",
+      "Description": "模板",
+      "Position": "(-2371.962,-1440.939)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "旁白",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "主角",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "掌门",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "化神老祖",
+          "StoryText": "老祖",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "讲述者",
+          "StoryText": "讲述者",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Menu",
+          "Text": "Option Text",
+          "TargetBlockID": ""
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "CmdGetNPCIDByTitle"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

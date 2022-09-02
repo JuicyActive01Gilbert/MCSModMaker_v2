@@ -1,0 +1,531 @@
+{
+  "Name": "Talk7330",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "401(首次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 354,
+      "Name": "趁此处无人",
+      "Description": "趁此处无人",
+      "Position": "(-2756.032,-1440.825)",
+      "Commands": [
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你想起公孙季在拍卖会后所说的话，觉得这涵虚仙府必定是机会与危险共存的。但还是决定先行进入仙府占得先机。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch，10,0.5}！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你打算取出涵虚玉佩时，一道术法从背后袭来，居然是魔修偷袭！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 401,
+      "Name": "首次判定",
+      "Description": "首次判定",
+      "Position": "(-3073.944,-1439.333)",
+      "Commands": [
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(涵虚仙府外)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "涵虚仙府外",
+      "Description": "涵虚仙府外",
+      "Position": "(-2933.554,-1439.407)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "根据之前公孙季放出的消息，你顺利来到涵虚仙府应在之地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见此间三山环抱，又有灵泉从山腰潺潺而下，汇聚谷底渐成一湖。你矗立湖前，或闻猿啸山间，鸟鸣高枝，又见灵气散逸谷间，在阳光照射下如氤氲之境，端的是个建设洞府的好去处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这涵虚仙人不愧是阵道高手，若不是我凑齐了三个涵虚玉佩，只怕是站在阵前也寻不着仙府所在。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "等正派道友",
+          "TargetBlockID": "this:353(等正派道友)"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Menu",
+          "Text": "趁此处无人...",
+          "TargetBlockID": "this:354(趁此处无人)"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但还没来得及细细欣赏仙府坐落处的风景，你就已经看到公孙季在向你招手。他的身边已经聚集了许多宁州正派修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "不知{FirstName}{gongzi}手上可有涵虚仙府的玉佩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "你点点头，也不多做言语，从储物法宝中取出了自己的玉佩。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "公孙季见状也取出自己的玉佩。原本破旧的玉佩在齐聚后居然散发出氤氲宝光，一时是交相辉映，令人目接不暇。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "在宝光的照耀下，仙府外围的阵法逐渐消融，涵虚仙府的正体也是出现在了你们眼前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "诸位请稍等，我们还是在进入之前商量一下其中机缘怎么分配为好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "公孙兄所言极是，如今魔门蠢蠢欲动，我们在探访仙府时还是通力合作，减少损失为上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10123,
+          "AvatarBindKey": "",
+          "StoryText": "在场各大家族少主，门派首徒等或是出言同意，或者沉默不语，一时间倒是也没人站出来反对。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10123,
+          "AvatarBindKey": "",
+          "StoryText": "经过商讨后，你们决定等到结束后，按各人贡献积分分配。当然，你提供的涵虚玉佩也会增加贡献积分。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10123,
+          "AvatarBindKey": "",
+          "StoryText": "由你和公孙季领头，一众修士徐徐进入了涵虚仙府。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 353,
+      "Name": "等正派道友",
+      "Description": "等正派道友",
+      "Position": "(-2757.526,-1502.02)",
+      "Commands": [
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你想起公孙季在拍卖会后所说的话，觉得没必要先行犯险，于是寻了一地布下简单禁制掩盖气息，一边调息一边等待正派道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{gongzi}久等了，在下前来时遇到了魔门修士，花费了些时间处理。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "公孙季正微笑着站在你的禁制前，仿若你的禁制并不存在。他的身后站着各大势力的金丹修士，看来都是为了涵虚仙府而来的。只不过有些修士衣衫稍有不整，显然是之前在战斗中吃了点亏。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我也只是比公孙兄早到一点而已。这附近既然有魔修出现，恐怕此次涵虚仙府出世还是走漏了消息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{gongzi}不必担心，不过是些落单魔修，料想是刚好在附近而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你点点头，走到阵前从储物法宝中打算取出三块涵虚玉佩解除护府大阵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你发现原本应该散落在储物法宝空间各处的玉佩，居然不知何时因为阵法共鸣而接触在了一起。三块原本破旧的玉佩此刻却是散发着氤氲宝光，一时是交相辉映，令人目接不暇。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在宝光的照耀下，仙府外围的阵法也是逐渐消融，涵虚仙府的正体也是出现了在你们眼前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "诸位请稍等，我们还是在进入之前商量一下其中机缘怎么分配为好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "公孙兄所言极是，如今魔门蠢蠢欲动，我们在探访仙府时还是通力合作，减少损失为上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10123,
+          "AvatarBindKey": "",
+          "StoryText": "在场各大家族少主，门派首徒等或是出言同意，或是沉默不语，一时间倒是也没人站出来反对。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10123,
+          "AvatarBindKey": "",
+          "StoryText": "经过商讨后，你们决定等到结束后再按各人贡献积分分配。当然，你提供的涵虚玉佩也会增加贡献积分。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10123,
+          "AvatarBindKey": "",
+          "StoryText": "由你和公孙季领头，一众修士徐徐进入了涵虚仙府。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

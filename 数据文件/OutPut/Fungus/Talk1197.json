@@ -1,0 +1,556 @@
+{
+  "Name": "Talk1197",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(初次进入检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "初次进入检测",
+      "Description": "初次进入检测",
+      "Position": "(-2798.161,-1223.457)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(初次进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(正常进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2566.666,-1149.959)",
+      "Commands": [
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "正常进入",
+      "Description": "正常进入",
+      "Position": "(-2723.666,-1149.959)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 500"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "361(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != month"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "阁下可是前来探访家主的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不知家主恢复得如何了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "多亏了阁下的灵药，家主现已无碍了。前些日子家主有些好转时曾提醒过老仆，若阁下到访便带您前往白帝楼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "家主还在休息中，请阁下月后再来吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "361(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "初次进入",
+      "Description": "初次进入",
+      "Position": "(-2873.666,-1149.959)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这倪府，可真不简单。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那可不是，我还是第一次被这么多人行礼呢，现在走路都是飘的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "呵呵，你要是能认出这些人的实力，恐怕你就得腿软了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "反正来都来了，就去会会那倪家家主吧。他摆这阵仗，恐怕不是款待小辈这么简单。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "呵呵，年轻人，快请入座！今日这宴席只为答谢你一人而设。咱们一老一少以话佐酒，不必拘束。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "(三杯下肚，主客尽欢，不胜酒力的你正飘飘然之时，宗主忽然话锋一转）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "但凡仙家法器，认主后便能收入体内，避免暴露虚实。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "可我看你却一直背着这柄剑，莫非有什么原因？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "实不相瞒，这柄古剑乃是我机缘巧合所得。至今未能认主。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "哦？这倒是蹊跷。我倪家于用剑之道颇为心得，可否借剑一看？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（魏老，怎么办？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "可以答应他。我如今记忆全失，这柄剑是我唯一的线索。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "倪家家主见多识广，说不定能看出点门道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.ShowSprite"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "（递出锈渍铁剑）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "唔，剑身已经锈蚀不堪，看不出来历。但这还难不倒我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.ShowSprite"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倪宗主缓步来到庭院中央，持剑肃立。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "哪怕是寻常刀剑，日积月累，惯用的位置也会磨光。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "真正的本命法器，便是主人的灵魂映照，自然会对最熟悉的功法产生回应。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "就让我看看，你是怎样的一柄剑吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "赤红的灵气缠绕着倪父的右臂，运剑轨迹古朴沉稳，仿佛将重逾千斤的铁锤使得虎虎生威",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "可是剑身依然古井无波，与激昂的招式格格不入。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "唔，看来不是离火门所铸，但材质绝非凡品。那么接下来……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "剑意忽变，灵动跳脱的剑尖上下纷飞。周围草木随着他周身吞吐的灵气翩翩起舞。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但这份盎然的生机却化不开锈剑的死寂，仿佛绝美的乐曲中吱呀作响的杂音。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "也不由竹山宗注灵，但这异乎寻常的灵力逆流，我却如此熟悉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "莫非是……？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "右手松开剑柄，古剑仅凭一道灵气托举。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "左手捏成剑诀，向你遥遥一指，锈剑竟向你破空而来！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "还未等你有所反应，迫在眉睫的剑尖却似深陷泥沼，踌躇不前。却听得倪家主闷哼一声，锈剑竟然挣脱了灵气束缚，悬在你的面前。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "下意识握住剑柄的瞬间，体内功力便被压榨一空。注入的灵气仿佛天雷勾动地火，与剑内激荡的意志共鸣。脱缰的怒火充斥了你的胸膛，双眼逐渐为血色笼罩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "可惜功力太浅，还未能完成蓄势，丹田却已枯竭。下一刻只觉天旋地转，你便不省人事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

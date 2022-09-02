@@ -1,0 +1,1252 @@
+{
+  "Name": "Talk510",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2649.441,-1441.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(年份CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 324,
+      "Name": "第二次",
+      "Description": "第二次",
+      "Position": "(-2648.803,-1230.614)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "这位道友，老夫看你乌云盖顶，印堂发黑，面有死气，似有大凶之灾啊，不如请到一边，待我为你看上一相，如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "{/t}额...先说一下，老夫我这相术可是祖师真传，所以看一次，要收你100块灵石。{/t}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Menu",
+          "Text": "怎么又是你？",
+          "TargetBlockID": "this:334(又是)"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Menu",
+          "Text": "江湖骗子，不必理睬。",
+          "TargetBlockID": "this:285(不看)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 285,
+      "Name": "不看",
+      "Description": "不看",
+      "Position": "(-2790.803,-1227.614)",
+      "Commands": [
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 446,
+      "Name": "没钱",
+      "Description": "没钱",
+      "Position": "(-2358.582,-1231.191)",
+      "Commands": [
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "罢了罢了，你有多少灵石就出多少灵石吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "451(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2639.116,-1084.328)",
+      "Commands": [
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(相信)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 445,
+      "Name": "相信1",
+      "Description": "相信1",
+      "Position": "(-2507.483,-1163.898)",
+      "Commands": [
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那...那这次姑且就再信你一次。按你说的，2000灵石，这块玉佩残片就归我了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "451(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "次数判定",
+      "Description": "次数判定",
+      "Position": "(-2648.803,-1315.614)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "324(第二次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(第三次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(CD中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 344,
+      "Name": "相信",
+      "Description": "相信",
+      "Position": "(-2641.74,-1012.323)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 1"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 2"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 3"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 4"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 5"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 6"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 7"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 8"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 9"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...道友如今应是{$nianling}岁，修炼了{$year}年有余，修为刚到{$xiuwei}，对否？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 0"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我看道友还未曾拜入宁州大派，至今还是一介散修，老夫说的可对？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我看道友这一身修为，应是拜入了竹山宗的师门，老夫说的可对？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我看道友这一身修为，应是拜入了金虹剑派的师门，老夫说的可对？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我看道友这一身修为，应是拜入了星河剑派的师门，老夫说的可对？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我看道友这一身修为，应是拜入了离火门的师门，老夫说的可对？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我看道友这一身修为，应是拜入了化尘教的师门，老夫说的可对？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我看道友还未曾拜入宁州大派，至今还是一介散修，老夫说的可对？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "倒有几分眼力，不过你能不能说些有意义的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "咳咳，道友莫急，老夫这门祖传的相术，上可看往生，下可算后世。这往生皆已是定数，自然好看，但后世乃未定之数，可没有那么容易。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友的命理粗看杂乱无章，多有险阻。但所谓顺为凡，逆为仙，修真本就是逆天而为，命数不由天定。道友的曙光或许就在历经磨难，破棘而出的那一刻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "顺为凡，逆为仙...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你若有所思的念叨了几句，再抬起头的时候，发现那名老道不知何时已经走远了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.AddXinJin"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "CD中",
+      "Description": "CD中",
+      "Position": "(-2507.803,-1373.614)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "诸位过往道友，本仙人得祖师真传，预知前程，能断后世，且来看上一卦啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "煞气高",
+      "Description": "煞气高",
+      "Position": "(-3098.803,-1265.614)",
+      "Commands": [
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "啧啧啧，道友面露煞气，想必也是个杀伐果决之人呐。只是这修仙一途，虽是逆天改命，但这逆天之事行的越多，日后受天道考验之时也越是凶险，道友当慎重而为啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "额...就这点儿？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "检测煞气",
+      "Description": "检测煞气",
+      "Position": "(-2955.803,-1318.614)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.CheckShaQi"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 100"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(煞气低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(煞气高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "又是",
+      "Description": "又是",
+      "Position": "(-2646.803,-1141.222)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "怎么又是你这个骗子，你是不是对每个人都说一样的话？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "噢？原来是这位道友，老夫对你可是印象深刻啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友命理诡异，却又能频频逢凶化吉，实乃老夫生平罕见。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不如这样，道友只需出上500灵石，这次我便帮道友好好算上一卦，保管灵验，如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Menu",
+          "Text": "姑且再信你一次",
+          "TargetBlockID": "this:395(变量赋值)"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Menu",
+          "Text": "想都别想",
+          "TargetBlockID": "this:285(不看)"
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "第三次又是",
+      "Description": "第三次又是",
+      "Position": "(-2506.203,-1231.164)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "怎么又是你？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "咳咳...原来是这位道友，哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这个，老夫突然想起来还有些别的事要处理，就先走一步了，咱们有缘再见。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "他一边说着，又要往客栈外走去...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "站住！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "什么有事要处理，我看你分明是见到我心虚想走。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你这所谓的算卦之术，最多不过是一些能辨人年龄修为的小法门。至于算往生，定来世，就完全只是说一些套话来糊弄人罢了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "要不就把你之前骗我的灵石还给我，不然我就在这里当众揭穿你的骗术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "咳咳...这样吧，你我二人也算有缘，今日竟然又遇见了，老夫便赐你一个机缘，过去的事情就莫要再提了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "千年前宁州曾出过一赫赫有名的元婴期散仙，唤作涵虚仙人。此人不知用何法门，活了快两千年，一身修为通天，据说同境界之下罕有敌手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "他在渡劫前曾放出消息，将他洞府的“钥匙”分成数份，分散到了各处。凡是能将这些钥匙的碎片拼凑完整者，就能打开他的洞府，得到他的传承。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你看，这是什么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "只见他拿出一片翠绿色的残玉，神秘兮兮的拿给你看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你不会是想说，这破碎片就是那元婴大能洞府的钥匙吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，道友猜得不错！这便是那把钥匙的碎片之一，老夫我也是在一次机缘巧合之下偶然所得啊。可惜这么多年过去了，也没有得到有关其他碎片的消息，索性今日就当赐你一份机缘，2000灵石卖给你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谁知道这是不是你哪里捡来的垃圾，我有那么好骗么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "等等...这碎片倒是与上次在御剑门遗迹中捡到的那片有几分相像，没准还真属于同一块玉佩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "等等...这碎片虽然看起来普通，但上面雕刻的图案纹样倒是让我有一种莫名熟悉的感觉，可能真有什么玄机也未可知。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "（不会吧，难道这碎片还真是那什么涵虚仙人洞府的钥匙？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "不管是不是钥匙，但定然不是凡物，也算值得一试。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友不信也是正常，不过这玉佩可不是凡物，道友不妨亲自试试，用全力攻击这块残片，它定不会有任何损伤。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，那我便试上一试。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你聚集灵气，朝那枚碎片狠狠刺去，只见一道蓝光一闪，刚刚的攻击竟消失的无影无踪，碎片果然完好无损。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "怎么样，老夫所言非虚吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "即便你说的是真的，如果找不到洞府的具体位置，就算收集齐了这些碎片又有何用？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "法宝有灵，这玉佩既然是洞府开关的钥匙，想必和洞府间必然有着深刻的联系。否则当年涵虚仙人也不会放出消息，让大家收集玉佩残片。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "据老夫猜测，一旦将玉佩拼凑完整，就能够通过玉佩感知到洞府的大概位置了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2000"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Menu",
+          "Text": "姑且再信你一次",
+          "TargetBlockID": "this:445(相信1)"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Menu",
+          "Text": "可我没有那么多灵石",
+          "TargetBlockID": "this:446(没钱)"
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "第三次",
+      "Description": "第三次",
+      "Position": "(-2507.803,-1314.817)",
+      "Commands": [
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "这位道友，老夫看你乌云盖顶，印堂发黑，面有死气，似有大凶之灾啊，不如请到一边，待我为你看上一相，如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "{/t}额...先说一下，老夫我这相术可是祖师真传，所以看一次，要收你100块灵石。{/t}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Menu",
+          "Text": "怎么又是你？",
+          "TargetBlockID": "this:408(第三次又是)"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Menu",
+          "Text": "江湖骗子，不必理睬。",
+          "TargetBlockID": "this:285(不看)"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "年份CD判定",
+      "Description": "年份CD判定",
+      "Position": "(-2648.803,-1375.614)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "year == TempValue"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(CD中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(次数判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "第一次",
+      "Description": "第一次",
+      "Position": "(-2792.06,-1316.532)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "这位道友，老夫看你乌云盖顶，印堂发黑，面有死气，似有大凶之灾啊，不如请到一边，待我为你看上一相，如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "{/t}额...先说一下，老夫我这相术可是祖师真传，所以看一次，要收你100块灵石。{/t}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Menu",
+          "Text": "好吧，那就烦请老道帮我看一相吧。",
+          "TargetBlockID": "this:284(检测煞气)"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Menu",
+          "Text": "江湖骗子，不必理睬。",
+          "TargetBlockID": "this:285(不看)"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "煞气低",
+      "Description": "煞气低",
+      "Position": "(-3097.803,-1317.614)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "",
+          "StoryText": "道友，你这命理倒是十分诡异，难以测算。不过依老夫看，你虽命中多劫难，但只需始终坚守着自己的一份道心，最终便能逢凶化吉啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "额...就这点儿？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 451,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2359.753,-1157.582)",
+      "Commands": [
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 613,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若非老夫年事已高，恐怕时日无多，也不会甘心把这份机缘让给他人...哎...你拿去吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

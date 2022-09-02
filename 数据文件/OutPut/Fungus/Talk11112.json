@@ -1,0 +1,153 @@
+{
+  "Name": "Talk11112",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "choice",
+      "Description": "choice",
+      "Position": "(-2603.661,-984.1599)",
+      "Commands": []
+    },
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2608.162,-1046.221)",
+      "Commands": [
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Menu",
+          "Text": "痛下杀手",
+          "TargetBlockID": "this:147(杀)"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.Menu",
+          "Text": "手下留情",
+          "TargetBlockID": "this:148(不杀)"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 24,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2604.035,-1175.115)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(New Block (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "不杀",
+      "Description": "不杀",
+      "Position": "(-2427.087,-1047.888)",
+      "Commands": [
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你们本就不是来化龙海域生事的，故此并不打算残害无辜。你收回手中的法宝，那龙族窜入海中，很快便不见了踪影。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 352,
+      "Name": "New Block (Copy)",
+      "Description": "New Block (Copy)",
+      "Position": "(-2805.824,-1089.467)",
+      "Commands": [
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 300"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "杀",
+      "Description": "杀",
+      "Position": "(-2427.719,-1131.519)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你并不打算手下留情，一声尖厉的长啸过后，那龙族便没了生机。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 149,
+          "CmdType": "Fungus.AddHaoGanDu"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

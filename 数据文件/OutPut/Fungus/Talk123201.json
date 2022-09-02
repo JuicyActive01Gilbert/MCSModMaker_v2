@@ -1,0 +1,329 @@
+{
+  "Name": "Talk123201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(小二)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 297,
+      "Name": "看看",
+      "Description": "看看",
+      "Position": "(-2610.694,-1176.018)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 265,
+      "Name": "小二",
+      "Description": "小二",
+      "Position": "(-2797.06,-1242.532)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 730,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们问道楼出售的可都是最实用的神通法门，道友看看便知。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "能不能推荐一些入门秘籍？",
+          "TargetBlockID": "this:295(推荐)"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Menu",
+          "Text": "随便看看",
+          "TargetBlockID": "this:297(看看)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 295,
+      "Name": "推荐",
+      "Description": "推荐",
+      "Position": "(-2608.694,-1239.018)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 4"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 730,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "要说这修仙入门，无非是外练肉身，内练经脉。我看道友如今方才炼气期，正是为炼体和炼气打下基础的好时机。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 730,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们问道楼就有两本极好的入门功法，一本唤作《凌云诀》，乃上佳的炼气功法。另一本唤作《玉云功》，用来炼体就再合适不过了。每本只要225灵石，道友可要选上一本？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 450"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Menu",
+          "Text": "我全都要",
+          "TargetBlockID": "this:324(都要)"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 225"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "买下凌云诀",
+          "TargetBlockID": "this:305(买凌云)"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "买下玉云功",
+          "TargetBlockID": "this:306(买玉云)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Menu",
+          "Text": "我自己随便看看吧",
+          "TargetBlockID": "this:297(看看)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(看看)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 730,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友说笑了，您现在的修为那还需要我给您推荐什么功法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "买玉云",
+      "Description": "买玉云",
+      "Position": "(-2458.694,-1238.018)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 730,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，道友真是有眼光。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 324,
+      "Name": "都要",
+      "Description": "都要",
+      "Position": "(-2457.694,-1308.018)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 730,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，道友真是有眼光。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "买凌云",
+      "Description": "买凌云",
+      "Position": "(-2608.694,-1306.018)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 730,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，道友真是有眼光。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

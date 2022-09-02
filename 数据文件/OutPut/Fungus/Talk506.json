@@ -1,0 +1,223 @@
+{
+  "Name": "Talk506",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(出战对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 288,
+      "Name": "散修",
+      "Description": "散修",
+      "Position": "(-2795.486,-1177.75)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "太好了，也许从这柄飞剑里就可以找到一些能够唤起你记忆的线索。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪家家主见多识广，又精于剑道，或许可以去倪府请教一番...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "出战对话",
+      "Description": "出战对话",
+      "Position": "(-2797.339,-1244.623)",
+      "Commands": [
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 10"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.OpenTieJianHongDian"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 5"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.OpenTieJianHongDian"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "呼...好险，这是什么东西？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这是剑灵，只有法宝级别以上的仙剑，经过千百年的滋养，才会被孕育出来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "只是这剑灵似乎被什么魔气沾染上了，竟然会主动攻击他人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "更奇怪的是，这柄飞剑让我隐约有一丝熟悉的感觉，似乎在哪里见过的样子...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(散修)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

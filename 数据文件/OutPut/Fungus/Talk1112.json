@@ -1,0 +1,782 @@
+{
+  "Name": "Talk1112",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3455.571,-1357.435)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "422(New Block1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 422,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(-3305.249,-1357.283)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 300"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "436(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "325(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 325,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-3305.051,-1290.003)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 1000"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "436(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "335(New Block2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断 (Copy)",
+      "Description": "境界判断 (Copy)",
+      "Position": "(-3140.737,-1291.715)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "转过热闹喧嚣的坊市，一条寂静的小巷吸引了你的注意。你穿过小巷，发现了一幢稍显破旧的宅子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这栋宅子似乎已经很久没人居住了，但从它庞大的规模来看从前居住在这里的人家一定非富即贵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这宅子看起来有些古怪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "怎么说，老头？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "宅子里头...像是有什么奇怪的阵法，大抵和血脉有关。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "阵法如何与血脉有关？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "似乎特定血脉的人进入这个宅子阵法便会触发，或许是用来护宅吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既然如此我还是不要贸然进入此地了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你打算离开这里时，宅邸内部突然生出异变。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一股巨大的灵力波动从宅子中心扩散开，恐怕整个碎星岛都能感受到如此剧烈的动荡。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "这灵力波动...看样子是有人触发了阵法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你有些好奇地跃上大门朝内看去，竟发现了一个熟悉的身影。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "百里兄！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "似是听见了你的低呼，百里奇朝你的方向看来。你刚要说些什么，一阵强劲的掌风擦过你身侧向宅内的百里奇袭去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2101,
+          "AvatarBindKey": "",
+          "StoryText": "百里小贼纳命来！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "电光火石间百里奇匆忙运起功法，堪堪接住了那一掌。你决定...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Menu",
+          "Text": "静观其变",
+          "TargetBlockID": "this:299(静观其变 (Copy))"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前相助",
+          "TargetBlockID": "this:300(相助 (Copy))"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "去 (Copy)",
+      "Description": "去 (Copy)",
+      "Position": "(-3141.583,-1092.225)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}言重了，碎星岛也非安全之地，未免夜长梦多。把这两瓶驱妖液带上，我们即日便启程前往化龙海域吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 319,
+      "Name": "New Block (Copy)",
+      "Description": "New Block (Copy)",
+      "Position": "(-2808.167,-1293.842)",
+      "Commands": [
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "据海图所示，似乎碎星海域附近有片海域名为化龙，其中海兽多为龙族。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "但若贸然前去似乎有些冒险，这栋宅子说来古怪之处也颇多，不如我们分头打听一下再做打算。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}所言有理，我便去打听打听那化龙海域，宅子的事就拜托{xiongdi}了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 436,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-3450.571,-1291.174)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-3309.387,-1131.46)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "百里兄，关于百里家与龙族之事我打听到的消息是这样的...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你把先前打听到的消息转述给百里奇。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "我竟从未听过族中长辈说起此事！我自儿时便居于广陵城，还以为百里一族是土生土长的宁州人士...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "我一直指摘海兽其心可诛，无端进攻广陵城，没想到罪魁祸首居然正是我们......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "百里兄无需自责，我看没准是那龙族胡搅蛮缠，害得百里族人一路迁徙！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "对了，不知百里兄打听到多少关于化龙海域的消息？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "听闻化龙海域内龙族居多，而这些龙族也并非都是水灵根，甚至还有天赋上乘的变异灵根。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "龙族首领覆海大圣便是雷灵根，实力十分强大，可以元婴巅峰修为匹敌化神期修士。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那此番我们前去化龙海域探听虚实，定要小心提防。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "不，这件事本就与{FirstName}{xiongdi}无关，化龙海域凶险异常，我怎好意思再让{xiongdi}涉险！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "既然百里兄坚持 那我便祝你平安归来吧",
+          "TargetBlockID": "this:312(不 (Copy))"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "俗话说舍命陪君子 我岂能让百里兄只身犯险",
+          "TargetBlockID": "this:313(去 (Copy))"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(-3308.209,-1211.906)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "相助 (Copy)",
+      "Description": "相助 (Copy)",
+      "Position": "(-2974.167,-1344.778)",
+      "Commands": [
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你飞身上前，同百里奇一起向神秘老者使出了神通。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你与百里奇迅猛的攻势下，老者明显不敌。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2101,
+          "AvatarBindKey": "",
+          "StoryText": "哼，别以为这就算了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2101,
+          "AvatarBindKey": "",
+          "StoryText": "没想到百里家的人居然还有胆子跑到祖宅这里，真当我们龙族是可欺之辈！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他说完这句话，竟化作一条五爪金龙飞向天际，转瞬间便失去了影踪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "龙族...方才你我与他交手时，我分明感觉自己的功法与他本是同源。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "难道我百里家竟与龙族有什么瓜葛？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(New Block (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "静观其变 (Copy)",
+      "Description": "静观其变 (Copy)",
+      "Position": "(-2976.167,-1243.778)",
+      "Commands": [
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你没有贸然出手，而是选择等待。百里奇与神秘老者二人战到一处，两人所用招式竟有八分相似。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "然而老者来势汹汹，似乎与百里家有着什么不为人知的龃龉。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "两人愈战愈烈，你在一旁只觉招式虽然相似，但老者所用神通明显要比百里奇的精妙许多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "百十招过后，百里奇逐渐落于下风。那神秘老者见此乘胜追击，几招便将百里奇败于掌下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你见状飞身上前，同百里奇一起向神秘老者使出了神通。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你与百里奇迅猛的攻势下，老者明显不敌。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2101,
+          "AvatarBindKey": "",
+          "StoryText": "哼，别以为这就算了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2101,
+          "AvatarBindKey": "",
+          "StoryText": "没想到百里家的人居然还有胆子跑到祖宅这里，真当我们龙族是可欺之辈！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2101,
+          "AvatarBindKey": "",
+          "StoryText": "他说完这句话，竟化作一条五爪金龙飞向天际，转瞬间便失去了影踪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "龙族...方才你我与他交手时，我分明感觉自己的功法与他本是同源。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "难道我百里家竟与龙族有什么瓜葛？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(New Block (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "不 (Copy)",
+      "Description": "不 (Copy)",
+      "Position": "(-3138.455,-1185.991)",
+      "Commands": [
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你并不打算参与此事，与百里奇应酬几句后便离开了百里祖宅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

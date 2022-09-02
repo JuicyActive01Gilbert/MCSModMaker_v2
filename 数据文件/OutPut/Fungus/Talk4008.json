@@ -1,0 +1,93 @@
+{
+  "Name": "Talk4008",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2808.222,-1213.366)",
+      "Commands": [
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 7"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

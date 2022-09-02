@@ -1,0 +1,246 @@
+{
+  "Name": "Talk119801",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 296,
+      "Name": "钱够",
+      "Description": "钱够",
+      "Position": "(-2968.694,-971.0183)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "",
+          "StoryText": "请！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "我想租借一间炼丹用的地火房",
+      "Description": "我想租借一间炼丹用的地火房",
+      "Position": "(-2838.555,-1127.482)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "",
+          "StoryText": "租借一次房间需要30灵石，单次使用不限时长，要租借么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "租借",
+          "TargetBlockID": "this:290(租借)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:291(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "租借",
+      "Description": "租借",
+      "Position": "(-2895.694,-1052.018)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 30"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(钱够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2799.792,-1212.315)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "",
+          "StoryText": "道友，何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么可以交给我做的事么？",
+          "TargetBlockID": "this:284(有什么可以交给我做的事么？)"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想租借一间炼丹用的地火房",
+          "TargetBlockID": "this:286(我想租借一间炼丹用的地火房)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想开启一间炼器室",
+          "TargetBlockID": "this:305(我想开启一间炼器室)"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:287(没有其它事了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "钱不够",
+      "Description": "钱不够",
+      "Position": "(-2824.694,-970.0183)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "",
+          "StoryText": "没钱...呵呵，那可不行。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "有什么可以交给我做的事么？",
+      "Description": "有什么可以交给我做的事么？",
+      "Position": "(-3052.63,-1209.158)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "",
+          "StoryText": "这里暂时没有需要你做的事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "没有其它事了",
+      "Description": "没有其它事了",
+      "Position": "(-2590.694,-1211.018)",
+      "Commands": []
+    },
+    {
+      "ItemID": 291,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-2690.694,-1048.018)",
+      "Commands": []
+    },
+    {
+      "ItemID": 305,
+      "Name": "我想开启一间炼器室",
+      "Description": "我想开启一间炼器室",
+      "Position": "(-2608.655,-1127.929)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "OpenLianQi"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

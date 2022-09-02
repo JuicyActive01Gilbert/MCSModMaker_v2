@@ -1,0 +1,548 @@
+{
+  "Name": "Talk7371",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2790.203,-1430.527)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "343(触发判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 349,
+      "Name": "选择",
+      "Description": "选择",
+      "Position": "(-2790.054,-1259.549)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于封城",
+          "TargetBlockID": "this:306(关于封城)"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Menu",
+          "Text": "林沐心的计划",
+          "TargetBlockID": "this:307(林沐心的计划)"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "没事",
+          "TargetBlockID": "this:308(没事)"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "劝阻林沐心",
+      "Description": "劝阻林沐心",
+      "Position": "(-2883.725,-1088.663)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "那便拜托{FirstName}道友帮忙安抚心儿一番，沐雪感激不尽。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 343,
+      "Name": "触发判定",
+      "Description": "触发判定",
+      "Position": "(-2790.054,-1354.486)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(没事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 319,
+      "Name": "大致了解",
+      "Description": "大致了解",
+      "Position": "(-3014.107,-1148.157)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "那道友也应该知道诸位长老也不过是为家族考虑而用心良苦，只是此前冲虚前辈指名要与心儿结为道侣，才有了这出闹剧。现下前辈愿意转而与我结为道侣，以稳固两系关系，自是再好不过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "更何况，心儿的方法无非就是想办法破坏此次结侣典礼，前日便已是因心儿临时逃离而导致星宫与林家当着宁州各家族颜面大损。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "但此次我与冲虚长老之事定下后，星宫那边已是再次邀请各大家族，若是相同的状况再上演一次，乃至...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "即便父亲不在乎，星宫的那位就不一样了。据父亲所言，宫主不知何故，一直非常在乎星宫的名声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "所以若是追究起来，只怕连宫主与父亲的关系都会出现裂痕，大长老那边若是有心...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "啊，抱歉，见道友愿意听，沐雪竟自顾自地啰嗦了这么多，耽误道友太多时间，还请见谅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "总之，若是可以还请道友代沐雪阻止心儿，莫要让她闯下大祸。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Menu",
+          "Text": "林姑娘不必牺牲自己",
+          "TargetBlockID": "this:327(不必牺牲自己)"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Menu",
+          "Text": "我会劝阻林沐心",
+          "TargetBlockID": "this:328(劝阻林沐心)"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "没事",
+      "Description": "没事",
+      "Position": "(-2641.954,-1213.98)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "现下府内气氛紧张，{FirstName}道友还是不要在此闲逛为好，若是撞上二长老，免不得对你恶语相向。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 320,
+      "Name": "请林姑娘告知",
+      "Description": "请林姑娘告知",
+      "Position": "(-2883.724,-1148.157)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不太清楚，还请林姑娘解惑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "星宫乃是千余年前由大名鼎鼎的天星双尊所建，当时此二者都是化神期修为。其中广微仙子便是当代林家家主，所以名义上天星城是由林家与星宫共同管理，但实际上林家也不过是星宫中较为独立的分支。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "而星宫中其他分支，一是代表星辰尊者原家族血脉的宫主一系，他们向来不会为难林家；其二便是后来加入星宫的供奉之后，其中以星宫大长老为首，近百年来一直对林家执掌天星城收入大权不满，常有摩擦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "而这冲虚散人便是星宫大长老座下弟子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "所以林家长老也不过是为家族考虑而用心良苦，只是此前冲虚前辈指名要与心儿结为道侣，才有了这出闹剧。现下前辈愿意转而与我结为道侣，以稳固两系关系，自是再好不过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "更何况，心儿的方法无非就是想办法破坏此次结侣典礼，前日便已是因心儿临时逃离而导致星宫与林家当着宁州各家族颜面大损。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "但此次我与冲虚长老之事定下后，星宫那边已是再次邀请各大家族，若是相同的状况再上演一次，乃至...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "即便父亲不在乎，星宫的那位就不一样了。据父亲所言，宫主不知何故，一直{color=#d0380a}非常在乎星宫的名声{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "所以若是追究起来，只怕连宫主与父亲的关系都会出现裂痕，大长老那边若是有心...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "啊，抱歉，见道友愿意听，沐雪竟自顾自地啰嗦了这么多，耽误道友太多时间，还请见谅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "总之，若是可以还请道友代沐雪阻止心儿，莫要让她闯下大祸。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "林姑娘不必牺牲自己",
+          "TargetBlockID": "this:327(不必牺牲自己)"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "我会劝阻林沐心",
+          "TargetBlockID": "this:328(劝阻林沐心)"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "林沐心的计划",
+      "Description": "林沐心的计划",
+      "Position": "(-2949.549,-1216.511)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将林沐心的计划向林沐雪娓娓道来，从她逃离林府一直到之后的行动，林沐雪也是安静的听着，直到你说完。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{FirstName}道友愿意帮助心儿，但家父一直宠爱心儿，她对此中原委料想是不甚清楚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "道友可知林家与星宫的关系？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Menu",
+          "Text": "大致知道",
+          "TargetBlockID": "this:319(大致了解)"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Menu",
+          "Text": "请林姑娘告知",
+          "TargetBlockID": "this:320(请林姑娘告知)"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2789.899,-1303.389)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}道友，请问有事么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "林沐雪看见你出现在她身前，似乎是有些惊讶，却并没有过问太多的意思。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "道友，请问有事么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "林沐雪看到你的出现先是有些戒备，似乎是想起前日于此有一面之缘，这才放松下来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "349(选择)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "关于封城",
+      "Description": "关于封城",
+      "Position": "(-2791.322,-1215.246)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}道友还请稍安勿躁，短则一日，长则半月，必然会解除封城。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "期间若是客栈有何怠慢，道友只需找我即可。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "349(选择)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "不必牺牲自己",
+      "Description": "不必牺牲自己",
+      "Position": "(-3012.841,-1088.663)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "此中矛盾若想解决，总要有人挺身而出。冲虚前辈既愿退让，沐雪自然也是愿为林家做出贡献。劳{FirstName}{daoyou}挂心，沐雪不胜感激。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "既然林姑娘心意已决，那我也就不再多说什么了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

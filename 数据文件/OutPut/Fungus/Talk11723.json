@@ -1,0 +1,265 @@
+{
+  "Name": "Talk11723",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3226.064,-1354.436)",
+      "Commands": [
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "魔门竟在那时便渗入我教内部...看来此行结束有必要肃整门派了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}长老，这是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Menu",
+          "Text": "拿出炼心芝",
+          "TargetBlockID": "this:359(yep)"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:360(non)"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}道友，这是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "拿出炼心芝",
+          "TargetBlockID": "this:361(yes)"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:360(non)"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "魔门竟在那时便渗入我教内部...看来此行结束有必要肃整门派了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 360,
+      "Name": "non",
+      "Description": "non",
+      "Position": "(-3057.818,-1355.482)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 359,
+      "Name": "yep",
+      "Description": "yep",
+      "Position": "(-3055.756,-1431.77)",
+      "Commands": [
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "炼心芝...！有了此物，必定可令掌门早日突破！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈哈，门派定不会亏待{FirstName}长老，这是你应得的报酬！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 361,
+      "Name": "yes",
+      "Description": "yes",
+      "Position": "(-3056.787,-1278.162)",
+      "Commands": [
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "炼心芝...！有了此物，必定可令掌门早日突破！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 504,
+          "AvatarBindKey": "",
+          "StoryText": "多谢道友找回我宗门传承，这是你应得的报酬！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

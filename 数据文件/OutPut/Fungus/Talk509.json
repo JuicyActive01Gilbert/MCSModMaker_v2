@@ -1,0 +1,173 @@
+{
+  "Name": "Talk509",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 282,
+      "Name": "首次对话",
+      "Description": "首次对话",
+      "Position": "(-2796.077,-1167.087)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10001,
+          "AvatarBindKey": "",
+          "StoryText": "这...这是哪里？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10101,
+          "AvatarBindKey": "",
+          "StoryText": "这里是我创造的一方小世界，你可以称这里为虚无幻境或者...时空枢纽什么的，这不重要。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10101,
+          "AvatarBindKey": "",
+          "StoryText": "总之...只有各个位面宇宙中有名有姓的重要角色才会被邀请来到这里。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10101,
+          "AvatarBindKey": "",
+          "StoryText": "你可以随意挑战他们，不过就算全赢了也没有什么奖励。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10101,
+          "AvatarBindKey": "",
+          "StoryText": "当然，作为《凡人筑基传》...我是说...《觅长生》的主角，在我创造的这个幻境中，你可以自由使用游戏中所有的功法，法术与法宝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10101,
+          "AvatarBindKey": "",
+          "StoryText": "你也可以从我这里买到任何你想使用的法宝，甚至随意更改你的灵根。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 10101,
+          "AvatarBindKey": "",
+          "StoryText": "别以为自己稳了，能来到这里的可没有弱者~让我看看你有多少潜力吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 281,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2640.077,-1236.087)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "判断",
+      "Description": "判断",
+      "Position": "(-2797.79,-1238.896)",
+      "Commands": [
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "281(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

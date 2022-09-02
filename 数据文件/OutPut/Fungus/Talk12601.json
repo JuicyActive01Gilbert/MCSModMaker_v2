@@ -1,0 +1,627 @@
+{
+  "Name": "Talk12601",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 330,
+      "Name": "青玉符剑",
+      "Description": "青玉符剑",
+      "Position": "(-3562.862,-1160.763)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "青玉符剑——主动：抽一张灵气牌（每两回合可使用一次）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了",
+          "TargetBlockID": "this:333(选青玉)"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "再看看别的",
+          "TargetBlockID": "this:323(符器三选一)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 285,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2920.771,-1152.594)",
+      "Commands": [
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "{shixiong}，今日来神兵阁有什么事么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听天魔眼的消息",
+          "TargetBlockID": "this:596(打听)"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.Menu",
+          "Text": "只是随便逛逛",
+          "TargetBlockID": "this:597(逛逛)"
+        }
+      ]
+    },
+    {
+      "ItemID": 597,
+      "Name": "逛逛",
+      "Description": "逛逛",
+      "Position": "(-2853.64,-1045.066)",
+      "Commands": [
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 596,
+      "Name": "打听",
+      "Description": "打听",
+      "Position": "(-2986.619,-1045.065)",
+      "Commands": [
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "听说这天魔眼中还有一只修为极高的蛇妖，普通的筑基期修士都不是它的对手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "你问我蛇妖的位置？我想想....似乎是在天魔眼的{color=#d0380a}东{/color}面吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "诶？{shixiong}，你不会也对那蛇妖感兴趣吧！？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 323,
+      "Name": "符器三选一",
+      "Description": "符器三选一",
+      "Position": "(-3435.798,-1160.763)",
+      "Commands": [
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "桃木符剑",
+          "TargetBlockID": "this:329(桃木符剑)"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Menu",
+          "Text": "青玉符剑",
+          "TargetBlockID": "this:330(青玉符剑)"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Menu",
+          "Text": "火铜符剑",
+          "TargetBlockID": "this:331(火铜符剑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "选青玉",
+      "Description": "选青玉",
+      "Position": "(-3693.862,-1162.763)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "347(送道袍)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-3042.998,-1152.594)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(初入神兵阁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(正常对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "初入神兵阁",
+      "Description": "初入神兵阁",
+      "Position": "(-3171.995,-1151.583)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "哟，又有新面孔来了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Menu",
+          "Text": "我叫...",
+          "TargetBlockID": "this:313(我叫)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Menu",
+          "Text": "我是来领取...",
+          "TargetBlockID": "this:314(我是来)"
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "选火铜",
+      "Description": "选火铜",
+      "Position": "(-3690.862,-1107.763)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "347(送道袍)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "桃木符剑",
+      "Description": "桃木符剑",
+      "Position": "(-3563.862,-1218.763)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "桃木符剑——主动：造成1点剑系伤害（每回合可使用一次）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了",
+          "TargetBlockID": "this:332(选桃木)"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Menu",
+          "Text": "再看看别的",
+          "TargetBlockID": "this:323(符器三选一)"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "我是来",
+      "Description": "我是来",
+      "Position": "(-3300.798,-1132.763)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄，我是来领取...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "诶，明白，明白，来领取入门两件套嘛。你等着，我来找给你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "这个，这个，哦，还有这个...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，这三把符器，你自己挑选一把吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "323(符器三选一)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "正常对话",
+      "Description": "正常对话",
+      "Position": "(-3042.45,-1103.855)",
+      "Commands": [
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 620,
+      "Name": "系统talk",
+      "Description": "系统talk",
+      "Position": "(-2667.929,-1150.561)",
+      "Commands": [
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2797.79,-1238.896)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "620(系统talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "火铜符剑",
+      "Description": "火铜符剑",
+      "Position": "(-3560.862,-1106.763)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "火铜符剑——主动：敌方获得【灼烧】*1（每回合可使用一次）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Menu",
+          "Text": "就选它了",
+          "TargetBlockID": "this:334(选火铜)"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Menu",
+          "Text": "再看看别的",
+          "TargetBlockID": "this:323(符器三选一)"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "我叫",
+      "Description": "我叫",
+      "Position": "(-3301.862,-1184.763)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我叫{FirstName}{LastName}，是刚入门的外门弟子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...{FirstName}{shidi}，我猜你一定是来领取入门两件套的吧，你等着，让我找找。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "这个，这个，哦，还有这个...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{shidi}，这三把符器，你自己挑选一把吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "323(符器三选一)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 332,
+      "Name": "选桃木",
+      "Description": "选桃木",
+      "Position": "(-3693.862,-1216.763)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "347(送道袍)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 347,
+      "Name": "送道袍",
+      "Description": "送道袍",
+      "Position": "(-3841.546,-1163.763)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "还有我们离火门弟子配属的道袍，你也拿着吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 412,
+          "AvatarBindKey": "",
+          "StoryText": "（低声）别怪师兄没提醒一句啊，穿上这个你可能会更热...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

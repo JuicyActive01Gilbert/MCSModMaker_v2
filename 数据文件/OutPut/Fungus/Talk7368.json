@@ -1,0 +1,199 @@
+{
+  "Name": "Talk7368",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2795.475,-1357.629)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(判断初见)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "非初见",
+      "Description": "非初见",
+      "Position": "(-2628.053,-1295.45)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}道友原来你在这里。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "林姑娘可是找我有事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...天星城中出现了些变故，现已封城，{daoyou}若无要事急需离去，还请在客栈中休息几天。当然，在此期间客栈所有费用将由林家负责。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "林姑娘可知大概需封城多久？如无必要，我还是不想在天星城内耽搁太久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...应该只需一两天便是会解封，不会耽搁{FirstName}道友太久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "即是如此，那我便先行前往客栈了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "判断初见",
+      "Description": "判断初见",
+      "Position": "(-2793.697,-1295.794)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetHaoGanDu"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 20"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(初见)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(非初见)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "初见",
+      "Description": "初见",
+      "Position": "(-2792.437,-1229.697)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "道友你好，天星城中出现了些变故，现已封城。林家与星宫的联姻也被推迟。若无要事，还请前往天星城客栈休息几天，待解封之后再自行离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "",
+          "StoryText": "作为补偿，封城期间客栈的所有费用都将由林家支付。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢道友告知。既然如此，我便先行前往客栈了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

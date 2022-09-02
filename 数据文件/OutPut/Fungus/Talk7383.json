@@ -1,0 +1,629 @@
+{
+  "Name": "Talk7383",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2796.265,-1315.485)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "310(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 425,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2976.884,-1223.992)",
+      "Commands": []
+    },
+    {
+      "ItemID": 380,
+      "Name": "情分不足",
+      "Description": "情分不足",
+      "Position": "(-2792.737,-1064.236)",
+      "Commands": [
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "贵干不敢当，只是听说云汐城仙酿乃是宁州一绝，其中极品盈手露更是堪比仙酿。所以想上门讨要一坛，品品其中滋味。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}{$NickName}说笑了，只是宁州道友抬爱云汐城而已。纵是极品盈手露也不过是所含灵气与回味更为浓郁，仙酿实是不敢当。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}{$NickName}若是想要极品盈手露倒也不难，府内酒窖刚好还有几坛，只是公孙府遇到些棘手的事，现下...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "公孙季说到此处便是面露难色，没有继续下去，你也是迅速领会其中深意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不知公孙府所遇何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "说来难以启齿，但既是{FirstName}{$NickName}相问，在下也就不藏着掖着了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "近日有风雨楼中人无端叛逃，此人约为金丹中期实力，修有风雨楼秘术。如今也只知道他在逸风城与竹山宗交界处曾出现，且从围捕中逃脱后不知去向，料想还在那一带。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "但是此人精通匿踪，一时难以...久闻{FirstName}{$NickName}战力超群，若是能为在下解除此忧，极品盈手露自会双手奉上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此事便交给我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2795.174,-1223.854)",
+      "Commands": [
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(索取酒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "331(完成任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 379,
+      "Name": "情分足够",
+      "Description": "情分足够",
+      "Position": "(-2951.273,-1065.456)",
+      "Commands": [
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}{$NickName}，请问来公孙府贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我想要两坛公孙府所酿极品盈手露，不知以何物交换才愿割爱？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "极品...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "",
+          "StoryText": "公孙季听闻“极品”两字后神情一滞，随即面露难色，但终究还是将之埋入心里，转而以微笑面向你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "以{FirstName}{$NickName}与在下的关系，交换就不必了。请稍坐片刻，在下这就去命人取酒来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "来人，去取两坛极品盈手露。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只消片刻，府内仆从便已是为你取来一坛盈手露。只一入手，隔着泥封你都能闻到独特的清香，神识扫过，坛内灵气之浓郁更是令人讶异，确是灵酒中的极品。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只可惜，你也是个跑腿的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和公孙季寒暄一会后，便是告辞离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "CmdSetNPCJson"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "索取酒",
+      "Description": "索取酒",
+      "Position": "(-2797.615,-1139.846)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}{$NickName}，请问来公孙府贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 30000"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "379(情分足够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "431(情分不足（修改版）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "完成任务",
+      "Description": "完成任务",
+      "Position": "(-2542.738,-1225.211)",
+      "Commands": [
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}{$NickName}再次造访公孙府，可是有带来什么好消息？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你从储物袋中取出此前所得战利品，随手丢给公孙季。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "不愧是{FirstName}{$NickName}，我公孙府几十位修士围杀这叛徒半月几无进展，{FirstName}{$NickName}出手竟是手到擒来，佩服佩服。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "来人，去为{FirstName}{$NickName}取两坛极品盈手露。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只消片刻，府内仆从便已是为你取来两坛盈手露。只一入手，隔着泥封你都能闻到独特的清香，神识扫过，坛内灵气之浓郁更是令人讶异，确是灵酒中的极品。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你和公孙季寒暄一会后，便是告辞离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 431,
+      "Name": "情分不足（修改版）",
+      "Description": "情分不足（修改版）",
+      "Position": "(-2637.858,-1066.676)",
+      "Commands": [
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "贵干不敢当，只是听说云汐城仙酿乃是宁州一绝，其中极品盈手露更是堪比仙酿。所以想上门讨要一坛，品品其中滋味。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "公孙府向来只产上中下三品盈手露，不知{FirstName}道友从何听说极品一说？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "呃...没有？{size=26}难道星铃儿在耍我？{/size}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{size=26}星...{/size}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}道友可是从星宫听说的？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}道友请在此休息片刻，待在下向大长老请示一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}道友久等了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "极品盈手露的存在乃是府中之秘，{FirstName}道友既然已经知悉其存在，在下也就不卖关子了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "公孙府正好遇到棘手之事，若是{FirstName}道友能为在下解决，自当将盈手露双手奉上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "不知公孙府所遇何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 620,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "近日有风雨楼中人无端叛逃，此人约为金丹中期实力，修有风雨楼秘术。如今也只知道他在逸风城与竹山宗交界处曾出现，且从围捕中逃脱后不知去向，料想还在那一带。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此事便交给我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "那在下便在府中等候{FirstName}道友的好消息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

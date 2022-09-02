@@ -1,0 +1,1117 @@
+{
+  "Name": "Talk7373",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2791.558,-1308.426)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "338(回合数判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2789.511,-1228.977)",
+      "Commands": [
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 6"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 3"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(胜利)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(剧情杀)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "剧情杀",
+      "Description": "剧情杀",
+      "Position": "(-2789.469,-1155.808)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "住手！先听他把话说完再动手也不迟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "",
+          "StoryText": "此人坏我大典，我怎能容他！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "这可是林家大殿，还由不得你胡来！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2239,
+          "AvatarBindKey": "栖云",
+          "StoryText": "冲虚，住手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "通羽",
+          "StoryText": "哼，算你走运。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "{FirstName}小友可是找到我要的东西了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "栖云",
+          "StoryText": "找到了，这玉简便是证据，请通羽前辈过目。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "好，很好，小友果然没有辜负心儿的信任。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 618,
+          "AvatarBindKey": "通羽",
+          "StoryText": "心儿？她在哪？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "不用担心，我们还是先处理当下的事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "通羽",
+          "StoryText": "不错，你通羽既是出手护住此人，也该给我个说法了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "说法？是该给个说法，不过是你给我！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "通羽",
+          "StoryText": "你！你什么意思！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽上人没有理会冲虚散人，而是转向宾客。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "如诸位所见，星宫与林家内部有些纷争，如此丑事就不留大家旁观了，还请各位海涵。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无妨无妨，那我便告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1837,
+          "AvatarBindKey": "通羽",
+          "StoryText": "呵呵，那我也告辞了，等丹阳兄出关再来找他论道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 638,
+          "AvatarBindKey": "通羽",
+          "StoryText": "告辞。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2239,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽，这是我徒儿的结侣典礼，你将宾客遣散是何用意？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无惑大长老，贵徒为了与林沐心结成道侣，贿赂我府三长老。如今证据在此，我林府自然要先彻查三长老，让家主发落。这大典也就不得不...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2239,
+          "AvatarBindKey": "通羽",
+          "StoryText": "哦？你的意思是我的徒儿配不上你林府二小姐，所以才要贿赂？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽不敢，但...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "就是配不上！我丹阳子的女儿岂是你贾良行那废物徒弟想娶就能娶的！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "我道怎有人敢在林府动手，原来是你这老怪。怎么，难不成还想入主林家？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2239,
+          "AvatarBindKey": "通羽",
+          "StoryText": "哼，在林府出手是我徒儿不对，但你林府强行打断结侣典礼一事，我也会如实汇报宫主。她可是一向在意星宫的颜面。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "请便，若是没有其他事，现在就可以去。至于你那废物徒儿想强娶我宝贝女儿一事，晚点再跟你算账！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无惑真人一时为之气结，但又拿丹阳子无可奈何，只能选择在夹着尾巴离开时不住地咒骂丹阳子，并期待他此次强行出关导致修为大退。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "待那两人出了林府后，通羽上人才望向丹阳子和你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "家主...是我无能，竟在你闭关时出了这样的乱子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无需自责，你已经做的不错了，和星宫其他分支联姻也本是惯例，苗矮也无罪责，只是被无惑这老匹夫的徒弟钻了空子而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "倒是栖云，嗯，不提也罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "二小姐她....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无妨，我已传音给心儿叫她回来。你和苗矮先把栖云押入密室，晚点我再过去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽上人领命离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "{FirstName}小友好胆识，竟敢以{$Var}面对金丹期强者。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "见过前辈。晚辈终究还是实力不济，让前辈见笑了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "不必谦虚，此次也是多亏{FirstName}小友助力。不但搜集了栖云与冲虚勾结的证据，还引冲虚出手，让我于闭关中发现了他们师徒的恶计。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "小友以后便是林府座上宾客，可以随意出入林府。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 1110,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "多谢前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "小友不必客气。那我便先去处理家事了，让雪儿陪你逛逛林府吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1107,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1087,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1091,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1090,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1088,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1089,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1092,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1093,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1094,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1115,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1116,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1117,
+          "CmdType": "CmdAddFavor"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "胜利",
+      "Description": "胜利",
+      "Position": "(-2613.306,-1230.299)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "",
+          "StoryText": "住手！先听他把话说完再动手也不迟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "通羽上人正欲上前劝阻冲虚散人，却发现他已是跌坐于地，衣袍破裂，身负血痕，乃至体内的灵气也是紊乱不息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而你则是一脸淡然地看着对方，气息虽也是有些杂乱，但除此之外并无大碍。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2241,
+          "AvatarBindKey": "",
+          "StoryText": "咳...咳咳，你究竟是何方神圣，竟...竟然...不！我不信！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "冲虚满脸惊骇地看着你，但在座不乏金丹甚至元婴修士，又有谁能预见到你竟能轻易击败金丹后期的冲虚散人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一时间除冲虚满溢着不甘的话语外，林府大殿竟是满座皆寂，可谓是了无声息，哪里还像是之前那个结侣典礼现场。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "侥幸而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "面对在座各位前辈投来的不同目光，你只是面带笑容淡然说出四字，然后便走向通羽上人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽前辈，幸不辱命，晚辈找到证据了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "就你这点实力，不过米粒之光，战胜你有何难？若不是在林家大殿之内，场地太小了些，我只会赢得更快。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "冲虚本意是身负重伤，强撑着而已，被你一激更是行气不畅而口吐鲜血，身上的伤只怕是又重了几分。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "你也不再理会他，在满座宾客的注视下走向通羽上人",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽前辈，幸不辱命，晚辈找到证据了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽上人却还没从冲虚散人被你击败的冲击中恢复，久久未作言语。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "你再重复一遍之前的话语后，他才反应过来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "好，好，很好，小友果然没有辜负心儿的信任，而且还远远超出了我们的期望，好，很好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "如诸位所见，星宫与林家内部有些纷争，如此丑事就不留大家旁观了，还请各位海涵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无妨无妨，那我便告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1837,
+          "AvatarBindKey": "通羽",
+          "StoryText": "呵呵，那我也告辞了，等丹阳兄出关再来找他论道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 638,
+          "AvatarBindKey": "通羽",
+          "StoryText": "告辞。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2239,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽，这是我徒儿的结侣典礼，你找人打伤我徒儿又将宾客遣散是何用意？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无惑大长老，贵徒为了与林沐心结成道侣，贿赂我府三长老。如今证据在此，我林府自然要先彻查三长老，让家主发落。这大典也就不得不...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2239,
+          "AvatarBindKey": "通羽",
+          "StoryText": "哦？你的意思是我的徒儿配不上你林府二小姐，所以才要贿赂？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽不敢，但...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "就是配不上！我丹阳子的女儿岂是你贾良行那废物徒弟想娶就能娶的！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "我道怎有人敢在林府动手，原来是你这老怪。怎么，难不成还想入主林家？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2239,
+          "AvatarBindKey": "通羽",
+          "StoryText": "哼，在林府出手是我徒儿不对，但你林府强行打断结侣典礼一事，我也会如实汇报宫主。她可是一向在意星宫的颜面。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "请便，若是没有其他事，现在就可以去。至于你那废物徒儿想强娶我宝贝女儿一事，晚点再跟你算账！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无惑真人一时为之气结，但又拿丹阳子无可奈何，只能选择在夹着尾巴离开时不住地咒骂丹阳子，并期待他此次强行出关导致修为大退。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "待那两人出了林府后，通羽上人才望向丹阳子和你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "家主...是我无能，竟在你闭关时出了这样的乱子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无需自责，你已经做的不错了，和星宫其他分支联姻也本是惯例，苗矮也无罪责，只是被无惑这老匹夫的徒弟钻了空子而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "倒是栖云，嗯，不提也罢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1631,
+          "AvatarBindKey": "通羽",
+          "StoryText": "二小姐她....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "无妨，我已传音给心儿叫她回来。你和苗矮先把栖云押入密室，晚点我再过去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽上人领命离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "{FirstName}小友好胆识，竟敢以{$Var}面对金丹期强者。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "前辈谬赞了，只是他冲虚实力不济，晚辈没感到压力而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "哈哈哈，无惑的徒弟在我眼里虽是废物，但他毕竟是金丹期。只能说小友的实力已是卓绝筑基，势凌金丹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "若不是我倡导结侣自由，都想让雪儿和心儿与你结缘，籍此拉拢了，哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "通羽",
+          "StoryText": "林沐雪半是嗔怪半是娇羞地看着丹阳子，后者也只是哈哈一笑，转而谈及其他话题而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "好了好了，为父不拿你姐妹俩说笑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "{FirstName}小友，这次确是多亏了你，不但搜集了栖云与冲虚勾结的证据，还引冲虚出手，让我于闭关中发现了他们师徒的恶计。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "这结丹所用的聚顶丹与一件我个人收藏的上品法器防具便是相赠于你，希望能为小友助力些许。除此之外，小友以后便是林府座上宾客，可以随意出入林府。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1105,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1106,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1108,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 1109,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "多谢前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1646,
+          "AvatarBindKey": "通羽",
+          "StoryText": "小友不必客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1095,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1096,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1097,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1098,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1099,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1100,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1101,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1102,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1112,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1113,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1114,
+          "CmdType": "CmdAddFavor"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

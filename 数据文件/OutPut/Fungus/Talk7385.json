@@ -1,0 +1,614 @@
+{
+  "Name": "Talk7385",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(道侣判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1185,
+      "Name": "胜负判定",
+      "Description": "胜负判定",
+      "Position": "(-2790.727,-1163.484)",
+      "Commands": [
+        {
+          "ItemID": 1186,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 1188,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1136(飞身保护线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1187,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1189,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1190(飞身保护失败线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1190,
+      "Name": "飞身保护失败线",
+      "Description": "飞身保护失败线",
+      "Position": "(-2624.844,-1163.484)",
+      "Commands": [
+        {
+          "ItemID": 1191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "孽畜！你敢！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "眼见你将要抵挡不住那冥蛛的神识攻击时，林沐心竟在遁术的加持下一闪身便挡在你身前。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你虽为她担心，当刚才的战斗已是耗费了大量的灵气与精力，一时间也难以做些什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好在林沐心是有备而来，并未因此受伤，反倒是与冥蛛打的有来有回。让你悬着的心放下不少。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "但数十回合之后，这神通你来我往之下，林沐心却未占得半点好处，反倒是因为担心你的伤势而越战越急，好几次露出破绽，险些中招。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "林沐心再躲过冥蛛蓄力的一招后，趁着这妖兽下一轮攻击未至，闪身到你近旁。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1199,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{$NickName}刚才受了些伤，这冥蛛又难缠得很，我们还是离开此处吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1200,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1192,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1193,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1137,
+      "Name": "出言提醒线",
+      "Description": "出言提醒线",
+      "Position": "(-2626.019,-1232.895)",
+      "Commands": [
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这冥蛛眼看自己不是你的对手，全力抵挡你两记神通后，看准攻击空隙躲至那万载冰心石矿脉旁，不知以何方法隐去了自身的身形，乃至神识气息也消弭无踪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你小心翼翼地将那万载冰心石矿脉尽数凿下，但仍是不见那冥蛛的身影，你也只得小心翼翼地抱起因神识受损而有些意识昏沉的林沐心往洞外退去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1140,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1145,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2790.726,-1232.895)",
+      "Commands": [
+        {
+          "ItemID": 1122,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1121,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1124,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1185(胜负判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1123,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1113,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1137(出言提醒线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1136,
+      "Name": "飞身保护线",
+      "Description": "飞身保护线",
+      "Position": "(-2790.726,-1094.07)",
+      "Commands": [
+        {
+          "ItemID": 1141,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这东西除了偷袭有一手，倒也没多强，就是不知道它从哪儿来的，竟能躲过我们俩的神识探测。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1142,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯...你的伤怎么样...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1147,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "放心吧，我这不还能在你的帮助下击杀这冥蛛呢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1148,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这冥蛛是元婴期妖兽，身上可都是好东西，我们分一分吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1149,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "都放你那吧，我们赶紧回林府给你疗伤。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1150,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "咦？以前的{$Lin}可不是这样的，若是换成当年，哪怕是越阶战斗之后，你都不会担心我哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哪，哪有，我一向都很关心人的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1152,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好，好好，是我记错了，{$Lin}一直很会关心人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1154,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不等涨红着脸的林沐心回话，你快速将话题转回到冥蛛上。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "喏，把这五阶妖丹收好，其他还要什么吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 1183,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.AddItemToNpc"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，不要了，都给你吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "全都给我倒成你陪我来这洞窟探索了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "少贫嘴了，既然没事就快去把你的万载冰心石凿下来吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎哟，伤口裂开了，好疼啊，还是{$Lin}去开凿那万载冰心石矿吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "林沐心一脸关切的走上来，却是狠狠的给了你一拳。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 3"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "少来了，冥蛛可是神识攻击，哪有什么伤口。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嘿嘿，没想到居然骗不到你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你驱动法宝细致的将整块万载冰心石矿脉尽数取下，随即收入储物袋中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1163,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这一拳看起来下手狠厉，落实处却是很轻。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老掉牙的把戏还想骗我第二次呢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "（终于是让{$Lin}放心了，不过这冥蛛的神识攻击还真是强力，看来之后不免要修养几天了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "感动，林家二小姐终于有些长进了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "眼看林沐心又要上来揍你，赶紧用法宝将整块万载冰心石矿脉尽数取下，随机收入储物袋中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1143,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好了，回去吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1176,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "道侣判定",
+      "Description": "道侣判定",
+      "Position": "(-2791.902,-1292.895)",
+      "Commands": [
+        {
+          "ItemID": 1126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1132,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1133,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

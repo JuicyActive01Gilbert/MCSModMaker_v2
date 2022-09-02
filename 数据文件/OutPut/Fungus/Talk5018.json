@@ -1,0 +1,628 @@
+{
+  "Name": "Talk5018",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2942.154,-1778.763)",
+      "Commands": [
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "469(时间存储)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2942.341,-1875.374)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 381,
+      "Name": "保存妖兽-讲话-进战斗",
+      "Description": "保存妖兽-讲话-进战斗",
+      "Position": "(-2950.404,-1197.445)",
+      "Commands": [
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "只见一{SayStcVal=929}向你扑来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXing == 1"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 2"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 3"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 4"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 5"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-2926.814,-1409.347)",
+      "Commands": [
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXing == 1"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 2"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 3"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 4"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 5"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "381(保存妖兽-讲话-进战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "境界测试",
+      "Description": "境界测试",
+      "Position": "(-2927.838,-1501.638)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(筑基)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 471,
+      "Name": "旧时间获取与判断",
+      "Description": "旧时间获取与判断",
+      "Position": "(-2943.447,-1593.573)",
+      "Commands": [
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXing == 1"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 2"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 3"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 4"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 5"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.If",
+          "Condition": "year == Temyear"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "455(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-3122.408,-1419.873)",
+      "Commands": [
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 1"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "455(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 2"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "455(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXing == 1"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 2"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 3"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 4"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 5"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "381(保存妖兽-讲话-进战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 469,
+      "Name": "时间存储",
+      "Description": "时间存储",
+      "Position": "(-2938.991,-1694.785)",
+      "Commands": [
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "471(旧时间获取与判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 455,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-3124.908,-1594.839)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

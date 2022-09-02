@@ -1,0 +1,328 @@
+{
+  "Name": "Talk15306",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(胜负判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 313,
+      "Name": "年份判定",
+      "Description": "年份判定",
+      "Position": "(-2797.776,-1149.786)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 30"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(30年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "318(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 287,
+      "Name": "30年",
+      "Description": "30年",
+      "Position": "(-2797.201,-1080.621)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 2"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你顺利地又赢下了第二轮的比试，台下传来一片叫好声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 517,
+          "AvatarBindKey": "",
+          "StoryText": "诸位道友，本次宗门大比已决出了前四位弟子，他们都是我派年轻一辈中的精英，肩负着我派的未来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 517,
+          "AvatarBindKey": "",
+          "StoryText": "你们四人也将各得到门派赏赐的筑基丹一枚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 517,
+          "AvatarBindKey": "",
+          "StoryText": "好了，接下来你们将进行最后的两轮比试，只有最终夺魁者才能够直接晋升为内门弟子，祝你们好运。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 517,
+          "AvatarBindKey": "",
+          "StoryText": "请{FirstName}{LastName}{shidi}上台！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(第三轮战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "第三轮战斗",
+      "Description": "第三轮战斗",
+      "Position": "(-2795.776,-1014.786)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "失败",
+      "Description": "失败",
+      "Position": "(-2664.516,-1238.525)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "可惜，可惜...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "胜负判断",
+      "Description": "胜负判断",
+      "Position": "(-2797.79,-1237.896)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(年份判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2645.776,-1149.786)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 2"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 117,
+          "AvatarBindKey": "",
+          "StoryText": "诸位道友，本次宗门大比已决出了前四位弟子，他们都是我派年轻一辈中的精英，肩负着我派的未来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 117,
+          "AvatarBindKey": "",
+          "StoryText": "你们四人也将各得到门派赏赐的筑基丹一枚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 117,
+          "AvatarBindKey": "",
+          "StoryText": "好了，接下来你们将进行最后的两轮比试，只有最终夺魁者才能够直接晋升为内门弟子，祝你们好运。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 114,
+          "AvatarBindKey": "",
+          "StoryText": "请{FirstName}{LastName}{shidi}上台！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(第三轮战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

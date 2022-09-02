@@ -1,0 +1,694 @@
+{
+  "Name": "Talk16101",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "沂山",
+      "Description": "沂山",
+      "Position": "(-2795.801,-1072.615)",
+      "Commands": [
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这沂山派啊，是本地一个颇有势力的门派，也有数百年历史了，实力也不弱，但就喜欢干些杀人夺宝的缺德事儿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "听说这几日集会结束以后，有许多单独行动的散修，都莫名其妙地失踪了。依我看，这一定是那些沂山的小鬼干的，{xiongdi}你也需多加小心啊",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 96,
+      "Name": "请教问题",
+      "Description": "请教问题",
+      "Position": "(-2601.712,-1132.746)",
+      "Commands": [
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "来向倪兄请教几个问题。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{xiongdi}请说，倪某必当知无不言",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2601.507,-1275.615)",
+      "Commands": [
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "275(前置选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3520.894,-1253.447)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3538.677,-1170.829)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3523.712,-1003.581)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 201,
+      "Name": "化尘教",
+      "Description": "化尘教",
+      "Position": "(-2827.546,-1006.582)",
+      "Commands": [
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "化尘教主修土系功法，是宁州五大门派之一，相传是万余年前从衡州来到宁州开宗立派的，行事神秘，最近似乎并不公开对外招收弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 275,
+      "Name": "前置选项",
+      "Description": "前置选项",
+      "Position": "(-2601.654,-1197.296)",
+      "Commands": [
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "怎么样？准备好我们就出发吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧！",
+          "TargetBlockID": "this:279(出发)"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Menu",
+          "Text": "请教几个问题",
+          "TargetBlockID": "this:96(请教问题)"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有些别的事",
+          "TargetBlockID": "this:257(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 199,
+      "Name": "金虹剑派",
+      "Description": "金虹剑派",
+      "Position": "(-2397.737,-1021.497)",
+      "Commands": [
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "金虹剑派主修金系功法，是宁州五大门派之一，创派之人是二十万年前九州飞升第一人的金虹上人。他们似乎对门内弟子的悟性要求极高，因此很少有人能过通过他们的测试。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 200,
+      "Name": "星河剑派",
+      "Description": "星河剑派",
+      "Position": "(-2600.413,-744.6228)",
+      "Commands": [
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "星河剑派主修水系功法，是宁州五大门派之一，不过她们门内似乎只招女修，又行事低调，所以我对她们也所知甚少。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 197,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-2880.607,-818.7504)",
+      "Commands": [
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "竹山宗主修木系功法，是宁州五大门派之一，传承悠久，据说已有数十万年的历史了...他们目前似乎正在招收外门弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 279,
+      "Name": "出发",
+      "Description": "出发",
+      "Position": "(-2415.771,-1197.571)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 198,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-2518.469,-963.1636)",
+      "Commands": [
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "离火门主修火系功法，是宁州五大门派之一。虽然他们从不拒绝散修拜入宗门，但因为环境太恶劣，也很少有人能够在那里坚持下来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "环境...恶劣？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，{xiongdi}你要是有机会，去看一看便知道了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3539.747,-1094.665)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 234,
+      "Name": "关于竹山宗",
+      "Description": "关于竹山宗",
+      "Position": "(-2683.316,-961.437)",
+      "Commands": [
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "竹山宗主修木系功法，是宁州五大门派之一，传承悠久，据说已有数十万年的历史了，他们目前似乎正在招收外门弟子。怎么，{xiongdi}你也想去试试？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "还请倪兄指教",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈，指教不敢当，听说竹山宗招收外门弟子时会设一擂台，只有打赢守擂之人，才能加入。这擂台挑战对于普通散修来说颇有难度，你最好还是做足准备了再去挑战。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 290,
+      "Name": "关于门派",
+      "Description": "关于门派",
+      "Position": "(-2601.21,-815.2187)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于竹山宗",
+          "TargetBlockID": "this:234(关于竹山宗)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于离火门",
+          "TargetBlockID": "this:198(离火门)"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于金虹剑派",
+          "TargetBlockID": "this:199(金虹剑派)"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于星河剑派",
+          "TargetBlockID": "this:200(星河剑派)"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于化尘教",
+          "TargetBlockID": "this:201(化尘教)"
+        }
+      ]
+    },
+    {
+      "ItemID": 257,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2798.191,-1140.977)",
+      "Commands": []
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 180,
+      "Name": "英杰会",
+      "Description": "英杰会",
+      "Position": "(-2388.143,-1141.109)",
+      "Commands": [
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "英杰会可是我们武陵城的一大盛事，每五年才举办一次。主要目的是为宁州的各大势力物色资质出众的青年才俊，我们倪家也算是主办方之一。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "英杰会虽然只是擂台赛，但修士间一动手，难免有所伤亡，{xiongdi}你如今才炼气初期修为，若是赶在今年便去参赛，实在是太危险了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "258(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 258,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2601.08,-1070.805)",
+      "Commands": [
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于刚刚遇到的沂山修士",
+          "TargetBlockID": "this:93(沂山)"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于门派",
+          "TargetBlockID": "this:290(关于门派)"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于英杰会",
+          "TargetBlockID": "this:180(英杰会)"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Menu",
+          "Text": "没事儿了",
+          "TargetBlockID": "this:257(无事发生)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

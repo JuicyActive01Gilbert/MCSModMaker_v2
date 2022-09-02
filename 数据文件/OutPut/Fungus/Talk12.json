@@ -1,0 +1,327 @@
+{
+  "Name": "Talk12",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(进入方式判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 301,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2648.475,-1244.375)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 297,
+      "Name": "进入方式判定",
+      "Description": "进入方式判定",
+      "Position": "(-2790.941,-1245.745)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "18(神识判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 18,
+      "Name": "神识判定",
+      "Description": "神识判定",
+      "Position": "(-2792.487,-1180.548)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi < 5"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShenShi >= 5"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi < 8"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "309(五成被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShenShi >= 8"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi < 10"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "310(三成被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShenShi >= 10"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "304(成功潜入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "成功潜入",
+      "Description": "成功潜入",
+      "Position": "(-2649.04,-1180.179)",
+      "Commands": [
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，终于溜进来了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 310,
+      "Name": "三成被发现",
+      "Description": "三成被发现",
+      "Position": "(-2648.359,-1070.361)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 3"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "304(成功潜入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "被发现",
+      "Description": "被发现",
+      "Position": "(-2932.359,-1176.361)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一股{color=red}神识{/color}从你身上扫过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 219,
+          "AvatarBindKey": "",
+          "StoryText": "什么人？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}糟糕，被发现了，还是赶紧溜吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "五成被发现",
+      "Description": "五成被发现",
+      "Position": "(-2933.359,-1068.361)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "304(成功潜入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

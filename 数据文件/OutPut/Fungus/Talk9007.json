@@ -1,0 +1,287 @@
+{
+  "Name": "Talk9007",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1307.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "791(炼气期提醒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 797,
+      "Name": "退去",
+      "Description": "退去",
+      "Position": "(-2660.487,-1247.222)",
+      "Commands": [
+        {
+          "ItemID": 798,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 791,
+      "Name": "炼气期提醒",
+      "Description": "炼气期提醒",
+      "Position": "(-2794.487,-1245.222)",
+      "Commands": [
+        {
+          "ItemID": 803,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 804,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 792,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 4"
+        },
+        {
+          "ItemID": 793,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一阵妖风吹来...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 794,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "小心，此地妖气甚重，看来这里的妖兽已有{color=#d0380a}筑基期{/color}实力，以你现在的修为怕是难以应对。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 795,
+          "CmdType": "Fungus.Menu",
+          "Text": "继续前进",
+          "TargetBlockID": "this:800(继续前进)"
+        },
+        {
+          "ItemID": 796,
+          "CmdType": "Fungus.Menu",
+          "Text": "小心退去",
+          "TargetBlockID": "this:797(退去)"
+        },
+        {
+          "ItemID": 805,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 806,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(获取变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 807,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 808,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 809,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(获取变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "获取变量",
+      "Description": "获取变量",
+      "Position": "(-2955.267,-1194.593)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.GetFuBenShuXin"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(发生事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "发生事件",
+      "Description": "发生事件",
+      "Position": "(-2954.752,-1129.878)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "吼！！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见一{SayStcVal=929}向你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 790,
+          "CmdType": "Fungus.SetRandomTalkClick"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShuXing == 2"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 3"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 4"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 5"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemShuXing == 6"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 800,
+      "Name": "继续前进",
+      "Description": "继续前进",
+      "Position": "(-2792.487,-1186.222)",
+      "Commands": [
+        {
+          "ItemID": 801,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 802,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(获取变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,231 @@
+{
+  "Name": "Talk7010",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(检测初次遇到魔物)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 285,
+      "Name": "后续-随机对手",
+      "Description": "后续-随机对手",
+      "Position": "(-2723.323,-1169.71)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你远远地发现一只独自游荡的下等魔...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手攻击",
+          "TargetBlockID": "this:304(出手)"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "避开它",
+          "TargetBlockID": "this:303(避开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 506,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2561.323,-1224.71)",
+      "Commands": []
+    },
+    {
+      "ItemID": 304,
+      "Name": "出手",
+      "Description": "出手",
+      "Position": "(-2571.323,-1166.71)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "避开",
+      "Description": "避开",
+      "Position": "(-2728.323,-1107.71)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "检测初次遇到魔物",
+      "Description": "检测初次遇到魔物",
+      "Position": "(-2803.323,-1234.71)",
+      "Commands": [
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.GetRestTime"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "506(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(初次—随机对手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(后续-随机对手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "初次—随机对手",
+      "Description": "初次—随机对手",
+      "Position": "(-2862.05,-1170.156)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼前的魔物上半身被颜色诡异的鳞片包裹着，双爪锋利且尖锐。最为惹眼的是胸部正中的晶体，在昏暗的光下闪烁着妖异的光彩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai != 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "难道那就是大师兄所说的{color=#d0380a}灵核{/color}？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

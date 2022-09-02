@@ -1,0 +1,637 @@
+{
+  "Name": "Talk122201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(小二)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "随便看看",
+      "Description": "随便看看",
+      "Position": "(-2654.694,-1139.57)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.OpenJiaoYi"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 385,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-2952.107,-866.6359)",
+      "Commands": [
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我现在没有时间收集这些。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可惜，可惜....",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 366,
+      "Name": "任务CD判定",
+      "Description": "任务CD判定",
+      "Position": "(-2797.025,-972.2328)",
+      "Commands": [
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(暂无任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "377(接取任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-2324.906,-1004.017)",
+      "Commands": [
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 365,
+      "Name": "任务开始判定",
+      "Description": "任务开始判定",
+      "Position": "(-2799.998,-1039.014)",
+      "Commands": [
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.If",
+          "Condition": "start == True"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "366(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "上2楼",
+      "Description": "上2楼",
+      "Position": "(-2581.694,-1301.018)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 729,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "客官，您...您这边请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 377,
+      "Name": "接取任务",
+      "Description": "接取任务",
+      "Position": "(-2795.638,-877.0808)",
+      "Commands": [
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "眼下我们的库存的确略有不足，特别是{$taskdesc}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:388(接任务)"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于报酬",
+          "TargetBlockID": "this:439(奖励)"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:385(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "检测1",
+      "Description": "检测1",
+      "Position": "(-2658.694,-1241.018)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(检测2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(上2楼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "检测2",
+      "Description": "检测2",
+      "Position": "(-2504.694,-1240.018)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我是要购置一些宝物，不过我只要你们这儿最好的东西，那些次品就不要拿出来给我看了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一边说着，一边将自己的灵力外放，那管事感受到你的气势，知道自己遇到的是一位大主顾，脸上的笑容也越发真切了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(上2楼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID >= 100000"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一边说着，一边挥手将自己的灵石展示给他看，那管事知道自己遇到的是一位大主顾，脸上的笑容也越发真切了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(上2楼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "客官，您说笑了，我们这里卖的可都是上品，您看看便知。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(随便看看)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "小二",
+      "Description": "小二",
+      "Position": "(-2798.326,-1240.532)",
+      "Commands": [
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 729,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这位客官想要看些什么，要不要小的帮忙介绍一下？本店的东西绝对会让所有客人满意而归！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Menu",
+          "Text": "我就自己随便看看吧",
+          "TargetBlockID": "this:282(随便看看)"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Menu",
+          "Text": "有什么任务可以交给我么",
+          "TargetBlockID": "this:365(任务开始判定)"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Menu",
+          "Text": "给我看看你们这里最好的东西",
+          "TargetBlockID": "this:294(检测1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 412,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-2324.906,-946.0166)",
+      "Commands": [
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "可惜，可惜...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "未完成",
+      "Description": "未完成",
+      "Position": "(-2464.478,-1002.293)",
+      "Commands": [
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "托你收集的草药你可带来了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Menu",
+          "Text": "还在收集",
+          "TargetBlockID": "this:411(继续)"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想放弃这个任务",
+          "TargetBlockID": "this:412(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 444,
+      "Name": "完成选项",
+      "Description": "完成选项",
+      "Position": "(-2467.22,-1065.329)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "托你收集的草药你可带来了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经带来了",
+          "TargetBlockID": "this:394(完成)"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Menu",
+          "Text": "还在收集",
+          "TargetBlockID": "this:411(继续)"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想放弃这个任务",
+          "TargetBlockID": "this:412(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 376,
+      "Name": "暂无任务",
+      "Description": "暂无任务",
+      "Position": "(-2950.253,-970.5179)",
+      "Commands": [
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们近日货存充足，没有什么需要补充的草药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 439,
+      "Name": "奖励",
+      "Description": "奖励",
+      "Position": "(-2647.145,-868.5193)",
+      "Commands": [
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.GetNTaskReward"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们中草阁愿意以{$jiangli}的价格收购这批草药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "377(接取任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "完成",
+      "Description": "完成",
+      "Position": "(-2318.621,-1066.017)",
+      "Commands": [
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 727,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，不错，这些灵石是给你的报酬。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "任务完成判定",
+      "Description": "任务完成判定",
+      "Position": "(-2636.221,-1038.445)",
+      "Commands": [
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.IsNTaskCanFinish"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.If",
+          "Condition": "wancheng == True"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "444(完成选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "接任务",
+      "Description": "接任务",
+      "Position": "(-2801.082,-814.9241)",
+      "Commands": [
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.StartNTask"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这件事就交给我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

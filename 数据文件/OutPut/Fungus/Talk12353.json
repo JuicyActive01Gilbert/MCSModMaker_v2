@@ -1,0 +1,307 @@
+{
+  "Name": "Talk12353",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1422.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "690(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 711,
+      "Name": "玩家受伤",
+      "Description": "玩家受伤",
+      "Position": "(-2615.44,-1230.969)",
+      "Commands": [
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "距上次探访冥蛛洞窟已是半月有余，你为救林沐心留下的神识创伤也是已经痊愈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这些日子你因无其他要事，便留在林府养伤。一开始林沐心还耐着性子照顾你，但几天过后她终于是撂了挑子，倒是林沐雪还会每天多次来客房嘘寒问暖。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这些日子你因无其他要事，便留在林府养伤。一开始林沐心还耐着性子照顾你，但几天过后她终于是怀疑你在把她当下人使唤，而撂了挑子。丢给你两个林家的炼气期弟子后，就去为林家和星宫的事务操心了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而你则是觉得林家弟子过于无趣，找了个理由将两人支开后，每天在林府清修。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 710,
+      "Name": "林沐心受伤",
+      "Description": "林沐心受伤",
+      "Position": "(-2795.443,-1152.145)",
+      "Commands": [
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "距上次探访冥蛛洞窟已是半月有余，林沐心被偷袭时留下的神识创伤已是近乎痊愈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这些日子你因无其他要事，便留在林府作陪，虽说是被林沐心趁机呼来喝去，但回怼时的她反应也是让你乐在其中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 690,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2796.978,-1366.053)",
+      "Commands": [
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 7"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 1"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "697(冲虚作妖任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "703(谣言四起)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "725(结局进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 725,
+      "Name": "结局进度判定",
+      "Description": "结局进度判定",
+      "Position": "(-2796.62,-1299.206)",
+      "Commands": [
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "594(解除黑屏)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 594,
+      "Name": "解除黑屏",
+      "Description": "解除黑屏",
+      "Position": "(-2796.631,-1232.183)",
+      "Commands": [
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "711(玩家受伤)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "710(林沐心受伤)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 697,
+      "Name": "冲虚作妖任务",
+      "Description": "冲虚作妖任务",
+      "Position": "(-2625.549,-1364.954)",
+      "Commands": [
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 703,
+      "Name": "谣言四起",
+      "Description": "谣言四起",
+      "Position": "(-2968.381,-1366.264)",
+      "Commands": [
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（应该差不多了，去外面看看吧。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

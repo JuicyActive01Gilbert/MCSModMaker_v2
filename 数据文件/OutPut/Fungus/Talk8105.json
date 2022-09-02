@@ -1,0 +1,466 @@
+{
+  "Name": "Talk8105",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(npc性格获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1176,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2614.615,-1214.838)",
+      "Commands": [
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1163,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2791.911,-1216.014)",
+      "Commands": [
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1176(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1199,
+      "Name": "接受",
+      "Description": "接受",
+      "Position": "(-2791.085,-1063.073)",
+      "Commands": [
+        {
+          "ItemID": 1203,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 2"
+        },
+        {
+          "ItemID": 1202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我先谢过{FirstName}{$NickName}了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1204,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 11"
+        },
+        {
+          "ItemID": 1205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我先谢过{FirstName}{$NickName}了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1206,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "多谢{FirstName}{$NickName}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1208,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "好说好说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "道友有何计划？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "咳，我目前对于这血剑宫魔修也没有更多消息，所以暂时没有成熟的计划。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1212,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "要不，{FirstName}{$NickName}先与我一同去那个小门派察看一番，再做下一步打算？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "也只能如此了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1221,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1336,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1337,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 1220,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 1200,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2615.79,-1063.073)",
+      "Commands": [
+        {
+          "ItemID": 1201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "既是如此，我还有任务在身，就不多叨扰道友了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1218,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1219,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2791.903,-1144.034)",
+      "Commands": [
+        {
+          "ItemID": 1217,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 1186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}，好久不见。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1187,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "自上次一别确实有些时日了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不知道友此番找我何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1189,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "简短地说，就是{$ZaiXia}宗门附近疑似有血剑宫的魔修在四处活动，所以遣我去调查一番。若是寻得其行迹，最好能解决这魔修。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "但血剑宫的魔修向来实力强劲，{$ZaiXia}虽对自己的实力有信心，但也不想独自面对这血剑宫邪修。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以想请{FirstName}{$NickName}与{$ZaiXia}同行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "血剑宫的魔修？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1193,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "嗯，据称那人之前四处找人比试，但因其出手狠辣，鲜有人敢与他切磋。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "此类修士虽然少见，但我熟识的一位修士也是如此。躲着点便是了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "若只是这样就好了。本来都只当他是个武痴，却没想这魔修跑去个名不见经传的小门派大闹了一番，还灭其满门。后来还是有人前往那门派查看，纠其神通之源，才得以知悉此人竟是血剑宫魔修。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，这小门派又是在{$ZaiXia}宗门左近，为防其加害我派弟子，也只得走上一遭了。唉，真是烦人。\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1197,
+          "CmdType": "Fungus.Menu",
+          "Text": "接受",
+          "TargetBlockID": "this:1199(接受)"
+        },
+        {
+          "ItemID": 1198,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:1200(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "npc性格获取",
+      "Description": "npc性格获取",
+      "Position": "(-2791.902,-1292.895)",
+      "Commands": [
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1332,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1333,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1334,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1163(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

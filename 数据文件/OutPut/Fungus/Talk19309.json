@@ -1,0 +1,143 @@
+{
+  "Name": "Talk19309",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3061.25,-1413.988)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(招新擂台-判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 448,
+      "Name": "逃",
+      "Description": "逃",
+      "Position": "(-2920.341,-1262.089)",
+      "Commands": [
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一圈圈涟漪从光幕中心扩散开来，但光幕看起来仍然十分稳固。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.FuBenAvatarTransfer"
+        }
+      ]
+    },
+    {
+      "ItemID": 446,
+      "Name": "胜",
+      "Description": "胜",
+      "Position": "(-3193.341,-1259.913)",
+      "Commands": [
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 447,
+      "Name": "败",
+      "Description": "败",
+      "Position": "(-3058.694,-1260.266)",
+      "Commands": [
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一圈圈涟漪从光幕中心扩散开来，但光幕看起来仍然十分稳固。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.FuBenAvatarTransfer"
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "招新擂台-判断",
+      "Description": "招新擂台-判断",
+      "Position": "(-3060.341,-1334.913)",
+      "Commands": [
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "446(胜)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 3.0)"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "447(败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "448(逃)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,388 @@
+{
+  "Name": "Talk119103",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2796.071,-1307.443)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(初次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-2725.269,-1064.57)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你悄悄地出了云汐城客栈，留李相书一人黯然神伤。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2627.311,-1229.875)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "我们出发吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{gongzi}，多谢你仗义相助，师妹的事就由我自己来吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "初次判定",
+      "Description": "初次判定",
+      "Position": "(-2799.874,-1229.876)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(故事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "坚持1",
+      "Description": "坚持1",
+      "Position": "(-2940.792,-970.2587)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "多谢{FirstName}{gongzi}。我手中正有一块千年寒玉，若是香薷畏寒恰巧可派上用场。择日不如撞日，我俩便即刻启程吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "放弃1",
+      "Description": "放弃1",
+      "Position": "(-2790.574,-972.7345)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "坚持",
+      "Description": "坚持",
+      "Position": "(-2868.125,-1066.61)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "那古迹中并未提及他法......{FirstName}{gongzi}，我思前想后，还是打算去沃焦山一探究竟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "哪怕只有一丝机会我也想赌上一赌，俗话说眼见为实，不自己查探一番实在不能算是尽人事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你还真是不到黄河心不死......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有要事就不与道友同行了。",
+          "TargetBlockID": "this:312(放弃1)"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Menu",
+          "Text": "那我也舍命陪君子，走上一遭又何妨？",
+          "TargetBlockID": "this:311(坚持1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "故事",
+      "Description": "故事",
+      "Position": "(-2800.184,-1142.779)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "道友可觅得草药的消息了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "消息是有了......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "太好了，这下师妹有救了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "等等、等等！你这人也太过性急，还有后半句没说呢！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "其物名唤宁州香薷，因及其畏寒生于火铜四周...但早在五百年前就已经灭绝了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "听了你的话，李相书脸上的血色逐渐褪去，面色惶惶地看着你嗫嚅道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}灭绝......？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 624,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}五百年前就已经灭绝了......？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他魂不守舍地翻来覆去念叨这一句，你摇了摇头轻声叹息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Menu",
+          "Text": "除了宁州香薷，真的没有其他办法能救人了吗？",
+          "TargetBlockID": "this:300(坚持)"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Menu",
+          "Text": "反正消息已经带到，此事与我再无关系。",
+          "TargetBlockID": "this:299(放弃)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

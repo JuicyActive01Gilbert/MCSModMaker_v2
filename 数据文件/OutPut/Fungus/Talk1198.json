@@ -1,0 +1,2182 @@
+{
+  "Name": "Talk1198",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(白帝令判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 453,
+      "Name": "结算",
+      "Description": "结算",
+      "Position": "(-2486.454,-494.1525)",
+      "Commands": [
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "这次多亏了小友，这人就交给我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "你已加入我白帝楼，之后事宜可以来我白帝楼找当值执事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2799.667,-1185.278)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "原来是{FirstName}{LastName}，你是初次来我白帝楼吧，之前比较仓促，此番就由我来为你详细介绍一下吧，你想要了解什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 486,
+      "Name": "魏无极剧情判定",
+      "Description": "魏无极剧情判定",
+      "Position": "(-1666.155,-1249.492)",
+      "Commands": [
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "537(魏无极剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "618(主线承启段判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 383,
+      "Name": "张三",
+      "Description": "张三",
+      "Position": "(-2639.081,-1125.873)",
+      "Commands": [
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "473(交任务-李天错误1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 604,
+      "Name": "出发",
+      "Description": "出发",
+      "Position": "(-1791.019,-960.8987)",
+      "Commands": [
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 305,
+      "Name": "选项1",
+      "Description": "选项1",
+      "Position": "(-2799.667,-1129.278)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "白帝楼的由来",
+          "TargetBlockID": "this:300(白帝楼的由来)"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "加入白帝楼我需要做什么？",
+          "TargetBlockID": "this:301(需要做什么？)"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Menu",
+          "Text": "加入白帝楼有什么福利？",
+          "TargetBlockID": "this:302(福利)"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Menu",
+          "Text": "内阁弟子和外围成员有什么区别。",
+          "TargetBlockID": "this:303(内阁弟子)"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Menu",
+          "Text": "如何成为内阁弟子",
+          "TargetBlockID": "this:321(加入？)"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Menu",
+          "Text": "我没什么想知道的了",
+          "TargetBlockID": "this:322(继续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 408,
+      "Name": "魔心",
+      "Description": "魔心",
+      "Position": "(-2306.185,-884.7943)",
+      "Commands": [
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(交任务-李天2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 618,
+      "Name": "主线承启段判定",
+      "Description": "主线承启段判定",
+      "Position": "(-1320.821,-1250.092)",
+      "Commands": [
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 11"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "624(剧情判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "541(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 412,
+      "Name": "交任务-李天2",
+      "Description": "交任务-李天2",
+      "Position": "(-2477.243,-807.4516)",
+      "Commands": [
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "加入了",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Menu",
+          "Text": "古神教",
+          "TargetBlockID": "this:414(古神教)"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Menu",
+          "Text": "血剑宫",
+          "TargetBlockID": "this:415(血剑宫)"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Menu",
+          "Text": "天魔道",
+          "TargetBlockID": "this:416(天魔道)"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "判定任务-李天",
+      "Description": "判定任务-李天",
+      "Position": "(-2496.992,-1251.497)",
+      "Commands": [
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "374(交任务-李天)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "378(调虎离山-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 415,
+      "Name": "血剑宫",
+      "Description": "血剑宫",
+      "Position": "(-2475.926,-724.5565)",
+      "Commands": [
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(交任务-李天错误2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 605,
+      "Name": "我还有些事",
+      "Description": "我还有些事",
+      "Position": "(-1657.81,-959.9904)",
+      "Commands": [
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "好，我会在广陵城港口等你，到时候我们一起出发！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 374,
+      "Name": "交任务-李天",
+      "Description": "交任务-李天",
+      "Position": "(-2495.661,-1183.768)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "小友这是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "晚辈特来复命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "事情原由，还请小友一一道来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此人名叫",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Menu",
+          "Text": "张三",
+          "TargetBlockID": "this:383(张三)"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Menu",
+          "Text": "韩立",
+          "TargetBlockID": "this:384(韩立)"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Menu",
+          "Text": "李天",
+          "TargetBlockID": "this:385(李天)"
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "魔神蛊",
+      "Description": "魔神蛊",
+      "Position": "(-2636.452,-879.8199)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(交任务-李天2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 402,
+      "Name": "交任务-李天1",
+      "Description": "交任务-李天1",
+      "Position": "(-2477.238,-959.9871)",
+      "Commands": [
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "他是种下",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Menu",
+          "Text": "魔神蛊",
+          "TargetBlockID": "this:406(魔神蛊)"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Menu",
+          "Text": "血剑印",
+          "TargetBlockID": "this:407(血剑印)"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Menu",
+          "Text": "魔心",
+          "TargetBlockID": "this:408(魔心)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 584,
+      "Name": "关于图南海",
+      "Description": "关于图南海",
+      "Position": "(-1526.499,-1086.856)",
+      "Commands": [
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "听说过问道花么？这种奇花便是在图南海被发现的。相传此花蕴含一丝道之真意，是非常珍贵的炼丹草药，大部分人去那里都是冲着它去的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "这图南海极为偏远，我们可以先搭船经由蓬莎岛，碎星岛后抵达南崖城。在那里修整后，我们再一路向西航行，穿过吞云海便能到达图南海了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "580(选项2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "白帝楼的由来",
+      "Description": "白帝楼的由来",
+      "Position": "(-3024.667,-1230.278)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "我白帝楼乃是百余年前，由九州第一剑修“白帝”在武陵城创立松散剑修组织，意在除魔卫道，还九州一个安宁。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 378,
+      "Name": "调虎离山-判定",
+      "Description": "调虎离山-判定",
+      "Position": "(-2061.302,-1252.735)",
+      "Commands": [
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 450"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 499"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "489(调虎离山)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(魏无极剧情判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(魏无极剧情判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(魏无极剧情判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "福利",
+      "Description": "福利",
+      "Position": "(-3024.667,-1134.278)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "我白帝楼乃是剑修圣地，剑术典籍，仙剑，都是上乘之物，只要对我白帝楼有贡献便可自行换取。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 336,
+      "Name": "不愿意",
+      "Description": "不愿意",
+      "Position": "(-2666.667,-962.2782)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "如此啊，那真是可惜了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 384,
+      "Name": "韩立",
+      "Description": "韩立",
+      "Position": "(-2493.028,-1124.557)",
+      "Commands": [
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "473(交任务-李天错误1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 583,
+      "Name": "关于遗迹的传闻",
+      "Description": "关于遗迹的传闻",
+      "Position": "(-1531.044,-1143.674)",
+      "Commands": [
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "这个传闻其实有些年头了，图南海上有一个巨大的漩涡，要是不巧被卷入这个旋涡，即便是元婴期修士也极难挣脱。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "更奇怪的是，这个漩涡不但位置飘忽不定，而且还时有时无，似乎只在特定的时间出现。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "一般来说，能够引起如此天地异象的，一定是通天灵宝级别的法宝。所以大家都猜测，这漩涡便是某个海底遗迹的入口，而那通天灵宝，便藏在这个遗迹之中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "说实话，这个漩涡很多人都见过，但海底遗迹和通天灵宝什么的就只是大家的猜测了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "580(选项2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "需要做什么？",
+      "Description": "需要做什么？",
+      "Position": "(-3023.667,-1180.278)",
+      "Commands": [
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "若你加入白帝楼，我们会发布一些调查或是剿灭魔修相关的任务。除此以外，若你平日里留意到什么有关魔门的线索，也可以来此汇报，我们会酌情给予你奖励。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "内阁弟子",
+      "Description": "内阁弟子",
+      "Position": "(-3023.667,-1085.278)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "一些普通的典籍和法宝自是没什么区别，但像天阶典籍这样的不传之秘，便只有内阁弟子才有资格换取了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 346,
+      "Name": "开启任务-时间判定",
+      "Description": "开启任务-时间判定",
+      "Position": "(-2815.095,-886.7067)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 9"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "因举办英杰会等诸多事宜之下，武陵城涌入大量的散修。近日我白帝楼与倪家府邸附近总有陌生人出现，似有人图谋不轨，我白帝楼正在组织人手调查，为避免打草惊蛇，初来本地的小友很适合这个任务。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "因举办英杰会，且楼主驰援中州，诸多事宜之下，我白帝楼与倪家府邸附近总有陌生人出现，似有人图谋不轨，我白帝楼正在组织人手调查，为避免打草惊蛇，初来本地的小友很适合这个任务。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此事我该从何入手？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "武陵城客栈掌柜是我白帝楼的人，此事你可以先去问问他有什么详细的情报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好，那我这便前去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，此事需尽快处理，以防日久生变。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 624,
+      "Name": "剧情判定",
+      "Description": "剧情判定",
+      "Position": "(-1315.757,-1152.623)",
+      "Commands": [
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 321,
+      "Name": "加入？",
+      "Description": "加入？",
+      "Position": "(-3020.348,-1031.342)",
+      "Commands": [
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "修为达到筑基期后，若你的剑道修为达到初窥门径且仍是散修之身，便可正式加入我白帝楼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(选项1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 395,
+      "Name": "交任务-李天错误2",
+      "Description": "交任务-李天错误2",
+      "Position": "(-2400.276,-615.6086)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "利用宁州本地修士的特点，来此刺探情报的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "...是吗，和我记忆中不同啊",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "453(结算)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 322,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-2797.667,-1040.278)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "所以，小友你是否愿意成为我白帝楼的外围成员",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Menu",
+          "Text": "愿意",
+          "TargetBlockID": "this:335(愿意)"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Menu",
+          "Text": "不愿意",
+          "TargetBlockID": "this:336(不愿意)"
+        }
+      ]
+    },
+    {
+      "ItemID": 506,
+      "Name": "在外围相助",
+      "Description": "在外围相助",
+      "Position": "(-1926.56,-1089.621)",
+      "Commands": [
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 541,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-1017.047,-1252.059)",
+      "Commands": []
+    },
+    {
+      "ItemID": 385,
+      "Name": "李天",
+      "Description": "李天",
+      "Position": "(-2362.768,-1127.302)",
+      "Commands": [
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "474(交任务-李天正确1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 537,
+      "Name": "魏无极剧情",
+      "Description": "魏无极剧情",
+      "Position": "(-1661.349,-1155.337)",
+      "Commands": [
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来是{FirstName}{LastName}前辈，不知前辈今日来白帝楼是有何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我有一要事想要当面求教白帝，不知他当下人在何处，可否与我见上一面？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这...白帝前辈行踪不定，而且极少回白帝楼，我也许久没有见到他了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不如这样，前辈暂且回去等候，若是有消息了，我立刻通知前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "也只能这...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}{xiongdi}！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我正想找你，刚准备给你发传音符就发现你来了武陵城，实在是太巧了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这...倪兄找我何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "从宁州古迹回来后，我与几位白帝楼的师兄一起奉命调查戮仙剑和剩下几柄魔剑的下落，如今终于有了一些头绪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哦？倪兄弟有何发现？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "在宁州古迹出世的那柄戮仙剑，已经被玄骨老祖带回了衡州。古神教如今山门紧闭，因此没法打探到更多的消息。绝仙剑也在此前被血剑宫暗中夺取。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "总之，此番魔门夺走戮仙剑和绝仙剑，再加上之前天魔道手里的那柄陷仙剑，四剑已出其三。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "按你之前的说法，莫非你找到了诛仙剑的线索？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "正是！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师祖说过，四柄魔剑互有感应，被发现的时间也极为接近，所以那柄诛仙剑也极有可能在近日出世。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "按师祖的吩咐，我们最近一直在调查相关的传闻，你猜怎么着？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那...你一定是发现了什么线索吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "最近这段时间，图南海一直有发狂的海兽袭击商队的传闻。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "据说那些海兽很像宁州古迹中那些被煞气侵染的修士，神智不清，甚至会主动攻击比自己实力强大的人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "再加上一直以来，图南海都有海底遗迹的传闻，说什么有古代的通天灵宝藏在里面。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "虽然只是传闻，但绝对不是空穴来风。我将这两件事联系起来一想，觉得这海底遗迹中藏着通天灵宝，而且就是诛仙剑的可能性很大！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我已向师祖回禀此事，剩下的就是要弄清楚怎么才能进入遗迹了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "等等...你是说白帝前辈也会去这个海底遗迹？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那是自然，无尽之海不比我们宁州，可谓是高手如云。而且若真是诛仙剑出世，到时候不仅是魔门，说不定那四大妖圣也会来凑凑热闹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "想要确保万无一失的话，还是得师祖这样的化神期强者出手才行。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这倒是个机会，虽然那遗迹里的一定不是诛仙剑，但却是一个弄清楚白帝真面目的好机会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那这个海底遗迹的位置确定了么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "啊这...倒还没有。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我这不是正准备去图南海调查么，这次来找你也是想邀请你一起去。要是有你相助，我们的把握就更大了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "580(选项2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 473,
+      "Name": "交任务-李天错误1",
+      "Description": "交任务-李天错误1",
+      "Position": "(-2565.398,-1040.347)",
+      "Commands": [
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "本是一名平平无奇的散修，本次参加英杰会，修为大涨，出了不小风头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "...是吗，和我记忆中不同啊",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(交任务-李天1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 489,
+      "Name": "调虎离山",
+      "Description": "调虎离山",
+      "Position": "(-2060.174,-1167.298)",
+      "Commands": [
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "楼外传来一声高呼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2348,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈哈，凌轩小儿不在，白帝楼何人主事啊？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "血河老儿，上次吃的教训还不够吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2348,
+          "AvatarBindKey": "",
+          "StoryText": "倪振东，你算什么东西？这次你师父不在，等我破了阵，拿了剑，灭了你倪家满门！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2348,
+          "AvatarBindKey": "",
+          "StoryText": "祭血使听令，动手！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你能听到城内杀声四起，直指白帝楼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫妖人来袭，振东率白帝楼弟子以剑阵拖住这老鬼，城中魔修还望各位道友相助我白帝楼，事后必有重谢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "金丹期内阁弟子入阵迎敌！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Menu",
+          "Text": "入阵迎敌",
+          "TargetBlockID": "this:505(入阵迎敌)"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Menu",
+          "Text": "在外围相助",
+          "TargetBlockID": "this:506(在外围相助)"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Menu",
+          "Text": "躲在角落",
+          "TargetBlockID": "this:518(躲在角落)"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "愿意",
+      "Description": "愿意",
+      "Position": "(-2799.381,-966.9924)",
+      "Commands": [
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "那真是太好了，眼下正有一件差事适合交给小友。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请讲。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(开启任务-时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 416,
+      "Name": "天魔道",
+      "Description": "天魔道",
+      "Position": "(-2307.503,-720.6091)",
+      "Commands": [
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(交任务-李天错误2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 389,
+      "Name": "交任务-李天正确2",
+      "Description": "交任务-李天正确2",
+      "Position": "(-2577.564,-613.3947)",
+      "Commands": [
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 100"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == 100"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "利用宁州本地修士的特点，来此刺探情报的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "原来，怪不得其他人没有头绪",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "453(结算)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(交任务-李天错误2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "395(交任务-李天错误2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 518,
+      "Name": "躲在角落",
+      "Description": "躲在角落",
+      "Position": "(-1842.759,-1164.06)",
+      "Commands": [
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "此番凶险，我还是不要出头为好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你屏息凝神缩在角落，过了好一阵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 7,
+          "AvatarBindKey": "",
+          "StoryText": "血河，欺负年轻人有什么意思啊？老夫陪你玩玩！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2348,
+          "AvatarBindKey": "",
+          "StoryText": "你们这些废物，连个剑阵斗破不了，混元子老子没空和你玩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "多谢，前辈出手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 7,
+          "AvatarBindKey": "",
+          "StoryText": "老道我一时不察让贵派遭受此劫，愧对白帝阁下临行对我的托付啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "前辈不必如此，对亏您及时来援，四象封魔阵毫发无损。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 7,
+          "AvatarBindKey": "",
+          "StoryText": "不过你放心，我师兄联合多位道友已在外埋伏，纵使留不下血河，也要付出代价，我们宁州岂是想来就来，想走就走的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 7,
+          "AvatarBindKey": "",
+          "StoryText": "我也去了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "恭送前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 585,
+      "Name": "关于魔门",
+      "Description": "关于魔门",
+      "Position": "(-1528.771,-1024.356)",
+      "Commands": [
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "害，魔门之间的关系错综复杂，我也弄不太清楚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "之前天魔道掌握着四柄魔剑之一的陷仙剑，因此势力最大，一直占据着最好的修炼资源。如今古神教和血剑宫各自也找回一柄魔剑，想必他们之间也少不了一番争斗。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "580(选项2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "白帝令判断",
+      "Description": "白帝令判断",
+      "Position": "(-2797.79,-1246.896)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "itemcheck == True"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "292(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(判定任务-李天)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(判定任务-李天)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 414,
+      "Name": "古神教",
+      "Description": "古神教",
+      "Position": "(-2636.452,-721.925)",
+      "Commands": [
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(交任务-李天正确2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 505,
+      "Name": "入阵迎敌",
+      "Description": "入阵迎敌",
+      "Position": "(-2187.041,-1093.387)",
+      "Commands": [
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 586,
+      "Name": "没有其它问题了",
+      "Description": "没有其它问题了",
+      "Position": "(-1666.271,-1022.003)",
+      "Commands": [
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我已经托白帝楼的师兄替我在广陵城备了船。{FirstName}{xiongdi}，事不宜迟，我们这便动身？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "CmdSetNPCMoney"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.Menu",
+          "Text": "出发吧",
+          "TargetBlockID": "this:604(出发)"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有些事",
+          "TargetBlockID": "this:605(我还有些事)"
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "交任务-李天正确1",
+      "Description": "交任务-李天正确1",
+      "Position": "(-2402.238,-1041.662)",
+      "Commands": [
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "本是一名平平无奇的散修，本次参加英杰会，修为大涨，出了不小风头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 931,
+          "AvatarBindKey": "",
+          "StoryText": "李天嘛...我有些印象，我本以为他有所机缘方能突破。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(交任务-李天1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "血剑印",
+      "Description": "血剑印",
+      "Position": "(-2477.24,-883.7673)",
+      "Commands": [
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(交任务-李天2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 580,
+      "Name": "选项2",
+      "Description": "选项2",
+      "Position": "(-1663.155,-1086.311)",
+      "Commands": [
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于遗迹的传闻",
+          "TargetBlockID": "this:583(关于遗迹的传闻)"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于图南海",
+          "TargetBlockID": "this:584(关于图南海)"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于魔门",
+          "TargetBlockID": "this:585(关于魔门)"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它问题了",
+          "TargetBlockID": "this:586(没有其它问题了)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

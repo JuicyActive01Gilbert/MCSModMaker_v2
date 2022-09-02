@@ -1,0 +1,513 @@
+{
+  "Name": "Talk8111",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2807.369,-1381.267)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(npc性格获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1337,
+      "Name": "土",
+      "Description": "土",
+      "Position": "(-2732.107,-1077.07)",
+      "Commands": [
+        {
+          "ItemID": 1480,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "随着火灵气越来越浓郁，你所在的通道也愈加宽阔起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "及至通道尽头，一只地龙兽赫然出现在你眼前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "而那{$NpcName}托你寻找的{$CaiLiaoName}正被他护在身后。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1442,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1443,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1163,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2808.196,-1215.13)",
+      "Commands": [
+        {
+          "ItemID": 1441,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1402(金)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1401(木)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1200(水)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1336(火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1337(土)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1336,
+      "Name": "火",
+      "Description": "火",
+      "Position": "(-2893.084,-1075.85)",
+      "Commands": [
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "随着火灵气越来越浓郁，你所在的通道也愈加宽阔起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你还未走至洞底，灼热燎人的火灵气已是令你不由得驱使灵气抵抗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "再向前移动一段距离后，有一岩浆湖出现在前方。但还没等你细看，一只炙火蝎已是出现在你的视线内。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "随他一同出现的，还有散发出赤红光芒的火系神通！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1450,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1451,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1200,
+      "Name": "水",
+      "Description": "水",
+      "Position": "(-2639.393,-1148.774)",
+      "Commands": [
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "随着水灵气越来越浓郁，你所在的通道也愈加宽阔起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "当你来到通道的尽头时，却发现此处竟是地下湖泊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "辽阔的水域中心，一块蓝色的通透晶矿不断逸散着寒气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "但这能让作为金丹期修士的你都感到寒冷的洞穴中，也不知是有什么古怪，湖水竟没有结冰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你也不想一探究竟，只想驾驭法宝凌空掠过，直接取走那中心的通透晶矿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1467,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正当你快得手时，却见原本了无波澜的湖泊竟是惊涛骤起！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1468,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "更是有一只通体布满黑鳞的粗壮墨蛟御涛向你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1444,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1445,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1401,
+      "Name": "木",
+      "Description": "木",
+      "Position": "(-2806.969,-1150.466)",
+      "Commands": [
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "随着木灵气越来越浓郁，你所在的通道也愈加宽阔起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1456,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "及至通道上都布满各类植物时，道路终于也是到了尽头。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "还好你辨认出眼前不过是一面藤蔓组成的绿墙，将其拨开后，谨慎地走入背后的巨大洞穴中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "还好你辨认出眼前不过是一面藤蔓组成的绿墙，将其拨开后，谨慎地走入背后的巨大洞穴中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1459,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "只见昏暗的地下世界中，浓郁的木灵气从一块荧烁着幽绿光芒的玉状矿石中逸散而出。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正是{$NpcName}托你寻找的暗槐玉！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "当你以为妖王不在，准备直接取走这暗槐玉时，那妖王不知从何处驱使藤蔓像你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1446,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1447,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1402,
+      "Name": "金",
+      "Description": "金",
+      "Position": "(-2952.493,-1151.213)",
+      "Commands": [
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "随着金灵气越来越浓郁，你所在的通道也愈加宽阔起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "及至构成通道的岩石都隐约散发出金属光泽时，一个巨大的洞穴也猛地出现在你眼前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "而洞穴正中，一只巨大的噬金甲正停驻于此，不知原本在啃噬着什么金属。兴许是听见你那并不存在的脚步声，它正对你怒目而视。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不等你犹豫，这噬金甲已是毫不犹豫地像你冲撞而来。\n",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1448,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1449,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "npc性格获取",
+      "Description": "npc性格获取",
+      "Position": "(-2808.189,-1295.668)",
+      "Commands": [
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1163(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

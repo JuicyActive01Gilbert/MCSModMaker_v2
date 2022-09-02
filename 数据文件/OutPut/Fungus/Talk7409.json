@@ -1,0 +1,1127 @@
+{
+  "Name": "Talk7409",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2747.53,-1185.076)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "601(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 635,
+      "Name": "玩家先叙述",
+      "Description": "玩家先叙述",
+      "Position": "(-2670.234,-824.0285)",
+      "Commands": [
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "见你一脸严肃，倪旭欣也没再说什么，只是在等你继续。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "上次南崖城一别后，我奉命前往天魔眼探查是否有异状。但在过程中，与炎萧道友遭到天魔教袭击，后续又在天魔眼破解后者释放其中魔物的计划。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你简单的向倪旭欣叙述了事发经过和结局后，后者也是陷入沉思中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "竟有此事！！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我这两年遵师祖嘱托一直坐镇在白帝楼中，大小事务都有过目，却从未听闻有天魔道的异动。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不过此次及时阻止了魔道妖人的计划，且天魔道元婴修士损失不少，短时间内应当是再难作什么妖。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，但玄道宗那边...唉...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倪旭欣显然是认为玄道宗遭难有自己的一部分责任，没有继续这个话题。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我看炎萧道友似乎受伤不浅，如果没什么要事，不如在白帝楼调养一番再离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "炎萧也没说什么只是点头表示同意。倪旭欣见状便招呼附近的执事为炎萧带路去密室修养。自己则带着你向反方向走去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 602,
+      "Name": "任务进度判定",
+      "Description": "任务进度判定",
+      "Position": "(-2746.948,-1006.22)",
+      "Commands": [
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 11"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "616(白帝楼大殿对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "617(密室)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "618(离开后对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "604(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 634,
+      "Name": "倪少先叙述",
+      "Description": "倪少先叙述",
+      "Position": "(-2814.521,-824.0283)",
+      "Commands": [
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "唔，倒也没那么重要。炎道友貌似受伤不浅，还是先给你找间密室调养一番吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "炎萧也没说什么只是点头表示同意。倪旭欣见状便招呼附近的执事为炎萧带路去密室修养。自己则带着你向反方向走去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 616,
+      "Name": "白帝楼大殿对话",
+      "Description": "白帝楼大殿对话",
+      "Position": "(-2751.059,-910.3292)",
+      "Commands": [
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "越过鳞次栉比的武陵城各类建筑，你和炎萧径直向白帝楼而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一进入白帝楼大门便看到最中心处倪家少爷正在向白帝楼某位执事安排着什么。当然，倪旭欣也适时看到你们俩，如蒙大赦一般，他挥手赶开了执事，急忙走向你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，之前给你发的传音符消息怎么一直没回我呢？若不是知道你实力强大，还以为你出什么事了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，之前给你发的传音符消息怎么一直没回我呢？这么久没消息，还以为你是闭死关了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，之前给你发的传音符消息怎么一直没回我呢？这么久没消息，还以为你是闭死关了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Menu",
+          "Text": "不知倪兄找我有何要事？",
+          "TargetBlockID": "this:634(倪少先叙述)"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Menu",
+          "Text": "白帝是否在此处，我有要事相告",
+          "TargetBlockID": "this:635(玩家先叙述)"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Menu",
+          "Text": "白帝前辈是否在此处，我有要事汇报",
+          "TargetBlockID": "this:635(玩家先叙述)"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 753,
+      "Name": "应该高兴",
+      "Description": "应该高兴",
+      "Position": "(-2312.976,-842.6886)",
+      "Commands": [
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "唉，我当然高兴。但为了帮我重塑肉身而冒险，不值得。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "在这破剑中呆着也没啥不好...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极声音渐微，一句话说完终于是没有回应了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 789,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "781(传音符及变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 604,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2937.359,-1099.371)",
+      "Commands": []
+    },
+    {
+      "ItemID": 618,
+      "Name": "离开后对话",
+      "Description": "离开后对话",
+      "Position": "(-2517.112,-910.6298)",
+      "Commands": [
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "唉，轩儿那孩子...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "老头，你怎么一副伤感的样子？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "想到了些以前的事...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "老夫第一次见到轩儿的时候，他不过是个顽童罢了，整天拿着把木剑到处惹是生非。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "呵，最有意思的还是轩儿练气初期的时候，刚学会些功法便自觉实力强大，于是带着老夫送他的木剑法宝想要出门显摆一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "结果误以为自己碰到阴冥蟒，让一条普通的大黑蟒吓到，还被被追了好久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "当时他啊，别说忘了施展神通攻击，甚至忘了驱使遁术。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没想到师兄号称九州第一剑仙，竟还有如此窘迫的时候。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，岂止如此。连...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极一句话没说完，却是沉默了半晌。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "连？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "唉...甚至连他金丹期的时候，也还是这样。宁州古迹之后不知是缘于何事，竟说是要除魔，而后独自远走雍州。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "可惜那时的记忆...如今...只剩下些碎片了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是因为诛仙剑的影响么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "兴许是吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "只是没想到老夫竟有如此福分，本以为余生也就与这破剑为伴了，却还能在千百年后听到自己大弟子的消息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 751,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "但...这还未谋面，又要置轩儿于险地...唉...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.Menu",
+          "Text": "师兄已是化神修为，不需要担心",
+          "TargetBlockID": "this:752(不需担心)"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.Menu",
+          "Text": "师兄这么有孝心，老头你应该高兴才是",
+          "TargetBlockID": "this:753(应该高兴)"
+        }
+      ]
+    },
+    {
+      "ItemID": 673,
+      "Name": "后续1",
+      "Description": "后续1",
+      "Position": "(-2140.644,-1004.332)",
+      "Commands": [
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "唔，好像..就这么多了吧？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好吧。不过在出发之前，我这还有要事要向师兄汇报，倪兄帮我转告一番吧。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}是在海上发现了什么吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不完全是，为何这么问？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我近几年大部分时间都呆在这白帝楼中听执事的各种汇报嘛，但只是有些平平无奇的小事，都快无聊死了。所以当然不会是跟宁州有关咯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "而且{FirstName}{xiongdi}不是经常在海上活动么，所以根据我的推理嘛，大概率就是这样咯...欸，不对么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "见你一脸严肃，倪旭欣也没再说什么，只是在等你继续。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "上次南崖城一别后，我奉命前往天魔眼探查是否有异状。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "但在过程中，与炎萧道友遭到天魔教袭击，后续又在天魔眼破解后者释放其中魔物的计划。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你简单的向倪旭欣叙述了事发经过和结局后，后者也是陷入沉思中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "竟有此事！！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我这两年遵师祖嘱托一直坐镇在白帝楼中，怎会从未听闻相关的消息！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不过此次及时阻止了魔道妖人的计划，且天魔道元婴修士损失不少，短时间内应当是再难作什么妖。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，但玄道宗那边...唉...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "我会尽早向师祖汇报的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，那我就先行离开去做准备了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好吧，那我休息几日便出海前往阴冥海。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 617,
+      "Name": "密室",
+      "Description": "密室",
+      "Position": "(-2519.551,-1003.48)",
+      "Commands": [
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "沿路进入好几个阵法后，倪旭欣带你进入到一间静室之中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这一路尽是些遮蔽气息屏蔽神识的阵法，看来倪兄要说的事并非不重要，只是...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "到了，我们就在这说吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "师祖之前交代此事万不可外泄，所以只得带{FirstName}{xiongdi}来此处了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是关于复活魏老的事么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "欸，我还没说你怎么就知道了？我还努力保持严肃试图神秘点呢...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "所以师兄是有什么新的发现？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "是的，据师祖去年传来的消息所言，他老人家确实找到了些复活之术的眉头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "其中有两个师祖认为比较靠谱，于是自己先沿着线索追寻可能比较危险的那个，而另一个则打算交给你前往探查。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.Menu",
+          "Text": "此事本该由我承担",
+          "TargetBlockID": "this:692(后续)"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.Menu",
+          "Text": "真是麻烦，但谁叫我任劳任怨呢",
+          "TargetBlockID": "this:692(后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 601,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2748.318,-1100.47)",
+      "Commands": [
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 756"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "604(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "602(任务进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 752,
+      "Name": "不需担心",
+      "Description": "不需担心",
+      "Position": "(-2312.976,-908.4419)",
+      "Commands": [
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "轩儿如今的实力是不同往日了，但...我又怎放得下心呢...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "轩儿如今的实力是不同往日了，但...连他自己都说另一处更为危险，我又怎放得下心呢...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "魏无极声音渐微，一句话说完终于是没有回应了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 788,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "781(传音符及变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 781,
+      "Name": "传音符及变量",
+      "Description": "传音符及变量",
+      "Position": "(-2143.115,-907.0724)",
+      "Commands": [
+        {
+          "ItemID": 782,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 783,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 790,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 784,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 785,
+          "CmdType": "Fungus.SendChuanYingFu"
+        },
+        {
+          "ItemID": 786,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 787,
+          "CmdType": "Fungus.AddCyF3"
+        },
+        {
+          "ItemID": 791,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 692,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2322.567,-1004.332)",
+      "Commands": [
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "不过师祖获得的相关消息也不是太多，只知道传说阴冥海那边有灵魂体出现，这几片海域中更是曾有修士提到过灵魂体复活之法，可惜流传不广，其中信息更是佚失很多。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 774,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 775,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 773,
+          "CmdType": "CmdAddSeaTanSuoDu"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "所以只能让{FirstName}{xiongdi}去那边跑一趟，试试能否获得更多信息，甚至成功复活魏前辈了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "阴冥三海的灵魂体可能知道些消息么...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.Menu",
+          "Text": "只有海域名怎么找？",
+          "TargetBlockID": "this:673(后续1)"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.Menu",
+          "Text": "信息太少了",
+          "TargetBlockID": "this:673(后续1)"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.Menu",
+          "Text": "师兄只说了这些么？",
+          "TargetBlockID": "this:673(后续1)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

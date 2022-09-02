@@ -1,0 +1,1130 @@
+{
+  "Name": "Talk5005",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2614.125,-1265.373)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "146(随机人物（保存）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 170,
+      "Name": "切磋",
+      "Description": "切磋",
+      "Position": "(-2615.322,-802.1851)",
+      "Commands": [
+        {
+          "ItemID": 875,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "抱歉，要事在身。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 876,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "167(第二句话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 167,
+      "Name": "第二句话",
+      "Description": "第二句话",
+      "Position": "(-2614.163,-969.4678)",
+      "Commands": [
+        {
+          "ItemID": 1617,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1649,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 1653,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 1670,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友，可听说过我天机阁拍卖会？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1671,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 1674,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你拿出信物对他示意。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1675,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "看来，已经有人邀请过道友了，那我就不多做打扰了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1672,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1682,
+          "CmdType": "Fungus.Menu",
+          "Text": "愿闻其详",
+          "TargetBlockID": "this:1676(愿闻其详)"
+        },
+        {
+          "ItemID": 1683,
+          "CmdType": "Fungus.Menu",
+          "Text": "早有耳闻",
+          "TargetBlockID": "this:1677(早有耳闻)"
+        },
+        {
+          "ItemID": 1673,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1655,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1656,
+          "CmdType": "Fungus.If",
+          "Condition": "TempTaiDu <= 6"
+        },
+        {
+          "ItemID": 1657,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友，何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1658,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 9"
+        },
+        {
+          "ItemID": 1659,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈，可有吩咐？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1660,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 7"
+        },
+        {
+          "ItemID": 1661,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{xiaozi}，有事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1662,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 8"
+        },
+        {
+          "ItemID": 1663,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{xiaozi}，有事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1664,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1665,
+          "CmdType": "Fungus.Menu",
+          "Text": "交易",
+          "TargetBlockID": "this:168(交易)"
+        },
+        {
+          "ItemID": 1666,
+          "CmdType": "Fungus.Menu",
+          "Text": "论道",
+          "TargetBlockID": "this:169(论道)"
+        },
+        {
+          "ItemID": 1667,
+          "CmdType": "Fungus.Menu",
+          "Text": "切磋",
+          "TargetBlockID": "this:170(切磋)"
+        },
+        {
+          "ItemID": 1668,
+          "CmdType": "Fungus.Menu",
+          "Text": "截杀",
+          "TargetBlockID": "this:171(截杀)"
+        },
+        {
+          "ItemID": 1669,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听",
+          "TargetBlockID": "this:172(打听)"
+        },
+        {
+          "ItemID": 1654,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1628,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1695,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 1696,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 1703,
+          "CmdType": "Fungus.If",
+          "Condition": "TempTaiDu <= 6"
+        },
+        {
+          "ItemID": 1704,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友，何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1705,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 9"
+        },
+        {
+          "ItemID": 1706,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈，可有吩咐？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1707,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 7"
+        },
+        {
+          "ItemID": 1708,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{xiaozi}，有事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1709,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 8"
+        },
+        {
+          "ItemID": 1710,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{xiaozi}，有事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1711,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1712,
+          "CmdType": "Fungus.Menu",
+          "Text": "交易",
+          "TargetBlockID": "this:168(交易)"
+        },
+        {
+          "ItemID": 1713,
+          "CmdType": "Fungus.Menu",
+          "Text": "论道",
+          "TargetBlockID": "this:169(论道)"
+        },
+        {
+          "ItemID": 1714,
+          "CmdType": "Fungus.Menu",
+          "Text": "切磋",
+          "TargetBlockID": "this:170(切磋)"
+        },
+        {
+          "ItemID": 1715,
+          "CmdType": "Fungus.Menu",
+          "Text": "截杀",
+          "TargetBlockID": "this:171(截杀)"
+        },
+        {
+          "ItemID": 1716,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听",
+          "TargetBlockID": "this:172(打听)"
+        },
+        {
+          "ItemID": 1699,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1720,
+          "CmdType": "Fungus.Menu",
+          "Text": "交易",
+          "TargetBlockID": "this:168(交易)"
+        },
+        {
+          "ItemID": 1721,
+          "CmdType": "Fungus.Menu",
+          "Text": "论道",
+          "TargetBlockID": "this:169(论道)"
+        },
+        {
+          "ItemID": 1722,
+          "CmdType": "Fungus.Menu",
+          "Text": "切磋",
+          "TargetBlockID": "this:170(切磋)"
+        },
+        {
+          "ItemID": 1723,
+          "CmdType": "Fungus.Menu",
+          "Text": "截杀",
+          "TargetBlockID": "this:171(截杀)"
+        },
+        {
+          "ItemID": 1724,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听",
+          "TargetBlockID": "this:172(打听)"
+        },
+        {
+          "ItemID": 1702,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1633,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 171,
+      "Name": "截杀",
+      "Description": "截杀",
+      "Position": "(-2457.927,-807.892)",
+      "Commands": [
+        {
+          "ItemID": 881,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "哼！敢对我天机阁的人动手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1608,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 6"
+        },
+        {
+          "ItemID": 1607,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "只见他，服用了数瓶丹药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "(不愧是天机阁的人，还真是出手壕气啊。)",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 879,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 880,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1613,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 1603,
+      "Name": "神识查探",
+      "Description": "神识查探",
+      "Position": "(-2818.508,-1058.781)",
+      "Commands": [
+        {
+          "ItemID": 1605,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > JinJie"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方的气息远强于你，你不敢细细查探。你决定...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 926,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你能感知到，对方是金丹后期修士。你决定...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 927,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 928,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前搭话",
+          "TargetBlockID": "this:167(第二句话)"
+        },
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:173(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1684,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2614.121,-900.5643)",
+      "Commands": [
+        {
+          "ItemID": 1685,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "这天机令道友收好，道友可凭此参加我天机阁拍卖会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1694,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 1686,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友找我，还有别的事吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1687,
+          "CmdType": "Fungus.Menu",
+          "Text": "交易",
+          "TargetBlockID": "this:168(交易)"
+        },
+        {
+          "ItemID": 1688,
+          "CmdType": "Fungus.Menu",
+          "Text": "论道",
+          "TargetBlockID": "this:169(论道)"
+        },
+        {
+          "ItemID": 1689,
+          "CmdType": "Fungus.Menu",
+          "Text": "切磋",
+          "TargetBlockID": "this:170(切磋)"
+        },
+        {
+          "ItemID": 1690,
+          "CmdType": "Fungus.Menu",
+          "Text": "截杀",
+          "TargetBlockID": "this:171(截杀)"
+        },
+        {
+          "ItemID": 1691,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听",
+          "TargetBlockID": "this:172(打听)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1676,
+      "Name": "愿闻其详",
+      "Description": "愿闻其详",
+      "Position": "(-2366.56,-962.7604)",
+      "Commands": [
+        {
+          "ItemID": 1678,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "我天机阁收集天下奇珍异宝，每10年一届，举办拍卖会。金丹期以上修士皆可参加。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1679,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "同时也会举办修士集会，交流修炼心得，交易物品。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1680,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友不妨前去看看，说不定大有收获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1693,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1684(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "随机人物（保存）",
+      "Description": "随机人物（保存）",
+      "Position": "(-2622.815,-1197.561)",
+      "Commands": [
+        {
+          "ItemID": 919,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "152(判断态度（保存）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 168,
+      "Name": "交易",
+      "Description": "交易",
+      "Position": "(-2976.447,-817.1755)",
+      "Commands": [
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.If",
+          "Condition": "TempTaiDu <= 6"
+        },
+        {
+          "ItemID": 861,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友，请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "173(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 862,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 9"
+        },
+        {
+          "ItemID": 863,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "对方虽有顾忌，但还是同意与你交易。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 864,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "173(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 867,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 7"
+        },
+        {
+          "ItemID": 869,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方{SayStcVal=924}地看着你，不想与你交易，你决定离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 870,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "173(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 866,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 8"
+        },
+        {
+          "ItemID": 868,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方{SayStcVal=924}地看着你，不想与你交易，你决定离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 871,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "173(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方{SayStcVal=924}地看着你，不想与你交易，你决定离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 872,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "173(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 173,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2347.082,-1059.57)",
+      "Commands": [
+        {
+          "ItemID": 811,
+          "CmdType": "Fungus.If",
+          "Condition": "TempTaiDu <= 6"
+        },
+        {
+          "ItemID": 890,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 9"
+        },
+        {
+          "ItemID": 891,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "对方似乎松了一口气，小心翼翼地和你道别。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 882,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 7"
+        },
+        {
+          "ItemID": 894,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "走？{xiaozi}留下吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 885,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 8"
+        },
+        {
+          "ItemID": 895,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "走？{xiaozi}拿命来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 893,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 888,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 838,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 190,
+      "Name": "第一句话",
+      "Description": "第一句话",
+      "Position": "(-2612.836,-1058.755)",
+      "Commands": [
+        {
+          "ItemID": 906,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 907,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 911,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "唉？那边是？老头你知道是谁吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 912,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "那是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 914,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "应该是天机阁的执事，一般是行走于世间搜集宝物与人交易。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 913,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "对了，天机阁家大业大，这执事多半不是庸人，{xiaozi}你自己小心行事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 918,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "嗯，我明白了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 916,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前交谈",
+          "TargetBlockID": "this:167(第二句话)"
+        },
+        {
+          "ItemID": 908,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 910,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "对方似乎是天机阁修士，见到你过来，停下来{SayStcVal=924}地看着你。你决定...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:173(离开)"
+        },
+        {
+          "ItemID": 1604,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识查探",
+          "TargetBlockID": "this:1603(神识查探)"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前交谈",
+          "TargetBlockID": "this:167(第二句话)"
+        },
+        {
+          "ItemID": 909,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "打听",
+      "Description": "打听",
+      "Position": "(-2288.766,-807.8906)",
+      "Commands": [
+        {
+          "ItemID": 877,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "我也不是很了解附近的近况。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 878,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "167(第二句话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1677,
+      "Name": "早有耳闻",
+      "Description": "早有耳闻",
+      "Position": "(-2871.436,-966.4186)",
+      "Commands": [
+        {
+          "ItemID": 1681,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "那就不多打扰道友了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1692,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1684(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 169,
+      "Name": "论道",
+      "Description": "论道",
+      "Position": "(-2783.663,-809.6833)",
+      "Commands": [
+        {
+          "ItemID": 873,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "抱歉，要事在身。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 874,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "167(第二句话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 152,
+      "Name": "判断态度（保存）",
+      "Description": "判断态度（保存）",
+      "Position": "(-2621.505,-1135.341)",
+      "Commands": [
+        {
+          "ItemID": 1719,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1718,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.If",
+          "Condition": "TempHaoGanDu >= 0"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 9"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == 9"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "190(第一句话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

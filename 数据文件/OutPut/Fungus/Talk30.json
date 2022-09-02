@@ -1,0 +1,378 @@
+{
+  "Name": "Talk30",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 307,
+      "Name": "询问来由",
+      "Description": "询问来由",
+      "Position": "(-2946.022,-1145.14)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我在南崖城并没有认识过什么家族长老，你家长老是何人，为何派你在这客栈外监视我？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "前辈，我家长老并无恶意，只是仰慕您的修为高深，想与您结识一番，交个朋友罢了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "此地人多眼杂，不如前辈随我移步附近的酒楼雅座再叙可好？我家长老已经等候您多时了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(不予理睬)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 300,
+      "Name": "商会比试剧情",
+      "Description": "商会比试剧情",
+      "Position": "(-2786.269,-1142.659)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "刚离开客栈，你便隐约察觉一道微弱的神识扫过。这道神识并没有什么攻击性，但显然，是有什么人盯上了你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "这位可是{FirstName}前辈么？我家长老想邀你来府一叙，不知前辈可愿赏脸？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "来人是一名笑脸盈盈的少女，你神识扫过，发现此人不过金丹期修为，你决定...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问来由",
+          "TargetBlockID": "this:307(询问来由)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "不予理睬",
+          "TargetBlockID": "this:308(不予理睬)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2792.313,-1222.457)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（看来我若要在南崖城获取更多关于图南漩涡的消息，难免用一些强硬手段，不如回港口等倪兄的消息好了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 850"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(商会比试剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "339(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "不予理睬",
+      "Description": "不予理睬",
+      "Position": "(-2782.61,-1068.311)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "没兴趣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "眼下诸事繁多，你自然没有什么兴趣去认识一个陌生的长老。你一脸冷漠的拒绝了她，扭头便要离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "前...前辈留步！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "即便前辈修为通天，连图南海的漩涡都敢闯上一闯，难道前辈对如何突破化神也没有兴趣么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "我家长老晋入元婴多年，又精于炼丹，对于化神之突破大有研究。前辈若能与长老相谈，一定能大有收获的！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好，好，好。看来你们知道的还真不少，那我便认识认识你家长老，带路吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 339,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2624.131,-1222.817)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

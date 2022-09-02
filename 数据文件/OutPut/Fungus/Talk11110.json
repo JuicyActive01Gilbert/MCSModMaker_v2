@@ -1,0 +1,656 @@
+{
+  "Name": "Talk11110",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2604.162,-1090.221)",
+      "Commands": [
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(随机对话 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 7"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "家中从未有长辈提及祖上原居住在碎星岛，其中居然有这样的秘辛......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2599.035,-1229.115)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "299(首次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "随机对话 (Copy)",
+      "Description": "随机对话 (Copy)",
+      "Position": "(-2612.826,-1013.244)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "这无尽之海竟如此宽广，真是不悔此行！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，有什么事么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于这片海域",
+          "TargetBlockID": "this:313(关于海域)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于此行的目标",
+          "TargetBlockID": "this:314(关于此行的目标)"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Menu",
+          "Text": "何不切磋一番",
+          "TargetBlockID": "this:317(切磋)"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:314(关于此行的目标)"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "关于此行的目标",
+      "Description": "关于此行的目标",
+      "Position": "(-2764.975,-1015.975)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "听说{color=#d0380a}碎星岛{/color}有不少了不得的功法传承，晨星商会所举办的拍卖会上也是珍宝如云，我们便先去那里见识一番吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "首次对话",
+      "Description": "首次对话",
+      "Position": "(-2757.975,-1166.975)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "百里兄，无尽之海这般广阔，你想先去哪里？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "我曾听家族长辈说起过无尽之海中的诸多海域，这其中最危险的，莫过于西面的无尽海渊，雷鸣海，以及最南方的玄冥海，阴冥海和幽冥海了。即便修为达到元婴期的大能，也不愿独自一人深入那里。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "除此以外，还有像南崖城，碎星岛这样的大岛，各州修士云集，珍宝无数，更会定期举办拍卖会，也是涨见识的好去处。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "我们从蓬莎岛出发，距离这里最近的当属{color=#d0380a}碎星岛{/color}了。那里由海上最大的商会势力掌控。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "若是我们百里家的商队能与商会合作，对于双方都是百利而无一害的好事。当年叔父商队遇难之事，我也想好好调查清楚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，既然如此，我们就先去那{color=#d0380a}碎星岛{/color}看看吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "CmdAddNPCEvent"
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "切磋",
+      "Description": "切磋",
+      "Position": "(-2438.975,-1013.975)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 615,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，我也正想活动活动筋骨，请！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 299,
+      "Name": "首次判定",
+      "Description": "首次判定",
+      "Position": "(-2601.294,-1160.4)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒 (Copy)",
+      "Description": "战胜巨蟒 (Copy)",
+      "Position": "(-2448.519,-1088.321)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "关于海域",
+      "Description": "关于海域",
+      "Position": "(-2604.975,-944.9749)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.GetNowSeaID"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是北宁海，也是宁州的近海，多是一些只有筑基修为的小型海兽出没，没什么危险的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我从小就在这片海域玩耍，对这里可是熟悉的很，不过...我们是不是走错了方向？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是西宁海，经常会有一些金丹期修为的海兽出没，比起北宁海可是危险的多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是南宁海，经常会有一些金丹期修为的海兽出没，比起北宁海可是危险的多。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是千流海，据说这片海域被千流岛的连家掌控着，非常神秘。早就听说千流岛神通威能不俗，不知此行能否有机会见识一下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里便是南崖海域，大名鼎鼎南崖城就建立这这极南之地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我听说这南崖城是由蓬莎岛，晨星商会和各大家族所共同管理的，而且每隔数百年便会依照一套复杂的规则重新从各势力中进行选拔，组成长老会。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "最重要的是，这南崖城可是建立在化神期海兽的骸骨之上！想想就令人心潮澎湃。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 7"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "终于到碎星海域了，据说那碎星岛就位于这片海域的中心地带。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只要跟着这附近的商船行驶，就能抵达那些正在举办交易会的小岛，和岛上的修士交换，补充所需的物资。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 8"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "蓬莎岛是这无尽之海上远近闻名的散修势力，散修们在这里交换物资与妖兽情报，然后才出海猎杀妖兽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们百里家便是做的这妖兽材料的生意，不过也只是低价从海上收购一些材料，再运回宁州高价卖出而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 9"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里便是浪方海域，因传说中的化神期海兽浪方大圣而得名。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "在这片海域出没的巨鲲，也是海域上最负凶名的海兽之一。以我们现在的修为，在这里还需小心行事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 10"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里便是吞云海，因传说中的化神期海兽吞云大圣而得名。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "在这片海域出没的吞云蟒，也是海域上最负凶名的海兽之一。以我们现在的修为，在这里还需小心行事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 11"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这雷鸣海被一年四季不间断的雷云所笼罩，就连元婴期修士也难以抵抗，可以说是无尽之海最危险的区域之一。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "但相传曾有前辈在这片海域利用雷云淬炼肉体，我对此也神往已久，真是了不得的修为！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 12"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是图南海，这里的灵气乱流尤为危险，但仍然不断有人来这里冒险，为的便是能寻得那传说中的问道花。这种草药可是炼制悟道丹的必需品。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 13"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是阴冥海，无尽之海上最为神秘危险的海域之一，我对这里也知之甚少...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 14"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是幽冥海，无尽之海上最为神秘危险的海域之一，我对这里也知之甚少...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 15"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是玄冥海，无尽之海上最为神秘危险的海域之一，我对这里也知之甚少...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 16"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是东海，都说灵气乱流尤为危险，但仍然不断有人来这里冒险，为的便是能寻得那传说中的三尾风叶！这种草药可是炼制结婴所需丹药的必需品。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 17"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里是化龙海，龙族所掌控的海域。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "一般来说，龙族不会主动攻击这里来往的人类商船，但我们最好也不要主动招惹它们。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "无尽海渊...这里的海沟据说是无尽之海已知区域的最深处。我听过不少有关这里的传说，那些最为强悍的深海妖兽都生活在这里。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "以我们现在的修为，在这里还需小心行事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

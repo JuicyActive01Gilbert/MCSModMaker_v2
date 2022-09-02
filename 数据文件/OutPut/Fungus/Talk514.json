@@ -1,0 +1,509 @@
+{
+  "Name": "Talk514",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(判定门派)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 304,
+      "Name": "星河",
+      "Description": "星河",
+      "Position": "(-3230.072,-1093.152)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "在哪里获取灵核？",
+      "Description": "在哪里获取灵核？",
+      "Position": "(-2808.072,-1095.152)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "灵核通常在灵气充沛的{color=#d0380a}洞窟或者矿脉{/color}附近就有机会找到。宁州最大的灵核矿脉便是青石灵脉，大部分的灵核都产自那里。除此以外，{color=#d0380a}天魔眼{/color}中的魔物体内也会凝结这种灵核。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于青石灵脉",
+          "TargetBlockID": "this:343(关于青石灵脉)"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于天魔眼",
+          "TargetBlockID": "this:344(关于天魔眼)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 302,
+      "Name": "离火门",
+      "Description": "离火门",
+      "Position": "(-3239.072,-1199.152)",
+      "Commands": [
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "判定门派",
+      "Description": "判定门派",
+      "Position": "(-2798.312,-1240.556)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 950"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "白帝楼现在正在收集灵核用以布阵，你若是有多余的灵核，可以在我这里换取突破境界时需要用到的珍贵丹药与秘术。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}{shixiong}，宗门现在正在收集灵核用以布阵，你若是有多余的灵核，可以在我这里换取突破境界时需要用到的珍贵丹药与秘术。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 6"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}长老，宗门现在正在收集灵核用以布阵，你若是有多余的灵核，可以在我这里换取突破境界时需要用到的珍贵丹药与秘术。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "见过师祖，不知师祖有何吩咐？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "竹山宗",
+      "Description": "竹山宗",
+      "Position": "(-3238.072,-1257.152)",
+      "Commands": [
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 343,
+      "Name": "关于青石灵脉",
+      "Description": "关于青石灵脉",
+      "Position": "(-2882.281,-1020.888)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "青石灵脉位于宁州西部山脉，与衡州接壤。灵脉由各大宗门轮流管理，对所有普通修士开放。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不过想要抢占其中比较好的采集点，还需自身实力过硬才行，青石灵脉深处可不乏金丹期甚至元婴期的高手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "化尘",
+      "Description": "化尘",
+      "Position": "(-3228.072,-1041.152)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-2634.072,-1177.152)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "对话",
+      "Description": "对话",
+      "Position": "(-2797.071,-1179.251)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "兑换",
+          "TargetBlockID": "this:296(兑换（门派判定）)"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Menu",
+          "Text": "在哪里获取灵核？",
+          "TargetBlockID": "this:297(在哪里获取灵核？)"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:298(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "关于天魔眼",
+      "Description": "关于天魔眼",
+      "Position": "(-2715.249,-1019.789)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "天魔眼本是宁州一处极为富饶的灵脉所在，但不知从何时起，这里竟开始源源不断地产生魔气，并渐渐凝聚为一种奇异的魔物。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "如今的天魔眼虽然被各大门派与家族封印，但每过二十年仍需派有筑基期修为的弟子前去清缴。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这里的下等魔本身没有灵智，但被击溃后体内魔气便会消散，并掉落我们所需的这种{color=#d0380a}灵核{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "白帝楼",
+      "Description": "白帝楼",
+      "Position": "(-3240.523,-1307.701)",
+      "Commands": [
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 296,
+      "Name": "兑换（门派判定）",
+      "Description": "兑换（门派判定）",
+      "Position": "(-3001.072,-1179.152)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID == 950"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "338(白帝楼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(竹山宗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(金虹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "304(星河)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(化尘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(离火门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "金虹",
+      "Description": "金虹",
+      "Position": "(-3234.072,-1145.152)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

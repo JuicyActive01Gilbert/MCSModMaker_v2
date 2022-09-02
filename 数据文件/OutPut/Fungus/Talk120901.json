@@ -1,0 +1,1025 @@
+{
+  "Name": "Talk120901",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2595.395,-1150.994)",
+      "Commands": [
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 0"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友来此有何贵干？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友来此，可是来购买仙府的？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 215,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "212(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2591.081,-1251.251)",
+      "Commands": [
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 223,
+      "Name": "声望不足 (上)",
+      "Description": "声望不足 (上)",
+      "Position": "(-2029.599,-886.0507)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这仙府只能由声望达到声名远扬的修士购买。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 332,
+      "Name": "无事发生1",
+      "Description": "无事发生1",
+      "Position": "(-2920.599,-563.0507)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "CmdSetDongFuName"
+        }
+      ]
+    },
+    {
+      "ItemID": 272,
+      "Name": "询问是否购买（上）",
+      "Description": "询问是否购买（上）",
+      "Position": "(-2228.099,-778.0507)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，可有意向？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买",
+          "TargetBlockID": "this:318(是（上）)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:242(否)"
+        }
+      ]
+    },
+    {
+      "ItemID": 276,
+      "Name": "是（中）",
+      "Description": "是（中）",
+      "Position": "(-2381.599,-683.0507)",
+      "Commands": [
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这处仙府的灵眼我们已经帮你升级了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "CmdCreateDongFu"
+        }
+      ]
+    },
+    {
+      "ItemID": 224,
+      "Name": "判断金钱",
+      "Description": "判断金钱",
+      "Position": "(-2677.599,-899.0507)",
+      "Commands": [
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这仙府售价5万灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.GetMoney"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.If",
+          "Condition": "Temmoney >= 50000"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "234(询问是否购买)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "235(穷逼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "判断金钱 (中)",
+      "Description": "判断金钱 (中)",
+      "Position": "(-2432.599,-894.0507)",
+      "Commands": [
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这仙府升级需要22万灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.GetMoney"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.If",
+          "Condition": "Temmoney >= 220000"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "319(询问是否购买（中）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "235(穷逼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 331,
+      "Name": "买完房带去",
+      "Description": "买完房带去",
+      "Position": "(-3062.599,-561.0507)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 318,
+      "Name": "是（上）",
+      "Description": "是（上）",
+      "Position": "(-2214.599,-678.0507)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这处仙府的灵眼我们已经帮你升级了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "CmdCreateDongFu"
+        }
+      ]
+    },
+    {
+      "ItemID": 217,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2750.599,-1147.051)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 234,
+      "Name": "询问是否购买",
+      "Description": "询问是否购买",
+      "Position": "(-2846.599,-788.0507)",
+      "Commands": [
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，可有意向？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买",
+          "TargetBlockID": "this:241(是)"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:242(否)"
+        }
+      ]
+    },
+    {
+      "ItemID": 241,
+      "Name": "是",
+      "Description": "是",
+      "Position": "(-2996.599,-707.0507)",
+      "Commands": [
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这处仙府就在我逸风城旁，以后如要改名或是升级灵眼可来找我。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "CmdCreateDongFu"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，需要我带您去洞府看看吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Menu",
+          "Text": "带我去看看",
+          "TargetBlockID": "this:331(买完房带去)"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "不用了",
+          "TargetBlockID": "this:332(无事发生1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 319,
+      "Name": "询问是否购买（中）",
+      "Description": "询问是否购买（中）",
+      "Position": "(-2392.599,-779.0507)",
+      "Commands": [
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，可有意向？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买",
+          "TargetBlockID": "this:276(是（中）)"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Menu",
+          "Text": "算了",
+          "TargetBlockID": "this:242(否)"
+        }
+      ]
+    },
+    {
+      "ItemID": 203,
+      "Name": "购买-判断声望",
+      "Description": "购买-判断声望",
+      "Position": "(-2675.599,-991.0507)",
+      "Commands": [
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShengWang >= 50"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "224(判断金钱)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "321(声望不足)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 262,
+      "Name": "升级至上品",
+      "Description": "升级至上品",
+      "Position": "(-2247.599,-993.0507)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "TemShengWang >= 500"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(判断金钱 (上))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "223(声望不足 (上))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 235,
+      "Name": "穷逼",
+      "Description": "穷逼",
+      "Position": "(-2557.599,-798.0507)",
+      "Commands": [
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我似乎灵石不足。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 242,
+      "Name": "否",
+      "Description": "否",
+      "Position": "(-2732.599,-701.0507)",
+      "Commands": []
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 320,
+      "Name": "判断金钱 (上)",
+      "Description": "判断金钱 (上)",
+      "Position": "(-2236.599,-881.0507)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这仙府售价72万灵石。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.GetMoney"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.If",
+          "Condition": "Temmoney >= 720000"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "272(询问是否购买（上）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "235(穷逼)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 212,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2600.599,-1089.051)",
+      "Commands": [
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:203(购买-判断声望)"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Menu",
+          "Text": "询问洞府",
+          "TargetBlockID": "this:204(询问)"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Menu",
+          "Text": "将洞府升级至中品灵眼",
+          "TargetBlockID": "this:261(升级至中品)"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Menu",
+          "Text": "将洞府升级至上品灵眼",
+          "TargetBlockID": "this:262(升级至上品)"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 0"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想给洞府改个名字",
+          "TargetBlockID": "this:315(改名)"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:217(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 321,
+      "Name": "声望不足",
+      "Description": "声望不足",
+      "Position": "(-2860.599,-899.0507)",
+      "Commands": [
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，这仙府只能由声望达到略有薄名的修士购买。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 261,
+      "Name": "升级至中品",
+      "Description": "升级至中品",
+      "Position": "(-2440.599,-988.0507)",
+      "Commands": [
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(判断金钱 (中))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "改名",
+      "Description": "改名",
+      "Position": "(-2260.599,-1086.051)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "CmdSetDongFuName"
+        }
+      ]
+    },
+    {
+      "ItemID": 204,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2752.599,-1050.051)",
+      "Commands": [
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "听闻你们这里有洞府出售？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "正是，我们逸风城名下正有一无主的仙府正在出售，不过...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "洞府的品阶按照灵眼的等级分为上、中、下三品；品阶越高，闭关修炼的速度与灵田的收益越高。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "眼下这处洞府还是下品灵眼...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "下品灵眼，也未免太过....",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过，道友放心，我宁王府还提供付费升级的服务，嘿嘿。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "升级？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "是的，我逸风城其下是一座巨大的灵脉，由玄道宗布下一座大阵控制，交由我宁王府管理，届时我们会调整输送的灵力以提升洞府的灵眼品质。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，要购买仙府吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "212(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

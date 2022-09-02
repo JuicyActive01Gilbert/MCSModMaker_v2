@@ -1,0 +1,380 @@
+{
+  "Name": "Talk7378",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2790.646,-1200.514)",
+      "Commands": [
+        {
+          "ItemID": 1107,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "多谢帮忙，不然要我一个人全部解决还挺麻烦的呢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1108,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "星姑娘不用客气，我作为宁州正道修仙者，也有责任除魔卫道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1109,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1110,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "嗯..总还是能让宁州再安宁一些吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1111,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "啊，既然此间事已了，我也该回星宫复命了，有缘再见啦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1112,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请稍等，星姑娘可愿与我互在传音符中留下神识印记，留作联系用？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1113,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2242,
+          "AvatarBindKey": "",
+          "StoryText": "传音符...我一般都不用那个的诶，总觉得随时能被找到不太自由。嗯，就当我欠你个人情啦，我们还是有缘再见吧，嘻嘻。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1114,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "星铃儿说完便是驭法宝破空离去，只留你在原地发愣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1117,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1119,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1118,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1115,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1116,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1120,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "胜利",
+      "Description": "胜利",
+      "Position": "(-2582.716,-1260.887)",
+      "Commands": [
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不过瞬息之间，你与栖云真人已交手数回合，对方虽说是金丹期修士，但在你的猛烈攻势下竟是节节败退。原本在栖云真人刚动手就准备制止他的通羽、苗矮二人也是惊于你的强大实力，手下慢了几分。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "终于，栖云真人被你神通击破灵气护盾，匆忙中脚下一个不稳便跌坐在地。苗矮上人也是趁势压制栖云真人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "没想到你居然这么强，连栖云长老也不是你的对手！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "",
+          "StoryText": "嘻嘻，宁州的同辈最强的应该就是道友你啦！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "侥幸而已，",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "通羽",
+          "StoryText": "心儿说的倒是没错，小友的实力真是让老夫讶异，纵是面对其他金丹前期的修士，估计也是难逢敌手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "通羽",
+          "StoryText": "至于金丹之下，更是只有那些传说中天赋异禀的怪物，才能与小友比试一番了。后生可畏啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "通羽前辈过誉了，若是没有您的帮衬，我也没这么容易对付栖云真人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "小友实力强大还心性过人，实属难得。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 614,
+          "AvatarBindKey": "通羽",
+          "StoryText": "{FirstName}道友可是我找来的帮手，当然非同一般。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "哈哈哈，心儿说的是。那我们林家也不能让心儿的帮手白忙活一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "除此之外，{FirstName}小友以后便是我林府座上宾客，可以随意出入林府。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "多谢通羽前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "通羽",
+          "StoryText": "{FirstName}小友不必客气，这是你应得的。那老朽便先去处理家事了，小友请自便。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1099,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1100,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1101,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1102,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1103,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 1104,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1105,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 1106,
+          "CmdType": "CmdChangeNPCAction"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

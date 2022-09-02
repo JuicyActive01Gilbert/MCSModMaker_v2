@@ -1,0 +1,4528 @@
+{
+  "Name": "Talk5002",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2931.014,-1606.352)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(随机势力)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2931.703,-1686.225)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 350,
+      "Name": "获取好感度并计算态度(保存)",
+      "Description": "获取好感度并计算态度(保存)",
+      "Position": "(-2966.128,-1284.356)",
+      "Commands": [
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.If",
+          "Condition": "TempHaoGanDu > 100"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie > JinJie"
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == JinJie"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempHaoGanDu <= 100"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.If",
+          "Condition": "TempHaoGanDu >= 0"
+        },
+        {
+          "ItemID": 751,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie > JinJie"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == JinJie"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 742,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempHaoGanDu < 0"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie > JinJie"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == JinJie"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1600,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1601,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1543(第一句话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 768,
+      "Name": "第二句话",
+      "Description": "第二句话",
+      "Position": "(-2927.783,-1116.487)",
+      "Commands": [
+        {
+          "ItemID": 1611,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == ShiLi"
+        },
+        {
+          "ItemID": 1612,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie > JinJie"
+        },
+        {
+          "ItemID": 1613,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈，你好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "哦？{FirstName}{LastName}，有什么事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == JinJie"
+        },
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{FirstName}{LastName}，有什么事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1639,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 1642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈，有何吩咐？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1641,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友，有何吩咐？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1640,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1621,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1622,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1560,
+          "CmdType": "Fungus.If",
+          "Condition": "TempTaiDu == 1"
+        },
+        {
+          "ItemID": 1559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{SayStcVal=927}，有什么事么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1562,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 2"
+        },
+        {
+          "ItemID": 1563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{SayStcVal=927}，有事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1571,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 3"
+        },
+        {
+          "ItemID": 1572,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{SayStcVal=927}，可有吩咐？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1570,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 4"
+        },
+        {
+          "ItemID": 1573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "有事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1569,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 5"
+        },
+        {
+          "ItemID": 1574,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{SayStcVal=927}，有事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1568,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 6"
+        },
+        {
+          "ItemID": 1575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{SayStcVal=927}，可有吩咐？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1567,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 7"
+        },
+        {
+          "ItemID": 1576,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "对方{SayStcVal=923}地看着你，想看看你意欲为何？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1566,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 8"
+        },
+        {
+          "ItemID": 1577,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "对方{SayStcVal=923}地看着你，想看看你寓意为何？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1565,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 9"
+        },
+        {
+          "ItemID": 1578,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "对方{SayStcVal=923}地立于原地，不敢与你对视？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1561,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1623,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 798,
+          "CmdType": "Fungus.Menu",
+          "Text": "交易",
+          "TargetBlockID": "this:804(交易)"
+        },
+        {
+          "ItemID": 799,
+          "CmdType": "Fungus.Menu",
+          "Text": "论道",
+          "TargetBlockID": "this:805(论道)"
+        },
+        {
+          "ItemID": 800,
+          "CmdType": "Fungus.Menu",
+          "Text": "切磋",
+          "TargetBlockID": "this:806(切磋)"
+        },
+        {
+          "ItemID": 969,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai != ShiLi"
+        },
+        {
+          "ItemID": 801,
+          "CmdType": "Fungus.Menu",
+          "Text": "截杀",
+          "TargetBlockID": "this:807(截杀)"
+        },
+        {
+          "ItemID": 970,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 802,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听",
+          "TargetBlockID": "this:808(打听)"
+        },
+        {
+          "ItemID": 803,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:809(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 804,
+      "Name": "交易",
+      "Description": "交易",
+      "Position": "(-3294.576,-1022.782)",
+      "Commands": [
+        {
+          "ItemID": 854,
+          "CmdType": "Fungus.If",
+          "Condition": "TempTaiDu <= 6"
+        },
+        {
+          "ItemID": 1624,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == ShiLi"
+        },
+        {
+          "ItemID": 1627,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie > JinJie"
+        },
+        {
+          "ItemID": 1628,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈，不如我们交易一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1629,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1630,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == JinJie"
+        },
+        {
+          "ItemID": 1632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "不如我们交易一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1631,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{shixiong}，请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1633,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "不如我们交易一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1634,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{shixiong}，请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1636,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1626,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "可有什么宝贝，不如我们交易一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1596,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1625,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 845,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 1638,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "809(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1579,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 7"
+        },
+        {
+          "ItemID": 1597,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "阁下可有什么宝贝，不如我们交易一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方{SayStcVal=920}的看着你，并不想和你交易，你准备离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "809(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1581,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 8"
+        },
+        {
+          "ItemID": 1598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "阁下可有什么宝贝，不如我们交易一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1586,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方{SayStcVal=920}的看着你，并不想和你交易，你准备离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1587,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "809(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1580,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 9"
+        },
+        {
+          "ItemID": 1590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方虽有顾忌，但还是同意与你交易。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1591,
+          "CmdType": "Fungus.OpenJiaoYi"
+        },
+        {
+          "ItemID": 1637,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "809(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "炼气期（随机境界（选人））",
+      "Description": "炼气期（随机境界（选人））",
+      "Position": "(-3197.94,-1368.06)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie == 1"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1115,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 2"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1116,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 3"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1117,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1069,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 4"
+        },
+        {
+          "ItemID": 1070,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1071,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1072,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1073,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1074,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1075,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1076,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1077,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1078,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1118,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1080,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1081,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1082,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1083,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1084,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1085,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1086,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1087,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1088,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1089,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1090,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1091,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1092,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1093,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1094,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1095,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1096,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1097,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1098,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1099,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1100,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1101,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1102,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1103,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1104,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1105,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1106,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1107,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1108,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1109,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1110,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1111,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1112,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1113,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1114,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1119,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "350(获取好感度并计算态度(保存))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 806,
+      "Name": "切磋",
+      "Description": "切磋",
+      "Position": "(-3005.766,-1013.927)",
+      "Commands": [
+        {
+          "ItemID": 862,
+          "CmdType": "Fungus.If",
+          "Condition": "TempHaoGanDu >= 0"
+        },
+        {
+          "ItemID": 931,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "在下想和阁下切磋一二。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1599,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "还请手下留情。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 932,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 933,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 863,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 889,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方神色冷淡，并不想和你切磋，你准备离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 864,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "809(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 865,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "境界测试",
+      "Description": "境界测试",
+      "Position": "(-2932.544,-1456.12)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(炼气期（随机境界（选人））)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(筑基期（随机境界（选人））)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1539(金丹期（随机境界（选人）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1539(金丹期（随机境界（选人）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1539(金丹期（随机境界（选人）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1603,
+      "Name": "神识查探",
+      "Description": "神识查探",
+      "Position": "(-3136.407,-1199.706)",
+      "Commands": [
+        {
+          "ItemID": 1604,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie > JinJie"
+        },
+        {
+          "ItemID": 1606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方的气息远强于你，你不敢细细查探。你决定...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1605,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1607,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你能感知到，对方是{SayStcVal=921}修士。你决定...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1608,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前搭话",
+          "TargetBlockID": "this:768(第二句话)"
+        },
+        {
+          "ItemID": 1610,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:809(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期（随机境界（选人））",
+      "Description": "筑基期（随机境界（选人））",
+      "Position": "(-2965.622,-1367.276)",
+      "Commands": [
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie == 2"
+        },
+        {
+          "ItemID": 1121,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1122,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1124,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1125,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1126,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1132,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1133,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1136,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1140,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1141,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1142,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1143,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1145,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1147,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1148,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1149,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1150,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1152,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1154,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1156,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1158,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1162,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1163,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1164,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 3"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1176,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1183,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1186,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1187,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1188,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1189,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1190,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1191,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1192,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1193,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1194,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1195,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1196,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1197,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1198,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1199,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1200,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1201,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1202,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1203,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1204,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1205,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1206,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1207,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1208,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1209,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1210,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 4"
+        },
+        {
+          "ItemID": 1211,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1212,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1213,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1214,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1215,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1216,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1217,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1218,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1219,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1220,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1221,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1222,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1224,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1226,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1228,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1229,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1232,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1233,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1234,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1235,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1236,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1237,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1238,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1239,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1242,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1243,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1244,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1245,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1246,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1247,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1248,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1249,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1250,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1251,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1252,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1253,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1254,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1255,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1023,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 5"
+        },
+        {
+          "ItemID": 1256,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1257,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1258,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1259,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1260,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1261,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1262,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1264,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1265,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1266,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1267,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1268,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1269,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1270,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1271,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1272,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1273,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1274,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1275,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1276,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1277,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1278,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1279,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1280,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1281,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1282,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1283,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1284,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1285,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1287,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1288,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1289,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1290,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1291,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1293,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1295,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1297,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1298,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1299,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1300,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 683,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 684,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 689,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1120,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 697,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "350(获取好感度并计算态度(保存))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "随机势力",
+      "Description": "随机势力",
+      "Position": "(-2931.771,-1530.678)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 809,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2703.372,-1200.506)",
+      "Commands": [
+        {
+          "ItemID": 972,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == ShiLi"
+        },
+        {
+          "ItemID": 973,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie > JinJie"
+        },
+        {
+          "ItemID": 975,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈我先告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 976,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == JinJie"
+        },
+        {
+          "ItemID": 978,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{shixiong}，慢走。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1551,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1549,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1552,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "{shixiong}，慢走。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1553,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1000,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1001,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1002,
+          "CmdType": "Fungus.If",
+          "Condition": "TempTaiDu == 1"
+        },
+        {
+          "ItemID": 1003,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "小友，走好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1004,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 2"
+        },
+        {
+          "ItemID": 1005,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "道友，再见。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1006,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 3"
+        },
+        {
+          "ItemID": 1007,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈走好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1556,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方站在原地，在等你先行离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1008,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 4"
+        },
+        {
+          "ItemID": 1009,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1554,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方面无表情地转身离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1010,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 5"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方向你点头示意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1012,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 6"
+        },
+        {
+          "ItemID": 1013,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈走好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1557,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方站在原地，在等你先行离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1014,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 7"
+        },
+        {
+          "ItemID": 1015,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "想走？晚了！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1016,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1017,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 8"
+        },
+        {
+          "ItemID": 1018,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "走？得罪了我{SayStcVal=920}，拿命来！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1019,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 1020,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempTaiDu == 9"
+        },
+        {
+          "ItemID": 1021,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "前辈走好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1558,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方{SayStcVal=920}地站在原地，似乎先等你离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1022,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1543,
+      "Name": "第一句话",
+      "Description": "第一句话",
+      "Position": "(-2932.755,-1201.866)",
+      "Commands": [
+        {
+          "ItemID": 1544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方似乎是{SayStcVal=920}修士，见到你过来，停下来{SayStcVal=923}地看着你。你决定...{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1546,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:809(离开)"
+        },
+        {
+          "ItemID": 1602,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识查探",
+          "TargetBlockID": "this:1603(神识查探)"
+        },
+        {
+          "ItemID": 1547,
+          "CmdType": "Fungus.Menu",
+          "Text": "上前搭话",
+          "TargetBlockID": "this:768(第二句话)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1539,
+      "Name": "金丹期（随机境界（选人）",
+      "Description": "金丹期（随机境界（选人）",
+      "Position": "(-2739.774,-1367.977)",
+      "Commands": [
+        {
+          "ItemID": 1302,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1304,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1305,
+          "CmdType": "Fungus.If",
+          "Condition": "TempJingJie == 7"
+        },
+        {
+          "ItemID": 1306,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1307,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1309,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1310,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1311,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1312,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1313,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1314,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1537,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1316,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1317,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1318,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1319,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1320,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1321,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1323,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1325,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1326,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1327,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1329,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1330,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1331,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1332,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1333,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1334,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1335,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1336,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1337,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1338,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1339,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1340,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1341,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1342,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1343,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1344,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1345,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1346,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1347,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1348,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1349,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1350,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1351,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 3"
+        },
+        {
+          "ItemID": 1352,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1353,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1355,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1356,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1357,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1359,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1360,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1361,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1363,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1364,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1365,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1366,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1367,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1368,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1369,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1370,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1371,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1372,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1373,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1375,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1376,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1377,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1379,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1380,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1381,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1383,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1384,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1385,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1387,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1388,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1389,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1391,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1392,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1393,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1394,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1395,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1396,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1397,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 4"
+        },
+        {
+          "ItemID": 1398,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1399,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1400,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1401,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1402,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1403,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1405,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1406,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1407,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1409,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1410,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1411,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1413,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1414,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1415,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1417,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1418,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1419,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1420,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1421,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1422,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1423,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1424,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1425,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1426,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1427,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1428,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1429,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1430,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1431,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1432,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1433,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1434,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1435,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1436,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1437,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1438,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1439,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1440,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1441,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1442,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1443,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempJingJie == 5"
+        },
+        {
+          "ItemID": 1444,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1445,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1446,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1447,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1448,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1449,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1450,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1451,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1452,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1453,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1454,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1455,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1456,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1457,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1458,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1459,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1460,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1461,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1462,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1463,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1464,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1465,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1466,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1467,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1468,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1469,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1470,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1471,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1472,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1473,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1474,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1475,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1480,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1481,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1482,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1483,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1484,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1485,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1486,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1487,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1488,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1489,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1490,
+          "CmdType": "Fungus.If",
+          "Condition": "ShiLi == 0"
+        },
+        {
+          "ItemID": 1491,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1492,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1493,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1494,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 1"
+        },
+        {
+          "ItemID": 1495,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1496,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1497,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1498,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 2"
+        },
+        {
+          "ItemID": 1499,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1500,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1501,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1502,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 3"
+        },
+        {
+          "ItemID": 1503,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1504,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1505,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1506,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 4"
+        },
+        {
+          "ItemID": 1507,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1508,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1509,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1510,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 5"
+        },
+        {
+          "ItemID": 1511,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1512,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1513,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1514,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 6"
+        },
+        {
+          "ItemID": 1515,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1516,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1517,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1518,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 7"
+        },
+        {
+          "ItemID": 1519,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1520,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1521,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1522,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 8"
+        },
+        {
+          "ItemID": 1523,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1524,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1525,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1526,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShiLi == 9"
+        },
+        {
+          "ItemID": 1527,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1528,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1529,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1530,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1531,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 1532,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1533,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1534,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1535,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1536,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "350(获取好感度并计算态度(保存))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 805,
+      "Name": "论道",
+      "Description": "论道",
+      "Position": "(-3148.087,-1018.481)",
+      "Commands": [
+        {
+          "ItemID": 857,
+          "CmdType": "Fungus.If",
+          "Condition": "TempHaoGanDu >= 0"
+        },
+        {
+          "ItemID": 878,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > TempJingJie"
+        },
+        {
+          "ItemID": 919,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 880,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "此次论道对方受益匪浅，心满意足地和你道别。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 879,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "多谢指点。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 881,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie == TempJingJie"
+        },
+        {
+          "ItemID": 922,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.AddEXP"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 882,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "此次论道双方互有收获。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1592,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "告辞。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "有缘再会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 883,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 926,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 927,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 930,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 1594,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "此次论道你受益匪浅，心满意足地和他道别。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 884,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "多谢指点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 886,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 859,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 888,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方神色冷淡，并不想和你论道，你准备离开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 860,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "809(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 861,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 808,
+      "Name": "打听",
+      "Description": "打听",
+      "Position": "(-2705.314,-1010.025)",
+      "Commands": [
+        {
+          "ItemID": 1540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempAvatar",
+          "StoryText": "我也不是很了解附近的近况。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1541,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "768(第二句话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 807,
+      "Name": "截杀",
+      "Description": "截杀",
+      "Position": "(-2853.848,-1006.651)",
+      "Commands": [
+        {
+          "ItemID": 935,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 936,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

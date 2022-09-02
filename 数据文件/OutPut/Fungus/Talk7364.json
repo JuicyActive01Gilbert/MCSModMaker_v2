@@ -1,0 +1,363 @@
+{
+  "Name": "Talk7364",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 347,
+      "Name": "翠虹木蕴铁 (Copy)",
+      "Description": "翠虹木蕴铁 (Copy)",
+      "Position": "(-2969.538,-1252.061)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 344,
+      "Name": "六品灵舟",
+      "Description": "六品灵舟",
+      "Position": "(-2796.398,-1163.204)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{FirstName}道友可是找到了能用来炼制灵舟的{color=#d0380a}六品木属性材料{/color}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Menu",
+          "Text": "翠虹木蕴铁",
+          "TargetBlockID": "this:347(翠虹木蕴铁 (Copy))"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == True"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "朽木冥铁",
+          "TargetBlockID": "this:348(朽木冥铁 (Copy))"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.If",
+          "Condition": "Var3 == True"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "枫玄玉髓",
+          "TargetBlockID": "this:353(枫玄玉髓 (Copy))"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "Var4 == True"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Menu",
+          "Text": "天元石心",
+          "TargetBlockID": "this:354(天元石心 (Copy))"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Menu",
+          "Text": "还没有",
+          "TargetBlockID": "this:375(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 373,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-3145.18,-1181.193)",
+      "Commands": [
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，这种材料的确可以用来炼制六品灵舟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过炼制六品灵舟可能需要花费我数月时间，待我炼制完成后，会将灵舟用传音符寄回给你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SendChuanYingFu"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.AddCyFriend"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2793.449,-1223.593)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(六品灵舟)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(正在炼制)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "枫玄玉髓 (Copy)",
+      "Description": "枫玄玉髓 (Copy)",
+      "Position": "(-2963.989,-1147.834)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "天元石心 (Copy)",
+      "Description": "天元石心 (Copy)",
+      "Position": "(-2955.35,-1085.999)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "朽木冥铁 (Copy)",
+      "Description": "朽木冥铁 (Copy)",
+      "Position": "(-2961.99,-1202.925)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "373(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 375,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2649.843,-1161.562)",
+      "Commands": [
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "正在炼制",
+      "Description": "正在炼制",
+      "Position": "(-2657.8,-1225.198)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "炼制六品灵舟需要花费我数月时间，待我炼制完成后，会将灵舟用传音符寄回给你。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

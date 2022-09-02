@@ -1,0 +1,969 @@
+{
+  "Name": "Talk7350",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2602.926,-1211.119)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 6"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "143(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 143,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2604.813,-1113.437)",
+      "Commands": [
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "170(广陵城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "150(蓬莎岛)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "149(碎星岛)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "464(低声望线完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 239,
+      "Name": "再等等",
+      "Description": "再等等",
+      "Position": "(-2205.485,-1110.843)",
+      "Commands": [
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我现在也没有50万灵石，待我想想办法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 164,
+      "Name": "前往南崖城",
+      "Description": "前往南崖城",
+      "Position": "(-3017.968,-1042.385)",
+      "Commands": [
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "那我们这便出发去南崖城吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 159,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2603.497,-943.7003)",
+      "Commands": [
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "等{FirstName}{xiongdi}准备好再来找我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 170,
+      "Name": "广陵城",
+      "Description": "广陵城",
+      "Position": "(-2811.444,-1180.543)",
+      "Commands": [
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Menu",
+          "Text": "先去一趟蓬莎岛",
+          "TargetBlockID": "this:176(前往蓬莎岛)"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Menu",
+          "Text": "先去一趟碎星岛",
+          "TargetBlockID": "this:163(前往碎星岛)"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接前往南崖城",
+          "TargetBlockID": "this:164(前往南崖城)"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:159(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 176,
+      "Name": "前往蓬莎岛",
+      "Description": "前往蓬莎岛",
+      "Position": "(-3019.172,-1180.543)",
+      "Commands": [
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "时间紧迫，{FirstName}{xiongdi}莫要耽搁太久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 207,
+      "Name": "高声望完成",
+      "Description": "高声望完成",
+      "Position": "(-2372.081,-948.9634)",
+      "Commands": [
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你回到码头，倪旭欣正在近旁等待，但见他一副沉思的样子，也不知在想什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪兄可有收获？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "啊？啊，我刚去了趟天极殿。据他们所说，数百年前曾有许多修士自发前往图南漩涡，或探访遗迹，或寻求机缘，但无一例外失去音讯，料想应该是尽皆陨落其中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "之后三大岛也分别召集麾下修士前往漩涡探索。其中声势最为浩大的碎星商会甚至出动了多位元婴期修士，但结果依旧是无人归来，更不用说有所收获了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "至于其他信息，天极殿也只是推说现今图南漩涡被列为禁地，相关信息也是佚失。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我在打听时也是多次听闻漩涡非常危险。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "不过也正是如此凶险，才让我更加相信这魔剑确实在漩涡中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "或至少是同阶异宝...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你想着自己身上的诛仙剑小声补了一句，但是倪旭欣并没有太在意",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "看来我们还得去其他地方打听一番这漩涡的位置了，不然偌大一个图南海，还不知要找到何时。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，我可没说只打听到图南漩涡有多危险。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}的意思是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我刚在碎星商会打听到图南漩涡的位置便是在图南海{color=#d0380a}东南部{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "不愧是{FirstName}{xiongdi}，那我们接下来只要再打听清楚漩涡出现的规律就好了，希望不要等太久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪兄莫急。这出现规律嘛，碎星商会的人也说了，图南漩涡近期便是会现世。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，有{FirstName}{xiongdi}在看来我只用做好进漩涡的准备就是了，其他的都可以放心交给{xiongdi}。不如我们这就出发去...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "说到准备，碎星商会还告诉我了一些其他消息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将碎星商会幸存者及之后的事一一向倪旭欣说明。然后你们就幸存者浑浑噩噩的状态做出简单的讨论，不出意外的倪旭欣更加坚信漩涡中有一把魔剑，而这幸存者就是煞气入体才会如此。只是不知为何不似宁州古迹中人一般，会四处伤人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "好，好啊，本来只是想带{FirstName}{xiongdi}去找师祖，没想到反倒什么都要靠{xiongdi}了，哈哈，哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}若无其他消息相告，那，我们便出发去图南海？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "好，没有其他消息了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "这次真没了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "想什么呢，准备出发了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倪旭欣似乎是还在你一连串的消息打击中未反应过来，显然是没想到在你的努力下，刚到南崖城便搜集到了如此之多的信息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不对，还得再等等。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "御剑回楼逢阔少，同寻魔剑入南崖。欲知后事如何，且听下回分解。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "碎星岛",
+      "Description": "碎星岛",
+      "Position": "(-2603.494,-1043.7)",
+      "Commands": [
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Menu",
+          "Text": "前往南崖城",
+          "TargetBlockID": "this:164(前往南崖城)"
+        },
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:159(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 163,
+      "Name": "前往碎星岛",
+      "Description": "前往碎星岛",
+      "Position": "(-3016.653,-1113.437)",
+      "Commands": [
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "时间紧迫，{FirstName}{xiongdi}莫要耽搁太久。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 206,
+      "Name": "中声望完成",
+      "Description": "中声望完成",
+      "Position": "(-2370.604,-999.0715)",
+      "Commands": [
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你回到码头，倪旭欣正在近旁等待，但见他一副沉思的样子，也不知在想什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪兄可有收获？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "啊？啊，我刚去了趟天极殿。据他们所说，数百年前曾有许多修士自发前往图南漩涡，或探访遗迹，或寻求机缘，但无一例外失去音讯，料想应该是尽皆陨落其中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "之后三大岛也分别召集麾下修士前往漩涡探索。其中声势最为浩大的碎星商会甚至出动了多位元婴期修士，但结果依旧是无人归来，更不用说有所收获了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "至于其他信息，天极殿也只是推说现今图南漩涡被列为禁地，相关信息也是佚失。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我在打听时也是多次听闻漩涡非常危险。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "不过也正是如此凶险，才让我更加相信这魔剑确实在漩涡中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "或至少是同阶异宝...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你想着自己身上的诛仙剑小声补了一句，但是倪旭欣并没有太在意",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "看来我们还得去其他地方打听一番这漩涡的位置了，不然偌大一个图南海，还不知要找到何时。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，我可没说只打听到图南漩涡有多危险。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}的意思是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "上灵舟吧，据碎星商会所言，图南漩涡近期便要重新现世了，耽误了时间可要赶不上了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "不愧是{FirstName}{xiongdi}，实力强大不说，探访情报还如手到擒来。出海前拉上你真是没错哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "那我们这就出发去图南海吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不急不急。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "御剑回楼逢阔少，同寻魔剑入南崖。欲知后事如何，且听下回分解。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 238,
+      "Name": "支付灵石",
+      "Description": "支付灵石",
+      "Position": "(-2207.953,-1059.61)",
+      "Commands": [
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "五十万灵石...不愧是，倪少啊，哈，哈，哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这曾经的翘家阔少并没有多想你话语间的深意，拿了灵石就急忙御剑往碎星商会去了。只留你一人在原地心疼自己的灵石。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "恍惚间，你想起百年前刚遇见这阔少并从沂山派救下他时，好像还曾许诺将自己身上的法宝都送你，但...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那，这次的50万灵石，估计也...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你独自嗟叹间，倪旭欣已然携图南漩涡情报归来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，图南漩涡便是在图南海{color=#d0380a}东南部{/color}，商会的人说从过往的规律算来，近期应该会现世，我们这便出发吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 464,
+      "Name": "低声望线完成",
+      "Description": "低声望线完成",
+      "Position": "(-2376.721,-1113.582)",
+      "Commands": [
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}可是准备好灵石了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.If",
+          "Condition": "Var >= 500000"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Menu",
+          "Text": "支付灵石",
+          "TargetBlockID": "this:238(支付灵石)"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:239(再等等)"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Else"
+        }
+      ]
+    },
+    {
+      "ItemID": 150,
+      "Name": "蓬莎岛",
+      "Description": "蓬莎岛",
+      "Position": "(-2812.708,-1114.753)",
+      "Commands": [
+        {
+          "ItemID": 156,
+          "CmdType": "Fungus.Menu",
+          "Text": "先去一趟碎星岛",
+          "TargetBlockID": "this:163(前往碎星岛)"
+        },
+        {
+          "ItemID": 158,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接前往南崖城",
+          "TargetBlockID": "this:164(前往南崖城)"
+        },
+        {
+          "ItemID": 157,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:159(无事发生)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

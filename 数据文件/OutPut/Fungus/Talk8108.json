@@ -1,0 +1,1434 @@
+{
+  "Name": "Talk8108",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1404.124)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1400(npc性格获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1503,
+      "Name": "确实如此1",
+      "Description": "确实如此1",
+      "Position": "(-2929.658,-1016.91)",
+      "Commands": [
+        {
+          "ItemID": 1504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以我也没放在心上，便当做是没听到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "却没想那人在切磋时对着我的法宝屡下重手，最后不知是用什么剑诀将我那法宝对半斩开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "当时我也是一愣，竟没想起与他理论。这修士也是鸡贼的很，竟趁我愣神的功夫扬长而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1507,
+          "CmdType": "Fungus.Menu",
+          "Text": "所以你是想让我报复他一番？",
+          "TargetBlockID": "this:1425(报复？)"
+        },
+        {
+          "ItemID": 1508,
+          "CmdType": "Fungus.Menu",
+          "Text": "然后呢？",
+          "TargetBlockID": "this:1426(然后呢？)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1176,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2617.01,-1217.32)",
+      "Commands": [
+        {
+          "ItemID": 1406,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1540,
+      "Name": "报复1",
+      "Description": "报复1",
+      "Position": "(-2791.288,-1022)",
+      "Commands": [
+        {
+          "ItemID": 1546,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我虽然不是受了气还无动于衷的类型，但报复还要找人帮忙也不是我的风格，只有自己来才解气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1547,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "找{FirstName}{$NickName}来只是想让你帮我搜集材料好重新打造一个法宝而已。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以我最近一直在寻找{$CaiLiaoName}的消息，最近才有收获。只是那{$CaiLiaoName}所在之地乃是金丹期妖王的巢穴。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "若是平时我可不惧他，但如今我法宝被击碎，只剩备用法宝傍身，怕不是那孽畜的对手，就想请你帮我摆平那妖王并取得{$CaiLiaoName}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "原来如此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1552,
+          "CmdType": "Fungus.Menu",
+          "Text": "接受",
+          "TargetBlockID": "this:1545(接受1)"
+        },
+        {
+          "ItemID": 1553,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:1551(拒绝1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1444,
+      "Name": "接受",
+      "Description": "接受",
+      "Position": "(-2926.917,-816.9696)",
+      "Commands": [
+        {
+          "ItemID": 1473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "多谢{FirstName}{$NickName}，有你出手，那{$ZaiXia}便放心了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那{$CaiLiaoName}便在...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1450,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1451,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1452,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 1592,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 1454,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1453,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1398,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2791.911,-1217.443)",
+      "Commands": [
+        {
+          "ItemID": 1401,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1402,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1404,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1176(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1199,
+      "Name": "阴险，稳重",
+      "Description": "阴险，稳重",
+      "Position": "(-2928.588,-1067.033)",
+      "Commands": [
+        {
+          "ItemID": 1409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}，感谢你能受{$ZaiXia}之邀前来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友不用客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友此前说有要事找我，不知是何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，此事说来话长，还请{$NickName}听我从头道来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "但说无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "事情是这样的，半月前有人想与我切磋一番，眼看他十分热情，我也不好拒绝，只得应肯。却没成想我亮出法宝后，他却硬说我的法宝是赝品，当时便激动了起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "赝品？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我那法宝可不是什么赝品，但...确实是在外形和能力上仿制了我所仰慕前辈的作品。但我不过向他学习而已，这法宝也是自己所用，并未拿去招摇撞骗，怎么能算赝品呢？{$NickName}你说是不是？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "(这场面怎么似曾相识？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1509,
+          "CmdType": "Fungus.Menu",
+          "Text": "确实如此",
+          "TargetBlockID": "this:1503(确实如此1)"
+        },
+        {
+          "ItemID": 1510,
+          "CmdType": "Fungus.Menu",
+          "Text": "这...之后发生了什么？",
+          "TargetBlockID": "this:1503(确实如此1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1484,
+      "Name": "基准",
+      "Description": "基准",
+      "Position": "(-2648.835,-1067.596)",
+      "Commands": [
+        {
+          "ItemID": 1489,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "感谢你能前来，{FirstName}{$NickName}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友不用客气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1491,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友此前说有要事找我，不知是何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，此事说来丢脸，但还请{$NickName}听我从头道来",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "但说无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "事情是这样的，半月前有一修士缠着我想切磋，我实在拒绝不了他，只好接受。却没想切磋开始后，他却一口咬定我的法宝是赝品，当场便激动起来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "赝品？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，那法宝确实是仿制了我所仰慕前辈的作品。但我不过是出于对前辈的尊敬，法宝又是自己所用并未拿去招摇撞骗，怎么能算赝品呢？{$NickName}你说是不是？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "(这场面怎么似曾相识？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1517,
+          "CmdType": "Fungus.Menu",
+          "Text": "确实如此",
+          "TargetBlockID": "this:1511(确实如此2)"
+        },
+        {
+          "ItemID": 1518,
+          "CmdType": "Fungus.Menu",
+          "Text": "这...之后发生了什么？",
+          "TargetBlockID": "this:1511(确实如此2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1399,
+      "Name": "暴躁",
+      "Description": "暴躁",
+      "Position": "(-2791.083,-1067.183)",
+      "Commands": [
+        {
+          "ItemID": 1201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName} ，你终于来了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1536,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "找我何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "还不是之前跟人切磋被打碎了法宝。打碎也就算了，还诋毁说我法宝是赝品，你说气不气人？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "(这场面怎么似曾相识？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1543,
+          "CmdType": "Fungus.Menu",
+          "Text": "所以你是想让我报复他一番？",
+          "TargetBlockID": "this:1540(报复1)"
+        },
+        {
+          "ItemID": 1544,
+          "CmdType": "Fungus.Menu",
+          "Text": "然后呢？",
+          "TargetBlockID": "this:1540(报复1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1519,
+      "Name": "报复？2",
+      "Description": "报复？2",
+      "Position": "(-2648.855,-966.1075)",
+      "Commands": [
+        {
+          "ItemID": 1525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "呃，这倒不是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1523,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1521(基准后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1431,
+      "Name": "阴险稳重后续",
+      "Description": "阴险稳重后续",
+      "Position": "(-2926.916,-868.9657)",
+      "Commands": [
+        {
+          "ItemID": 1435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，{$NickName}莫要嘲弄我了，被击碎了法宝谁能看的开，只是重新炼制一个合适的法宝傍身于我而言更紧要罢了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "嗯，确是如此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1438,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以我费尽心思探访{$CaiLiaoName}的消息。虽是有所收获，但，凡是奇珍所在必有危险相伴，{$CaiLiaoName}所在亦是如此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "此处正是一金丹期妖王的巢穴，若是放在平时我倒不惧它，但如今法宝被击碎，只剩备用法宝傍身，恐难敌之。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以想请{FirstName}{$NickName}代我前往取得{$CaiLiaoName}。这妖王实力十分强劲，但相对的它身上的皮、骨、妖丹等都是稀有炼器材料，放在平日也是难寻得很。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "也正因如此，{$ZiaXia}不知同辈中除{FirstName}{$NickName}外还有谁能轻易解决金丹期妖王。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "若是事成，我只需{$CaiLiaoName}，其他材料尽归{FirstName}{$NickName}所有。除此之外，另有谢礼奉上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1442,
+          "CmdType": "Fungus.Menu",
+          "Text": "接受",
+          "TargetBlockID": "this:1444(接受)"
+        },
+        {
+          "ItemID": 1443,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:1445(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1584,
+      "Name": "任务失败判定",
+      "Description": "任务失败判定",
+      "Position": "(-2791.286,-1273.43)",
+      "Commands": [
+        {
+          "ItemID": 1585,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1586,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 1587,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1398(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1588,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1589,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1176(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2791.903,-1144.034)",
+      "Commands": [
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 2"
+        },
+        {
+          "ItemID": 1410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1407,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1408,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1482,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 12"
+        },
+        {
+          "ItemID": 1481,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1483,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1485,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 4"
+        },
+        {
+          "ItemID": 1486,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1399(暴躁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1487,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 8"
+        },
+        {
+          "ItemID": 1488,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1399(暴躁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1447,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1484(基准)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1545,
+      "Name": "接受1",
+      "Description": "接受1",
+      "Position": "(-2794.145,-920.5717)",
+      "Commands": [
+        {
+          "ItemID": 1554,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{$Xiao},我就知道找你准没问题。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那{$CaiLiaoName}便在...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1556,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1557,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1558,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 1559,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1560,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 1400,
+      "Name": "npc性格获取",
+      "Description": "npc性格获取",
+      "Position": "(-2791.694,-1332.232)",
+      "Commands": [
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1480,
+          "CmdType": "CmdGetNPCFaceJson"
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1455,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1456,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1590,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1591,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1457,
+          "CmdType": "Fungus.If",
+          "Condition": "NPCType == 1"
+        },
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1465,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1458,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 2"
+        },
+        {
+          "ItemID": 1475,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1466,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1460,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 3"
+        },
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1467,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1581,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCLiuPai == 107"
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1461,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 4"
+        },
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1468,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1572,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCLiuPai == 105"
+        },
+        {
+          "ItemID": 1573,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1574,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1575,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCLiuPai == 106"
+        },
+        {
+          "ItemID": 1576,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1577,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1578,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCLiuPai == 123"
+        },
+        {
+          "ItemID": 1579,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1580,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1462,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCType == 5"
+        },
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1469,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1569,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "NPCLiuPai == 102"
+        },
+        {
+          "ItemID": 1570,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1571,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1463,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "NPC类型出错",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1459,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1327,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1565,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 4"
+        },
+        {
+          "ItemID": 1566,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1567,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 8"
+        },
+        {
+          "ItemID": 1568,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1329,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1584(任务失败判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1426,
+      "Name": "然后呢？",
+      "Description": "然后呢？",
+      "Position": "(-2928.286,-918.2811)",
+      "Commands": [
+        {
+          "ItemID": 1432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我虽心有不甘，但也只是想找他好好理论理论。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1433,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "道友倒也看得开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1436,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1431(阴险稳重后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1511,
+      "Name": "确实如此2",
+      "Description": "确实如此2",
+      "Position": "(-2648.836,-1018.28)",
+      "Commands": [
+        {
+          "ItemID": 1512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以我也没放在心上，便当做是没听到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "却没想那人在切磋时对着我的法宝屡下重手，最后不知是用什么剑诀将我那法宝对半斩开。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "当时我也是一愣，竟没想起与他理论。这修士也是鸡贼的很，竟趁我愣神的功夫扬长而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1515,
+          "CmdType": "Fungus.Menu",
+          "Text": "所以你是想让我报复他一番？",
+          "TargetBlockID": "this:1519(报复？2)"
+        },
+        {
+          "ItemID": 1516,
+          "CmdType": "Fungus.Menu",
+          "Text": "然后呢？",
+          "TargetBlockID": "this:1520(然后呢？2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1520,
+      "Name": "然后呢？2",
+      "Description": "然后呢？2",
+      "Position": "(-2647.524,-920.902)",
+      "Commands": [
+        {
+          "ItemID": 1522,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1521(基准后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1551,
+      "Name": "拒绝1",
+      "Description": "拒绝1",
+      "Position": "(-2792.718,-864.8577)",
+      "Commands": [
+        {
+          "ItemID": 1561,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不愿也罢，我另想办法吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "说完，{$NpcName}便独自离去了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1563,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1564,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1425,
+      "Name": "报复？",
+      "Description": "报复？",
+      "Position": "(-2928.189,-971.7646)",
+      "Commands": [
+        {
+          "ItemID": 1427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这倒不是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我虽心有不甘，但也只是想找他好好理论理论。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "道友倒也看得开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1430,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1431(阴险稳重后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1445,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2795.409,-815.5408)",
+      "Commands": [
+        {
+          "ItemID": 1471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "既然{FirstName}{$NickName}无暇前往，那{$ZaiXia}也就不多叨扰{$NickName}了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "告辞。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1448,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1449,
+          "CmdType": "Fungus.SetTaskCompelet"
+        }
+      ]
+    },
+    {
+      "ItemID": 1521,
+      "Name": "基准后续",
+      "Description": "基准后续",
+      "Position": "(-2646.096,-867.5945)",
+      "Commands": [
+        {
+          "ItemID": 1526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我虽心有不甘，但当务之急还是重新炼制一个合适的法宝傍身更要紧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "道友倒也看得开。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我本就无意争斗，以后提放着些便是。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那你找我来是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "后来我费劲心思{$CaiLiaoName}的消息。虽是有所收获，但，凡是奇珍所在必有危险相伴，{$CaiLiaoName}所在亦是如此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1531,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "此处正是一金丹期妖王的巢穴，若是放在平时我倒不惧它，但如今法宝被击碎，只剩备用法宝傍身，恐难敌之。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1532,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "所以想请{FirstName}{$NickName}代我前往取得{$CaiLiaoName}。这妖王实力十分强劲，但相对的它身上的皮、骨、妖丹等都是稀有炼器材料，放在平日也是难寻得很。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1533,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}若是得手，我只取所需的{$CaiLiaoName}，其他材料尽归{FirstName}{$NickName}所有。除此之外，另有谢礼奉上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1534,
+          "CmdType": "Fungus.Menu",
+          "Text": "接受",
+          "TargetBlockID": "this:1444(接受)"
+        },
+        {
+          "ItemID": 1535,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:1445(拒绝)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

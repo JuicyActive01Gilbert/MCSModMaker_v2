@@ -1,0 +1,496 @@
+{
+  "Name": "Talk400205",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2466.097,-1288.618)",
+      "Commands": [
+        {
+          "ItemID": 840,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1320(所在门派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1341,
+      "Name": "玩家化神剧情",
+      "Description": "玩家化神剧情",
+      "Position": "(-2239.025,-1025.214)",
+      "Commands": [
+        {
+          "ItemID": 1378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这{$shili}，从今天开始便在宁州除名吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "！！？{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你正欲动手毁灭{$shili}山门时，却突然发现{$shili}广场上不知何时多了一人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但{$shili}的其他修士却像是没有看到这人一般，只是一脸惊恐的盯着你。直到这人开始向你缓步走来，你才不自主的将注意力集中在他身上，无暇再留意其他修士。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来竹山宗有隐世化神存在，我还当这宗派不过如此呢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "明山id",
+          "StoryText": "吾辈既已触及天道，本只愿静心潜修不想插手世事。但道友以大欺小，我也只有出面干预一番了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那又如何？我可不惧你！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "那竹山宗化神修士隐有愠色，但终究还是平复下来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "若是在此战至领域全开，于你于我皆无好处，不如各退一步。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "宗门中神通功法秘籍任由道友拿去，作为交换，你今日不得再伤我竹山宗任何一人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1359,
+          "CmdType": "Fungus.Menu",
+          "Text": "真是无趣，但也不无道理",
+          "TargetBlockID": "this:1355(后续)"
+        },
+        {
+          "ItemID": 1371,
+          "CmdType": "Fungus.Menu",
+          "Text": "那就给你几分面子吧",
+          "TargetBlockID": "this:1355(后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1320,
+      "Name": "所在门派判定",
+      "Description": "所在门派判定",
+      "Position": "(-2466.272,-1209.159)",
+      "Commands": [
+        {
+          "ItemID": 1321,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1323,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1327,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1331,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1332,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1333,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "984(获取现任掌门id及姓名)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 885,
+      "Name": "玩家境界判定",
+      "Description": "玩家境界判定",
+      "Position": "(-2464.709,-1024.059)",
+      "Commands": [
+        {
+          "ItemID": 1267,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1268,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 964,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 1242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 967,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1341(玩家化神剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 965,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1342,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1340(玩家未化神剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1355,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2237.76,-926.4799)",
+      "Commands": [
+        {
+          "ItemID": 1397,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "在他的示意下，竹山宗掌门识趣地派人带你前往藏经阁。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1405,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1406,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1340,
+      "Name": "玩家未化神剧情",
+      "Description": "玩家未化神剧情",
+      "Position": "(-2470.671,-929.0111)",
+      "Commands": [
+        {
+          "ItemID": 1382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这{$shili}，从今天开始便在宁州除名吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "！！？{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你正欲动手毁灭{$shili}山门时，却突然发现{$shili}广场上不知何时多了一人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但{$shili}的其他修士却像是没有看到这人一般，只是一脸惊恐的盯着你。直到这人开始向你缓步走来，你才不自主的将注意力集中在他身上，无暇再留意其他修士。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着他的走近，你能感到自己的神识探查范围迅速缩小，外界的灵气也随之不再回应。这已然不是你所面对过的任何一种强者威压，而是来自这一方天地，或者说是来自道的极致压迫。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "{$称呼}，就此罢手吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "明山id",
+          "StoryText": "没想到{$shili}还有如此强者，倒还让我长眼了。看前辈这架势，莫不是想出手为这元婴修士报仇？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "明山id",
+          "StoryText": "吾辈既已触及天道，本只愿静心潜修不想插手世事。但{$shili}有难，也只得出面了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "明山id",
+          "StoryText": "小友能破我护宗大阵，确实有些能耐，老朽我一是惜才，二是不愿插手晚辈之争。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "明山id",
+          "StoryText": "不如{$称呼}就此离去，之前的战斗也不过是几名不争气的弟子在切磋中被打伤，老朽不再过多追究。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "明山id",
+          "StoryText": "晚辈来这{$shili}原意也不过是借贵派神通功法一观，只不过此间修士不由分说便是驱逐晚辈，才不得已催动功法自卫，若是前辈能让晚辈如愿，自然会就此离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "附近重伤的{$shili}修士无不是一脸愤懑的看着你。明明上门抢夺功法，却还不动声色的将责任推到受害者身上，他们即便是修练数百年，也未曾见过如此厚颜无耻之人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "只是技不如人，不敢开口而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "明山id",
+          "StoryText": "好说好说。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1355(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 984,
+      "Name": "获取现任掌门id及姓名",
+      "Description": "获取现任掌门id及姓名",
+      "Position": "(-2486.701,-1112.22)",
+      "Commands": [
+        {
+          "ItemID": 1312,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1343,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1338,
+          "CmdType": "Fungus.GetNPCName"
+        },
+        {
+          "ItemID": 1313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "885(玩家境界判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

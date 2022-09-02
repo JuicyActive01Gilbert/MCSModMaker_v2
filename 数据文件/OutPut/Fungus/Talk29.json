@@ -1,0 +1,177 @@
+{
+  "Name": "Talk29",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2933.202,-1501.225)",
+      "Commands": [
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 290"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1000"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "344(初次进入广陵城-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2932.154,-1579.461)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 347,
+      "Name": "初次进入广陵城",
+      "Description": "初次进入广陵城",
+      "Position": "(-2937.325,-1329.768)",
+      "Commands": [
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 350,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2711.325,-1407.768)",
+      "Commands": [
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "初次进入广陵城-判定",
+      "Description": "初次进入广陵城-判定",
+      "Position": "(-2950.325,-1411.768)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "347(初次进入广陵城)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "350(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,203 @@
+{
+  "Name": "Talk2501",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(门派判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 320,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-2517.885,-1195.892)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "炼气",
+      "Description": "炼气",
+      "Position": "(-2793.681,-1169.032)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请问道友，在下此次猎魔比试排名如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 6"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 21,
+          "AvatarBindKey": "",
+          "StoryText": "道友并未上榜，望下届努力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue >= 6"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 15"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 21,
+          "AvatarBindKey": "",
+          "StoryText": "道友成绩中规中矩，有待提高。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue >= 15"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 21,
+          "AvatarBindKey": "",
+          "StoryText": "道友名列前茅，可喜可贺。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 300,
+      "Name": "散修",
+      "Description": "散修",
+      "Position": "(-2646.078,-1235.936)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 21,
+          "AvatarBindKey": "",
+          "StoryText": "道友，我派正在收集灵核用以布阵，你若是有多余的灵核，可以在我这里换取其它的材料或是丹药。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Menu",
+          "Text": "兑换",
+          "TargetBlockID": "this:319(兑换)"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:320(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 319,
+      "Name": "兑换",
+      "Description": "兑换",
+      "Position": "(-2522.885,-1277.892)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.OpenDuiHuan"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "门派判断",
+      "Description": "门派判断",
+      "Position": "(-2796.42,-1236.156)",
+      "Commands": [
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 0"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "300(散修)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(炼气)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

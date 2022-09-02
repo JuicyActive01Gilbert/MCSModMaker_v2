@@ -1,0 +1,498 @@
+{
+  "Name": "Talk192",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(禾山道任务判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 352,
+      "Name": "明白",
+      "Description": "明白",
+      "Position": "(-2535.457,-1100.503)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1069,
+          "AvatarBindKey": "",
+          "StoryText": "老大！好...好像有人来了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "嘘！敛息隐蔽，等他们进入大阵再动手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}轰！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "动手！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 338,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2251.878,-1241.142)",
+      "Commands": []
+    },
+    {
+      "ItemID": 297,
+      "Name": "沂山派任务判断",
+      "Description": "沂山派任务判断",
+      "Position": "(-2539.089,-1241.089)",
+      "Commands": [
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "348(沂山任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "338(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "质疑",
+      "Description": "质疑",
+      "Position": "(-2405.457,-1128.503)",
+      "Commands": [
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这样做的风险是不是太大了，万一百里家护送商品的队伍里有筑基期的修士怎么办？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "放心，如果有筑基期修士，我来负责对付。有大阵的加持，就算是筑基后期的修士，我也可以应付的来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(明白)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "第二次追",
+      "Description": "第二次追",
+      "Position": "(-2724.055,-1166.94)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你又来到此处，远远的便瞧见拿到耀眼的金色遁光。今天一定要抓住那个胆敢挑衅禾山道的散修！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Menu",
+          "Text": "追上去",
+          "TargetBlockID": "this:327(遁速判断)"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "下次再说",
+          "TargetBlockID": "this:328(下次再说)"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "禾山道任务判断",
+      "Description": "禾山道任务判断",
+      "Position": "(-2796.06,-1242.532)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(禾山道任务1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(第二次追)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(沂山派任务判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(沂山派任务判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "追不上",
+      "Description": "追不上",
+      "Position": "(-2859.139,-982.2161)",
+      "Commands": [
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你奋力追赶，但显然，那人的遁术远高于你，很快便不见了踪影。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哼，下次我一定能抓住你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "遁速判断",
+      "Description": "遁速判断",
+      "Position": "(-2856.333,-1073.127)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu >= 6"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(进入战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "303(追不上)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "禾山道任务1",
+      "Description": "禾山道任务1",
+      "Position": "(-2857.342,-1164.855)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道金色的遁光从你前方掠过，似乎是在挑衅你，你想起麻老九交代的事情，这应该就是上次他说的那个散修吧！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "追上去",
+          "TargetBlockID": "this:327(遁速判断)"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Menu",
+          "Text": "下次再说",
+          "TargetBlockID": "this:328(下次再说)"
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "沂山任务",
+      "Description": "沂山任务",
+      "Position": "(-2537.457,-1156.503)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "我已经在此处用火铜布下了赤炎灵阵，等百里家的商队到了，我便会启动大阵。你们身上带着我给你们的阵符，就可以避开大阵的攻击。等大阵启动之时，我们便一起出手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 606,
+          "AvatarBindKey": "",
+          "StoryText": "广陵城百里家的势力非同小可，大家切记，一定不要留下任何一个活口！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Menu",
+          "Text": "明白了！",
+          "TargetBlockID": "this:352(明白)"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Menu",
+          "Text": "风险是不是太大了？",
+          "TargetBlockID": "this:353(质疑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "进入战斗",
+      "Description": "进入战斗",
+      "Position": "(-2712.081,-983.9365)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1015,
+          "AvatarBindKey": "",
+          "StoryText": "哼，这个禾山道小鬼，速度倒还挺快，正好，让我看看你有什么能耐！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 328,
+      "Name": "下次再说",
+      "Description": "下次再说",
+      "Position": "(-2719.812,-1071.125)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

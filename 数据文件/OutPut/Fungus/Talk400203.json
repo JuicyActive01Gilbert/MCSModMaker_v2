@@ -1,0 +1,903 @@
+{
+  "Name": "Talk400203",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2466.097,-1288.618)",
+      "Commands": [
+        {
+          "ItemID": 840,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1320(所在门派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 959,
+      "Name": "门派被灭变量",
+      "Description": "门派被灭变量",
+      "Position": "(-2463.371,-1051.55)",
+      "Commands": [
+        {
+          "ItemID": 1057,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1082,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1092,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1084,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1094,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1086,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1095,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1088,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1093,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1090,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1058,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1091,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1358,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "984(势力判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1247,
+      "Name": "门派判定",
+      "Description": "门派判定",
+      "Position": "(-2131.942,-977.8146)",
+      "Commands": [
+        {
+          "ItemID": 1304,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1303(竹山化神继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1306,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1302(金虹化神继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1343,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1344,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1300(离火化神继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1345,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1302,
+      "Name": "金虹化神继续",
+      "Description": "金虹化神继续",
+      "Position": "(-1984.182,-1044.979)",
+      "Commands": [
+        {
+          "ItemID": 1352,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 1750"
+        },
+        {
+          "ItemID": 1338,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 1353,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1320,
+      "Name": "所在门派判定",
+      "Description": "所在门派判定",
+      "Position": "(-2466.272,-1209.159)",
+      "Commands": [
+        {
+          "ItemID": 1321,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1323,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1359,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1325,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1360,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1327,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1361,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1362,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1331,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1332,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1363,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1333,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1364,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "885(化神境界判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 973,
+      "Name": "无化神门派继续",
+      "Description": "无化神门派继续",
+      "Position": "(-2468.295,-900.9528)",
+      "Commands": [
+        {
+          "ItemID": 974,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这{$shili}，从今天开始便在宁州除名吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1284,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 975,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "且慢！请听我一言！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "哦？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "以道友的实力，灭了我{$shili}也没什么实质性的好处，不如...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "本是他出言请求你停下毁灭的脚步，说到一半后，自己却也是陷入沉默之中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "直到你开始不耐烦时，他才支吾着将后半句话说出口。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "不如，我{$shili}将门派所有秘传神通及功法交与道友...而且方才的战斗中我派未曾有修士被击杀...若是道友就此罢手，{$shili}绝无半点怨言。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1016,
+          "CmdType": "Fungus.Menu",
+          "Text": "早点拿出来不就好了",
+          "TargetBlockID": "this:1018(索要秘籍)"
+        },
+        {
+          "ItemID": 1017,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们也没其他价值了",
+          "TargetBlockID": "this:1018(索要秘籍)"
+        },
+        {
+          "ItemID": 1285,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "前辈且慢！请听我一言！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "哦？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "灭了我{$shili}对前辈也没什么实质性的好处，不如我{$shili}将门派收藏的所有秘传神通及功法全数交于前辈一观。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "灭杀了你们，这些秘籍自然也是落于我手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "前辈有所不知，我{$shili}曾经也是有多位化神前辈，只是有些已然飞升，剩余的也不在世间。其中多位前辈都曾在藏经阁留下禁制，",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "若是前辈执意要赶尽杀绝，那我也只好引动禁制毁去这些秘籍了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "掌门id",
+          "StoryText": "但前辈若是愿意放{$shili}一条生路，秘籍自会双手奉上。至于方才被打伤的长老等，我{$shili}绝不会有半点怨言。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1296,
+          "CmdType": "Fungus.Menu",
+          "Text": "谅你们也不敢",
+          "TargetBlockID": "this:1018(索要秘籍)"
+        },
+        {
+          "ItemID": 1298,
+          "CmdType": "Fungus.Menu",
+          "Text": "你们也没其他价值了",
+          "TargetBlockID": "this:1018(索要秘籍)"
+        },
+        {
+          "ItemID": 1297,
+          "CmdType": "Fungus.Menu",
+          "Text": "好说好说",
+          "TargetBlockID": "this:1018(索要秘籍)"
+        },
+        {
+          "ItemID": 1299,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 885,
+      "Name": "化神境界判定",
+      "Description": "化神境界判定",
+      "Position": "(-2464.335,-1133.169)",
+      "Commands": [
+        {
+          "ItemID": 1267,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1268,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 964,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 1242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 965,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1240,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 967,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "959(门派被灭变量)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1303,
+      "Name": "竹山化神继续",
+      "Description": "竹山化神继续",
+      "Position": "(-1981.197,-980.8)",
+      "Commands": [
+        {
+          "ItemID": 1356,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 1200"
+        },
+        {
+          "ItemID": 1339,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 1357,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1355,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1300,
+      "Name": "离火化神继续",
+      "Description": "离火化神继续",
+      "Position": "(-1982.69,-900.4963)",
+      "Commands": [
+        {
+          "ItemID": 1301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1336,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1340,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 1018,
+      "Name": "索要秘籍",
+      "Description": "索要秘籍",
+      "Position": "(-2461.82,-823.1259)",
+      "Commands": [
+        {
+          "ItemID": 1292,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 1021,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "HuaShenID",
+          "StoryText": "这{$shili}掌门不再言语，只是吩咐了一个弟子为你带路。而后便如驼背石人一般静止在广场上，倒是脸颊旁有两行清泪缓步而下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1022,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "也不知是为战死的元婴长老而流，还是...为传承已久的门派在自己手上逐渐式微而流。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1294,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "HuaShenID",
+          "StoryText": "这{$shili}掌门见你同意，也不再废话，赶忙在前为你引路。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1293,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1025,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1038,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1028,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1039,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1031,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1040,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1034,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1041,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 1037,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1042,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 984,
+      "Name": "势力判定",
+      "Description": "势力判定",
+      "Position": "(-2463.376,-979.1006)",
+      "Commands": [
+        {
+          "ItemID": 1069,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 1070,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 985,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1310,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1250,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1258(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 990,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1312,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1251,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1258(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 995,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 1314,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1000,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 1316,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1317,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1252,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1258(时间判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1005,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 1318,
+          "CmdType": "CmdGetNPCIDByTitle"
+        },
+        {
+          "ItemID": 1319,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1014,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1015,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1258,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2300.601,-979.3069)",
+      "Commands": [
+        {
+          "ItemID": 1261,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 1260,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 729"
+        },
+        {
+          "ItemID": 1276,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1247(门派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1270,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year > 200"
+        },
+        {
+          "ItemID": 1272,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1341,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1274,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1262,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1347,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 1348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1350,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 1351,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "973(无化神门派继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1349,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1259,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1247(门派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

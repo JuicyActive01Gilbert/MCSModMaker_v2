@@ -1,0 +1,407 @@
+{
+  "Name": "Talk122301",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2576.041,-1104.423)",
+      "Commands": [
+        {
+          "ItemID": 275,
+          "CmdType": "CmdOpenNingZhouMapWarp"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2576.932,-1224.188)",
+      "Commands": [
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 197,
+      "Name": "钱不够",
+      "Description": "钱不够",
+      "Position": "(-2578.03,-851.2888)",
+      "Commands": [
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "囊中羞涩...哎，我还是靠走的吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 192,
+      "Name": "不住",
+      "Description": "不住",
+      "Position": "(-2807.504,-1101.304)",
+      "Commands": []
+    },
+    {
+      "ItemID": 171,
+      "Name": "天星城",
+      "Description": "天星城",
+      "Position": "(-2496.282,-1015.366)",
+      "Commands": [
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 169,
+      "Name": "逸风城",
+      "Description": "逸风城",
+      "Position": "(-2812.152,-1014.94)",
+      "Commands": [
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 195,
+      "Name": "广陵城",
+      "Description": "广陵城",
+      "Position": "(-2315.279,-1015.246)",
+      "Commands": [
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 170,
+      "Name": "武陵城",
+      "Description": "武陵城",
+      "Position": "(-2648.556,-1013.094)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "197(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

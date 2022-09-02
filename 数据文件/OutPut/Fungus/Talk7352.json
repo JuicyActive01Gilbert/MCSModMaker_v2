@@ -1,0 +1,236 @@
+{
+  "Name": "Talk7352",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2605.666,-1207.01)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "143(客栈)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2342.968,-1125.28)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "客栈",
+      "Description": "客栈",
+      "Position": "(-2606.125,-1120.017)",
+      "Commands": [
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "那个大漩涡最近好像又出现了，在图南海航行时最好小心点。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哦？大漩涡？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "道友难道是第一次来这片海域？图南漩涡可以说是无尽之海最危险的异象之一了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "不过漩涡的具体位置我也不太清楚，只是听说遇到图南漩涡还能生还的修士百里无一，甚至听说曾有化神修士仗着修为强闯漩涡，但也未能脱离，就此失去音讯。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "竟是如此凶险！看来我若要在海上探索还是避开着点比较好。道友可知这...什么漩涡的大致位置？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 149,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "图南漩涡的位置？我也没见过...毕竟见过的修士都死了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 150,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "不过我听说{color=#d0380a}碎星商会{/color}好像也搜集过相关的消息，你如果有兴趣，可以去询问一下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢道友相告。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= -100"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.If",
+          "Condition": "jindu == 1"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "jindu == 2"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "jindu == 3"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "我知道的消息，都已经告诉道友了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

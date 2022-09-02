@@ -1,0 +1,1454 @@
+{
+  "Name": "Talk51704",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2660.441,-1313.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 384,
+      "Name": "任务完成判定",
+      "Description": "任务完成判定",
+      "Position": "(-3540.823,-1353.227)",
+      "Commands": [
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "为师此次给你两个月的时间，就让我看看你这段时间的修炼成果吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "时间未到",
+      "Description": "时间未到",
+      "Position": "(-2653.254,-1168.38)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "贪多嚼不烂，为师也只能传授你一部分的经验见解，悟道修行最终还是得看你自己的悟性与仙缘。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "过段时间再来吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "小于51（首次请教判定）",
+      "Description": "小于51（首次请教判定）",
+      "Position": "(-3136.072,-1316.062)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "377(首次请教)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "386(任务变量设定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 459,
+      "Name": "首次触发",
+      "Description": "首次触发",
+      "Position": "(-3269.313,-1246.385)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈...不错不错，你果然没有让为师失望。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "460(后续触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 481,
+      "Name": "抽牌-3；伤害-6",
+      "Description": "抽牌-3；伤害-6",
+      "Position": "(-2852.124,-953.3397)",
+      "Commands": [
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 554,
+      "Name": "60+判定修正",
+      "Description": "60+判定修正",
+      "Position": "(-2945.802,-1177.468)",
+      "Commands": [
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(小于51（首次请教判定）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(60+)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 353,
+      "Name": "60+",
+      "Description": "60+",
+      "Position": "(-3114.108,-1168.789)",
+      "Commands": [
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 5"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.GetHaoGanDuSay"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "534(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 543,
+      "Name": "玄伶",
+      "Description": "玄伶",
+      "Position": "(-3989.328,-951.494)",
+      "Commands": [
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 473,
+      "Name": "切磋战",
+      "Description": "切磋战",
+      "Position": "(-3266.269,-1119.317)",
+      "Commands": [
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID == 103"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 107"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 108"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 202"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 203"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 204"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 302"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 303"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 304"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 407"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 408"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 409"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 502"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 503"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 504"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "479(抽牌-3，伤害-80%)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 460,
+      "Name": "后续触发",
+      "Description": "后续触发",
+      "Position": "(-3267.313,-1182.249)",
+      "Commands": [
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "接下来便是你出师前最后的考验了，为师会将自身修为压制与你切磋一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "若你能战胜为师，那便代表你已经有了足够的实力，为师也可以放心地把师门绝学传授于你，相信你不会辱没了师门威名。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Menu",
+          "Text": "我已经准备好了",
+          "TargetBlockID": "this:473(切磋战)"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Menu",
+          "Text": "徒儿修为不足，还应当多多修炼才是",
+          "TargetBlockID": "this:358(无)"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "没有事",
+      "Description": "没有事",
+      "Position": "(-2508.661,-1248.924)",
+      "Commands": []
+    },
+    {
+      "ItemID": 479,
+      "Name": "抽牌-3，伤害-80%",
+      "Description": "抽牌-3，伤害-80%",
+      "Position": "(-3284.445,-1058.684)",
+      "Commands": [
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 351,
+      "Name": "任务询问",
+      "Description": "任务询问",
+      "Position": "(-3844.113,-1356.317)",
+      "Commands": [
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.resetNTask"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "为师的这门绝学可不是那么容易就能学会的，你现在修为到底如何，就让为师来考教一番吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Menu",
+          "Text": "我已经准备好了",
+          "TargetBlockID": "this:357(准备好了)"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Menu",
+          "Text": "徒儿修为不足，还应当多多修炼才是",
+          "TargetBlockID": "this:358(无)"
+        }
+      ]
+    },
+    {
+      "ItemID": 532,
+      "Name": "抽牌-3，伤害-40%",
+      "Description": "抽牌-3，伤害-40%",
+      "Position": "(-3702.361,-953.9382)",
+      "Commands": [
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "51~69（首次触发判定）",
+      "Description": "51~69（首次触发判定）",
+      "Position": "(-3135.617,-1249.198)",
+      "Commands": [
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "459(首次触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "460(后续触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 482,
+      "Name": "伤害-80%",
+      "Description": "伤害-80%",
+      "Position": "(-3100.831,-955.2809)",
+      "Commands": [
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 350,
+      "Name": "好感度判定",
+      "Description": "好感度判定",
+      "Position": "(-2809.852,-1242.925)",
+      "Commands": [
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.GetHaoGanDuVar"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 51"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(小于51（首次请教判定）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue >= 51"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 70"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "548(51~69判定修正)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "554(60+判定修正)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 377,
+      "Name": "首次请教",
+      "Description": "首次请教",
+      "Position": "(-3108.96,-1393.22)",
+      "Commands": [
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.GetHaoGanDuSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 358,
+      "Name": "无",
+      "Description": "无",
+      "Position": "(-3840.645,-1193.041)",
+      "Commands": []
+    },
+    {
+      "ItemID": 386,
+      "Name": "任务变量设定",
+      "Description": "任务变量设定",
+      "Position": "(-3271.61,-1318.213)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID == 103"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 107"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 108"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 202"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 203"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 204"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 302"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 303"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 304"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 407"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 408"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 409"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 502"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 503"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 504"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "361(任务开始判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2656.13,-1243.32)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "今日来找为师何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "请师尊指点",
+          "TargetBlockID": "this:298(时间判定)"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "请教师门神通",
+          "TargetBlockID": "this:350(好感度判定)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:290(没有事)"
+        }
+      ]
+    },
+    {
+      "ItemID": 548,
+      "Name": "51~69判定修正",
+      "Description": "51~69判定修正",
+      "Position": "(-2950.185,-1252.055)",
+      "Commands": [
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(小于51（首次请教判定）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(51~69（首次触发判定）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 541,
+      "Name": "凝霜",
+      "Description": "凝霜",
+      "Position": "(-3238.195,-953.7663)",
+      "Commands": [
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 476,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-4204.842,-1233.246)",
+      "Commands": []
+    },
+    {
+      "ItemID": 480,
+      "Name": "抽牌-2",
+      "Description": "抽牌-2",
+      "Position": "(-2971.83,-953.3491)",
+      "Commands": [
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "获得思绪",
+      "Description": "获得思绪",
+      "Position": "(-2798.709,-1018.38)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID == 103"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 107"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 108"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 202"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 203"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 204"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 302"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 303"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 304"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 407"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 408"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 409"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 502"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 503"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MonsterID == 504"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.AddLingGuang"
+        }
+      ]
+    },
+    {
+      "ItemID": 357,
+      "Name": "准备好了",
+      "Description": "准备好了",
+      "Position": "(-3977.246,-1357.603)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "很好，看来你对自己的实力很有信心，希望你不要让为师失望。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{$task}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.StartNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 450,
+      "Name": "CD中",
+      "Description": "CD中",
+      "Position": "(-3544.684,-1228.779)",
+      "Commands": [
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "既然知道自己的实力还有不足，就更要好好修炼。凭你现在这点修为，还没有资格学习为师的绝学。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 539,
+      "Name": "青蛇",
+      "Description": "青蛇",
+      "Position": "(-3379.106,-952.6298)",
+      "Commands": [
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 478,
+      "Name": "抽牌-3",
+      "Description": "抽牌-3",
+      "Position": "(-3521.787,-955.0348)",
+      "Commands": [
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 534,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-3705.442,-1353.865)",
+      "Commands": [
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 5"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(任务询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "为师的这门绝学可不是那么容易就能学会的，你如今修为尚浅，等你至少突破到{color=#d0380a}筑基中期{/color}以后再来吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 382,
+      "Name": "任务CD判定",
+      "Description": "任务CD判定",
+      "Position": "(-3542.375,-1281.213)",
+      "Commands": [
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "450(CD中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "534(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "请指点",
+      "Description": "请指点",
+      "Position": "(-2799.846,-1092.243)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "你且听好...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "在师尊的点拨之下，你又有了新的感悟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "多谢师尊",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(获得思绪)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2798.707,-1169.515)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(请指点)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "year > TempValue"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(请指点)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(时间未到)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "任务开始判定",
+      "Description": "任务开始判定",
+      "Position": "(-3411.709,-1317.317)",
+      "Commands": [
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.If",
+          "Condition": "start == True"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "384(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "382(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

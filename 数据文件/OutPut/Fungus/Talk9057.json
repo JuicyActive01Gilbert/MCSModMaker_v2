@@ -1,0 +1,345 @@
+{
+  "Name": "Talk9057",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2801.986,-1365.164)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "尝试破阵",
+      "Description": "尝试破阵",
+      "Position": "(-2969.163,-1139.97)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.If",
+          "Condition": "wudaoLV > 2"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "321(成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "322(失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 322,
+      "Name": "失败",
+      "Description": "失败",
+      "Position": "(-2968.11,-1062.531)",
+      "Commands": [
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此阵布置的颇为精妙，尽管花费了不少时间，但凭你对于布阵之道的粗浅认知实在难以破解此阵。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "如此一来，就只有尝试用蛮力破除阵法这一种方案了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Menu",
+          "Text": "使用蛮力",
+          "TargetBlockID": "this:315(使用蛮力)"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开此地",
+          "TargetBlockID": "this:309(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 329,
+      "Name": "破",
+      "Description": "破",
+      "Position": "(-3128.235,-1066.56)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你精准地毁掉阵眼，关闭阵法的运转，顺利进入了洞府。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2990.119,-1216.301)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "神识检测",
+      "Description": "神识检测",
+      "Position": "(-2989.105,-1294.582)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你谨慎地用神识扫过洞窟，并没有发现有人或妖兽的踪迹。你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "进去看看",
+          "TargetBlockID": "this:291(一探究竟)"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开此地",
+          "TargetBlockID": "this:309(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 321,
+      "Name": "成功",
+      "Description": "成功",
+      "Position": "(-3129.476,-1141.023)",
+      "Commands": [
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此阵布置的颇为精妙，好在你对于御阵之道颇有研究，很快便看出了其中门道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但即便能够破除阵法，布阵之人想必也可以立刻知晓此事，要冒此风险么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Menu",
+          "Text": "破阵！",
+          "TargetBlockID": "this:329(破)"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:309(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2800.268,-1292.911)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地看来是一处天然形成的洞窟，你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识探查",
+          "TargetBlockID": "this:290(神识检测)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "一探究竟",
+      "Description": "一探究竟",
+      "Position": "(-2794.303,-1204.781)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你刚一走进洞窟，没想到就激活了一处防御法阵。看来这里曾是哪位修士开辟的临时洞府，里面似乎没有人，但法阵灵力犹在，仍可以运转。你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Menu",
+          "Text": "尝试破阵",
+          "TargetBlockID": "this:314(尝试破阵)"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "使用蛮力",
+          "TargetBlockID": "this:315(使用蛮力)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开此地",
+          "TargetBlockID": "this:309(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "使用蛮力",
+      "Description": "使用蛮力",
+      "Position": "(-2783.188,-1062.088)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

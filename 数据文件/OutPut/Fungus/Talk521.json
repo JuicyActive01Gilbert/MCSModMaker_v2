@@ -1,0 +1,1045 @@
+{
+  "Name": "Talk521",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2805.59,-1414.771)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "305(对象赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-3350.48,-1161.882)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我对这件事情没有什么兴趣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 371,
+      "Name": "完成询问",
+      "Description": "完成询问",
+      "Position": "(-3090.169,-1405.609)",
+      "Commands": [
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，上次委托你的任务...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经完成了",
+          "TargetBlockID": "this:344(任务完成)"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经在做了",
+          "TargetBlockID": "this:354(继续)"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想放弃这件差事",
+          "TargetBlockID": "this:355(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 296,
+      "Name": "钱够",
+      "Description": "钱够",
+      "Position": "(-2942.694,-976.3882)",
+      "Commands": [
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "请！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 323,
+      "Name": "任务完成判定",
+      "Description": "任务完成判定",
+      "Position": "(-2950.355,-1347.125)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.IsNTaskCanFinish"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "wancheng == True"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "371(完成询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(任务未完成)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 427,
+      "Name": "钱够1",
+      "Description": "钱够1",
+      "Position": "(-2518.333,-971.147)",
+      "Commands": [
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "请！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "OpenLianQi"
+        }
+      ]
+    },
+    {
+      "ItemID": 321,
+      "Name": "任务开始判定",
+      "Description": "任务开始判定",
+      "Position": "(-2947.163,-1208.521)",
+      "Commands": [
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "323(任务完成判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "322(任务CD判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "放弃",
+      "Description": "放弃",
+      "Position": "(-3224.372,-1302.077)",
+      "Commands": [
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎...那我也只有另想办法了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.NTaskAbandon"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 381,
+      "Name": "炼器室",
+      "Description": "炼器室",
+      "Position": "(-2461.932,-1132.931)",
+      "Commands": [
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "租借一次房间需要30灵石，单次使用不限时长，要租借么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Menu",
+          "Text": "租借",
+          "TargetBlockID": "this:426(租借炼器室)"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:291(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 428,
+      "Name": "钱不够1",
+      "Description": "钱不够1",
+      "Position": "(-2394.963,-969.7771)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "没钱...呵呵，那可不行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "438(变量归零)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 344,
+      "Name": "任务完成",
+      "Description": "任务完成",
+      "Position": "(-3092.438,-1467.588)",
+      "Commands": [
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢道友。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "我想租借一间炼丹用的地火房",
+      "Description": "我想租借一间炼丹用的地火房",
+      "Position": "(-2838.555,-1126.284)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "租借一次房间需要30灵石，单次使用不限时长，要租借么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "租借",
+          "TargetBlockID": "this:290(租借)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:291(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 337,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-3354.126,-1210.631)",
+      "Commands": [
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这件事就交给我吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那就拜托道友了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.StartNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 426,
+      "Name": "租借炼器室",
+      "Description": "租借炼器室",
+      "Position": "(-2457.963,-1036.777)",
+      "Commands": [
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 30"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "427(钱够1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "428(钱不够1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "租借",
+      "Description": "租借",
+      "Position": "(-2872.694,-1042.018)",
+      "Commands": [
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 30"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "296(钱够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "297(钱不够)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "一级对话选项",
+      "Description": "一级对话选项",
+      "Position": "(-2804.043,-1213.082)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.If",
+          "Condition": "Avatar == 643"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想租借一间炼丹用的地火房",
+          "TargetBlockID": "this:286(我想租借一间炼丹用的地火房)"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想开启一间炼器室",
+          "TargetBlockID": "this:381(炼器室)"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:287(没有其它事了)"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Avatar == 644"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，何事？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想租借一间炼丹用的地火房",
+          "TargetBlockID": "this:286(我想租借一间炼丹用的地火房)"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想开启一间炼器室",
+          "TargetBlockID": "this:381(炼器室)"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:287(没有其它事了)"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，可以看看那边的告示牌。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "任务赋值",
+      "Description": "任务赋值",
+      "Position": "(-2379.607,-1441.986)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "Avatar == 632"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Avatar == 640"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Avatar == 643"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Avatar == 644"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 297,
+      "Name": "钱不够",
+      "Description": "钱不够",
+      "Position": "(-2810.694,-974.0183)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "没钱...呵呵，那可不行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "438(变量归零)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "任务询问",
+      "Description": "任务询问",
+      "Position": "(-3220.413,-1210.132)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.NTaskText"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们{$miaoshu}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:337(同意)"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:338(拒绝)"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于报酬",
+          "TargetBlockID": "this:375(奖励)"
+        }
+      ]
+    },
+    {
+      "ItemID": 331,
+      "Name": "暂无任务",
+      "Description": "暂无任务",
+      "Position": "(-3219.962,-1158.811)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这里暂时没有什么需要帮助的事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 345,
+      "Name": "任务未完成",
+      "Description": "任务未完成",
+      "Position": "(-3088.508,-1347.906)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，上次委托你的任务...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "已经在做了",
+          "TargetBlockID": "this:354(继续)"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想放弃这件差事",
+          "TargetBlockID": "this:355(放弃)"
+        }
+      ]
+    },
+    {
+      "ItemID": 375,
+      "Name": "奖励",
+      "Description": "奖励",
+      "Position": "(-3353.39,-1261.78)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.GetNTaskReward"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友若能完成这项委托，不仅能获得{$jiangli}，还能提升道友在此地的声望。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(任务询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 438,
+      "Name": "变量归零",
+      "Description": "变量归零",
+      "Position": "(-2648.963,-795.7771)",
+      "Commands": [
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "没有其它事了",
+      "Description": "没有其它事了",
+      "Position": "(-2456.943,-1209.493)",
+      "Commands": []
+    },
+    {
+      "ItemID": 291,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-2647.694,-969.0183)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "438(变量归零)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "对象赋值",
+      "Description": "对象赋值",
+      "Position": "(-2806.605,-1347.026)",
+      "Commands": [
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(我想租借一间炼丹用的地火房)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "381(炼器室)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(一级对话选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 322,
+      "Name": "任务CD判定",
+      "Description": "任务CD判定",
+      "Position": "(-3090.843,-1212.712)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.IsNTaskFinish"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.If",
+          "Condition": "CD == True"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "331(暂无任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(任务询问)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-3228.638,-1351.343)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "很好，那此事就拜托道友了，还请道友务必抓紧时间。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

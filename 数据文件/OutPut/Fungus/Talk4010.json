@@ -1,0 +1,561 @@
+{
+  "Name": "Talk4010",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2799.441,-1382.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(截杀判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 545,
+      "Name": "救人判断",
+      "Description": "救人判断",
+      "Position": "(-2798.441,-1246.619)",
+      "Commands": [
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "546(救人事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 5"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "546(救人事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(截杀对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "截杀判断",
+      "Description": "截杀判断",
+      "Position": "(-2798.489,-1319.196)",
+      "Commands": [
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie == 1"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 0"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.CheckJieSha"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.If",
+          "Condition": "JieSha == False"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "CmdSetJiaoHuNPC"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.If",
+          "Condition": "IsZhongYaoNPC == True"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "545(救人判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 503,
+      "Name": "要物品",
+      "Description": "要物品",
+      "Position": "(-2800.441,-1105.619)",
+      "Commands": [
+        {
+          "ItemID": 514,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Menu",
+          "Text": "花钱消灾",
+          "TargetBlockID": "this:512(给物品)"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Menu",
+          "Text": "以命相搏",
+          "TargetBlockID": "this:510(进入战斗)"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2641.889,-1319.41)",
+      "Commands": [
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 505,
+      "Name": "禾山要命",
+      "Description": "禾山要命",
+      "Position": "(-2637.441,-1173.619)",
+      "Commands": [
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "桀桀桀桀桀...又有新鲜的魂魄送上门来了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "510(进入战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 546,
+      "Name": "救人事件",
+      "Description": "救人事件",
+      "Position": "(-2640.41,-1249.681)",
+      "Commands": [
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "前方传来一阵剧烈的灵气波动与打斗声。显然，有什么人正在附近交手...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCType",
+          "StoryText": "你循着交战声走近，远远地便看到有两名修士正驱使着各种法宝打得不可开交。但显然，其中一方已经占尽上风，另一方则只能苦苦支撑，高下立判。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "住...住手！阁下不过是想些身外之物，在下双手奉上便是，阁下又何必非要赶尽杀绝！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哈哈哈哈，现在才想起求饶，是不是太晚了些。就区区这般实力，也敢与我相斗，简直不自量力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCType",
+          "StoryText": "那名散修又惊又恼，眼看便要命陨于此。你决定...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手相助",
+          "TargetBlockID": "this:562(救)"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Menu",
+          "Text": "赶紧避开",
+          "TargetBlockID": "this:563(不救)"
+        }
+      ]
+    },
+    {
+      "ItemID": 512,
+      "Name": "给物品",
+      "Description": "给物品",
+      "Position": "(-2963.441,-1107.619)",
+      "Commands": [
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.SendItemToNpc"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "桀桀桀...算你识相。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 563,
+      "Name": "不救",
+      "Description": "不救",
+      "Position": "(-2468.935,-1222.432)",
+      "Commands": [
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不想被卷入这场莫名的战斗中，连忙退走，找了一个隐蔽的角落敛息躲下。直到交战声慢慢消失才离开此地...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 579,
+      "Name": "特殊处理",
+      "Description": "特殊处理",
+      "Position": "(-2635.241,-1038.578)",
+      "Commands": [
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "对方衡量了一番，最终还是离开了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "截杀对话",
+      "Description": "截杀对话",
+      "Position": "(-2797.889,-1172.41)",
+      "Commands": [
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道极具攻击性的神识扫过，显然，你被什么人给盯上了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.If",
+          "Condition": "NPCType == 14"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "505(禾山要命)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "503(要物品)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 562,
+      "Name": "救",
+      "Description": "救",
+      "Position": "(-2469.967,-1291.504)",
+      "Commands": [
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 510,
+      "Name": "进入战斗",
+      "Description": "进入战斗",
+      "Position": "(-2799.441,-1036.619)",
+      "Commands": [
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.CheckNpcDeath"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "579(特殊处理)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

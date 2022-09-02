@@ -1,0 +1,702 @@
+{
+  "Name": "Talk8022",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2805.59,-1414.771)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(任务赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 381,
+      "Name": "保存妖兽-讲话-进战斗",
+      "Description": "保存妖兽-讲话-进战斗",
+      "Position": "(-3824.847,-1001.016)",
+      "Commands": [
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 751,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 599,
+      "Name": "任务完成-慢",
+      "Description": "任务完成-慢",
+      "Position": "(-3348.528,-986.2417)",
+      "Commands": [
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此地阵法的修复对你甚是困难，但凭你金丹期的见识还是花费不少时间勉强修复了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呼~~这阵法之道果然博大精深，我还是不是很擅长这类任务啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我已完成掌门交代的事宜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "恭送前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 775,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你离开时，听到远处执事的自言自语。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 773,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "也不知阵法有什么异变，此番长老竟花费了如此之久。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 399,
+      "Name": "任务状态判定",
+      "Description": "任务状态判定",
+      "Position": "(-2806.168,-1233.641)",
+      "Commands": [
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(一级对话选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(没有其它事了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 345,
+      "Name": "筑基",
+      "Description": "筑基",
+      "Position": "(-3800.801,-1108.97)",
+      "Commands": [
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXing == 1"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 2"
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 3"
+        },
+        {
+          "ItemID": 725,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 4"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXing == 5"
+        },
+        {
+          "ItemID": 729,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "我还有其他事要处理一下",
+      "Description": "我还有其他事要处理一下",
+      "Position": "(-2791.066,-1063.474)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "一级对话选项",
+      "Description": "一级对话选项",
+      "Position": "(-2922.09,-1159.019)",
+      "Commands": [
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "是来修缮阵法的长老大人？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:406(是的)"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有其他事要处理一下",
+          "TargetBlockID": "this:407(我还有其他事要处理一下)"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "任务赋值",
+      "Description": "任务赋值",
+      "Position": "(-2807.307,-1317.869)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "399(任务状态判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "是的",
+      "Description": "是的",
+      "Position": "(-3069.929,-1068.221)",
+      "Commands": [
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你开始着手修缮此地阵法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 772,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 771,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 776,
+          "CmdType": "Fungus.If",
+          "Condition": "TemWuDao == 0"
+        },
+        {
+          "ItemID": 780,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "599(任务完成-慢)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 777,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TemWuDao == 1"
+        },
+        {
+          "ItemID": 781,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "783(任务完成-一般)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 778,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 779,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "782(任务完成-快)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 782,
+      "Name": "任务完成-快",
+      "Description": "任务完成-快",
+      "Position": "(-3348.518,-1151.014)",
+      "Commands": [
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此地阵法的结构对你而言甚是简单，但数量繁多还是花费了一些时日。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此地阵法不过一些简单的聚灵、防御阵法，不过数量不少，倒也花费些时日。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 774,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "长老定是精通阵道的高手，短短十数日便完成了任务。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，我已完成掌门交代的事宜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 705,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "恭送前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "没有其它事了",
+      "Description": "没有其它事了",
+      "Position": "(-2692.577,-1148.102)",
+      "Commands": [
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "恭送前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 783,
+      "Name": "任务完成-一般",
+      "Description": "任务完成-一般",
+      "Position": "(-3348.533,-1070.333)",
+      "Commands": [
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此地阵法的修复对你而言不算容易，但仔细钻研一下还是完成了任务。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呼~以我的阵法修为，恰好足矣修缮此地阵法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我已完成掌门交代的事宜。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 643,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "恭送前辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

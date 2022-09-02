@@ -1,0 +1,1955 @@
+{
+  "Name": "Talk113",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2777.865,-1309.286)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(竹山宗-境界)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2925.541,-1307.033)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 390,
+      "Name": "炼气期",
+      "Description": "炼气期",
+      "Position": "(-2476.515,-1287.46)",
+      "Commands": [
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(竹山宗广场招新大会-判断1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 392,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2455.935,-1562.562)",
+      "Commands": [
+        {
+          "ItemID": 1014,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 1018,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1019,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 0"
+        },
+        {
+          "ItemID": 1020,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 1021,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1058,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1022,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "684(无事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1023,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 658,
+      "Name": "猎魔归来首次判定",
+      "Description": "猎魔归来首次判定",
+      "Position": "(-2189.213,-1409.357)",
+      "Commands": [
+        {
+          "ItemID": 681,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 682,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 685,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "683(首次猎魔归来对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 686,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 687,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "684(无事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 623,
+      "Name": "猎魔试炼首次判定",
+      "Description": "猎魔试炼首次判定",
+      "Position": "(-2049.643,-1347.07)",
+      "Commands": [
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "631(猎魔试炼首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "632(猎魔试炼后续对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 202,
+      "Name": "竹山宗广场招新大会-判断1",
+      "Description": "竹山宗广场招新大会-判断1",
+      "Position": "(-2324.676,-1283.847)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(宗门大比判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.HideNPC"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "325(竹山宗-门派招新问答-判断1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(宗门大比判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 434,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-1742.674,-1218.796)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 427,
+      "Name": "没有事件",
+      "Description": "没有事件",
+      "Position": "(-1893.999,-1221.242)",
+      "Commands": []
+    },
+    {
+      "ItemID": 364,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2465.437,-1204.388)",
+      "Commands": []
+    },
+    {
+      "ItemID": 689,
+      "Name": "猎魔试炼判定",
+      "Description": "猎魔试炼判定",
+      "Position": "(-2325.778,-1413.456)",
+      "Commands": [
+        {
+          "ItemID": 690,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 691,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 692,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "684(无事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 693,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 694,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "658(猎魔归来首次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2453.899,-1614.035)",
+      "Commands": []
+    },
+    {
+      "ItemID": 442,
+      "Name": "宗门大比判定",
+      "Description": "宗门大比判定",
+      "Position": "(-2078.397,-1281.977)",
+      "Commands": [
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 30"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "475(宗门大比1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year == 60"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "448(宗门大比2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year == 90"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "476(宗门大比3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "423(外门讲法判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 426,
+      "Name": "讲法事件",
+      "Description": "讲法事件",
+      "Position": "(-1742.455,-1278.47)",
+      "Commands": [
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你来到宗门广场，传功长老正在讲法，不少外门弟子也已经来到了这里。这场讲法预计会持续一个月的时间，你准备参加么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Menu",
+          "Text": "参加",
+          "TargetBlockID": "this:433(参加讲法)"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:434(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 272,
+      "Name": "打擂台",
+      "Description": "打擂台",
+      "Position": "(-2298.206,-1150.734)",
+      "Commands": [
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "诸位道友，今天是我们竹山宗招收入门弟子的第五天，诸位既然来到了这里，请务必听清在下所讲的每一句话，这将直接关系到诸位能否进入本门。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "凡是天灵根和双灵根资质道友，请先站到我身边来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 706,
+          "CmdType": "Fungus.If",
+          "Condition": "ZiZhi >= 60"
+        },
+        {
+          "ItemID": 707,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "705(天灵根)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 708,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "广场上一阵骚动，过了片刻，有两人在众人妒忌的眼神中走出了人群。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，不错...你们两个待会儿跟着那边的师兄去宗门大殿，待长老们亲自确认过你们的灵根资质，你们就可以直接成为我派的内门弟子了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "剩下的人只要能通过我们擂台的比试，一样可以成为我们竹山宗的外门弟子。今天的比试就由本门的首席弟子，李师兄来为大家主持。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "竟然能见到李青麟，这可是我宁州年青一代的翘楚，年纪轻轻就突破了炼气期成功筑基。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "是啊，若能结个善缘就更好了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "各位，此次擂台守擂的正是我竹山宗的外门弟子，大家可以自行上台挑战，如果获胜的话，就能成被招入门派。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "愿下次相见，与诸位同门相称。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "（老头儿，这守擂的人厉不厉害？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "台上这群人里，也就那个叫李青麟的，资质修为还算不错。嘿，剩下的人都是稀松平常的很。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "怎么样，要不要第一个上台挑战一下？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Menu",
+          "Text": "第一个上",
+          "TargetBlockID": "this:402(直接上)"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Menu",
+          "Text": "先观望观望",
+          "TargetBlockID": "this:401(先看看)"
+        }
+      ]
+    },
+    {
+      "ItemID": 401,
+      "Name": "先看看",
+      "Description": "先看看",
+      "Position": "(-2210.776,-1081.912)",
+      "Commands": [
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你没有急着上场，而是先在场下观望了几场。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.PlaySound"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那名竹山宗的守擂弟子，一身木系功法使得颇为熟练，前几名挑战者都被他的法术{color=#d0380a}缠绕{/color}住，动弹不得，很快便败下阵来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 235,
+          "AvatarBindKey": "",
+          "StoryText": "还有谁想上台挑战么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我来！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "261(SetStaticTalk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 261,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-2300.27,-989.91)",
+      "Commands": [
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "264(StartFight)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 448,
+      "Name": "宗门大比2",
+      "Description": "宗门大比2",
+      "Position": "(-2074.413,-1191.973)",
+      "Commands": [
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你来到宗门广场，擂台已经搭好，不少外门弟子三五成群地聚集于此，每三十年一次的宗门大比就要开始了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "427(没有事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "423(外门讲法判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 606,
+      "Name": "广场触发过判断",
+      "Description": "广场触发过判断",
+      "Position": "(-2187.005,-1350.332)",
+      "Commands": [
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == year"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "689(猎魔试炼判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "623(猎魔试炼首次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 657,
+      "Name": "还有事",
+      "Description": "还有事",
+      "Position": "(-1727.663,-1391.025)",
+      "Commands": []
+    },
+    {
+      "ItemID": 494,
+      "Name": "猎魔试炼时间",
+      "Description": "猎魔试炼时间",
+      "Position": "(-2326.565,-1350.367)",
+      "Commands": [
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.If",
+          "Condition": "month != 12"
+        },
+        {
+          "ItemID": 771,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 0"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "606(广场触发过判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "689(猎魔试炼判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "689(猎魔试炼判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 433,
+      "Name": "参加讲法",
+      "Description": "参加讲法",
+      "Position": "(-1583.617,-1279.061)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.AddEXP"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.AddWuDaoEx"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "参与外门讲法，修为+{color=#d0380a}500{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 751,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你对木之道的感悟略微提升了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.AddLingGuang"
+        }
+      ]
+    },
+    {
+      "ItemID": 632,
+      "Name": "猎魔试炼后续对话",
+      "Description": "猎魔试炼后续对话",
+      "Position": "(-1897.995,-1389.927)",
+      "Commands": [
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "宗门广场较往日热闹许多，大师兄像是在分发某样物品。他面前的修士排成长龙，放眼望去就连几位平日醉心修练的师兄弟也站在其中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，稍后便会有长老带我们一同前往天魔眼，你若无要事的话便可同我们一起出发。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有些事没办完",
+          "TargetBlockID": "this:657(还有事)"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.Menu",
+          "Text": "那便出发吧",
+          "TargetBlockID": "this:656(出发吧)"
+        }
+      ]
+    },
+    {
+      "ItemID": 423,
+      "Name": "外门讲法判定",
+      "Description": "外门讲法判定",
+      "Position": "(-1897.186,-1278.47)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 1006,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 30"
+        },
+        {
+          "ItemID": 1008,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "434(离开)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1009,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.If",
+          "Condition": "month == 7"
+        },
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "426(讲法事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "427(没有事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "427(没有事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "竹山宗-境界",
+      "Description": "竹山宗-境界",
+      "Position": "(-2627.225,-1310.363)",
+      "Commands": [
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "390(炼气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 667,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 668,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 669,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 670,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 671,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 672,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "392(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 673,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 674,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 675,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "393(元婴期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 676,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 677,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "394(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 475,
+      "Name": "宗门大比1",
+      "Description": "宗门大比1",
+      "Position": "(-2077.295,-1232.543)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你来到宗门广场，擂台已经搭好，不少外门弟子三五成群地聚集于此，每三十年一次的宗门大比就要开始了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "427(没有事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "423(外门讲法判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 656,
+      "Name": "出发吧",
+      "Description": "出发吧",
+      "Position": "(-1727.664,-1339.377)",
+      "Commands": [
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 679,
+          "CmdType": "Fungus.AvatarTransfer"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 683,
+      "Name": "首次猎魔归来对话",
+      "Description": "首次猎魔归来对话",
+      "Position": "(-2190.336,-1479.018)",
+      "Commands": [
+        {
+          "ItemID": 688,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 6"
+        },
+        {
+          "ItemID": 695,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 222,
+          "AvatarBindKey": "",
+          "StoryText": "噗嗤，那个猎魔试炼杀了{$TempValue}只魔的{shidi}回来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 697,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 223,
+          "AvatarBindKey": "",
+          "StoryText": "嘘，长老过来了，你声音小些。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 202,
+          "AvatarBindKey": "",
+          "StoryText": "唉，你这次猎魔试炼的表现实在一言难尽，有损我派颜面...此后可千万要勤加修炼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 700,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue >= 15"
+        },
+        {
+          "ItemID": 701,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 222,
+          "AvatarBindKey": "",
+          "StoryText": "快看！那就是上次在天魔眼被玄道宗长老称赞的{shidi}！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 223,
+          "AvatarBindKey": "",
+          "StoryText": "也不知他是怎么杀了那么多魔物的...居然比大师兄还多，要是我也能这么厉害就好了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "684(无事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 705,
+      "Name": "天灵根",
+      "Description": "天灵根",
+      "Position": "(-2464.687,-1151.624)",
+      "Commands": [
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "剩下的人只要能通过我们擂台的比试，一样可以成为我们竹山宗的外门弟子。今天的比试就由本门的首席弟子，李师兄来为大家主持。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 709,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "广场上一阵骚动，过了片刻，你和另外一人在众人妒忌的眼神中走出了人群。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你先来，把手放在晶石上，不要动。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你身前的那名修士听言便走上前去，把手放到晶石之上，晶石散发出一阵明亮的光芒。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 713,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，不错...你先去一旁候着，下一个！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 986,
+          "CmdType": "Fungus.setMenPai"
+        },
+        {
+          "ItemID": 1010,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 987,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 714,
+          "CmdType": "Fungus.If",
+          "Condition": "ZiZhi >= 80"
+        },
+        {
+          "ItemID": 715,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你走上前去，手刚一接触晶石，晶石便散发出刺眼的白光，比之前那人更亮上数倍。见此情景，台上台下顿时鸦雀无声。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 716,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天...天灵根！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 717,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "竟然是百年难得一遇的天灵根，大师兄，这...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "果然是天灵根，我派已有数百年没有招收到如此资质的弟子了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，剩下的入门比试便交给你来主持了，我先带这位小{shidi}去面见掌门师尊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 721,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 722,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你走上前去，也把手放到晶石之上，和之前那次一样，晶石发出一阵明亮的光芒。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 723,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，果然又有双灵根资质！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 724,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 233,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "两位{shidi}，你们便不必参加之后的擂台比试了，现在这里等候片刻，等比试结束，我再来找你们。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "没过多久，擂台上的比试便都结束了，那些来参加比试的其他人，竟没有一个人能在擂台上获得胜利。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 738,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "两位{shidi}，久等了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.Menu",
+          "Text": "比我想象中要快",
+          "TargetBlockID": "this:741(双灵根后续)"
+        },
+        {
+          "ItemID": 740,
+          "CmdType": "Fungus.Menu",
+          "Text": "没想到只有两个人通过",
+          "TargetBlockID": "this:741(双灵根后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 264,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-2294.229,-929.3081)",
+      "Commands": [
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 391,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2474.162,-1351.067)",
+      "Commands": [
+        {
+          "ItemID": 678,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "494(猎魔试炼时间)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 325,
+      "Name": "竹山宗-门派招新问答-判断1",
+      "Description": "竹山宗-门派招新问答-判断1",
+      "Position": "(-2328.012,-1206.435)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "272(打擂台)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "364(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 402,
+      "Name": "直接上",
+      "Description": "直接上",
+      "Position": "(-2380.068,-1083.029)",
+      "Commands": [
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你一个纵身便跃上擂台",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在下先来讨教一二！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 235,
+          "AvatarBindKey": "",
+          "StoryText": "请！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "261(SetStaticTalk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 741,
+      "Name": "双灵根后续",
+      "Description": "双灵根后续",
+      "Position": "(-2639.683,-1148.215)",
+      "Commands": [
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，{shidi}有所不知，其实已经有好些年没有人能够通过外门的擂台比试加入门派了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "那擂台之上的可是真正修习过竹山宗功法的外门弟子，又岂是寻常的散修能够战胜的。那些灵根资质稍差，却又能让我派破格收入门内的，自然要有自己的独到之处才行。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 213,
+          "AvatarBindKey": "",
+          "StoryText": "不说这些了，{shidi}刚入门，还有诸多事情要办。你们先带上我这块信物，去{color=#d0380a}神兵阁{/color}领取门派配属的符器和道袍，然后{color=#d0380a}再回来找我{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 983,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 984,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 985,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.setMenPai"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 745,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 631,
+      "Name": "猎魔试炼首次对话",
+      "Description": "猎魔试炼首次对话",
+      "Position": "(-1900.193,-1347.07)",
+      "Commands": [
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "宗门广场较往日热闹许多，大师兄像是在分发某样物品。他面前的修士排成长龙，放眼望去就连几位平日醉心修练的师兄弟也站在其中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看样子想和大师兄说上话要先排队才行了，不如乘机问一下前面的同门在此等候的目的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "站在你前方的人相貌老成，似乎应该称呼他师兄。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "",
+          "StoryText": "叫谁师兄呢？长得老也算是错吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "",
+          "StoryText": "别看我这副模样，其实我今年才25岁。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "“果然人无完人，天才也是会有缺陷的......”",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请问师弟，大家聚集于此是为了......？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "",
+          "StoryText": "{shixiong}可是刚历练结束？猎魔试炼不日开启，大师兄正在发放{color=#d0380a}天魔令{/color}给即将启程的弟子呢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "天魔令？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "",
+          "StoryText": "{shixiong}怎地甚也不知？这天魔令乃玄道宗所制，凡是进入天魔眼的各大门派弟子都必须携带，否则无法从试炼之地脱身。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "",
+          "StoryText": "玄道宗长老虽是元婴大能，也不可长时运作如此庞大的阵法。届时{shixiong}怀揣天魔令，便于玄道宗捕捉你的方位。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "",
+          "StoryText": "待{color=#d0380a}三十日{/color}期满，玄道宗长老法力恢复，即可将诸门派弟子传出天魔眼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这么说来，若天魔令丢失的话岂不是一辈子都要困在那里了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 225,
+          "AvatarBindKey": "",
+          "StoryText": "正如{shixiong}所言，这东西可得小心宝贝着，不然寻个机缘倒要搭上性命。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你二人相谈甚欢，只觉时间飞逝，很快就来到大师兄面前。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他递给你一块玉白色令牌，触手温润厚实，上面似有若无的灵力波动给人一种中正宁和之感。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 680,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "想必玄道宗正是通过这股灵气以感应天魔令持有者位置的吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "这便是天魔令，{FirstName}{shidi}切忌遗失，否则将迷失在试炼之地中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "稍后会有长老带队引领诸位师弟师妹前往天魔眼，{shidi}若无要事可一同出发。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有些事没办完",
+          "TargetBlockID": "this:657(还有事)"
+        },
+        {
+          "ItemID": 655,
+          "CmdType": "Fungus.Menu",
+          "Text": "那便出发吧",
+          "TargetBlockID": "this:656(出发吧)"
+        }
+      ]
+    },
+    {
+      "ItemID": 684,
+      "Name": "无事",
+      "Description": "无事",
+      "Position": "(-2327.933,-1481.447)",
+      "Commands": []
+    },
+    {
+      "ItemID": 394,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2453.583,-1660.374)",
+      "Commands": []
+    },
+    {
+      "ItemID": 476,
+      "Name": "宗门大比3",
+      "Description": "宗门大比3",
+      "Position": "(-2075.718,-1152.684)",
+      "Commands": [
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你来到宗门广场，擂台已经搭好，不少外门弟子三五成群地聚集于此，每三十年一次的宗门大比就要开始了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "427(没有事件)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "423(外门讲法判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

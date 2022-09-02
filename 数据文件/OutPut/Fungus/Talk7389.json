@@ -1,0 +1,314 @@
+{
+  "Name": "Talk7389",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2791.558,-1381.368)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(道侣判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "解除buff",
+      "Description": "解除buff",
+      "Position": "(-2791.903,-1201.13)",
+      "Commands": [
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阵法好像有些变化。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，阵法空间没那么昏暗了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 1169,
+      "Name": "完美线阵破剧情",
+      "Description": "完美线阵破剧情",
+      "Position": "(-3012.88,-1269.619)",
+      "Commands": [
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只听轰的一声，尔后便是有什么碎裂开来，原本阵法空间中充斥着的哀嚎悲啸尽是消融，满眼的昏暗也是自东北向西南退却而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1176,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阵法好像被解除了，好厉害。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们快去找正主吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只听轰的一声，尔后便是有什么碎裂开来，原本阵法空间中充斥着的哀嚎悲啸尽是消融，满眼的昏暗也是自东北向西南退却而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阵法好像被解除了，好厉害。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们快去找正主吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "道侣判定",
+      "Description": "道侣判定",
+      "Position": "(-2791.902,-1292.895)",
+      "Commands": [
+        {
+          "ItemID": 1162,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1136,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 5"
+        },
+        {
+          "ItemID": 1154,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 6"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(解除buff)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1141,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1143,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 5"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= 6"
+        },
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1151(解除debuff)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1156,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1147,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 1148,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1152(柳红鸾战死)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 7"
+        },
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1169(完美线阵破剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1150,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1151,
+      "Name": "解除debuff",
+      "Description": "解除debuff",
+      "Position": "(-2602.649,-1292.347)",
+      "Commands": [
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阵法好像有些变化。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1163,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，尖啸声减弱了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 1152,
+      "Name": "柳红鸾战死",
+      "Description": "柳红鸾战死",
+      "Position": "(-3014.017,-1317.347)",
+      "Commands": [
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "之前感应到的战斗波动好像停下了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "糟了...宫主恐怕已经...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

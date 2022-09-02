@@ -1,0 +1,458 @@
+{
+  "Name": "Talk7362",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(生死)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 309,
+      "Name": "不予理睬",
+      "Description": "不予理睬",
+      "Position": "(-2638.989,-1169.075)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你闭目养神，并不理睬此人的挑衅。那唐平自感无趣，冷哼一声，也不再说什么了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "325(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "神识威慑",
+      "Description": "神识威慑",
+      "Position": "(-2794.283,-1165.545)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi < 80"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuzi",
+          "StoryText": "你暗自凝聚一道神识向唐平刺去，却不料他似早有准备一般，将你的攻击弹了回来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuzi",
+          "StoryText": "你闷哼一声，没想到此人修为如此高深，只是暗中的角力便已让你吃了大亏。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tangping",
+          "StoryText": "哼，不自量力。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuzi",
+          "StoryText": "你暗自凝聚一道神识向唐平刺去，只见那唐平霎时间面色铁青，一个踉跄险些跌倒在地，神色惊恐的望着你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "325(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "生死",
+      "Description": "生死",
+      "Position": "(-2795.842,-1238.928)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuzi",
+          "StoryText": "吴长老，我们到了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wusihai",
+          "StoryText": "哈哈哈，{FirstName}供奉。来这里少坐片刻，我已派人通知唐家，想必他们很快便到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "wuzi",
+          "StoryText": "山清水秀，一览无余，好景色。只是真没想到生死比试会选在这种地方进行。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "bailingbing",
+          "StoryText": "四海兄，看来这位道友便是你新找来的帮手吧。能让你看上的，想必修为不俗，这次的比试我可是很期待哟。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wusihai",
+          "StoryText": "白长老可真是无事一身轻啊，可惜比试规定长老会的成员不得亲自参加，否则老夫倒是想亲自会会那唐家小辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tanglianfeng",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tangping",
+          "StoryText": "吴四海，你若是手痒，我来做你的对手。不过今日是小辈间的比试，咱们这些长老堂的老骨头们就别凑这个热闹了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuqingyun",
+          "StoryText": "不错，生死比试历来是我们碎星商会革新与传承的手段。人的寿元终究有限，早晚有一日，坐在我们现在位置上的会是这些小辈。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "bailingbing",
+          "StoryText": "见过会长。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wusihai",
+          "StoryText": "...见过会长。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tangping",
+          "StoryText": "噢？这位道友倒是面生的很，怎么，吴四海，这就是你找来的救兵？看来你们吴家的那些小辈们是一个拿得出手的也没有啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tangping",
+          "StoryText": "{xiaozi}，我不清楚那吴四海给你许诺了什么报酬，不过，我劝你还是不要趟这趟浑水，白白送死的好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tangping",
+          "StoryText": "那唐平瞥了你一眼，言语讥讽，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "放狠话",
+          "TargetBlockID": "this:307(放狠话)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识威慑",
+          "TargetBlockID": "this:308(神识威慑)"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "不予理睬",
+          "TargetBlockID": "this:309(不予理睬)"
+        }
+      ]
+    },
+    {
+      "ItemID": 325,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2796.635,-1080.839)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuqingyun",
+          "StoryText": "好了诸位，口舌之争便免去了吧。既然人已到齐，那么我就先说几句。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuqingyun",
+          "StoryText": "我们碎星商会创建之初，只不过是这无尽之海上极为不起眼的一个小商会罢了。当年靠着百里家与我们吴家数代人的努力，才慢慢发展壮大。但若是没有后来唐家与白家的加入，我们定然不可能成为这广阔海域上最大的商会组织。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuqingyun",
+          "StoryText": "这生死比试的规矩，是当年百里家的前辈定下的。想要在无尽之海上生存，最有效的永远是力量，商会不可能交给软弱之人掌控。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuqingyun",
+          "StoryText": "我并不反对唐家对我发起挑战，但无论今日比试胜负如何，我必须提醒诸位，仔细想一想什么才是我们商会的立足之本。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tangping",
+          "StoryText": "吴会长，这些话就留到比试结束以后再说吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuqingyun",
+          "StoryText": "好，比试也差不多该开始了，下面就按规矩，请代表唐家和长老堂出战的两位道友上场吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tanglianfeng",
+          "StoryText": "初次见面，不清楚你的实力，所以我不会留手。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "tanglianfeng",
+          "StoryText": "既然你会被吴家选中，想必有些本事，日后由我们唐家主管商会，也会重用你这样的人。早些认输，我会尽量保你不死。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "放狠话",
+      "Description": "放狠话",
+      "Position": "(-2944.87,-1170.25)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "wuzi",
+          "StoryText": "到底是谁送死可不一定，一切用实力说话，我劝道友还是不要太早下结论的好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wuzi",
+          "StoryText": "见你出言反驳，唐平冷哼一声，也不再多说什么了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "325(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

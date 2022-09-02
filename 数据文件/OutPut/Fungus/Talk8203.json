@@ -1,0 +1,567 @@
+{
+  "Name": "Talk8203",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3229.157,-1370.044)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你踏上这片岛屿后便听到远处传来激烈的打斗声，询声望去灿金与赤红灵气战成一片，煞是灿烂。想来是道法高深的金系修士与火系修士于此开战，你决定...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Menu",
+          "Text": "过去看看",
+          "TargetBlockID": "this:349(过去看看)"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:350(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 421,
+      "Name": "迅速离开",
+      "Description": "迅速离开",
+      "Position": "(-2624.731,-1319.998)",
+      "Commands": [
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你趁对方还没发现你，迅速催动遁术离开了此地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 367,
+      "Name": "暴露",
+      "Description": "暴露",
+      "Position": "(-2830.731,-1484.998)",
+      "Commands": [
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看来那两人已经发现了你的存在，只是一时抽不出时间对付你，你准备...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Menu",
+          "Text": "趁乱离开",
+          "TargetBlockID": "this:393(趁乱离开)"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Menu",
+          "Text": "再看一阵",
+          "TargetBlockID": "this:394(再看一阵)"
+        }
+      ]
+    },
+    {
+      "ItemID": 349,
+      "Name": "过去看看",
+      "Description": "过去看看",
+      "Position": "(-3045.447,-1426.276)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你放低身形，尽可能小心地向着打斗的方向前进。穿过层层树丛后你隐约见到前方闪烁的剑光，这片植物后大概就是二人的交战地。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你心中一喜，急忙拨开植物向前探查，此时两股强劲的神识向你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi <= 24"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你感受到两股强大的神识碾过你的识海，一瞬间猛烈的剧痛侵占了你的意识，你眼前一黑，晕了过去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你感受到两股神识无情地碾过你的识海，幸好你修为强盛，这两人的神识并未对你造成什么影响。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "367(暴露)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你感受到两股不弱的神识波动扫遍四周，所幸你的神识要高于这二人，他们并没有发现你的存在。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "两人相战正酣，只当是岛上灵兽拨弄树丛发出了声响，并没太过放在心上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "368(未暴露)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 422,
+      "Name": "攻其不备",
+      "Description": "攻其不备",
+      "Position": "(-2429.731,-1378.998)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "经过方才的观战，你对此人的实力已有所了解。盘算一番后，你决定趁对方灵力较弱时将他斩于马下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "与其被动等待倒不如主动出击，想到这一点，你冲出丛林向对方发起进攻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 368,
+      "Name": "未暴露",
+      "Description": "未暴露",
+      "Position": "(-2829.731,-1381.998)",
+      "Commands": [
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID >= 3"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见那使用火灵气的修士灵活地避过一道金刃，四周的火灵气似浪涛般向其右掌奔涌而去。那修士掌中霎时红光大盛，由火灵气组成的巨型手掌似凝实的火焰般朝对手攻去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你盯着那手掌，其中暴戾的灵气似是受了什么制约才凝成这般形状。你本就对火之道有所苦修，如今这神通更是令你对其的领悟更深一层。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "习得：烈火掌",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见那使用火灵气的修士挥手便是一道熊熊烈焰组成的手掌向对方袭去，这攻击来势汹汹，迅猛万分。你虽不晓得其中门道，却也不禁暗叹一声好掌法！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID >= 3"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而使用金灵气的修士不知用了什么神通生生抗住了烈火掌的攻击，闪身便是几道凌厉的金光击打在对方的灵气护罩上。原本结实牢靠的护罩在接连的攻击下泛起猛烈的灵气波动，几息之间便化作点点灵光消散在空气中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这攻击同时给你的金之道带来了无尽的启迪，你在其中似乎摸到了些许对抗灵气护罩的独到方式。你屏息牢记这一神通，打算之后再细细研习。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "习得：千钧斩",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而使用金灵气的修士也不落其下，道道金光击打在另一方的灵气护罩上，激起层层猛烈的灵气波动，那护罩几息之间便碎裂开来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不消多时那火系修士便落于下风，殒命于几道乱刃下。取胜的金系修士此时已开始落座调息，你要...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Menu",
+          "Text": "迅速离开",
+          "TargetBlockID": "this:421(迅速离开)"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Menu",
+          "Text": "攻其不备",
+          "TargetBlockID": "this:422(攻其不备)"
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "再看一阵",
+      "Description": "再看一阵",
+      "Position": "(-2626.731,-1442.998)",
+      "Commands": [
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你对他们的威胁不以为意，依旧藏身丛林中窥探着他们的斗法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID >= 3"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见那使用火灵气的修士灵活地避过一道金刃，四周的火灵气似浪涛般向其右掌奔涌而去。那修士掌中霎时红光大盛，由火灵气组成的巨型手掌似凝实的火焰般朝对手攻去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你盯着那手掌，其中暴戾的灵气似是受了什么制约才凝成这般形状。你本就对火之道有所苦修，如今这神通更是令你对其的领悟更深一层。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "习得：烈火掌",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见那使用火灵气的修士挥手便是一道熊熊烈焰组成的手掌向对方袭去，这攻击来势汹汹，迅猛万分。你虽不晓得其中门道，却也不禁暗叹一声好掌法！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.If",
+          "Condition": "MonsterID >= 3"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而使用金灵气的修士不知用了什么神通生生抗住了烈火掌的攻击，闪身便是几道凌厉的金光击打在对方的灵气护罩上。原本结实牢靠的护罩在接连的攻击下泛起猛烈的灵气波动，几息之间便化作点点灵光消散在空气中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "这攻击同时给你的金之道带来了无尽的启迪，你在其中似乎摸到了些许对抗灵气护罩的独到方式。你屏息牢记这一神通，打算之后再细细研习。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "习得：千钧斩",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.LearningSkill"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "而使用金灵气的修士也不落其下，道道金光击打在另一方的灵气护罩上，激起层层猛烈的灵气波动，那护罩几息之间便碎裂开来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不消多时那火系修士便落于下风，殒命于几道乱刃下。取胜的金系修士此时已开始寻找你的踪迹，你要...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Menu",
+          "Text": "迅速离开",
+          "TargetBlockID": "this:421(迅速离开)"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Menu",
+          "Text": "攻其不备",
+          "TargetBlockID": "this:422(攻其不备)"
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "趁乱离开",
+      "Description": "趁乱离开",
+      "Position": "(-2626.731,-1546.061)",
+      "Commands": []
+    },
+    {
+      "ItemID": 350,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-3041.231,-1315.998)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

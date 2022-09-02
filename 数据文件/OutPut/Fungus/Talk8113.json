@@ -1,0 +1,1250 @@
+{
+  "Name": "Talk8113",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1381.267)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1400(npc性格获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1176,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2617.01,-1217.32)",
+      "Commands": [
+        {
+          "ItemID": 1406,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1525,
+      "Name": "暴躁",
+      "Description": "暴躁",
+      "Position": "(-2792.56,-1065.016)",
+      "Commands": [
+        {
+          "ItemID": 1577,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你回到客栈，{$NpcName}果然还在此处焦急地等你的消息。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1578,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "感受到你的出现后，他急不可耐地迎了上来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1579,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}，可有找到{$CaiLiaoName}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1580,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1581,
+          "CmdType": "Fungus.ItemCheckVar"
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你拿出储物袋里的3份{$CaiLiaoName}，毫不犹豫地交给了{$NpcName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1584,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1585,
+          "CmdType": "Fungus.ItemRemoveVar"
+        },
+        {
+          "ItemID": 1586,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{Xiao}，最重要的材料找到了，等我炼完法宝非得揍他一顿不可。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1589,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1590,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1591,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1592,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "多谢{FirstName}{$NickName}，这是说好的报酬，尽管拿去吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1594,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我就不推辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1598,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{Xiao}，给我等着。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1599,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不等你回应，{NpcName}就已满脸兴奋地离开了客栈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1600,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1601,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1602,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1603,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1604,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你面有难色的看向他，后者脸色也是一变。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "没能拿到么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你当然不会说出拿到的{$CaiLiaoName}已经被你另作他用的事实。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1607,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我赶到那妖兽洞穴时，已经不见{$CaiLiaoName}踪影，抱歉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1608,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "竟被人捷足先登了...别让我找到是谁夺我仙缘，不然，哼！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 8"
+        },
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "竟被人捷足先登了...别让我找到是谁夺我仙缘，不然，哼！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "不等你再说什么，{$NpcName}已然是愤然离开客栈，不知去往何处了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1617,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "算了算了，我还是先去其他地方找所需的炼器材料吧，这种事生气也没用。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我便先告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "再见。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "待你回应后，{NpcName}迅速离开客栈，不知往何处寻觅炼器材料去了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1611,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1612,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1613,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1398,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2791.911,-1216.014)",
+      "Commands": [
+        {
+          "ItemID": 1401,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1402,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 1403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1404,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1176(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1199,
+      "Name": "阴险，稳重",
+      "Description": "阴险，稳重",
+      "Position": "(-2928.588,-1065.663)",
+      "Commands": [
+        {
+          "ItemID": 1409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你回到客栈，{$NpcName}果然正在此处焦急地等你的消息，全无平时稳重的样子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1485,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "直到感知到你的气息，他才勉强装出一副云淡风轻的样子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1486,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}，可有找到{$CaiLiaoName}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1488,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1487,
+          "CmdType": "Fungus.ItemCheckVar"
+        },
+        {
+          "ItemID": 1489,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 1490,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你拿出储物袋里的3份{$CaiLiaoName}，毫不犹豫地交给了{$NpcName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1501,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1500,
+          "CmdType": "Fungus.ItemRemoveVar"
+        },
+        {
+          "ItemID": 1491,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这边只差....",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1536,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "后者也是喜形于色，但旋即转为微笑并看向你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "啊抱歉，一时兴奋差点怠慢了{FirstName}{$NickName}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1493,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1496,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1494,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1495,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，{FirstName}{$NickName}不用跟{$ZaiXia}客气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我就不推辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我只需要两份，还有一份{FirstName}{$NickName}自己留着吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1502,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 1503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "也好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我还要去寻找其他的炼器材料，就先告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "再见。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1506,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1507,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1508,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1509,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你面有难色的看向他，后者脸色也是一变。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "没能拿到么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1512,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你当然不会说出拿到的{$CaiLiaoName}已经被你另作他用的事实。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我赶到那妖兽洞穴时，已经不见{$CaiLiaoName}踪影，抱歉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，只怪我与它无缘吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我还得去其他地方寻找炼器材料，就不多叨扰道友了，告辞！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "说罢，他已是阴沉着脸缓步离去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1517,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1518,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1519,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1520,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1399,
+      "Name": "基类",
+      "Description": "基类",
+      "Position": "(-2655.465,-1065.813)",
+      "Commands": [
+        {
+          "ItemID": 1537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你回到客栈，{$NpcName}果然还在此处等你的消息，与之前没有太多的差别。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "感受到你的出现后，他面带微笑地迎了上来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "{FirstName}{$NickName}，可有找到{$CaiLiaoName}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1540,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1541,
+          "CmdType": "Fungus.ItemCheckVar"
+        },
+        {
+          "ItemID": 1542,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 1543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你拿出储物袋里的3份{$CaiLiaoName}，毫不犹豫地交给了{$NpcName}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1544,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1545,
+          "CmdType": "Fungus.ItemRemoveVar"
+        },
+        {
+          "ItemID": 1546,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "太好了，所差的材料不多了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1547,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "后者也是喜形于色并毫不掩饰地用眼神向你表示感谢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1548,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "多谢{FirstName}{$NickName}，若不是有你帮忙我还不知道该怎么办才好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1549,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 1550,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1551,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 1552,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 1575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "这是说好的报酬，{FirstName}{$NickName}请收下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1554,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我就不推辞了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我只需要两份，还有一份{FirstName}{$NickName}自己留着吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1556,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 1557,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "也好。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1558,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我还要去寻找其他的炼器材料，就先告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "再见。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1560,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1561,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1562,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1563,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你面有难色的看向他，后者脸色也是一变。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1565,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "没能拿到么...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1566,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "你当然不会说出拿到的{$CaiLiaoName}已经被你另作他用的事实。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1567,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "我赶到那妖兽洞穴时，已经不见{$CaiLiaoName}踪影，抱歉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1568,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "唉，此事常有发生，只怪我与它无缘吧，{FirstName}{$NickName}无须自责。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "那我得抓紧去其他地方寻找炼器材料了，就先告辞了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1570,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "抱歉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1576,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "cyNpcId",
+          "StoryText": "他向你点点头，而后离开了客栈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1571,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1572,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 1573,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 1574,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2791.903,-1144.034)",
+      "Commands": [
+        {
+          "ItemID": 1223,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 2"
+        },
+        {
+          "ItemID": 1410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1407,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1225,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1408,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1523,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 12"
+        },
+        {
+          "ItemID": 1522,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1524,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1199(阴险，稳重)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1529,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 4"
+        },
+        {
+          "ItemID": 1530,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1531,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1525(暴躁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1526,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "npcXingGe == 8"
+        },
+        {
+          "ItemID": 1527,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1528,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1525(暴躁)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1447,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1399(基类)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1227,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 1400,
+      "Name": "npc性格获取",
+      "Description": "npc性格获取",
+      "Position": "(-2793.122,-1305.089)",
+      "Commands": [
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1231,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1230,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1185,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1521,
+          "CmdType": "CmdGetNPCFaceJson"
+        },
+        {
+          "ItemID": 1263,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1455,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1456,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1622,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1457,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1465,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1480,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1458,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1475,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1466,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1481,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1460,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1467,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1482,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1461,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1468,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1483,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1462,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1469,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1484,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1463,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "NPC类型出错",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1459,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1184,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1181,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1327,
+          "CmdType": "Fungus.If",
+          "Condition": "npcXingGe == 11"
+        },
+        {
+          "ItemID": 1331,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1328,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1329,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1398(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

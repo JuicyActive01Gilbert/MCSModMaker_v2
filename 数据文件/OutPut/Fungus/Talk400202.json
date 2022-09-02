@@ -1,0 +1,941 @@
+{
+  "Name": "Talk400202",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "899(触发判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 898,
+      "Name": "普通地阶",
+      "Description": "普通地阶",
+      "Position": "(-2730.022,-893.0306)",
+      "Commands": [
+        {
+          "ItemID": 1000,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 941,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 942,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 943,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 944,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 945,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 946,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 947,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 948,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 949,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 950,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 951,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 952,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 953,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 954,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 955,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 582,
+      "Name": "不传之秘",
+      "Description": "不传之秘",
+      "Position": "(-3051.348,-1024.747)",
+      "Commands": [
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 883,
+          "CmdType": "Fungus.If",
+          "Condition": "天阶不传之秘 == 0"
+        },
+        {
+          "ItemID": 884,
+          "CmdType": "Fungus.Menu",
+          "Text": "天阶不传之秘",
+          "TargetBlockID": "this:730(天阶不传之秘)"
+        },
+        {
+          "ItemID": 885,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 843,
+          "CmdType": "Fungus.If",
+          "Condition": "地阶不传秘籍 == 0"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.Menu",
+          "Text": "地阶不传之秘",
+          "TargetBlockID": "this:585(地阶)"
+        },
+        {
+          "ItemID": 844,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.Menu",
+          "Text": "返回",
+          "TargetBlockID": "this:553(选择)"
+        }
+      ]
+    },
+    {
+      "ItemID": 906,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2562.81,-1260.247)",
+      "Commands": [
+        {
+          "ItemID": 1007,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 623,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2554.424,-1102.857)",
+      "Commands": [
+        {
+          "ItemID": 1008,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 896,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友不必远送，有机会还会再来的，哈哈哈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1010,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1011,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "也没什么好东西，今日就算卖{$shili}个面子吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1009,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 973,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将{$shili}秘籍几乎洗劫一空后，在一众敢怒不敢言的修士注视下，满足的离开了。至于之后{$shili}作何反应，那也不是你想关心的了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 895,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 586,
+      "Name": "人阶",
+      "Description": "人阶",
+      "Position": "(-2555.375,-958.6932)",
+      "Commands": [
+        {
+          "ItemID": 882,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1001,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 956,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 957,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 972,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 959,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 960,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 971,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 962,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 963,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 970,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 965,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 966,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 969,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 968,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 881,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 892,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "581(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 585,
+      "Name": "地阶",
+      "Description": "地阶",
+      "Position": "(-2797.105,-954.754)",
+      "Commands": [
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.If",
+          "Condition": "不传判定 == 1"
+        },
+        {
+          "ItemID": 887,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 888,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "897(不传地阶)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 890,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 891,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "898(普通地阶)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 553,
+      "Name": "选择",
+      "Description": "选择",
+      "Position": "(-2796.329,-1103.143)",
+      "Commands": [
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.Menu",
+          "Text": "不传之秘",
+          "TargetBlockID": "this:582(不传之秘)"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.Menu",
+          "Text": "普通秘籍",
+          "TargetBlockID": "this:581(普通)"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:623(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 581,
+      "Name": "普通",
+      "Description": "普通",
+      "Position": "(-2796.702,-1026.716)",
+      "Commands": [
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 847,
+          "CmdType": "Fungus.If",
+          "Condition": "地阶普通秘籍 == 0"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.Menu",
+          "Text": "地阶",
+          "TargetBlockID": "this:585(地阶)"
+        },
+        {
+          "ItemID": 848,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 879,
+          "CmdType": "Fungus.If",
+          "Condition": "人阶普通秘籍 == 0"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.Menu",
+          "Text": "人阶",
+          "TargetBlockID": "this:586(人阶)"
+        },
+        {
+          "ItemID": 880,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.Menu",
+          "Text": "返回",
+          "TargetBlockID": "this:553(选择)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "npc门派判定",
+      "Description": "npc门派判定",
+      "Position": "(-2796.69,-1211.053)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 913,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1002,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 914,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1003,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 915,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1004,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 916,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1005,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 917,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1006,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "298(npc设置)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 298,
+      "Name": "npc设置",
+      "Description": "npc设置",
+      "Position": "(-2796.162,-1150.358)",
+      "Commands": [
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哼，这便是我{$shili}的全部神通功法了，自行取阅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "（每选取一本秘籍会导致对应程度的声望下降）",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "553(选择)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 897,
+      "Name": "不传地阶",
+      "Description": "不传地阶",
+      "Position": "(-2869.365,-894.6699)",
+      "Commands": [
+        {
+          "ItemID": 999,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 926,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 927,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 928,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 929,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 930,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 931,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 932,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 933,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 934,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 935,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 936,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 937,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 938,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 939,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 940,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 730,
+      "Name": "天阶不传之秘",
+      "Description": "天阶不传之秘",
+      "Position": "(-3051.786,-955.4888)",
+      "Commands": [
+        {
+          "ItemID": 873,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 998,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 908,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 924,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 925,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 909,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 920,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 921,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 911,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 922,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 923,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 910,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 918,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 919,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 912,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 780,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "582(不传之秘)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 899,
+      "Name": "触发判定",
+      "Description": "触发判定",
+      "Position": "(-2797.239,-1260.246)",
+      "Commands": [
+        {
+          "ItemID": 985,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 986,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 987,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 989,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 988,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 990,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 995,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 996,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 993,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 994,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 991,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 992,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 997,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 900,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 903,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(npc门派判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 901,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 907,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "906(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 902,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,271 @@
+{
+  "Name": "Talk4024",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 1463,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(境界判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1648,
+      "Name": "跳转回交互talk",
+      "Description": "跳转回交互talk",
+      "Position": "(-2425.233,-1070.492)",
+      "Commands": [
+        {
+          "ItemID": 1491,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1492,
+          "CmdType": "CmdWarpToNPCJiaoHuTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 1466,
+      "Name": "不知情",
+      "Description": "不知情",
+      "Position": "(-2289.029,-1135.719)",
+      "Commands": [
+        {
+          "ItemID": 1473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我在古籍中看到了有关古代城池遗迹的记载，这遗迹...应该就在宁州，道友可曾听说过？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1470,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "古代城池遗迹？我还从未听说过宁州有这样的地方。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1652,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1465,
+      "Name": "知情",
+      "Description": "知情",
+      "Position": "(-2567.437,-1137.992)",
+      "Commands": [
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1488,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我在古籍中看到了有关古代城池遗迹的记载，这遗迹...应该就在宁州，你可曾听说过？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "古代城池遗迹...莫非{$TmpTalkString}说的是那古原城？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "古原城？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "嗯...要说起这古原城嘛，就得从一万年前宁州的那场正魔大战说起了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "当年魔道入侵宁州，目标直指作为宁州第一大城的古原城，在那里发生了一场规模浩荡的大战，连化神老祖都参与其中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "由于战斗过于激烈，以至于产生了恐怖的空间裂隙，最终连同整座古原城一起，都被卷到了另外一片位面。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1480,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "另外一片位面？那要如何才能进入这座古迹？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1481,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "由于战斗过于激烈，以至于产宁州古迹如今已经陷入空间裂隙之中，要想进入那片空间，唯有趁{color=#d0380a}千年{/color}一次空间壁障薄弱时强行闯入。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "按往年的记录，这薄弱之处往往会出现在{color=#d0380a}岫络谷{/color}的附近。此时修为高深者便可尝试强行穿越这空间壁垒，从而进入古迹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "整座城池都被卷入另外一处位面，真是闻所未闻...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1485,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "哈哈哈，我虽然也未曾进入过这古迹。不过听闻每次古迹开启之时，宁州各地{color=#d0380a}元婴期{/color}以上修为的修士大都会进入探索一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "这万年来不知有多少奇珍异宝和传承功法在宁州失传，恐怕也只有进入宁州古迹之中才有可能寻到。如此机缘，各大门派当然不会错过。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1486,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npcid",
+          "StoryText": "多谢指点。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1487,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 1489,
+          "CmdType": "CmdJianLingUnlockXianSuo"
+        },
+        {
+          "ItemID": 1649,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1648(跳转回交互talk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "境界判定",
+      "Description": "境界判定",
+      "Position": "(-2422.102,-1138.684)",
+      "Commands": [
+        {
+          "ItemID": 1474,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1464,
+          "CmdType": "Fungus.If",
+          "Condition": "Level > 6"
+        },
+        {
+          "ItemID": 1467,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1465(知情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1468,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1469,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1466(不知情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

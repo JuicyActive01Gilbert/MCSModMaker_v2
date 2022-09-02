@@ -1,0 +1,678 @@
+{
+  "Name": "Talk8035",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2805.59,-1414.771)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "308(任务赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 625,
+      "Name": "传音提醒",
+      "Description": "传音提醒",
+      "Position": "(-2937.418,-908.0978)",
+      "Commands": [
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "炼器之道，需脚踏实地切记不可冒进，不然下一次就没有我帮你啦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢长老~",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，我作为炼器长老也是分内之事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "640(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 399,
+      "Name": "任务状态判定",
+      "Description": "任务状态判定",
+      "Position": "(-2809.293,-1236.302)",
+      "Commands": [
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(一级对话选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(没有其它事了)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 624,
+      "Name": "高声呵斥",
+      "Description": "高声呵斥",
+      "Position": "(-3183.995,-910.8376)",
+      "Commands": [
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "炼器之道，怎可冒进？器毁之时自己身死也就罢了，殃及同门何其罪过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "弟子知错，多谢长老出手相救。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，我作为炼器长老也是分内之事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "继续吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "CmdAddFavor"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "640(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "我还要准备一下",
+      "Description": "我还要准备一下",
+      "Position": "(-2791.066,-1063.474)",
+      "Commands": []
+    },
+    {
+      "ItemID": 539,
+      "Name": "开会",
+      "Description": "开会",
+      "Position": "(-3064.973,-978.6708)",
+      "Commands": [
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "本门炼器大会既是为了精进门下弟子炼器之道，也是为了补充宗门制式法器。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "一会我会在台上炼制法宝做示范，你们跟着我一步步来炼制法器、符器，宗门资源来之不易，切记不要出了差错。明白么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "“是，长老”台下众弟子应和道。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "说罢，你便起火热炉，火焰如你身体的延续一般如臂使指，一件件材料迅速的融化开来凝聚成器胚。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此时成器不过是时间问题，你便开始留心台下弟子的情况。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "台下弟子多数还在融化材料，不过他们其中有人得心应手也有的手忙脚乱。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你看到一名弟子刚刚完成了器胚，但她此时满头大汗，材料融化而成的器胚中灵力几近失控，显然是她私自修改了配方想要炼制法宝但自己又不能控制住器胚的灵力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你单手一掐法诀，帮她控制住了器胚中的能量。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只见她长舒一口气。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呼~",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Menu",
+          "Text": "高声呵斥",
+          "TargetBlockID": "this:624(高声呵斥)"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.Menu",
+          "Text": "传音提醒",
+          "TargetBlockID": "this:625(传音提醒)"
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "一级对话选项",
+      "Description": "一级对话选项",
+      "Position": "(-2916.611,-1163.128)",
+      "Commands": [
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{shixiong}要开始炼器大会么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:406(是的)"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还要准备一下",
+          "TargetBlockID": "this:407(我还要准备一下)"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "任务赋值",
+      "Description": "任务赋值",
+      "Position": "(-2807.307,-1321.165)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 6"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "399(任务状态判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 640,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-3062.075,-831.3852)",
+      "Commands": [
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "器胚已经定型，你手恰法诀以灵力铭刻灵纹，一柄上品法宝便出炉了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "嗯，品相不错",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好了，本次炼器大会到此为止，你们细细体会个中细节正确在炼器之道上走的更远。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "台下弟子皆拱手拜谢，之后有宗门长老收取了你们炼制的法宝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 406,
+      "Name": "是的",
+      "Description": "是的",
+      "Position": "(-3069.503,-1075.03)",
+      "Commands": [
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "CmdWarpNPCToScene"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你看到不少本门弟子陆续前来参加炼器大会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Menu",
+          "Text": "开始大会",
+          "TargetBlockID": "this:539(开会)"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "没有其它事了",
+      "Description": "没有其它事了",
+      "Position": "(-2692.577,-1149.201)",
+      "Commands": [
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "有事吗？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

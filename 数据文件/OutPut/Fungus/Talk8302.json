@@ -1,0 +1,179 @@
+{
+  "Name": "Talk8302",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 255,
+      "Name": "进入",
+      "Description": "进入",
+      "Position": "(-2408.776,-859.6396)",
+      "Commands": [
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 243,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2414.484,-998.8754)",
+      "Commands": [
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPChenghuo",
+          "StoryText": "{FirstName}长老，你即已是宗门长老，按照惯例应当前往麟庙拜见麟尊大人。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPChenghuo",
+          "StoryText": "好的，我这就前去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPChenghuo",
+          "StoryText": "你抵达麟庙近前，大门便自动打开了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Menu",
+          "Text": "直接进去",
+          "TargetBlockID": "this:252(直接进去)"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Menu",
+          "Text": "先行通告",
+          "TargetBlockID": "this:253(先行通告)"
+        }
+      ]
+    },
+    {
+      "ItemID": 253,
+      "Name": "先行通告",
+      "Description": "先行通告",
+      "Position": "(-2276.958,-933.5035)",
+      "Commands": [
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NPChenghuo",
+          "StoryText": "晚辈{FirstName}{LastName}，前来拜见麟尊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NPCzhongyan",
+          "StoryText": "请进。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "255(进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 252,
+      "Name": "直接进去",
+      "Description": "直接进去",
+      "Position": "(-2547.414,-928.958)",
+      "Commands": [
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "255(进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "赋值",
+      "Description": "赋值",
+      "Position": "(-2430.094,-1121.676)",
+      "Commands": [
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "243(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

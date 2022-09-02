@@ -1,0 +1,485 @@
+{
+  "Name": "Talk7366",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(性别判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 280,
+      "Name": "性别判定",
+      "Description": "性别判定",
+      "Position": "(-2796.025,-1245.574)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "sex == 1"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(男主)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(女主)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 286,
+      "Name": "男主",
+      "Description": "男主",
+      "Position": "(-2928.392,-1175.555)",
+      "Commands": [
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(男胜利)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(男失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "女胜利",
+      "Description": "女胜利",
+      "Position": "(-2519.819,-1111.269)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "数招过后，你以神通击破王登防御，对方也是面色惨白地跌坐在地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看来星宫的秘术也不怎么样嘛。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "面对你的挑衅，王登没有再说什么，只是趁着林沐雪还未归来，狼狈离去了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你留意到一个储物袋静静地躺在地上，可能是刚才战斗时从王登身上掉落的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你随手将之挂在腰间，就当是王登此前口无遮拦的代价。之后便是继续品茶赏花等林沐雪回来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "林沐雪回来后，虽是对王登的不辞而别有些疑惑，但也没有多问什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "你与林沐雪闲聊一段时间后，便是尽兴离去。且在告辞时，与对方互在传音符中留下神识印记，留作以后交流用。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "男失败",
+      "Description": "男失败",
+      "Position": "(-2928.391,-1105.554)",
+      "Commands": [
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "哼，以后长点记性，别往你配不上的人身边凑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你虽是不服，但也无可奈何，只能忍气吞声。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "待林沐雪回来后，你也是起身向她告辞离去，后者虽然是猜到了什么，但也只好在一番道歉后送你出府。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "女失败",
+      "Description": "女失败",
+      "Position": "(-2659.822,-1109.84)",
+      "Commands": [
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "哼，小妮子嘴上...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "王登正想再说些什么，可林沐雪适时带着茶具回到花园，他只好闭口不言。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你虽是不服，但也无可奈何。也不愿再与此人交流，于是找了个借口准备先行离去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "林沐雪显示是猜到了什么，但也只好在送你出府后一番道歉。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "男胜利",
+      "Description": "男胜利",
+      "Position": "(-3066.962,-1108.411)",
+      "Commands": [
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "算你狠，下次再见到，有你好看！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "这点实力就不要学别人放狠话了，小心咬了舌头。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "王登不敢再说什么，只得狼狈地离去了。你留意到一个储物袋静静地躺在地上，可能是刚才战斗时从王登身上掉落的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "你随手将之挂在腰间，就当是王登此前口无遮拦的代价。之后便是继续品茶赏花等林沐雪回来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "林沐雪回来后，虽是对王登的不辞而别有些疑惑，但也没有多问什么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "wangDeng",
+          "StoryText": "你与林沐雪闲聊一段时间后，便是尽兴离去。且在告辞时，与对方互在传音符中留下神识印记，留作以后交流用。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "女主",
+      "Description": "女主",
+      "Position": "(-2661.249,-1181.269)",
+      "Commands": [
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "291(女胜利)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(女失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

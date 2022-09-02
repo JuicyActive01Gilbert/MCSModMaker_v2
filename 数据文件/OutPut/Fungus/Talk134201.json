@@ -1,0 +1,860 @@
+{
+  "Name": "Talk134201",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2777.452,-1275.115)",
+      "Commands": [
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断初次进入龙宫)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "归还龙鳞2",
+      "Description": "归还龙鳞2",
+      "Position": "(-2263.987,-1314.45)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "道友此行可有新的发现？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将所见所闻与之相告，并归还了龙鳞。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "这是九玄大圣的传功龙鳞？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "多谢道友助我龙族巡回秘法，这株龙血草还望道友收下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "对了，这龙鳞的其中奥义等我龙族解析出来，就会由乾龙阁煮海长老分享给道友。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 390,
+      "Name": "归还九龙玺",
+      "Description": "归还九龙玺",
+      "Position": "(-2264.987,-1094.45)",
+      "Commands": [
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此，此番凶险，道友帮我龙族寻回至宝，多谢道友了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "我也在替我父亲搜寻化神所用的丹药，虽然丹灵果我现下没有，但这龙血草乃是替代之物此番就赠与道友了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断初次进入龙宫",
+      "Description": "判断初次进入龙宫",
+      "Position": "(-2596.493,-1278.828)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "道友何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Menu",
+          "Text": "告知其东海的见闻",
+          "TargetBlockID": "this:274(交任务（第一次）)"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.If",
+          "Condition": "Tem1 == True"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Menu",
+          "Text": "归还龙鳞",
+          "TargetBlockID": "this:277(归还龙鳞1)"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.If",
+          "Condition": "Tem2 == True"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "归还龙鳞",
+          "TargetBlockID": "this:286(归还龙鳞2)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Menu",
+          "Text": "成为龙族供奉",
+          "TargetBlockID": "this:276(成为供奉-判断)"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.If",
+          "Condition": "Tem1 == True"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Menu",
+          "Text": "归还九龙玺",
+          "TargetBlockID": "this:390(归还九龙玺)"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.If",
+          "Condition": "Tem1 == True"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Menu",
+          "Text": "归还万鳞甲",
+          "TargetBlockID": "this:391(归还万鳞甲)"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Menu",
+          "Text": "邀请飞升观礼",
+          "TargetBlockID": "this:509(邀请飞升观礼)"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其他事了",
+          "TargetBlockID": "this:278(没有其他事了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 276,
+      "Name": "成为供奉-判断",
+      "Description": "成为供奉-判断",
+      "Position": "(-2263.987,-1149.45)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 500"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "以道友对我龙族所做出的贡献，现在足以成为我龙族供奉了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "不知道友可否愿意？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "愿意",
+          "TargetBlockID": "this:293(愿意)"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Menu",
+          "Text": "再考虑一下",
+          "TargetBlockID": "this:294(考虑考虑)"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "以道友对我 龙族所做出的贡献，现在还不足以成为我龙族供奉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 509,
+      "Name": "邀请飞升观礼",
+      "Description": "邀请飞升观礼",
+      "Position": "(-2591.992,-1176.601)",
+      "Commands": [
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}供奉飞升如此盛事，我龙族自然不会错过。届时我与敖灵定会前来为{FirstName}供奉护法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 293,
+      "Name": "愿意",
+      "Description": "愿意",
+      "Position": "(-2100.987,-1179.45)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "道友成为我龙族供奉之事，我龙族会告知各海阁下是我龙族的盟友。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "我个人为感谢道友，还略备一份薄礼。还望道友不要嫌弃。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "听灵儿所说，道友似是在寻找天道果，此物我虽然没有，但是这枯龙藤也有此效，此番就赠与道友了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "CmdSetShiLiChengHaoLevel"
+        }
+      ]
+    },
+    {
+      "ItemID": 277,
+      "Name": "归还龙鳞1",
+      "Description": "归还龙鳞1",
+      "Position": "(-2265.987,-1377.45)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "道友此行可有新的发现？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将所见所闻与之相告，并归还了龙鳞。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "这是九玄大圣的传功龙鳞？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "多谢道友助我龙族巡回秘法，这株龙血草还望道友收下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "对了，这龙鳞的其中奥义等我龙族解析出来，就会由乾龙阁煮海长老分享给道友。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 278,
+      "Name": "没有其他事了",
+      "Description": "没有其他事了",
+      "Position": "(-2272.987,-991.4504)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "恕不远送。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 294,
+      "Name": "考虑考虑",
+      "Description": "考虑考虑",
+      "Position": "(-2102.987,-1116.45)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "道友若是有了新想法可以随时来找我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 274,
+      "Name": "交任务（第一次）",
+      "Description": "交任务（第一次）",
+      "Position": "(-2276.987,-1443.45)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "道友此行可有新的发现？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你将所见所闻与之相告。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "嗯，我了解了。多谢道友。这几只龙皇果你就收下吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 391,
+      "Name": "归还万鳞甲",
+      "Description": "归还万鳞甲",
+      "Position": "(-2263.987,-1043.45)",
+      "Commands": [
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此，此番凶险，道友帮我龙族寻回至宝，多谢道友了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 819,
+          "AvatarBindKey": "",
+          "StoryText": "我也在替我父亲搜寻化神所用的丹药，虽然丹灵果我现下没有，但这龙血草乃是替代之物此番就赠与道友了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,470 @@
+{
+  "Name": "Talk5020",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2801.238,-1395.946)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(拉取地点)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 202,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2604.592,-1204.246)",
+      "Commands": []
+    },
+    {
+      "ItemID": 208,
+      "Name": "炼器",
+      "Description": "炼器",
+      "Position": "(-2645.592,-993.2463)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你陷入了空灵的状态，有所顿悟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你陷入了空灵的状态，但以你目前对炼器之道的领悟，你觉得距离顿悟相差一步。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 334,
+      "Name": "阵道",
+      "Description": "阵道",
+      "Position": "(-2803.592,-994.2463)",
+      "Commands": [
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你陷入了空灵的状态，有所顿悟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你陷入了空灵的状态，但以你目前对阵道的领悟，你觉得距离顿悟相差一步。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 200,
+      "Name": "第一次进入判断悟性",
+      "Description": "第一次进入判断悟性",
+      "Position": "(-2816.25,-1203.246)",
+      "Commands": [
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你抬头看到，一柄剑身铭刻了{SayStcVal=X}灵纹的仙剑漂浮于空中，浩荡的剑气环绕在其周围。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.If",
+          "Condition": "firstint == 0"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "201(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 201,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2804.592,-1088.246)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Menu",
+          "Text": "感受此番剑阵中的剑意",
+          "TargetBlockID": "this:335(剑道)"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Menu",
+          "Text": "感受周围剑阵的灵力流转方式",
+          "TargetBlockID": "this:334(阵道)"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Menu",
+          "Text": "观察剑身上铭刻的灵纹",
+          "TargetBlockID": "this:208(炼器)"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "迅速路过",
+          "TargetBlockID": "this:202(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 335,
+      "Name": "剑道",
+      "Description": "剑道",
+      "Position": "(-2947.592,-997.2463)",
+      "Commands": [
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 1"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你陷入了空灵的状态，有所顿悟。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你陷入了空灵的状态，但以你目前对剑道的领悟，你觉得距离顿悟相差一步。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "拉取地点",
+      "Description": "拉取地点",
+      "Position": "(-2799.338,-1307.981)",
+      "Commands": [
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.If",
+          "Condition": "Temdidian == 1"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Temdidian == 2"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Temdidian == 3"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Temdidian == 4"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "地点上传错误",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "200(第一次进入判断悟性)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

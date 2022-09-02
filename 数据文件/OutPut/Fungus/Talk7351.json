@@ -1,0 +1,946 @@
+{
+  "Name": "Talk7351",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2605.666,-1207.01)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Menu",
+          "Text": "再喂一颗少阴清灵丹",
+          "TargetBlockID": "this:277(丹药不完全有效2)"
+        },
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:228(无事发生)"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "159(事件阶段判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 245,
+      "Name": "三阳锻魄丹无效",
+      "Description": "三阳锻魄丹无效",
+      "Position": "(-2818.481,-1100.732)",
+      "Commands": [
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你用灵力将丹药送入她口中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他的状态并没有同你预料的一般有所变化。不，也许这才是你预料中的状况。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "碎星商会的人不是说了神识类丹药没有效果，你这{xiaozi}怎么还给她这类丹药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "CmdAddNPCEvent"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.AddHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 228,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2372.556,-1003.589)",
+      "Commands": [
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 159,
+      "Name": "事件阶段判定",
+      "Description": "事件阶段判定",
+      "Position": "(-2606.355,-1130.633)",
+      "Commands": [
+        {
+          "ItemID": 161,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友，我想打听一下，不知你可有时间？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你有去过图南海么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 168,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（看来这人不太好沟通，还是去找其他人吧。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "听说你遇到过图南漩涡？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，你看仔细了。她可不是简单的不想理你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 174,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "唔，她看起来是神魂受损，看样子是在漩涡中遭遇了什么，正处于一种浑浑噩噩的状态。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "看样子要是想从她这里打听出什么的话，只能先想办法治愈她了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "不如再回碎星商会问问。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（也许我可以尝试一下用丹药治疗她。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.Menu",
+          "Text": "厉魄丹",
+          "TargetBlockID": "this:221(厉魄丹无效)"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.Menu",
+          "Text": "三阳锻魄丹",
+          "TargetBlockID": "this:245(三阳锻魄丹无效)"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == True"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Menu",
+          "Text": "少阴清灵丹",
+          "TargetBlockID": "this:222(丹药不完全有效)"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 223,
+          "CmdType": "Fungus.If",
+          "Condition": "Var3 == True"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Menu",
+          "Text": "天命炼心丹",
+          "TargetBlockID": "this:220(丹药有效果)"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == False"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == False"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.Menu",
+          "Text": "看来没有合适的丹药",
+          "TargetBlockID": "this:181(没有合适丹药)"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:228(无事发生)"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "好在她陷入异常太久，战力远不如初，仅过数招之后便已被你擒下，甚至都没对客栈造成什么损失。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友何故对我动手？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "你...不是他们...他们...去哪了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "他们？道友说的他们是谁？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "我...终于还是把他们杀了么...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "道友口中的他们可是漩涡中的妖物？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "不！他们都是我杀的！不是妖物！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "她又变得激动起来。你估摸着也不能问出来更多信息了，心想着不如就此离开，剩下的交给碎星商会自己处理了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（看来她口中的“他们”并不是漩涡中的妖物，而更可能是一起前往图南漩涡探索的其他修士。而且不知在漩涡里发生了什么，结果是她击杀了其他修士。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "（可能是幻境，她们一群元婴修士全部或者是有多人进入了漩涡内部。然后因为其它什么缘由，一同陷入了幻境，而她作为其中的最强者，活了下来。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "（只是不知道她是怎么出来的，之后的百余年又发生了什么，为什么她一直表现出浑浑噩噩的状态。若不是诛仙剑在你小子身上，我甚至觉得她真是被煞气附体失了神志。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（看来只有到漩涡才能揭开真相了，至少我们现在知道前往漩涡前需提升{color=#d0380a}心境{/color}，可以提前准备一番了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.SetTaskCompelet"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...，感谢道友相助，但我在幻境中与故友战斗了百余年，现在...有些乏了...道友若想交流一番还是以后吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 221,
+      "Name": "厉魄丹无效",
+      "Description": "厉魄丹无效",
+      "Position": "(-2809.698,-1161.154)",
+      "Commands": [
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你用灵力将丹药送入她口中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他的状态并没有同你预料的一般有所变化。不，也许这才是你预料中的状况。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "碎星商会的人不是说了神识类丹药没有效果，你这{xiaozi}怎么还给她这类丹药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "CmdAddNPCEvent"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.AddHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 181,
+      "Name": "没有合适丹药",
+      "Description": "没有合适丹药",
+      "Position": "(-2373.987,-1132.16)",
+      "Commands": [
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "她与宁州古迹中那些被煞气附体的人情况有些相似，只是没有攻击性，也许我该从这方面考虑用什么丹药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 222,
+      "Name": "丹药不完全有效",
+      "Description": "丹药不完全有效",
+      "Position": "(-2609.275,-933.5887)",
+      "Commands": [
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你用灵力将丹药送入她口中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你能感觉到她的眼神相比之前灵动了几分，但还是一副神智不清的样子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "CmdAddNPCEvent"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == True"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.Menu",
+          "Text": "再喂她一颗",
+          "TargetBlockID": "this:237(治愈)"
+        },
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "可惜我没有更多了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 237,
+      "Name": "治愈",
+      "Description": "治愈",
+      "Position": "(-2819.91,-932.1599)",
+      "Commands": [
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你用灵力将丹药送入她口中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在你的期待中，他缓缓转过头来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1350,
+          "AvatarBindKey": "",
+          "StoryText": "他沉默着看了你半刻后，倏地站起，一手捏法诀，一手成爪型，挥爪间灵气急速聚集，便已是向你展开攻势。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "？？！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 220,
+      "Name": "丹药有效果",
+      "Description": "丹药有效果",
+      "Position": "(-2819.698,-1023.589)",
+      "Commands": [
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "CmdAddNPCEvent"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "237(治愈)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 277,
+      "Name": "丹药不完全有效2",
+      "Description": "丹药不完全有效2",
+      "Position": "(-3004.776,-1206.3)",
+      "Commands": [
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "CmdAddNPCEvent"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "CmdAddNPCQingFen"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "237(治愈)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

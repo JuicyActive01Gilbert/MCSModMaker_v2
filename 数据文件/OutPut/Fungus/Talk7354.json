@@ -1,0 +1,1154 @@
+{
+  "Name": "Talk7354",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2604.296,-1256.325)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "524(是否初次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 223,
+      "Name": "位置信息",
+      "Description": "位置信息",
+      "Position": "(-2197.121,-1071.37)",
+      "Commands": [
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "要说有价值的信息，那图南漩涡的位置无疑是其中之一了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "确实如此，需要我付出什么来交换这信息？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "哈哈哈，道友在无尽之海名盛誉重，不知为此中安定做出了多少贡献。这区区图南漩涡的位置，我碎星商会自然是双手奉上。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "那图南漩涡便是在图南海{color=#d0380a}东南部{/color}，按规律算来近期应是要现世了，若无其他事，建议道友可即刻启程。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "只是这漩涡危险至极，若是深入，即便以道友{$jingjie}修为恐怕也难以全身而退，还请多加小心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "幸存者 == 0"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Menu",
+          "Text": "有多危险？",
+          "TargetBlockID": "this:222(幸存者信息)"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "270(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 173,
+      "Name": "低声望线",
+      "Description": "低声望线",
+      "Position": "(-2795.6,-1113.438)",
+      "Commands": [
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（我在海上的恶名估计碎星商会早有耳闻，还是不去招惹他们了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= -100"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.If",
+          "Condition": "jindu == 1"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "jindu == 2"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "jindu == 3"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我还是去万宝楼问问吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "去客栈找落单的修士询问也许会有收获。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 222,
+      "Name": "幸存者信息",
+      "Description": "幸存者信息",
+      "Position": "(-2197.121,-1160.411)",
+      "Commands": [
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 231,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "我们碎星商会曾对图南漩涡非常有兴趣，所以花了很多时间研究它的出现规律。不仅如此，我们还多次派遣修士前往探索，只是前往探索的修士几乎都失去音讯，并没有带来任何有价值的消息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "几乎？我听说被这漩涡卷入下场只有死。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "不瞒你说，其实碎星商会在最后一次探索中是有一个幸存者的，但...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "他选择了停下来，而不是继续说下去，像是提到了什么碎星商会的隐秘，或是不想回顾的过去...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "但显然，于你而言，更重要的是信息本身，而不是信息对他，亦或是对碎星商会的意义。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "那个幸存者怎样了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "那个幸存者如今就在客栈，不如道友自行前去调查吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.If",
+          "Condition": "位置 == 0"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.Menu",
+          "Text": "漩涡位置在哪？",
+          "TargetBlockID": "this:223(位置信息)"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "270(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 143,
+      "Name": "声望判定",
+      "Description": "声望判定",
+      "Position": "(-2604.813,-1113.437)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue <= -100"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "173(低声望线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue < 500"
+        },
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "174(中声望线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "175(高声望线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 524,
+      "Name": "是否初次判定",
+      "Description": "是否初次判定",
+      "Position": "(-2606.709,-1198.768)",
+      "Commands": [
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "143(声望判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "173(低声望线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "174(中声望线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "175(高声望线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 175,
+      "Name": "高声望线",
+      "Description": "高声望线",
+      "Position": "(-2410.074,-1112.068)",
+      "Commands": [
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "原来是{FirstName}道友，如今你在无尽之海可是各大势力都想交好的大能哈哈哈，有什么想知道的，我自是知无不言言无不尽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "图南海可有什么值得探索的异象？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "要说异象的话，图南漩涡应该算得上一个，只是这漩涡凶险万分，道友最好还是不要尝试探索比较好。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.If",
+          "Condition": "幸存者 == 0"
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.Menu",
+          "Text": "有多危险？",
+          "TargetBlockID": "this:222(幸存者信息)"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.If",
+          "Condition": "位置 == 0"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.Menu",
+          "Text": "说点有价值的消息",
+          "TargetBlockID": "this:223(位置信息)"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 249,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}道友，可是对于图南漩涡还有其他疑问？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 250,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "那个幸存者貌似只是处于一种浑浑噩噩的特殊状态，商会难道没有尝试治愈他吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "哎，我们何止是尝试，说是治疗神识伤害的各种手段都用尽了也不为过，只是...结果道友也看到了，商会最后选择了放弃。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 252,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "好在他只是浑浑噩噩，却没有尝试伤害其他人，所以商会虽然放弃了对他的治疗，但还愿意指派几个低阶修士稍加照料，也算是留了一丝希望吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 253,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "原来如此。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 254,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "（按他这说法，那应当只是看似神魂受损，其实却不然，否则以碎星商会的手段，又怎会用尽各种灵丹尝试治疗之后，只能选择放弃。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 255,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "（但若不是神魂受损，又会是什么地方出了问题呢？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "{FirstName}道友，目前没有更多关于图南漩涡的消息告诉你了。  ",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 270,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2032.737,-1111.096)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢道友相赠情报。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.SetTaskDisabled"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.SetTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 174,
+      "Name": "中声望线",
+      "Description": "中声望线",
+      "Position": "(-2603.489,-1022.648)",
+      "Commands": [
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "想打听什么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "贵商会对图南海的异象可有了解？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "这图南海中最出名也最危险的异象便是这图南漩涡了，道友可是对它感兴趣？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "最危险？怎么说。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "这图南漩涡出现的时间不定，每次现世的时长也不尽相同。照理来说，此等异象已在这片海域为人所知多年，偶遇者、探访者岂止千百，要说有什么法宝、机缘等早也应该被掠夺殆尽。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "但直至今日，也未曾听说有人从这漩涡中捞得什么好处。道友可知为何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "就因为它过于危险？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "是，危险到深入的修士无关实力，尽皆陨落。若不是曾有人在漩涡出现时处于其外围，从而侥幸逃脱。甚至可能没人只有这异象的存在。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "听起来是挺危险的，但相比之下，我更关心它的位置在哪。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "呵呵，这图南漩涡虽说出名，但它的具体位置和出现规律嘛，能掌握的势力还是很少，恕我无权不能直接相告。若是...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "若是什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "若是道友愿意以稀有妖兽材料来交换情报，我也好向商会交代。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "需要什么材料？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "我需要五阶妖兽材料{color=#d0380a}金鹏羽{/color}，{color=#d0380a}金鹏眼{/color}，{color=#d0380a}金鹏喙{/color}和{color=#d0380a}金鹏腔骨{/color}各一份。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 204,
+          "CmdType": "Fungus.If",
+          "Condition": "TempBool == True"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == True"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.If",
+          "Condition": "Var3 == True"
+        },
+        {
+          "ItemID": 205,
+          "CmdType": "Fungus.Menu",
+          "Text": "交出妖兽材料",
+          "TargetBlockID": "this:210(提交材料)"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:211(再等等)"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue <= 3"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "道友可有准备好妖兽材料？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.If",
+          "Condition": "TempBool == True"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.If",
+          "Condition": "Var1 == True"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == True"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.If",
+          "Condition": "Var3 == True"
+        },
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.Menu",
+          "Text": "交出妖兽材料",
+          "TargetBlockID": "this:210(提交材料)"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:211(再等等)"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "祝道友此次寻宝顺利。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 210,
+      "Name": "提交材料",
+      "Description": "提交材料",
+      "Position": "(-2751.292,-953.5609)",
+      "Commands": [
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 213,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "不错，正是之前我要求的妖兽材料。道友行事效率真是令人刮目相看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 214,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "那图南漩涡便是在图南海{color=#d0380a}东南部{/color}，按规律算来近期应是要现世了，若无其他事，道友可即刻启程。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 211,
+      "Name": "再等等",
+      "Description": "再等等",
+      "Position": "(-2453.182,-956.0925)",
+      "Commands": [
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "NpcId",
+          "StoryText": "听说附近的海岛上最近有出现过元婴期金鹏，道友若是找不到这些妖兽材料，可以往那寻觅一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

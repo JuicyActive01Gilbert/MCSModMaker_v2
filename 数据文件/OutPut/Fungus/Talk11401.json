@@ -1,0 +1,524 @@
+{
+  "Name": "Talk11401",
+  "Blocks": [
+    {
+      "ItemID": 93,
+      "Name": "练气期",
+      "Description": "练气期",
+      "Position": "(-2748.661,-1090.958)",
+      "Commands": [
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，有什么事么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "有一些问题想向师兄请教。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于传功长老...",
+          "TargetBlockID": "this:184(重复)"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于挑选秘籍的推荐...",
+          "TargetBlockID": "this:188(推荐)"
+        },
+        {
+          "ItemID": 182,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于藏经阁的注意事项...",
+          "TargetBlockID": "this:185(注意事项)"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于沧元丹",
+          "TargetBlockID": "this:307(正常对话 (Copy))"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.Menu",
+          "Text": "暂时没有什么问题了",
+          "TargetBlockID": "this:619(无事 (Copy))"
+        }
+      ]
+    },
+    {
+      "ItemID": 96,
+      "Name": "境界检测",
+      "Description": "境界检测",
+      "Position": "(-2606.162,-1090.221)",
+      "Commands": [
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 24,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "93(练气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 3"
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "175(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "641(金丹以上)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2604.035,-1174.115)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(境界检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3172.807,-1302.492)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3006.004,-1294.082)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-2991.905,-1367.519)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 618,
+      "Name": "砂晶 (Copy)",
+      "Description": "砂晶 (Copy)",
+      "Position": "(-3086.669,-1091.682)",
+      "Commands": [
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈，宗门内的资源可不能用灵石换取，只有对宗门做出贡献的弟子才有资格在藏经阁与神兵阁兑换功法及法器，而这沧元丹正是弟子们贡献度的体现。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "宗门广场的外务执事每隔一段时间会发放宗门任务，{shidi}完成任务后便可获得沧元丹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}初来乍到，作为师兄我便私下赠与你一些沧元丹，你可小心切莫被长老知晓。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.If",
+          "Condition": "ZiZhi >= 80"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 185,
+      "Name": "注意事项",
+      "Description": "注意事项",
+      "Position": "(-2595.621,-1016.935)",
+      "Commands": [
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "",
+          "StoryText": "我派藏经阁共分三层，这第一层存放的都是一些普通的功法、神通以及一些修真界的基础知识，是专门给低阶修士准备的，因为要普及众多的弟子，所以是不会用玉简存放的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "",
+          "StoryText": "若是你突破到筑基期，才能去第二层借阅更高级的功法玉简。至于第三层，则只对我派的长老和供奉们开放。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 175,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2456.494,-1023.977)",
+      "Commands": [
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过{shixiong}。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3174.421,-1375.69)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "正常对话 (Copy)",
+      "Description": "正常对话 (Copy)",
+      "Position": "(-2924.144,-1090.499)",
+      "Commands": [
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "618(砂晶 (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "书海无涯，学无止境。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 188,
+      "Name": "推荐",
+      "Description": "推荐",
+      "Position": "(-2745.621,-1015.935)",
+      "Commands": [
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，这功法没有绝对的好坏之分，只看是否合适。我建议你在成为内门弟子，拜入我派长老门下以后，再根据你学到的功法，来藏经阁挑选能够搭配上的秘籍。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 184,
+      "Name": "重复",
+      "Description": "重复",
+      "Position": "(-2883.621,-1018.935)",
+      "Commands": [
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "门派内大部分的基础法术和功法都可以请教传功长老，若是你成为内门弟子，拜入我派任意一名长老门下，自然也能够学到这一脉的所有法术和功法。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 619,
+      "Name": "无事 (Copy)",
+      "Description": "无事 (Copy)",
+      "Position": "(-2749.904,-1161.832)",
+      "Commands": [
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "",
+          "StoryText": "书海无涯，学无止境。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 641,
+      "Name": "金丹以上",
+      "Description": "金丹以上",
+      "Position": "(-2457.547,-1085.315)",
+      "Commands": [
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 212,
+          "AvatarBindKey": "",
+          "StoryText": "见过师叔。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    }
+  ],
+  "Variables": []
+}

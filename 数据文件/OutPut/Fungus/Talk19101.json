@@ -1,0 +1,422 @@
+{
+  "Name": "Talk19101",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2790.595,-1159.308)",
+      "Commands": [
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈哈，没想到天邪子机关算尽，最后却在你这个炼气{xiaozi}的手下殒了命，真是时也，命也！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多亏前辈的蛊术精湛，我才能侥幸取胜。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你此番帮了老夫，老夫自会兑现自己的承诺。这些年我游历天下，收集了不少功法秘籍，丹药法宝，你想要什么，尽管说来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "391(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "133(SeTalk)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-2792.015,-1236.691)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 398,
+      "Name": "获得功法",
+      "Description": "获得功法",
+      "Position": "(-2948.629,-934.5074)",
+      "Commands": [
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(结束)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 377,
+      "Name": "丹药",
+      "Description": "丹药",
+      "Position": "(-2794.369,-1003.578)",
+      "Commands": [
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你如今才炼气修为，药力过猛的丹药也不适合你。这三颗养气丹，虽然只是二品丹药，也可帮你精进修为。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Menu",
+          "Text": "我就选养气丹了",
+          "TargetBlockID": "this:413(获得丹药)"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Menu",
+          "Text": "再了解一下别的",
+          "TargetBlockID": "this:391(选项)"
+        }
+      ]
+    },
+    {
+      "ItemID": 381,
+      "Name": "功法",
+      "Description": "功法",
+      "Position": "(-2951.666,-1001.621)",
+      "Commands": [
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这功法名叫《忘忧决》，是我偶然所得，虽然只是残本，但误打误撞之下，也让我参悟出了大半奥秘，便在与人交战时快速恢复消耗的灵气。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Menu",
+          "Text": "我就选《忘忧决》了",
+          "TargetBlockID": "this:398(获得功法)"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Menu",
+          "Text": "再了解一下别的",
+          "TargetBlockID": "this:391(选项)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 391,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2791.803,-1102.266)",
+      "Commands": [
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于功法...",
+          "TargetBlockID": "this:381(功法)"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于丹药...",
+          "TargetBlockID": "this:377(丹药)"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于法宝...",
+          "TargetBlockID": "this:382(法宝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 382,
+      "Name": "法宝",
+      "Description": "法宝",
+      "Position": "(-2639.634,-1005.721)",
+      "Commands": [
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这件法宝唤作御灵盾，是少有的防御性法器，你若熟练使用，炼气同阶之内的战斗，可保你性命无忧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Menu",
+          "Text": "我就选御灵盾了",
+          "TargetBlockID": "this:412(获得法宝)"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Menu",
+          "Text": "再了解一下别的",
+          "TargetBlockID": "this:391(选项)"
+        }
+      ]
+    },
+    {
+      "ItemID": 412,
+      "Name": "获得法宝",
+      "Description": "获得法宝",
+      "Position": "(-2633.92,-936.2726)",
+      "Commands": [
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(结束)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 264,
+      "Name": "StartFight",
+      "Description": "StartFight",
+      "Position": "(-3061.406,-1186.709)",
+      "Commands": [
+        {
+          "ItemID": 192,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "获得丹药",
+      "Description": "获得丹药",
+      "Position": "(-2796.273,-931.5663)",
+      "Commands": [
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(结束)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 402,
+      "Name": "结束",
+      "Description": "结束",
+      "Position": "(-2795.642,-823.9973)",
+      "Commands": [
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "如今天邪子道陨，算是除去了老夫的心头一患。你修为虽浅，但心智品性却和老夫年轻时有几番相像，日后若有机缘，也该有一番成就。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老夫尚有重要之事未完成，现在也该去办了，{xiaozi}，你我便就此别过，日后有缘再见吧！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（呼~这天邪子看来是邪道中人我还是回白帝楼汇报一下吧 。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

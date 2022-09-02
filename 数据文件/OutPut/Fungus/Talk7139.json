@@ -1,0 +1,194 @@
+{
+  "Name": "Talk7139",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2428.181,-1223.257)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "154(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 246,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2429.182,-1052.147)",
+      "Commands": [
+        {
+          "ItemID": 248,
+          "CmdType": "Fungus.Menu",
+          "Text": "你要一个人去？",
+          "TargetBlockID": "this:252(你要一个人去？)"
+        },
+        {
+          "ItemID": 251,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于异火的修炼",
+          "TargetBlockID": "this:253(关于异火的修炼)"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Menu",
+          "Text": "活着回来",
+          "TargetBlockID": "this:262(活着回来)"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 252,
+      "Name": "你要一个人去？",
+      "Description": "你要一个人去？",
+      "Position": "(-2594.016,-1054.345)",
+      "Commands": [
+        {
+          "ItemID": 256,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "此事我早已筹划多年，人多了倒未必方便行事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "何况...这本就应该由我一人承担，我必须要亲手取他们的性命！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 253,
+      "Name": "关于异火的修炼",
+      "Description": "关于异火的修炼",
+      "Position": "(-2585.225,-987.3114)",
+      "Commands": [
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "多亏你的建议，和从小修炼引火之术的基础，现在我已能够完全掌控这异火了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "若是暗中偷袭，逐一击破，我有信心取他们性命。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 262,
+      "Name": "活着回来",
+      "Description": "活着回来",
+      "Position": "(-2432.477,-987.3117)",
+      "Commands": [
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "会的",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.AddHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 154,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2425.698,-1124.973)",
+      "Commands": [
+        {
+          "ItemID": 260,
+          "CmdType": "CmdSetNPCExQingJiao"
+        },
+        {
+          "ItemID": 245,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "我就要出发了，还有什么事么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 247,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "246(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

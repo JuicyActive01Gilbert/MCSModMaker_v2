@@ -1,0 +1,2371 @@
+{
+  "Name": "Talk19",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1373.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "306(是否与倪少一同出发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3386.524,-1174.581)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 122,
+      "Name": "SetStaticTalk",
+      "Description": "SetStaticTalk",
+      "Position": "(-3250.401,-1175.369)",
+      "Commands": [
+        {
+          "ItemID": 123,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 124,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3248.323,-1096.754)",
+      "Commands": [
+        {
+          "ItemID": 126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 127,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3453.902,-1092.822)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 136,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 139,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 484,
+      "Name": "找白帝判定",
+      "Description": "找白帝判定",
+      "Position": "(-2550.126,-741.742)",
+      "Commands": [
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "556(找白帝剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "557(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "请柬对话",
+      "Description": "请柬对话",
+      "Position": "(-2875.002,-1008.801)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1501,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友请留步。我家宗主邀您来府上一聚。这份请帖还请收下。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（倪兄弟是否还在思过呢？正好去帮他说点好话……）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 556,
+      "Name": "找白帝剧情",
+      "Description": "找白帝剧情",
+      "Position": "(-2550.013,-667.2325)",
+      "Commands": [
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "相传白帝楼是一千多年前由白帝亲手创建，从时间上看，倒也与凌轩师兄的修为相吻合。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你曾领悟过我御剑门神通，也学过白帝楼的剑招法门，可有察觉到其中差别？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "你曾领悟过我御剑门神通，也见识过白帝楼的剑招法门，可有察觉到其中差别？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "让我想想...御剑门的剑法飘逸灵动，一旦出手便是连绵不绝的攻势，以速度冠绝天下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "白帝楼剑法招式凌厉，威能不俗。但运气方式和御剑门截然不同，有时需损耗自身精血方能发挥招式最大威力。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这样想来，白帝楼的招式倒是有些像...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Menu",
+          "Text": "天魔道",
+          "TargetBlockID": "this:582(天魔)"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.Menu",
+          "Text": "血剑宫",
+          "TargetBlockID": "this:577(血)"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.Menu",
+          "Text": "禾山道",
+          "TargetBlockID": "this:578(禾山)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 318,
+      "Name": "对话2",
+      "Description": "对话2",
+      "Position": "(-2547.002,-1234.363)",
+      "Commands": [
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "{FirrstName}道友，少主给你添麻烦了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你知道我的名字？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "呵呵，我知道的也就比这再多一点……放心，我对你没有恶意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 1"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "明明素不相识，却助少主脱困，真是英雄出少年。少主也不是初犯了，得让他好好闭门思过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "等忙完英杰会，家主会在府上设宴答谢，还请务必赏光！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "明明素不相识，却助少主脱困，真是英雄出少年。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "我家宗主邀您来府上一聚,这份请帖还请收下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.AddItem"
+        }
+      ]
+    },
+    {
+      "ItemID": 532,
+      "Name": "不让",
+      "Description": "不让",
+      "Position": "(-2827.341,-672.0114)",
+      "Commands": [
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 405,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-2351.396,-1042.219)",
+      "Commands": [
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你总觉得事出反常，哪有什么遗迹地图会拿到坊市上这样大张旗鼓地出售。这倪家少爷看上去傻乎乎的没啥社会阅历，一准是被人给骗了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你婉言拒绝了倪旭欣，他看上去很是失落...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 459,
+      "Name": "78~98年 血剑宫来袭判断",
+      "Description": "78~98年 血剑宫来袭判断",
+      "Position": "(-2662.872,-893.2561)",
+      "Commands": [
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 78"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 98"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "476(境界判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "484(找白帝判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "484(找白帝判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "484(找白帝判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 375,
+      "Name": "初遇血剑宫-判定",
+      "Description": "初遇血剑宫-判定",
+      "Position": "(-2708.444,-1000.065)",
+      "Commands": [
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "457(初遇血剑宫)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "557(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "459(78~98年 血剑宫来袭判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "459(78~98年 血剑宫来袭判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "武陵城后续（判定英杰汇与年份）",
+      "Description": "武陵城后续（判定英杰汇与年份）",
+      "Position": "(-2923.728,-1149.136)",
+      "Commands": [
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 1"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(判断首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(大蛇副本判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "327(判断首次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "是否与倪少一同出发",
+      "Description": "是否与倪少一同出发",
+      "Position": "(-2806.002,-1317.629)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "265(判断首次对话1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(判断首次对话2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "判断首次对话2",
+      "Description": "判断首次对话2",
+      "Position": "(-2707.845,-1231.895)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "318(对话2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(武陵城后续（判定英杰汇与年份）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(大蛇副本判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 467,
+      "Name": "拒绝1",
+      "Description": "拒绝1",
+      "Position": "(-2937.979,-893.5926)",
+      "Commands": [
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "好吧，是我唐突了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 557,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2261.168,-738.6742)",
+      "Commands": [
+        {
+          "ItemID": 793,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 794,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 2"
+        },
+        {
+          "ItemID": 792,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 533,
+      "Name": "让开",
+      "Description": "让开",
+      "Position": "(-2688.268,-670.4167)",
+      "Commands": [
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我还是不要横生波折为好啊。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你快速退到一边。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "哼！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道剑光划过，地面被斩出一道巨大的裂痕，而对面的魔修已经灰飞烟灭。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "小友小心这这祭血使不是你能应付的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "多谢前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你挑眼望去，武陵城内杀声渐歇，城内的魔修已被扑杀殆尽。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 468,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-2790.889,-824.1461)",
+      "Commands": [
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "那我就在武陵城客栈，等您了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 457,
+      "Name": "初遇血剑宫",
+      "Description": "初遇血剑宫",
+      "Position": "(-2790.676,-893.5519)",
+      "Commands": [
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "道友，请留步。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "请问有事吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "SavePoint"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "小女子对白帝楼鼎鼎大名的三才剑向往已久，但难以加入白帝楼...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "不知，道友你可否传我《人剑》《剑典-人道篇》，我愿出1000灵石酬谢你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Menu",
+          "Text": "好的",
+          "TargetBlockID": "this:468(同意)"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:467(拒绝1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 282,
+      "Name": "对话1",
+      "Description": "对话1",
+      "Position": "(-3023.05,-1236.538)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "第一次来武陵城吧？这可是我们倪家亲手所建。虽然规模比不得天星城，但也是远近闻名的散修云集之地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "今年城里举办的英杰会，可比东石谷还要火热。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{xiongdi}你虽然刚出山不久，可千万不能不知道英杰会啊！要是争不到筑基丹，可真是平添不少麻烦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "快快快，我带你去会场了解了解，顺便跟你一起报个名玩玩，打个几场再溜也来得及……",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "少主既已归城，何不回府看看？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "杨管家！！！你怎么找到这来了！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "我不来，你难道愿意自己回家吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "少主还是别浪费法宝了，以你的修为绝不可能当着我的面遁走。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "家主嘱咐我带你回府，好好闭门思过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "（倪少灰头土脸地离开了）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Wait"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "{FirrstName}道友，少主给你添麻烦了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你知道我的名字？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "呵呵，我知道的也就比这再多一点……放心，我对你没有恶意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "明明素不相识，却助少主脱困，真是英雄出少年。少主也不是初犯了，得让他好好闭门思过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 622,
+          "AvatarBindKey": "",
+          "StoryText": "等忙完英杰会，家主会在府上设宴答谢，还请务必赏光！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.SendChuanYingFu"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "少了个翘家阔少，又回到了一人一剑的旅程，些许有些寂寞。\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "既然都来了武陵城，不如便先去那{color=#d0380a}升仙台{/color}看看吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 577,
+      "Name": "血",
+      "Description": "血",
+      "Position": "(-2549.707,-579.8707)",
+      "Commands": [
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫剑法亦是通过损耗自身精血的方式施展，而且攻守招式都与白帝楼颇为相像。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "的确，当年你与血剑宫弟子交手时我便有此疑惑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "589(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 404,
+      "Name": "答应",
+      "Description": "答应",
+      "Position": "(-2351.601,-1114.485)",
+      "Commands": [
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你架不住倪旭欣的盛情邀约，虽然有些怀疑，但还是答应同他一起前往。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "CmdChangeNPCAction"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.AddHaoGanDu"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 327,
+      "Name": "判断首次对话",
+      "Description": "判断首次对话",
+      "Position": "(-2880.266,-1077.187)",
+      "Commands": [
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(请柬对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(大蛇副本判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 589,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2545.002,-502.7861)",
+      "Commands": [
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "莫非白帝还和魔门有什么渊源？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "但这些终究只是我们的猜测而已，如果能当面见到他，一切问题自当迎刃而解。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 265,
+      "Name": "判断首次对话1",
+      "Description": "判断首次对话1",
+      "Position": "(-2871.923,-1232.532)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "282(对话1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(武陵城后续（判定英杰汇与年份）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "英杰汇后大蛇剧情",
+      "Description": "英杰汇后大蛇剧情",
+      "Position": "(-2548.034,-1115.674)",
+      "Commands": [
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你刚离开升仙台，便听到身后有人大声叫你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}...{FirstName}{xiongdi}，等等我！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "... ...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，难得又在武陵城相遇，怎么这就要走啦？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "之前被关在府里修炼，可把我给憋坏了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "好在前段时间我突破到了炼气后期，好说歹说，才说服了杨叔放我出来历练一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪兄的意思是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "（小心张望）{FirstName}{xiongdi}借一步说话...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "... ...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "（低声）你看这是什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他小心翼翼地掏出一张看起来破破烂烂的旧皮纸，拿给你看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "前些日子我在坊市里淘到一张神秘地图，据说这上面记录的可是某位大能的洞府遗迹。我这次来找你，正是想邀请你同我一起去地图上记载的遗迹寻宝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这种来历不明的地图你也相信？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{xiongdi}有所不知，本来我也将信将疑。当时那商贩周围想购买此图的人可谓是张袂成阴，不过他说这地图无需竞\r价，只售给有缘人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "一说这我可就来劲了，当即冲上前去...你猜怎么着？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "地图都在你手里拿着了还能怎么着......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "那有缘人必定是小爷我啊！走走走，有福同享，有福同享，找到了宝贝咱两平分！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应同行",
+          "TargetBlockID": "this:404(答应)"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Menu",
+          "Text": "婉言拒绝",
+          "TargetBlockID": "this:405(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 370,
+      "Name": "错过英杰汇大蛇剧情",
+      "Description": "错过英杰汇大蛇剧情",
+      "Position": "(-2549.302,-1042.863)",
+      "Commands": [
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你刚踏入武陵城，便听到有人大地呼喊你的名字。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}...{FirstName}{xiongdi}，等等我！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "倪兄？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}，真是好久不见。上次一别后我就被我爹被关在府里修炼，可把我给憋坏了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "好在前段时间我突破到了炼气后期，好说歹说，才说服了杨叔放我出来历练一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "...那可真是恭喜倪兄了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "（小心张望）{FirstName}{xiongdi}借一步说话...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "... ...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "（低声）你看这是什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "他小心翼翼地掏出一张看起来破破烂烂的旧皮纸，拿给你看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "前些日子我在坊市里淘到一张神秘地图，据说这上面记录的可是某位大能的洞府遗迹。我本来正准备着要去探索一番，没想到就在城里遇见了你，真是巧极！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这种来历不明的地图你也相信？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "{xiongdi}有所不知，本来我也将信将疑。当时那商贩周围想购买此图的人可谓是张袂成阴，不过他说这地图无需竞\r价，只售给有缘人。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "一说这我可就来劲了，当即冲上前去...你猜怎么着？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "地图都在你手里拿着了还能怎么着......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 609,
+          "AvatarBindKey": "",
+          "StoryText": "那有缘人必定是小爷我啊！走走走，有福同享，有福同享，找到了宝贝咱两平分！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应同行",
+          "TargetBlockID": "this:404(答应)"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Menu",
+          "Text": "婉言拒绝",
+          "TargetBlockID": "this:405(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 476,
+      "Name": "境界判断",
+      "Description": "境界判断",
+      "Position": "(-2689.366,-746.2316)",
+      "Commands": [
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2348,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，凌轩小儿，把剑交出来！！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 0"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这是谁？仅凭威压就让我不得动弹！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，小心这是有化神修士来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "噗！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，小心这是有化神修士来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道血红色的剑光，自天而降半途被另一道飞出自白帝楼的剑光截下。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“轰隆”{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "血河？就来了你一个人？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "这一次你们宫主不在，你说你能接我几剑？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2348,
+          "AvatarBindKey": "",
+          "StoryText": "嘿嘿，上次是我大意了，这一次我可是有备而来。我拖住他，你们动手。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道道血红色的剑光从空中落下直逼武陵城，但途中被一一化解。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "哼，找死。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一道身影从白帝楼冲出和空中的血影纠缠起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然，武陵城内剑光四起，直指白帝楼。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "突然，一道声音响彻全城。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "血剑宫的道友，在下等候多时了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2335,
+          "AvatarBindKey": "",
+          "StoryText": "倪振东？？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "四象封魔阵，起！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "天空中出现青龙、白虎、朱雀、玄武，四象的虚影。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2335,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，你以为我们没有准备吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "...\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "你又以为我为什么会在这里等你？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "此次协助守城，参与击杀魔修的修士，可以来我白帝楼领取奖励。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "有剑阵相助，倪振东已是稳占上风。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 621,
+          "AvatarBindKey": "",
+          "StoryText": "想走？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2335,
+          "AvatarBindKey": "",
+          "StoryText": "倪振东，这是你逼我的！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}小心！！~这家伙要自爆元婴了！！！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "“轰隆”{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "噗！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "咳咳...这帮疯子。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2348,
+          "AvatarBindKey": "",
+          "StoryText": "哼，废物一个。凌轩小儿，这次就放过你！！哈哈哈！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 816,
+          "AvatarBindKey": "",
+          "StoryText": "现在还想走？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "两道遁光追逐而去，见势不妙，之前参与进攻的人四散而逃。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2323,
+          "AvatarBindKey": "",
+          "StoryText": "滚开，别挡我去路。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "SavePoint"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "{xiaozi}，这家伙修为至少是金丹，不过被那疯子的自爆波及身受重伤，你倒不是不能一战。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Menu",
+          "Text": "迎头而上",
+          "TargetBlockID": "this:532(不让)"
+        },
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Menu",
+          "Text": "暂避锋芒",
+          "TargetBlockID": "this:533(让开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 582,
+      "Name": "天魔",
+      "Description": "天魔",
+      "Position": "(-2682.708,-585.7533)",
+      "Commands": [
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "听说天魔道秘术皆要献祭自身精血方可施展，与白帝楼招式倒有异曲同工之妙。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "589(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 578,
+      "Name": "禾山",
+      "Description": "禾山",
+      "Position": "(-2401.358,-580.0174)",
+      "Commands": [
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "记得当年宁州曾有一小派唤作禾山道，功法神通皆可通过损耗自身精血施展。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "589(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "大蛇副本判定",
+      "Description": "大蛇副本判定",
+      "Position": "(-2696.922,-1077.48)",
+      "Commands": [
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 16"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(英杰汇后大蛇剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(初遇血剑宫-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 16"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 25"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "370(错过英杰汇大蛇剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(初遇血剑宫-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(初遇血剑宫-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(初遇血剑宫-判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

@@ -1,0 +1,848 @@
+{
+  "Name": "Talk574",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(闲逛次数判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 373,
+      "Name": "进屋",
+      "Description": "进屋",
+      "Position": "(-2501.362,-1052.747)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走进屋内，这里的摆设和府内其它的厢房并无不同之处，只有一枚落在地上的玉简显得颇为突兀。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "莫非是刚刚逃走的那人留下的？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你捡起玉简，用神识探查了一番。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "枯...木...功...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "地阶木系功法，修炼后虽可延寿，但体内筋脉也会干瘪堵塞，并不利于修为进境...炼至大成后，七情六欲皆已麻木，形体更会干瘪的像是将死的枯木一般恐怖。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "真是可怕的功法...想来也只有那些无缘结丹之人，才会靠着这种功法苟延残喘多活一些年吧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这么说了，那宁王难道是因为修炼了这《枯木功》，才变成了这幅人不人鬼不鬼的模样...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你放下玉简，又在房内四处检查了一遍，没有发现其它的线索，便小心翼翼地关上房门，回到了自己的住所。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "闲逛次数判定",
+      "Description": "闲逛次数判定",
+      "Position": "(-2798.694,-1209.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(第一次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "326(第二次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "386(第三次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "329(第四次（享乐判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "324(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "回家",
+      "Description": "回家",
+      "Position": "(-2789.655,-1056.938)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "算了，被设下禁制的地方定然是府内重要之处，若是被人发现我在附近，可就说不清楚了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不想因为一件和自己没什么关系的事情惹上一身骚，便连忙打道回府了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 372,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2649.235,-968.1508)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "也不知是何人这么大胆，竟敢硬闯高手如云的宁王府。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你不想因为一件和自己没什么关系的事情惹上一身骚，便连忙打道回府了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 348,
+      "Name": "跟上她",
+      "Description": "跟上她",
+      "Position": "(-2328.481,-1116.879)",
+      "Commands": [
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "一阵七绕八拐以后，她终于走到府内一处极不起眼的住处，推开门走了进去。你收敛气息，悄悄走到屋外，听到房间里传来了两人交谈的声音...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 304,
+      "Name": "软玉温香",
+      "Description": "软玉温香",
+      "Position": "(-2844.694,-973.0183)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "软玉温香，还不速速向供奉问好！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这宁王府起名倒是别致，嘿嘿嘿...就是不知道此女样貌如何）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你还没从困惑中恢复，就见两个衣着朴素的男子从管事身后走出。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 636,
+          "AvatarBindKey": "",
+          "StoryText": "见过供奉，小的名唤软玉。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 637,
+          "AvatarBindKey": "",
+          "StoryText": "见过供奉，小的名唤温香。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "此后你二人便是供奉的贴身小厮了，一定仔细伺候。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一头雾水地带着两人回到了自己的居所...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 324,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2462.341,-1204.418)",
+      "Commands": [
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在王府内仔细探查了几番，并没有再发现什么特别的事情，便打道回府了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "打听",
+      "Description": "打听",
+      "Position": "(-3079.422,-1073.7)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "管事脸色一变，随即又呵呵的笑了起来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "王府不会限制各位供奉的行动，想来其他的供奉都已外出，留在府内的也可能在闭关修炼吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "{firstname}供奉刚来王府，想见见其他同道也属正常，不过日后也有的是机会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "不说这些了，差点耽误了正事，小的这次来找你是另有其事。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(总线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 326,
+      "Name": "第二次",
+      "Description": "第二次",
+      "Position": "(-2793.481,-1131.098)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在府内四处查看了一番，没有发现什么特殊的情况...就在你准备打道回府时，一道奇怪的波动引起了你的注意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "是禁制的波动...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "有意思，这里看起来并不像什么重要的地方，竟然被特意设下了禁制防护。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你收敛气息，往波动传来的方向走去。这是一间并不起眼的普通厢房，此时房门虚掩着，似乎刚刚有什么人打破禁制进入了房间。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Menu",
+          "Text": "调查一番",
+          "TargetBlockID": "this:364(调查)"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:363(回家)"
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "总线",
+      "Description": "总线",
+      "Position": "(-2924.694,-1039.018)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "按照惯例，供奉初入王府之时宁王会下放赠礼，小的已经把“金银财宝”和“软玉温香”都给带来了，请供奉大人随意挑选。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.Menu",
+          "Text": "金银财宝",
+          "TargetBlockID": "this:303(金银财宝)"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "软玉温香",
+          "TargetBlockID": "this:304(软玉温香)"
+        }
+      ]
+    },
+    {
+      "ItemID": 364,
+      "Name": "调查",
+      "Description": "调查",
+      "Position": "(-2648.168,-1054.875)",
+      "Commands": [
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你刚一推开房门，只见一道白影从你眼前一闪，还没等你看清来人是谁，便被一股巨力向后推开好几步，险些跌倒在地。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "等你再向四周张望时，周围已经空无一人...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Menu",
+          "Text": "进屋查看",
+          "TargetBlockID": "this:373(进屋)"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Menu",
+          "Text": "赶紧离开",
+          "TargetBlockID": "this:372(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 291,
+      "Name": "宁王？",
+      "Description": "宁王？",
+      "Position": "(-3081.694,-1152.018)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "供奉初来王府，当然要先享乐一番才是，不然岂不是我们待客不周。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "290(总线)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "第一次",
+      "Description": "第一次",
+      "Position": "(-2929.694,-1127.018)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在府内四处逛了逛，奇怪的是并没有见到府内的其他供奉，莫非大家都在闭门修炼...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "这不是{FirstName}供奉么，原来你走到这儿来了...小的正到处找您呢。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "管事来找我何事？",
+          "TargetBlockID": "this:290(总线)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "莫不是宁王给我指派任务了？",
+          "TargetBlockID": "this:291(宁王？)"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Menu",
+          "Text": "打听其他供奉的下落",
+          "TargetBlockID": "this:292(打听)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 386,
+      "Name": "第三次",
+      "Description": "第三次",
+      "Position": "(-2620.195,-1259.653)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "王府内不见踪影的其他供奉，那日偶然撞见的神秘白影，还有宁王修炼的恐怖功法，你隐约觉得这些事件之间另有关联...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你表面上仍是在府中闲逛玩乐，却暗中更仔细地观察了一番，可惜再没有能遇到什么特别值得注意的事情...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 329,
+      "Name": "第四次（享乐判断）",
+      "Description": "第四次（享乐判断）",
+      "Position": "(-2628.481,-1119.879)",
+      "Commands": [
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "337(第四次)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "324(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 337,
+      "Name": "第四次",
+      "Description": "第四次",
+      "Position": "(-2462.481,-1118.879)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你在王府内瞎逛了几圈，远远地便看到一名女子从廊道走过。她形色匆匆，还频频左右张望，看上去颇为警觉...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这不就是上次在酒宴上遇到的那名美妾么。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "悄悄跟上",
+          "TargetBlockID": "this:348(跟上她)"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Menu",
+          "Text": "打道回府",
+          "TargetBlockID": "this:324(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 303,
+      "Name": "金银财宝",
+      "Description": "金银财宝",
+      "Position": "(-3012.694,-975.0183)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "金银财宝，还不速速向供奉问好！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（可了不得，宁王府的死物竟然也能开口说话吗！）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你还没从震惊中恢复，就见两个其貌不扬的女子从管事身后走出。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 634,
+          "AvatarBindKey": "",
+          "StoryText": "见过供奉，奴婢名唤金银。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 635,
+          "AvatarBindKey": "",
+          "StoryText": "见过供奉，奴婢名唤财宝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "......",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 631,
+          "AvatarBindKey": "",
+          "StoryText": "此后你二人便是供奉的贴身婢女了，一定仔细伺候。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你一头雾水地带着两人回到了自己的居所...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

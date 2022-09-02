@@ -1,0 +1,126 @@
+{
+  "Name": "Talk130402",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2799.131,-1237.23)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}供奉，准备好参加比试了么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Menu",
+          "Text": "准备好了",
+          "TargetBlockID": "this:288(准备好了)"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "再等等",
+          "TargetBlockID": "this:289(再等等)"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "准备好了",
+      "Description": "准备好了",
+      "Position": "(-2798.709,-1183.152)",
+      "Commands": [
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1304,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}供奉，请随我来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "再等等",
+      "Description": "再等等",
+      "Position": "(-2658.936,-1232.015)",
+      "Commands": [
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

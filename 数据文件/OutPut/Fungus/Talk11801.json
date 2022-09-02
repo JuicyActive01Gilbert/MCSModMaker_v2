@@ -1,0 +1,1201 @@
+{
+  "Name": "Talk11801",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2950.376,-1427.236)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(竹山宗-药田照顾-境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3158.991,-1427.866)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 411,
+      "Name": "一阶药草（1）",
+      "Description": "一阶药草（1）",
+      "Position": "(-1687.751,-1366.345)",
+      "Commands": [
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 440,
+      "Name": "二阶药草（2）",
+      "Description": "二阶药草（2）",
+      "Position": "(-1686.815,-1182.724)",
+      "Commands": [
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 355,
+      "Name": "三个月",
+      "Description": "三个月",
+      "Position": "(-1828.752,-1082.24)",
+      "Commands": [
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "441(二阶材料（3）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(二阶药草（3）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "413(特殊材料)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 439,
+      "Name": "二阶材料（2）",
+      "Description": "二阶材料（2）",
+      "Position": "(-1684.027,-1228.896)",
+      "Commands": [
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 441,
+      "Name": "二阶材料（3）",
+      "Description": "二阶材料（3）",
+      "Position": "(-1685.027,-1135.448)",
+      "Commands": [
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 528,
+      "Name": "是-随机状态",
+      "Description": "是-随机状态",
+      "Position": "(-2403.589,-1218.816)",
+      "Commands": [
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "535(睡着)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "536(没睡着)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 313,
+      "Name": "炼气期",
+      "Description": "炼气期",
+      "Position": "(-2505.588,-1299.662)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "524(判断是否是今天第一次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "二个月",
+      "Description": "二个月",
+      "Position": "(-1833.076,-1241.024)",
+      "Commands": [
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "437(一阶材料（2）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "438(一阶药草（2）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "439(二阶材料（2）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "440(二阶药草（2）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 413,
+      "Name": "特殊材料",
+      "Description": "特殊材料",
+      "Position": "(-1681.355,-1044.214)",
+      "Commands": [
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，到手了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "442(二阶药草（3）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 385,
+      "Name": "判断状态",
+      "Description": "判断状态",
+      "Position": "(-2252.876,-1217.394)",
+      "Commands": [
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "535(睡着)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "536(没睡着)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2502.022,-1525.316)",
+      "Commands": [
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 214,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过师叔。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "一个月",
+      "Description": "一个月",
+      "Position": "(-1843.576,-1380.859)",
+      "Commands": [
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "411(一阶药草（1）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(一阶材料（1）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 172,
+      "Name": "竹山宗-药田照顾-境界测试",
+      "Description": "竹山宗-药田照顾-境界测试",
+      "Position": "(-2752.112,-1426.997)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(炼气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(元婴期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 536,
+      "Name": "没睡着",
+      "Description": "没睡着",
+      "Position": "(-2237.589,-1137.816)",
+      "Commands": [
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 214,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "(~o~)哎...好困...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 214,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "(~o~)哎...好困...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 214,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师...{shixiong}，你怎么来了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2501.02,-1454.887)",
+      "Commands": [
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 214,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过师叔。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 316,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2502.45,-1598.745)",
+      "Commands": [
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 214,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过师叔。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 412,
+      "Name": "一阶材料（1）",
+      "Description": "一阶材料（1）",
+      "Position": "(-1685.206,-1418.689)",
+      "Commands": [
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 438,
+      "Name": "一阶药草（2）",
+      "Description": "一阶药草（2）",
+      "Position": "(-1687.027,-1272.172)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 437,
+      "Name": "一阶材料（2）",
+      "Description": "一阶材料（2）",
+      "Position": "(-1687.751,-1315.684)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2504.447,-1384.602)",
+      "Commands": [
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "524(判断是否是今天第一次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 524,
+      "Name": "判断是否是今天第一次对话",
+      "Description": "判断是否是今天第一次对话",
+      "Position": "(-2358.589,-1300.816)",
+      "Commands": [
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == day"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == month"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(判断状态)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "528(是-随机状态)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "528(是-随机状态)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 442,
+      "Name": "二阶药草（3）",
+      "Description": "二阶药草（3）",
+      "Position": "(-1682.579,-1089.276)",
+      "Commands": [
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "师弟，这是你的酬劳收好！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢师兄。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 535,
+      "Name": "睡着",
+      "Description": "睡着",
+      "Position": "(-2421.589,-1138.816)",
+      "Commands": [
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 214,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "呼...呼...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "看守药田的马师兄似乎睡着了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

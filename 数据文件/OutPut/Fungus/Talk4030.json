@@ -1,0 +1,179 @@
+{
+  "Name": "Talk4030",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1348.93)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "593(变量读取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 597,
+      "Name": "购买洞府的条件",
+      "Description": "购买洞府的条件",
+      "Position": "(-3075.564,-1110.158)",
+      "Commands": [
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "洞府也不是谁人都能买的。道友若是想要购买洞府还是需要宁州声望到达略有薄名。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "593(变量读取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 598,
+      "Name": "去那里购买洞府",
+      "Description": "去那里购买洞府",
+      "Position": "(-2873.503,-1105.003)",
+      "Commands": [
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我宁州有一座巨大的灵脉为玄道宗所控制，其上建立城池，道友可知是哪里？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "请问...\n",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "那就是逸风城，玄道宗更是指派了所谓的宁王前去管理，道友若是想要购买洞府不妨去逸风府看看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "593(变量读取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 593,
+      "Name": "变量读取",
+      "Description": "变量读取",
+      "Position": "(-2796.844,-1258.216)",
+      "Commands": [
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买洞府的条件",
+          "TargetBlockID": "this:597(购买洞府的条件)"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Menu",
+          "Text": "购买洞府的好处",
+          "TargetBlockID": "this:599(购买洞府的好处)"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.Menu",
+          "Text": "去哪里购买洞府",
+          "TargetBlockID": "this:598(去那里购买洞府)"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.Menu",
+          "Text": "离开",
+          "TargetBlockID": "this:600(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 599,
+      "Name": "购买洞府的好处",
+      "Description": "购买洞府的好处",
+      "Position": "(-2714.741,-1102.941)",
+      "Commands": [
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "洞府之中，道友可自行布置灵田、炼丹房、炼器室，修炼速度更不是我们这种客栈可以比的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "593(变量读取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 600,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2509.587,-1106.033)",
+      "Commands": [
+        {
+          "ItemID": 614,
+          "CmdType": "CmdDestoryMe"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

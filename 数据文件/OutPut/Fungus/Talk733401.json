@@ -1,0 +1,586 @@
+{
+  "Name": "Talk733401",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "时间结算",
+      "Description": "时间结算",
+      "Position": "(-3229.561,-1298.533)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 33"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你忙活一阵后，发现这个阵法空间中的灵气消退许多，令人窒息的灼热感也渐渐消散。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你松一口气时，一个火焰裹挟着的傀儡向你冲来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(战斗判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 27"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{gongzi}，在下感到此间阵法出现了变动，只怕有什么东西要出来了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 616,
+          "AvatarBindKey": "",
+          "StoryText": "还请你再加快些速度，尽量多解除几个阵法核心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "355(核心判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "387(dot层数判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 350,
+      "Name": "解除一个",
+      "Description": "解除一个",
+      "Position": "(-2922.338,-1229.946)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 417,
+      "Name": "解除五个或一个都没解除",
+      "Description": "解除五个或一个都没解除",
+      "Position": "(-2916.346,-1438.16)",
+      "Commands": [
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 415,
+      "Name": "解除三个",
+      "Description": "解除三个",
+      "Position": "(-2921.61,-1334.213)",
+      "Commands": [
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 414,
+      "Name": "解除两个",
+      "Description": "解除两个",
+      "Position": "(-2921.611,-1282.897)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 387,
+      "Name": "dot层数判定",
+      "Description": "dot层数判定",
+      "Position": "(-3228.19,-1377.584)",
+      "Commands": [
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 10"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着不断地前进，你感到阵法空间内的灵气也愈发狂暴，好在你实力够强，还不至于被影响行动。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 15"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在不知走了多久后，你的灵气护盾终是在狂暴灵气的冲击下碎裂开来。灼热的阵法空间如同火焰炼狱一般，甚至让你感觉经脉都要燃烧起来了。但也只能运功护身，咬牙前进。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 20"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "TempValue",
+          "StoryText": "（前进...前进...前进...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempValue",
+          "StoryText": "在这个炼狱里，你已经只剩这一个念头了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "TempValue",
+          "StoryText": "在你的灵气终于耗尽后，不论是体外的皮肤、毛发，还是体内的经脉、气海都已经燃烧起来。若是不能及时回到公孙季的阵法中，只怕一时三刻间便是要化为飞灰。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{vpunch=10,0.5}（这里灵气过于狂暴，我要多多留意{color=#d0380a}自身体力{/color}为上！）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(时间结算)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "核心判定",
+      "Description": "核心判定",
+      "Position": "(-3227.762,-1231.731)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你忙活一阵后，发现这个阵法空间中的狂暴灵气已然平息，与外界无异。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "正当你准备休息一会时，一个傀儡向你袭来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.AddHP"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "412(战斗判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 416,
+      "Name": "解除四个",
+      "Description": "解除四个",
+      "Position": "(-2918.98,-1388.11)",
+      "Commands": [
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 412,
+      "Name": "战斗判定",
+      "Description": "战斗判定",
+      "Position": "(-3083.453,-1232.897)",
+      "Commands": [
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "417(解除五个或一个都没解除)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "416(解除四个)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "415(解除三个)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "414(解除两个)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "350(解除一个)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "417(解除五个或一个都没解除)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

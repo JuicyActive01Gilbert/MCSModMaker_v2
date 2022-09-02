@@ -1,0 +1,288 @@
+{
+  "Name": "Talk133307",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3229.157,-1348.249)",
+      "Commands": [
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "345(FORCE)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "346(PEACE)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 515,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(-2781.53,-1354.452)",
+      "Commands": [
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{w}{w=0.5}厚重的大门上刻着繁复的阵法花纹，看来其上应杂糅了多个精妙的阵法，你选择...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Menu",
+          "Text": "暴力破阵",
+          "TargetBlockID": "this:496(暴力破阵)"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Menu",
+          "Text": "钻研阵法",
+          "TargetBlockID": "this:497(钻研阵法)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 345,
+      "Name": "FORCE",
+      "Description": "FORCE",
+      "Position": "(-2991.838,-1433.833)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "凭借记忆你来到通往圣坛的门前，正准备破阵时，从旁突然冲出几个修士将你团团围住！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "幸好这些修士的修为并不高深，你三下五除二解决掉这些修士，不禁想到他们的行动或许并非出自本愿，也许在什么地方有人正操纵着他们向你所在的方向赶来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{w}{w=0.5}厚重的大门上刻着繁复的阵法花纹，看来其上应杂糅了多个精妙的阵法，你选择...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Menu",
+          "Text": "暴力破阵",
+          "TargetBlockID": "this:496(暴力破阵)"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Menu",
+          "Text": "钻研阵法",
+          "TargetBlockID": "this:497(钻研阵法)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 346,
+      "Name": "PEACE",
+      "Description": "PEACE",
+      "Position": "(-2995.962,-1268.885)",
+      "Commands": [
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "凭着记忆，你悄无声息地潜入圣地深处。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "{w}{w=0.5}厚重的大门上刻着繁复的阵法花纹，看来其上应杂糅了多个精妙的阵法，你选择...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.Menu",
+          "Text": "暴力破阵",
+          "TargetBlockID": "this:496(暴力破阵)"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Menu",
+          "Text": "钻研阵法",
+          "TargetBlockID": "this:497(钻研阵法)"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 496,
+      "Name": "暴力破阵",
+      "Description": "暴力破阵",
+      "Position": "(-2781.531,-1432.802)",
+      "Commands": [
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.SetSTalk"
+        }
+      ]
+    },
+    {
+      "ItemID": 497,
+      "Name": "钻研阵法",
+      "Description": "钻研阵法",
+      "Position": "(-2779.467,-1269.915)",
+      "Commands": [
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.If",
+          "Condition": "wudao >= 3"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此处阵法深奥复杂，你平日积累的阵道学识也不足以覆盖阵法的全貌，你在此花费了一些时间。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这阵法有些深奥，我还是想想别的办法吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "515(New Block1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

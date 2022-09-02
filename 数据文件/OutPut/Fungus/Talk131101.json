@@ -1,0 +1,509 @@
+{
+  "Name": "Talk131101",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2593.661,-1104.994)",
+      "Commands": [
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 232,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 227,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 233,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "200(炼丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 228,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 234,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "214(炼器室)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 229,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 235,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，要住店么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 236,
+          "CmdType": "Fungus.Menu",
+          "Text": "是的",
+          "TargetBlockID": "this:194(住店)"
+        },
+        {
+          "ItemID": 237,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想租借一间丹房",
+          "TargetBlockID": "this:200(炼丹)"
+        },
+        {
+          "ItemID": 238,
+          "CmdType": "Fungus.Menu",
+          "Text": "我想租借一间炼器室",
+          "TargetBlockID": "this:214(炼器室)"
+        },
+        {
+          "ItemID": 239,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:192(不住)"
+        },
+        {
+          "ItemID": 230,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2596.081,-1175.251)",
+      "Commands": [
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 119,
+      "Name": "AddItem",
+      "Description": "AddItem",
+      "Position": "(-3075.997,-1175.896)",
+      "Commands": [
+        {
+          "ItemID": 120,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 121,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 128,
+      "Name": "GetStaticValues",
+      "Description": "GetStaticValues",
+      "Position": "(-3081.535,-1099.401)",
+      "Commands": [
+        {
+          "ItemID": 129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 130,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 133,
+      "Name": "SeTalk",
+      "Description": "SeTalk",
+      "Position": "(-3246.16,-1026.03)",
+      "Commands": [
+        {
+          "ItemID": 134,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 164,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 137,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 138,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "StaticTalk == (0.0, 4.0)"
+        },
+        {
+          "ItemID": 165,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 140,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 205,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-2905.371,-1031.496)",
+      "Commands": [
+        {
+          "ItemID": 242,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 194,
+      "Name": "住店",
+      "Description": "住店",
+      "Position": "(-2592.207,-1022.417)",
+      "Commands": [
+        {
+          "ItemID": 245,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.OpenZuLi"
+        }
+      ]
+    },
+    {
+      "ItemID": 143,
+      "Name": "New Block4",
+      "Description": "New Block4",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 196,
+      "Name": "打听 (Copy)",
+      "Description": "打听 (Copy)",
+      "Position": "(-3097.104,-1234.338)",
+      "Commands": [
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 716,
+          "AvatarBindKey": "",
+          "StoryText": "让我想想...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 198,
+          "CmdType": "Fungus.YSSay"
+        }
+      ]
+    },
+    {
+      "ItemID": 139,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 125,
+      "Name": "SetStaticValues",
+      "Description": "SetStaticValues",
+      "Position": "(-3249.952,-1090.583)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 152,
+          "CmdType": "Fungus.CallMethod"
+        }
+      ]
+    },
+    {
+      "ItemID": 192,
+      "Name": "不住",
+      "Description": "不住",
+      "Position": "(-2428.983,-1102.817)",
+      "Commands": [
+        {
+          "ItemID": 246,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 144,
+      "Name": "New Block5",
+      "Description": "New Block5",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 214,
+      "Name": "炼器室",
+      "Description": "炼器室",
+      "Position": "(-2751.307,-1160.842)",
+      "Commands": [
+        {
+          "ItemID": 216,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "炼器租借，一次200灵石。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 217,
+          "CmdType": "Fungus.Menu",
+          "Text": "好的",
+          "TargetBlockID": "this:215(lq)"
+        },
+        {
+          "ItemID": 218,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:205(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 141,
+      "Name": "New Block2",
+      "Description": "New Block2",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 200,
+      "Name": "炼丹",
+      "Description": "炼丹",
+      "Position": "(-2755.962,-1103.261)",
+      "Commands": [
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "地火房租借，一次200灵石。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 202,
+          "CmdType": "Fungus.Menu",
+          "Text": "好的",
+          "TargetBlockID": "this:204(是的)"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:205(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 148,
+      "Name": "New Block1",
+      "Description": "New Block1",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 215,
+      "Name": "lq",
+      "Description": "lq",
+      "Position": "(-2753.506,-1213.59)",
+      "Commands": [
+        {
+          "ItemID": 219,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 220,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 200"
+        },
+        {
+          "ItemID": 221,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 222,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 226,
+          "CmdType": "OpenLianQi"
+        },
+        {
+          "ItemID": 224,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 225,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "身上的灵石似乎不够了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 241,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 145,
+      "Name": "New Block6",
+      "Description": "New Block6",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 142,
+      "Name": "New Block3",
+      "Description": "New Block3",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 204,
+      "Name": "是的",
+      "Description": "是的",
+      "Position": "(-2757.137,-1032.672)",
+      "Commands": [
+        {
+          "ItemID": 206,
+          "CmdType": "Fungus.CheckMoney"
+        },
+        {
+          "ItemID": 207,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 200"
+        },
+        {
+          "ItemID": 210,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 243,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 212,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友，请。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 211,
+          "CmdType": "Fungus.LoadScene"
+        },
+        {
+          "ItemID": 208,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 244,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 209,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "身上的灵石似乎不够了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

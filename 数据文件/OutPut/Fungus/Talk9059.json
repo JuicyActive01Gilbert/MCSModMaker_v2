@@ -1,0 +1,929 @@
+{
+  "Name": "Talk9059",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 432,
+      "Name": "灭口",
+      "Description": "灭口",
+      "Position": "(-3086.468,-998.5615)",
+      "Commands": [
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 341,
+      "Name": "被发现",
+      "Description": "被发现",
+      "Position": "(-2954.389,-1061.604)",
+      "Commands": [
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "还未等你动手，突然周天灵气翻涌，原本已经损坏的阵法又重新运转起来！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "CmdGetNPCFaceJson"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue > 20"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "{FirstName}{LastName}，竟然是你？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "没想到你竟然做出如此卑劣之事，我们之间的交情是被狗吃了么？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.Menu",
+          "Text": "解释",
+          "TargetBlockID": "this:431(解释)"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.Menu",
+          "Text": "动手！",
+          "TargetBlockID": "this:432(灭口)"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "何人胆敢擅闯本座洞府！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 352,
+      "Name": "练功房",
+      "Description": "练功房",
+      "Position": "(-2787.346,-909.2886)",
+      "Commands": [
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.If",
+          "Condition": "weixian >= 4"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "341(被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.If",
+          "Condition": "itemA > 0"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "练功房外布下的单独的禁制，颇为精妙。为了破开禁制花费了你不少的时间，但也算收货颇丰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "itemD > 0"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "练功房外布下的单独的禁制，颇为精妙。为了破开禁制花费了你不少的时间，但也算有所收获。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "练功房外布下的单独的禁制，颇为精妙。为了破开禁制花费了你不少的时间，可惜你在里面什么也没有找到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(后续决定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 431,
+      "Name": "解释",
+      "Description": "解释",
+      "Position": "(-3090.417,-1056.456)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "CmdGetNPCFaceJson"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue > 40"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哼，看在我们过去的交情上，这次我便饶你一回，若还有下次，就别怪我不留情面了！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "334(速速离去)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "无需多言，今日你我之间必有一死！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "432(灭口)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "继续",
+      "Description": "继续",
+      "Position": "(-2791.894,-982.0158)",
+      "Commands": [
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "时间紧迫，一些重要的房间应该还设有单独的禁制，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Menu",
+          "Text": "先搜索药田",
+          "TargetBlockID": "this:350(药田)"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Menu",
+          "Text": "要搜索练功房",
+          "TargetBlockID": "this:352(练功房)"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Menu",
+          "Text": "先搜索丹房",
+          "TargetBlockID": "this:353(丹房)"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Menu",
+          "Text": "速速离去",
+          "TargetBlockID": "this:334(速速离去)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 351,
+      "Name": "后续决定",
+      "Description": "后续决定",
+      "Position": "(-2785.074,-761.5616)",
+      "Commands": [
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "洞府的主人还没有回来，你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.If",
+          "Condition": "yaotian == 0"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.Menu",
+          "Text": "先搜索药田",
+          "TargetBlockID": "this:350(药田)"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.If",
+          "Condition": "liangong == 0"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Menu",
+          "Text": "要搜索练功房",
+          "TargetBlockID": "this:352(练功房)"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.If",
+          "Condition": "danfang == 0"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Menu",
+          "Text": "先搜索丹房",
+          "TargetBlockID": "this:353(丹房)"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Menu",
+          "Text": "速速离去",
+          "TargetBlockID": "this:334(速速离去)"
+        }
+      ]
+    },
+    {
+      "ItemID": 350,
+      "Name": "药田",
+      "Description": "药田",
+      "Position": "(-2960.822,-916.9839)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.If",
+          "Condition": "weixian >= 4"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "341(被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不同灵药的采摘方式截然不同，稍有不慎便会药性大减。你小心翼翼地将药田内种植的灵药采摘一空，花费了你不少的时间。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(后续决定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "有东西",
+      "Description": "有东西",
+      "Position": "(-2794.165,-1142.243)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 6"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 7"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 8"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 9"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 10"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 11"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 12"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 13"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 14"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 15"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 16"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 17"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "洞府被井然有序地分割成了几个独立的空间，药田内还种植着几株尚未采摘的灵植。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "看来洞府的主人只是临时外出，并未放弃这处洞府。刚刚破除的阵法应该已经惊动了他，继续留在这里可能会遇到危险，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "仔细搜索",
+          "TargetBlockID": "this:333(仔细搜索)"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.Menu",
+          "Text": "速速离去",
+          "TargetBlockID": "this:334(速速离去)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量赋值",
+      "Description": "变量赋值",
+      "Position": "(-2792.312,-1222.457)",
+      "Commands": [
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(没东西)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.GetHaiShangNpcId"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(有东西)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "丹房",
+      "Description": "丹房",
+      "Position": "(-2601.067,-907.9857)",
+      "Commands": [
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.If",
+          "Condition": "weixian >= 4"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "341(被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.If",
+          "Condition": "itemB > 0"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "丹房外布有一些简单的禁制，但更多应是为了隔热与预防炸炉，不难破解。你在这里找到了一张遗落的丹方。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "itemC > 0"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "丹房外布有一些简单的禁制，但更多应是为了隔热与预防炸炉，不难破解。你在这里找到了几颗刚刚炼制成功的丹药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "丹房外布有一些简单的禁制，但更多应是为了隔热与预防炸炉，不难破解。可惜的是，你什么有用的东西也没有找到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "351(后续决定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 334,
+      "Name": "速速离去",
+      "Description": "速速离去",
+      "Position": "(-2614.614,-1142.242)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 287,
+      "Name": "没东西",
+      "Description": "没东西",
+      "Position": "(-2952.116,-1224.06)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "洞府被井然有序地分割成了几个独立的空间，但目光所及之处都空空如也。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "想来此处洞府已经荒废，有价值的东西也被统统带走了。你白忙活了一场，心中不免有些失落。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 333,
+      "Name": "仔细搜索",
+      "Description": "仔细搜索",
+      "Position": "(-2793.028,-1060.424)",
+      "Commands": [
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.If",
+          "Condition": "weixian >= 4"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "341(被发现)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "342(继续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

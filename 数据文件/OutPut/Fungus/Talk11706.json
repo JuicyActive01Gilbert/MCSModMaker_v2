@@ -1,0 +1,444 @@
+{
+  "Name": "Talk11706",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "闲聊",
+      "Description": "闲聊",
+      "Position": "(-3387.95,-1367.836)",
+      "Commands": [
+        {
+          "ItemID": 411,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "传闻在这宁州古迹中封印着绝世灵剑，只可惜至今也没有修士得取此剑。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "衍复长老也是得此消息入古迹求索，结果...{$TmpTalkString}于古迹中也千万多加小心。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 0"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "这宁州古迹危险重重，{$TmpTalkString}可得多些保命手段才是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue != 0"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "这宁州古迹危险重重，{$TmpTalkString}可得多些保命手段才是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "CmdGetHouXuJiaoTan"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "道友此等年纪便有如此高深的修为，真是羡煞旁人啊！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "道友此等年纪便有如此高深的修为，真是羡煞旁人啊！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "道友此等年纪便有如此高深的修为，真是羡煞旁人啊！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "道友此等年纪便有如此高深的修为，真是羡煞旁人啊！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "这宁州古迹危险重重，道友可得多些保命手段才是。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "369(委托)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3387.839,-1455.538)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(闲聊)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 387,
+      "Name": "冷漠以待",
+      "Description": "冷漠以待",
+      "Position": "(-3070.302,-1366.091)",
+      "Commands": [
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 386,
+      "Name": "寒暄一番",
+      "Description": "寒暄一番",
+      "Position": "(-3070.332,-1427.876)",
+      "Commands": [
+        {
+          "ItemID": 427,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来是明河长老。许久未见，此番若是在古迹中相遇，还请多多照应。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来是金虹剑派的明河长老，久仰大名，此番若是在古迹中相遇，还请多多照应。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "古迹寻宝当然各凭本事...哎...不过若是{$TmpTalkString}遇到危险，我也不会袖手旁观。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "明河道友似乎遇到了什么麻烦？如果有我帮的上忙的事情，但说无妨。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "也罢，多一人帮忙便多一丝机会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "千年前那一次古迹出世，我派损伤惨重。当年的大长老衍复真人被卷入乱流之中，未能脱身，至今还被困在那片空间之中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 103,
+          "AvatarBindKey": "",
+          "StoryText": "尽管希望渺茫，但以真人元婴巅峰的修为，如果能够成功突破，未必没有幸存的可能性。{$TmpTalkString}若是能帮忙留意一番，明河在此谢过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Menu",
+          "Text": "欣然接受",
+          "TargetBlockID": "this:374(接取)"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:375(算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 374,
+      "Name": "接取",
+      "Description": "接取",
+      "Position": "(-2943.064,-1425.493)",
+      "Commands": [
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.AddTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 375,
+      "Name": "算了",
+      "Description": "算了",
+      "Position": "(-2941.129,-1365.276)",
+      "Commands": []
+    },
+    {
+      "ItemID": 369,
+      "Name": "委托",
+      "Description": "委托",
+      "Position": "(-3219.469,-1394.545)",
+      "Commands": [
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Menu",
+          "Text": "寒暄一番",
+          "TargetBlockID": "this:386(寒暄一番)"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Menu",
+          "Text": "冷漠回应",
+          "TargetBlockID": "this:387(冷漠以待)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

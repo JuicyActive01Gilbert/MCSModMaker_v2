@@ -1,0 +1,463 @@
+{
+  "Name": "Talk7392",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2792.735,-1350.78)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1125(道侣判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1164,
+      "Name": "自言自语",
+      "Description": "自言自语",
+      "Position": "(-2618.619,-1220.72)",
+      "Commands": [
+        {
+          "ItemID": 1170,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（我早该想到的，她八成是知道我在场后，又憋了一肚子坏水。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1171,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（虽然当时确实被她蒙住了，但至少...从结果来看不是坏事吧。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 338,
+      "Name": "回合数判定",
+      "Description": "回合数判定",
+      "Position": "(-2998.923,-1281.918)",
+      "Commands": [
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 3"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1163,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2793.087,-1220.72)",
+      "Commands": [
+        {
+          "ItemID": 1165,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1166,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1169,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1112(剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1167,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1168,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1164(自言自语)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1112,
+      "Name": "剧情",
+      "Description": "剧情",
+      "Position": "(-2792.967,-1144.034)",
+      "Commands": [
+        {
+          "ItemID": 1143,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "这次还真要感谢你呢。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1144,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "即便我不在，就那几位元婴邪修和冲虚散人，凭你化神强者的实力还不是手到擒来？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "不，当时我并不在宫中。而且鸾儿也只是向我汇报说冲虚散人私通魔教被她发现，正在追回，而不是向我请求帮助。以鸾儿的实力对付冲虚散人绰绰有余，更何况我还安排心儿前往支援。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1146,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "若不是心儿告诉我你也会一同前往支援，我甚至没打算关注此次事件。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1173,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1174,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 1172,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "虽说你花了些时间破阵，害我看太久鸾儿她们的战斗都觉得无聊了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1183,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "但还好结果没让我失望，尤其是他用那什么“玄骨”唬住你的时候，只有我知道阵法里根本就没有其他人。当时你们认真的表情真是精彩，嘻嘻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1177,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "你选择无视星凝最后说的话，而是提出自己更关心的问题。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1175,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 8"
+        },
+        {
+          "ItemID": 1178,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "虽说你花了些太多时间破阵，害我看太久鸾儿她们的战斗，都开始考虑要不要亲手解决冲虚散人和那古神教的魔修了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1180,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "但还好结果没让我失望，尤其是他用那什么“玄骨”唬住你的时候，只有我知道阵法里根本就没有其他人。当时你们认真的表情真是精彩，嘻嘻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1179,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "你选择无视星凝最后说的话，而是提出自己更关心的问题。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1176,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1147,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "嗯，为何？那若是我不在，蕊宫仙子与{$Lin}此次岂不是都要身死于那绝魂阵中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1148,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "哼，若不是无惑对星宫有功，冲虚散人又是他最喜爱的弟子，此人在我眼中不过蝼蚁而已，敢暗通魔教碾死便是了。所以令鸾儿与心儿将之追回已算得上是关照有加，我又何必再多加关注。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1149,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "所以现在想来，冲虚散人多半是故意露的马脚，其实早就与古神教勾结意图陷害我。而我竟一时大意没有多想，险些让鸾儿命丧于此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1150,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1151,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "在{$Xing}眼里，化神之下皆蝼蚁么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1152,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "自然不是，先不说星宫中人。若不是关注你，此次我又怎会亲自前往。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "（怎么总觉得她说的话哪里有矛盾？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1154,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "哦？你不是说冲虚散人只是蝼蚁嘛，为何我一来你就亲自前往了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1155,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "我这不是出于关心么，没想到你不但不感谢竟还质疑，真是浪费我一番好心。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1156,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "要感谢的是{$Xing}才对吧。而且，难道{$xing}对我的关心程度远胜于蕊宫仙子和{$Lin}？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1157,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "呃...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1158,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "xingning",
+          "StoryText": "啊！差点忘了，我还要去给鸾儿疗伤呢！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1159,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "xingning",
+          "StoryText": "星凝还未说完，便已是化作一道流光消失在了大殿中。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1160,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 1162,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 1161,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 1125,
+      "Name": "道侣判定",
+      "Description": "道侣判定",
+      "Position": "(-2791.902,-1292.895)",
+      "Commands": [
+        {
+          "ItemID": 1126,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1127,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 1128,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 1129,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1130,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 1131,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1132,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1133,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1134,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1142,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1136,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1137,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 1"
+        },
+        {
+          "ItemID": 1138,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1139,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1140,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1141,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1135,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1163(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

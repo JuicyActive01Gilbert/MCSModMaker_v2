@@ -1,0 +1,825 @@
+{
+  "Name": "Talk130103",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 340,
+      "Name": "可交付",
+      "Description": "可交付",
+      "Position": "(-2436.206,-1261.559)",
+      "Commands": [
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我要的东西你带来了么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Menu",
+          "Text": "都在这里了",
+          "TargetBlockID": "this:370(交付)"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Menu",
+          "Text": "我很快就把草药带来",
+          "TargetBlockID": "this:355(很快带来)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 310,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-3114.615,-1067.243)",
+      "Commands": []
+    },
+    {
+      "ItemID": 287,
+      "Name": "卖草分支",
+      "Description": "卖草分支",
+      "Position": "(-2802.118,-1151.333)",
+      "Commands": [
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 3"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "322(继续收判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(已完成任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "已完成任务",
+      "Description": "已完成任务",
+      "Position": "(-2643.193,-1301.008)",
+      "Commands": [
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友还有何事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 353,
+      "Name": "关于腐骨灵花",
+      "Description": "关于腐骨灵花",
+      "Position": "(-2581.661,-1062.696)",
+      "Commands": [
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这腐骨灵花乃五品仙草，生长在极阴之地。我听说，只有在幽冥海的一些岛屿上才能找到这种草药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "或者你也可以去坊市或者拍卖行碰碰运气，我不管你用什么方式，把东西带来就行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于七彩月兰",
+          "TargetBlockID": "this:354(关于七彩月兰)"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Menu",
+          "Text": "我很快就把草药带来",
+          "TargetBlockID": "this:355(很快带来)"
+        }
+      ]
+    },
+    {
+      "ItemID": 355,
+      "Name": "很快带来",
+      "Description": "很快带来",
+      "Position": "(-2583.932,-939.9685)",
+      "Commands": []
+    },
+    {
+      "ItemID": 322,
+      "Name": "继续收判定",
+      "Description": "继续收判定",
+      "Position": "(-2801.388,-1097.833)",
+      "Commands": [
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "如果你这里还有七彩月兰与腐骨灵花，老夫我还是用这个价收。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Menu",
+          "Text": "你要的东西我带来了",
+          "TargetBlockID": "this:309(给药)"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Menu",
+          "Text": "我没有你要的东西",
+          "TargetBlockID": "this:310(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量判定",
+      "Description": "变量判定",
+      "Position": "(-2799.131,-1224.657)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "286(正常触发)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "287(卖草分支)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "288(已接取任务（完成判定）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(已完成任务)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 286,
+      "Name": "正常触发",
+      "Description": "正常触发",
+      "Position": "(-2973.705,-1147.924)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老夫正在收集五品仙草七彩月兰与腐骨灵花，道友这里若是有的话，老夫愿用每株40000灵石的高价收购。{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Menu",
+          "Text": "你收集这些草药做什么？",
+          "TargetBlockID": "this:308(询问)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "我这里恰好有这两种草药",
+          "TargetBlockID": "this:309(给药)"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "我没有你要的东西",
+          "TargetBlockID": "this:310(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 354,
+      "Name": "关于七彩月兰",
+      "Description": "关于七彩月兰",
+      "Position": "(-2580.524,-1001.332)",
+      "Commands": [
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这七彩月兰极为神秘，只有在月圆之时才会开花，平日里若不仔细观察则与寻常杂草无异。我听说，只有在吞云海的一些岛屿上才能找到这种草药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "或者你也可以去坊市或者拍卖行碰碰运气，我不管你用什么方式，把东西带来就行。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于腐骨灵花",
+          "TargetBlockID": "this:353(关于腐骨灵花)"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Menu",
+          "Text": "我很快就把草药带来",
+          "TargetBlockID": "this:355(很快带来)"
+        }
+      ]
+    },
+    {
+      "ItemID": 288,
+      "Name": "已接取任务（完成判定）",
+      "Description": "已接取任务（完成判定）",
+      "Position": "(-2649.847,-1228.533)",
+      "Commands": [
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "340(可交付)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "341(不可交付)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "341(不可交付)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 336,
+      "Name": "接任务",
+      "Description": "接任务",
+      "Position": "(-2983.934,-995.6514)",
+      "Commands": [
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "老夫会在南崖城的客栈等你，但如果在此之前我就收集到了足够的草药，那这些灵石可就是别人的了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于腐骨灵花",
+          "TargetBlockID": "this:353(关于腐骨灵花)"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于七彩月兰",
+          "TargetBlockID": "this:354(关于七彩月兰)"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Menu",
+          "Text": "我很快就把草药带来",
+          "TargetBlockID": "this:355(很快带来)"
+        }
+      ]
+    },
+    {
+      "ItemID": 370,
+      "Name": "交付",
+      "Description": "交付",
+      "Position": "(-2281.66,-1259.287)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "草药我已经都给你带来了，按照约定，你必须把秘方一起告诉我。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友可曾听说过阴冥泉？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "听这名字，似乎和阴冥海有关？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，这阴冥泉实质上是极阴之气凝聚到极致后液化的表现。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "阴冥，玄冥与幽冥三海，皆位于南方极阴之地，但论阴气最重则当以阴冥海为首，而这极阴之水也只能在阴冥海的部分岛屿上找到。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这腐骨灵花有养魂之药性，而七彩月兰则有清心之药性，二者皆为性寒之药，本就生长于极寒极阴之地，经过这阴冥泉水的泡发一日后，能够最大程度发挥其药效。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "只需用这吸收了药性后的灵水擦拭双目，便有提神清目的奇效。如此往复三到四次，甚至能够让双目练就一些想象不到的奇妙瞳术。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（若真有如此奇效，那也确实值得冒险去那阴冥海一探了。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.AddTask"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        }
+      ]
+    },
+    {
+      "ItemID": 309,
+      "Name": "给药",
+      "Description": "给药",
+      "Position": "(-3116.889,-1145.651)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我这里恰好就有这两种草药，按你说好的价，一株四万灵石，它们就是你的了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈哈哈，老夫言而有信，这里是八万灵石，拿去吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 3"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "如果你这里还有多余的草药，老夫我还是用这个价收。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，不错...这些总算是够了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 308,
+      "Name": "询问",
+      "Description": "询问",
+      "Position": "(-2979.387,-1064.969)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我还未曾听闻将七彩月兰与腐骨灵花一同入药的，你收集这两种草药做什么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "（提防地看着你）道友何故要问这么多，若是没有的话就别在这里妨碍老夫了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我的确能帮你弄到这两种草药，但我想交换的并不是你的灵石。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "若是你能将你收集这两种草药的目的告诉我，我可以用更便宜的价格把它们出让给你。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好吧，我的确急需不少数量的草药...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这秘方原本老夫不打算外传，但若是你能一次性拿出3株腐骨灵花与3株七彩月兰给我的话，这秘方和18万的灵石就都归你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Menu",
+          "Text": "成交",
+          "TargetBlockID": "this:336(接任务)"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:310(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 341,
+      "Name": "不可交付",
+      "Description": "不可交付",
+      "Position": "(-2438.478,-1185.423)",
+      "Commands": [
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我要的东西你带来了么？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于腐骨灵花",
+          "TargetBlockID": "this:353(关于腐骨灵花)"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于七彩月兰",
+          "TargetBlockID": "this:354(关于七彩月兰)"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.Menu",
+          "Text": "我很快就把草药带来",
+          "TargetBlockID": "this:355(很快带来)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

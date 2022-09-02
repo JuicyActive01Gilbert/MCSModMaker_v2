@@ -1,0 +1,1830 @@
+{
+  "Name": "Talk7397",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2794,-1489.527)",
+      "Commands": [
+        {
+          "ItemID": 875,
+          "CmdType": "Fungus.IsEnd"
+        },
+        {
+          "ItemID": 876,
+          "CmdType": "Fungus.If",
+          "Condition": "Var2 == True"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "472(炎萧称号载入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 695,
+      "Name": "阵道高",
+      "Description": "阵道高",
+      "Position": "(-2398.321,-1148.51)",
+      "Commands": [
+        {
+          "ItemID": 726,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这阵法还算有点意思，以魔气为基压制其中的五行灵气，非魔道修士在其中战斗只会如陷泥沼，挣扎越强，陷入越深，久而久之还得面对灵气枯竭的绝境。反倒是设阵者可以利用源源不断的魔气愈战愈强。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 727,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（只是这雷鸣海中的稀薄魔气不足以支撑该阵法，魔气又不像五行灵气达到均衡后可以自行相生，达到生生不息的效果。想要维持该阵法，应当是在阵基上下足了功夫而已。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 728,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（若是不出我所料，要破这阵法易如反掌。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 836,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 744,
+          "CmdType": "Fungus.Menu",
+          "Text": "破阵",
+          "TargetBlockID": "this:729(破阵)"
+        },
+        {
+          "ItemID": 837,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 743,
+          "CmdType": "Fungus.Menu",
+          "Text": "闯入阵法",
+          "TargetBlockID": "this:676(闯入阵法)"
+        }
+      ]
+    },
+    {
+      "ItemID": 694,
+      "Name": "阵道中",
+      "Description": "阵道中",
+      "Position": "(-2402.118,-1199.144)",
+      "Commands": [
+        {
+          "ItemID": 718,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这魔气墙好像是什么独特阵法的一部分，目前仅能看出是以困为主，只是不但能困住修士，甚至对灵气也有较强的限制作用。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 719,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（其中应该是各种灵气稀薄，反倒是魔气弥漫。若是贸然闯入其中却又不能快速解决其中魔修，只怕事情会非常棘手。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 720,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（况且，虽说被困的修士也是专精火系，但我也不能肯定他便是炎萧{$ChenHu}，也许先坐观其变更好？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 741,
+          "CmdType": "Fungus.Menu",
+          "Text": "闯入阵法",
+          "TargetBlockID": "this:676(闯入阵法)"
+        }
+      ]
+    },
+    {
+      "ItemID": 283,
+      "Name": "进度判定",
+      "Description": "进度判定",
+      "Position": "(-2792.917,-1230.008)",
+      "Commands": [
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "311(初遇前)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "631(初遇)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 320,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2977.917,-1229.795)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 533,
+      "Name": "战后",
+      "Description": "战后",
+      "Position": "(-2792.531,-1164.759)",
+      "Commands": [
+        {
+          "ItemID": 844,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 843,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 534,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "842(破阵分支)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 845,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 846,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(闯入分支)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 675,
+      "Name": "静观其变（暂时废弃）",
+      "Description": "静观其变（暂时废弃）",
+      "Position": "(-2176.8,-1253.575)",
+      "Commands": []
+    },
+    {
+      "ItemID": 685,
+      "Name": "炎萧化神线（暂时未做）",
+      "Description": "炎萧化神线（暂时未做）",
+      "Position": "(-2399.387,-1088.816)",
+      "Commands": [
+        {
+          "ItemID": 730,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 731,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 732,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "再前行一段时间，“景色”终于有些不同。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 733,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "除却满溢着魔气的海水外，一面横截水天的玄紫色魔气墙突兀地出现在你眼前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 734,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "透过这魔气墙，一个浑身浴火的身影依稀可见，却不知是在被何人围攻，令他不得不在小范围内不断闪躲腾挪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 735,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这魔气墙好像是什么独特阵法的一部分，目前仅能看出是以困为主，只是不但能困住修士，甚至对灵气也有较强的限制作用。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 736,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（其中应该是各种灵气稀薄，反倒是魔气弥漫。若是贸然闯入其中却又不能快速解决其中魔修，只怕事情会非常棘手。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 737,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（况且，虽说被困的修士也是专精火系，但我也不能肯定他便是炎萧{$ChenHao}，也许先坐观其变更好？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 842,
+      "Name": "破阵分支",
+      "Description": "破阵分支",
+      "Position": "(-2660.344,-1083.953)",
+      "Commands": []
+    },
+    {
+      "ItemID": 472,
+      "Name": "炎萧称号载入",
+      "Description": "炎萧称号载入",
+      "Position": "(-2793.707,-1349.465)",
+      "Commands": [
+        {
+          "ItemID": 858,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 859,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpStrValue == 离火门长老"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 离火门大长老"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpStrValue == 离火门掌门"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(玩家对炎萧称呼自适应)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 311,
+      "Name": "初遇前",
+      "Description": "初遇前",
+      "Position": "(-2553.674,-1282.622)",
+      "Commands": [
+        {
+          "ItemID": 860,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不管来多少次，这片海域都还是一模一样。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 636,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "纵是高阶修仙者也难究其底的深蓝之海，充斥天地的不祥灵气，随波潜伏的狂躁海兽，三者组成了海域的主体。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "当然，也有修士点缀其中，或乘灵舟，或御器飞行，也不乏体修亦或是实力强大者仅凭肉身和半丈护体灵气横渡海域。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但，此次稍有不同。不，若是气感敏锐些，该说是大有不同才对。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "面对如此广袤的一片海域，但肉眼之所及，神识之所至，却只有惊涛迭起的深蓝大海。既不见海兽，亦难寻修士，倒是有两者的残躯飘扬在怒涛之上，静默地承受着夹杂魔气的灼热不祥灵气中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "魔气...还夹杂着些许火灵气，探测不到战斗发生的地点，却能感受到战斗带来的灵气变化。至少是元婴巅峰的战斗，看来炎萧{$ChenHu}确实有可能在这片海域，只是可能遇上了一点麻烦。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "过去看看吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "面对如此广袤的一片海域，但肉眼之所及，神识之所至，却只有惊涛迭起的深蓝大海。既不见海兽，亦难寻修士，倒是有两者的残躯飘扬在怒涛之上，静默地承受着夹杂魔气的不祥灵气之侵蚀。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "魔气！{vpunch=10,0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这里怎会有魔气？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "据之前的消息，炎萧{$ChenHu}貌似就在这片海域，这异象与他有关？而且这些尸骸...难道说...他从天魔眼出来后不知何故引来了魔修或是魔物？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "总之，先去魔气的源头探查一番再说吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 656,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 865,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 864,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 693,
+      "Name": "阵道低",
+      "Description": "阵道低",
+      "Position": "(-2400.851,-1250.84)",
+      "Commands": [
+        {
+          "ItemID": 710,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这魔气墙好像是什么独特阵法的一部分，目前仅能看出是以困为主，只是不但能困住修士，甚至对灵气也有较强的限制作用。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 711,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（其中应该是各种灵气稀薄，反倒是魔气弥漫。若是贸然闯入其中却又不能快速解决其中魔修，只怕事情会非常棘手。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 712,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（况且，虽说被困的修士也是专精火系，但我也不能肯定他便是炎萧{$ChenHu}，也许先坐观其变更好？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 739,
+          "CmdType": "Fungus.Menu",
+          "Text": "闯入阵法",
+          "TargetBlockID": "this:676(闯入阵法)"
+        }
+      ]
+    },
+    {
+      "ItemID": 867,
+      "Name": "时间判定",
+      "Description": "时间判定",
+      "Position": "(-2795.79,-1423.196)",
+      "Commands": [
+        {
+          "ItemID": 872,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 869,
+          "CmdType": "Fungus.If",
+          "Condition": "year > 755"
+        },
+        {
+          "ItemID": 870,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "320(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 871,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 868,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "472(炎萧称号载入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 676,
+      "Name": "闯入阵法",
+      "Description": "闯入阵法",
+      "Position": "(-2179.334,-1204.207)",
+      "Commands": [
+        {
+          "ItemID": 762,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 761,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 763,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 764,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "仔细思考后，本着不管被困修士是否是炎萧，坏了魔修的好事总归有意义的念头，再加上对自己实力有足够的自信，你决定闯入阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 765,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 766,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "仔细思考后，本着不管被困修士是否是炎萧，坏了魔修的好事总归有意义，甚至可能捞到些好处的念头，再加上对自己实力有足够的自信，你决定闯入阵法。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 767,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 768,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 769,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 770,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 773,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你步入阵法后只觉举手投足之间有些微的束缚感，但也没太过在意。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 774,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这阵法果然不出我所料，对寻常修士确实有些压制的作用，但对化神修士来说，只会有些不适感而已。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 775,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "阵法中心处，本与一道浴火身影缠斗在一处的三抹玄紫色诡影听到你的自言自语后，先是一滞，而后皆是满脸惊惧之色。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 776,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 778,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == 3"
+        },
+        {
+          "ItemID": 779,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "炎萧{$ChenHao}小心，我来援助你了！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 780,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哼，区区元婴期魔修，安敢在此造次！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 784,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 783,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 781,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "像是坚定了什么想法似的，那三个元婴期魔修见到你不但没有逃跑，反而是疯了一般再无保留地全力用各色玄紫色神通轰杀炎萧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 782,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但后者也是战斗经验丰富，知道自己只要再撑上片刻便能迎来你的援助，不再尝试反击，大笑一声后开始一味地躲闪可能会令其重伤或是致命的攻击。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 785,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "哼，区区元婴期魔修，安敢在此造次！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 777,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 771,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 786,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "初一闯入阵法便像是冲入泥沼一般，竟连你这元婴修士也有些感觉行动受制。不过在灵气护罩的效用下，倒也很快就习惯了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 787,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（果然不出我所料，这阵法内五行灵气的浓度已经是低到难以吸收利用的程度了，得想办法与炎萧{$ChenHao}配合一番快速解决战斗。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 788,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "在看那阵法中心处，一道浴火的身影与三抹快与阵法内的玄紫色魔气融为一体的看不真切的诡影正斗得正酣。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 789,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那被围攻的身影即便以一敌三也是越战越勇，只见他仗着身法精妙总能躲过大多数攻击，令三个魔修深觉棘手，只是腰口有一道深可见骨的伤痕，但看着也没太拖累着他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 790,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "更不用说这人还偶尔能寻得一丝空隙，全力反扑一番，强大的爆发力反倒是令那些魔修畏惧不已，一反压制性的打法，变得每每攻击时还留着三分谨慎，其中最弱的一个甚至在吃了几次小亏后转到战斗外围改用神通进行远程骚扰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 791,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "你的到来让几个魔修心神一动，马上便快速分出两人像是要快速解决你，而后再借助阵法慢慢耗死炎萧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 792,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "炎萧见状也是大笑一声，像是要出一口被围攻的恶气一般，主动放弃闪躲转而选择全力强攻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 793,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "那酝酿着攻击向你踏空而来的两个魔修还未与你交上手，便听身后的同门已是招架不住大声呼救。其中一人只好赶忙回救，仅留一个女性魔修与你对峙。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 772,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 794,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "初一闯入阵法便像是冲入泥沼一般，粘稠到无形却有质的玄紫色魔气令你这金丹修士竟有些难以行动。还好驱动灵气护罩后算是能正常行动。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 795,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（这阵法对我的压制作用是有些强，而且五行灵气的浓度已经是低到难以吸收利用的程度了，得想办法与炎萧{$ChenHao}配合一番快速解决战斗。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 796,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "在看那阵法中心处，一道浴火的身影与三抹快与阵法内的玄紫色魔气融为一体的看不真切的诡影正斗得正酣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 797,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "那被围攻的身影即便以一敌三也是越战越勇，只见他仗着身法精妙总能躲过大多数攻击，令三个魔修深觉棘手，只是腰口有一道深可见骨的伤痕，但看着也没太拖累着他。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 798,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "更不用说这人还偶尔能寻得一丝空隙，全力反扑一番，强大的爆发力反倒是令那些魔修畏惧不已，一反压制性的打法，变得每每攻击时还留着三分谨慎，其中最弱的一个甚至在吃了几次小亏后转到战斗外围改用神通进行远程骚扰。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 799,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你的到来让几个魔修心神一动，那最外围的一个直接便转而像你发动起了攻击。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 800,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着对敌人数的减少，炎萧顿时感觉压力全无，大笑一声后，竟是转守为攻，狂暴的火属性神通一时间让剩下的两个魔修有些措手不及，都吃了些小亏后才勉强稳住局面。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 801,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 850,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 851,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 852,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 841,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 854,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 853,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 802,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 803,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 729,
+      "Name": "破阵",
+      "Description": "破阵",
+      "Position": "(-2176.8,-1147.246)",
+      "Commands": [
+        {
+          "ItemID": 804,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 805,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 807,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你对阵法稍作评论后，看准方位便是几道灵气飞掠而去。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 806,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 808,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "几声惨叫也是因之而起，随后魔气墙也是逐渐淡化化为普通的魔气重归天地，而后几具全无生气的躯壳落入海中，溅起数朵水花后再无声息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 809,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你皱了皱眉头，但想到布阵者乃是魔修，也只是叹了口气开始观察相斗的两方修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 810,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "其中被围攻的修士果然是离火门的炎萧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 811,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见他以一敌三却是越战越勇。那道浴火的身影仗着身法精妙，总是能躲过魔修大多数攻击，只是腰口有一道深可见骨的伤痕，但看着也没太拖累着他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 866,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "倒是炎萧偶尔寻得一丝空隙便是全力反扑，强大的爆发力倒让那些魔修有些畏惧，一反压制性的打法，变得每每攻击时还留着三分谨慎。其中最弱的一位甚至在吃了几次小亏后转到战斗外围改用神通进行远程骚扰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 812,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 813,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "几声惨叫也是因之而起，随后魔气墙也是逐渐淡化化为普通的魔气重归天地，而后几具全无生气的躯壳落入海中，溅起数朵水花后再无声息。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 814,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你并未在意这些全无生气的躯壳，只是将目光投向相斗的两方修士。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 815,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "只见他以一敌三却是越战越勇。那道浴火的身影仗着身法精妙，总是能躲过魔修大多数攻击，只是腰口有一道深可见骨的伤痕，但看着也没太拖累着他。倒是炎萧偶尔寻得一丝空隙便是全力反扑，强大的爆发力倒让那些魔修有些畏惧，一反压制性的打法，变得每每攻击时还留着三分谨慎。其中最弱的一位甚至在吃了几次小亏后转到战斗外围改用神通进行远程骚扰。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 816,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 817,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 818,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "见你破开阵法，三个魔修都是迟疑了片刻，而后都像是疯了一般再无保留地全力用各种神通轰杀炎萧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 819,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "但后者也是战斗经验丰富，知道自己只要再撑上片刻便能迎来你的援助，不再尝试反击，大笑一声后开始一味地躲闪可能会令其重伤或是致命的攻击。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 820,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "不过几个呼吸间，未等魔修对炎萧造成实质伤害，你已是出手！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 821,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie > 9"
+        },
+        {
+          "ItemID": 822,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "见你破开阵法，魔修也是迅速分出两人。似乎是觉得你最多是阵法修为不俗，战斗能力不过一般，想要迅速解决你再慢慢耗死炎萧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 823,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "炎萧见状也是大笑一声，像是要出一口被围攻的恶气一般，主动放弃闪躲转而选择全力强攻。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 824,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "那酝酿着攻击向你踏空而来的两个魔修还未与你交上手，便听身后的同门已是招架不住大声呼救。其中一人只好赶忙回救，仅留一个女性魔修与你对峙。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 838,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 848,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 849,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 847,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 855,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 856,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 857,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 839,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 840,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 563,
+      "Name": "原本用来做称呼细分，但发现对于实现效果还差一点",
+      "Description": "原本用来做称呼细分，但发现对于实现效果还差一点",
+      "Position": "(-3289.003,-1297.7)",
+      "Commands": [
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue > 2"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TmpValue < -2"
+        },
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 570,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 572,
+          "CmdType": "Fungus.If",
+          "Condition": "炎萧境界 > JinJie"
+        },
+        {
+          "ItemID": 573,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "炎萧境界 < JinJie"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 585,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.GetAvatarData"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.If",
+          "Condition": "Error: No variable selected"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 631,
+      "Name": "初遇",
+      "Description": "初遇",
+      "Position": "(-2549,-1198.965)",
+      "Commands": [
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 657,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 12"
+        },
+        {
+          "ItemID": 662,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着受害风浪飞速退去，周遭的魔气也是愈发浓烈。除此之外，炽灼的气息也是一并升腾。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 663,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "又前行一段时间后，随之愈盛的魔气甚至令空间都有一种令人厌恶的黏着感，再加上迅速昏暗下来的视野，仿若连光线都因之停滞。但炽灼的气息却没有同时增强，还是在魔气中若隐若现，难以察觉。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 664,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "离魔气的源头应该是不远了，而这几分特别的火灵气还是难以察觉，看来正主是被什么阵法困住了难以脱身。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 665,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "来的不知是哪方魔修，但此行的确是下了些本钱。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 658,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 659,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "随着兽骸与风浪飞速退去，周遭的魔气也是愈发浓烈。除此之外，还有几分炽灼的气息隐藏于中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 660,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "又前行一段时间后，随之愈盛的魔气甚至令空间都有一种令人厌恶的黏着感，再加上迅速昏暗下来的视野，仿若连光线都因之停滞。但炽灼的气息却没有同时增强，还是在魔气中若隐若现，难以察觉。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 661,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这魔气浓度真是令人咂舌，比起天魔眼外围的核心区也是不遑多让。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 873,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "料想离魔气的源头应该是不会太远了，正主若真是炎萧{$ChenHu}和某路魔道，怕是少不了一战了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 666,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 756,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 757,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 758,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "再前行一段时间，“景色”终于有些不同。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 759,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "除却满溢着魔气的海水外，一面横截水天的玄紫色魔气墙突兀地出现在你眼前。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 760,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "透过这魔气墙，一个浑身浴火的身影依稀可见，却不知是在被何人围攻，令他不得不在小范围内不断闪躲腾挪。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 696,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 697,
+          "CmdType": "Fungus.GetImportantNpcId"
+        },
+        {
+          "ItemID": 698,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 752,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 750,
+          "CmdType": "Fungus.GetWuDaoLv"
+        },
+        {
+          "ItemID": 746,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 5"
+        },
+        {
+          "ItemID": 753,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "695(阵道高)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 748,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 754,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "694(阵道中)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 749,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 755,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "693(阵道低)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 704,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 699,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < 13"
+        },
+        {
+          "ItemID": 874,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 702,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 703,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "685(炎萧化神线（暂时未做）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 747,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "白袍修士称呼载入",
+      "Description": "白袍修士称呼载入",
+      "Position": "(-3203.927,-1372.681)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue > 0"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie < 13"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 486,
+      "Name": "玩家对炎萧称呼自适应",
+      "Description": "玩家对炎萧称呼自适应",
+      "Position": "(-2815.153,-1289.465)",
+      "Commands": [
+        {
+          "ItemID": 498,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "CmdCheckGuanXi"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 3"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "CmdGetDaoLvNickName"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "283(进度判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "闯入分支",
+      "Description": "闯入分支",
+      "Position": "(-2924.657,-1081.557)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "{$NpcName}{$DaoYou}，炎萧{$ChenHu}不在宗门么？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "嗯，炎萧{$ChenHao}前些日子有事前往天魔眼，而后应是往{color=#d0380a}雷鸣海域{/color}方向去了，目前应该在{color=#d0380a}东南方{/color}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "找他有事？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "嗯，之前在海外遇见白帝，让我前往天魔眼调查一番。但登门造访玄道宗后，他们老祖不在门内，长老又不能越权放我进天魔眼。只是最后提到炎萧{$ChenHao}此前到访过天魔眼，让我先向他询问一番其中核心区是否有异象发生。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "原来如此。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie < 10"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "但炎萧{$ChenHao}所在之处凶险异常，{color=#d0380a}最好准备充分再前往{/color}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "多谢提醒。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

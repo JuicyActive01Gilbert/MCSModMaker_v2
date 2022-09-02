@@ -1,0 +1,242 @@
+{
+  "Name": "Talk1333",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3106.395,-1462.754)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "9(场景)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 25,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-3103.628,-1218.442)",
+      "Commands": [
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 23,
+      "Name": "深入调查",
+      "Description": "深入调查",
+      "Position": "(-3298.06,-1402.812)",
+      "Commands": [
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你回忆着魏无极先前说过的话，决定到圣坛内部仔细探查一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 16,
+      "Name": "闯入正殿",
+      "Description": "闯入正殿",
+      "Position": "(-2914.628,-1264.287)",
+      "Commands": [
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 24,
+      "Name": "擒贼先擒王",
+      "Description": "擒贼先擒王",
+      "Position": "(-3290.907,-1273.658)",
+      "Commands": [
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 15,
+      "Name": "闯入圣坛",
+      "Description": "闯入圣坛",
+      "Position": "(-2917.628,-1396.442)",
+      "Commands": [
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你回忆着魏无极先前说过的话，决定到圣坛内部仔细探查一番。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 9,
+      "Name": "场景",
+      "Description": "场景",
+      "Position": "(-3104.628,-1336.442)",
+      "Commands": [
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你依稀记得，魏无极似乎提起过此地圣坛的异样。你决定...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Menu",
+          "Text": "闯入圣坛",
+          "TargetBlockID": "this:15(闯入圣坛)"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Menu",
+          "Text": "闯入正殿",
+          "TargetBlockID": "this:16(闯入正殿)"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:25(还是算了)"
+        },
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你依稀记得，魏无极似乎提起过此地圣坛的异样。你决定...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.Menu",
+          "Text": "深入调查",
+          "TargetBlockID": "this:23(深入调查)"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Menu",
+          "Text": "擒贼先擒王",
+          "TargetBlockID": "this:24(擒贼先擒王)"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:25(还是算了)"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

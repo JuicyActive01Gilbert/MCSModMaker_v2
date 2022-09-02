@@ -1,0 +1,204 @@
+{
+  "Name": "Talk13322",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2797.746,-1194.58)",
+      "Commands": [
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "202(START (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 132,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 182,
+      "Name": "money (Copy)",
+      "Description": "money (Copy)",
+      "Position": "(-2620.614,-1305.544)",
+      "Commands": [
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 180,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 181,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 203,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 183,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 184,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 185,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 186,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 187,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 188,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 189,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 190,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 191,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 202,
+      "Name": "START (Copy)",
+      "Description": "START (Copy)",
+      "Position": "(-2619.702,-1193.58)",
+      "Commands": [
+        {
+          "ItemID": 193,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 194,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友真是修为过人，这是你的押注。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 201,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友目前在千流岛已小有名气，出于对道友实力的慎重考虑，我们的赔率将会下调些许，望道友见谅。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 195,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "182(money (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 196,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 197,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1464,
+          "AvatarBindKey": "",
+          "StoryText": "道友还是勤加修炼后再来参赛吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 199,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 200,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

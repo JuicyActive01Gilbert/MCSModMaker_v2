@@ -1,0 +1,1166 @@
+{
+  "Name": "Talk4020",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2800.933,-1386.351)",
+      "Commands": [
+        {
+          "ItemID": 1461,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 1465,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(表达爱意)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1450,
+      "Name": "开个玩笑",
+      "Description": "开个玩笑",
+      "Position": "(-2666.686,-1322.457)",
+      "Commands": [
+        {
+          "ItemID": 1463,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1481,
+      "Name": "题2选1",
+      "Description": "题2选1",
+      "Position": "(-2943.164,-886.2064)",
+      "Commands": [
+        {
+          "ItemID": 1514,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1484(提问3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1501,
+      "Name": "题3选1",
+      "Description": "题3选1",
+      "Position": "(-2943.164,-759.2064)",
+      "Commands": [
+        {
+          "ItemID": 1518,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1489,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1496(最终判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1484,
+      "Name": "提问3",
+      "Description": "提问3",
+      "Position": "(-2799.164,-819.3428)",
+      "Commands": [
+        {
+          "ItemID": 1517,
+          "CmdType": "CmdGetBiaoBaiTiKu"
+        },
+        {
+          "ItemID": 1492,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TiWen}{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1493,
+          "CmdType": "Fungus.Menu",
+          "Text": "1",
+          "TargetBlockID": "this:1501(题3选1)"
+        },
+        {
+          "ItemID": 1494,
+          "CmdType": "Fungus.Menu",
+          "Text": "2",
+          "TargetBlockID": "this:1490(题3选2)"
+        },
+        {
+          "ItemID": 1495,
+          "CmdType": "Fungus.Menu",
+          "Text": "3",
+          "TargetBlockID": "this:1491(题3选3)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1490,
+      "Name": "题3选2",
+      "Description": "题3选2",
+      "Position": "(-2800.065,-758.2064)",
+      "Commands": [
+        {
+          "ItemID": 1519,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1497,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1496(最终判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "表达爱意",
+      "Description": "表达爱意",
+      "Position": "(-2800.571,-1322.865)",
+      "Commands": [
+        {
+          "ItemID": 1631,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 1560,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1561,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 1564,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1562,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1565,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1563,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1566,
+          "CmdType": "SavePoint"
+        },
+        {
+          "ItemID": 1445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友可愿与我结为道侣，共求长生大道？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1526,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1462,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1447,
+          "CmdType": "Fungus.Menu",
+          "Text": "我是认真的",
+          "TargetBlockID": "this:1449(确认判定)"
+        },
+        {
+          "ItemID": 1448,
+          "CmdType": "Fungus.Menu",
+          "Text": "只是玩笑",
+          "TargetBlockID": "this:1450(开个玩笑)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1499,
+      "Name": "成功赋值",
+      "Description": "成功赋值",
+      "Position": "(-2946.159,-618.5283)",
+      "Commands": [
+        {
+          "ItemID": 1506,
+          "CmdType": "CmdSetPlayerRelationship"
+        },
+        {
+          "ItemID": 1553,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1552,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1554,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1551,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 1536,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1537,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 1556,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 1557,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 1559,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1558,
+          "CmdType": "CmdAddNPCEvent"
+        },
+        {
+          "ItemID": 1648,
+          "CmdType": "CmdGetNPCName"
+        },
+        {
+          "ItemID": 1647,
+          "CmdType": "CmdRecordShengPing"
+        }
+      ]
+    },
+    {
+      "ItemID": 1482,
+      "Name": "题2选2",
+      "Description": "题2选2",
+      "Position": "(-2799.164,-884.2064)",
+      "Commands": [
+        {
+          "ItemID": 1515,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1486,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1484(提问3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1491,
+      "Name": "题3选3",
+      "Description": "题3选3",
+      "Position": "(-2660.164,-757.2064)",
+      "Commands": [
+        {
+          "ItemID": 1520,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1498,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1496(最终判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1468,
+      "Name": "题1选2",
+      "Description": "题1选2",
+      "Position": "(-2795.251,-1034.644)",
+      "Commands": [
+        {
+          "ItemID": 1511,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1475,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1474(提问2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1469,
+      "Name": "题1选3",
+      "Description": "题1选3",
+      "Position": "(-2659.251,-1034.644)",
+      "Commands": [
+        {
+          "ItemID": 1512,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1476,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1474(提问2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1496,
+      "Name": "最终判定",
+      "Description": "最终判定",
+      "Position": "(-2799.249,-690.5166)",
+      "Commands": [
+        {
+          "ItemID": 1527,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1577,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1542,
+          "CmdType": "Fungus.If",
+          "Condition": "datifen > 0"
+        },
+        {
+          "ItemID": 1547,
+          "CmdType": "Fungus.If",
+          "Condition": "datifen > 16"
+        },
+        {
+          "ItemID": 1529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你的大部分想法倒是与我不谋而合...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1548,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "原来你是这么想的...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1549,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1543,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1545,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你竟然是这么想的...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1544,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1572,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1573,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue == 1"
+        },
+        {
+          "ItemID": 1528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "他似乎在思考着你的{color=#d0380a}答案{/color}，也可能是在考虑你们之间的{color=#d0380a}境界{/color}差距，{color=#d0380a}年龄{/color}之别，{color=#d0380a}阵营{/color}之分或是你的{color=#d0380a}财富资产{/color}...你只能等待他做出选择。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1574,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "她似乎在思考着你的{color=#d0380a}答案{/color}，也可能是在考虑你们之间的{color=#d0380a}境界{/color}差距，{color=#d0380a}年龄{/color}之别，{color=#d0380a}阵营{/color}之分或是你的{color=#d0380a}财富资产{/color}...你只能等待她做出选择。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1576,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1555,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1588,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1589,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1569,
+          "CmdType": "Fungus.If",
+          "Condition": "taohua == True"
+        },
+        {
+          "ItemID": 1571,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1570,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1522,
+          "CmdType": "Fungus.If",
+          "Condition": "zongfen >= 200"
+        },
+        {
+          "ItemID": 1523,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1640(表白成功对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1524,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1525,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1500(表白失败)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1474,
+      "Name": "提问2",
+      "Description": "提问2",
+      "Position": "(-2799.034,-951.3053)",
+      "Commands": [
+        {
+          "ItemID": 1513,
+          "CmdType": "CmdGetBiaoBaiTiKu"
+        },
+        {
+          "ItemID": 1477,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TiWen}{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1478,
+          "CmdType": "Fungus.Menu",
+          "Text": "1",
+          "TargetBlockID": "this:1481(题2选1)"
+        },
+        {
+          "ItemID": 1479,
+          "CmdType": "Fungus.Menu",
+          "Text": "2",
+          "TargetBlockID": "this:1482(题2选2)"
+        },
+        {
+          "ItemID": 1480,
+          "CmdType": "Fungus.Menu",
+          "Text": "3",
+          "TargetBlockID": "this:1483(题2选3)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1449,
+      "Name": "确认判定",
+      "Description": "确认判定",
+      "Position": "(-2800.46,-1257.33)",
+      "Commands": [
+        {
+          "ItemID": 1451,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel >= 7"
+        },
+        {
+          "ItemID": 1453,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1578(答题前判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1454,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1455,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1456(被拒绝1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1483,
+      "Name": "题2选3",
+      "Description": "题2选3",
+      "Position": "(-2659.164,-885.2064)",
+      "Commands": [
+        {
+          "ItemID": 1516,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1484(提问3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1500,
+      "Name": "表白失败",
+      "Description": "表白失败",
+      "Position": "(-2649.461,-690.1978)",
+      "Commands": [
+        {
+          "ItemID": 1532,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1535,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1534,
+          "CmdType": "CmdAddFavorByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 1452,
+      "Name": "提问1",
+      "Description": "提问1",
+      "Position": "(-2795.402,-1099.106)",
+      "Commands": [
+        {
+          "ItemID": 1459,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1460,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1539,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 1509,
+          "CmdType": "CmdGetBiaoBaiTiKu"
+        },
+        {
+          "ItemID": 1466,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TiWen}{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1470,
+          "CmdType": "Fungus.Menu",
+          "Text": "1",
+          "TargetBlockID": "this:1467(题1选1)"
+        },
+        {
+          "ItemID": 1472,
+          "CmdType": "Fungus.Menu",
+          "Text": "2",
+          "TargetBlockID": "this:1468(题1选2)"
+        },
+        {
+          "ItemID": 1471,
+          "CmdType": "Fungus.Menu",
+          "Text": "3",
+          "TargetBlockID": "this:1469(题1选3)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1456,
+      "Name": "被拒绝1",
+      "Description": "被拒绝1",
+      "Position": "(-2655.503,-1258.94)",
+      "Commands": [
+        {
+          "ItemID": 1464,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1467,
+      "Name": "题1选1",
+      "Description": "题1选1",
+      "Position": "(-2945.251,-1029.644)",
+      "Commands": [
+        {
+          "ItemID": 1510,
+          "CmdType": "CmdSetBiaoBaiOption"
+        },
+        {
+          "ItemID": 1473,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1474(提问2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1578,
+      "Name": "答题前判断",
+      "Description": "答题前判断",
+      "Position": "(-2798.037,-1179.704)",
+      "Commands": [
+        {
+          "ItemID": 1579,
+          "CmdType": "CmdInitBiaoBai"
+        },
+        {
+          "ItemID": 1580,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1581,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1632,
+          "CmdType": "Fungus.If",
+          "Condition": "taohua == True"
+        },
+        {
+          "ItemID": 1634,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1633,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1582,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 1583,
+          "CmdType": "Fungus.If",
+          "Condition": "chushifen >= 200"
+        },
+        {
+          "ItemID": 1635,
+          "CmdType": "Fungus.If",
+          "Condition": "chushifen >= 248"
+        },
+        {
+          "ItemID": 1637,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1638(直接成功对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1636,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1584,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1452(提问1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1646,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1585,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1586,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1587(初始分不足判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1587,
+      "Name": "初始分不足判定",
+      "Description": "初始分不足判定",
+      "Position": "(-2661.927,-1180.512)",
+      "Commands": [
+        {
+          "ItemID": 1590,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1591,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < 0"
+        },
+        {
+          "ItemID": 1592,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1608(境界不足)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1594,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1600,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1601,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < -6"
+        },
+        {
+          "ItemID": 1602,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1603(道侣太多)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1604,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1605,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1606,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < 0"
+        },
+        {
+          "ItemID": 1607,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1593(阵营不同)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1609,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1610,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1611,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < -4"
+        },
+        {
+          "ItemID": 1612,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1613(年龄差距)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1614,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1625,
+          "CmdType": "CmdBiaoBaiResult"
+        },
+        {
+          "ItemID": 1626,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue < 0"
+        },
+        {
+          "ItemID": 1628,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1629(没有洞府)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 1627,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1615,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1456(被拒绝1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1593,
+      "Name": "阵营不同",
+      "Description": "阵营不同",
+      "Position": "(-2508.284,-1251.17)",
+      "Commands": [
+        {
+          "ItemID": 1617,
+          "CmdType": "CmdGetNPCJson"
+        },
+        {
+          "ItemID": 1618,
+          "CmdType": "Fungus.If",
+          "Condition": "TmpValue > 10"
+        },
+        {
+          "ItemID": 1616,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道不同，不相为谋。我看你还是去找你的那些“正道”朋友们吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1619,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 1620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "自古正邪不两立，我恐怕不能答应你...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1603,
+      "Name": "道侣太多",
+      "Description": "道侣太多",
+      "Position": "(-2508.252,-1201.685)",
+      "Commands": [
+        {
+          "ItemID": 1621,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友的红颜知己如此之多，恐怕也不差我这一个了吧？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1608,
+      "Name": "境界不足",
+      "Description": "境界不足",
+      "Position": "(-2508.25,-1153.846)",
+      "Commands": [
+        {
+          "ItemID": 1624,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们之间的境界差距甚大，即便真的结为道侣，只怕日后也只会徒增烦恼罢了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1613,
+      "Name": "年龄差距",
+      "Description": "年龄差距",
+      "Position": "(-2507.187,-1103.846)",
+      "Commands": [
+        {
+          "ItemID": 1623,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我们之间的年龄差距甚大，即便真的结为道侣，只怕日后也只会徒增烦恼罢了...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1629,
+      "Name": "没有洞府",
+      "Description": "没有洞府",
+      "Position": "(-2504.105,-1053.429)",
+      "Commands": [
+        {
+          "ItemID": 1630,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友连洞府都尚未开辟，现在讨论这些恐怕还太早了些吧...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 1638,
+      "Name": "直接成功对话",
+      "Description": "直接成功对话",
+      "Position": "(-2949.638,-1176.655)",
+      "Commands": [
+        {
+          "ItemID": 1644,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1645,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1639,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1499(成功赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1640,
+      "Name": "表白成功对话",
+      "Description": "表白成功对话",
+      "Position": "(-2799.63,-615.3954)",
+      "Commands": [
+        {
+          "ItemID": 1641,
+          "CmdType": "CmdGetOtherJiaoHu"
+        },
+        {
+          "ItemID": 1642,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 1643,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "1499(成功赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

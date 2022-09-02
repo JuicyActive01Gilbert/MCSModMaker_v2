@@ -1,0 +1,290 @@
+{
+  "Name": "Talk4004",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "CmdInitNPC"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 1759,
+      "Name": "关于古城遗迹",
+      "Description": "关于古城遗迹",
+      "Position": "(-3084.728,-1171.768)",
+      "Commands": [
+        {
+          "ItemID": 1762,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 299,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2796.728,-1152.768)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2796.859,-1217.912)",
+      "Commands": [
+        {
+          "ItemID": 289,
+          "CmdType": "CmdSetNPCJson"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "CmdGetHouXuJiaoTan"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie > 6"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "{$TmpTalkString}",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1779,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1780,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4"
+        },
+        {
+          "ItemID": 1781,
+          "CmdType": "Fungus.Menu",
+          "Text": "有些事想请教长老",
+          "TargetBlockID": "this:1766(打听)"
+        },
+        {
+          "ItemID": 1782,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.If",
+          "Condition": "FavorLevel > 4"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.IsCyFriend"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.If",
+          "Condition": "CY == False"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Menu",
+          "Text": "留下传音符印记",
+          "TargetBlockID": "this:292(传音符)"
+        },
+        {
+          "ItemID": 1765,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1764,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:299(无事发生)"
+        }
+      ]
+    },
+    {
+      "ItemID": 1758,
+      "Name": "关于御剑门",
+      "Description": "关于御剑门",
+      "Position": "(-3083.728,-1218.768)",
+      "Commands": [
+        {
+          "ItemID": 1761,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 292,
+      "Name": "传音符",
+      "Description": "传音符",
+      "Position": "(-2641.526,-1216.38)",
+      "Commands": [
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.AddCyFriend"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npcid",
+          "StoryText": "不错...日后若有要事，便可通过这传音符和我联系了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "CmdRefreshNPCUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2506.728,-1357.768)",
+      "Commands": []
+    },
+    {
+      "ItemID": 1760,
+      "Name": "关于宁州古迹的机缘",
+      "Description": "关于宁州古迹的机缘",
+      "Position": "(-3114.728,-1120.768)",
+      "Commands": [
+        {
+          "ItemID": 1763,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 1766,
+      "Name": "打听",
+      "Description": "打听",
+      "Position": "(-2936.728,-1217.768)",
+      "Commands": [
+        {
+          "ItemID": 1767,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1768,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 4"
+        },
+        {
+          "ItemID": 1769,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于御剑门",
+          "TargetBlockID": "this:1758(关于御剑门)"
+        },
+        {
+          "ItemID": 1770,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1771,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1772,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1773,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于古城遗迹",
+          "TargetBlockID": "this:1759(关于古城遗迹)"
+        },
+        {
+          "ItemID": 1774,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1775,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 1776,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 1777,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于宁州古迹的机缘",
+          "TargetBlockID": "this:1760(关于宁州古迹的机缘)"
+        },
+        {
+          "ItemID": 1778,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 1783,
+          "CmdType": "Fungus.Menu",
+          "Text": "没有其它事了",
+          "TargetBlockID": "this:299(无事发生)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

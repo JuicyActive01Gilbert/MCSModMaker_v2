@@ -1,0 +1,534 @@
+{
+  "Name": "Talk21",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2787.132,-1399.888)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(年份判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 315,
+      "Name": "大比剧情触发判定",
+      "Description": "大比剧情触发判定",
+      "Position": "(-2277.639,-1303.382)",
+      "Commands": [
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(后续首次触发大比剧情)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "318(普通后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 284,
+      "Name": "首次进入",
+      "Description": "首次进入",
+      "Position": "(-2860.694,-1134.018)",
+      "Commands": [
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "刚刚进入大门，远处一名修士向你走来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 914,
+          "AvatarBindKey": "",
+          "StoryText": "阁下是第一次来天机阁吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "正是，阁下是？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 914,
+          "AvatarBindKey": "",
+          "StoryText": "在下天机阁接引执事，就由在下向你介绍一下吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "愿闻其详",
+          "TargetBlockID": "this:294(愿闻其详)"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Menu",
+          "Text": "我自己转转就好了。",
+          "TargetBlockID": "this:285(判断-麒麟维权)"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "愿闻其详",
+      "Description": "愿闻其详",
+      "Position": "(-2864.662,-1067.884)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 914,
+          "AvatarBindKey": "",
+          "StoryText": "我天机阁主要分为主阁，天衍阁和拍卖行。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 914,
+          "AvatarBindKey": "",
+          "StoryText": "主阁，乃是阁主之所在，如无要事还请道友不要靠近。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 914,
+          "AvatarBindKey": "",
+          "StoryText": "天衍阁是我天机阁售卖情报玉简之所道友要事有兴趣探探秘境，不凡去看看。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 914,
+          "AvatarBindKey": "",
+          "StoryText": "拍卖行自是举行拍卖会的地方，10年一届，金丹期修士便可参加。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 914,
+          "AvatarBindKey": "",
+          "StoryText": "道友自己转转吧，我就不打扰了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 353,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2714.439,-1070.421)",
+      "Commands": [
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "首次进入天机阁判定",
+      "Description": "首次进入天机阁判定",
+      "Position": "(-2804.663,-1209.018)",
+      "Commands": [
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(首次进入)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(判断-麒麟维权)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 326,
+      "Name": "大比提醒年份判定",
+      "Description": "大比提醒年份判定",
+      "Position": "(-2616.06,-1302.484)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.If",
+          "Condition": "year != TempValue"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(天机大比年份)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(首次进入天机阁判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "后续首次触发大比剧情",
+      "Description": "后续首次触发大比剧情",
+      "Position": "(-2222.255,-1229.288)",
+      "Commands": [
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "普通后续",
+      "Description": "普通后续",
+      "Position": "(-2076.884,-1304.608)",
+      "Commands": [
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 313,
+      "Name": "第五十年",
+      "Description": "第五十年",
+      "Position": "(-2446.42,-1227.907)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SpawnObject"
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "天机大比年份",
+      "Description": "天机大比年份",
+      "Position": "(-2445.42,-1303.412)",
+      "Commands": [
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 50"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(第五十年)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(大比剧情触发判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "判断-麒麟维权",
+      "Description": "判断-麒麟维权",
+      "Position": "(-2721.725,-1133.018)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 120"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.If",
+          "Condition": "year <= 320"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.SpawnObject"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "353(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "年份判定",
+      "Description": "年份判定",
+      "Position": "(-2786.42,-1302.927)",
+      "Commands": [
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.If",
+          "Condition": "year == 0"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "326(大比提醒年份判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(首次进入天机阁判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

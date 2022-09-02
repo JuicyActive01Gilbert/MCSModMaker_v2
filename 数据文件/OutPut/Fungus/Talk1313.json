@@ -1,0 +1,279 @@
+{
+  "Name": "Talk1313",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2604.162,-1091.221)",
+      "Commands": [
+        {
+          "ItemID": 144,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 143,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 4"
+        },
+        {
+          "ItemID": 145,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你刚到码头，便远远地看见一个身影伫立在岸边，眺望着远处波涛汹涌的无尽之海，不知在想些什么。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 146,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 148,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "149(New Block)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2603.035,-1175.43)",
+      "Commands": [
+        {
+          "ItemID": 142,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 141,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "352(New Block (Copy))",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 450,
+      "Name": "图南海事件暂停蓬莎",
+      "Description": "图南海事件暂停蓬莎",
+      "Position": "(-2232.506,-1135.481)",
+      "Commands": []
+    },
+    {
+      "ItemID": 164,
+      "Name": "wait",
+      "Description": "wait",
+      "Position": "(-2603.717,-932.098)",
+      "Commands": [
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 165,
+      "Name": "go",
+      "Description": "go",
+      "Position": "(-2458.708,-1018.559)",
+      "Commands": [
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "这无尽之海上的灵气乱流飘忽不定，没有一艘好船可不行。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "我的这艘旋龟舟是家父花重金雇人打造的，船身用元婴期海兽旋龟之壳所炼制，坚硬无比。我们便乘这艘灵舟出发吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 167,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 169,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 172,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 173,
+          "CmdType": "Fungus.SetTask"
+        },
+        {
+          "ItemID": 170,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 171,
+          "CmdType": "Fungus.LoadFuBen"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(-2604.719,-1016.776)",
+      "Commands": [
+        {
+          "ItemID": 151,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 159,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 160,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 153,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 3006,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{xiongdi}今日气色不错，可准备好共同出海了？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 162,
+          "CmdType": "Fungus.Menu",
+          "Text": "我们出发吧",
+          "TargetBlockID": "this:165(go)"
+        },
+        {
+          "ItemID": 163,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还有些事",
+          "TargetBlockID": "this:164(wait)"
+        },
+        {
+          "ItemID": 154,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 155,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 352,
+      "Name": "New Block (Copy)",
+      "Description": "New Block (Copy)",
+      "Position": "(-2452.793,-1137.273)",
+      "Commands": [
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.SetTips"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 175,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 176,
+          "CmdType": "Fungus.If",
+          "Condition": "year >= 300"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "450(图南海事件暂停蓬莎)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 178,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 179,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

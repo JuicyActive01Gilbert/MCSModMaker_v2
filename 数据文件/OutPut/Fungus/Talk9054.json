@@ -1,0 +1,2072 @@
+{
+  "Name": "Talk9054",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.93,-1523.011)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "357(随机势力)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 438,
+      "Name": "答应",
+      "Description": "答应",
+      "Position": "(-3970.89,-1008.888)",
+      "Commands": [
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈，那便多谢道友了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 652,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.ItemRemoveVar"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.If",
+          "Condition": "Var != 0"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 359,
+      "Name": "蓬莎",
+      "Description": "蓬莎",
+      "Position": "(-3059.658,-1395.717)",
+      "Commands": [
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 632,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 486,
+      "Name": "势力判断",
+      "Description": "势力判断",
+      "Position": "(-3049.839,-946.1321)",
+      "Commands": [
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.If",
+          "Condition": "shili >= 8"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "501(魔门1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "shili == 7"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "500(宁州)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShenShi == 6"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "499(碎星1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShenShi == 5"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "499(碎星1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "498(蓬莎1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 572,
+      "Name": "土",
+      "Description": "土",
+      "Position": "(-4153.29,-820.129)",
+      "Commands": [
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "古神教",
+      "Description": "古神教",
+      "Position": "(-2515.658,-1397.717)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 641,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 642,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 508,
+      "Name": "言语威胁",
+      "Description": "言语威胁",
+      "Position": "(-3039.444,-792.3234)",
+      "Commands": [
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友，走的这么急，应该是找到好东西了吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "若是寻常宝贝便算了，像{SayStcVal=948}这样可遇不可求的草药，在下可不能眼睁睁地看着道友独吞了他。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "所谓见者有份，我也不是什么贪心之人。这两株{SayStcVal=948}你若能分我一株，我便放你从这里离开。否则要是动起手来，再惊动了更多的人，道友怕是连剩下的这一株也得不到了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 645,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 646,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 11"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "546(给你)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "547(不给你)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 386,
+      "Name": "宁州散修1",
+      "Description": "宁州散修1",
+      "Position": "(-3579.281,-949.7366)",
+      "Commands": [
+        {
+          "ItemID": 415,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "401(见者有份)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 568,
+      "Name": "金",
+      "Description": "金",
+      "Position": "(-4161.539,-1035.593)",
+      "Commands": [
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 534,
+      "Name": "还是算了",
+      "Description": "还是算了",
+      "Position": "(-3324.772,-731.0068)",
+      "Commands": [
+        {
+          "ItemID": 535,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "可惜...可惜...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 400,
+      "Name": "花钱买",
+      "Description": "花钱买",
+      "Position": "(-3809.281,-1039.829)",
+      "Commands": [
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友留步！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友，在下是来自{$MP}的修士，此番出海正是为了寻这{SayStcVal=948}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "我无意与道友冲突，若道友愿意出让的话，我愿意以5万灵石的价格买下这两株草药，不知道友意下如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:429(同意)"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:430(拒绝)"
+        }
+      ]
+    },
+    {
+      "ItemID": 429,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-3975.832,-1111.919)",
+      "Commands": [
+        {
+          "ItemID": 651,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.ItemRemoveVar"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈，那便多谢道友了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 644,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 643,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "遁速慢",
+      "Description": "遁速慢",
+      "Position": "(-3207.354,-944.0228)",
+      "Commands": [
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "你刚走出洞窟，正准备扬长而去，只见一道遁光闪到你的身前...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "474(（势力判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 384,
+      "Name": "魔门",
+      "Description": "魔门",
+      "Position": "(-3580.281,-891.7366)",
+      "Commands": [
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "402(直接抢)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 533,
+      "Name": "同意1",
+      "Description": "同意1",
+      "Position": "(-3325.772,-808.1432)",
+      "Commands": [
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 536,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "很好，现在它们归你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.AddItemByVar"
+        }
+      ]
+    },
+    {
+      "ItemID": 401,
+      "Name": "见者有份",
+      "Description": "见者有份",
+      "Position": "(-3818.622,-945.4708)",
+      "Commands": [
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友，走的这么急，应该是找到好东西了吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "若是寻常宝贝便算了，像{SayStcVal=948}这样可遇不可求的草药，在下可不能眼睁睁地看着道友独吞了他。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "所谓见者有份，我也不是什么贪心之人。这两株{SayStcVal=948}你若能分我一株，我便放你从这里离开。否则要是动起手来，再惊动了更多的人，道友怕是连剩下的这一株也得不到了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应",
+          "TargetBlockID": "this:438(答应)"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:439(不答应)"
+        }
+      ]
+    },
+    {
+      "ItemID": 498,
+      "Name": "蓬莎1",
+      "Description": "蓬莎1",
+      "Position": "(-3251.839,-869.231)",
+      "Commands": [
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "从他的身法与衣着中，不难看出此人是来自蓬莎岛的修士。蓬莎岛在无尽之海中颇有势力，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Menu",
+          "Text": "协商购买",
+          "TargetBlockID": "this:507(出钱买下)"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Menu",
+          "Text": "言语威胁",
+          "TargetBlockID": "this:508(言语威胁)"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手抢夺",
+          "TargetBlockID": "this:506(出手抢夺)"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.Menu",
+          "Text": "避免冲突",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 316,
+      "Name": "遁速快",
+      "Description": "遁速快",
+      "Position": "(-3349.966,-1013.44)",
+      "Commands": [
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你身法轻灵，仅仅一息之间便带着草药扬长而去，顺利的避开了这场冲突。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "变量获取",
+      "Description": "变量获取",
+      "Position": "(-2799.363,-1236.536)",
+      "Commands": [
+        {
+          "ItemID": 633,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.GetFuBenShuXin"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此地看来是一处天然形成的洞窟，你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Menu",
+          "Text": "神识探查",
+          "TargetBlockID": "this:290(神识检测)"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        }
+      ]
+    },
+    {
+      "ItemID": 360,
+      "Name": "碎星",
+      "Description": "碎星",
+      "Position": "(-2928.658,-1395.717)",
+      "Commands": [
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 634,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 635,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 500,
+      "Name": "宁州",
+      "Description": "宁州",
+      "Position": "(-2986.839,-867.3085)",
+      "Commands": [
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此人的衣着与遁术看起来都颇为眼熟，也许和你一样是来自宁州的修士。你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Menu",
+          "Text": "协商购买",
+          "TargetBlockID": "this:507(出钱买下)"
+        },
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Menu",
+          "Text": "言语威胁",
+          "TargetBlockID": "this:508(言语威胁)"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手抢夺",
+          "TargetBlockID": "this:506(出手抢夺)"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Menu",
+          "Text": "避免冲突",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 507,
+      "Name": "出钱买下",
+      "Description": "出钱买下",
+      "Position": "(-3188.621,-764.8439)",
+      "Commands": [
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友留步！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "...你是何人？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "道友，在下此番出海正是为了寻这{SayStcVal=948}。我无意与道友冲突，但若道友愿意出让的话，我愿意花灵石买下这两株草药，不知道友意下如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "这两株草药对我来说也很重要，即便送去拍卖行也是价格不菲。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "不过你若是愿意出上7万灵石的价格，倒也不是不能考虑。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Menu",
+          "Text": "同意",
+          "TargetBlockID": "this:533(同意1)"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Menu",
+          "Text": "还是算了",
+          "TargetBlockID": "this:534(还是算了)"
+        }
+      ]
+    },
+    {
+      "ItemID": 430,
+      "Name": "拒绝",
+      "Description": "拒绝",
+      "Position": "(-3973.184,-1061.006)",
+      "Commands": [
+        {
+          "ItemID": 431,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "可惜...可惜...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        }
+      ]
+    },
+    {
+      "ItemID": 439,
+      "Name": "不答应",
+      "Description": "不答应",
+      "Position": "(-3972.89,-953.8884)",
+      "Commands": [
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "想要我手里的东西，那得看看你有没有这个本事！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 580,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXin == 2"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "568(金)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 583,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 584,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "569(木)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 4"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(水)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 5"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "571(火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 6"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "572(土)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "573(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 290,
+      "Name": "神识检测",
+      "Description": "神识检测",
+      "Position": "(-2919.161,-1164.77)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你谨慎地用神识扫过洞窟，随即惊喜地发现了两株极为罕见的{SayStcVal=948}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.If",
+          "Condition": "ShenShi >= 45"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "293(高神识)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "294(低神识)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 570,
+      "Name": "水",
+      "Description": "水",
+      "Position": "(-4148.136,-921.1599)",
+      "Commands": [
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 547,
+      "Name": "不给你",
+      "Description": "不给你",
+      "Position": "(-2971.772,-679.0068)",
+      "Commands": [
+        {
+          "ItemID": 562,
+          "CmdType": "Fungus.If",
+          "Condition": "Var != -5"
+        },
+        {
+          "ItemID": 563,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 556,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哼，想要我手里的东西，那得看看你有没有这个本事！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 557,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXin == 2"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "568(金)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 621,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 622,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "569(木)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 623,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 4"
+        },
+        {
+          "ItemID": 624,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(水)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 625,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 5"
+        },
+        {
+          "ItemID": 626,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "571(火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 627,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 6"
+        },
+        {
+          "ItemID": 628,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "572(土)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 629,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 630,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "573(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 569,
+      "Name": "木",
+      "Description": "木",
+      "Position": "(-4153.291,-979.9227)",
+      "Commands": [
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 453,
+      "Name": "拒绝1",
+      "Description": "拒绝1",
+      "Position": "(-3965.89,-845.8884)",
+      "Commands": [
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "口气倒是不小，那就看看你到底有几分本事吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXin == 2"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "568(金)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "569(木)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 4"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(水)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 5"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "571(火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 603,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 6"
+        },
+        {
+          "ItemID": 604,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "572(土)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "573(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "转身离开",
+      "Description": "转身离开",
+      "Position": "(-2912.596,-1006.262)",
+      "Commands": [
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（没有必要冒此风险...）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 474,
+      "Name": "（势力判断）",
+      "Description": "（势力判断）",
+      "Position": "(-3366.245,-947.7954)",
+      "Commands": [
+        {
+          "ItemID": 475,
+          "CmdType": "Fungus.If",
+          "Condition": "shili >= 8"
+        },
+        {
+          "ItemID": 476,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "384(魔门)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 477,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "shili == 7"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "386(宁州散修1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShenShi == 6"
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(碎星（声望判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShenShi == 5"
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "385(碎星（声望判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "387(蓬莎（声望判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 385,
+      "Name": "碎星（声望判断）",
+      "Description": "碎星（声望判断）",
+      "Position": "(-3587.281,-1002.56)",
+      "Commands": [
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 20"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "400(花钱买)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 414,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "401(见者有份)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 573,
+      "Name": "普通",
+      "Description": "普通",
+      "Position": "(-4156.383,-768.5826)",
+      "Commands": [
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 501,
+      "Name": "魔门1",
+      "Description": "魔门1",
+      "Position": "(-2846.839,-867.1321)",
+      "Commands": [
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此人衣着与身法中处处透露着诡异，与常人大为不同，更像是魔道法门。这些魔门修士实力难以预测，通常还会有一些与人玉石俱焚的危险招收，实在不好对付。你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Menu",
+          "Text": "言语威胁",
+          "TargetBlockID": "this:508(言语威胁)"
+        },
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手抢夺",
+          "TargetBlockID": "this:506(出手抢夺)"
+        },
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Menu",
+          "Text": "避免冲突",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 357,
+      "Name": "随机势力",
+      "Description": "随机势力",
+      "Position": "(-2796.658,-1456.717)",
+      "Commands": [
+        {
+          "ItemID": 654,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "shili == 9"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(古神教)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "shili == 8"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "362(天魔道)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "shili == 7"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "361(宁州散修)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "shili == 6"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(碎星)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "shili == 5"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "360(碎星)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "359(蓬莎)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 499,
+      "Name": "碎星1",
+      "Description": "碎星1",
+      "Position": "(-3115.839,-868.1321)",
+      "Commands": [
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "从他的身法与衣着中，不难看出此人是来自碎星商会的修士。碎星商会在无尽之海中颇有势力，你决定...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.Menu",
+          "Text": "协商购买",
+          "TargetBlockID": "this:507(出钱买下)"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.Menu",
+          "Text": "言语威胁",
+          "TargetBlockID": "this:508(言语威胁)"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手抢夺",
+          "TargetBlockID": "this:506(出手抢夺)"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Menu",
+          "Text": "避免冲突",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 362,
+      "Name": "天魔道",
+      "Description": "天魔道",
+      "Position": "(-2653.288,-1396.717)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 639,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 640,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 387,
+      "Name": "蓬莎（声望判断）",
+      "Description": "蓬莎（声望判断）",
+      "Position": "(-3583.839,-1060.737)",
+      "Commands": [
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 20"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "400(花钱买)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "401(见者有份)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 546,
+      "Name": "给你",
+      "Description": "给你",
+      "Position": "(-3125.772,-678.0068)",
+      "Commands": [
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "他脸上的表情阴晴变换，似乎是在衡量你的实力。一番纠结后，他很不情愿地将一株草药抛给了你，然后飞快地离开了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 554,
+          "CmdType": "Fungus.If",
+          "Condition": "Var != 0"
+        },
+        {
+          "ItemID": 555,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        }
+      ]
+    },
+    {
+      "ItemID": 294,
+      "Name": "低神识",
+      "Description": "低神识",
+      "Position": "(-2790.566,-1102.711)",
+      "Commands": [
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此等品阶的草药实乃可遇而不可求之物，但机遇往往也可能伴随着巨大的风险。你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.Menu",
+          "Text": "一探究竟",
+          "TargetBlockID": "this:291(一探究竟)"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "先下手",
+      "Description": "先下手",
+      "Position": "(-3205.395,-1014.655)",
+      "Commands": [
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "那人距离此地尚有一段距离，若你抢先一步动手，应该有办法在他之前夺得此宝。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "紧急关头，你来不及多想，一个瞬身便闪入洞窟。将那两株{SayStcVal=948}收入囊中！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.If",
+          "Condition": "DunSu >= 48"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(遁速快)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(遁速慢)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 506,
+      "Name": "出手抢夺",
+      "Description": "出手抢夺",
+      "Position": "(-2900.443,-762.6823)",
+      "Commands": [
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.If",
+          "Condition": "Var != 0"
+        },
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 647,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 648,
+          "CmdType": "CmdAddFavorByVar"
+        },
+        {
+          "ItemID": 650,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 649,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.If",
+          "Condition": "ShuXin == 2"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "568(金)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 3"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "569(木)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 4"
+        },
+        {
+          "ItemID": 612,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(水)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 613,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 5"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "571(火)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ShuXin == 6"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "572(土)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "573(普通)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 571,
+      "Name": "火",
+      "Description": "火",
+      "Position": "(-4157.65,-871.6754)",
+      "Commands": [
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 452,
+      "Name": "答应1",
+      "Description": "答应1",
+      "Position": "(-3964.89,-899.8885)",
+      "Commands": [
+        {
+          "ItemID": 653,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.ItemRemoveVar"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "嘿，能屈能伸，倒也是个人物，本座记住你了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "滚吧，趁本座还没有改主意之前，赶紧从我面前消失。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.FuBenAvatarFanHui"
+        }
+      ]
+    },
+    {
+      "ItemID": 361,
+      "Name": "宁州散修",
+      "Description": "宁州散修",
+      "Position": "(-2795.627,-1396.906)",
+      "Commands": [
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 637,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 638,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(变量获取)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 291,
+      "Name": "一探究竟",
+      "Description": "一探究竟",
+      "Position": "(-2642.202,-1172.291)",
+      "Commands": [
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你收敛气息，慢慢走进洞窟..你刚才摘下草药，突然汗毛倒立，回头一看，一个人影竟不知何时出现在了你的身后。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 631,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "474(（势力判断）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "高神识",
+      "Description": "高神识",
+      "Position": "(-3054.778,-1101.575)",
+      "Commands": [
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "此等品阶的草药实乃可遇而不可求之物，可惜神识笼罩范围内，另有一人的气息也正在朝此处靠近。你决定...？{w}{w=0.5}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "先下手为强",
+          "TargetBlockID": "this:301(先下手)"
+        },
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Menu",
+          "Text": "暗中观察",
+          "TargetBlockID": "this:312(暗中观察)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "转身离开",
+          "TargetBlockID": "this:302(转身离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "暗中观察",
+      "Description": "暗中观察",
+      "Position": "(-3055.966,-1008.44)",
+      "Commands": [
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你收敛气息，快速找了一个隐秘之处躲藏起来。不多时，便有一道遁光从洞口闪过。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(势力判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 402,
+      "Name": "直接抢",
+      "Description": "直接抢",
+      "Position": "(-3819.281,-897.7366)",
+      "Commands": [
+        {
+          "ItemID": 448,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "哈哈哈哈，果然是这{SayStcVal=948}。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "MonsterID",
+          "StoryText": "本座今日心情不错，把东西留下，我便饶你一条性命。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.Menu",
+          "Text": "答应",
+          "TargetBlockID": "this:452(答应1)"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Menu",
+          "Text": "拒绝",
+          "TargetBlockID": "this:453(拒绝1)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

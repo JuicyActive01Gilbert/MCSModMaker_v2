@@ -1,0 +1,910 @@
+{
+  "Name": "Talk11303",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-3068.819,-1436.841)",
+      "Commands": [
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "307(门派检测)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 407,
+      "Name": "第一战の对白-1",
+      "Description": "第一战の对白-1",
+      "Position": "(-1973.814,-1370.947)",
+      "Commands": [
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{shidi}，大比的赛制使用两两对决的淘汰赛。你先找个地方调整一下，要登台时自会有人通知。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（还有一段时间才能轮到我上台，现在做什么好呢...？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 478,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看其他人的比试",
+          "TargetBlockID": "this:480(看比试)"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Menu",
+          "Text": "静心调整自己的状态",
+          "TargetBlockID": "this:481(调状态)"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 486,
+      "Name": "第一战对白",
+      "Description": "第一战对白",
+      "Position": "(-1658.638,-1308.534)",
+      "Commands": [
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "请{FirstName}\r{LastName}上台对阵！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "403(第一战の随机战斗)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 362,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2919.177,-1334.342)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "道友，正值我竹山宗宗门大比之际，请回吧。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 403,
+      "Name": "第一战の随机战斗",
+      "Description": "第一战の随机战斗",
+      "Position": "(-1525.994,-1308.871)",
+      "Commands": [
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 313,
+      "Name": "炼气期",
+      "Description": "炼气期",
+      "Position": "(-2611.349,-1305.554)",
+      "Commands": [
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "464(是否当年第一次参加)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 363,
+      "Name": "参加门派大比",
+      "Description": "参加门派大比",
+      "Position": "(-2287.118,-1304.395)",
+      "Commands": [
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，是来参加门派大比的吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Menu",
+          "Text": "参加门派大比",
+          "TargetBlockID": "this:416(参加次数判定)"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Menu",
+          "Text": "我还要在准备一下",
+          "TargetBlockID": "this:378(告辞)"
+        }
+      ]
+    },
+    {
+      "ItemID": 377,
+      "Name": "参加",
+      "Description": "参加",
+      "Position": "(-1814.97,-1481.692)",
+      "Commands": [
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "赛制使用两两对决的淘汰赛。师弟，请在候场区等候，要登台时自会有人通知。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我明白了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "找了个清净的角落，调整一下状态。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 204,
+          "AvatarBindKey": "",
+          "StoryText": "我竹山宗每30年一次宗门大比，希望各位你们拿出实力，扬我门威。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "（希望我竹山宗能涌现一些好苗子，能够一改猎魔试炼的颓势。）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "{shidi}，本次大比准备的怎么样啊？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "谢师兄挂念，只能说是尽力而为了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 217,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈，师弟不要妄自菲薄，仙途漫漫，资质从不是最重要的，由擂台而进入宗门的你更应是深有体会。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}\r{LastName}对阵端木林！",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "师兄，我去了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.StartFight"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2611.777,-1522.877)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 172,
+      "Name": "境界测试",
+      "Description": "境界测试",
+      "Position": "(-2761.593,-1430.031)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(炼气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(元婴期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 378,
+      "Name": "告辞",
+      "Description": "告辞",
+      "Position": "(-2283.908,-1182.409)",
+      "Commands": []
+    },
+    {
+      "ItemID": 464,
+      "Name": "是否当年第一次参加",
+      "Description": "是否当年第一次参加",
+      "Position": "(-2463.381,-1307.724)",
+      "Commands": [
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == year"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "今年的大比真是精彩。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "363(参加门派大比)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2615.652,-1456.106)",
+      "Commands": []
+    },
+    {
+      "ItemID": 416,
+      "Name": "参加次数判定",
+      "Description": "参加次数判定",
+      "Position": "(-2151.259,-1308.126)",
+      "Commands": [
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "407(第一战の对白-1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "459(第一战の对白-2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "460(第一战の对白-3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 3"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "460(第一战の对白-3)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "512(第一战の对白-4)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 316,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2613.391,-1616.652)",
+      "Commands": []
+    },
+    {
+      "ItemID": 307,
+      "Name": "门派检测",
+      "Description": "门派检测",
+      "Position": "(-2918.408,-1434.272)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "172(境界测试)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "362(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2601.988,-1399.663)",
+      "Commands": []
+    },
+    {
+      "ItemID": 480,
+      "Name": "看比试",
+      "Description": "看比试",
+      "Position": "(-1799.638,-1329.534)",
+      "Commands": [
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走到擂台旁，观看其他师兄弟间的比试。大比之上，众人纷纷拿出自己的看家本领，法术横飞，打得好不热闹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你从观战中又得到了一些新的感悟，修为{color=#d0380a}+1000{/color}，心境{color=#d0380a}+1{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(第一战对白)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 481,
+      "Name": "调状态",
+      "Description": "调状态",
+      "Position": "(-1799.638,-1285.534)",
+      "Commands": [
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你走到一个安静的角落，盘腿坐下，很快进入了心境空明的状态...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "大战在即，亦能保持心境平和，心境{color=#d0380a}+3{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "486(第一战对白)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 459,
+      "Name": "第一战の对白-2",
+      "Description": "第一战の对白-2",
+      "Position": "(-1973.196,-1315.107)",
+      "Commands": [
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{shidi}，你是第二次参加宗门大比了吧？希望你这次可以有所斩获。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（还有一段时间才能轮到我上台，现在做什么好呢...？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看其他人的比试",
+          "TargetBlockID": "this:480(看比试)"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.Menu",
+          "Text": "静心调整自己的状态",
+          "TargetBlockID": "this:481(调状态)"
+        }
+      ]
+    },
+    {
+      "ItemID": 460,
+      "Name": "第一战の对白-3",
+      "Description": "第一战の对白-3",
+      "Position": "(-1974.461,-1258.224)",
+      "Commands": [
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{shidi}，你是第三次参加宗门大比了吧？希望你这次可以有所斩获。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（还有一段时间才能轮到我上台，现在做什么好呢...？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看其他人的比试",
+          "TargetBlockID": "this:480(看比试)"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.Menu",
+          "Text": "静心调整自己的状态",
+          "TargetBlockID": "this:481(调状态)"
+        }
+      ]
+    },
+    {
+      "ItemID": 512,
+      "Name": "第一战の对白-4",
+      "Description": "第一战の对白-4",
+      "Position": "(-1972.926,-1211.162)",
+      "Commands": [
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 218,
+          "AvatarBindKey": "",
+          "StoryText": "{FirstName}{shidi}，希望你这次可以有所斩获。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "（还有一段时间才能轮到我上台，现在做什么好呢...？）",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.Menu",
+          "Text": "看看其他人的比试",
+          "TargetBlockID": "this:480(看比试)"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.Menu",
+          "Text": "静心调整自己的状态",
+          "TargetBlockID": "this:481(调状态)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

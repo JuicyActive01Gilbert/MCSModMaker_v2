@@ -1,0 +1,988 @@
+{
+  "Name": "Talk4421",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2423.181,-1389.355)",
+      "Commands": [
+        {
+          "ItemID": 147,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 240,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "253(同意)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 306,
+      "Name": "关于寄拍的限制",
+      "Description": "关于寄拍的限制",
+      "Position": "(-2264.346,-1042.257)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "天机阁的小型交易会，主要是为了方便诸位换取一些平日里有价无市的稀有宝物，因此对于寄换物品的价值也有一定的基础要求。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "所有价值低于一万灵石的物品，我阁都不会接取。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 307,
+      "Name": "查看交易会告示",
+      "Description": "查看交易会告示",
+      "Position": "(-2268.742,-967.5316)",
+      "Commands": [
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.OpenExchangeUI"
+        }
+      ]
+    },
+    {
+      "ItemID": 305,
+      "Name": "关于抽水",
+      "Description": "关于抽水",
+      "Position": "(-2272.039,-1108.191)",
+      "Commands": [
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "每次寄换，我们会抽取相当于目标物品价值2%的灵石作为抽水。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过若是寄换的宝物无人换取或是任何原因放弃寄换，我们都会退换全部的费用。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 384,
+      "Name": "出手兑换",
+      "Description": "出手兑换",
+      "Position": "(-2718.775,-1201.993)",
+      "Commands": [
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我这里倒是有他想要的材料，道友看看，可否用来换取这堕山骨骸？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.If",
+          "Condition": "langfang == True"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Menu",
+          "Text": "浪方大圣的遗骸",
+          "TargetBlockID": "this:393(浪方)"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.If",
+          "Condition": "jiuyou == True"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Menu",
+          "Text": "九幽大圣的遗骸",
+          "TargetBlockID": "this:394(九幽)"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "选项",
+      "Description": "选项",
+      "Position": "(-2428.082,-974.949)",
+      "Commands": [
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于抽水",
+          "TargetBlockID": "this:305(关于抽水)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "关于寄拍的限制",
+          "TargetBlockID": "this:306(关于寄拍的限制)"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "查看交易会告示",
+          "TargetBlockID": "this:307(查看交易会告示)"
+        }
+      ]
+    },
+    {
+      "ItemID": 394,
+      "Name": "九幽",
+      "Description": "九幽",
+      "Position": "(-2647.775,-1125.993)",
+      "Commands": [
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "388(出手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 253,
+      "Name": "同意",
+      "Description": "同意",
+      "Position": "(-2423.983,-1329.981)",
+      "Commands": [
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 411,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetStaticValueByVar"
+        },
+        {
+          "ItemID": 257,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你跟着此人穿过长长的走廊，来到了一处布置的异常别致的屋子内。屋子很大，足以容纳百人，却只放置了十余张桌椅，远远的围成一圈。中间则是一座白玉雕成的高台，想来是用于展示宝物的。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 258,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你随意找了一处坐下。很快，其它前来参加交易会的修士也陆续抵达。他们中有的是你曾在拍卖会上见到过的，也有的则没有，想来是特地为了这交易会而来，这让你不免多了一些兴致。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 259,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 260,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "各位道友，我们天机阁此番受托，在拍卖大会结束后，额外举办的这场特殊的交易会，是为了拍卖几件特殊的宝物。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 261,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "诸位请看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 262,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "他一挥手，几块巨大的骨骸便浮现于高台之上。从这些骨骸上隐隐出来的威压与极为厚重的土属性灵气，就知道它们并非凡品。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 265,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "根据我们的鉴定，这几件材料便是化神期妖兽堕山的骨骸。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 263,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这堕山大圣的名号如今虽已无人提起，但万余年前也是赫赫有名的一方妖圣。当年它到底是因何陨落，至今仍是一个谜团。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 264,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这付骨骸足以拆成数件土属性的六品材料，而若是能配合其它稀有材料合理加以炼制，炼成那通天灵宝也是大有希望。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 268,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 267,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 266,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 269,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 270,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 271,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 272,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 273,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 274,
+          "CmdType": "Fungus.GetNpcId"
+        },
+        {
+          "ItemID": 275,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc3",
+          "StoryText": "不知...那物主想要用这些材料换些什么？想来普通的东西，他应该是看不上的吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 277,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "自然，若只是寻常能够用灵石买到的宝物，那也不必放到这交易会上来置换。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 276,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那物主想要交换的物品，和这堕山的骨骸一样，乃是六品的化神期妖兽材料。而且必须是金属性，或是混元属性的材料。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 278,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "此言一出，台下众人不免一阵骚动...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc1",
+          "StoryText": "这化神期妖圣哪个不是一方霸主？即便是同样化神期的前辈也不敢随意招惹他们，这样的交换要求，未免也太高了一些。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc1",
+          "StoryText": "不如这样，我愿意用五件水属性的元婴期妖兽材料，再加上一些稀有的草药与他交换，不知可否？！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那物主想要炼制一柄契合他自身使用的通天灵宝。五品元婴期妖兽的材料虽说也很稀有，但想凭此炼制通天灵宝，却是绝无可能的，这点道友应该清楚。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc2",
+          "StoryText": "我这里也有一物，对于元婴期修士而言，价值犹在那堕山骨骸之上。你不妨先拿去问问那物主可愿与我交换。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 284,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc2",
+          "StoryText": "他一挥手，只间一团蓝色的灵气包裹着一个精美的丹药瓶向高台飞去。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 283,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc2",
+          "StoryText": "那天机阁管事接过药瓶，拧开瓶盖嗅了嗅，便露出了极为惊讶的神情。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc2",
+          "StoryText": "如何？用我这瓶丹药，想要换取那些堕山骨骸应该是绰绰有余了吧。若非这材料恰好与我合用，我是绝不会拿出来交易的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若单论价值而言，这瓶丹药的确在六品化神妖兽材料之上。但...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc2",
+          "StoryText": "怎么？我这枚可是能够提升化神成功率的混元仙体丹，而且炼制之法在宁州早已失传，难道还换不得那几块骨骸？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc1",
+          "StoryText": "竟是混元仙体丹？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc3",
+          "StoryText": "道友可愿出售这枚混元仙体丹？我愿意再加三成的价！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc2",
+          "StoryText": "哼，若只能换取灵石，我倒不如拿去拍卖，何必在此时拿出来。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "道友莫急，此等重宝，我们天机阁自然是识货的。若这些材料本就归属于我阁，那我们定愿意拿来与道友交换。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不过既然这些材料是其它雇主委托我们天机阁交易的，我也没有权利擅自替他人更改交易的条件，还望道友见谅。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "322(判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 372,
+      "Name": "装逼选项",
+      "Description": "装逼选项",
+      "Position": "(-2590.775,-1270.993)",
+      "Commands": [
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你的手头恰好有符合兑换需求的妖兽材料，你决定...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Menu",
+          "Text": "出手兑换",
+          "TargetBlockID": "this:384(出手兑换)"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.Menu",
+          "Text": "默不作声",
+          "TargetBlockID": "this:377(基础后续)"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Menu",
+          "Text": "不感兴趣",
+          "TargetBlockID": "this:377(基础后续)"
+        }
+      ]
+    },
+    {
+      "ItemID": 393,
+      "Name": "浪方",
+      "Description": "浪方",
+      "Position": "(-2789.775,-1125.993)",
+      "Commands": [
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "388(出手)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 322,
+      "Name": "判定",
+      "Description": "判定",
+      "Position": "(-2423.775,-1270.993)",
+      "Commands": [
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 356,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 357,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 359,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 365,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.If",
+          "Condition": "langfang == True"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "372(装逼选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.If",
+          "Condition": "jiuyou == True"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "372(装逼选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "377(基础后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "出手",
+      "Description": "出手",
+      "Position": "(-2718.775,-1059.993)",
+      "Commands": [
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你挥挥手，一件青色的玉匣缓缓飞向高台。那名天机阁管事接过玉匣，打开一看，便惊讶道...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这...果真是化神期妖兽的遗骸。难...难道是那{$yaoshou}？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc1",
+          "StoryText": "{vpunch=10,0.5}{$yaoshou}？！！",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc3",
+          "StoryText": "确有听到风声，那{$yaoshou}不知被何人斩杀了。我还只当是谣言，难道...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "npc3",
+          "StoryText": "怎么样，道友意下如何？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，道友所取之物，完全符合物主的交换条件，道友一会儿可以凭此来任意挑选你想要换取的材料。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc1",
+          "StoryText": "此言一出，台下众人又是一阵骚动，一道道目光向你扫来，你能感受到其中有惊讶，羡慕，甚至贪婪与恐惧...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哈哈哈，其他道友也不必担心。从今日起，我们天机阁的交易会将长期对各位元婴期的道友们开放。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(通用后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 377,
+      "Name": "基础后续",
+      "Description": "基础后续",
+      "Position": "(-2424.775,-1196.993)",
+      "Commands": [
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "npc2",
+          "StoryText": "哼！那若是今日在场无一人能够拿出符合他交易条件的物品，又当如何？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这点倒也不必担心。从今日起，我们天机阁的交易会将长期对各位元婴期的道友们开放。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(通用后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "通用后续",
+      "Description": "通用后续",
+      "Position": "(-2428.775,-1058.993)",
+      "Commands": [
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "诸位若是手头一时拿不出符合要求的物品也无妨，只要你心仪的宝物还没有被其他人换去，都可以随时来此交易。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "若是诸位手头也有一些宝物，想要换取一些指定的物品，也可以来我这里登记。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "我阁只会根据交易物品的价值抽取一小部分灵石作为抽水。待交易成功后，便会通过传音符将物品送到诸位手中。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "本次的交易会除了我刚刚提到的堕山大圣的骨骸外，还包括一些其它的稀有宝物。诸位若是感兴趣的话，可以来这里的告示上查看。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "301(选项)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

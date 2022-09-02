@@ -1,0 +1,297 @@
+{
+  "Name": "Talk119104",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2796.071,-1307.443)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "285(初次判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 323,
+      "Name": "去",
+      "Description": "去",
+      "Position": "(-2934.108,-988.2241)",
+      "Commands": [
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 289,
+      "Name": "无事发生",
+      "Description": "无事发生",
+      "Position": "(-2627.311,-1231.012)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "何事？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 302,
+      "Name": "没有",
+      "Description": "没有",
+      "Position": "(-2724.213,-1068.003)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "我还没拿到东西。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "初次判定",
+      "Description": "初次判定",
+      "Position": "(-2801.01,-1231.012)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "280(故事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "289(无事发生)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 324,
+      "Name": "不去",
+      "Description": "不去",
+      "Position": "(-2811.715,-986.1852)",
+      "Commands": [
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "那好吧，还是多谢道友了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 301,
+      "Name": "有",
+      "Description": "有",
+      "Position": "(-2869.664,-1068.003)",
+      "Commands": [
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.ItemCheck"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == True"
+        },
+        {
+          "ItemID": 318,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "嗯。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 317,
+          "CmdType": "Fungus.ItemRemove"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.AddMoney"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetTaskIndexFinish"
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "其实我还有些不情之请，只是这里人多眼杂，您可否移步到小女子的住处，放心酬劳定叫你满意。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.Menu",
+          "Text": "去",
+          "TargetBlockID": "this:323(去)"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.Menu",
+          "Text": "不去",
+          "TargetBlockID": "this:324(不去)"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(没有)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 312,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 315,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "302(没有)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 280,
+      "Name": "故事",
+      "Description": "故事",
+      "Position": "(-2800.184,-1146.052)",
+      "Commands": [
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "对方面露急切。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "SavePoint"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.YSSaveGame"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1136,
+          "AvatarBindKey": "",
+          "StoryText": "道友，你把典籍带来了吗？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.Menu",
+          "Text": "带来了",
+          "TargetBlockID": "this:301(有)"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Menu",
+          "Text": "还没有",
+          "TargetBlockID": "this:302(没有)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

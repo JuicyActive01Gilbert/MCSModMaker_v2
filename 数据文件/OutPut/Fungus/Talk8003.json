@@ -1,0 +1,1997 @@
+{
+  "Name": "Talk8003",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2798.617,-1291.956)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(对象赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 452,
+      "Name": "药渣2",
+      "Description": "药渣2",
+      "Position": "(-2555.094,-710.2549)",
+      "Commands": [
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 2"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 520,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$dys2}株{SayStcVal=941}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 472,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "467(成功判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 475,
+      "Name": "成功",
+      "Description": "成功",
+      "Position": "(-3024.573,-607.2652)",
+      "Commands": [
+        {
+          "ItemID": 521,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "焰火褪去，一阵浓郁的药香飘过，{$dysl}颗通体浑圆的丹药便光彩夺目的出现在了药鼎之内。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 525,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，不错...这几日辛苦师侄了。这颗化瘀丹就额外奖赏给你，回去好好休息吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 526,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多谢前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 527,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 528,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 529,
+          "CmdType": "Fungus.AddItem"
+        },
+        {
+          "ItemID": 596,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 597,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 598,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 2"
+        },
+        {
+          "ItemID": 600,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 601,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 599,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 602,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 572,
+      "Name": "未成丹（草2）",
+      "Description": "未成丹（草2）",
+      "Position": "(-3031.69,-889.7654)",
+      "Commands": [
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$fysl1}株{$caoyao2}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 412,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 413,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(下一步随机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 557,
+      "Name": "答错2",
+      "Description": "答错2",
+      "Position": "(-2400.098,-440.3599)",
+      "Commands": [
+        {
+          "ItemID": 561,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎...过而不能知，是为不智。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 567,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "563(后续2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 477,
+      "Name": "废丹",
+      "Description": "废丹",
+      "Position": "(-2556.408,-489.7395)",
+      "Commands": [
+        {
+          "ItemID": 524,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你揭开丹炉，却只闻到一股难以形容的奇怪气味。由于数种药性的强烈冲突，丹药并没有被炼制成功，只结成了数颗布满裂纹的废丹。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 550,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，你可知自己错在何处？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 551,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子拿错了草药的品种",
+          "TargetBlockID": "this:556(答对2)"
+        },
+        {
+          "ItemID": 552,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子放错了草药数量",
+          "TargetBlockID": "this:557(答错2)"
+        },
+        {
+          "ItemID": 553,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子没能掌控好火候",
+          "TargetBlockID": "this:557(答错2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 478,
+      "Name": "未成丹",
+      "Description": "未成丹",
+      "Position": "(-2556.14,-606.2034)",
+      "Commands": [
+        {
+          "ItemID": 523,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你揭开丹炉，隐约有一阵淡淡的药香飘过。可是丹药并没有被炼制成功，只在炉底形成了一层厚厚的药渣。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，你可知自己错在何处？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 547,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子拿错了草药的品种",
+          "TargetBlockID": "this:554(答对1)"
+        },
+        {
+          "ItemID": 548,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子放错了草药数量",
+          "TargetBlockID": "this:555(答错1)"
+        },
+        {
+          "ItemID": 549,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子没能掌控好火候",
+          "TargetBlockID": "this:555(答错1)"
+        }
+      ]
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 570,
+      "Name": "责罚",
+      "Description": "责罚",
+      "Position": "(-2094.944,-538.2982)",
+      "Commands": [
+        {
+          "ItemID": 577,
+          "CmdType": "Fungus.NTaskAbandon"
+        },
+        {
+          "ItemID": 575,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "弟子错了，还请长老责罚...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 576,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "那好，从今日起，就罚你在这炼丹房内看火三月，好好反省。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 578,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 579,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 581,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 582,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你在炼丹房内扇了整整三个月的炉火，精疲力尽，但心境却得到了一些磨炼。{color=#d0380a}心境+1{/color}",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 590,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 591,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 592,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 595,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 593,
+          "CmdType": "Fungus.AddLingGuang"
+        },
+        {
+          "ItemID": 594,
+          "CmdType": "Fungus.SetStaticValue"
+        }
+      ]
+    },
+    {
+      "ItemID": 450,
+      "Name": "正确赋值",
+      "Description": "正确赋值",
+      "Position": "(-2800.836,-669.7654)",
+      "Commands": [
+        {
+          "ItemID": 518,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$dysl}株{SayStcVal=941}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 470,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "467(成功判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 392,
+      "Name": "药渣成丹（2）",
+      "Description": "药渣成丹（2）",
+      "Position": "(-2559.41,-885.3431)",
+      "Commands": [
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$fysl2}株{SayStcVal=940}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(下一步随机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "炼丹任务赋值",
+      "Description": "炼丹任务赋值",
+      "Position": "(-2801.811,-1177.109)",
+      "Commands": [
+        {
+          "ItemID": 322,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 408,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.If",
+          "Condition": "dan == 1"
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 506,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 507,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 327,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 326,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 325,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "dan == 2"
+        },
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 508,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 509,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 330,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 331,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 332,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 335,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "dan == 3"
+        },
+        {
+          "ItemID": 399,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 510,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 511,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 336,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 337,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 340,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 341,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "dan == 4"
+        },
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 512,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 513,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 342,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 344,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 345,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 346,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 347,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 514,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 515,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 348,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 349,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 350,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 351,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 352,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 353,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 433,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 432,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 409,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 410,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 405,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 404,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 403,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 316,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(任务开始判断)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 431,
+      "Name": "问数量2",
+      "Description": "问数量2",
+      "Position": "(-2734.879,-742.106)",
+      "Commands": [
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "该到了向丹炉内添置{SayStcVal=941}的时候了，药引的数量是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.Menu",
+          "Text": "{$dysl2}株",
+          "TargetBlockID": "this:452(药渣2)"
+        },
+        {
+          "ItemID": 443,
+          "CmdType": "Fungus.Menu",
+          "Text": "{$dysl1}株",
+          "TargetBlockID": "this:451(药渣1)"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Menu",
+          "Text": "{$dysl}株",
+          "TargetBlockID": "this:450(正确赋值)"
+        }
+      ]
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 554,
+      "Name": "答对1",
+      "Description": "答对1",
+      "Position": "(-2402.16,-641.3908)",
+      "Commands": [
+        {
+          "ItemID": 558,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，现在倒是知道错了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 564,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "562(后续1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 317,
+      "Name": "任务开始对话",
+      "Description": "任务开始对话",
+      "Position": "(-2802.987,-1067.698)",
+      "Commands": [
+        {
+          "ItemID": 486,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 487,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 1"
+        },
+        {
+          "ItemID": 488,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 489,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "suiji == 2"
+        },
+        {
+          "ItemID": 492,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 490,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "suiji == 2"
+        },
+        {
+          "ItemID": 493,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 491,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 494,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 495,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 496,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 497,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 1"
+        },
+        {
+          "ItemID": 498,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 499,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "suiji == 2"
+        },
+        {
+          "ItemID": 500,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 501,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "suiji == 2"
+        },
+        {
+          "ItemID": 502,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 503,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 504,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 505,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 354,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "见过前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 355,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你来得正好，本座正在起炉，此番炼制丹药还得花费不少时日，你就待在这里，在本座回来前替本座看火添药。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 358,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "接下来本座说的话你得好好记下，若是到时候弄错火候或者加错了药，把本座这炉丹炼废了，本座可是要罚你的。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 366,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "359(重要对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 449,
+      "Name": "废丹2",
+      "Description": "废丹2",
+      "Position": "(-3025.307,-717.5739)",
+      "Commands": [
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 3"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 517,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$dysl}株{$yaoying1}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 469,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "467(成功判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 573,
+      "Name": "药渣成丹（3）",
+      "Description": "药渣成丹（3）",
+      "Position": "(-2557.288,-833.7773)",
+      "Commands": [
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$fysl3}株{SayStcVal=940}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 416,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 417,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(下一步随机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 555,
+      "Name": "答错1",
+      "Description": "答错1",
+      "Position": "(-2401.129,-571.2878)",
+      "Commands": [
+        {
+          "ItemID": 560,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎...过而不能知，是为不智。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 565,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "562(后续1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 476,
+      "Name": "药渣成丹",
+      "Description": "药渣成丹",
+      "Position": "(-2870.084,-544.3168)",
+      "Commands": [
+        {
+          "ItemID": 522,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你揭开丹炉，一部分过剩的药性在炉底结成了一层厚厚的药渣，好在还是成功的炼制出了{$dysl}颗通体浑圆的丹药。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 530,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，你可知自己错在何处？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 531,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子拿错了草药的品种",
+          "TargetBlockID": "this:535(答错)"
+        },
+        {
+          "ItemID": 533,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子放错了草药数量",
+          "TargetBlockID": "this:534(答对)"
+        },
+        {
+          "ItemID": 532,
+          "CmdType": "Fungus.Menu",
+          "Text": "弟子没能掌控好火候",
+          "TargetBlockID": "this:535(答错)"
+        }
+      ]
+    },
+    {
+      "ItemID": 376,
+      "Name": "问数量1",
+      "Description": "问数量1",
+      "Position": "(-2738.945,-899.1235)",
+      "Commands": [
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "该到了向丹炉内添置{SayStcVal=940}的时候了，辅药的数量是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.Menu",
+          "Text": "{$fysl1}株",
+          "TargetBlockID": "this:414(正确赋值（1）)"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.Menu",
+          "Text": "{$fysl2}株",
+          "TargetBlockID": "this:392(药渣成丹（2）)"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.Menu",
+          "Text": "{$fysl3}株",
+          "TargetBlockID": "this:573(药渣成丹（3）)"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "对象赋值",
+      "Description": "对象赋值",
+      "Position": "(-2800.623,-1238.366)",
+      "Commands": [
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.If",
+          "Condition": "MenPai == 1"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 306,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 605,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 3"
+        },
+        {
+          "ItemID": 293,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 307,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 606,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 4"
+        },
+        {
+          "ItemID": 294,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 308,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 607,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "MenPai == 5"
+        },
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 309,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 608,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 310,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 609,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(炼丹任务赋值)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 562,
+      "Name": "后续1",
+      "Description": "后续1",
+      "Position": "(-2247.521,-608.4012)",
+      "Commands": [
+        {
+          "ItemID": 569,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "连最重要的辅药都会拿错，我这一炉上好的丹药都毁在你手上了，你可有把我先前的嘱托放在心上？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 571,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(责罚)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 388,
+      "Name": "正确赋值（草3）",
+      "Description": "正确赋值（草3）",
+      "Position": "(-3032.545,-839.6859)",
+      "Commands": [
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$fysl1}株{SayStcVal=940}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(下一步随机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 359,
+      "Name": "重要对话",
+      "Description": "重要对话",
+      "Position": "(-2799.909,-1007.584)",
+      "Commands": [
+        {
+          "ItemID": 360,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这次本座要炼制的是{color=#d0380a}{SayStcVal=938}{/color}，这一炉一共要炼制{color=#d0380a}{$dysl}{/color}颗。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 361,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "主药用的是{color=#d0380a}{SayStcVal=939}{/color}，辅药为{color=#d0380a}{SayStcVal=940}{/color}，至于药引则是{color=#d0380a}{SayStcVal=941}{/color}，需得按{color=#d0380a}{SayStcVal=942}{/color}的比例添加，方可炼制成功。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 362,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "这主药本座已经添进丹炉，两日后先添入辅药，再过五日添入药引，如此炼制七七四十九日后，方可成丹，你可记下了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.Menu",
+          "Text": "晚辈记下了",
+          "TargetBlockID": "this:365(记下)"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.Menu",
+          "Text": "请前辈再说一遍",
+          "TargetBlockID": "this:359(重要对话)"
+        }
+      ]
+    },
+    {
+      "ItemID": 451,
+      "Name": "药渣1",
+      "Description": "药渣1",
+      "Position": "(-2557.221,-765.5102)",
+      "Commands": [
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 2"
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 519,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$dysl1}株{SayStcVal=941}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 471,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "467(成功判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 430,
+      "Name": "问草药2",
+      "Description": "问草药2",
+      "Position": "(-2861.474,-741.0422)",
+      "Commands": [
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "该到了向丹炉内添置药引的时候了，你应该...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 438,
+          "CmdType": "Fungus.Menu",
+          "Text": "将{$yaoying1}取来",
+          "TargetBlockID": "this:448(废丹1)"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.Menu",
+          "Text": "将{SayStcVal=941}取来",
+          "TargetBlockID": "this:450(正确赋值)"
+        },
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.Menu",
+          "Text": "将{$yaoying2}取来",
+          "TargetBlockID": "this:449(废丹2)"
+        }
+      ]
+    },
+    {
+      "ItemID": 535,
+      "Name": "答错",
+      "Description": "答错",
+      "Position": "(-2797.005,-484.6896)",
+      "Commands": [
+        {
+          "ItemID": 537,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哎...过而不能知，是为不智。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 540,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "536(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 389,
+      "Name": "下一步随机",
+      "Description": "下一步随机",
+      "Position": "(-2798.896,-838.6354)",
+      "Commands": [
+        {
+          "ItemID": 453,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 428,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 1"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "430(问草药2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "431(问数量2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 387,
+      "Name": "未成丹（草1）",
+      "Description": "未成丹（草1）",
+      "Position": "(-3029.335,-934.0298)",
+      "Commands": [
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$fysl1}株{$caoyao1}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(下一步随机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 556,
+      "Name": "答对2",
+      "Description": "答对2",
+      "Position": "(-2398.037,-507.3701)",
+      "Commands": [
+        {
+          "ItemID": 559,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，现在倒是知道错了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 566,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "563(后续2)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 534,
+      "Name": "答对",
+      "Description": "答对",
+      "Position": "(-2939.274,-483.6588)",
+      "Commands": [
+        {
+          "ItemID": 538,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "哼，现在倒是知道错了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 539,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "536(后续)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 375,
+      "Name": "问草药1",
+      "Description": "问草药1",
+      "Position": "(-2867.417,-898.0597)",
+      "Commands": [
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "该到了向丹炉内添置辅药的时候了，你应该...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Menu",
+          "Text": "将{$caoyao1}取来",
+          "TargetBlockID": "this:387(未成丹（草1）)"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Menu",
+          "Text": "将{$caoyao2}取来",
+          "TargetBlockID": "this:572(未成丹（草2）)"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.Menu",
+          "Text": "将{SayStcVal=940}取来",
+          "TargetBlockID": "this:388(正确赋值（草3）)"
+        }
+      ]
+    },
+    {
+      "ItemID": 563,
+      "Name": "后续2",
+      "Description": "后续2",
+      "Position": "(-2250.613,-472.3186)",
+      "Commands": [
+        {
+          "ItemID": 568,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "炼丹是最忌讳寒热冲突，放错了药引就会导致废丹，我这一炉上好的丹药都毁在你手上了，你可有把我先前的嘱托放在心上？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 574,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "570(责罚)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 448,
+      "Name": "废丹1",
+      "Description": "废丹1",
+      "Position": "(-3024.495,-765.7017)",
+      "Commands": [
+        {
+          "ItemID": 455,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 3"
+        },
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 516,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$dysl}株{$yaoying1}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 468,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "467(成功判定)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 365,
+      "Name": "记下",
+      "Description": "记下",
+      "Position": "(-2804.051,-952.5153)",
+      "Commands": [
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "好了，本座还有其他要务在身，就先走一步了。等时候到了，我自会回来验收。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你来到炉边，拿起风火扇慢慢地扇了起来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 586,
+          "CmdType": "Fungus.HideNPC"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.RandomInteger"
+        },
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.If",
+          "Condition": "suiji == 1"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "375(问草药1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "376(问数量1)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 414,
+      "Name": "正确赋值（1）",
+      "Description": "正确赋值（1）",
+      "Position": "(-2558.219,-934.089)",
+      "Commands": [
+        {
+          "ItemID": 423,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你将{$fysl1}株{SayStcVal=940}添入了丹炉之中，然后便马不停蹄地继续扇起了火来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "389(下一步随机)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 318,
+      "Name": "任务结束对话",
+      "Description": "任务结束对话",
+      "Position": "(-2935.927,-1119.463)",
+      "Commands": []
+    },
+    {
+      "ItemID": 536,
+      "Name": "后续",
+      "Description": "后续",
+      "Position": "(-2866.456,-414.7751)",
+      "Commands": [
+        {
+          "ItemID": 541,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "炼丹之时若是草药放错，轻则浪费材料，药性过剩产生多余无用的药渣，重则药性不足，无法成丹。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 542,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "索性这次最重要的丹药保住了，我也不与你多计较这些，回去好好反省吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "多...多谢前辈。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.FinishNTask"
+        },
+        {
+          "ItemID": 610,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 611,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 618,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "慢着。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 617,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你转身欲走，却听他叫住你，思索片刻从储物袋中取出一本书籍向你扔来。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 619,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "看你对草药药性不甚了解。此物你就收下吧。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 614,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 615,
+          "CmdType": "Fungus.AddItemByVar"
+        },
+        {
+          "ItemID": 620,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "谢长老。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 616,
+          "CmdType": "Fungus.End"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "任务开始判断",
+      "Description": "任务开始判断",
+      "Position": "(-2802.198,-1119.047)",
+      "Commands": [
+        {
+          "ItemID": 313,
+          "CmdType": "Fungus.IsNTaskStart"
+        },
+        {
+          "ItemID": 314,
+          "CmdType": "Fungus.If",
+          "Condition": "kaishi == True"
+        },
+        {
+          "ItemID": 319,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "317(任务开始对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 320,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 321,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "318(任务结束对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 285,
+      "Name": "炼丹打杂任务对话",
+      "Description": "炼丹打杂任务对话",
+      "Position": "(-2320.302,-1222.924)",
+      "Commands": [
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你来得正好，老夫正准备起炉炼丹，你且过来为老夫看着这炉火，不得有半点差池。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 300,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你拿起扇子，站到丹炉边慢慢地扇了起来...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 301,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 303,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 302,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 304,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错，不错...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 311,
+          "CmdType": "Fungus.FinishNTaskNowChild"
+        },
+        {
+          "ItemID": 305,
+          "CmdType": "Fungus.FinishNTask"
+        }
+      ]
+    },
+    {
+      "ItemID": 467,
+      "Name": "成功判定",
+      "Description": "成功判定",
+      "Position": "(-2799.666,-602.3168)",
+      "Commands": [
+        {
+          "ItemID": 587,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 588,
+          "CmdType": "Fungus.AddTime"
+        },
+        {
+          "ItemID": 589,
+          "CmdType": "Fungus.FadeScreen"
+        },
+        {
+          "ItemID": 473,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 474,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 479,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "475(成功)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 480,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 1"
+        },
+        {
+          "ItemID": 481,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "476(药渣成丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 482,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "TempValue == 2"
+        },
+        {
+          "ItemID": 483,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "477(废丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 484,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 485,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "478(未成丹)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

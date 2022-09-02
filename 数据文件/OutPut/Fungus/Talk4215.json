@@ -1,0 +1,191 @@
+{
+  "Name": "Talk4215",
+  "Blocks": [
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-2797.441,-1306.073)",
+      "Commands": [
+        {
+          "ItemID": 279,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "284(战胜巨蟒)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 294,
+      "Name": "不离开",
+      "Description": "不离开",
+      "Position": "(-2641.89,-1219.515)",
+      "Commands": [
+        {
+          "ItemID": 296,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 299,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 298,
+          "CmdType": "Fungus.setMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 430,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    },
+    {
+      "ItemID": 284,
+      "Name": "战胜巨蟒",
+      "Description": "战胜巨蟒",
+      "Position": "(-2800.267,-1222.457)",
+      "Commands": [
+        {
+          "ItemID": 428,
+          "CmdType": "CmdRecordShengPing"
+        },
+        {
+          "ItemID": 424,
+          "CmdType": "Fungus.GetTianFu"
+        },
+        {
+          "ItemID": 425,
+          "CmdType": "Fungus.If",
+          "Condition": "Var == False"
+        },
+        {
+          "ItemID": 426,
+          "CmdType": "Fungus.steamStat"
+        },
+        {
+          "ItemID": 427,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 285,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "浪方巨大的身躯痛苦地翻滚着，在海面掀起数百米高的巨浪。与此同时，他的躯体竟开始以肉眼可见的速度缩小...",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 286,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "这是...？",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 287,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "我猜，鲲族的体型之所以这么大，是因为施展吞噬神通后，体内积攒的灵气太多，而又无法直接炼化的原因。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 288,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "不过你恰好从他的体内破壁而出，等于打破了这鲲族的罩门。寻常修士受这点小伤倒是没什么，但对于这些鲲族来说，就很致命了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 289,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 1,
+          "AvatarBindKey": "",
+          "StoryText": "原来如此...体内灵气外泄，元气大伤。看来这浪方大圣是活不成了...",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 290,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 2,
+          "AvatarBindKey": "",
+          "StoryText": "哈哈哈，刚刚的大战动静不小，应该有不少修士正往这里赶。要是再不走的话，很快你斩杀浪方大圣的事迹便会传遍整片无尽之海了。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 291,
+          "CmdType": "Fungus.Menu",
+          "Text": "不错，恰可扬我海上威名",
+          "TargetBlockID": "this:294(不离开)"
+        },
+        {
+          "ItemID": 292,
+          "CmdType": "Fungus.Menu",
+          "Text": "虚名而已，没必要让其他人知道",
+          "TargetBlockID": "this:293(离开)"
+        }
+      ]
+    },
+    {
+      "ItemID": 293,
+      "Name": "离开",
+      "Description": "离开",
+      "Position": "(-2800.98,-1153.607)",
+      "Commands": [
+        {
+          "ItemID": 295,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 297,
+          "CmdType": "Fungus.AddXinJin"
+        },
+        {
+          "ItemID": 429,
+          "CmdType": "Fungus.YSSaveGame"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}

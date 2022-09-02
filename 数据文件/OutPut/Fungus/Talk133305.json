@@ -1,0 +1,725 @@
+{
+  "Name": "Talk133305",
+  "Blocks": [
+    {
+      "ItemID": 96,
+      "Name": "START",
+      "Description": "START",
+      "Position": "(-2977.61,-1437.94)",
+      "Commands": [
+        {
+          "ItemID": 543,
+          "CmdType": "Fungus.If",
+          "Condition": "StaticTalk == (0.0, 2.0)"
+        },
+        {
+          "ItemID": 544,
+          "CmdType": "Fungus.StartFight"
+        },
+        {
+          "ItemID": 545,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 546,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 177,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": null,
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 101,
+      "Name": "Splash",
+      "Description": "Splash",
+      "Position": "(-3228.045,-1441.104)",
+      "Commands": [
+        {
+          "ItemID": 343,
+          "CmdType": "Fungus.TryinitFungaus"
+        },
+        {
+          "ItemID": 166,
+          "CmdType": "Fungus.CallMethod"
+        },
+        {
+          "ItemID": 86,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "96(START)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 429,
+      "Name": "内门执事",
+      "Description": "内门执事",
+      "Position": "(-2168.641,-1338.504)",
+      "Commands": [
+        {
+          "ItemID": 439,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 440,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 100"
+        },
+        {
+          "ItemID": 441,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "由于你近日在门派内的表现，你的门派职位被降为普通内门弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 442,
+          "CmdType": "Fungus.setChengHao"
+        }
+      ]
+    },
+    {
+      "ItemID": 147,
+      "Name": "New Block8",
+      "Description": "New Block8",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 149,
+      "Name": "New Block9",
+      "Description": "New Block9",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 417,
+      "Name": "执事",
+      "Description": "执事",
+      "Position": "(-2301.723,-1253.998)",
+      "Commands": [
+        {
+          "ItemID": 449,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 450,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue < 10"
+        },
+        {
+          "ItemID": 451,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "由于你近日在门派内的表现，你的门派职位被降为普通外门弟子。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 452,
+          "CmdType": "Fungus.setChengHao"
+        }
+      ]
+    },
+    {
+      "ItemID": 404,
+      "Name": "金丹期",
+      "Description": "金丹期",
+      "Position": "(-2304.233,-1476.158)",
+      "Commands": []
+    },
+    {
+      "ItemID": 146,
+      "Name": "New Block7",
+      "Description": "New Block7",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 313,
+      "Name": "炼气期",
+      "Description": "炼气期",
+      "Position": "(-2514.449,-1303.459)",
+      "Commands": [
+        {
+          "ItemID": 460,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 0"
+        },
+        {
+          "ItemID": 461,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "416(弟子)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 464,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ChengHao == 1"
+        },
+        {
+          "ItemID": 463,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "417(执事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 466,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "ChengHao == 2"
+        },
+        {
+          "ItemID": 465,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "428(内门弟子)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 462,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 467,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "429(内门执事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 416,
+      "Name": "弟子",
+      "Description": "弟子",
+      "Position": "(-2304.848,-1300.844)",
+      "Commands": [
+        {
+          "ItemID": 444,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 445,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 10"
+        },
+        {
+          "ItemID": 446,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "由于你近日在门派内的表现，你的门派职位被提升为外门执事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 447,
+          "CmdType": "Fungus.setChengHao"
+        }
+      ]
+    },
+    {
+      "ItemID": 315,
+      "Name": "元婴期",
+      "Description": "元婴期",
+      "Position": "(-2502.022,-1525.316)",
+      "Commands": []
+    },
+    {
+      "ItemID": 342,
+      "Name": "New Block",
+      "Description": "New Block",
+      "Position": "(0,0)",
+      "Commands": []
+    },
+    {
+      "ItemID": 365,
+      "Name": "筑基期初次对话",
+      "Description": "筑基期初次对话",
+      "Position": "(-2318.18,-1423.6)",
+      "Commands": [
+        {
+          "ItemID": 370,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 371,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，你的气息...你突破到筑基期了？",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 372,
+          "CmdType": "Fungus.GetNowTime"
+        },
+        {
+          "ItemID": 373,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 14"
+        },
+        {
+          "ItemID": 374,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "还不到30岁就能突破筑基，即使放眼整个宁州，{shidi}你也算年轻一辈中的佼佼者了，未来前途不可限量啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 375,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year >= 14"
+        },
+        {
+          "ItemID": 376,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 24"
+        },
+        {
+          "ItemID": 377,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "能在40岁前突破筑基，{shidi}也可算是我派这一辈中的佼佼者了，未来前途不可限量啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 378,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year >= 24"
+        },
+        {
+          "ItemID": 379,
+          "CmdType": "Fungus.If",
+          "Condition": "year < 34"
+        },
+        {
+          "ItemID": 380,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "不错...能在50岁前突破筑基，未来若是得些机缘的话，能再突破至金丹期也未可知啊。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 381,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "year >= 34"
+        },
+        {
+          "ItemID": 382,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "你的天赋虽然普通，但心性坚定，一心求道，这次能突破到筑基期，也算十分难得了。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 383,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 385,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 384,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 386,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao < 2"
+        },
+        {
+          "ItemID": 387,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "按我派的规矩，外门弟子凡是可以突破筑基，就能够晋升为我派内门弟子，并拜入我派长老门下修习。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 388,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "跟我来，我这便带你去拜见掌门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 389,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 390,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "{shidi}，既然你已晋入筑基期，就算得上是我们门派中的一股重要力量了，有些事该要告于你知晓。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 391,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 417,
+          "AvatarBindKey": "Avatar",
+          "StoryText": "跟我来，我这便带你去拜见掌门。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 392,
+          "CmdType": "Fungus.End"
+        },
+        {
+          "ItemID": 393,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 172,
+      "Name": "境界测试",
+      "Description": "境界测试",
+      "Position": "(-2760.165,-1430.031)",
+      "Commands": [
+        {
+          "ItemID": 280,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie >= 1"
+        },
+        {
+          "ItemID": 281,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 3"
+        },
+        {
+          "ItemID": 282,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "313(炼气期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 394,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 4"
+        },
+        {
+          "ItemID": 324,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 6"
+        },
+        {
+          "ItemID": 323,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "312(筑基期（初次检测）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 395,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 7"
+        },
+        {
+          "ItemID": 328,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 9"
+        },
+        {
+          "ItemID": 329,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "314(金丹期（初次检测）)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 396,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 10"
+        },
+        {
+          "ItemID": 333,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 12"
+        },
+        {
+          "ItemID": 334,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "315(元婴期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 397,
+          "CmdType": "Fungus.ElseIf",
+          "Condition": "JinJie >= 13"
+        },
+        {
+          "ItemID": 338,
+          "CmdType": "Fungus.If",
+          "Condition": "JinJie <= 15"
+        },
+        {
+          "ItemID": 339,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "316(化神期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 453,
+      "Name": "筑基期",
+      "Description": "筑基期",
+      "Position": "(-2316.035,-1365.247)",
+      "Commands": [
+        {
+          "ItemID": 456,
+          "CmdType": "Fungus.If",
+          "Condition": "ChengHao == 2"
+        },
+        {
+          "ItemID": 457,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "428(内门弟子)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 458,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 459,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "429(内门执事)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 428,
+      "Name": "内门弟子",
+      "Description": "内门弟子",
+      "Position": "(-2169.672,-1383.565)",
+      "Commands": [
+        {
+          "ItemID": 434,
+          "CmdType": "Fungus.GetMenPaiHaoGanDu"
+        },
+        {
+          "ItemID": 435,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue >= 100"
+        },
+        {
+          "ItemID": 436,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "由于你近日在门派内的表现，你的门派职位被提升为内门执事。",
+          "Description": "",
+          "AvatarIDSetType": "FungusVariable"
+        },
+        {
+          "ItemID": 437,
+          "CmdType": "Fungus.setChengHao"
+        }
+      ]
+    },
+    {
+      "ItemID": 314,
+      "Name": "金丹期（初次检测）",
+      "Description": "金丹期（初次检测）",
+      "Position": "(-2502.051,-1454.887)",
+      "Commands": [
+        {
+          "ItemID": 418,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 419,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 420,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "403(金丹期初次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 421,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 422,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "404(金丹期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 316,
+      "Name": "化神期",
+      "Description": "化神期",
+      "Position": "(-2502.45,-1598.745)",
+      "Commands": []
+    },
+    {
+      "ItemID": 409,
+      "Name": "前往大殿",
+      "Description": "前往大殿",
+      "Position": "(-2140.234,-1533.282)",
+      "Commands": [
+        {
+          "ItemID": 406,
+          "CmdType": "Fungus.SetSTalk"
+        },
+        {
+          "ItemID": 407,
+          "CmdType": "Fungus.LoadScene"
+        }
+      ]
+    },
+    {
+      "ItemID": 312,
+      "Name": "筑基期（初次检测）",
+      "Description": "筑基期（初次检测）",
+      "Position": "(-2511.132,-1389.917)",
+      "Commands": [
+        {
+          "ItemID": 398,
+          "CmdType": "Fungus.SetVariable"
+        },
+        {
+          "ItemID": 363,
+          "CmdType": "Fungus.GetStaticValue"
+        },
+        {
+          "ItemID": 364,
+          "CmdType": "Fungus.If",
+          "Condition": "TempValue == 0"
+        },
+        {
+          "ItemID": 367,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "365(筑基期初次对话)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        },
+        {
+          "ItemID": 368,
+          "CmdType": "Fungus.Else"
+        },
+        {
+          "ItemID": 369,
+          "CmdType": "Fungus.Call",
+          "targetFlowchartName": null,
+          "targetBlockID": "453(筑基期)",
+          "startLabel": "",
+          "startIndex": 0,
+          "callMode": 0
+        }
+      ]
+    },
+    {
+      "ItemID": 403,
+      "Name": "金丹期初次对话",
+      "Description": "金丹期初次对话",
+      "Position": "(-2302.233,-1533.158)",
+      "Commands": [
+        {
+          "ItemID": 400,
+          "CmdType": "Fungus.SetStaticValue"
+        },
+        {
+          "ItemID": 401,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "你刚走近宗门广场，只听一道悠长洪亮的笑声传到你的耳边。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 402,
+          "CmdType": "Fungus.Say",
+          "AvatarIDInt": 0,
+          "AvatarBindKey": "",
+          "StoryText": "掌门的声音：哈哈哈哈，{FirstName}师侄，恭喜你证得金丹大道，还请来大殿一叙。",
+          "Description": "",
+          "AvatarIDSetType": "Normal"
+        },
+        {
+          "ItemID": 454,
+          "CmdType": "Fungus.Menu",
+          "Text": "前往大殿",
+          "TargetBlockID": "this:409(前往大殿)"
+        }
+      ]
+    }
+  ],
+  "Variables": []
+}
