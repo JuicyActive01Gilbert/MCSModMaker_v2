@@ -43,6 +43,8 @@ public:
     QVariantMap loadJson(const QString &path);
     void writeJson(const QVariant &data,const QString &path);
 
+    bool createFile(QString path);
+
     void iniComboxFromJson(QComboBox *pCombox, const QString &path, QList<int> &values);
     void iniComboxFromJson(QComboBox *pCombox, QVariantMap &map, QList<int> &values);
     QList<int> mapNumberKey(const QVariantMap &map);

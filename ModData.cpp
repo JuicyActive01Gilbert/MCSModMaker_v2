@@ -26,6 +26,18 @@ void ModData::writeJson(const QVariant &data,const QString &path)
     pJson = nullptr;
 }
 
+bool ModData::createFile(QString path)
+{
+    if(QFile::exists(path)){
+        return true;
+    }
+
+    QFile file(path);
+    file.open(QIODevice::ReadWrite);
+
+    return QFile::exists(path);
+}
+
 void ModData::iniComboxFromJson(QComboBox *pCombox, const QString &path, QList<int> &values)
 {
     Tool_JsonManager *pJson = new Tool_JsonManager;

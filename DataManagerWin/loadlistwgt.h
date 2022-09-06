@@ -26,6 +26,7 @@ protected slots:
     void onDataClick(QString flag);
 protected:
     void initialize();
+    void initializeDirs();
     void updateUIs();
     void addEmpty(QVariantMap map);
     void saveData();

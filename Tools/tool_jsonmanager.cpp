@@ -55,7 +55,7 @@ bool Tool_JsonManager::writeJson(const QVariant &data,
     QFile file(path);
     if(!file.open(QIODevice::WriteOnly)){
         emit errorString(file.errorString());
-        qDebug() << __FUNCTION__ << file.errorString();
+        qDebug() << __FUNCTION__ << file.errorString() << path;
         return false;
     }
     file.write(document.toJson());

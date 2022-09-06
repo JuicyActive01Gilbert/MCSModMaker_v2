@@ -65,8 +65,10 @@ void LoadListWgt::clearDatas()
 void LoadListWgt::onDataClick(QString flag)
 {
     QVariantMap dataMap;
-    QVariantMap cfg;
+//    QVariantMap cfg;
     QString path;
+
+
     if(flag.isEmpty()){
         path = QFileDialog::getExistingDirectory(nullptr,"选择MOD所在文件夹",
                                                          "C:/",
@@ -76,34 +78,40 @@ void LoadListWgt::onDataClick(QString flag)
             return;
         }
         path += "/";
-        cfg = MOD_DATA.loadJson(path + "modConfig.json");
-        if(cfg.isEmpty()){
-            ModConfigWgt *pW = new ModConfigWgt;
-            Tool_Dialog dlg(pW);
-            if(dlg.exec() == QDialog::Accepted ){
-                cfg = pW->getDatas();
-            }else{
-                return;
-            }
-        }
+
+        MOD_DATA.clearCatches();
+        MOD_DATA.modPath = path;
+        MOD_DATA.catchPath = CATCH_PATH + MOD_DATA.uuid() + "/";
+
+//        cfg = MOD_DATA.loadJson(path + "modConfig.json");
+//        if(cfg.isEmpty()){
+//            ModConfigWgt *pW = new ModConfigWgt;
+//            pW->iniData();
+//            Tool_Dialog dlg(pW);
+//            if(dlg.exec() == QDialog::Accepted ){
+//                cfg = pW->getDatas();
+//            }else{
+//                return;
+//            }
+//        }
         flag = QString::number(maxIndex() + 1);
         dataMap.insert("flag",flag);
         dataMap.insert("time",MOD_DATA.currentDateTimeStr());
-        dataMap.insert("name",cfg.value("Name").toString());
+        dataMap.insert("name","新建MOD");
         dataMap.insert("path",path);
         this->addData(dataMap);
         saveData();
     }else{
         path = m_datas.value(flag).toMap().value("path").toString();
+        MOD_DATA.clearCatches();
+        MOD_DATA.modPath = path;
+        MOD_DATA.catchPath = CATCH_PATH + MOD_DATA.uuid() + "/";
     }
-
-    MOD_DATA.clearCatches();
-    MOD_DATA.modPath = path;
-    MOD_DATA.catchPath = CATCH_PATH + MOD_DATA.uuid() + "/";
     if(!MOD_DATA.copyDirectory(MOD_DATA.modPath,MOD_DATA.catchPath)){
         QMessageBox::warning(nullptr,"错误","加载MOD失败。");
         return;
     }
+    initializeDirs();
     emit loadMod();
 }
 
@@ -114,6 +122,26 @@ void LoadListWgt::initialize()
     this->setLayout(m_pLayout);
 
     updateUIs();
+}
+
+void LoadListWgt::initializeDirs()
+{
+    QStringList paths;
+    paths << MOD_DATA.catchPath + "Assets"
+          << MOD_DATA.catchPath + "Assets/buff icon"
+          << MOD_DATA.catchPath + "BuffJsonData"
+          << MOD_DATA.catchPath + "BuffSeidJsonData"
+          << MOD_DATA.catchPath + "skillJsonData"
+          << MOD_DATA.catchPath + "SkillSeidJsonData"
+          << MOD_DATA.catchPath + "CrateAvatarSeidJsonData"
+          << MOD_DATA.catchPath + "StaticSkillSeidJsonData"
+          << MOD_DATA.catchPath + "ItemJsonData"
+          << MOD_DATA.catchPath + "ItemsSeidJsonData"
+          << MOD_DATA.catchPath + "EquipSeidJsonData";
+
+    foreach (QString path, paths) {
+        MOD_DATA.createDirectory(path);
+    }
 }
 
 void LoadListWgt::updateUIs()
